@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Yannickl88\\FeaturesBundle\\FeaturesBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%/"
+    }
+}
