@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Ekino\\Bundle\\NewRelicBundle\\NewRelicBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%/"
+	},
+}
