@@ -1,0 +1,4 @@
+ekino_new_relic:
+    enabled: true
+    api_key: "%env(NEWRELIC_API_KEY)%"
+    log_exceptions: true
