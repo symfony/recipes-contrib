@@ -1,12 +1,12 @@
 ekino_new_relic:
     # enabled: true                         # Defaults to true
-    # application_name: My App              # default value in newrelic is "PHP Application", or whatever is set as php ini-value
+    # application_name: PHP Application     # default value in newrelic is "PHP Application", or whatever is set as php ini-value
     # deployment_names: ~                   # default value is 'application_name', supports string array or semi-colon separated string
-    # api_key: "%newrelic_api_key%"         # New Relic API
+    # api_key: "%env(NEWRELIC_API_KEY)%"    # New Relic API
     # license_key:                          # New Relic license key (optional, default value is read from php.ini)
     # xmit: false                           # if you want to record the metric data up to the point newrelic_set_appname is called, set this to true (default: false)
     # logging: false                        # If true, logs all New Relic interactions to the Symfony log (default: false)
-    # instrument: false                     # If true, uses enhanced New Relic RUM instrumentation (see below) (default: false)
+    # instrument: false                     # If true, uses enhanced New Relic RUM instrumentation (default: false)
     # log_exceptions: false                 # If true, sends exceptions to New Relic (default: false)
     # log_commands: true                    # If true, logs CLI commands to New Relic as Background jobs (default: true)
     # using_symfony_cache: false            # Symfony HTTP cache (default: false)
