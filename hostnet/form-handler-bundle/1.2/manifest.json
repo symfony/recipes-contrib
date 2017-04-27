@@ -1,5 +1,0 @@
-{
-    "bundles": {
-        "Hostnet\\Bundle\\FormHandlerBundle\\FormHandlerBundle": ["all"]
-    }
-}
