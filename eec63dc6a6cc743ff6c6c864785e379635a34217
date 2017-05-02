@@ -1,0 +1,61 @@
+---------------------------------------------------------------------------
+
+by fabpot at 2017-04-23T16:47:29Z
+
+There is no difference between configuring a bundle with a recipe or by hand. So, the answer is no to the "conditional configuration". That should be done via a compiler pass.
+
+I'm against interactive questions as the goal is to **auto**configure things. You can display some information about the next steps at the end of the install if needed. But that should not replace proper documentation.
+
+---------------------------------------------------------------------------
+
+by fabpot at 2017-04-23T17:30:30Z
+
+This one is quite interesting as this is one that could be in the "main" repository. /cc @symfony/deciders
+
+---------------------------------------------------------------------------
+
+by javiereguiluz at 2017-04-23T17:49:04Z
+
+In my opinion, before considering to include this bundle in the main repo, the documentation should be completely updated. It only talks about "Symfony2" and it evens explains how to install the bundle using the "deps" file of Symfony 2.0.x.
+
+---------------------------------------------------------------------------
+
+by stof at 2017-04-24T10:48:48Z
+
+I don't think the file in the recipe should have all available options commented. It should suggest only the important ones (`api_key` for instance).
+Advanced options are useless for most people and so should not be here. Th doc is the place where they should be explained
+
+---------------------------------------------------------------------------
+
+by iltar at 2017-04-24T10:56:57Z
+
+What is exactly the workflow to get something into the main repository? symfony/recipes#29
+
+---------------------------------------------------------------------------
+
+by Pierstoval at 2017-04-24T11:01:23Z
+
+> What is exactly the workflow to get something into the main repository? symfony/recipes#29
+
+It will be decided by the core team (a.k.a @symfony/deciders ) , I think.
+
+---------------------------------------------------------------------------
+
+by GromNaN at 2017-04-24T20:48:20Z
+
+Good idea @stof. I've updated the PR.
+I agree that this bundle need some cleanup before being promoted as a reference /cc @rande.
+
+---------------------------------------------------------------------------
+
+by fabpot at 2017-05-02T14:08:11Z
+
+👍
+
+---------------------------------------------------------------------------
+
+by rande at 2017-05-02T14:13:54Z
+
+I have updated the readme file to remove the obsolete deps installation reference.
+
+Thanks
