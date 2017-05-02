@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Doctrine\\Bundle\\MongoDBBundle\\DoctrineMongoDBBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%/",
+        "src/": "%SRC_DIR%/"
+    },
+    "env": {
+        "MONGODB_URL": "mongodb://localhost:27017",
+        "MONGODB_DBNAME": "symfony"
+    }
+}
