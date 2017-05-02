@@ -7,7 +7,6 @@
         "src/": "%SRC_DIR%/"
     },
     "env": {
-        "MONGODB_URL": "mongodb://localhost:27017",
-        "MONGODB_DBNAME": "symfony"
+        "MONGODB_URL": "mongodb://localhost:27017/symfony"
     }
 }
