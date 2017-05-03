@@ -1,7 +1,9 @@
 {
     "copy-from-recipe": {
         "bin/": "%BIN_DIR%",
-        "behat.yml": "behat.yml"
+        "behat.yaml.dist": "behat.yaml.dist"
     },
-    "aliases": ["behat"]
+    "gitignore": [
+        "/behat.yaml"
+    ]
 }
