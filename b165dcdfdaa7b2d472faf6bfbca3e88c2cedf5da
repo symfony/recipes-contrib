@@ -1,0 +1,29 @@
+---------------------------------------------------------------------------
+
+by Lctrs at 2017-05-02T17:49:08Z
+
+One thing I don't know how to translate is the 2 lines that we needed to add to the old `app/autoload.php` (see the [docs](https://symfony.com/doc/current/bundles/DoctrineMongoDBBundle/index.html#register-the-annotations-and-the-bundle) for the lines in question). Any idea ?
+
+---------------------------------------------------------------------------
+
+by Pierstoval at 2017-05-02T18:03:16Z
+
+The ORM annotation driver was lazy-loaded in symfony/symfony#21837, maybe something similar could be done for the ODM, I don't know 😕
+
+---------------------------------------------------------------------------
+
+by stof at 2017-05-03T08:25:16Z
+
+Actually, as the ODM bundle uses the annotation_reader defined by Symfony, it automatically benefits from the change done in Symfony (as long as the ODM annotations are autoloadable, but I think they are).
+
+---------------------------------------------------------------------------
+
+by Lctrs at 2017-05-03T08:32:35Z
+
+Yeah. I tested it in a fresh application and it works as expected.
+
+---------------------------------------------------------------------------
+
+by Lctrs at 2017-05-03T09:51:10Z
+
+Should be good now.
