@@ -1,0 +1,11 @@
+<bg=blue;fg=white>              </>
+<bg=blue;fg=white> What's next? </>
+<bg=blue;fg=white>              </>
+
+  * <fg=blue>Init Behat</>:
+    1. Change to the project directory
+    2. Execute the <comment>make behat-init</> command;
+
+  * <fg=blue>Run Behat</>:
+    1. Change to the project directory
+    2. Execute the <comment>make behat</> command;

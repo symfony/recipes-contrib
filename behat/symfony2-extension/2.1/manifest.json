@@ -1,0 +1,7 @@
+{
+    "copy-from-recipe": {
+        "bin/": "%BIN_DIR%",
+        "behat.yml": "behat.yml"
+    },
+    "aliases": ["behat"]
+}

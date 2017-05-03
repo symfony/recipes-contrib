@@ -1,0 +1,7 @@
+default:
+    extensions:
+        Behat\Symfony2Extension:
+            kernel:
+                bootstrap: vendor/autoload.php
+                path: src/Kernel.php
+                class: App\Kernel
