@@ -1,0 +1,6 @@
+orbitale_cms:
+    page_class: App\Entity\Page
+    category_class: App\Entity\Category
+# Define your layout here if you need a custom layout for your CMS
+#    layouts:
+#         main: { resource: base.html.twig }

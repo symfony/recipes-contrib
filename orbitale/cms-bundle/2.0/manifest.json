@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Orbitale\\Bundle\\CmsBundle\\OrbitaleCmsBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%/",
+        "src/": "%SRC_DIR%/"
+    }
+}
