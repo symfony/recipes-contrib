@@ -1,0 +1,21 @@
+{
+    "copy-from-package": {
+        ".infra/": ".infra",
+        ".dockerignore": ".dockerignore",
+        "docker-compose.yaml": "docker-compose.yaml"
+    },
+    "copy-from-recipe": {
+        "bin/dphp": "%BIN_DIR%/dphp"
+    },
+    "env": {
+        "COMPOSE_PROJECT_NAME": "symfony",
+        "CACHE_HOST": "cache",
+        "CACHE_PORT": "6379",
+        "DATABASE_HOST": "db",
+        "DATABASE_PORT": "3306",
+        "DATABASE_NAME": "symfony",
+        "DATABASE_USER": "symfony",
+        "DATABASE_PASSWORD": "%generate(secret)%",
+        "DATABASE_ROOT_PASSWORD": "%generate(secret)%"
+    }
+}

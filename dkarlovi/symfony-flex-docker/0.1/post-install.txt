@@ -1,0 +1,15 @@
+<bg=blue;fg=white>              </>
+<bg=blue;fg=white> What's next? </>
+<bg=blue;fg=white>              </>
+
+  * <fg=blue>Run</> your application:
+    1. Change to the project directory
+    2. Execute the <comment>make docker-init</> command to prepare the Docker environment;
+    3. Execute the <comment>make docker-start</> command;
+    4. Browse to the <comment>http://localhost:8080/</> URL.
+    5. Access the MySQL instance on <comment>mysql://localhost:33066/</>
+       (with credentials from <comment>.env</>)
+    6. Use <comment>bin/dphp</> to run tools like <comment>composer</>,
+       <comment>phpunit</> or <comment>behat</>
+
+  * <fg=blue>Read</> the documentation at <comment>https://symfony.com/doc</>
