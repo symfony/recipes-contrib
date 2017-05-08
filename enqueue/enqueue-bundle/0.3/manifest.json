@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Enqueue\\Bundle\\EnqueueBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%/"
+    }
+}

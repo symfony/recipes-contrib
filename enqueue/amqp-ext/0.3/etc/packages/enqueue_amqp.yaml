@@ -1,0 +1,23 @@
+enqueue:
+    transport:
+        default: 'amqp'
+        amqp:
+            host: '%env(ENQUEUE_AMQP_HOST)%'
+            port: '%env(ENQUEUE_AMQP_PORT)%'
+            login: '%env(ENQUEUE_AMQP_LOGIN)%'
+            password: '%env(ENQUEUE_AMQP_PASSWORD)%'
+            vhost: '%env(ENQUEUE_AMQP_VHOST)%'
+
+#        If you use RabbitMQ broker you can replace amqp transport with this one. It enables specific features like priorities, delays.
+#        default: 'rabbitmq_amqp'
+#        rabbitmq_amqp:
+#
+#            host: '%env(ENQUEUE_AMQP_HOST)%'
+#            port: '%env(ENQUEUE_AMQP_PORT)%'
+#            login: '%env(ENQUEUE_AMQP_LOGIN)%'
+#            password: '%env(ENQUEUE_AMQP_PASSWORD)%'
+#            vhost: '%env(ENQUEUE_AMQP_VHOST)%'
+#
+#            # The option tells whether RabbitMQ broker has delay plugin installed or not
+#            delay_plugin_installed: false
+

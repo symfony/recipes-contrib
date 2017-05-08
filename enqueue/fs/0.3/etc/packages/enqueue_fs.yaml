@@ -1,0 +1,5 @@
+enqueue:
+    transport:
+        default: 'fs'
+        fs:
+            store_dir: '%env(ENQUEUE_FS_STORAGE)%'

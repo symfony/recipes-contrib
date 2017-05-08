@@ -1,0 +1,12 @@
+{
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%/",
+        "var/": "%VAR_DIR%"
+    },
+    "env": {
+        "ENQUEUE_FS_STORAGE": "%VAR%/queue"
+    },
+    "gitignore": [
+        "/var/queue"
+    ]
+}
