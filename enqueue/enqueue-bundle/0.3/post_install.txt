@@ -1,1 +1,0 @@
-[Enqueue] Run <comment>make consume</> command to consume messages
