@@ -5,8 +5,5 @@
     },
     "env": {
         "ENQUEUE_FS_STORAGE": "%VAR_DIR%/queue"
-    },
-    "gitignore": [
-        "/var/queue"
-    ]
+    }
 }
