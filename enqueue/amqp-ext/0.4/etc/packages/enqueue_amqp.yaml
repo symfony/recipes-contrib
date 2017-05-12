@@ -1,0 +1,7 @@
+enqueue:
+    transport:
+        default: 'amqp'
+
+        # If you use RabbitMQ broker rename "amqp" with "rabbitmq_amqp" and the bundle will enable specific features"
+        amqp: '%env(ENQUEUE_AMQP_DSN)%'
+

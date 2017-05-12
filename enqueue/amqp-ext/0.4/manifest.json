@@ -1,0 +1,8 @@
+{
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%/"
+    },
+    "env": {
+        "ENQUEUE_AMQP_DSN": "amqp://"
+    }
+}

@@ -4,6 +4,6 @@
         "var/": "%VAR_DIR%"
     },
     "env": {
-        "ENQUEUE_FS_STORAGE": "%VAR_DIR%/queue"
+        "ENQUEUE_FS_DSN": "%VAR_DIR%/enqueue"
     }
 }

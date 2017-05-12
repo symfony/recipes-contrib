@@ -1,0 +1,4 @@
+enqueue:
+    transport:
+        default: 'fs'
+        fs: '%env(ENQUEUE_FS_DSN)%'
