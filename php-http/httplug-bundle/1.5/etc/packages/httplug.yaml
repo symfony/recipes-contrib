@@ -1,0 +1,20 @@
+#httplug:
+#    plugins:
+#        logger:
+#            enabled: true
+#        redirect:
+#            preserve_header: true
+#
+#    discovery:
+#        client: 'auto'
+#        async_client: false
+#
+#    clients:
+#        default:
+#            factory: 'httplug.factory.curl'
+#        acme:
+#            factory: 'httplug.factory.curl'
+#            http_methods_client: true
+#            plugins:
+#                - 'httplug.plugin.logger'
+#                - 'httplug.plugin.redirect'

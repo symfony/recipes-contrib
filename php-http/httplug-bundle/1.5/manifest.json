@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Http\\HttplugBundle\\HttplugBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%/"
+    },
+    "composer-scripts": {
+        "assets:install --symlink --relative %WEB_DIR%": "symfony-cmd"
+    }
+}
