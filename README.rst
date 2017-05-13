@@ -31,7 +31,10 @@ automatically merged when the following conditions are met (in that order):
 
   * A Symfony Core Merger;
 
-  * A user part of a Github team for all modified/deleted/added packages.
+  * The user is the Github owner for all modified packages;
+
+  * The user is a member of the organizations (publicly visible) for all
+    modified packages.
 
 .. _`Symfony Flex`: https://github.com/symfony/flex
 .. _`Symfony recipes`: https://github.com/symfony/recipes
