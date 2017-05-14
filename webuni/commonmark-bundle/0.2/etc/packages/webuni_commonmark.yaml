@@ -1,0 +1,6 @@
+webuni_commonmark:
+    extensions:
+        # adds support for defining attributes on HTML elements (e.g. 'id', 'class', 'style')
+        attributes: true
+        # adds support for parsing Markdown tables
+        table: true
