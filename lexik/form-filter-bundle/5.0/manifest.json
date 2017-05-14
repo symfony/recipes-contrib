@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Lexik\\Bundle\\FormFilterBundle\\LexikFormFilterBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%/"
+    }
+}

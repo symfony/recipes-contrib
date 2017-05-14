@@ -1,0 +1,3 @@
+twig:
+    form_themes:
+        - LexikFormFilterBundle:Form:form_div_layout.html.twig
