@@ -5,12 +5,15 @@ Symfony recipes allow the automation of Composer packages configuration via the
 `Symfony Flex`_ Composer plugin.
 
 This repository hosts contributed recipes for Composer packages that are not
-part of the "official" `Symfony recipes`_. To enable this repository in your
-project, run the following command:
+part of the "official" `Symfony recipes`_. To enable recipes defined in this
+repository for your project, run the following command:
 
 .. code-block:: bash
 
     composer config extra.symfony.allow-contrib true
+
+Contributing
+------------
 
 For more information about contributing a recipe, read the `documentation`_ on
 the main repository.
