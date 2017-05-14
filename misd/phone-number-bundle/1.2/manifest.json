@@ -1,8 +1,0 @@
-{
-    "bundles": {
-        "Misd\\PhoneNumberBundle\\MisdPhoneNumberBundle": ["all"]
-    },
-    "copy-from-recipe": {
-        "etc/": "%ETC_DIR%/"
-    }
-}
