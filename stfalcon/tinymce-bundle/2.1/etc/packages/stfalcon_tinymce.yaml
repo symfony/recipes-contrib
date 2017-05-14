@@ -1,0 +1,5 @@
+stfalcon_tinymce:
+    # if true, jQuery is loaded from Google's CDN
+    include_jquery: true
+    # the CSS selector of the textareas to transform into TinyMCE editors
+    selector: ".tinymce"
