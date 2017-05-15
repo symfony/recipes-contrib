@@ -1,9 +1,5 @@
 {
-    "copy-from-recipe": {
-        "etc/": "%ETC_DIR%/",
-        "var/": "%VAR_DIR%"
-    },
     "env": {
-        "ENQUEUE_FS_DSN": "%VAR_DIR%/enqueue"
+        "ENQUEUE_DSN": "file:/%VAR_DIR%/enqueue"
     }
 }
