@@ -1,16 +1,18 @@
 jms_serializer:
     enable_short_alias: false
-
     handlers:
         datetime:
-            default_format: "Y-m-d\\TH:i:sP"
+            default_format: 'Y-m-d\TH:i:sP'
         array_collection:
             initialize_excluded: false # suggested false for better performance
-
     subscribers:
         doctrine_proxy:
             initialize_virtual_types: false # suggested false for better performance
             initialize_excluded: false # suggested false for better performance
+    visitors:
+        xml:
+            format_output: '%kernel.debug%'
+
 #    metadata:
 #        auto_detection: false
 #        directories:

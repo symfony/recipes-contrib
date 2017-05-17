@@ -1,4 +1,0 @@
-jms_serializer:
-    visitors:
-        xml:
-            format_output: false

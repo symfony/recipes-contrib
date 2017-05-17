@@ -2,5 +2,3 @@ jms_serializer:
     visitors:
         json:
             options: JSON_PRETTY_PRINT
-        xml:
-            format_output: true
