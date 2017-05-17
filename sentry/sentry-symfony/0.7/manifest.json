@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Sentry\\SentryBundle\\SentryBundle": ["prod"]
+    },
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%/"
+    },
+    "env": {
+        "#1": "Get the Sentry DSN of your project on https://docs.sentry.io/quickstart/#about-the-dsn",
+        "SENTRY_DSN": "https://PUBLIC_KEY:SECRET_KEY@HOST/PATH/PROJECT_ID",
+        "APP_RELEASE": "dev"
+    }
+}
