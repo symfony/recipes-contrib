@@ -1,8 +1,8 @@
 {
     "bundles": {
-       "Nelmio\\ApiDocBundle\\NelmioApiDocBundle": ["all"]
+        "Nelmio\\ApiDocBundle\\NelmioApiDocBundle": ["all"]
     },
     "copy-from-recipe": {
-       "etc/": "%ETC_DIR%/"
+         "etc/": "%ETC_DIR%/"
     }
 }
