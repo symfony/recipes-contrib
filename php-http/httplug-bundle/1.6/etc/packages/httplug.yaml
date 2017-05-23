@@ -1,9 +1,9 @@
 httplug:
     plugins:
         logger:
-            enabled: true
+            enabled: '%kernel.debug%' # Set to true if you want enable logging in production
         redirect:
-            preserve_header: '%kernel.debug%' # Set to true if you want enable logging in production
+            preserve_header: true
 
     discovery:
         client: 'auto'
