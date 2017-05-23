@@ -9,7 +9,7 @@ httplug:
         client: 'auto'
 
     clients:
-        acme:
+        app:
             http_methods_client: true
             plugins:
                 - 'httplug.plugin.logger'
