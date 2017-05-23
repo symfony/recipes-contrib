@@ -1,0 +1,16 @@
+httplug:
+    plugins:
+        logger:
+            enabled: true
+        redirect:
+            preserve_header: true
+
+    discovery:
+        client: 'auto'
+
+    clients:
+        acme:
+            http_methods_client: true
+            plugins:
+                - 'httplug.plugin.logger'
+                - 'httplug.plugin.redirect'
