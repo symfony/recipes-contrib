@@ -6,7 +6,7 @@
         "etc/": "%ETC_DIR%/"
     },
     "env": {
-        "ALGOLIA_APP_ID": "AAAAAAAAAA",
-        "ALGOLIA_API_KEY": "00000000000000000000000000000000"
+        "ALGOLIA_APP_ID": "...",
+        "ALGOLIA_API_KEY": "..."
     }
 }
