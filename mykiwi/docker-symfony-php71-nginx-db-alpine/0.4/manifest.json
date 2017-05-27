@@ -1,0 +1,10 @@
+{
+    "copy-from-package": {
+        "docker-compose.yml": "docker-compose.yml",
+        "docker-compose.override.yml.dist": "docker-compose.override.yml.dist",
+        "docker/": "docker/"
+    },
+    "gitignore": [
+        "docker-compose.override.yml"
+    ]
+}
