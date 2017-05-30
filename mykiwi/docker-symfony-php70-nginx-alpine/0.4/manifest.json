@@ -1,8 +1,8 @@
 {
     "copy-from-package": {
-        "docker-compose.yml": "/",
-        "docker-compose.override.yml.dist": "/",
-        "docker": "/"
+        "docker-compose.yml": "./",
+        "docker-compose.override.yml.dist": "./",
+        "docker": "./"
     },
     "gitignore": [
         "docker-compose.override.yml"
