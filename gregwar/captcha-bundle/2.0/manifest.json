@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Gregwar\\CaptchaBundle\\GregwarCaptchaBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%/"
+    }
+}

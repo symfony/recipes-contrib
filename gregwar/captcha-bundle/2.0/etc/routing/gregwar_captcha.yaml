@@ -1,0 +1,2 @@
+gregwar_captcha:
+    resource: "@GregwarCaptchaBundle/Resources/config/routing/routing.yml"
