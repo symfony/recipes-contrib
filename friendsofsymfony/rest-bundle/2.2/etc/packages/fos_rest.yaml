@@ -15,13 +15,4 @@ fos_rest:
 #    format_listener:
 #        rules:
 #            - { path: ^/api, prefer_extension: true, fallback_format: json, priorities: [ json, html ] }
-#    body_listener:
-#        default_format:       null
-#        throw_exception_on_unsupported_content_type:  false
-#        decoders:
-#
-#            # Prototype
-#            name:                 ~
-#        array_normalizer:
-#            service:              null
-#            forms:                false
+#    body_listener: true
