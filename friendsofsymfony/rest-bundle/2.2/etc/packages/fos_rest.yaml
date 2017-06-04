@@ -1,5 +1,5 @@
 # Read the documentation: https://symfony.com/doc/master/bundles/FOSRestBundle/index.html
-fos_rest:
+fos_rest: ~
 # Uncomment to activate features
 #
 #    param_fetcher_listener:  true
@@ -15,4 +15,5 @@ fos_rest:
 #    format_listener:
 #        rules:
 #            - { path: ^/api, prefer_extension: true, fallback_format: json, priorities: [ json, html ] }
-#    body_listener: true
+#    body_listener:
+#        enabled:              true
