@@ -1,0 +1,31 @@
+# Read the documentation: https://github.com/suncat2000/MobileDetectBundle/blob/v1.0.5/Resources/doc/index.md
+mobile_detect: ~
+#    redirect:
+#        full:
+#            is_enabled: true            # default false
+#            host: http://site.com       # with scheme (http|https), default null, url validate
+#            status_code: 301            # default 302
+#            action: redirect            # redirect, no_redirect, redirect_without_path
+#        mobile:
+#            is_enabled: true           # default false
+#            host: http://m.site.com     # with scheme (http|https), default null, url validate
+#            status_code: 301            # default 302
+#            action: redirect            # redirect, no_redirect, redirect_without_path
+#        tablet:
+#            is_enabled: true           # default false
+#            host: http://t.site.com     # with scheme (http|https), default null, url validate
+#            status_code: 301            # default 302
+#            action: redirect            # redirect, no_redirect, redirect_without_path
+#        detect_tablet_as_mobile: true   # default false
+#    switch_device_view:
+#        save_referer_path: false        # default true
+                                        # true  redirectUrl = http://site.com/current/path?currentQuery=string
+                                        # false redirectUrl = http://site.com
+#    service:
+#        mobile_detector: mobile_detect.mobile_detector.default
+#    cookie_key: "device_view"                     # default
+#    cookie_expire_datetime_modifier: "+1 month"   # default
+#    switch_param: "device_view"                   # default
+#    device_view_class: "SunCat\MobileDetectBundle\Helper\DeviceView"
+#    request_response_listener_class: "SunCat\MobileDetectBundle\EventListener\RequestResponseListener"
+#    twig_extension_class: "SunCat\MobileDetectBundle\Twig\Extension\MobileDetectExtension"

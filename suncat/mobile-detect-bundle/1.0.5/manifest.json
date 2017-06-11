@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "SunCat\\MobileDetectBundle\\MobileDetectBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%/"
+    }
+}
