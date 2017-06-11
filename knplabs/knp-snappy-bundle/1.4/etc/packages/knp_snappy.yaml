@@ -1,0 +1,10 @@
+# Read Documentation: https://github.com/KnpLabs/KnpSnappyBundle/blob/v1.4/README.markdown
+knp_snappy: ~
+#    temporary_folder: %kernel.cache_dir%/snappy
+#    pdf:
+#        enabled:    true
+#        options: []
+#    image:
+#        enabled:    true
+#        options: []
+

@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Knp\\Bundle\\SnappyBundle\\KnpSnappyBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%/"
+    }
+}
+
