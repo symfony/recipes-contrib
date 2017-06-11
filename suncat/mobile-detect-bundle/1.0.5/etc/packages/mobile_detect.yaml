@@ -29,3 +29,4 @@ mobile_detect: ~
 #    device_view_class: "SunCat\MobileDetectBundle\Helper\DeviceView"
 #    request_response_listener_class: "SunCat\MobileDetectBundle\EventListener\RequestResponseListener"
 #    twig_extension_class: "SunCat\MobileDetectBundle\Twig\Extension\MobileDetectExtension"
+
