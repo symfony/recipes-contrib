@@ -1,0 +1,6 @@
+{
+    "bundles": {
+        "Knp\\Bundle\\SnappyBundle\\KnpSnappyBundle": ["all"]
+    }
+}
+
