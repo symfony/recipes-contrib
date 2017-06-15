@@ -1,0 +1,7 @@
+ekino_new_relic:
+    enabled:        true
+    logging:        false
+    log_exceptions: true
+    log_commands:   true
+    transaction_naming: service
+    transaction_naming_service: kunstmaan_newrelic_naming_strategy

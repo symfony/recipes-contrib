@@ -1,0 +1,31 @@
+{
+    "bundles": {
+        "Kunstmaan\\AdminBundle\\KunstmaanAdminBundle": ["all"],
+        "Kunstmaan\\MediaBundle\\KunstmaanMediaBundle": ["all"],
+        "Kunstmaan\\UtilitiesBundle\\KunstmaanUtilitiesBundle": ["all"],
+        "Kunstmaan\\NodeBundle\\KunstmaanNodeBundle": ["all"],
+        "Kunstmaan\\SeoBundle\\KunstmaanSeoBundle": ["all"],
+        "Kunstmaan\\PagePartBundle\\KunstmaanPagePartBundle": ["all"],
+        "Kunstmaan\\MediaPagePartBundle\\KunstmaanMediaPagePartBundle": ["all"],
+        "Kunstmaan\\FormBundle\\KunstmaanFormBundle": ["all"],
+        "Kunstmaan\\AdminListBundle\\KunstmaanAdminListBundle": ["all"],
+        "Kunstmaan\\SearchBundle\\KunstmaanSearchBundle": ["all"],
+        "Kunstmaan\\NodeSearchBundle\\KunstmaanNodeSearchBundle": ["all"],
+        "Kunstmaan\\SitemapBundle\\KunstmaanSitemapBundle": ["all"],
+        "Kunstmaan\\ArticleBundle\\KunstmaanArticleBundle": ["all"],
+        "Kunstmaan\\TranslatorBundle\\KunstmaanTranslatorBundle": ["all"],
+        "Kunstmaan\\RedirectBundle\\KunstmaanRedirectBundle": ["all"],
+        "Kunstmaan\\UserManagementBundle\\KunstmaanUserManagementBundle": ["all"],
+        "Kunstmaan\\DashboardBundle\\KunstmaanDashboardBundle": ["all"],
+        "Kunstmaan\\MenuBundle\\KunstmaanMenuBundle": ["all"],
+        "Kunstmaan\\ConfigBundle\\KunstmaanConfigBundle": ["all"],
+
+        "Kunstmaan\\BehatBundle\\KunstmaanBehatBundle": ["dev", "test"],
+
+        "Kunstmaan\\FixturesBundle\\KunstmaanFixturesBundle": ["dev"],
+        "Kunstmaan\\GeneratorBundle\\KunstmaanGeneratorBundle": ["dev"]
+    },
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%/"
+    }
+}

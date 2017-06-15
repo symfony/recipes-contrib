@@ -1,0 +1,40 @@
+security:
+    acl:
+        connection: default
+
+    encoders:
+        FOS\UserBundle\Model\UserInterface: sha512
+
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+        ROLE_NEWS:        ROLE_USER
+
+    providers:
+        fos_userbundle:
+                id: fos_user.user_provider.username
+
+    firewalls:
+        main:
+            pattern: .*
+            form_login:
+                login_path: fos_user_security_login
+                check_path: fos_user_security_check
+                provider: fos_userbundle
+            logout:
+                path:   fos_user_security_logout
+                target: KunstmaanAdminBundle_homepage
+            anonymous:    true
+            remember_me:
+                secret:   "%secret%"
+                lifetime: 604800
+                path:     /
+                domain:   ~
+        dev:
+            pattern:  ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+    access_control:
+        - { path: ^/([^/]*)/admin/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/([^/]*)/admin/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/([^/]*)/admin, role: ROLE_ADMIN }
