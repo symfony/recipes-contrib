@@ -1,4 +1,4 @@
-nelmio_api_doc: ~
+#nelmio_api_doc:
 #    exclude_sections:     []
 #    default_sections_opened:  true
 #    motd:
