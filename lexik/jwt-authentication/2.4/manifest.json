@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Lexik\\Bundle\\JWTAuthenticationBundle\\": ["all"]
+    },
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%/"
+    }
+}
