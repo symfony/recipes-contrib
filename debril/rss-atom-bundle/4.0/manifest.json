@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Debril\\RssAtomBundle\\DebrilRssAtomBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%/"
+    },
+    "aliases": ["feeds", "rss", "atom"]
+}
