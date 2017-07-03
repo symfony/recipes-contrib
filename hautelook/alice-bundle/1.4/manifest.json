@@ -3,7 +3,7 @@
         "Hautelook\\AliceBundle\\HautelookAliceBundle": ["dev", "test"]
     },
     "copy-from-recipe": {
-        "etc/": "%ETC_DIR%/",
+        "config/": "%CONFIG_DIR%/",
         "src/": "%SRC_DIR%/"
     }
 }

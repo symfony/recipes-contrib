@@ -3,7 +3,7 @@
         "PommProject\\PommBundle\\PommBundle": ["all"]
     },
     "copy-from-recipe": {
-        "etc/": "%ETC_DIR%/"
+        "config/": "%CONFIG_DIR%/"
     },
     "env": {
         "DATABASE_URL": "pgsql://user:pass@127.0.0.1:5432/my_db_name"

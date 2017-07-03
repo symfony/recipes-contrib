@@ -3,7 +3,7 @@
         "Algolia\\AlgoliaSearchBundle\\AlgoliaAlgoliaSearchBundle": ["all"]
     },
     "copy-from-recipe": {
-        "etc/": "%ETC_DIR%/"
+        "config/": "%CONFIG_DIR%/"
     },
     "env": {
         "ALGOLIA_APP_ID": "...",
