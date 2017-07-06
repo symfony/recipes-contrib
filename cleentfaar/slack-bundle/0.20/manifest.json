@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "CL\\Bundle\\SlackBundle\\CLSlackBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "SLACK_API_TOKEN": "YOUR_TOKEN"
+    }
+}
