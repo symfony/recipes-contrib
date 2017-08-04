@@ -1,7 +1,5 @@
 httplug:
     plugins:
-        logger:
-            enabled: '%kernel.debug%' # Set to true if you want enable logging in production
         redirect:
             preserve_header: true
 
