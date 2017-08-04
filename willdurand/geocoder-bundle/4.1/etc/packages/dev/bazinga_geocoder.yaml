@@ -1,0 +1,4 @@
+bazinga_geocoder:
+    # the IP used as the REMOTE_ADDR for all HTTP requests in "dev" environment
+    # see https://github.com/geocoder-php/BazingaGeocoderBundle/blob/master/Resources/doc/index.md
+    fake_ip: 123.123.123.123
