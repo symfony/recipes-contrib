@@ -1,0 +1,17 @@
+# Library documentation: http://tactician.thephpleague.com/
+# Bundle documentation: https://github.com/thephpleague/tactician-bundle/blob/v0.4.1/README.md
+tactician:
+    default_bus: default
+    commandbus:
+        default:
+            middleware:
+                - tactician.middleware.command_handler
+# Example of separate command/query buses with transactional command bus
+#    query:
+#      middleware:
+#        - tactician.middleware.command_handler
+#    command:
+#      middleware:
+#        # Transactional command bus - requires http://tactician.thephpleague.com/plugins/doctrine/
+#        - tactician.middleware.doctrine
+#        - tactician.middleware.command_handler
