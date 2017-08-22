@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "League\\Tactician\\Bundle\\TacticianBundle": ["all"]
+    }
+}
