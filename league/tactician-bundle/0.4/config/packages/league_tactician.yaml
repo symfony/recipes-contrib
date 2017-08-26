@@ -7,11 +7,11 @@ tactician:
             middleware:
                 - tactician.middleware.command_handler
 # Example of separate command/query buses with transactional command bus
-#    query:
-#      middleware:
-#        - tactician.middleware.command_handler
-#    command:
-#      middleware:
-#        # Transactional command bus - requires http://tactician.thephpleague.com/plugins/doctrine/
-#        - tactician.middleware.doctrine
-#        - tactician.middleware.command_handler
+#        query:
+#            middleware:
+#                - tactician.middleware.command_handler
+#        command:
+#            middleware:
+#                # Transactional command bus - requires http://tactician.thephpleague.com/plugins/doctrine/
+#                - tactician.middleware.doctrine
+#                - tactician.middleware.command_handler
