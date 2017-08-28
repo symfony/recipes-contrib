@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "SensioLabs\\Bundle\\ConnectBundle\\SensioLabsConnectBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "SENSIOLABS_CONNECT_APP_ID": "",
+        "SENSIOLABS_CONNECT_APP_SECRET": ""
+    }
+}
