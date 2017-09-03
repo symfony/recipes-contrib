@@ -1,6 +1,7 @@
 endroid_cm_sms:
     product_token: '%env(ENDROID_CMSMS_PRODUCT_TOKEN)%'
     defaults:
+        sender: 'EndroidCmSms'
         unicode: 'auto'
         minimum_number_of_message_parts: 1
         maximum_number_of_message_parts: 3
