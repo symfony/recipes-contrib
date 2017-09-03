@@ -1,8 +1,0 @@
-{
-    "bundles": {
-        "Endroid\\Asset\\Bundle\\AssetBundle\\EndroidAssetBundle": ["all"]
-    },
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    }
-}
