@@ -1,0 +1,4 @@
+EndroidPredictionIODemoBundle:
+    resource: "@EndroidPredictionIODemoBundle/Controller/"
+    type: annotation
+    prefix: /prediction-io

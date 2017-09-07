@@ -1,0 +1,12 @@
+{
+  "bundles": {
+    "Endroid\\PredictionIO\\Bundle\\PredictionIOBundle\\EndroidPredictionIOBundle": ["all"],
+    "Endroid\\PredictionIO\\Bundle\\PredictionIODemoBundle\\EndroidPredictionIODemoBundle": ["all"]
+  },
+  "copy-from-recipe": {
+    "config/": "%CONFIG_DIR%/"
+  },
+  "env": {
+    "PREDICTION_IO_ACCESS_KEY": ""
+  }
+}
