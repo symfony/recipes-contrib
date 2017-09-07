@@ -6,6 +6,6 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "ENDROID_CMSMS_PRODUCT_TOKEN": ""
+        "CM_SMS_PRODUCT_TOKEN": ""
     }
 }
