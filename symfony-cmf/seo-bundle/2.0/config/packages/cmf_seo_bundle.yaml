@@ -1,6 +1,7 @@
 # Read the documentation: https://symfony.com/doc/master/cmf/bundles/seo/configuration.html
 cmf_seo:
     persistence:
-        phpcr: ~
+        phpcr:
+            enabled: true
     title: %%content_title%% | Symfony2 CMF
     description: The Symfony2 Content Management Framework. %%content_description%%
