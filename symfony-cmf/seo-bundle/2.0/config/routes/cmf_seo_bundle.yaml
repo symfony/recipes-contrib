@@ -1,3 +1,0 @@
-sitemaps:
-    prefix: /sitemaps
-    resource: "@CmfSeoBundle/Resources/config/routing/sitemap.xml"
