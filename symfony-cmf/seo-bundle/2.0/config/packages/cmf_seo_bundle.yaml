@@ -1,4 +1,4 @@
-# Read the documentation: http://symfony.com/doc/master/cmf/bundles/seo/configuration.html
+# Read the documentation: https://symfony.com/doc/master/cmf/bundles/seo/configuration.html
 cmf_seo:
 #    persistence:
 #        phpcr:
