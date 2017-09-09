@@ -1,7 +1,6 @@
 # Read the documentation: https://symfony.com/doc/master/cmf/bundles/seo/configuration.html
 cmf_seo:
     persistence:
-        phpcr:
-            enabled: true
-    title: %%content_title%% | Symfony2 CMF
-    description: The Symfony2 Content Management Framework. %%content_description%%
+        phpcr: ~
+    title: '%%content_title%% | Insert your base Title'
+    description: 'Insert you base description here. %%content_description%%'
