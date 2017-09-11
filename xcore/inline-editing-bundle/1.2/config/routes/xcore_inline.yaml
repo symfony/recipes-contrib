@@ -1,0 +1,2 @@
+xcore_inline:
+    resource: "@XcoreCMSInlineEditingBundle/Resources/config/routing.xml"
