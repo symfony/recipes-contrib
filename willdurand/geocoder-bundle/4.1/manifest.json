@@ -3,6 +3,6 @@
         "Bazinga\\Bundle\\GeocoderBundle\\BazingaGeocoderBundle": ["all"]
     },
     "copy-from-recipe": {
-        "etc/": "%ETC_DIR%/"
+        "config/": "%CONFIG_DIR%/"
     }
 }
