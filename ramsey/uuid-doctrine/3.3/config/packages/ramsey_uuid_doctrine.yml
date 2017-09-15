@@ -1,5 +1,4 @@
 doctrine:
-   dbal:
-       types:
-           uuid:  Ramsey\Uuid\Doctrine\UuidType
-           
+    dbal:
+        types:
+            uuid:  Ramsey\Uuid\Doctrine\UuidType
