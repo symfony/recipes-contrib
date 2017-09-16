@@ -1,7 +1,0 @@
-broadway:
-    event_store:
-        dbal:
-            enabled: true
-            connection: 'default'
-            table: 'events'
-            use_binary: true

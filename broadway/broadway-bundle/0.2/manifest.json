@@ -1,5 +1,0 @@
-{
-    "bundles": {
-        "Broadway\\Bundle\\BroadwayBundle\\BroadwayBundle": ["all"]
-    }
-}
