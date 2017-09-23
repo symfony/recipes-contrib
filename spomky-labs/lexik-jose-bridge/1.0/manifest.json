@@ -7,6 +7,6 @@
     },
     "env": {
         "SL_JOSE_BRIDGE_SERVER_NAME": "https://www.my-service.com/",
-        "SL_JOSE_BRIDGE_KEY_STORAGE_FOLDER": "%CONFIG_DIR%/sl_jose/"
+        "SL_JOSE_BRIDGE_KEY_STORAGE_FOLDER": "/tmp/sl_jose/"
     }
 }
