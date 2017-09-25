@@ -1,0 +1,2 @@
+<bg=blue;fg=white> Next for SpomkyLabsLexikJoseBundle </>
+    Run <comment>make cache-warmup</> to generate keys.
