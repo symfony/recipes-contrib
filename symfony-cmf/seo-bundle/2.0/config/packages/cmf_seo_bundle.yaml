@@ -3,4 +3,4 @@ cmf_seo:
     persistence:
         phpcr: ~
     title: '%%content_title%% | Insert your base Title'
-    description: 'Insert you base description here. %%content_description%%'
+    description: '%%content_description%% Insert you base description here.'
