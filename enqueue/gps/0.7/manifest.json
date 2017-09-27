@@ -1,0 +1,5 @@
+{
+    "env": {
+        "ENQUEUE_DSN": "gps:"
+    }
+}
