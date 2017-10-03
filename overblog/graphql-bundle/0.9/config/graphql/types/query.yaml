@@ -1,8 +1,0 @@
-Query:
-    type: object
-    config:
-        description: A Hello World query.
-        fields:
-            hello:
-                type: String
-                resolve: "world"
