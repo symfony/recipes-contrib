@@ -1,0 +1,9 @@
+{
+  "bundles": {
+    "Ihsan\\RatchetBundle\\IhsanRatchetBundle": ["all"]
+  },
+  "copy-from-recipe": {
+    "config/": "%CONFIG_DIR%/"
+  },
+  "aliases": ["ratchet", "web-socket"]
+}
