@@ -1,0 +1,2 @@
+ihsan_ratchet:
+    web_socket_port: "%env(WEB_SOCKET_PORT)%"
