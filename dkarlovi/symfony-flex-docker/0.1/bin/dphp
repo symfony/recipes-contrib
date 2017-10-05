@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+
+# see https://github.com/dkarlovi/php-toolbox
+
+IMAGE=dkarlovi/php-toolbox
+TAG=latest
+
+# ensure Compose cache folder exists before running docker run
+# this avoids having Docker creating it as root user
+mkdir -p "${HOME}/.composer/cache"
+
+# are we running in a TTY?
+TTY=
+tty -s && TTY="--tty"
+
+# allow overriding .env COMPOSE_PROJECT_NAME
+PROJECT_NAME="${COMPOSE_PROJECT_NAME}"
+
+# .env file support
+ENV_FILE=
+if [ -f ./.env ]; then
+    ENV_FILE="--env-file ./.env"
+
+    if [ "${PROJECT_NAME}" == "" ]; then
+        # no Compose project name specified in runtime env, try .env
+        source ./.env
+        PROJECT_NAME="${COMPOSE_PROJECT_NAME}"
+    fi
+fi
+
+if [ "${PROJECT_NAME}" == "" ]; then
+    # no Compose project name found anywhere, use the current dir name
+    PROJECT_NAME="${PWD##*/}"
+fi
+
+# normalize the Compose project name (the same way Compose does, hopefully)
+PROJECT_NAME="$(echo ${PROJECT_NAME} | sed 's/[^a-zA-Z0-9]//g')"
+NETWORK_NAME="${PROJECT_NAME}_default"
+
+# specific Docker network to join
+NETWORK=
+docker network inspect "${NETWORK_NAME}" &> /dev/null
+if [ $? -eq 0 ]; then
+    NETWORK="--network ${NETWORK_NAME}"
+fi
+
+docker run --rm  --interactive \
+    ${TTY} \
+    ${ENV_FILE} \
+    ${NETWORK} \
+    --user "$(id -u):$(id -g)" \
+    --volume "${HOME}/.composer:/composer" \
+    --volume "$(pwd):/app" \
+    "${IMAGE}:${TAG}" ${@}
