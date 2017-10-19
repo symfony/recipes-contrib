@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "DAMA\\DoctrineTestBundle\\DAMADoctrineTestBundle": ["test"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
