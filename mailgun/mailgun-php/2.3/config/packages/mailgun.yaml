@@ -1,0 +1,4 @@
+services:
+    Mailgun\Mailgun:
+        factory: ['Mailgun\Mailgun', create]
+        arguments: ['%env(MAILGUN_API_KEY)%']
