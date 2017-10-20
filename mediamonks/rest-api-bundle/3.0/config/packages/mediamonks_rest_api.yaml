@@ -1,15 +1,20 @@
 mediamonks_rest_api:
     request_matcher:
         path: /api
+
     # manually force debug to be enabled or disabled
     #debug: %kernel.debug%
+
     # set the post message origin when needed
     #post_message_origin:
+
     # use regular expressions instead of a path to enable this bundle
     #request_matcher:
     #   whitelist: [~^/api/$~,  ~^/api~]
     #   blacklist: [~^/api/doc~]
+
     # json is used by default but you can set it to jms or msgpack too
     #serializer: json
+
     # define your own method of wrapping data instead point this to your own service implementing ResponseModelInterface
     #response_model: mediamonks_rest_api.response_model

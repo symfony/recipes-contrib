@@ -1,5 +1,4 @@
 {
-    "aliases": ["api", "mmapi", "mm-api", "mediamonks-api"],
     "bundles": {
         "MediaMonks\\RestApiBundle\\MediaMonksRestApiBundle": ["all"]
     },
