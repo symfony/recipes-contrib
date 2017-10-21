@@ -1,17 +1,17 @@
 bazinga_geocoder:
-  # The local IP (127.0.0.1) will be replaced by the fake_ip
-  # see https://github.com/geocoder-php/BazingaGeocoderBundle/blob/5.0.0/Resources/doc/index.md#fake-local-ip
-  fake_ip: 123.123.123.123
+    # The local IP (127.0.0.1) will be replaced by the fake_ip
+    # see https://github.com/geocoder-php/BazingaGeocoderBundle/blob/5.0.0/Resources/doc/index.md#fake-local-ip
+    fake_ip: 123.123.123.123
 
   # The following config requires 'composer req geocoder-php/chain-provider geocoder-php/google-maps-provider geocoder-php/geo-plugin-provider'
-#  providers:
-#    my_google:
-#      factory: Bazinga\GeocoderBundle\ProviderFactory\GoogleMapsFactory
-#      aliases:
-#        - my_geocoder
-#    my_geoplugin:
-#      factory: Bazinga\GeocoderBundle\ProviderFactory\GeoPluginFactory
-#    my_chain:
-#      factory: Bazinga\GeocoderBundle\ProviderFactory\ChainFactory
-#      options:
-#        services: ['@bazinga_geocoder.provider.my_google', '@bazinga_geocoder.provider.my_geoplugin']
+#    providers:
+#        my_google:
+#        factory: Bazinga\GeocoderBundle\ProviderFactory\GoogleMapsFactory
+#        aliases:
+#            - my_geocoder
+#        my_geoplugin:
+#            factory: Bazinga\GeocoderBundle\ProviderFactory\GeoPluginFactory
+#        my_chain:
+#            factory: Bazinga\GeocoderBundle\ProviderFactory\ChainFactory
+#            options:
+#                services: ['@bazinga_geocoder.provider.my_google', '@bazinga_geocoder.provider.my_geoplugin']
