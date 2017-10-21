@@ -3,7 +3,7 @@ bazinga_geocoder:
     # see https://github.com/geocoder-php/BazingaGeocoderBundle/blob/5.0.0/Resources/doc/index.md#fake-local-ip
     fake_ip: 123.123.123.123
 
-  # The following config requires 'composer req geocoder-php/chain-provider geocoder-php/google-maps-provider geocoder-php/geo-plugin-provider'
+    # The following config requires 'composer req geocoder-php/chain-provider geocoder-php/google-maps-provider geocoder-php/geo-plugin-provider'
 #    providers:
 #        my_google:
 #        factory: Bazinga\GeocoderBundle\ProviderFactory\GoogleMapsFactory
