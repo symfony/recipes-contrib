@@ -5,6 +5,7 @@ doctrine_mongodb:
         default:
             server: '%env(MONGODB_URL)%'
             options: {}
+    default_database: '%env(MONGODB_DB)%'
     document_managers:
         default:
             auto_mapping: true
