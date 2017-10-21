@@ -2,7 +2,6 @@
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     },
-    "aliases": ["mailgun"],
     "env": {
         "#1": "Get your API key form https://app.mailgun.com/app/domains",
         "MAILGUN_API_KEY": "\"replace_me\""
