@@ -1,0 +1,80 @@
+{% extends 'User/layout.html.twig' %}
+
+{% block body %}
+    {% set pendingPrimaryEmail = null %}
+    {% for secondaryEmail in secondaryEmails if secondaryEmail.isPendingPrimary %}
+        {% set pendingPrimaryEmail = secondaryEmail.email %}
+    {% endfor %}
+    <fieldset>
+        <legend>Change e-mail</legend>
+        <fieldset>
+            <legend>Primary e-mail</legend>
+            <ul>
+                <li>Current: {{ current_user().email }}</li>
+                {% if pendingPrimaryEmail %}
+                    <li>
+                        Pending confirmation: {{ pendingPrimaryEmail }}
+                        - <a href="{{ path('my_account', {'confirm-email': pendingPrimaryEmail}) }}">Send confirmation link</a>
+                        - <a href="{{ path('my_account', {'cancel-email': true}) }}">Cancel</a>
+                    </li>
+                {% endif %}
+            </ul>
+            {{ form_start(emailForm) }}
+                {{ form_errors(emailForm) }}
+                {{ form_row(emailForm.currentPassword, {label: 'Current password'}) }}
+                {{ form_row(emailForm.email, {label: 'E-mail'}) }}
+
+                <div>
+                    <input type="submit" value="Change primary e-mail" />
+                </div>
+            {{ form_end(emailForm) }}
+        </fieldset>
+
+        <fieldset>
+            <legend>Secondary e-mails</legend>
+            <ul>
+                {% for secondaryEmail in secondaryEmails %}
+                    <li>
+                        {{ secondaryEmail.email }}
+                        {% if secondaryEmail.confirmedAt %}
+                            - Confimed
+                        {% else %}
+                            - Unconfirmed
+                            - <a href="{{ path('my_account', {'confirm-email': secondaryEmail.email}) }}">Send confirmation link</a>
+                        {% endif %}
+                        {% if secondaryEmail.isPendingPrimary %}
+                            - Pending primary
+                        {% else %}
+                            - <a href="{{ path('my_account', {'primary-email': secondaryEmail.email}) }}">Make primary</a>
+                        {% endif %}
+                        - <a href="{{ path('my_account', {'delete-email': secondaryEmail.email}) }}">Delete</a>
+                    </li>
+                {% else %}
+                    <li><em>None</em></li>
+                {% endfor %}
+            </ul>
+            {{ form_start(secondaryEmailForm) }}
+                {{ form_errors(secondaryEmailForm) }}
+                {{ form_row(secondaryEmailForm.email, {label: 'New secondary e-mail'}) }}
+
+                <div>
+                    <input type="submit" value="Add secondary e-mail" />
+                </div>
+            {{ form_end(secondaryEmailForm) }}
+        </fieldset>
+    </fieldset>
+
+    <fieldset>
+        <legend>Change password</legend>
+        {{ form_start(passwordForm) }}
+            {{ form_errors(passwordForm) }}
+            {{ form_row(passwordForm.currentPassword, {label: 'Current password'}) }}
+            {{ form_row(passwordForm.password.first, {label: 'New password'}) }}
+            {{ form_row(passwordForm.password.second, {label: 'Confirm new password'}) }}
+
+            <div>
+                <input type="submit" value="Change password" />
+            </div>
+        {{ form_end(passwordForm) }}
+    </fieldset>
+{% endblock %}

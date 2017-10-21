@@ -1,0 +1,29 @@
+security:
+    encoders:
+        MsgPhp\User\Infra\Security\SecurityUser: bcrypt
+
+    providers:
+         msgphp_user: { id: MsgPhp\User\Infra\Security\SecurityUserProvider }
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            provider: msgphp_user
+            user_checker: MsgPhp\User\Infra\Security\SecurityUserChecker
+            anonymous: ~
+            form_login:
+                login_path: login
+                check_path: login
+                default_target_path: index
+                username_parameter: email
+                password_parameter: password
+                remember_me: true
+            remember_me:
+                secret: '%kernel.secret%'
+                remember_me_parameter: remember_me
+            logout:
+                path: logout
+            switch_user: true
+            logout_on_user_change: true
