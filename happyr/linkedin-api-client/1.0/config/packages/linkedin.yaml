@@ -1,0 +1,4 @@
+services:
+    Happyr\LinkedIn\LinkedIn:
+        class: Happyr\LinkedIn\LinkedIn
+        arguments: ['%env(LINKEDIN_API_KEY)%', '%env(LINKEDIN_API_SECRET)%']
