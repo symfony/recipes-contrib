@@ -1,0 +1,16 @@
+jms_serializer:
+    enable_short_alias: false
+    handlers:
+        datetime:
+            default_format: 'Y-m-d\TH:i:sP'
+    visitors:
+        xml:
+            format_output: '%kernel.debug%'
+#    auto_detection: false
+#    directories:
+#        any-name:
+#            namespace_prefix: "My\\FooBundle"
+#            path: "@MyFooBundle/Resources/config/serializer"
+#        another-name:
+#            namespace_prefix: "My\\BarBundle"
+#            path: "@MyBarBundle/Resources/config/serializer"

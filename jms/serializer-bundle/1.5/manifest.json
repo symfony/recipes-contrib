@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "JMS\\SerializerBundle\\JMSSerializerBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "etc/": "%ETC_DIR%"
+    }
+}
