@@ -1,0 +1,8 @@
+neo4j:
+    connections:
+        default:
+            scheme: "%env(NEO4J_DEFAULT_CONNECTION_SCHEME)%"
+            host: "%env(NEO4J_DEFAULT_CONNECTION_HOST)%"
+            port: "%env(int:NEO4J_DEFAULT_CONNECTION_PORT)%"
+            username: "%env(NEO4J_DEFAULT_CONNECTION_USERNAME)%"
+            password: "%env(NEO4J_DEFAULT_CONNECTION_PASSWORD)%"
