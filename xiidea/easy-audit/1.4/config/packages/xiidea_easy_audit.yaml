@@ -1,4 +1,4 @@
 # Read the documentation: http://xiidea.github.io/EasyAuditBundle/
 xiidea_easy_audit:
 #    entity_class : App\Entity\AuditLog
-#    user_property : ~ # or username
+    user_property : ~ # or username
