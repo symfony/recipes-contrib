@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Xiidea\\EasyAuditBundle\\XiideaEasyAuditBundle": ["all"]
+    },
+    "copy-from-package": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
