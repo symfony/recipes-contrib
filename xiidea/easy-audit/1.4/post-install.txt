@@ -1,3 +1,0 @@
-<bg=blue;fg=white> Next for XiideaEasyAuditBundle </>
-
-* <fg=blue>Read</> the documentation at <comment>http://xiidea.github.io/EasyAuditBundle/</>
