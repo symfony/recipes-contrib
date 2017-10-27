@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Orbitale\\Bundle\\EasyImpressBundle\\EasyImpressBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
