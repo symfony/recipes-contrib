@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Aws\\Symfony\\AwsBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "aliases": [
+        "aws-sdk-php-symfony",
+        "aws-sdk-php",
+        "aws-sdk"
+    ]
+}
