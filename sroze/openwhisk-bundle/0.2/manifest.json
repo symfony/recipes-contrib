@@ -1,5 +1,9 @@
 {
     "copy-from-recipe": {
         "index.php": "index.php"
-    }
+    },
+    "gitignore": [
+        "/.serverless",
+        "/node_modules"
+    ]
 }
