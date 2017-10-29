@@ -1,0 +1,2 @@
+easy_impress:
+    presentations_dir: '%kernel.project_dir%/config/presentations'
