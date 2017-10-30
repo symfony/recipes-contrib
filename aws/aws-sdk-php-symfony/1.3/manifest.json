@@ -6,7 +6,7 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "AWS_CREDENTIAL_KEY": "not-a-real-key",
-        "AWS_CREDENTIAL_SECRET": "@@not-a-real-secret"
+        "AWS_KEY": "not-a-real-key",
+        "AWS_SECRET": "@@not-a-real-secret"
     }
 }
