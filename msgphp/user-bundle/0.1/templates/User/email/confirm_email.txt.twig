@@ -1,0 +1,5 @@
+{% extends 'User/email/layout.txt.twig' %}
+
+{% block body %}
+Confirm your e-mail at {{ url('confirm_email', {token: userSecondaryEmail.token}) }}
+{% endblock %}
