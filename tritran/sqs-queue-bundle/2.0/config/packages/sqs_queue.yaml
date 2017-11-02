@@ -1,0 +1,3 @@
+tritran_sqs_queue:
+    sqs_queue:
+        queues: ~
