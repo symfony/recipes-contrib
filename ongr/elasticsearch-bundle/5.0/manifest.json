@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "ONGR\\ElasticsearchBundle\\ONGRElasticsearchBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

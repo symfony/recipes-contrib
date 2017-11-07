@@ -1,0 +1,10 @@
+# Read the documentation: http://docs.ongr.io/ElasticsearchBundle
+ongr_elasticsearch:
+    managers:
+        default:
+            index:
+                hosts:
+                    - 127.0.0.1:9200
+                index_name: my-app-index
+            mappings:
+                - AppBundle
