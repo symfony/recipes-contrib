@@ -1,0 +1,6 @@
+aws:
+    version: latest
+    region: us-east-1
+    credentials:
+        key: "%env(AWS_KEY)%"
+        secret: "%env(AWS_SECRET)%"
