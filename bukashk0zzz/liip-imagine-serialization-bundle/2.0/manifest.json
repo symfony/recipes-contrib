@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Bukashk0zzz\\LiipImagineSerializationBundle\\Bukashk0zzzLiipImagineSerializationBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
