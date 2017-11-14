@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Bazinga\\GeocoderBundle\\BazingaGeocoderBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
