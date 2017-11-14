@@ -1,7 +1,5 @@
 translation:
     locales: ["en"]
-    webui:
-        enabled: true
     edit_in_place:
         enabled: false
         config_name: app
