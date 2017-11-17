@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "Overblog\\DataLoaderBundle\\OverblogDataLoaderBundle": ["all"]
+    }
+}
