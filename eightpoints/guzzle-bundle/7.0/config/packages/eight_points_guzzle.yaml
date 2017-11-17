@@ -1,2 +1,14 @@
 eight_points_guzzle:
-    clients: ~
+    clients:
+        api_payment:
+            base_url: "http://api.domain.tld"
+
+            options:
+                timeout: 30
+
+                headers:
+                    Accept: "application/json"
+
+                # Find plugins here:
+                # https://github.com/8p/EightPointsGuzzleBundle#known-and-supported-plugins
+                plugin: ~
