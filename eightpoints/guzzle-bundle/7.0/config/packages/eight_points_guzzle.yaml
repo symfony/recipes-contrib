@@ -1,11 +1,13 @@
 eight_points_guzzle:
     clients:
-        api_payment:
-            base_url: "http://api.domain.tld"
+        my_client:
+            base_url: "http://target.url"
 
             options:
                 timeout: 30
 
+                # Configure headers. Ex: what do you accept as response (application/json, text/html, etc..)
+                # More info: http://docs.guzzlephp.org/en/stable/request-options.html#headers
                 headers:
                     Accept: "application/json"
 
