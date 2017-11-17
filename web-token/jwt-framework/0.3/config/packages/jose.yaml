@@ -1,0 +1,61 @@
+#jose:
+#    claim_checkers: # Claim Checker configurations
+#        checker1:
+#            claims: ['exp', 'iat', 'nbf'] # Alias list to claim checkers
+#            is_public: true # Indicates if the service to create is public or not. Default is true.
+
+#    header_checkers: # Header Checker configurations
+#        checker1:
+#            headers: [] # Alias list to claim checkers
+#            is_public: true
+
+#    jws_builders: # JWS Builder configurations
+#        builder1:
+#            signature_algorithms: ['HS256', 'RS256', 'ES256'] # Alias list to signature algorithms
+#            is_public: true
+
+#    jws_verifiers: # JWS Verifier configurations
+#        loader1:
+#            signature_algorithms: ['HS256', 'RS256', 'ES256'] # Alias list to signature algorithms
+#            is_public: true
+
+#    jws_serializers: # JWS Serialization Managers
+#        jws_serializer1:
+#            serializers: ['jws_compact', 'jws_json_flattened', 'jws_json_general']
+#            is_public: true
+
+#    jwe_builders: # JWE Builder configuration
+#        builder1:
+#            key_encryption_algorithms: ['RSA-OAEP-256', 'A256KW'] # Alias list to key encryption algorithms
+#            content_encryption_algorithms: ['A256CBC-HS512'] # Alias list to content encryption algorithms
+#            is_public: true
+
+#    jwe_decrypters: # JWE Decrypter configuration
+#        loader1:
+#            key_encryption_algorithms: ['RSA-OAEP'] # Alias list to key encryption algorithms
+#            content_encryption_algorithms: ['A256GCM'] # Alias list to content encryption algorithms
+#            is_public: true
+
+#    jwe_serializers: # JWE Serialization Managers
+#        jwe_serializer1:
+#            serializers: ['jwe_compact']
+#            is_public: true
+#        jwe_serializer2:
+#            serializers: ['jwe_json_flattened', 'jwe_json_general']
+#            is_public: true
+
+#    keys: # Key configurations
+#        jwk1:
+#            jwk: # Key created from a JWK object
+#                value: '{"kty":"oct","k":"dzI6nbW4OcNF-AtfxGAmuyz7IpHRudBI0WgGjZWgaRJt6prBn3DARXgUR8NVwKhfL43QBIU2Un3AvCGCHRgY4TbEqhOi8-i98xxmCggNjde4oaW6wkJ2NgM3Ss9SOX9zS3lcVzdCMdum-RwVJ301kbin4UtGztuzJBeg5oVN00MGxjC2xWwyI0tgXVs-zJs5WlafCuGfX1HrVkIf5bvpE0MQCSjdJpSeVao6-RSTYDajZf7T88a2eVjeW31mMAg-jzAWfUrii61T_bYPJFOXW8kkRWoa1InLRdG6bKB9wQs9-VdXZP60Q4Yuj_WZ-lO7qV9AEFrUkkjpaDgZT86w2g"}'
+
+#    key_sets: # Key Set configurations
+#        jwkset1:
+#            jwkset: # Key Set created from a JWKSet object
+#                value: '{"keys":[{"kty":"oct","k":"dzI6nbW4OcNF-AtfxGAmuyz7IpHRudBI0WgGjZWgaRJt6prBn3DARXgUR8NVwKhfL43QBIU2Un3AvCGCHRgY4TbEqhOi8-i98xxmCggNjde4oaW6wkJ2NgM3Ss9SOX9zS3lcVzdCMdum-RwVJ301kbin4UtGztuzJBeg5oVN00MGxjC2xWwyI0tgXVs-zJs5WlafCuGfX1HrVkIf5bvpE0MQCSjdJpSeVao6-RSTYDajZf7T88a2eVjeW31mMAg-jzAWfUrii61T_bYPJFOXW8kkRWoa1InLRdG6bKB9wQs9-VdXZP60Q4Yuj_WZ-lO7qV9AEFrUkkjpaDgZT86w2g"},{"kty":"oct","k":"bwIAv5Nn-fo8p4LCEvM4IR9eLXgzJRs8jXCLb3xR0tDJGiZ46KheO4ip6htFKyN2aqJqlNi9-7hB6I1aLLy1IRT9-vcBoCSGu977cNAUuRLkRp7vo8s6MsxhB8WvQBDRZghV7jIYaune-3vbE7iDU2AESr8BUtorckLoO9uW__fIabaa3hJMMQIHCzYQbJKZvlCRCKWMk2H_zuS4JeDFTvyZH1skJYF_TET1DrCZHMPicw-Yk3_m2P-ilC-yidPPoVzeU8Jj3tQ6gtX3975qiQW7pt2qbgjKAuq2wsz_9hxLBtMB5rQPafFoxop7O4BklvZ9-ECcK6dfI2CAx9_tjQ"}]}'
+
+#    jwk_uris: # Key Set sharing configurations
+#        jwkset1:
+#            id: 'jose.key_set.jwkset1' # Ket Set ID to share
+#            path: '/jwkset' # Controller path
+#            max_age: 3600 # Max age for cache configuration
