@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Sg\\DatatablesBundle\\SgDatatablesBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "aliases": ["sg-datatables"]
+}
