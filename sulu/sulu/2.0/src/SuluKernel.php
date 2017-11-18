@@ -10,7 +10,7 @@ use Symfony\Component\Routing\RouteCollectionBuilder;
 class SuluKernel extends Kernel
 {
     /**
-     * @var string string
+     * @var string
      */
     private $context;
 
