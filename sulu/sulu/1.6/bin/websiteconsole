@@ -1,0 +1,6 @@
+#!/usr/bin/env php
+<?php
+
+putenv('APP_CONTEXT=website');
+
+require __DIR__ . '/console';

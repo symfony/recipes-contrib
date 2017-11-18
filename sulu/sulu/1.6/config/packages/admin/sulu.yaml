@@ -1,6 +1,10 @@
+parameters:
+    sulu_admin.name: SULU
+    sulu_admin.email: johannes@sulu.io
+
 sulu_admin:
-    name: "SULU"
-    email: "johannes@sulu.io"
+    name: "%sulu_admin.name%"
+    email: "%sulu_admin.email%"
 
 sulu_security:
     checker:

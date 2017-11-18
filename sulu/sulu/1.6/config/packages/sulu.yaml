@@ -1,3 +1,11 @@
+parameters:
+    phpcr_backend:
+        type: doctrinedbal
+    phpcr_workspace: default
+    phpcr_user: admin
+    phpcr_pass: admin
+    phpcr_cache: file_system
+
 framework:
     templating:
         engines: ['twig']
@@ -15,17 +23,15 @@ dubture_f_fmpeg:
 sulu_document_manager:
     sessions:
         default:
-            backend:
-                type: doctrinedbal
-            workspace: "default"
-            username: "admin"
-            password: "admin"
+            backend: "%phpcr_backend%"
+            workspace: "%phpcr_workspace%"
+            username: "%phpcr_user%"
+            password: "%phpcr_pass%"
         live:
-            backend:
-                type: doctrinedbal
-            workspace: "default_live"
-            username: "admin"
-            password: "admin"
+            backend: "%phpcr_backend%"
+            workspace: "%phpcr_workspace%_live"
+            username: "%phpcr_user%"
+            password: "%phpcr_pass%"
 
 sulu_core:
     webspace:

@@ -5,15 +5,10 @@ namespace App;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\HttpKernel\Kernel as BaseKernel;
 use Symfony\Component\Routing\RouteCollectionBuilder;
 
-class Kernel extends BaseKernel
+class SuluKernel extends Kernel
 {
-    use MicroKernelTrait;
-
-    const CONFIG_EXTS = '.{php,xml,yaml,yml}';
-
     /**
      * @var string string
      */
@@ -24,24 +19,33 @@ class Kernel extends BaseKernel
      */
     private $configuration;
 
-    public function __construct(string $context, string$environment, $debug)
+    public function __construct(string $environment, $debug)
     {
         parent::__construct($environment, $debug);
 
-        $this->context = $context;
+        $this->context = $this->detectContext();
 
-        $configurations = require dirname(__DIR__).'/config/contexts.php';
-        $this->configuration = $configurations[$context];
+        $configurations = require dirname(__DIR__) . '/config/contexts.php';
+        $this->configuration = $configurations[$this->context];
+    }
+
+    private function detectContext()
+    {
+        if (!$_SERVER || !array_key_exists('REQUEST_URI', $_SERVER)) {
+            return getenv('APP_CONTEXT') ?: 'admin';
+        }
+
+        return preg_match('/^\/admin(\/|$)/', $_SERVER['REQUEST_URI']) ? 'admin' : 'website';
     }
 
     public function getCacheDir()
     {
-        return $this->getProjectDir().'/var/cache/'.$this->context.'/'.$this->environment;
+        return $this->getProjectDir() . '/var/cache/' . $this->context . '/' . $this->environment;
     }
 
     public function getLogDir()
     {
-        return $this->getProjectDir().'/var/log/'.$this->context;
+        return $this->getProjectDir() . '/var/log/' . $this->context;
     }
 
     public function registerBundles()
