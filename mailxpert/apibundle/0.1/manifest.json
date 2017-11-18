@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Mailxpert\\APIBundle\\MailxpertAPIBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "src/Entity/AccessToken.php": "%SRC_DIR%/Entity/AccessToken.php"
+    }
+}

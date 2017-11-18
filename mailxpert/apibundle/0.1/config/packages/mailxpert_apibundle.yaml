@@ -1,0 +1,6 @@
+mailxpert_api:
+    access_token_class: App\Entity\AccessToken
+    oauth:
+        client_id: 'client_id_to_replace'
+        client_secret: 'client_secret_to_replace'
+        redirect_url: 'http://example.com/mx/oauth/code'
