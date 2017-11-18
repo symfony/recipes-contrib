@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Ekino\\Bundle\\NewRelicBundle\\NewRelicBundle": ["prod"]
+        "Ekino\\Bundle\\NewRelicBundle\\EkinoNewRelicBundle": ["prod"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
