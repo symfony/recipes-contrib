@@ -100,6 +100,7 @@ class SuluKernel extends Kernel
             [
                 'sulu.context' => $this->context,
                 'sulu.cache_dir' => $this->getCacheDir().'/sulu',
+                'kernel.public_dir' => $this->getProjectDir().'/public',
             ]
         );
     }
