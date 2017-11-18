@@ -1,6 +1,6 @@
 {
     "bundles": {
-      "Knp\\Bundle\\SnappyBundle\\KnpSnappyBundle": ["all"]
+        "Knp\\Bundle\\SnappyBundle\\KnpSnappyBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
