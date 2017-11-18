@@ -1,0 +1,13 @@
+nelmio_solarium:
+    endpoints:
+        default:
+            host: "%env(SOLR_HOST)%"
+            core: "%env(SOLR_CORE)%"
+            # The following are the default parameters for Solarium client:
+            # scheme: http
+            # port: 8983
+            # path: /solr
+            # timeout: 5
+    clients:
+        default:
+            endpoints: [default]
