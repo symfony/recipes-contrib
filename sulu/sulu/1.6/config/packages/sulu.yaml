@@ -51,6 +51,26 @@ sulu_core:
                     path: "%kernel.project_dir%/config/sulu/templates/snippets"
                     type: "snippet"
 
+massive_search:
+    adapters:
+        zend_lucene:
+            basepath: "%kernel.project_dir%/var/indexes"
+
+
+sulu_website:
+    sitemap:
+        dump_dir: "%kernel.project_dir%/var/sitemaps"
+
+sulu_http_cache:
+    handlers:
+        debug:
+            enabled: "%kernel.debug%"
+
+sulu_media:
+    storage:
+        local:
+            path: "%kernel.project_dir%/var/uploads/media"
+
 security:
     access_decision_manager:
         strategy: unanimous
