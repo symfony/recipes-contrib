@@ -1,11 +1,3 @@
-parameters:
-    phpcr_backend:
-        type: doctrinedbal
-    phpcr_workspace: default
-    phpcr_user: admin
-    phpcr_pass: admin
-    phpcr_cache: file_system
-
 framework:
     templating:
         engines: ['twig']
@@ -20,18 +12,29 @@ dubture_f_fmpeg:
     binary_timeout: 300 # Use 0 for infinite
     threads_count: 4
 
+doctrine_cache:
+    providers:
+        phpcr_meta:
+            type: file_system
+        phpcr_nodes:
+            type: file_system
+
 sulu_document_manager:
     sessions:
         default:
-            backend: "%phpcr_backend%"
-            workspace: "%phpcr_workspace%"
-            username: "%phpcr_user%"
-            password: "%phpcr_pass%"
+            backend:
+                type: "%env(PHPCR_BACKEND)%"
+                url: "%env(PHPCR_JACKRABBIT_URI)%"
+            workspace: "%env(PHPCR_WORKSPACE)%"
+            username: "%env(PHPCR_USER)%"
+            password: "%env(PHPCR_PASS)%"
         live:
-            backend: "%phpcr_backend%"
-            workspace: "%phpcr_workspace%_live"
-            username: "%phpcr_user%"
-            password: "%phpcr_pass%"
+            backend:
+                type: "%env(PHPCR_BACKEND)%"
+                url: "%env(PHPCR_JACKRABBIT_URI)%"
+            workspace: "%env(PHPCR_WORKSPACE)%_live"
+            username: "%env(PHPCR_USER)%"
+            password: "%env(PHPCR_PASS)%"
 
 sulu_core:
     webspace:

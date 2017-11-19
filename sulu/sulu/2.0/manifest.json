@@ -29,8 +29,16 @@
         "DTL\\Bundle\\PhpcrMigrations\\PhpcrMigrationsBundle": ["all"]
     },
     "copy-from-recipe": {
+        "bin/": "bin/",
         "config/": "%CONFIG_DIR%/",
         "src/": "src/",
         "templates/": "templates/"
+    },
+    "env": {
+        "PHPCR_BACKEND": "doctrinedbal",
+        "PHPCR_JACKRABBIT_URI": "",
+        "PHPCR_WORKSPACE": "default",
+        "PHPCR_USER": "admin",
+        "PHPCR_PASS": "admin"
     }
 }
