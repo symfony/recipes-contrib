@@ -1,3 +1,4 @@
 sg_datatables_bundle:
     resource: "@SgDatatablesBundle/Controller/"
     type:     annotation
+    prefix:   /sg
