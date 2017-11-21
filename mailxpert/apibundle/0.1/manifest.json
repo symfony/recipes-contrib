@@ -5,5 +5,9 @@
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/",
         "src/Entity/AccessToken.php": "%SRC_DIR%/Entity/AccessToken.php"
+    },
+    "env": {
+        "MAILXPERT_CLIENT_ID": "mailxpert_client_id_to_replace",
+        "MAILXPERT_CLIENT_SECRET": "mailxpert_client_secret_to_replace"
     }
 }
