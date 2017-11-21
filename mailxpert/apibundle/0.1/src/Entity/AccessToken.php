@@ -17,5 +17,4 @@ class AccessToken extends BaseAccessToken
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
-
 }
