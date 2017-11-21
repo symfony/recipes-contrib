@@ -12,6 +12,6 @@ eight_points_guzzle:
                 headers:
                     User-Agent: "EightpointsGuzzleBundle/7.0"
 
-                # Find plugins here:
-                # https://github.com/8p/EightPointsGuzzleBundle#known-and-supported-plugins
-                plugin: ~
+            # Find plugins here:
+            # https://github.com/8p/EightPointsGuzzleBundle#known-and-supported-plugins
+            plugin: ~
