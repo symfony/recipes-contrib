@@ -6,8 +6,5 @@
         "Jose\\Bundle\\Checker\\CheckerBundle": ["all"],
         "Jose\\Bundle\\Signature\\SignatureBundle": ["all"],
         "Jose\\Bundle\\Encryption\\EncryptionBundle": ["all"]
-    },
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%"
     }
 }
