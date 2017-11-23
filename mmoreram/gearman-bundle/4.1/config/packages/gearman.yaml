@@ -8,7 +8,7 @@ doctrine_cache:
 # http://gearmanbundle.readthedocs.io/en/latest/configuration.html
 #
 # At least you need to provide `resources` or `bundles` configuration in order for your
-# worker annotations to be disoverable.
+# worker annotations to be discoverable.
 gearman:
     servers:
         localhost:
