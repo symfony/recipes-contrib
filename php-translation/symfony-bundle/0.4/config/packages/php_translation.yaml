@@ -5,7 +5,7 @@ translation:
         config_name: app
     configs:
         app:
-            dirs: ["%kernel.project_dir%/templates", "%kernel.root_dir%/src"]
+            dirs: ["%kernel.project_dir%/templates", "%kernel.root_dir%/%SRC_DIR%"]
             output_dir: "%kernel.project_dir%/translations"
             excluded_names: ["*TestCase.php", "*Test.php"]
             excluded_dirs: [cache, data, logs]

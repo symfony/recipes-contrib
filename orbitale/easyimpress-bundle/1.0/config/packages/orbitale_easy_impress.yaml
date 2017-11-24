@@ -1,2 +1,2 @@
 easy_impress:
-    presentations_dir: '%kernel.project_dir%/config/presentations'
+    presentations_dir: '%kernel.project_dir%/%CONFIG_DIR%/presentations'

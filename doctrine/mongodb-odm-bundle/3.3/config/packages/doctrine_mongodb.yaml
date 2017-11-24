@@ -13,6 +13,6 @@ doctrine_mongodb:
                 App:
                     is_bundle: false
                     type: annotation
-                    dir: '%kernel.project_dir%/src/Document'
+                    dir: '%kernel.project_dir%/%SRC_DIR%/Document'
                     prefix: App\Document\
                     alias: App
