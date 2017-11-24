@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Knp\\Bundle\\SnappyBundle\\KnpSnappyBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "WKHTMLTOPDF_PATH": "/usr/local/bin/wkhtmltopdf",
+        "WKHTMLTOIMAGE_PATH": "/usr/local/bin/wkhtmltoimage"
+    }
+}
