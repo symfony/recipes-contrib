@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Mailxpert\\APIBundle\\MailxpertAPIBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "src/": "%SRC_DIR%/"
+    },
+    "env": {
+        "MAILXPERT_CLIENT_ID": "mailxpert_client_id_to_replace",
+        "MAILXPERT_CLIENT_SECRET": "mailxpert_client_secret_to_replace"
+    }
+}
