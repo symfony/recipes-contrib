@@ -4,7 +4,7 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/",
-        "src/Entity/AccessToken.php": "%SRC_DIR%/Entity/AccessToken.php"
+        "src/": "%SRC_DIR%/"
     },
     "env": {
         "MAILXPERT_CLIENT_ID": "mailxpert_client_id_to_replace",
