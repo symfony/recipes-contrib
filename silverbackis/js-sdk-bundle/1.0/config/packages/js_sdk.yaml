@@ -1,4 +1,4 @@
-js_sdk:
+#js_sdk:
 #    google_analytics:
 #        id: UA-12345678
 #        default_blocks:
