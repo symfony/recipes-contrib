@@ -1,5 +1,4 @@
 {
-    "aliases": ["js-sdk"],
     "bundles": {
         "JsSdkBundle\\JsSdkBundle": ["all"]
     },
