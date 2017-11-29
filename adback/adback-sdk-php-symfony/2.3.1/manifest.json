@@ -6,6 +6,6 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "ADBACK_API_CLIENT_ACCESS_TOKEN": "adback-site-access-token"
+        "ADBACK_API_CLIENT_ACCESS_TOKEN": "adback-access-token"
     }
 }
