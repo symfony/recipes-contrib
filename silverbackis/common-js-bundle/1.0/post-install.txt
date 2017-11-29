@@ -1,8 +1,7 @@
-<bg=blue;fg=white>              </>
-<bg=blue;fg=white> What's next? </>
-<bg=blue;fg=white>              </>
+<bg=green;fg=white>                  </>
+<bg=green;fg=white>   What's next?   </>
+<bg=green;fg=white>                  </>
 
-1. Take a look at the js_sdk.yaml files created and uncomment lines to quickly enable bundles.
-2. Remember there is a config file in your <fg=blue>debug</> folder as well if you want to enable the debug mode of some SDKs during development.
+1. Take a look at the common_js.yaml file created and enable the scripts you want to use
 
-* <fg=blue>Read</> the documentation at <comment>https://github.com/silverbackis/js-sdk-bundle</>
+* <fg=blue>Read</> the documentation at <comment>https://github.com/silverbackis/common-js-bundle</> to find out the blocks available and how to use the bundle.

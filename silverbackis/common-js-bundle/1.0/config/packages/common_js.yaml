@@ -1,5 +1,17 @@
-#js_sdk:
-#    google_analytics:
-#        id: UA-12345678
+# Enable and configure the scripts you'd like
+common_js:
+    google_analytics:
+        enabled: false
+        debug: '%kernel.debug'
+        # in each script you can also define default blocks so you don't have to do this in your twig templates
 #        default_blocks:
 #            page_view: ~
+#            "ec/init":
+#                currency: USD
+    gtm:
+        enabled: false
+    twitter:
+        enabled: false
+    facebook_sdk:
+        enabled: false
+        debug: '%kernel.debug'
