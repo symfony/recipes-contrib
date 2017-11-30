@@ -1,6 +1,6 @@
-<bg=green;fg=white>                    </>
-<bg=green;fg=white>    What's next?    </>
-<bg=green;fg=white>                    </>
+<bg=blue;fg=white>                    </>
+<bg=blue;fg=white>    What's next?    </>
+<bg=blue;fg=white>                    </>
 
 1. Take a look at the silverback_common_js.yaml file created and enable the scripts you want to use
 2. Go to your .env file and uncomment the environment variables for your enabled scripts (if applicable)
