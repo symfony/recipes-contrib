@@ -1,0 +1,3 @@
+EndroidCmSmsBundle:
+    resource: "@EndroidCmSmsBundle/Resources/config/routing.yml"
+    prefix: /cm-sms
