@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Endroid\\DataSanitize\\Bundle\\DataSanitizeBundle\\EndroidDataSanitizeBundle": ["all"],
+        "Endroid\\DataSanitize\\Bundle\\DataSanitizeDemoBundle\\EndroidDataSanitizeDemoBundle": ["dev"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

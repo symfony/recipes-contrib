@@ -1,0 +1,14 @@
+endroid_data_sanitize:
+    entities:
+        project:
+            class: Endroid\DataSanitize\Bundle\DataSanitizeDemoBundle\Entity\Project
+            fields: [ 'id', 'name' ]
+        user:
+            class: Endroid\DataSanitize\Bundle\DataSanitizeDemoBundle\Entity\User
+            fields: [ 'id', 'name' ]
+        task:
+            class: Endroid\DataSanitize\Bundle\DataSanitizeDemoBundle\Entity\Task
+            fields: [ 'id', 'name', 'project', 'user' ]
+        tag:
+            class: Endroid\DataSanitize\Bundle\DataSanitizeDemoBundle\Entity\Tag
+            fields: [ 'id', 'name' ]

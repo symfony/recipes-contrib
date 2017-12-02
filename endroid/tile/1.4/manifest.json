@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Endroid\\Tile\\Bundle\\TileBundle\\EndroidTileBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

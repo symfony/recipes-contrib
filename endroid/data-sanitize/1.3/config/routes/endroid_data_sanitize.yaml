@@ -1,0 +1,4 @@
+EndroidDataSanitizeBundle:
+    resource: "@EndroidDataSanitizeBundle/Controller/"
+    type: annotation
+    prefix: /data-sanitize
