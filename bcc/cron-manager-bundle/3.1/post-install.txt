@@ -1,0 +1,1 @@
+<fg=blue>BCC Cron Manager Bundle</> needs sessions enabled, please configure this by uncommenting this entire session section in <comment>config/packages/framework.yaml</>.
