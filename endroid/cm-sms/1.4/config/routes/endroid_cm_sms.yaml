@@ -1,4 +1,0 @@
-EndroidCmSmsBundle:
-    resource: "@EndroidCmSmsBundle/Controller/"
-    type: annotation
-    prefix: /cm-sms
