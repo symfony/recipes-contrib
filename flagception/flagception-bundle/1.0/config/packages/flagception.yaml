@@ -1,0 +1,34 @@
+flagception:
+    routing_metadata:
+        enable: true
+    annotation:
+        enable: false
+    cookie:
+        enable: false
+        name: 'flagception'
+        separator: ','
+    profiler:
+        collect: true
+    features:
+#        # Feature name as key
+#        feature_123:
+#            # Default flag if inactive or active (default: false)
+#            default: true
+#
+#        # Feature state from an environment variable
+#        feature_abc:
+#            env: FEATURE_ENV_ABC
+#
+#        # Feature with constraint (active if user id is 12 OR it is between 8 am and 6 pm)
+#        feature_def:
+#            constraints:
+#                    - 'user_id == 12'
+#                    - 'date("H") > 8 and date("H") < 18'
+#
+#        # All together (chain)
+#        feature_def:
+#            default: false
+#            env: FEATURE_ENV_ABC
+#            constraints:
+#                    - 'user_id == 12'
+#                    - 'date("H") > 8 and date("H") < 18'
