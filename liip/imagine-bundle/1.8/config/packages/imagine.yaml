@@ -1,4 +1,15 @@
-#liip_imagine:
+liip_imagine:
+    resolvers:
+        default:
+            web_path:
+                web_root: '%kernel.project_dir%/public'
+                cache_prefix: ~ # media/cache
+
+    loaders:
+        default:
+            filesystem:
+                data_root: '%kernel.project_dir%/public'
+#
 #    # valid drivers options include "gd" or "gmagick" or "imagick"
 #    driver: "gd"
 #
