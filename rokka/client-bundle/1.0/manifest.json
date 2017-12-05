@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "\\Rokka\\RokkaClientBundle\\RokkaClientBundle": ["all"]
+        "Rokka\\RokkaClientBundle\\RokkaClientBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
