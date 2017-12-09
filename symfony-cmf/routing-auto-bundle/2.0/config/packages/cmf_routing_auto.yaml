@@ -1,0 +1,8 @@
+# Read the documentation: https://symfony.com/doc/master/cmf/bundles/routing_auto/configuration.html
+# Install phpcr stack before using this configuration
+#cmf_routing_auto:
+#    mapping:
+#        resources:
+#            -
+#                path: app/Resources/routing_auto.yml
+#                type: yaml
