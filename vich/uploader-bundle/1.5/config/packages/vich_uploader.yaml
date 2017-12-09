@@ -4,4 +4,4 @@ vich_uploader:
     #mappings:
     #    products:
     #        uri_prefix: /images/products
-    #        upload_destination: '%kernel.project_dir%/public/images/products'
+    #        upload_destination: '%kernel.project_dir%/%PUBLIC_DIR%/images/products'

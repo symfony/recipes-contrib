@@ -1,5 +1,5 @@
 wisembly_amqp:
-    console_path: '%kernel.project_dir%/bin/console'
+    console_path: '%kernel.project_dir%/%BIN_DIR%/console'
     broker: 'oldsound'
     connections:
         default: '%env(AMQP_URL)%'
