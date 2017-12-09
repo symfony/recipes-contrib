@@ -1,0 +1,13 @@
+# Read the documentation: https://symfony.com/doc/2.0/cmf/bundles/phpcr_odm/configuration.html
+# Configure a doctrine dbal default connection before
+#doctrine_phpcr:
+#    odm:
+#        auto_mapping: true
+#        auto_generate_proxy_classes: "%kernel.debug%"
+#    session:
+#        backend:
+#            type: doctrinedbal
+#            connection: default
+#        workspace: default
+#        username: '%env(PHPCR_SESSION_USERNAME)%'
+#        password: '%env(PHPCR_SESSION_PASSWORD)%'
