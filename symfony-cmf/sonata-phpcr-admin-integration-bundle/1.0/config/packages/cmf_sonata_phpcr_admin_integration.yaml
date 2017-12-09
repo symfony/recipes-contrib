@@ -1,0 +1,5 @@
+# Read the documentation: https://symfony.com/doc/master/cmf/bundles/sonata_phpcr_admin_integration/introduction.html#configuration
+# Install phpcr stack before using this configuration
+#cmf_sonata_phpcr_admin_integration:
+#    bundles:
+#        routing: ~

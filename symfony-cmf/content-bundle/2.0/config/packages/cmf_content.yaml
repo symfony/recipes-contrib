@@ -1,0 +1,6 @@
+# Read the documentation: https://symfony.com/doc/master/cmf/bundles/content/configuration.html
+# Install phpcr stack before using this configuration
+#cmf_content:
+#    persistence:
+#        phpcr:
+#            enabled: ~

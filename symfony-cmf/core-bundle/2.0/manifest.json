@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Symfony\\Cmf\\Bundle\\CoreBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

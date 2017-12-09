@@ -1,0 +1,10 @@
+# Read the documentation: tbd.
+# Install phpcr stack before using this configuration
+#cmf_resource:
+#  description:
+#      # enables two enhancers
+#      enhancers: [doctrine_phpcr_odm]
+#
+#  repositories:
+#      default:
+#          type: doctrine/phpcr-odm
