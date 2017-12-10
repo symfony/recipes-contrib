@@ -8,4 +8,3 @@ fm_elfinder:
                     uploads:
                         driver: LocalFileSystem
                         path: uploads
-                        
