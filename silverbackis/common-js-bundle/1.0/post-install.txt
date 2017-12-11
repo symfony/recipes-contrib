@@ -2,7 +2,6 @@
 <bg=blue;fg=white>    What's next?    </>
 <bg=blue;fg=white>                    </>
 
-1. Take a look at the silverback_common_js.yaml file created and enable the scripts you want to use
-2. Go to your .env file and uncomment the environment variables for your enabled scripts (if applicable)
+Now edit your .env file and set the IDs for scripts you want to enable
 
 * <fg=blue>Read</> the documentation at <comment>https://github.com/silverbackis/common-js-bundle</> to find out the blocks available and how to use the bundle.
