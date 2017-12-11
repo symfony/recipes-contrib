@@ -6,8 +6,8 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "#1": "GOOGLE_ANALYTICS_ID=UA-XXXXXXXX",
-        "#2": "GTM_CONTAINER_ID=GTM-XXXXXXXX",
-        "#3": "FACEBOOK_APP_ID=XXXXXXXX"
+        "GOOGLE_ANALYTICS_ID": "",
+        "GTM_CONTAINER_ID": "",
+        "FACEBOOK_APP_ID": ""
     }
 }
