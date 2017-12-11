@@ -1,0 +1,27 @@
+language: php
+sudo: false
+
+cache:
+    directories:
+        - $HOME/.composer/cache/files
+
+matrix:
+    fast_finish: true
+    include:
+        - php: 7.1
+          env: SKELETON_VERSION="^3.4"
+        - php: 7.1
+          env: SKELETON_VERSION="^4.0"
+
+before_install:
+    - phpenv config-rm xdebug.ini || true
+    - export SYMFONY_ENDPOINT=https://symfony.sh/r/github.com/symfony/recipes-contrib/${TRAVIS_PULL_REQUEST}
+    - export PACKAGE=$(curl -s $SYMFONY_ENDPOINT | sed -En 's/.*composer req "([^"]+)".*/\1/p')
+
+install:
+    - composer create-project "symfony/skeleton:${SKELETON_VERSION}" flex
+    - cd flex
+    - composer config extra.symfony.allow-contrib true
+
+script:
+    - composer req "${PACKAGE}"
