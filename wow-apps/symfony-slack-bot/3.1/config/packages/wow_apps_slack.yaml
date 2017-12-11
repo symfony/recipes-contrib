@@ -1,0 +1,12 @@
+# SlackBot Configuration
+# Documentation https://github.com/wow-apps/symfony-slack-bot/wiki
+wow_apps_slack:
+    api_url: ''
+    default_icon: 'http://cdn.wow-apps.pro/slackbot/slack-bot-icon-48.png'
+    default_channel: 'general'
+    quote_color:
+        default: '#607D8B'
+        info: '#2196F3'
+        warning: '#FF5722'
+        success: '#8BC34A'
+        danger: '#F44336'
