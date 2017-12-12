@@ -1,0 +1,3 @@
+garlic:
+    bus:
+        transport: amqp
