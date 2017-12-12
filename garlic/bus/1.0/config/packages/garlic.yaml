@@ -1,0 +1,13 @@
+enqueue:
+    transport:
+        default: 'amqp'
+        amqp:
+            driver: ext
+            host: "%env(RABBIT_HOST)%"
+            port: "%env(RABBIT_PORT)%"
+            user: "%env(RABBIT_USER)%"
+            pass: "%env(RABBIT_PASSWORD)%"
+            vhost: "%env(RABBIT_DEFAULT_VHOST)%"
+            receive_method: basic_consume
+    client:
+        app_name: "%env(SERVICE_NAME)%"

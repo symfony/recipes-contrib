@@ -1,0 +1,17 @@
+{
+    "bundles": {
+        "Garlic\\MessageBusBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "RABBIT_HOST": "rabbit",
+        "RABBIT_PORT": "5672",
+        "RABBIT_USER": "rabbit_user",
+        "RABBIT_PASSWORD": "rabbit_password",
+        "RABBIT_DEFAULT_VHOST": "/",
+        "SERVICE_NAME": "template",
+        "SERVICE_NAMESPACE": "domain.com"
+    }
+}
