@@ -1,3 +1,2 @@
 garlic_bus:
-    bus:
-        transport: amqp
+    transport: amqp
