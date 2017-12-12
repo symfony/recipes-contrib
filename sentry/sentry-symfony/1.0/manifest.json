@@ -1,4 +1,5 @@
 {
+    "aliases": ["sentry"],
     "bundles": {
         "Sentry\\SentryBundle\\SentryBundle": ["all"]
     },
