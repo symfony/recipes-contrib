@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Garlic\\MessageBusBundle": ["all"]
+        "Garlic\\Bus\\MessageBusBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
