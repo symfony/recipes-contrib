@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Wisembly\\AmqpBundle\\WisemblyAmqpBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "AMQP_URL": "amqp://guest:guest@localhost:5672"
+    }
+}
