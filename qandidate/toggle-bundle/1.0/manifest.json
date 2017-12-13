@@ -1,6 +1,5 @@
 {
     "bundles": {
-        "Symfony\\Bundle\\SecurityBundle\\SecurityBundle": ["all"],
         "Qandidate\\Bundle\\ToggleBundle\\QandidateToggleBundle": ["all"]
     },
     "copy-from-recipe": {
