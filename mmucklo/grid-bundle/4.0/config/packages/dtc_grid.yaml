@@ -1,0 +1,19 @@
+dtc_grid:
+    purl: 'https://cdnjs.cloudflare.com/ajax/libs/purl/2.3.1/purl.min.js'
+    jquery:
+        url: 'https://code.jquery.com/jquery-3.2.1.min.js'
+        integrity: sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=
+        crossorigin: anonymous
+    datatables:
+        css:
+            - 'https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css'
+        js:
+            - 'https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js'
+            - 'https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js'
+    theme:
+        css:
+            - 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
+            - 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'
+        js:
+            - 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'
+    page_div_style: 'margin: 10px'
