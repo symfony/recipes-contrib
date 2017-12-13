@@ -1,4 +1,7 @@
 {
+    "bundles": {
+        "Maba\\Bundle\\WebpackBundle\\MabaWebpackBundle": ["all"]
+    },
     "copy-from-recipe": {
         "assets/": "assets/"
     },
