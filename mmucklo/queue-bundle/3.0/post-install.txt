@@ -2,22 +2,15 @@
 <bg=blue;fg=white> What's next? </>
 <bg=blue;fg=white>              </>
 
-  * Please update <fg=blue;bg=black>config/packages/dtc_queue.yaml</> to accurately reflect your needs (odm / orm / beanstalkd / rabbit_mq etc.)
-    - For a full list of configuration options, see:
-        * https://github.com/mmucklo/DtcQueueBundle/Resources/doc/full-configuration.md
+Please update config/packages/dtc_queue.yaml to accurately reflect your needs (odm / orm / beanstalkd / rabbit_mq etc.)
+  - For a full list of configuration options, see:
+    * https://github.com/mmucklo/DtcQueueBundle/Resources/doc/full-configuration.md
 
-  * For <fg=green;bg=black>admin</> make sure the twig engine is turned on in framework.yaml
+For admin, make sure the twig engine is turned on in framework.yaml
 
-    - If not, <fg=blue;bg=black>add</> the following to config/packages/framework.yaml:
+  - If not, add the following to config/packages/framework.yaml:
 
-<fg=blue;bg=black>framework:
+framework:
     # ...
     templating:
-        engines: ['twig']</>
-
-  * Then <fg=blue;bg=black>add</> the following to config/routes.yaml:
-
-<fg=blue;bg=black>dtc_grid:</>
-    <fg=blue;bg=black>resource: '@DtcGridBundle/Resources/config/routing.yml'</>
-<fg=blue;bg=black>dtc_queue:</>
-    <fg=blue;bg=black>resource: '@DtcQueueBundle/Resources/config/routing.yml'</>
+        engines: ['twig']
