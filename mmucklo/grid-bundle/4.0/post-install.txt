@@ -2,16 +2,11 @@
 <bg=blue;fg=white> What's next? </>
 <bg=blue;fg=white>              </>
 
-  * <bg=black;fg=orange>Warning:</> make sure the twig engine is turned on in framework.yaml
+  * Warning: make sure the twig engine is turned on in framework.yaml
 
-    - If not, <bg=black;fg=blue>add</> the following to config/packages/framework.yaml:
+    - If not, add the following to config/packages/framework.yaml:
 
-<bg=black;fg=blue>framework:
+framework:
     # ...
     templating:
-        engines: ['twig']</>
-
-  * Then <bg=black;fg=blue>add</> the following to config/routes.yaml:
-
-<bg=black;fg=blue>dtc_grid:</>
-    <bg=black;fg=blue>resource: '@DtcGridBundle/Resources/config/routing.yml'</>
+        engines: ['twig']
