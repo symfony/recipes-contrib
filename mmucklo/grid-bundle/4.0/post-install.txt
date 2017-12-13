@@ -2,9 +2,9 @@
 <bg=blue;fg=white> What's next? </>
 <bg=blue;fg=white>              </>
 
-  * Warning: make sure the twig engine is turned on in framework.yaml
+Warning: make sure the twig engine is turned on in framework.yaml
 
-    - If not, add the following to config/packages/framework.yaml:
+  - If not, add the following to config/packages/framework.yaml:
 
 framework:
     # ...
