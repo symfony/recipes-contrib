@@ -1,0 +1,3 @@
+Run <info>maba:webpack:compile</info> to compile assets when deploying.
+
+Always run <info>maba:webpack:dev-server</info> in dev environment.
