@@ -1,0 +1,11 @@
+enqueue:
+    job: true
+
+doctrine:
+    orm:
+        mappings:
+            EnqueueJobQueue:
+                is_bundle: false
+                type: xml
+                dir: '%kernel.project_dir%/vendor/enqueue/job-queue/Doctrine/mapping'
+                prefix: 'Enqueue\JobQueue\Doctrine\Entity'
