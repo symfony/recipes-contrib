@@ -1,0 +1,18 @@
+{
+    "bundles": {
+        "Maba\\Bundle\\WebpackBundle\\MabaWebpackBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "assets/": "assets/"
+    },
+    "copy-from-package": {
+        "src/Resources/defaultConfig/latest/package.json": "package.json",
+        "src/Resources/defaultConfig/latest/webpack.config.js": "%CONFIG_DIR%/webpack.config.js"
+    },
+    "gitignore": [
+        "/node_modules/"
+    ],
+    "composer-scripts": {
+        "maba:webpack:install-node-modules": "symfony-cmd"
+    }
+}
