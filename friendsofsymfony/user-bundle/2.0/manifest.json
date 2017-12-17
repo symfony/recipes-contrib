@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "FOS\\RestBundle\\FOSUserBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "MAILER_USER": ""
+    }
+}
