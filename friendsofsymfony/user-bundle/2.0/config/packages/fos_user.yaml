@@ -1,0 +1,8 @@
+# Read the documentation: https://symfony.com/doc/master/bundles/FOSRestBundle/index.html
+fos_user: ~
+#    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+#    firewall_name: main
+#    user_class: AppBundle\Entity\User
+#    from_email:
+#        address: "%env(MAILER_USER)%"
+#        sender_name: "%env(MAILER_USER)%"
