@@ -6,3 +6,7 @@ fos_user:
     from_email:
         address: "%env(MAILER_USER)%"
         sender_name: "%env(MAILER_USER)%"
+
+services:
+    validator.builder:
+        class: Symfony\Component\Config\Definition\Builder\ValidationBuilder
