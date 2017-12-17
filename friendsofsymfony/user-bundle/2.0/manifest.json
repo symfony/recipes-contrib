@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "FOS\\RestBundle\\FOSUserBundle": ["all"]
+        "FOS\\UserBundle\\FOSUserBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
