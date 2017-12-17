@@ -3,6 +3,6 @@
         "Stfalcon\\Bundle\\TinymceBundle\\StfalconTinymceBundle": ["all"]
     },
     "copy-from-recipe": {
-        "etc/": "%ETC_DIR%/"
+        "config/": "%CONFIG_DIR%/"
     }
 }
