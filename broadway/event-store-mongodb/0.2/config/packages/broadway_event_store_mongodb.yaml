@@ -13,5 +13,4 @@ services:
 
     broadway.event_store.mongodb:
         class: Broadway\EventStore\MongoDB\MongoDBEventStore
-        public: true
         arguments: ['@broadway.event_store.mongodb_collection', '@broadway.serializer.payload', '@broadway.serializer.metadata']

@@ -13,7 +13,6 @@ services:
 
     broadway.elasticsearch.client:
         class: Elasticsearch\Client
-        public: true
         factory: ['@broadway.elasticsearch.client_factory', create]
         arguments:
             - "%elasticsearch%"
