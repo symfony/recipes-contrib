@@ -1,2 +1,6 @@
 leapt_im:
     cache_path: cache/im
+    # You can define reusable formats here
+    formats:
+        #my_format:
+        #    thumbnail: 350x350^
