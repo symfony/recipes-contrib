@@ -1,3 +1,0 @@
-security:
-    access_control:
-        - { path: ^/admin, roles: ROLE_USER }
