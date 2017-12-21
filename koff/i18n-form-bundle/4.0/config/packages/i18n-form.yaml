@@ -5,4 +5,4 @@
 
 twig:
     form_themes:
-        - '@KoffI18nForm/bootstrap_4_form.html.twig.html.twig'
+        - '@I18nForm/bootstrap_4_form.html.twig'
