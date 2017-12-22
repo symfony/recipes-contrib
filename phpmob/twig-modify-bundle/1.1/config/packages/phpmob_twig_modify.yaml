@@ -12,4 +12,4 @@ framework:
                 adapter: cache.app
 
 phpmob_twig_modify:
-    cache: "phpmob.twig_modify_cache_provider"
+    cache: 'phpmob.twig_modify_cache_provider'
