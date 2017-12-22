@@ -1,0 +1,6 @@
+{
+    "bundles": {
+        "PhpMob\\TwigModifyBundle\\PhpMobTwigModifyBundle": ["all"]
+    },
+    "aliases": ["phpmob-twig-modify"]
+}
