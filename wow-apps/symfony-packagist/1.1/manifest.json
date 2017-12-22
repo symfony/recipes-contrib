@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "WowApps\\PackagistBundle\\WowAppsPackagistBundle": ["all"]
+    }
+}
