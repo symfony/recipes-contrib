@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Mmoreram\\GearmanBundle\\GearmanBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

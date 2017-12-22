@@ -1,0 +1,2 @@
+spomky_labs_jose_bundle_jwkset_endpoint:
+    resource: "@SpomkyLabsJoseBundle/Resources/config/routing/jwkset_controller.yml"

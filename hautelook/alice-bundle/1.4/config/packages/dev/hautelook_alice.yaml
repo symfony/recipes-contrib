@@ -1,0 +1,8 @@
+# Read the documentation: https://github.com/hautelook/AliceBundle/blob/v1.4.1/README.md
+hautelook_alice:
+    db_drivers:
+        orm: ~
+#    locale: en_US
+#    seed: 1
+#    persist_once: false
+#    loading_limit: 5

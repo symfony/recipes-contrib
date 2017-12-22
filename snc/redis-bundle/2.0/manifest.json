@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Snc\\RedisBundle\\SncRedisBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "passwords that contain special characters (@, %, :, +) must be urlencoded",
+        "REDIS_URL": "redis://localhost"
+    }
+}

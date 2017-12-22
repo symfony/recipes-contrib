@@ -1,0 +1,2 @@
+adback_api_client:
+    access_token: "%env(ADBACK_API_CLIENT_ACCESS_TOKEN)%"

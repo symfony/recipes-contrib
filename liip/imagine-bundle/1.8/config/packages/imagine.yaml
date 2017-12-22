@@ -1,0 +1,35 @@
+#liip_imagine:
+#    # valid drivers options include "gd" or "gmagick" or "imagick"
+#    driver: "gd"
+#
+#    # define your filter sets under this option
+#    filter_sets:
+#
+#        # an example thumbnail transformation definition
+#        # https://symfony.com/doc/current/bundles/LiipImagineBundle/basic-usage.html#create-thumbnails
+#        squared_thumbnail:
+#
+#            # set your image quality defaults
+#            jpeg_quality:          85
+#            png_compression_level: 8
+#
+#            # setup the filter steps to apply for this transformation
+#            filters:
+#
+#                # auto rotate the image using EXIF metadata
+#                auto_rotate: ~
+#
+#                # strip the image of all metadata
+#                strip: ~
+#
+#                # scale and square the image to the given dimensions
+#                thumbnail:
+#                    size:          [253, 253]
+#                    mode:          outbound
+#                    allow_upscale: true
+#
+#                # create border by placing image on larger black background
+#                background:
+#                    size:     [256, 256]
+#                    position: center
+#                    color:    '#fff'

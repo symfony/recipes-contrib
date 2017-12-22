@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Ekino\\Bundle\\NewRelicBundle\\EkinoNewRelicBundle": ["prod"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "Get the REST API key of your NewRelic Account on https://docs.newrelic.com/docs/apis/rest-api-v2/requirements/api-keys",
+        "NEWRELIC_API_KEY": "FIXME"
+    }
+}

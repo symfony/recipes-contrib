@@ -1,0 +1,4 @@
+sensio_labs_connect:
+    app_id:     '%env(SENSIOLABS_CONNECT_APP_ID)%'
+    app_secret: '%env(SENSIOLABS_CONNECT_APP_SECRET)%'
+    scope:      'SCOPE_PUBLIC'

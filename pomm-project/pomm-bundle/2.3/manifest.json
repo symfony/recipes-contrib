@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "PommProject\\PommBundle\\PommBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "DATABASE_URL": "pgsql://user:pass@127.0.0.1:5432/my_db_name"
+    }
+}

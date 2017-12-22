@@ -1,0 +1,5 @@
+pierstoval_character_manager:
+    character_class: App\Entity\Character
+    steps:
+        step_01:
+            action: App\CharacterGenerator\Step01

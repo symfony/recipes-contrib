@@ -1,0 +1,4 @@
+# SlackBot Configuration
+# Documentation https://github.com/wow-apps/symfony-slack-bot/wiki
+wow_apps_slack:
+    api_url: ''

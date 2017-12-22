@@ -1,0 +1,6 @@
+rokka_client:
+    # Api-Key value given on registration of the user. Get your API key from https://rokka.io/
+    api_key:      "%env(ROKKA_API_KEY)%" # Required
+    # Organization value like "my-org" for use in calls to the API.
+    organization: "%env(ROKKA_ORGANIZATION)%" # Required
+

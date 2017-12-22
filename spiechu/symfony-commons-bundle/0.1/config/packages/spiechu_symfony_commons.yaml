@@ -1,0 +1,9 @@
+spiechu_symfony_commons:
+    # bundle configuration available at
+    # https://github.com/spiechu/symfony-commons-bundle/blob/master/README.md
+    get_method_override:
+        enabled:              false
+    response_schema_validation:
+        enabled:              false
+    api_versioning:
+        enabled:              false

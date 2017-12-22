@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Algolia\\AlgoliaSearchBundle\\AlgoliaAlgoliaSearchBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "ALGOLIA_APP_ID": "...",
+        "ALGOLIA_API_KEY": "..."
+    }
+}
