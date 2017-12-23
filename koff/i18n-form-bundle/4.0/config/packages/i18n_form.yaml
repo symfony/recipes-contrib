@@ -2,7 +2,3 @@
 #    locales: 'en|de'
 #    required_locales: 'en'
 #    excluded_fields: 'id|locale|translatable
-
-twig:
-    form_themes:
-        - '@I18nForm/bootstrap_4_form.html.twig'
