@@ -1,6 +1,5 @@
 {
     "bundles": {
-        "Doctrine\\Bundle\\DoctrineCacheBundle\\DoctrineCacheBundle": ["all"],
         "PhpMob\\TwigModifyBundle\\PhpMobTwigModifyBundle": ["all"]
     },
     "copy-from-recipe": {
