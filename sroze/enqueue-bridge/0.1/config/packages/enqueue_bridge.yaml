@@ -1,0 +1,2 @@
+enqueue_bridge:
+    queue: "%env(ENQUEUE_BRIDGE_QUEUE_NAME)%"
