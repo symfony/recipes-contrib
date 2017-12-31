@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "CoopTilleuls\\ForgotPasswordBundle\\CoopTilleulsForgotPasswordBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

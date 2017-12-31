@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Leapt\\ImBundle\\LeaptImBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "gitignore": [
+        "/public/cache/"
+    ]
+}
