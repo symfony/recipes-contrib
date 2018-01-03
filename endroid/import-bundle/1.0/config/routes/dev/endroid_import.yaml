@@ -1,4 +1,4 @@
-EndroidImportBundle:
+endroid_import:
     resource: "@EndroidImportBundle/Controller/"
     type: annotation
     prefix: /import

@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Endroid\\ImportBundle\\EndroidImportBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
