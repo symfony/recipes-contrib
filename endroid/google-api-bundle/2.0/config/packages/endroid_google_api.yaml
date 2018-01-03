@@ -1,0 +1,2 @@
+endroid_google_api:
+    api_key: '%env(GOOGLE_API_API_KEY)%'
