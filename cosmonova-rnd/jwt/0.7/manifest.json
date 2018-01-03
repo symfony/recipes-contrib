@@ -1,0 +1,10 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "JWT_PRIVATE_KEY": "/path/to/your/private.key",
+        "JWT_PUBLIC_KEY": "/path/to/your/public.key",
+        "JWT_PASSPHRASE": "/path/to/your/passphrase_file.txt"
+    }
+}
