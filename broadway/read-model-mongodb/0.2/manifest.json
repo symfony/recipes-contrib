@@ -3,7 +3,11 @@
         "config/": "%CONFIG_DIR%/"
     },
     "container": {
-        "mongodb_uri": "mongodb://127.0.0.1/",
-        "mongodb_database": "default"
+        "mongodb_uri": "%env(BROADWAY_READ_MODEL_MONGODB_URI)%",
+        "mongodb_database": "%env(BROADWAY_READ_MODEL_MONGODB_DATABASE)%"
+    },
+    "env": {
+        "BROADWAY_READ_MODEL_MONGODB_URI": "mongodb://127.0.0.1/",
+        "BROADWAY_READ_MODEL_MONGODB_DATABASE": "default"
     }
 }
