@@ -1,4 +1,4 @@
 # ProxyBonanza API Configuration
 # Documentation https://github.com/wow-apps/symfony-proxybonanza/wiki
-wowapps_proxy_bonanza:
+wow_apps_proxybonanza:
     api_key: '%env(WOW_APPS_PROXYBONANZA_API_KEY)%'

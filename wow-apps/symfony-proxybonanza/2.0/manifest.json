@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "WowApps\\ProxyBonanzaBundle\\WowappsProxyBonanzaBundle": ["all"]
+        "WowApps\\ProxybonanzaBundle\\WowAppsProxybonanzaBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
