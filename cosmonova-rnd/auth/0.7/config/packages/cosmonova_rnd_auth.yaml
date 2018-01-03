@@ -1,0 +1,62 @@
+doctrine:
+    dbal:
+        connections:
+#####   Configure your own connection
+#            auth_connection:
+#                driver:   pdo_pgsql
+#                url: '%env(resolve:DATABASE_URL)%'
+#                charset:  UTF8
+    orm:
+        entity_managers:
+            auth:
+                connection: default
+#####   Use alternative connection if needed
+#                connection: auth_connection
+                default_repository_class: 'CosmonovaRnD\Auth\Repository\UserRepository'
+                mappings:
+                    Auth:
+                        is_bundle: false
+                        type: annotation
+                        dir: '%kernel.project_dir%/vendor/cosmonova-rnd/auth/src/Entity'
+                        prefix: 'CosmonovaRnD\Auth\Entity'
+                        alias: Auth
+
+#####   Enable default session handler
+framework:
+    session:
+        handler_id: ~
+
+#####   Extending security component by new encoder and user provider
+security:
+    encoders:
+        CosmonovaRnD\Auth\Entity\User:
+            algorithm: plaintext
+    providers:
+        auth_provider:
+            id: CosmonovaRnD\Auth\Security\UserProvider
+
+services:
+    CosmonovaRnD\Auth\:
+        resource: '../../vendor/cosmonova-rnd/auth/src/*'
+        exclude: '../../vendor/cosmonova-rnd/auth/src/{Entity,Helper,Exception}'
+        autowire: true
+        autoconfigure: true
+
+    CosmonovaRnD\Auth\Http\TokenLoader:
+        class: 'CosmonovaRnD\Auth\Http\TokenLoader'
+        arguments:
+            $tokenUri: '%env(OAUTH_TOKEN_URI)%'
+            $clientId: '%env(OAUTH_CLIENT_ID)%'
+            $clientSecret: '%env(OAUTH_CLIENT_SECRET)%'
+        autowire: true
+
+    CosmonovaRnD\Auth\Controller\AuthController:
+        class: 'CosmonovaRnD\Auth\Controller\AuthController'
+        autowire: true
+        arguments:
+            $authUri: '%env(OAUTH_AUTH_URI)%'
+            $clientId: '%env(OAUTH_CLIENT_ID)%'
+        tags: ['controller.service_arguments']
+
+    GuzzleHttp\Client:
+        class: 'GuzzleHttp\Client'

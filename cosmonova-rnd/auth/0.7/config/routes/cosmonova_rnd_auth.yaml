@@ -1,0 +1,3 @@
+auth:
+    path: /auth
+    controller: CosmonovaRnD\Auth\Controller\AuthController::auth
