@@ -4,7 +4,8 @@ app.swagger_ui:
     methods: GET
     defaults: { _controller: nelmio_api_doc.controller.swagger_ui }
 
-# app.swagger:
-#     path: /api/doc.json
-#     methods: GET
-#     defaults: { _controller: nelmio_api_doc.controller.swagger }
+# To expose your documentation as JSON
+#app.swagger:
+#    path: /api/doc.json
+#    methods: GET
+#    defaults: { _controller: nelmio_api_doc.controller.swagger }
