@@ -1,0 +1,7 @@
+services:
+    Endroid\Twitter\Client:
+        arguments:
+            - '%env(TWITTER_CONSUMER_KEY)%'
+            - '%env(TWITTER_CONSUMER_SECRET)%'
+            - '%env(TWITTER_ACCESS_TOKEN)%'
+            - '%env(TWITTER_ACCESS_TOKEN_SECRET)%'
