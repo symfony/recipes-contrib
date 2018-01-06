@@ -1,7 +1,4 @@
 {
-    "bundles": {
-        "Endroid\\PusherBundle\\EndroidPusherBundle": ["all"]
-    },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     },
