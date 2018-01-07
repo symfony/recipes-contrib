@@ -1,5 +1,4 @@
 {
-    "aliases": ["psysh"],
     "bundles": {
         "Fidry\\PsyshBundle\\PsyshBundle": ["dev", "test"]
     }
