@@ -1,0 +1,6 @@
+psysh:
+    variables:
+        container: '@service_container'
+        kernel: '@kernel'
+        self: '@psysh.shell'
+        parameters: "@=service('service_container').getParameterBag().all()"
