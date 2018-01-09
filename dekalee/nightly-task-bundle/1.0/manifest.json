@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "Dekalee\\NightlyTaskBundle\\DekaleeNightlyTaskBundle": ["all"]
+    }
+}
