@@ -1,8 +1,5 @@
 services:
-    _defaults:
-        autowire:      true
-        autoconfigure: true
-        public:        false
-
     # See https://github.com/webinarium/symfony-lazysec/wiki/User-provider
-    LazySec\Provider\GenericUserProvider: ~
+    LazySec\Provider\GenericUserProvider:
+        autowire: true
+        public: false
