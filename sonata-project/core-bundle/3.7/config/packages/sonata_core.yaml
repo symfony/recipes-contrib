@@ -1,0 +1,9 @@
+sonata_core:
+    flashmessage:
+        error:
+            css_class: danger
+            types:
+                - {type: sonata_product_error, domain: "SonataProductBundle" }
+        success:
+            types:
+                - {type: sonata_customer_success, domain: "SonataCustomerBundle" }
