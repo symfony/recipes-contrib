@@ -1,0 +1,5 @@
+{
+    "copy-from-package": {
+        "recipe/config/packages/inlined.yaml": "%CONFIG_DIR%/packages/inlined.yaml"
+    }
+}
