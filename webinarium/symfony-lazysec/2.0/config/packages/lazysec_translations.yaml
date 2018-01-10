@@ -1,0 +1,5 @@
+# See https://github.com/webinarium/symfony-lazysec/wiki/Translations
+framework:
+    translator:
+        paths:
+            - '%kernel.project_dir%/vendor/webinarium/symfony-lazysec/translations'
