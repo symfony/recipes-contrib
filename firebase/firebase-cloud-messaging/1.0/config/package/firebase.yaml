@@ -1,0 +1,3 @@
+firebase:
+    could_messaging:
+        key: "%env(FCM_KEY)%"
