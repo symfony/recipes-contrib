@@ -1,0 +1,36 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    Endroid\ImagePlaceholder\ImagePlaceholder:
+        arguments: ['%kernel.debug%', 'lorempixel', false]
+        calls:
+            - [addProvider, ['@Endroid\ImagePlaceholder\Provider\BaconMockupProvider']]
+            - [addProvider, ['@Endroid\ImagePlaceholder\Provider\BeerHoldProvider']]
+            - [addProvider, ['@Endroid\ImagePlaceholder\Provider\LoremFlickrProvider']]
+            - [addProvider, ['@Endroid\ImagePlaceholder\Provider\LoremPixelProvider']]
+            - [addProvider, ['@Endroid\ImagePlaceholder\Provider\PipsumProvider']]
+            - [addProvider, ['@Endroid\ImagePlaceholder\Provider\PlaceBearProvider']]
+            - [addProvider, ['@Endroid\ImagePlaceholder\Provider\PlaceCreatureProvider']]
+            - [addProvider, ['@Endroid\ImagePlaceholder\Provider\PlaceHoffProvider']]
+            - [addProvider, ['@Endroid\ImagePlaceholder\Provider\PlaceholdItProvider']]
+            - [addProvider, ['@Endroid\ImagePlaceholder\Provider\PlaceKittenProvider']]
+            - [addProvider, ['@Endroid\ImagePlaceholder\Provider\PlaceSkullProvider']]
+            - [addProvider, ['@Endroid\ImagePlaceholder\Provider\UnsplashItProvider']]
+
+    Endroid\ImagePlaceholder\Twig\Extension\ImagePlaceholderExtension: ~
+
+    Endroid\ImagePlaceholder\Provider\BaconMockupProvider: ~
+    Endroid\ImagePlaceholder\Provider\BeerHoldProvider: ~
+    Endroid\ImagePlaceholder\Provider\LoremFlickrProvider: ~
+    Endroid\ImagePlaceholder\Provider\LoremPixelProvider: ~
+    Endroid\ImagePlaceholder\Provider\PipsumProvider: ~
+    Endroid\ImagePlaceholder\Provider\PlaceBearProvider: ~
+    Endroid\ImagePlaceholder\Provider\PlaceCreatureProvider: ~
+    Endroid\ImagePlaceholder\Provider\PlaceHoffProvider: ~
+    Endroid\ImagePlaceholder\Provider\PlaceholdItProvider: ~
+    Endroid\ImagePlaceholder\Provider\PlaceKittenProvider: ~
+    Endroid\ImagePlaceholder\Provider\PlaceSkullProvider: ~
+    Endroid\ImagePlaceholder\Provider\UnsplashItProvider: ~
