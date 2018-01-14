@@ -1,5 +1,4 @@
 sonata_core:
-    flashmessage: {}
     form:
         mapping:
             enabled: false
