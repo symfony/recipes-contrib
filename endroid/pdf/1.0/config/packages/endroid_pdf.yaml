@@ -1,3 +1,7 @@
 services:
-    Endroid\Pdf\Pdf:
+    _defaults:
         autowire: true
+        autoconfigure: true
+        public: false
+
+    Endroid\Pdf\Pdf: ~
