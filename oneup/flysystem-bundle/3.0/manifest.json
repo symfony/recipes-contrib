@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Oneup\\FlysystemBundle": ["all"]
+        "Oneup\\FlysystemBundle\\OneupFlysystemBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
