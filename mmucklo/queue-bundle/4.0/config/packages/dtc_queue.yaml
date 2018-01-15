@@ -1,0 +1,23 @@
+dtc_queue:
+    # For full configuration options see:
+    #   https://github.com/mmucklo/DtcQueueBundle/blob/master/Resources/doc/full-configuration.md
+    manager:
+        # This should typically be set to one of [odm|orm|beanstalkd|rabbit_mq|redis]
+        job: odm
+    record:
+        # Set this to true to record job timing history in a separate table
+        #  (note: for beanstalkd|rabbit_mq|redis, job_timing or run needs to be set to one of
+        #   orm|odm under the manager section)
+        timings: false
+    odm:
+        # This only needs to be modified if you want to use a different document manager than the default one
+        #  (there is a similar parameter for entity_manager if you're using orm)
+        #
+        # If you don't use odm at all, this can safely be ignored or deleted
+        document_manager: default
+    priority:
+        max: 255
+        direction: desc
+    admin:
+        # chartjs is used to render the job timings graph
+        chartjs: 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js'
