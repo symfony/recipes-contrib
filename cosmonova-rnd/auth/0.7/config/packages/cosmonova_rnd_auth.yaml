@@ -19,6 +19,7 @@ services:
         arguments:
             $authUri: '%env(OAUTH_AUTH_URI)%'
             $clientId: '%env(OAUTH_CLIENT_ID)%'
+            $redirectPathName: '%env(OAUTH_REDIRECT_PATH)%'
         tags: ['controller.service_arguments']
 
     GuzzleHttp\Client:

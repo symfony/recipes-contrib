@@ -6,6 +6,7 @@
         "OAUTH_AUTH_URI":"",
         "OAUTH_TOKEN_URI":"",
         "OAUTH_CLIENT_ID":"",
-        "OAUTH_CLIENT_SECRET":""
+        "OAUTH_CLIENT_SECRET":"",
+        "OAUTH_REDIRECT_PATH":"home"
     }
 }
