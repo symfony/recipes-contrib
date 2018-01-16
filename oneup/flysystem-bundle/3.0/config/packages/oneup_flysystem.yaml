@@ -1,12 +1,9 @@
 oneup_flysystem:
     adapters:
-        my_adapter:
+        default_adapter:
             local:
-                directory: "%kernel.root_dir%/cache"
+                directory: "%kernel.root_dir%/var/cache"
 
     filesystems:
-        my_filesystem:
-            adapter: my_adapter
-            # optional - defines the default visibility of the filesystem: `public` or `private`(default)
-            visibility: private
-
+        default_filesystem:
+            adapter: default_adapter
