@@ -1,7 +1,4 @@
 {
-    "bundles": {
-        "Silverback\\CommonJsBundle\\SilverbackCommonJsBundle": ["all"]
-    },
     "env": {
         "GOOGLE_ANALYTICS_ID": "",
         "GTM_CONTAINER_ID": "",
