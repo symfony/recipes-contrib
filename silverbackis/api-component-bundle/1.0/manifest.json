@@ -1,0 +1,5 @@
+{
+    "copy-from-package": {
+        "src/Resources/config/routes/": "%CONFIG_DIR%/routes/"
+    }
+}
