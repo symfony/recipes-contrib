@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "Indragunawan\\FacadeBundle\\IndragunawanFacadeBundle": ["all"]
+    }
+}
