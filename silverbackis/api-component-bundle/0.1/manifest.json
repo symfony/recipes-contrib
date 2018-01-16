@@ -1,4 +1,7 @@
 {
+    "bundles": {
+        "Silverback\\ApiComponentBundle\\SilverbackApiComponentBundle": ["all"]
+    },
     "copy-from-package": {
         "src/Resources/config/routes/": "%CONFIG_DIR%/routes/"
     }
