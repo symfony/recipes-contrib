@@ -3,8 +3,8 @@
         "Silverback\\CommonJsBundle\\SilverbackCommonJsBundle": ["all"]
     },
     "env": {
-        "GOOGLE_ANALYTICS_ID": "",
-        "GTM_CONTAINER_ID": "",
-        "FACEBOOK_APP_ID": ""
+        "GOOGLE_ANALYTICS_ID": "GA-00000",
+        "GTM_CONTAINER_ID": "GTM-00000",
+        "FACEBOOK_APP_ID": "00000"
     }
 }
