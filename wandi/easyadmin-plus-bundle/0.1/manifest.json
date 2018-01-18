@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Wandi\\EasyAdminPlusBundle\\EasyAdminPlusBundle": ["all"]
+        "Wandi\\EasyAdminPlusBundle\\WandiEasyAdminPlusBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
