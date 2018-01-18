@@ -1,0 +1,3 @@
+easy_admin_plus:
+    resource: '@EasyAdminPlusBundle/Resources/config/routing.yml'
+    prefix: /admin
