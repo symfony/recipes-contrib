@@ -3,7 +3,7 @@
         "Facile\\MongoDbBundle\\FacileMongoDbBundle": ["all"]
     },
     "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/",
+        "config/": "%CONFIG_DIR%/"
     },
     "env": {
         "MONGODB_HOST": "localhost",
