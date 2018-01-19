@@ -1,0 +1,15 @@
+{
+    "bundles": {
+        "Facile\\MongoDbBundle\\FacileMongoDbBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+    },
+    "env": {
+        "MONGODB_HOST": "localhost",
+        "MONGODB_PORT": "27017",
+        "MONGODB_USER": null,
+        "MONGODB_PASSWORD": null,
+        "MONGODB_DB": "symfony"
+    }
+}
