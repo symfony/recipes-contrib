@@ -8,8 +8,8 @@
     "env": {
         "MONGODB_HOST": "localhost",
         "MONGODB_PORT": "27017",
-        "MONGODB_USER": null,
-        "MONGODB_PASSWORD": null,
+        "MONGODB_USER": "",
+        "MONGODB_PASSWORD": "",
         "MONGODB_DB": "symfony"
     }
 }
