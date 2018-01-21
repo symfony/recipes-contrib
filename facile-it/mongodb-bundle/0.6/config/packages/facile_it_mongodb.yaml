@@ -3,7 +3,7 @@ mongo_db_bundle:
     clients:
         default:
             hosts:
-                - { host: '%env(MONGODB_HOST)%', port: '%env(MONGODB_PORT)%' }
+                - { host: '%env(MONGODB_HOST)%', port: '%env(int:MONGODB_PORT)%' }
             username:         '%env(MONGODB_USER)%'
             password:         '%env(MONGODB_PASSWORD)%'
             replicaSet:       '' # default null (no replica)
