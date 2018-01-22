@@ -1,0 +1,11 @@
+ribs_admin:
+    resource: "@RibsAdminBundle/Controller/"
+    type: annotation
+    prefix: /ribs-admin
+
+pages:
+    resource: "@RibsAdminBundle/Controller/RenderPageController.php"
+    type: annotation
+
+login_check:
+    path: /login_check
