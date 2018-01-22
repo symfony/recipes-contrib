@@ -1,7 +1,10 @@
 {
   "bundles": {
-    "Ribs\\RibsAdminBundle\\": ["all"]
+    "Ribs\\RibsAdminBundle\\": [
+      "all"
+    ]
   },
   "copy-from-recipe": {
     "config/": "%CONFIG_DIR%/"
   }
+}
