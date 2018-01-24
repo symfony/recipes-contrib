@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "NDC\\MaintenanceBundle\\NDCMaintenanceBundle": ["all"]
+    },
+    "copy-from-package": {
+        "Resources/public": "%PUBLIC_DIR%/ndcmaintenance/"
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
