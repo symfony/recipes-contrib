@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "Algolia\\SearchBundle\\AlgoliaSearchBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "Create a free account on www.algolia.com",
+        "#2": "and get your credentials from the API Keys tab.",
+        "ALGOLIA_APP_ID": "...",
+        "ALGOLIA_API_KEY": "..."
+    }
+}
