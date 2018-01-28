@@ -1,0 +1,3 @@
+firebase:
+    cloud_messaging:
+        key: "%env(FCM_KEY)%"
