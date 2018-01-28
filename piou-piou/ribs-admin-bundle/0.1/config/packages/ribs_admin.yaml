@@ -1,0 +1,46 @@
+framework:
+    assets:
+        json_manifest_path: '%kernel.project_dir%/public/build/manifest.json'
+
+twig:
+    globals:
+        ribsadmin_acces_right: '@ribs_admin.acess_rights'
+
+security:
+    encoders:
+        PiouPiou\RibsAdminBundle\Entity\Account:
+            algorithm: bcrypt
+
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_SUPER_ADMIN: ROLE_ADMIN
+
+    providers:
+        our_db_provider:
+            entity:
+                class: RibsAdminBundle:Account
+                property: username
+                # if you're using multiple entity managers
+                # manager_name: customer
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            pattern: ^/
+            http_basic: ~
+            provider: our_db_provider
+            logout: true
+            anonymous: ~
+            form_login:
+                login_path: /ribs-admin/login
+                check_path: login_check
+                default_target_path: ribsadmin_index
+
+    access_control:
+        # require ROLE_ADMIN for /admin*
+        - { path: ^/ribs-admin/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/ribs-admin/login, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/ribs-admin/register$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/ribs-admin/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/ribs-admin, roles: ROLE_ADMIN }
