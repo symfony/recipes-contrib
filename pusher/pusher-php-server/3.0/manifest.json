@@ -1,0 +1,10 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "PUSHER_APP_ID": "",
+        "PUSHER_KEY": "",
+        "PUSHER_SECRET": ""
+    }
+}
