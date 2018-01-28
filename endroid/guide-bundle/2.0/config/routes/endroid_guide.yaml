@@ -1,4 +1,3 @@
-guide:
-    resource: "@EndroidGuideBundle/Controller/"
-    type: annotation
+endroid_guide:
+    resource: "@EndroidGuideBundle/Resources/config/routes.yaml"
     prefix: /guide
