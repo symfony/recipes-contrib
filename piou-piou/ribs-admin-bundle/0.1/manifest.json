@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "PiouPiou\\RibsAdminBundle": ["all"]
+        "PiouPiou\\RibsAdminBundle\\RibsAdminBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
