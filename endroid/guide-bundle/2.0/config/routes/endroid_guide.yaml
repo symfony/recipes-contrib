@@ -1,4 +1,4 @@
 guide:
     resource: "@EndroidGuideBundle/Controller/"
-    type: annotation
+    type:  annotation
     prefix: /guide
