@@ -1,7 +1,8 @@
 {
     "bundles": {
         "Silverback\\ApiComponentBundle\\SilverbackApiComponentBundle": ["all"],
-        "Cocur\\Slugify\\Bridge\\Symfony\\CocurSlugifyBundle": ["all"]
+        "Cocur\\Slugify\\Bridge\\Symfony\\CocurSlugifyBundle": ["all"],
+        "Liip\\ImagineBundle\\LiipImagineBundle": ["all"]
     },
     "copy-from-package": {
         "src/Resources/config/routes/": "%CONFIG_DIR%/routes/"
