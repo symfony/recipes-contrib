@@ -1,0 +1,11 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "BM_HOST": "localhost",
+        "BM_USER": "root",
+        "BM_PASS": "",
+        "BM_DATABASE": "symfony"
+    }
+}

@@ -1,0 +1,14 @@
+# See full config at https://github.com/backup-manager/symfony
+bm_backup_manager:
+    database:
+        development:
+            type: mysql
+            host: '%env(BM_HOST)%'
+            port: 3306
+            user: '%env(BM_USER)%'
+            pass: '%env(BM_PASS)%'
+            database: '%env(BM_DATABASE)%'
+    storage:
+        local:
+            type: Local
+            root: "%kernel.cache_dir%/db"
