@@ -1,0 +1,36 @@
+version: '3.2'
+
+services:
+    mysql:
+        image: mysql:5.7
+        ports:
+            - "3306:3306"
+        networks:
+            - dev
+        environment:
+            MYSQL_ROOT_PASSWORD: "root"
+            MYSQL_DATABASE: "db_name"
+            MYSQL_USER: "db_user"
+            MYSQL_PASSWORD: "db_password"
+        volumes:
+            - database:/var/lib/mysql
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        ports:
+            - "8001:80"
+        networks:
+            - dev
+        environment:
+            PMA_ARBITRARY: "1"
+            PMA_HOST: "mysql"
+            PMA_USER: "root"
+            PMA_PASSWORD: "root"
+        volumes:
+            - /sessions
+
+volumes:
+    database:
+
+networks:
+    dev:
