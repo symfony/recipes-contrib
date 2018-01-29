@@ -1,0 +1,15 @@
+<bg=blue;fg=white>                     </>
+<bg=blue;fg=white> Using simple-docker </>
+<bg=blue;fg=white>                     </>
+
+  * <fg=blue>Start</> containers with MySQL and phpMyAdmin:
+
+      <comment>docker-compose -f docker/docker-compose.yaml up -d</>
+
+  * <fg=blue>Run</> your application:
+
+      <comment>php -S 127.0.0.1:8000 -t public</>
+
+  * <fg=blue>Browse</> to the <comment>http://localhost:8000/</> URL to view your Web-application
+  * <fg=blue>Browse</> to the <comment>http://localhost:8001/</> URL to manage your database
+  * For <fg=blue>Docker Toolbox</> users, IP address for MySQL and phpMySQL will be different, execute <comment>docker-machine env default</> to find it out
