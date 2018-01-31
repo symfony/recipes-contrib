@@ -1,0 +1,17 @@
+knp_dictionary:
+    dictionaries: []
+
+# Examples
+# knp_dictionary:
+#     dictionaries:
+#         my_dictionary:
+#             type: 'key_value'
+#             content:
+#                 "foo": "foo_value"
+#                 "bar": "bar_value"
+#                 "baz": "baz_value"
+
+#         my_callable_dictionary:
+#             type: 'callable'
+#             service: 'app.service.id'
+#             method: 'getSomething'
