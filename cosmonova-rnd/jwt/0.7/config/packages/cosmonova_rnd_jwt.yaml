@@ -1,21 +1,13 @@
 services:
     CosmonovaRnD\JWT\Parser\Parser:
-        class: 'CosmonovaRnD\JWT\Parser\Parser'
         autowire: true
     CosmonovaRnD\JWT\Signer\SignerFactory:
-        class: 'CosmonovaRnD\JWT\Signer\SignerFactory'
         autowire: true
     CosmonovaRnD\JWT\Signer\Signer:
-        class: 'CosmonovaRnD\JWT\Signer\Signer'
         autowire: true
     CosmonovaRnD\JWT\Key\SignKey:
-        class: 'CosmonovaRnD\JWT\Key\SignKey'
         arguments: ['%env(file:JWT_PRIVATE_KEY)%','%env(file:JWT_PASSPHRASE)%']
-        autowire: true
     CosmonovaRnD\JWT\Verifier\Verifier:
-        class: 'CosmonovaRnD\JWT\Verifier\Verifier'
         autowire: true
     CosmonovaRnD\JWT\Key\VerifyKey:
-        class: 'CosmonovaRnD\JWT\Key\VerifyKey'
         arguments: ['%env(file:JWT_PUBLIC_KEY)%','%env(file:JWT_PASSPHRASE)%']
-        autowire: true

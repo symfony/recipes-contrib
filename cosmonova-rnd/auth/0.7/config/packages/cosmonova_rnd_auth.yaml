@@ -6,7 +6,6 @@ services:
         autoconfigure: true
 
     CosmonovaRnD\Auth\Http\TokenLoader:
-        class: 'CosmonovaRnD\Auth\Http\TokenLoader'
         arguments:
             $tokenUri: '%env(OAUTH_TOKEN_URI)%'
             $clientId: '%env(OAUTH_CLIENT_ID)%'
@@ -14,8 +13,6 @@ services:
         autowire: true
 
     CosmonovaRnD\Auth\Controller\AuthController:
-        class: 'CosmonovaRnD\Auth\Controller\AuthController'
-        autowire: true
         arguments:
             $authUri: '%env(OAUTH_AUTH_URI)%'
             $clientId: '%env(OAUTH_CLIENT_ID)%'
