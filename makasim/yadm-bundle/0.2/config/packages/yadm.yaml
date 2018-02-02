@@ -1,0 +1,2 @@
+yadm:
+    mongo_uri: '%env(MONGO_DSN)%'
