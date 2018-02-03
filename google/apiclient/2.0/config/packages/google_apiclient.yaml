@@ -3,3 +3,5 @@ services:
         class: Google_Client
         calls:
             - [setDeveloperKey, ['%env(GOOGLE_API_KEY)%']]
+            - [setClientId, ['%env(GOOGLE_CLIENT_ID)%']]
+            - [setClientSecret, ['%env(GOOGLE_CLIENT_SECRET)%']]
