@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Knp\\Bundle\\SnappyBundle\\KnpPaginatorBundle": ["all"]
+        "Knp\\Bundle\\PaginatorBundle\\KnpPaginatorBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
