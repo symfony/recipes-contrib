@@ -4,10 +4,15 @@
 
 Warning: make sure the twig engine is turned on in framework.yaml
 
-  - If not, add the following to config/packages/framework.yaml:
+  - Modify your address config in <fg=green>config/packages/fos_user.yaml</>
+
+  - If not, add the following to <fg=green>config/packages/framework.yaml</>:
 
 framework:
     # ...
     csrf_protection: { enabled: true }
     templating:
         engines: ['twig']
+
+  - Modify your security configuration in <fg=green>config/packages/security.yaml</>
+    https://symfony.com/doc/2.0/bundles/FOSUserBundle/index.html#step-4-configure-your-application-s-security-yml
