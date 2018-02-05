@@ -1,0 +1,13 @@
+services:
+    CosmonovaRnD\JWT\Parser\Parser:
+        autowire: true
+    CosmonovaRnD\JWT\Signer\SignerFactory:
+        autowire: true
+    CosmonovaRnD\JWT\Signer\Signer:
+        autowire: true
+    CosmonovaRnD\JWT\Key\SignKey:
+        arguments: ['%env(file:JWT_PRIVATE_KEY)%','%env(file:JWT_PASSPHRASE)%']
+    CosmonovaRnD\JWT\Verifier\Verifier:
+        autowire: true
+    CosmonovaRnD\JWT\Key\VerifyKey:
+        arguments: ['%env(file:JWT_PUBLIC_KEY)%','%env(file:JWT_PASSPHRASE)%']

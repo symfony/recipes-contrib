@@ -1,0 +1,23 @@
+services:
+    CosmonovaRnD\Auth\:
+        resource: '../../vendor/cosmonova-rnd/auth/src/*'
+        exclude: '../../vendor/cosmonova-rnd/auth/src/{Entity,Helper,Exception}'
+        autowire: true
+        autoconfigure: true
+
+    CosmonovaRnD\Auth\Http\TokenLoader:
+        arguments:
+            $tokenUri: '%env(OAUTH_TOKEN_URI)%'
+            $clientId: '%env(OAUTH_CLIENT_ID)%'
+            $clientSecret: '%env(OAUTH_CLIENT_SECRET)%'
+        autowire: true
+
+    CosmonovaRnD\Auth\Controller\AuthController:
+        arguments:
+            $authUri: '%env(OAUTH_AUTH_URI)%'
+            $clientId: '%env(OAUTH_CLIENT_ID)%'
+            $redirectPathName: '%env(OAUTH_REDIRECT_PATH)%'
+        tags: ['controller.service_arguments']
+
+    GuzzleHttp\Client:
+        class: 'GuzzleHttp\Client'

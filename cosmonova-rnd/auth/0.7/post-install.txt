@@ -1,0 +1,4 @@
+<bg=blue;fg=white> What's next? </>
+<bg=blue;fg=white>              </>
+
+Please follow installation instructions at <comment>https://github.com/CosmonovaRnD/Auth</>
