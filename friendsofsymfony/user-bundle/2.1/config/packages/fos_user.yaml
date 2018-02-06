@@ -1,5 +1,7 @@
 fos_user:
     db_driver: orm
+    service:
+        mailer: fos_user.mailer.twig_swift
     firewall_name: main
     user_class: App\Entity\User
     from_email:
