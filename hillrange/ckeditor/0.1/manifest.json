@@ -1,5 +1,5 @@
 {
-    "bundles":
+    "bundles": {
         "Hillrange\\CKEditor\\HillrangeCKEditorBundle": ["all"]
     },
     "copy-from-recipe": {
