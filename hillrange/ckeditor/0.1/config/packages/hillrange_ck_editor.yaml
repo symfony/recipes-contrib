@@ -1,0 +1,17 @@
+hillrange_ck_editor:
+    default_config: hillrange
+    configs:
+        hillrange:
+            toolbar: [
+                         ['Styles','Format','Font','FontSize'],
+                         '/',
+                         ['Bold','Italic','Underline','StrikeThrough','-','Undo','Redo','-','Cut','Copy','Paste','PasteText','Find','Replace','-','Outdent','Indent','-','Print','-','Maximize'],
+                         '/',
+                         ['NumberedList','BulletedList','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
+                         ['Image','Table','-','Link','Flash','Smiley','TextColor','BGColor','Source']
+                      ]
+            uiColor: "ddcccc"
+twig:
+    paths:
+        '%kernel.project_dir%/templates/bundles/HillrangeCKEditor': HillrangeCKEditor
+        '%kernel.project_dir%/vendor/hillrange/ckeditor/Resources/views': HillrangeCKEditor

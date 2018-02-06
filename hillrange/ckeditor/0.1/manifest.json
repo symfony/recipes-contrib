@@ -1,0 +1,13 @@
+{
+    "bundles":
+        "Hillrange\\CKEditor\\HillrangeCKEditorBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "composer-scripts": {
+        "ckeditor:install": "symfony-cmd",
+        "make cache-warmup": "script",
+        "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
+    }
+}
