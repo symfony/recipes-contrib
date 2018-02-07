@@ -16,7 +16,3 @@ hillrange_ck_editor:
                 - ['BulletedList', 'NumberedList', '-', 'Outdent', 'Indent']
                 - ['Copy', 'Paste', 'PasteFromWord', '-', 'Undo', 'Redo']
                 - ['Source']
-twig:
-    paths:
-#        '%kernel.project_dir%/templates/bundles/HillrangeCKEditor': HillrangeCKEditor
-        '%kernel.project_dir%/vendor/hillrange/ckeditor/Resources/views': HillrangeCKEditor
