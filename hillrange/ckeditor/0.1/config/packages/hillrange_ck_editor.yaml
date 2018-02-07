@@ -1,7 +1,7 @@
 hillrange_ck_editor:
-    default_config: hillrange
+    default_config: normal
     configs:
-        hillrange:
+        normal:
             toolbar:
                 - ['Styles','Format','Font','FontSize']
                 - '/'
