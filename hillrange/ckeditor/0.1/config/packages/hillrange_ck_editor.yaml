@@ -18,4 +18,5 @@ hillrange_ck_editor:
                 - ['Source']
 twig:
     paths:
+#        '%kernel.project_dir%/templates/bundles/HillrangeCKEditor': HillrangeCKEditor
         '%kernel.project_dir%/vendor/hillrange/ckeditor/Resources/views': HillrangeCKEditor
