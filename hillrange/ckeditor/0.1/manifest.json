@@ -5,7 +5,6 @@
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     },
-
     "composer-scripts": {
         "cache:clear": "symfony-cmd",
         "ckeditor:install": "symfony-cmd",
