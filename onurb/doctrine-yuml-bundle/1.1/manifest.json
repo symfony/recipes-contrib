@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Onurb\\Bundle\\YumlBundle\\OnurbYumlBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "templates/toolbar.html.twig": "templates/OnurbYumlBundle/Toolbar/toolbar.html.twig"
+    }
+}
