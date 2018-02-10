@@ -1,0 +1,12 @@
+{% extends '@WebProfiler/Profiler/layout.html.twig' %}
+
+{% block toolbar %}
+    {% set icon %}
+        <a href="{{ path('doctrine_yuml_mapping') }}" target="_blank">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3AwOFjIRE2xHhwAAAvZJREFUSMedlF9oVnUYxz/P77zzzRmruYELGhh48Qor3026sOlFUFHrQmMuvXAQZrS9r+DawkVSeCPsItmibbB3zMKSFBGLJcIuhnazaM2tZjRRr15LcP3BomKdc35PFxs7O2fnde92Lp/z/D6/7/N9nt8jRD7NPF3l4w0BO0CnHJFj0jc5RpGfiQZ8vB6gASgHedZX+drNpJ9ZM1BhWySSEGTEzaafXxNQ0NGYvA2iMuy1pvesGugk3feAWzG5SUTOetn07tUp7P7xd2d2Swo4FQtVueBlal8vGggg58/71nF6VfkGxIsWAeS8bPpQ7NllTTm8PeX7tgfhhbj/ocPCgNM32VIQuFDKR8D64oZEVeCM0z/VvKxkP5M+AgwuhUl1CtPSg2nsgMS6WI2KHPBbaztDCt3M9p2CvbLgT2Dw258gTzw1ryU/gz35Grj/xUm1in2ppP/7EaMgYHNRGAB//UFI7cEuSJQUaK7p1aYmR9xM3YuCXo616JFKTPsQUlkduPbTGHagHdy5OEtfNYLuLej5/V+xJ/ajN8YDpVt3YFq6oSQZo1P2iJ+pm1a0Zn5sS5HnmpGKx+H+bJC4fgNS3wgmGFvNz2C734C5v5cif0ko+tjiBa+0Ibv2FjUwUp3C7OvEnn5/aXiTCTUjfFsRY2iXhRICeYVHAexwP/LzbSh9GP78LcgqLcM0tsO6YN71zgz2XFeUdy+hwjTKk/NPxUW//SqcUlaB0zYYhk2NYk+9A370mcs1g8qFgiVtrMIc/RQ2bQ5g45exQ0djYAD2S+N4MgzkY6d137tIeVUA++Eq9rPjYG1c+l3Hc84YyU24qLbGKizbGMBufocd7ADPLdAgOSa5iX8Wt42bre0SpTPkyOYapOFNmM1jv/gw/nUAiH6c6Js6GFpfCuJlaz8Q5a2V9mAElnNc57DkJtzYBetl0w2qclIgtQIqD3Qm+ic/f+DGBtDjGP9e3cugDQL1CpUISVHuqHAd5aKTfOiSdI/9Gz37P6crCTosFB7sAAAAAElFTkSuQmCC" alt="Doctrine Mapping">
+        </a>
+    {% endset %}
+    {% set text %}Visualize objects mapping{% endset %}
+
+    {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', { link: false }) }}
+{% endblock %}
