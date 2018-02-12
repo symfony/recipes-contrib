@@ -1,0 +1,5 @@
+<bg=blue;fg=white> What's next? </>
+<bg=blue;fg=white>              </>
+
+Now edit your <comment>.env</> file
+and set paths to keys and passphrase files

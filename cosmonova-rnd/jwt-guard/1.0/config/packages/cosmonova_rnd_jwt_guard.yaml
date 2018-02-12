@@ -1,0 +1,5 @@
+services:
+    _defaults:
+        autowire: true
+        public: false
+    CosmonovaRnD\JWTGuard\Security\JwtAuthenticator: ~
