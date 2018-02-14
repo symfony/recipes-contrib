@@ -4,6 +4,8 @@ tactician:
     commandbus:
         default:
             middleware:
+# Logger middleware - https://github.com/thephpleague/tactician-bundle#logger-middleware-tacticianmiddlewarelogger
+#                - tactician.middleware.logger
 # Security middleware - https://github.com/thephpleague/tactician-bundle#security-middleware-tacticianmiddlewaresecurity
 #                - tactician.middleware.security
 # Validator middleware - https://github.com/thephpleague/tactician-bundle/tree/v1.0#validator-middleware-tacticianmiddlewarevalidator
