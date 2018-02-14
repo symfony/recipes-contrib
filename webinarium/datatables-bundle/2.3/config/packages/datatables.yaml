@@ -1,0 +1,4 @@
+services:
+
+    # See https://github.com/webinarium/DataTablesBundle/wiki
+    DataTables\DataTablesInterface: '@datatables'
