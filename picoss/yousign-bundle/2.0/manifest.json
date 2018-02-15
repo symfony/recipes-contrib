@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "Picoss\\YousignBundle\\PicossYousignBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "YOUSIGN_ENV": "demo",
+        "YOUSIGN_API_KEY": "api_key",
+        "YOUSIGN_USERNAME": "username",
+        "YOUSIGN_PASSWORD": "password"
+    }
+}
