@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Ikoene\\MarvelApiBundle\\IkoeneMarvelApiBundle": ["all"]
+    },
+    "env": {
+        "MARVEL_PUBLIC_API_KEY": "",
+        "MARVEL_PRIVATE_API_KEY": ""
+    }
+}
