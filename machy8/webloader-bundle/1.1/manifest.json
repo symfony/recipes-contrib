@@ -4,6 +4,6 @@
 	},
 	"copy-from-recipe": {
 		"config/": "%CONFIG_DIR%/"
-    "src/": "%SRC_DIR%/"
+        "public/": "%PUBLIC_DIR%/"
 	}
 }
