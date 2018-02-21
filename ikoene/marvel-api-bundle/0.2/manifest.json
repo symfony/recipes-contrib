@@ -2,9 +2,6 @@
     "bundles": {
         "Ikoene\\MarvelApiBundle\\IkoeneMarvelApiBundle": ["all"]
     },
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    },
     "env": {
         "MARVEL_PUBLIC_API_KEY": "",
         "MARVEL_PRIVATE_API_KEY": ""
