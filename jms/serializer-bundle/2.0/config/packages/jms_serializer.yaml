@@ -7,7 +7,7 @@ jms_serializer:
         directories:
             app:
                 namespace_prefix: "App"
-                path: "%kernel.project_dir%/config/metadata/jms_serializer"
+                path: "%kernel.project_dir%/metadata/jms_serializer"
 #            any-name:
 #                namespace_prefix: "My\\FooBundle"
 #                path: "@MyFooBundle/Resources/config/serializer"
