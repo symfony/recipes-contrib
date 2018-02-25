@@ -1,0 +1,3 @@
+cl_slack:
+    api_token: "%env(SLACK_API_TOKEN)%"
+    test: false
