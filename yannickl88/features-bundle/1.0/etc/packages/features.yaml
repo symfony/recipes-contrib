@@ -1,0 +1,21 @@
+features:
+    tags:
+#        my.feature:
+#            request: ["beta", "on"]
+
+services:
+#    app.features.request_resolver:
+#        class: App\Feature\RequestResolver
+#        arguments:
+#            - "@request_stack"
+#        tags:
+#            # Registering the resolver "request" so it can be used in the config
+#            - { name: features.resolver, config-key: request }
+#
+#    app.some.service:
+#       class: App\Some\Service
+#       arguments:
+#           - "@features.tag"
+#       tags:
+#           # Using the defined tag
+#           - { name: features.tag, tag: my.feature }
