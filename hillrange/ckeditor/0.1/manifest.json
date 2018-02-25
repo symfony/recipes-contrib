@@ -6,8 +6,6 @@
         "config/": "%CONFIG_DIR%/"
     },
     "composer-scripts": {
-        "cache:clear": "symfony-cmd",
         "ckeditor:install": "symfony-cmd",
-        "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
     }
 }
