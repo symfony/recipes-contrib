@@ -1,0 +1,8 @@
+twig:
+    globals:
+        websitetitle: "%websitetitle%"
+        defaultlocale: "%defaultlocale%"
+        requiredlocales: "%requiredlocales%"
+        gtm_code: "%analytics.googletagmanager%"
+        #titlecolor: "#000000"
+        #titlebgcolor: "#2997CE"

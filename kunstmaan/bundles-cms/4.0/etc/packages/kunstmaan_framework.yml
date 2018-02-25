@@ -1,0 +1,11 @@
+framework:
+    ide:                "phpstorm://open?file=%%f&line=%%l"
+    esi:                { enabled: true }
+    fragments:          { path: /_fragment }
+    translator:         { fallback: "%locale%" }
+    session:
+        name:               "%session_prefix%"
+        # set true if no scripting languages need to access the cookie
+        cookie_httponly:    false
+    assets:
+        version:     v1
