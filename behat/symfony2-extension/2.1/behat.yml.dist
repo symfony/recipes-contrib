@@ -1,0 +1,6 @@
+default:
+    extensions:
+        Behat\Symfony2Extension:
+            kernel:
+                bootstrap: etc/behat/symfony2-extension.bootstrap.php
+                class: App\Kernel
