@@ -10,7 +10,6 @@ hillrange_ck_editor:
                 - ['NumberedList','BulletedList','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock']
                 - ['Image','Table','-','Link','Flash','Smiley','TextColor','BGColor','Source']
             uiColor: "ddcccc"
-            removeMe: ggg
         simple_toolbar:
             toolbar:
                 - ['Bold', 'Italic', 'Strike', 'Link']
