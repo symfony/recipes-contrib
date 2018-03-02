@@ -4,11 +4,5 @@ task:
         mode:                'off' # One of "off"; "listener"
     locking:
         enabled:             false
-        # ttl:                 600
-        # storages:
-        #     file:
-        #         directory:   '%kernel.cache_dir%/tasks'
     executor:
         type:                inline # One of "inside"; "separate"
-        # separate:
-        #     console_path:    '%kernel.root_dir%/../bin/console'
