@@ -2,7 +2,7 @@
 bm_backup_manager:
     database:
         development:
-            dsn: '%env(mysql://db_user:db_password@127.0.0.1:3306/db_name)%'
+            dsn: '%env(DATABASE_URL)%'
     storage:
         local:
             type: Local
