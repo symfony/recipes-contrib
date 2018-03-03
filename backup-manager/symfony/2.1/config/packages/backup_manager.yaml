@@ -2,12 +2,7 @@
 bm_backup_manager:
     database:
         development:
-            type: mysql
-            host: '%env(BM_HOST)%'
-            port: 3306
-            user: '%env(BM_USER)%'
-            pass: '%env(BM_PASS)%'
-            database: '%env(BM_DATABASE)%'
+            dsn: '%env(mysql://db_user:db_password@127.0.0.1:3306/db_name)%'
     storage:
         local:
             type: Local
