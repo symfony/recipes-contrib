@@ -6,4 +6,4 @@ bm_backup_manager:
     storage:
         local:
             type: Local
-            root: "%kernel.cache_dir%/db"
+            root: '%kernel.cache_dir%/db'
