@@ -2,7 +2,7 @@
 bm_backup_manager:
     database:
         development:
-            dsn: '%env(DATABASE_URL)%'
+            dsn: '%env(resolve:DATABASE_URL)%'
     storage:
         local:
             type: Local
