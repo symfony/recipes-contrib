@@ -1,8 +1,0 @@
-task:
-    storage:                 doctrine # One of "array"; "doctrine"
-    run:
-        mode:                'off' # One of "off"; "listener"
-    locking:
-        enabled:             false
-    executor:
-        type:                inline # One of "inside"; "separate"
