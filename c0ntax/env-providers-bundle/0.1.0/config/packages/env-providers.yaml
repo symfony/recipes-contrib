@@ -1,0 +1,3 @@
+c0ntax_env_providers:
+    array:
+        return_null_if_empty: true
