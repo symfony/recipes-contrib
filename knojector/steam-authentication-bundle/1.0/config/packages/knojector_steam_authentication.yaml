@@ -1,4 +1,4 @@
-knojector_steam_auth:
+knojector_steam_authentication:
     api_key: ~
     login_route: ~
     login_redirect: ~
