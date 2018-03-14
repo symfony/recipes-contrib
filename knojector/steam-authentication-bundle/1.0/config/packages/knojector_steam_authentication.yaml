@@ -1,0 +1,5 @@
+knojector_steam_auth:
+    api_key: ~
+    login_route: ~
+    login_redirect: ~
+    user_class: ~
