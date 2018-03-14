@@ -1,0 +1,14 @@
+{
+    "aliases": ["allmysms", "zephyrweb-allmysms", "zephyr-allmysms"],
+    "bundles": {
+        "ZephyrHQ\\AllMySMSBundle\\ZephyrHQAllMySMSBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "ALLMYSMS_LOGIN": "ALLMYSMS_LOGIN",
+        "ALLMYSMS_KEY": "ALLMYSMS_KEY",
+        "ALLMYSMS_SIMULATE": "ALLMYSMS_SIMULATE"
+    }
+}
