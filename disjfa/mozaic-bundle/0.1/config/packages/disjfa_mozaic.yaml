@@ -1,7 +1,4 @@
-parameters:
-  env(UNSPLASH_APPLICATION_ID): ''
-  env(UNSPLASH_APPLICATION_SECRET): ''
-
+#parameters:
 #  disjfa_mozaic.unsplash.application_id: ''
 #  disjfa_mozaic.unsplash.secret: ''
 
