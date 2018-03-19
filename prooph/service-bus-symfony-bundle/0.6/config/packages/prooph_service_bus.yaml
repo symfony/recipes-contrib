@@ -1,6 +1,3 @@
-services:
-    Prooph\Bundle\ServiceBus\CommandBus: '@prooph_service_bus.default_command_bus'
-
 prooph_service_bus:
     command_buses:
         default_command_bus: ~

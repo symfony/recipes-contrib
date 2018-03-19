@@ -1,0 +1,8 @@
+services:
+    Prooph\Bundle\ServiceBus\CommandBus: '@prooph_service_bus.default_command_bus'
+
+    command_handlers:
+        namespace: App\Messaging\Command\
+        public: true
+        resource: '../src/Messaging/Command/*Handler.php'
+        tags: [{ name: 'prooph_service_bus.default_command_bus.route_target', message_detection: true }]
