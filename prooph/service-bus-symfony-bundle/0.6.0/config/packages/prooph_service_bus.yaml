@@ -1,0 +1,3 @@
+prooph_service_bus:
+    command_buses:
+        default_command_bus: ~
