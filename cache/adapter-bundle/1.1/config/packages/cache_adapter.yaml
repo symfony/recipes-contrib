@@ -1,5 +1,4 @@
 cache_adapter:
     providers:
         default:
-            factory: "%env(DEFAULT_CACHE_PROVIDER_FACTORY)%"
-            options: "%env(json:DEFAULT_CACHE_PROVIDER_OPTIONS)%"
+            factory: cache.factory.array
