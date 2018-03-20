@@ -1,0 +1,6 @@
+services:
+    Prooph\Bundle\ServiceBus\CommandBus: '@prooph_service_bus.app_command_bus'
+
+prooph_service_bus:
+    command_buses:
+        app_command_bus: ~
