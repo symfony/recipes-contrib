@@ -3,6 +3,9 @@ prooph_service_bus:
         app_command_bus: ~
 
 services:
+    _defaults:
+        autowire: true
+
     Prooph\Bundle\ServiceBus\CommandBus: '@prooph_service_bus.app_command_bus'
 
     # Make sure App\Messaging\* services are not overriden in `config/services.yaml`
