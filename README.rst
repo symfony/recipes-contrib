@@ -12,6 +12,27 @@ repository for your project, run the following command:
 
     composer config extra.symfony.allow-contrib true
 
+Test it locally
+---------------
+
+If Travis CI fails, it could be long to debug what the problem is.
+You can reproduce the same things locally.
+
+
+Here it is the command:
+
+```bash
+composer create-project "symfony/skeleton:^4.0" flex
+cd flex
+composer config extra.symfony.allow-contrib true
+export SYMFONY_ENDPOINT=https://symfony.sh/r/github.com/symfony/recipes-contrib/{pull_request}
+composer req "my/library-bundle:x.x"
+```
+
+Just replace:
+- `pull_request`: pull request number
+- `my/library-bundle:x.x`: your library with your version
+
 Contributing
 ------------
 
