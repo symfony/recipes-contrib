@@ -1,0 +1,14 @@
+prooph_service_bus:
+    command_buses:
+        app_command_bus: ~
+
+services:
+    Prooph\Bundle\ServiceBus\CommandBus: '@prooph_service_bus.app_command_bus'
+
+    # Make sure App\Messaging\* services are not overriden in `config/services.yaml`
+    command_handlers:
+        resource: '../../src/Messaging/Command'
+        namespace: App\Messaging\Command\
+        public: true
+        tags:
+            - { name: 'prooph_service_bus.app_command_bus.route_target', message_detection: true }
