@@ -1,0 +1,32 @@
+prooph_event_store:
+    stores:
+        app:
+            event_store: 'Prooph\EventStore\EventStore'
+            # repositories:
+            #     App\EventSourcing\TodoRepository:
+            #         aggregate_type: App\EventSourcing\Todo
+            #         aggregate_translator: Prooph\EventSourcing\EventStoreIntegration\AggregateTranslator
+
+services:
+    _defaults:
+        autowire: true
+        public: false
+
+    Prooph\EventStore\EventStore: '@Prooph\EventStore\Pdo\MySqlEventStore'
+    Prooph\EventStore\Pdo\PersistenceStrategy: '@Prooph\EventStore\Pdo\PersistenceStrategy\MySqlSingleStreamStrategy'
+    Prooph\Common\Messaging\MessageFactory: '@prooph_event_store.message_factory'
+
+    PDO:
+        class: \PDO
+        arguments:
+            - 'mysql:host=%env(MYSQL_HOST)%;dbname=%env(MYSQL_DBNAME)%'
+            - '%env(MYSQL_USER)%'
+            - '%env(MYSQL_PASSWORD)%'
+
+    Prooph\EventStore\Pdo\PersistenceStrategy\MySqlSingleStreamStrategy:
+        class: Prooph\EventStore\Pdo\PersistenceStrategy\MySqlSingleStreamStrategy
+
+    Prooph\EventStore\Pdo\MySqlEventStore:
+        class: Prooph\EventStore\Pdo\MySqlEventStore
+
+    Prooph\EventSourcing\EventStoreIntegration\AggregateTranslator: ~

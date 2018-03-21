@@ -1,0 +1,16 @@
+{
+    "bundles": {
+        "Prooph\\Bundle\\ServiceBus\\ProophServiceBusBundle": ["all"],
+        "Prooph\Bundle\EventStore\ProophEventStoreBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "src/": "%SRC_DIR%/"
+    },
+    "env": {
+        "MYSQL_HOST": "127.0.0.1",
+        "MYSQL_DBNAME": "event_streams",
+        "MYSQL_USER": "user",
+        "MYSQL_PASSWORD": "password"
+    }
+}
