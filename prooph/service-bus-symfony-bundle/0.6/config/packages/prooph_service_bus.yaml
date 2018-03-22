@@ -1,9 +1,12 @@
 prooph_service_bus:
     command_buses:
         app_command_bus: ~
+    event_buses:
+        app_event_bus: ~
 
 services:
     _defaults:
         autowire: true
 
     Prooph\Bundle\ServiceBus\CommandBus: '@prooph_service_bus.app_command_bus'
+    Prooph\ServiceBus\EventBus: '@prooph_service_bus.app_event_bus'

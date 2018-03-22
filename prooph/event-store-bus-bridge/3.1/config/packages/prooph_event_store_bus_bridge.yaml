@@ -1,0 +1,7 @@
+services:
+    _defaults:
+        autowire: true
+
+    Prooph\EventStoreBusBridge\EventPublisher:
+        tags:
+            - { name: 'prooph_event_store.app.plugin' }
