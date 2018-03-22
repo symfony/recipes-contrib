@@ -1,12 +1,3 @@
-prooph_event_store:
-    stores:
-        app:
-            event_store: 'Prooph\EventStore\EventStore'
-            # repositories:
-            #     App\EventSourcing\TodoRepository:
-            #         aggregate_type: App\EventSourcing\Todo
-            #         aggregate_translator: Prooph\EventSourcing\EventStoreIntegration\AggregateTranslator
-
 services:
     _defaults:
         autowire: true
@@ -14,7 +5,6 @@ services:
 
     Prooph\EventStore\EventStore: '@Prooph\EventStore\Pdo\MySqlEventStore'
     Prooph\EventStore\Pdo\PersistenceStrategy: '@Prooph\EventStore\Pdo\PersistenceStrategy\MySqlSingleStreamStrategy'
-    Prooph\Common\Messaging\MessageFactory: '@prooph_event_store.message_factory'
 
     PDO:
         class: \PDO
