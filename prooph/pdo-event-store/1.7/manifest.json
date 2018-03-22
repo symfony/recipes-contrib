@@ -2,6 +2,9 @@
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     },
+    "copy-from-package": {
+        "scripts": "%CONFIG_DIR%"
+    },
     "env": {
         "MYSQL_HOST": "127.0.0.1",
         "MYSQL_DBNAME": "event_streams",
