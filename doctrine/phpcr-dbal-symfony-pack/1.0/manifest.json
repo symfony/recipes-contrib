@@ -9,8 +9,8 @@
         "src/": "%SRC_DIR%/"
     },
     "env": {
-        "PHPCR_WORKSPACE": "default",
         "PHPCR_USER": "admin",
-        "PHPCR_PASSWORD": "admin"
+        "PHPCR_PASSWORD": "admin",
+        "PHPCR_WORKSPACE": "default"
     }
 }
