@@ -1,0 +1,27 @@
+doctrine_phpcr:
+    # configure the PHPCR session
+    session:
+        backend:
+             type: doctrinedbal
+             connection: default
+             caches:
+                 meta: doctrine_cache.providers.phpcr_meta
+                 nodes: doctrine_cache.providers.phpcr_nodes
+             parameters:
+                 jackalope.check_login_on_server: false
+        workspace: '%env(PHPCR_WORKSPACE)%'
+        username: '%env(PHPCR_USER)%'
+        password: '%env(PHPCR_PASSWORD)%'
+    # enable the ODM layer
+    odm:
+        auto_mapping: true
+        auto_generate_proxy_classes: true
+        locales:
+            en: [de]
+            de: [en]
+doctrine_cache:
+    providers:
+        phpcr_meta:
+            type: file_system
+        phpcr_nodes:
+            type: file_system
