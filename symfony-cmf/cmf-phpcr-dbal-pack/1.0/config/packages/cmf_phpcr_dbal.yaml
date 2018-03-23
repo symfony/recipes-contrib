@@ -1,0 +1,24 @@
+framework:
+    templating: { engines: ['twig'] }
+
+cmf_menu:
+    persistence:
+        phpcr: ~
+
+cmf_routing:
+    chain:
+        routers_by_id:
+            cmf_routing.dynamic_router: 200
+            router.default:             100
+    dynamic:
+        persistence:
+            phpcr:
+                enabled: true
+
+cmf_content:
+    persistence:
+        phpcr: ~
+
+cmf_core:
+    multilang:
+        locales: [en,de]
