@@ -1,0 +1,5 @@
+mediamonks_sonata_media_admin:
+    resource: "@MediaMonksSonataMediaBundle/Resources/config/routing_admin.yml"
+
+mediamonks_sonata_media:
+    resource: "@MediaMonksSonataMediaBundle/Resources/config/routing.yml"
