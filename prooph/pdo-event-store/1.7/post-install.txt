@@ -1,0 +1,5 @@
+<bg=blue;fg=white>                                 </>
+<bg=blue;fg=white> MySql Event Store Configuration </>
+<bg=blue;fg=white>                                 </>
+
+  * Modify your MYSQL_* configuration in <fg=green>.env</>
