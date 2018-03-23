@@ -1,11 +1,14 @@
 prooph_event_store:
     stores:
-        app:
-            event_store: 'Prooph\EventStore\EventStore'
+        default:
+            event_store: 'app.event_store.default'
             # repositories:
             #     App\EventSourcing\TodoRepository:
             #         aggregate_type: App\EventSourcing\Todo
             #         aggregate_translator: Prooph\EventSourcing\EventStoreIntegration\AggregateTranslator
 
 services:
-    Prooph\Common\Messaging\MessageFactory: '@prooph_event_store.message_factory'
+    _defaults:
+        public: false
+
+    Prooph\EventSourcing\EventStoreIntegration\AggregateTranslator: ~

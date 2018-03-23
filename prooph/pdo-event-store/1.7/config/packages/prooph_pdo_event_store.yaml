@@ -1,22 +1,20 @@
 services:
     _defaults:
-        autowire: true
         public: false
 
-    Prooph\EventStore\EventStore: '@Prooph\EventStore\Pdo\MySqlEventStore'
-    Prooph\EventStore\Pdo\PersistenceStrategy: '@Prooph\EventStore\Pdo\PersistenceStrategy\MySqlSingleStreamStrategy'
+    app.event_store.default:
+        class: Prooph\EventStore\Pdo\MySqlEventStore
+        arguments:
+            - '@prooph_event_store.message_factory'
+            - '@app.event_store.pdo_connection.mysql'
+            - '@app.event_store.mysql.persistence_strategy'
 
-    PDO:
+    app.event_store.pdo_connection.mysql:
         class: \PDO
         arguments:
             - 'mysql:host=%env(MYSQL_HOST)%;dbname=%env(MYSQL_DBNAME)%'
             - '%env(MYSQL_USER)%'
             - '%env(MYSQL_PASSWORD)%'
 
-    Prooph\EventStore\Pdo\PersistenceStrategy\MySqlSingleStreamStrategy:
+    app.event_store.mysql.persistence_strategy:
         class: Prooph\EventStore\Pdo\PersistenceStrategy\MySqlSingleStreamStrategy
-
-    Prooph\EventStore\Pdo\MySqlEventStore:
-        class: Prooph\EventStore\Pdo\MySqlEventStore
-
-    Prooph\EventSourcing\EventStoreIntegration\AggregateTranslator: ~
