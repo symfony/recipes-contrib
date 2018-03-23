@@ -2,13 +2,13 @@ doctrine_phpcr:
     # configure the PHPCR session
     session:
         backend:
-             type: doctrinedbal
-             connection: default
-             caches:
-                 meta: doctrine_cache.providers.phpcr_meta
-                 nodes: doctrine_cache.providers.phpcr_nodes
-             parameters:
-                 jackalope.check_login_on_server: false
+            type: doctrinedbal
+            connection: default
+            caches:
+                meta: doctrine_cache.providers.phpcr_meta
+                nodes: doctrine_cache.providers.phpcr_nodes
+            parameters:
+                jackalope.check_login_on_server: false
         workspace: '%env(PHPCR_WORKSPACE)%'
         username: '%env(PHPCR_USER)%'
         password: '%env(PHPCR_PASSWORD)%'
