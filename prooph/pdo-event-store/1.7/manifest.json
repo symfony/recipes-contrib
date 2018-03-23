@@ -3,7 +3,7 @@
         "config/": "%CONFIG_DIR%/"
     },
     "copy-from-package": {
-        "scripts": "%CONFIG_DIR%"
+        "scripts/": "%CONFIG_DIR%/scripts/"
     },
     "env": {
         "MYSQL_HOST": "127.0.0.1",
