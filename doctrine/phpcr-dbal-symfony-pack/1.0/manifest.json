@@ -1,5 +1,6 @@
 {
     "bundles": {
+        "Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle": ["all"],
         "Doctrine\\Bundle\\DoctrineCacheBundle\\DoctrineCacheBundle": ["all"],
         "Doctrine\\Bundle\\PHPCRBundle\\DoctrinePHPCRBundle": ["all"]
     },
