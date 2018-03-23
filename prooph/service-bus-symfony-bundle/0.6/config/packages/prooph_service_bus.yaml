@@ -8,5 +8,5 @@ services:
     _defaults:
         autowire: true
 
-    Prooph\Bundle\ServiceBus\CommandBus: '@prooph_service_bus.app_command_bus'
+    Prooph\ServiceBus\CommandBus: '@prooph_service_bus.app_command_bus'
     Prooph\ServiceBus\EventBus: '@prooph_service_bus.app_event_bus'
