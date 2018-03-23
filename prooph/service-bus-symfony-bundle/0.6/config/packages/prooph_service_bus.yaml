@@ -3,6 +3,8 @@ prooph_service_bus:
         default_command_bus: ~
     event_buses:
         default_event_bus: ~
+    query_buses:
+        default_query_bus: ~
 
 services:
     _defaults:
