@@ -1,0 +1,5 @@
+mediamonks_sonata_media:
+    filesystem_private: 'oneup_flysystem.default_filesystem_filesystem'
+    filesystem_public: 'oneup_flysystem.default_filesystem_filesystem'
+    redirect_url: '%env(MEDIA_REDIRECT_URL)%'
+    model_class: App\Entity\Media
