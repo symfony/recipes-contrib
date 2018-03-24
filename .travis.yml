@@ -8,10 +8,12 @@ cache:
 matrix:
     fast_finish: true
     include:
-        - php: 7.1
-          env: SKELETON_VERSION="^3.4"
-        - php: 7.1
-          env: SKELETON_VERSION="^4.0"
+        -
+            php: 7.1
+            env: SKELETON_VERSION="^3.4"
+        -
+            php: 7.1
+            env: SKELETON_VERSION="^4.0"
 
 before_install:
     - phpenv config-rm xdebug.ini || true
@@ -25,4 +27,4 @@ install:
     - composer config extra.symfony.allow-contrib true
 
 script:
-    - composer req "${PACKAGES}"
+    - composer req $(echo "$PACKAGES" | tr --delete '\n')
