@@ -1,6 +1,5 @@
 # Read more about client options at: https://github.com/kriswallsmith/Buzz/blob/master/doc/client.md
 services:
-
     # Clients
     Buzz\Client\Curl:
         arguments:
