@@ -1,0 +1,28 @@
+# Read more about client options at: https://github.com/kriswallsmith/Buzz/blob/master/doc/client.md
+services:
+
+    # Clients
+    Buzz\Client\Curl:
+        arguments:
+            - timeout: 10
+
+    Buzz\Client\FileGetContents:
+        arguments:
+            - timeout: 10
+
+    Buzz\Client\MultiCurl:
+        arguments:
+            - timeout: 10
+
+    # Browser
+    Buzz\Browser:
+        arguments: ['@Buzz\Client\Curl']
+        calls:
+            - ['addMiddleware', ['@Buzz\Middleware\ContentLengthMiddleware']]
+            - ['addMiddleware', ['@Buzz\Middleware\LoggerMiddleware']]
+
+    # Middlewares
+    Buzz\Middleware\ContentLengthMiddleware: ~
+
+    Buzz\Middleware\LoggerMiddleware:
+        arguments: ['@?logger']
