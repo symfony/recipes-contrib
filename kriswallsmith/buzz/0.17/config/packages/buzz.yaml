@@ -3,6 +3,9 @@ services:
     _defaults:
         public: false
 
+    # Tell the auto wire system to use "FuleGetContents" client as default client.
+    Buzz\Client\BuzzClientInterface: '@Buzz\Client\FileGetContents'
+
     # Clients
     Buzz\Client\Curl:
         arguments:
@@ -18,7 +21,7 @@ services:
 
     # Browser
     Buzz\Browser:
-        arguments: ['@Buzz\Client\Curl']
+        arguments: ['@Buzz\Client\BuzzClientInterface']
         calls:
             - ['addMiddleware', ['@Buzz\Middleware\ContentLengthMiddleware']]
             - ['addMiddleware', ['@Buzz\Middleware\LoggerMiddleware']]
