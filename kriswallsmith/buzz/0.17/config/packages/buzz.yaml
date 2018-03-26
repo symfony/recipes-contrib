@@ -27,13 +27,15 @@ services:
     Buzz\Browser:
         arguments: ['@Buzz\Client\BuzzClientInterface']
         calls:
-            - ['addMiddleware', ['@Buzz\Middleware\ContentLengthMiddleware']]
-            - ['addMiddleware', ['@Buzz\Middleware\LoggerMiddleware']]
+            - ['addMiddleware', ['@buzz.middleware.content_length']]
+            - ['addMiddleware', ['@buzz.middleware.logger']]
 
     # Middlewares
-    Buzz\Middleware\ContentLengthMiddleware: ~
+    buzz.middleware.content_length:
+        class: Buzz\Middleware\ContentLengthMiddleware
 
-    Buzz\Middleware\LoggerMiddleware:
+    buzz.middleware.logger:
+        class: Buzz\Middleware\LoggerMiddleware
         arguments: ['@?logger']
         tags:
             - { name: monolog.logger, channel: buzz }
