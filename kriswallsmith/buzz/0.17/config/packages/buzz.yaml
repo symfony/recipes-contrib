@@ -4,6 +4,7 @@ services:
         public: false
 
     # Tell the auto wire system to use "FileGetContents" client as default client.
+    # Set this to any of the other clients below (e.g. Curl or MultiCurl) to use a different default client.
     Buzz\Client\BuzzClientInterface: '@Buzz\Client\FileGetContents'
 
     # Clients
