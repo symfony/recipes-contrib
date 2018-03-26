@@ -5,18 +5,21 @@ services:
 
     # Tell the auto wire system to use "FileGetContents" client as default client.
     # Set this to any of the other clients below (e.g. Curl or MultiCurl) to use a different default client.
-    Buzz\Client\BuzzClientInterface: '@Buzz\Client\FileGetContents'
+    Buzz\Client\BuzzClientInterface: '@buzz.file_get_contents_client'
 
     # Clients
-    Buzz\Client\Curl:
+    buzz.file_get_contents_client:
+        class: Buzz\Client\FileGetContents
         arguments:
             - timeout: 10
 
-    Buzz\Client\FileGetContents:
+    buzz.curl_client:
+        class: Buzz\Client\Curl
         arguments:
             - timeout: 10
 
-    Buzz\Client\MultiCurl:
+    buzz.multi_curl_client:
+        class: Buzz\Client\MultiCurl
         arguments:
             - timeout: 10
 
