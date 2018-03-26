@@ -31,3 +31,5 @@ services:
 
     Buzz\Middleware\LoggerMiddleware:
         arguments: ['@?logger']
+        tags:
+            - { name: monolog.logger, channel: buzz }
