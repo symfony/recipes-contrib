@@ -3,7 +3,7 @@ services:
     _defaults:
         public: false
 
-    # Tell the auto wire system to use "FuleGetContents" client as default client.
+    # Tell the auto wire system to use "FileGetContents" client as default client.
     Buzz\Client\BuzzClientInterface: '@Buzz\Client\FileGetContents'
 
     # Clients
