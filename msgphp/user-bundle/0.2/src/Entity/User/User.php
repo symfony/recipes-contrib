@@ -2,11 +2,12 @@
 
 namespace App\Entity\User;
 
+use Doctrine\ORM\Mapping as ORM;
 use MsgPhp\User\Entity\User as BaseUser;
 use MsgPhp\User\UserIdInterface;
 
 /**
- * @final
+ * @ORM\Entity()
  */
 class User extends BaseUser
 {
