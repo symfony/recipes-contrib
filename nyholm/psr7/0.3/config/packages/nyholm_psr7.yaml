@@ -1,0 +1,30 @@
+# Read more about client options at: https://github.com/kriswallsmith/Buzz/blob/master/doc/client.md
+services:
+    _defaults:
+        public: false
+
+    # Register services for auto wire
+    Interop\Http\Factory\RequestFactoryInterface: '@nyholm.psr7.message_factory'
+    Interop\Http\Factory\ResponseFactoryInterface: '@nyholm.psr7.message_factory'
+    Http\Message\MessageFactory: '@nyholm.psr7.message_factory'
+    Interop\Http\Factory\ServerRequestFactoryInterface: '@nyholm.psr7.server_request_factory'
+    Http\Message\StreamFactory: '@nyholm.psr7.stream_factory'
+    Interop\Http\Factory\StreamFactoryInterface: '@nyholm.psr7.stream_factory'
+    Interop\Http\Factory\UploadedFileFactoryInterface: '@nyholm.psr7.uploaded_file_factory'
+    Http\Message\UriFactory: '@nyholm.psr7.uri_factory'
+    Interop\Http\Factory\UriFactoryInterface: '@nyholm.psr7.uri_factory'
+
+    nyholm.psr7.message_factory:
+        class: Nyholm\Psr7\Factory\MessageFactory
+
+    nyholm.psr7.server_request_factory:
+        class: Nyholm\Psr7\Factory\ServerRequestFactory
+
+    nyholm.psr7.stream_factory:
+        class: Nyholm\Psr7\Factory\StreamFactory
+
+    nyholm.psr7.uploaded_file_factory:
+        class: Nyholm\Psr7\Factory\UploadedFileFactory
+
+    nyholm.psr7.uri_factory:
+        class: Nyholm\Psr7\Factory\UriFactory
