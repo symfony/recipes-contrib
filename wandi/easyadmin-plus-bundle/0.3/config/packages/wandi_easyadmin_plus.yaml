@@ -1,0 +1,12 @@
+#wandi_easy_admin_plus:
+#    translator:
+#        # defines the locales you want to manage (if not set, take the default locale)
+#        locales:
+#            - fr
+#            - en
+#        # defines the directories in which you want to extract translations files (if not set, take the default translations dir)
+#        paths:
+#            - translations
+#        # defines a list of domains you want to exclude from admin (if not set, no excluded domain)
+#        excluded_domains:
+#            - validators

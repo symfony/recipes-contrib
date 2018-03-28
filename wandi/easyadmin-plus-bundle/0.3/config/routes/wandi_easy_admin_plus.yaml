@@ -1,0 +1,3 @@
+wandi_easy_admin_plus:
+    resource: '@WandiEasyAdminPlusBundle/Resources/config/routing.yml'
+    prefix: /admin
