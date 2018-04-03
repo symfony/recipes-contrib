@@ -1,0 +1,7 @@
+<bg=blue;fg=white>                                           </>
+<bg=blue;fg=white> Getting started using </><bg=blue;fg=white;options=bold>yamilovs/sms-bundle</><bg=blue;fg=white> </>
+<bg=blue;fg=white>                                           </>
+
+  You <options=bold>must</> to define at least one provider configuration in <comment>%CONFIG_DIR%/packages/yamilovs_sms.yaml</>.
+
+  * <fg=blue>More info</> you can find in the documentation at <comment>https://github.com/yamilovs/SmsBundle#configuration</>
