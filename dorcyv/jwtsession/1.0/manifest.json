@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Dorcyv\\JwtSessionBundle\\DorcyvJwtSessionBundle": ["all"]
+    },
+    "env": {
+        "JWT_SECRET": "ChangeMe",
+        "JWT_ISSUER": ""
+    }
+}
