@@ -1,0 +1,7 @@
+fos_user:
+  db_driver: orm
+  user_class: App\Entity\User
+  firewall_name: main
+  from_email:
+    address: '%env(EMAIL_FROM_ADDRESS)%'
+    sender_name: '%env(EMAIL_FROM_NAME)%'
