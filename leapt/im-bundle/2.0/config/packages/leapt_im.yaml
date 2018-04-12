@@ -1,0 +1,7 @@
+# Read the documentation: https://github.com/leapt/im-bundle/blob/master/docs/configuration.rst
+leapt_im:
+    cache_path: cache/im
+    formats:
+        # Resize to fit in 100x100, only if bigger, and remove all crap (meta-data, ...)
+        medium:
+            thumbnail: 100x100>

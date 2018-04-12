@@ -1,0 +1,4 @@
+lexik_maintenance:
+    driver:
+        class: '\Lexik\Bundle\MaintenanceBundle\Drivers\FileDriver'
+        options: { file_path: '%kernel.project_dir%/var/cache/lock' }

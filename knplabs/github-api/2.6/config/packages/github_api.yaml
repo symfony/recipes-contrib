@@ -2,4 +2,5 @@ services:
     Github\Client:
         class: Github\Client
         # Uncomment to enable authentication
-        #calls: ['authenticate', ['%env(GITHUB_USERNAME)%', '%env(GITHUB_SECRET)%', '%env(GITHUB_AUTH_METHOD)%']]
+        #calls:
+        #    - ['authenticate', ['%env(GITHUB_USERNAME)%', '%env(GITHUB_SECRET)%', '%env(GITHUB_AUTH_METHOD)%']]

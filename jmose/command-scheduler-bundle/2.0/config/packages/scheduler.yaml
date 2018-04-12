@@ -1,0 +1,19 @@
+# See full configuration at
+#     https://github.com/J-Mose/CommandSchedulerBundle/blob/master/Resources/doc/index.md#4---available-configuration
+jmose_command_scheduler:
+
+    # Scheduler will write output files here. set false to disable it.
+    log_path: "%kernel.logs_dir%"
+
+    # Add namespace you don't want to see its Command in the scheduler.
+    excluded_command_namespaces:
+        - _global
+        - scheduler
+        - server
+        - container
+        - config
+        - generate
+        - init
+        - router
+        - doctrine
+        - debug

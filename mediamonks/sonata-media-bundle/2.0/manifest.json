@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "MediaMonks\\SonataMediaBundle\\MediaMonksSonataMediaBundle": ["all"]
+    },
+    "env": {
+        "MEDIA_REDIRECT_URL": "https://media-redirect-url/"
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "src/": "%SRC_DIR%/"
+    }
+}

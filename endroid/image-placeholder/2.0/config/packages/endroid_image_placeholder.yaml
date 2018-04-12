@@ -1,0 +1,19 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    _instanceof:
+        Endroid\ImagePlaceholder\Provider\ProviderInterface:
+            tags: ['endroid_image_placeholder.provider']
+
+    Endroid\ImagePlaceholder\Provider\:
+        resource: '../../vendor/endroid/image-placeholder/src/Provider/*'
+
+    Endroid\ImagePlaceholder\ImagePlaceholder:
+        arguments: ['%kernel.debug%', 'placeholderpics', false]
+        calls:
+            - [addProviders, [!tagged endroid_image_placeholder.provider]]
+
+    Endroid\ImagePlaceholder\Twig\Extension\ImagePlaceholderExtension: ~

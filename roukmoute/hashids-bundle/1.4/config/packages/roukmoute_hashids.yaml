@@ -1,0 +1,3 @@
+# Read the documentation: https://github.com/roukmoute/HashidsBundle/blob/master/README.md
+roukmoute_hashids:
+    salt: 'change me'
