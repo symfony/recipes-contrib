@@ -3,6 +3,8 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb' and 'couchdb'
     firewall_name: main
     user_class: AppBundle\Entity\User
+    service:
+        mailer: 'fos_user.mailer.noop'
     from_email:
         address: "%env(MAILER_SENDER_ADDRESS)%"
         sender_name: "%env(MAILER_SENDER_NAME)%"

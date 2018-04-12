@@ -13,7 +13,9 @@ framework:
     templating:
         engines: [\'twig\']
 
-<fg=yellow>Set MAILER_SENDER_ADDRESS and MAILER_SENDER_NAME in your .env file</>
+<fg=yellow>For sending e mails:</>
+  1. Set MAILER_SENDER_ADDRESS and MAILER_SENDER_NAME in your .env file
+  2. Configure the mailer service in config/packages/fos_user.yaml
 
 <bg=blue;fg=white>                                        </>
 <bg=blue;fg=white> Follow this steps in the Documentation </>
@@ -29,3 +31,4 @@ See https://symfony.com/doc/master/bundles/FOSUserBundle/index.html
      (config/routes.yaml)
 
   4. Step 7: Update your database schema
+
