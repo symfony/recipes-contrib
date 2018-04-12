@@ -6,6 +6,7 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "MAILER_USER": ""
+        "MAILER_SENDER_ADDRESS": "joh.doe@localhost.tld",
+        "MAILER_SENDER_NAME": "John Doe"
     }
 }
