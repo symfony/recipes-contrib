@@ -1,8 +1,6 @@
 {
     "bundles": {
-        "SebTM\\INWX\\InwxApiBundle": [
-            "all"
-        ]
+        "SebTM\\INWX\\InwxApiBundle": ["all"]
     },
     "env": {
         "INWX_API_ENVIRONMENT": "test",
