@@ -1,0 +1,4 @@
+supercache:
+    enabled: true
+    cache_dir: '%kernel.project_dir%/public/webcache'
+    cache_status_header: false
