@@ -6,7 +6,7 @@
         "config/": "%CONFIG_DIR%/",
         "src/": "%SRC_DIR%/"
     },
-    "env': {
+    "env": {
         "EMAIL_FROM_ADDRESS": "admin@example.net",
         "EMAIL_FROM_NAME": "admin"
     }
