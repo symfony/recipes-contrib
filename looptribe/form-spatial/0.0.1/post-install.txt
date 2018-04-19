@@ -1,0 +1,3 @@
+<bg=blue;fg=white> Get started with LooptribeFormSpatialBundle </>
+    1. Set the <options=bold>LOOPTRIBE_FORMSPATIAL_GOOGLE_MAPS_API_KEY</> environment variable to a valid Google Maps API key
+    2. Use the <Comment>Looptribe\FormSpatialBundle\Form\Type</> FormType for creof/doctrine2-spatial <comment>Point</> types

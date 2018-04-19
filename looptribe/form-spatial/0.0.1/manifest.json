@@ -1,0 +1,11 @@
+{
+    "container": {
+        "looptribe.formspatial.google_maps_api_key": "%env(LOOPTRIBE_FORMSPATIAL_GOOGLE_MAPS_API_KEY)%"
+    },
+    "env": {
+        "LOOPTRIBE_FORMSPATIAL_GOOGLE_MAPS_API_KEY": ""
+    },
+    "bundles": {
+        "Looptribe\\FormSpatialBundle\\LooptribeFormSpatialBundle": ["all"]
+    }
+}
