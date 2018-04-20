@@ -6,6 +6,6 @@
         "config/": "%CONFIG_DIR%/"
     },
     "composer-scripts": {
-        "ckeditor:install --clear=drop": "symfony-cmd"
+        "ckeditor:install --clear=skip": "symfony-cmd"
     }
 }
