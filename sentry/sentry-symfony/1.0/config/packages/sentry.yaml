@@ -5,7 +5,6 @@ parameters:
     env(SENTRY_DSN): ''
 
 sentry:
-    # Remove the `resolve:` operator if you are using Symfony 3.3
     dsn: '%env(resolve:SENTRY_DSN)%'
 
     options:
