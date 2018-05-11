@@ -1,0 +1,18 @@
+phpfastcache:
+    twig_driver: "filecache" # This option must be a valid declared driver, in our example: "filecache"
+    twig_block_debug: false # This option will wrap CACHE/ENDCACHE blocks with block debug as HTML comment
+    drivers:
+        filecache:
+            type: Files
+            parameters:
+                path: "%env(PHPFASTCACHE_FILECACHE_PATH)%"
+
+# Define your drivers here. The example below connects to database 0 of the default Redis server.
+#
+# See https://github.com/snc/SncRedisBundle/blob/master/Resources/doc/index.md for instructions on
+# how to configure the bundle.
+#
+#        memorycache:
+#            type: redis # or "predis"
+#            path: "%env(PHPFASTCACHE_REDIS_URL)%"
+#            database: 0
