@@ -8,6 +8,5 @@
     "env": {
         "#1": "Avoid special chars in the file cache path such as: @, %, :, +, ~, etc.",
         "PHPFASTCACHE_FILECACHE_PATH": "%kernel.cache_dir%/phpfastcache/"
-    },
-    "aliases": ["phpfastcache"]
+    }
 }
