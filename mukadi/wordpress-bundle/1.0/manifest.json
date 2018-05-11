@@ -6,9 +6,11 @@
         "config/": "%CONFIG_DIR%/",
         "public/": "%PUBLIC_DIR%",
         "wp/": "wp/",
-        "wp-cli.yml": "wp-cli.yml",
         "wp-config.php": "wp-config.php",
         "sf-wp-bootstrap.php": "sf-wp-bootstrap.php"
+    },
+    "copy-from-package": {
+        "wp-cli.yml": "wp-cli.yml"
     },
     "env": {
         "WP_PREFIX": "wp_",
