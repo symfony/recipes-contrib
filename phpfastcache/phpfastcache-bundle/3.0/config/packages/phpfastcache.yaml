@@ -9,7 +9,7 @@ phpfastcache:
 
 # Define your drivers here. The example below connects to database 0 of the default Redis server.
 #
-# See https://github.com/snc/SncRedisBundle/blob/master/Resources/doc/index.md for instructions on
+# See https://github.com/PHPSocialNetwork/phpfastcache-bundle/wiki for instructions on
 # how to configure the bundle.
 #
 #        memorycache:
