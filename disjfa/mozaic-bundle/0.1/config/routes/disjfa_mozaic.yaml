@@ -1,0 +1,3 @@
+disjfa_mozaic:
+    resource: '@DisjfaMozaicBundle/Controller/'
+    type:     annotation

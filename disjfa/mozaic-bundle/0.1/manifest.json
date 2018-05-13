@@ -1,0 +1,15 @@
+{
+    "bundles": {
+        "Disjfa\\MozaicBundle\\DisjfaMozaicBundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "You can request a api key on the developer page of unsplash here: https://unsplash.com/developers",
+        "UNSPLASH_APPLICATION_ID": "",
+        "UNSPLASH_APPLICATION_SECRET": ""
+    }
+}
