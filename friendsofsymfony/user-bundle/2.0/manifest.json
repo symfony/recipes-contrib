@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "FOS\\UserBundle\\FOSUserBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "src/": "%SRC_DIR%/"
+    },
+    "env": {
+        "MAILER_SENDER_ADDRESS": "john@doe.com",
+        "MAILER_SENDER_NAME": "John Doe"
+    }
+}
