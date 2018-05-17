@@ -11,7 +11,7 @@ use MsgPhp\User\UserIdInterface;
  */
 class User extends BaseUser
 {
-    /** @ORM\Id() @ORM\Column(type="msgphp_user_id") */
+    /** @ORM\Id() @ORM\GeneratedValue() @ORM\Column(type="msgphp_user_id") */
     private $id;
 
     public function __construct(UserIdInterface $id)
