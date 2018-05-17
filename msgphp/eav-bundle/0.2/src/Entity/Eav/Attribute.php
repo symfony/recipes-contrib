@@ -11,7 +11,7 @@ use MsgPhp\Eav\Entity\Attribute as BaseAttribute;
  */
 class Attribute extends BaseAttribute
 {
-    /** @ORM\Id() @ORM\Column(type="msgphp_attribute_id") */
+    /** @ORM\Id() @ORM\GeneratedValue() @ORM\Column(type="msgphp_attribute_id") */
     private $id;
 
     public function __construct(AttributeIdInterface $id)
