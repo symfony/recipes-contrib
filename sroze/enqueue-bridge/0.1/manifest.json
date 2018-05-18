@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Sam\\Symfony\\Bridge\\EnqueueMessage\\Bundle\\EnqueueBridgeBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "ENQUEUE_BRIDGE_QUEUE_NAME": "messages"
+    }
+}
