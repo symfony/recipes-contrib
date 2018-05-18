@@ -75,4 +75,4 @@
     Sol\ApiPlatform\MongoBridge\Bridge\Doctrine\Odm\Extension\Filter\RangeFilter:
         arguments: ['@doctrine_mongodb', null, '@logger']
         tags:
-            - { name: 'api_platform.filter', id: 'mongo.rangefilter' 
+            - { name: 'api_platform.filter', id: 'mongo.rangefilter' } 
