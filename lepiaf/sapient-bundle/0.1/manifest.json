@@ -1,5 +1,8 @@
 {
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
     "bundles": {
-        "lepiaf\\SapientBundle\\SapientBundle": ["prod", "dev"]
+        "lepiaf\\SapientBundle\\SapientBundle": ["all"]
     }
 }
