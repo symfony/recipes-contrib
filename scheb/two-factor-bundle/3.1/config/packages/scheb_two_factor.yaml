@@ -1,0 +1,14 @@
+# See the configuration reference at https://github.com/scheb/two-factor-bundle/blob/master/Resources/doc/configuration.md
+#scheb_two_factor:
+#    trusted_device:
+#        enabled: true
+#    backup_codes:
+#        enabled: true
+#    email:
+#        enabled: true
+#        sender_email: me@example.com
+#        sender_name: My Website
+#    google:
+#        enabled: true
+#    security_tokens:
+#        - Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken
