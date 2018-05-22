@@ -11,8 +11,3 @@ phpfastcache:
 #
 # See https://github.com/PHPSocialNetwork/phpfastcache-bundle/wiki for instructions on
 # how to configure the bundle.
-#
-#        memorycache:
-#            type: redis # or "predis"
-#            path: "%env(PHPFASTCACHE_REDIS_URL)%"
-#            database: 0
