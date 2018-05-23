@@ -10,3 +10,4 @@
     to start translate your website.
 
 More details: https://github.com/weglot/translate-bundle
+
