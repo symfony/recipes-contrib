@@ -1,5 +1,5 @@
 <bg=blue;fg=white>                                  </>
-<bg=blue;fg=white> Next: Weglot Configuration </>
+<bg=blue;fg=white> Next: Weglot Configuration       </>
 <bg=blue;fg=white>                                  </>
 
   * The weglot/translate-bundle uses Weglot service. Create a free
