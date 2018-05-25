@@ -1,0 +1,113 @@
+framework:
+    templating:
+        engines: ['twig']
+    session:
+        handler_id: session.handler.native_file
+        save_path: "%kernel.project_dir%/var/sessions/%sulu.context%/%kernel.environment%"
+    csrf_protection: ~
+
+dubture_f_fmpeg:
+    ffmpeg_binary: /usr/local/bin/ffmpeg # path to ffmpeg
+    ffprobe_binary: /usr/local/bin/ffprobe # path to ffprobe
+    binary_timeout: 300 # Use 0 for infinite
+    threads_count: 4
+
+doctrine_cache:
+    providers:
+        phpcr_meta:
+            type: file_system
+        phpcr_nodes:
+            type: file_system
+
+sulu_document_manager:
+    sessions:
+        default:
+            backend:
+                type: "%env(PHPCR_BACKEND)%"
+                url: "%env(PHPCR_JACKRABBIT_URI)%"
+            workspace: "%env(PHPCR_WORKSPACE)%"
+            username: "%env(PHPCR_USER)%"
+            password: "%env(PHPCR_PASS)%"
+        live:
+            backend:
+                type: "%env(PHPCR_BACKEND)%"
+                url: "%env(PHPCR_JACKRABBIT_URI)%"
+            workspace: "%env(PHPCR_WORKSPACE)%_live"
+            username: "%env(PHPCR_USER)%"
+            password: "%env(PHPCR_PASS)%"
+
+sulu_core:
+    webspace:
+        config_dir: "%kernel.project_dir%/config/sulu/webspaces"
+    content:
+        structure:
+            default_type:
+                snippet: "default"
+            paths:
+                homepage:
+                    path: "%kernel.project_dir%/config/sulu/templates/pages"
+                    type: "home"
+                page:
+                    path: "%kernel.project_dir%/config/sulu/templates/pages"
+                    type: "page"
+                snippet:
+                    path: "%kernel.project_dir%/config/sulu/templates/snippets"
+                    type: "snippet"
+
+massive_search:
+    adapters:
+        zend_lucene:
+            basepath: "%kernel.project_dir%/var/indexes"
+
+
+sulu_website:
+    sitemap:
+        dump_dir: "%kernel.project_dir%/var/sitemaps"
+
+sulu_http_cache:
+    handlers:
+        debug:
+            enabled: "%kernel.debug%"
+
+sulu_media:
+    storage:
+        local:
+            path: "%kernel.project_dir%/var/uploads/media"
+
+security:
+    access_decision_manager:
+        strategy: unanimous
+        allow_if_all_abstain: true
+
+    encoders:
+        Sulu\Bundle\SecurityBundle\Entity\User:
+            algorithm: sha512
+            iterations: 5000
+            encode_as_base64: false
+
+    providers:
+        sulu:
+            id: sulu_security.user_provider
+
+    access_control:
+        - { path: ^/admin/reset, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/security/reset, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/_wdt, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin, roles: ROLE_USER }
+
+    firewalls:
+        admin:
+            pattern: ^/
+            anonymous: ~
+            provider: sulu
+            entry_point: sulu_security.authentication_entry_point
+            form_login:
+                login_path: sulu_admin.login
+                check_path: sulu_admin.login_check
+                success_handler: sulu_security.authentication_handler
+                failure_handler: sulu_security.authentication_handler
+                csrf_token_generator: security.csrf.token_manager
+            logout:
+                path: /admin/logout
+                target: /admin/

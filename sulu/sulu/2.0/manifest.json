@@ -1,0 +1,44 @@
+{
+    "bundles": {
+        "Sulu\\Bundle\\CoreBundle\\SuluCoreBundle": ["all"],
+        "Sulu\\Bundle\\SearchBundle\\SuluSearchBundle": ["all"],
+        "Sulu\\Bundle\\PersistenceBundle\\SuluPersistenceBundle": ["all"],
+        "Sulu\\Bundle\\ContactBundle\\SuluContactBundle": ["all"],
+        "Sulu\\Bundle\\MediaBundle\\SuluMediaBundle": ["all"],
+        "Sulu\\Bundle\\SecurityBundle\\SuluSecurityBundle": ["all"],
+        "Sulu\\Bundle\\CategoryBundle\\SuluCategoryBundle": ["all"],
+        "Sulu\\Bundle\\SnippetBundle\\SuluSnippetBundle": ["all"],
+        "Sulu\\Bundle\\ContentBundle\\SuluContentBundle": ["all"],
+        "Sulu\\Bundle\\TagBundle\\SuluTagBundle": ["all"],
+        "Sulu\\Bundle\\WebsiteBundle\\SuluWebsiteBundle": ["all"],
+        "Sulu\\Bundle\\LocationBundle\\SuluLocationBundle": ["all"],
+        "Sulu\\Bundle\\HttpCacheBundle\\SuluHttpCacheBundle": ["all"],
+        "Sulu\\Bundle\\WebsocketBundle\\SuluWebsocketBundle": ["all"],
+        "Sulu\\Bundle\\TranslateBundle\\SuluTranslateBundle": ["all"],
+        "Sulu\\Bundle\\DocumentManagerBundle\\SuluDocumentManagerBundle": ["all"],
+        "Sulu\\Bundle\\HashBundle\\SuluHashBundle": ["all"],
+        "Sulu\\Bundle\\CustomUrlBundle\\SuluCustomUrlBundle": ["all"],
+        "Sulu\\Bundle\\RouteBundle\\SuluRouteBundle": ["all"],
+        "Sulu\\Bundle\\MarkupBundle\\SuluMarkupBundle": ["all"],
+        "Sulu\\Bundle\\TestBundle\\SuluTestBundle": ["all"],
+        "Massive\\Bundle\\SearchBundle\\MassiveSearchBundle": ["all"],
+        "Massive\\Bundle\\BuildBundle\\MassiveBuildBundle": ["all"],
+        "Sulu\\Bundle\\AdminBundle\\SuluAdminBundle": ["all"],
+        "Sulu\\Bundle\\CollaborationBundle\\SuluCollaborationBundle": ["all"],
+        "Sulu\\Bundle\\PreviewBundle\\SuluPreviewBundle": ["all"],
+        "DTL\\Bundle\\PhpcrMigrations\\PhpcrMigrationsBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "bin/": "bin/",
+        "config/": "%CONFIG_DIR%/",
+        "src/": "src/",
+        "templates/": "templates/"
+    },
+    "env": {
+        "PHPCR_BACKEND": "doctrinedbal",
+        "PHPCR_JACKRABBIT_URI": "",
+        "PHPCR_WORKSPACE": "default",
+        "PHPCR_USER": "admin",
+        "PHPCR_PASS": "admin"
+    }
+}
