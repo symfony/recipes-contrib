@@ -1,5 +1,5 @@
 {
     "copy-from-recipe": {
-        "public/.htaccess": "%PUBLIC_DIR%/.htaccess"
+        "public/web.config": "%PUBLIC_DIR%/web.config"
     }
 }
