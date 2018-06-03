@@ -5,5 +5,8 @@
     "env": {
         "GOOGLE_RECAPTCHA_SITE_KEY": "",
         "GOOGLE_RECAPTCHA_SECRET": ""
+    },
+    "container": {
+        "google_recaptcha_site_key": "%env(GOOGLE_RECAPTCHA_SITE_KEY)%"
     }
 }
