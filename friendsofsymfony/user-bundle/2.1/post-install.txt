@@ -4,7 +4,7 @@
 
 Warning: make sure the twig engine is turned on in framework.yaml
 
-  - Modify your address config in <fg=green>config/packages/fos_user.yaml</>
+  - Modify your email address config in <fg=green>config/packages/fos_user.yaml</>
 
   - If not, add the following to <fg=green>config/packages/framework.yaml</>:
 
