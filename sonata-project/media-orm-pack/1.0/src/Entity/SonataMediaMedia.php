@@ -35,6 +35,19 @@ class SonataMediaMedia extends BaseMedia
      */
     protected $galleryHasMedias;
 
+    /**
+     * Fix annotations if you use classification-bundle.
+     *
+     * // ORM\ManyToOne(
+     *     targetEntity="App\Entity\SonataClassificationCategory",
+     *     cascade={"persist"}
+     * )
+     * // ORM\JoinColumn(name="category_id", referencedColumnName="id", onDelete="SET NULL")
+     *
+     * @var SonataClassificationCategory
+     */
+    protected $category;
+
     public function getId()
     {
         return $this->id;
