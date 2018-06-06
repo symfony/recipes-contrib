@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Supervizor\\CoreBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "aliases": ["supervizor-core"]
+}
