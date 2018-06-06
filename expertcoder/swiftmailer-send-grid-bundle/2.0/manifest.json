@@ -6,6 +6,6 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "SENDGRID_API_KEY": "..."
+        "SENDGRID_API_KEY": "PleaseEnterYourKey"
     }
 }
