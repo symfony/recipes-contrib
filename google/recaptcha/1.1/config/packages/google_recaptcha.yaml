@@ -9,6 +9,7 @@ services:
     # If you do not have php-curl extension, you can change for a socket or a plain POST request.
     # Check out the repository for all other request methods:
     # https://github.com/google/recaptcha/tree/master/src/ReCaptcha/RequestMethod
+    ReCaptcha\RequestMethod: '@ReCaptcha\RequestMethod\CurlPost'
     ReCaptcha\RequestMethod\CurlPost: ~
     ReCaptcha\RequestMethod\Curl: ~
 
