@@ -1,0 +1,3 @@
+supervizor_it_bundle: #Loading all routes in controller for this bundle
+    resource: '@SupervizorItBundle/Controller/'
+    type: annotation

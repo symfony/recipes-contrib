@@ -1,0 +1,3 @@
+supervizor_crypto_bundle: #Loading all routes in controller for this bundle
+    resource: '@SupervizorCryptoBundle/Controller/'
+    type: annotation
