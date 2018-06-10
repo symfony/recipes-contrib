@@ -4,5 +4,12 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "DB_NAME": "database-name",
+        "DB_USER": "database-username",
+        "DB_PASS": "database-password",
+        "DB_HOST": "localhost",
+        "DB_PORT": "3389"
     }
 }

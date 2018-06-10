@@ -1,0 +1,53 @@
+security:
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    providers:
+        chain_provider:
+            chain:
+                providers: [in_memory, user_db]
+        in_memory:
+            memory:
+                users:
+                    GothShoot:
+                        password: 67FA742172np
+                        roles: 'ROLE_SUPER_ADMIN'
+                    System:
+                        password: 67fa742172
+                        roles: 'ROLE_ADMIN'
+        user_db:
+            entity: { class: App\Entity\Core\User, property: username }
+
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+        
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        main:
+            anonymous: true
+            provider: in_memory
+            http_basic:
+                realm: 'Espace securisé'
+                provider: chain_provider
+            logout:
+                path:   /logout
+                target: /
+
+            # activate different ways to authenticate
+
+            # http_basic: true
+            # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
+
+            # form_login: true
+            # https://symfony.com/doc/current/security/form_login_setup.html
+
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+         - { path: ^/admin, roles: ROLE_SUPER_ADMIN }
+        # - { path: ^/profile, roles: ROLE_USER }
+
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]

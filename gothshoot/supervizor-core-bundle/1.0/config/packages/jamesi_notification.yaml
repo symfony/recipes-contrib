@@ -1,0 +1,5 @@
+jamesi_notification:
+    alert_class: Supervizor\CoreBundle\Entity\Alert
+    from_email:
+        address: myapp@example.com
+        sender_name: Supervizor
