@@ -1,8 +1,8 @@
 dtc_grid:
     purl: 'https://cdnjs.cloudflare.com/ajax/libs/purl/2.3.1/purl.min.js'
     jquery:
-        url: 'https://code.jquery.com/jquery-3.2.1.min.js'
-        integrity: sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=
+        url: 'https://code.jquery.com/jquery-3.3.1.min.js'
+        integrity: sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=
         crossorigin: anonymous
     datatables:
         css:
@@ -13,7 +13,8 @@ dtc_grid:
     theme:
         css:
             - 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
-            - 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'
+            - 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css'
         js:
-            - 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'
+            - 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'
+            - 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js'
     page_div_style: 'margin: 10px'
