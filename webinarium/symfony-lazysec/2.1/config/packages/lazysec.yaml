@@ -1,0 +1,15 @@
+services:
+
+    # See https://github.com/webinarium/symfony-lazysec/wiki/User-checker
+    LazySec\Checker\GenericUserChecker:
+        autowire: true
+        public: false
+
+    # See https://github.com/webinarium/symfony-lazysec/wiki/User-provider
+    LazySec\Provider\GenericUserProvider:
+        autowire: true
+        public: false
+
+    # Uncomment the line below and update path to your repository there,
+    # if you want use the 'GenericUserProvider' service from above
+    #LazySec\Repository\UserRepositoryInterface: '@App\Repository\UserRepository'
