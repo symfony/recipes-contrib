@@ -8,12 +8,8 @@ services:
         tags:
             - { name: 'prooph_event_store.default.plugin' }
 
-    # The app.event_store.default service must be configured with a
-    # Prooph\EventStore\TransactionalEventStore instance in order to user the following plugin.
-    # Read more: http://docs.getprooph.org/event-store/implementations/pdo_event_store/variants.html#3-2-1-2
-    #
-    # Prooph\EventStoreBusBridge\TransactionManager:
-    #     arguments:
-    #         - '@app.event_store.default'
-    #     tags:
-    #         - { name: 'prooph_service_bus.default_command_bus.plugin' }
+    Prooph\EventStoreBusBridge\TransactionManager:
+        arguments:
+            - '@app.event_store.default'
+        tags:
+            - { name: 'prooph_service_bus.default_command_bus.plugin' }

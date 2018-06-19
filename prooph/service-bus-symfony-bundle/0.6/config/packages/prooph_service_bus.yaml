@@ -11,15 +11,3 @@ services:
         public: false
 
     Prooph\ServiceBus\CommandBus: '@prooph_service_bus.default_command_bus'
-
-    # Autoregister your message handlers here
-    # Make sure App\Messaging\* services are not overriden in `config/services.yaml`
-    # Read more at https://github.com/prooph/service-bus-symfony-bundle/blob/master/doc/routing.md
-    #
-    # command_handlers:
-    #     resource: '../../src/Messaging/Command/*Handler.php'
-    #     namespace: App\Messaging\Command\
-    #     public: true
-    #     autowire: true
-    #     tags:
-    #         - { name: 'prooph_service_bus.default_command_bus.route_target', message_detection: true }
