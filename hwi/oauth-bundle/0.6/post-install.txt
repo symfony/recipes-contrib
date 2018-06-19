@@ -3,8 +3,7 @@
 <bg=blue;fg=white>                                          </>
 
   * <fg=blue>Configure</> your application:
-    1. Enable sessions by uncommenting the entire session section in <comment>config/packages/framework.yaml</>
-    2. Add firewall by adding <comment>- secured_area:
+    1. Add firewall by adding <comment>- secured_area:
                                              anonymous: true
                                              oauth:
                                                  resource_owners:
