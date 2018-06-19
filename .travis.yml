@@ -25,4 +25,4 @@ install:
     - composer config extra.symfony.allow-contrib true
 
 script:
-    - composer req $(echo "$PACKAGES" | tr --delete '\n')
+    - composer req "${PACKAGES}"
