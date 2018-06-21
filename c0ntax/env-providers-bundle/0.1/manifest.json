@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "C0ntax\\EnvProvidersBundle\\C0ntaxEnvProvidersBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
