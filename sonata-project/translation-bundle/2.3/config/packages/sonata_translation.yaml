@@ -10,7 +10,3 @@ sonata_block:
 sonata_translation:
     locales: ['en']
     default_locale: 'en'
-    #gedmo:
-    #    enabled: true
-    #knplabs:
-    #    enabled: true
