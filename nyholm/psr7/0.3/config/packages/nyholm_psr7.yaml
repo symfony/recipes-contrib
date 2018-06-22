@@ -12,6 +12,8 @@ services:
 
     ## Register nyholm/psr7 services for autowiring with HTTPlug
     #Http\Message\MessageFactory: '@nyholm.psr7.message_factory'
+    #Http\Message\RequestFactory: '@nyholm.psr7.message_factory'
+    #Http\Message\Responseactory: '@nyholm.psr7.message_factory'
     #Http\Message\StreamFactory: '@nyholm.psr7.stream_factory'
     #Http\Message\UriFactory: '@nyholm.psr7.uri_factory'
 
