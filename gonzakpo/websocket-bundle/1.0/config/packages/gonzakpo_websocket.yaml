@@ -1,0 +1,3 @@
+rolland_rock_websocket:
+    port: '%env(WEBSOCKET_PORT)%'
+    #client: App\Handler\WelcomeHandler
