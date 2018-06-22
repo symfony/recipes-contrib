@@ -33,11 +33,6 @@ sonata_page:
     ignore_uri_patterns:
         - ^/admin\/   # ignore admin route, ie route containing 'admin'
 
-#    page_defaults:
-#        homepage: # disable decoration for homepage, key - is a page route
-#            decorate: false
-#            enabled: true
-
     default_template: default
     templates:
         default:
