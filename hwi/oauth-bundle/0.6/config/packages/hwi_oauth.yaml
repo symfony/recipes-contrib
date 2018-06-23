@@ -4,9 +4,11 @@ hwi_oauth:
 
     # https://github.com/hwi/HWIOAuthBundle/blob/master/Resources/doc/2-configuring_resource_owners.md
     resource_owners:
-        any_name:
-            type:                resource_owner_of_choice
-            client_id:           <client_id>
-            client_secret:       <client_secret>
+        facebook:
+            type:                facebook
+            client_id:           '%env(FB_ID)%'
+            client_secret:       '%env(FB_SECRET)%'
+            scope:               "email"
             options:
+                display: popup
                 csrf: true
