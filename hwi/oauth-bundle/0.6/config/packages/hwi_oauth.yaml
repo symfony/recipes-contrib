@@ -1,6 +1,6 @@
 hwi_oauth:
     # list of names of the firewalls in which this bundle is active, this setting MUST be set
-    firewall_names: [secured_area]
+    firewall_names: [main]
 
     # https://github.com/hwi/HWIOAuthBundle/blob/master/Resources/doc/2-configuring_resource_owners.md
     resource_owners:
