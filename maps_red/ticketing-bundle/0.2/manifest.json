@@ -7,7 +7,6 @@
     "src/": "%SRC_DIR%/"
   },
   "composer-scripts": {
-    "make:ticketing": "symfony-cmd",
     "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
   }
 }
