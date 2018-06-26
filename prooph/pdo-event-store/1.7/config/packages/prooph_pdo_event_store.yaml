@@ -14,7 +14,7 @@ services:
     app.event_store.pdo_connection.mysql:
         class: \PDO
         arguments:
-            - 'mysql:host=%env(MYSQL_HOST)%;dbname=%env(MYSQL_DBNAME)%'
+            - '%env(MYSQL_DSN)%'
             - '%env(MYSQL_USER)%'
             - '%env(MYSQL_PASSWORD)%'
 
