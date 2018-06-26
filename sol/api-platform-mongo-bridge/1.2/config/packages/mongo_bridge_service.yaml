@@ -1,11 +1,30 @@
-        # extension order a activer
-    Sol\ApiPlatform\MongoBridge\Bridge\Doctrine\Odm\Extension\OrderExtension:
+services:
+
+    #Writelistener for Doctrine mongodb, nothing to change just inject doctrine mongodb
+    'ApiPlatform\Core\Bridge\Doctrine\EventListener\WriteListener':
+        arguments: ['@doctrine_mongodb']
+        tags:
+            - { name: kernel.event_listener, event: kernel.view, method: onKernelView, priority: 100 }
+
+    #collection generic data provider
+    'sol.apiplatform.mongobridge.collectiondataprovider':
+        class: Sol\ApiPlatform\MongoBridge\Bridge\Doctrine\Odm\DataProvider\CollectionDataProvider
+        arguments: ['@doctrine_mongodb', $collectionExtensions: !tagged api_platform.doctrine_mongodb.odm.query_extension.collection]
+        tags: [{ name: 'api_platform.collection_data_provider', priority: 2 }]
+
+    # item generic data provider
+    'sol.apiplatform.mongobridge.itemdataprovider':
+        class: Sol\ApiPlatform\MongoBridge\Bridge\Doctrine\Odm\DataProvider\ItemDataProvider
+        arguments: ['@doctrine_mongodb', $itemExtensions: !tagged api_platform.doctrine_mongodb.odm.query_extension.item]
+        tags: [{ name: 'api_platform.item_data_provider', priority: 2 }]
+
+    # extension activation
+    'Sol\ApiPlatform\MongoBridge\Bridge\Doctrine\Odm\Extension\OrderExtension':
         arguments: ['%api_platform.collection.order%', '@api_platform.metadata.resource.metadata_factory']
         tags:
             - { name: api_platform.doctrine_mongodb.odm.query_extension.collection, event: kernel.view, method: onKernelView, priority: 100 }
 
-    # extension paginator
-    Sol\ApiPlatform\MongoBridge\Bridge\Doctrine\Odm\Extension\PaginationExtension:
+    'Sol\ApiPlatform\MongoBridge\Bridge\Doctrine\Odm\Extension\PaginationExtension':
         arguments:
             - '@doctrine_mongodb'
             - '@request_stack'
@@ -24,8 +43,7 @@
         tags:
             - { name: api_platform.doctrine_mongodb.odm.query_extension.collection, event: kernel.view, method: onKernelView, priority: 8 }
 
-    # Extension EagerLoading
-    Sol\ApiPlatform\MongoBridge\Bridge\Doctrine\Odm\Extension\EagerLoadingExtension:
+    'Sol\ApiPlatform\MongoBridge\Bridge\Doctrine\Odm\Extension\EagerLoadingExtension':
         arguments:
             - '@api_platform.metadata.property.name_collection_factory'
             - '@api_platform.metadata.property.metadata_factory'
@@ -40,39 +58,32 @@
             - { name: api_platform.doctrine_mongodb.odm.query_extension.item, event: kernel.view, method: onKernelView, priority: 64 }
             - { name: api_platform.doctrine_mongodb.odm.query_extension.collection, event: kernel.view, method: onKernelView, priority: 64 }
 
-    # extension filter a activer
-    Sol\ApiPlatform\MongoBridge\Bridge\Doctrine\Odm\Extension\FilterExtension:
+    'Sol\ApiPlatform\MongoBridge\Bridge\Doctrine\Odm\Extension\FilterExtension':
         arguments: ['@api_platform.metadata.resource.metadata_factory', '@api_platform.filter_locator']
         tags:
             - { name: api_platform.doctrine_mongodb.odm.query_extension.collection, event: kernel.view, method: onKernelView, priority: 100 } # rend une réponse donc moins prioritaire
 
-
-    # Ajout du filtre datefilter
-    Sol\ApiPlatform\MongoBridge\Bridge\Doctrine\Odm\Extension\Filter\DateFilter:
+    'Sol\ApiPlatform\MongoBridge\Bridge\Doctrine\Odm\Extension\Filter\DateFilter':
         arguments: ['@doctrine_mongodb', null, '@logger']
         tags:
             - { name: 'api_platform.filter', id: 'mongo.datefilter' }
 
-    # Ajout du filtre ExistFilter
-    Sol\ApiPlatform\MongoBridge\Bridge\Doctrine\Odm\Extension\Filter\ExistFilter:
+    'Sol\ApiPlatform\MongoBridge\Bridge\Doctrine\Odm\Extension\Filter\ExistFilter':
         arguments: ['@doctrine_mongodb', null, '@logger']
         tags:
             - { name: 'api_platform.filter', id: 'mongo.existfilter' }
 
-    # Ajout du filtre NumericFilter
-    Sol\ApiPlatform\MongoBridge\Bridge\Doctrine\Odm\Extension\Filter\NumericFilter:
+    'Sol\ApiPlatform\MongoBridge\Bridge\Doctrine\Odm\Extension\Filter\NumericFilter':
         arguments: ['@doctrine_mongodb', null, '@logger']
         tags:
             - { name: 'api_platform.filter', id: 'mongo.numericfilter' }
 
-    # Ajout du filtre OrderFilter
-    Sol\ApiPlatform\MongoBridge\Bridge\Doctrine\Odm\Extension\Filter\OrderFilter:
+    'Sol\ApiPlatform\MongoBridge\Bridge\Doctrine\Odm\Extension\Filter\OrderFilter':
         arguments: ['@doctrine_mongodb', null, '@logger']
         tags:
             - { name: 'api_platform.filter', id: 'mongo.orderfilter' }
 
-    # Ajout du filtre OrderFilter
-    Sol\ApiPlatform\MongoBridge\Bridge\Doctrine\Odm\Extension\Filter\RangeFilter:
+    'Sol\ApiPlatform\MongoBridge\Bridge\Doctrine\Odm\Extension\Filter\RangeFilter':
         arguments: ['@doctrine_mongodb', null, '@logger']
         tags:
-            - { name: 'api_platform.filter', id: 'mongo.rangefilter' } 
+            - { name: 'api_platform.filter', id: 'mongo.rangefilter' }
