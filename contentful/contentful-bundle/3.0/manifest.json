@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Contentful\\ContentfulBundle\\ContentfulBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "CONTENTFUL_SPACE_ID": "required",
+        "CONTENTFUL_ACCESS_TOKEN": "required"
+    }
+}
