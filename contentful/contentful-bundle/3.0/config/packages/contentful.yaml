@@ -1,0 +1,6 @@
+# For the complete configuration, please visit
+# https://www.contentful.com/developers/docs/php/tutorials/getting-started-with-contentful-and-symfony/
+contentful:
+    delivery:
+        space: "%env(CONTENTFUL_SPACE_ID)%"
+        token: "%env(CONTENTFUL_ACCESS_TOKEN)%"
