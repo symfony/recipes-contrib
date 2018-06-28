@@ -1,0 +1,18 @@
+# For the full configuration, visit:
+# https://github.com/felds/QuickMailerBundle
+
+quickmailer:
+    # Sender info (required)
+    from: { name: "Sender Name", email: "sender@example.com" }
+
+    # # Reply-to info (optional)
+    # reply_to: { name: "Reply-to Name", email: "reply-to@example.com" }
+
+    templates:
+        # # Short-form (enabled by default)
+        # demo: path/to/template.html.twig
+
+        # # Long-form
+        # demo:
+        #     path: path/to/template.html.twig
+        #     enabled: true
