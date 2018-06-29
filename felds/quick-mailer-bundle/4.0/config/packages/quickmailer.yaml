@@ -9,10 +9,5 @@ quickmailer:
     # reply_to: { name: "Reply-to Name", email: "reply-to@example.com" }
 
     templates:
-        # # Short-form (enabled by default)
-        # demo: path/to/template.html.twig
-
-        # # Long-form
-        # demo:
-        #     path: path/to/template.html.twig
-        #     enabled: true
+        # This loads a template named `demo`
+        demo: path/to/template.html.twig
