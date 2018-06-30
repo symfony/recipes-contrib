@@ -15,7 +15,7 @@ doctrine_phpcr:
     # enable the ODM layer
     odm:
         auto_mapping: true
-        auto_generate_proxy_classes: true'
+        auto_generate_proxy_classes: true
         # add your locale configuration here as described in: https://symfony.com/doc/current/cmf/bundles/phpcr_odm/multilang.html#translation-configuration
 doctrine_cache:
     providers:
