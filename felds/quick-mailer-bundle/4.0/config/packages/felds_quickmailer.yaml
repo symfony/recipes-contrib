@@ -1,7 +1,7 @@
 # For the full configuration, visit:
 # https://github.com/felds/QuickMailerBundle
 
-quickmailer:
+felds_quickmailer:
     # Sender info (required)
     from: { name: "Sender Name", email: "sender@example.com" }
 
