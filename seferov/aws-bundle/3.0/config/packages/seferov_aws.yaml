@@ -3,11 +3,5 @@ seferov_aws:
         key: '%env(AWS_CREDENTIALS_KEY)%'
         secret: '%env(AWS_CREDENTIALS_SECRET)%'
     region: 'eu-central-1'
-    # You can service specific credentials and config
-    # services:
-    #     s3:
-    #         credentials:
-    #             key: AWS_S3_KEY
-    #             secret: AWS_S3_SECRET
-    #         region: 'eu-west-1'
-    #         version: '2006-03-01'
+    # Here you can set service specific credentials and config.
+    # See https://github.com/seferov/awsBundle/blob/master/Resources/doc/configuration.md
