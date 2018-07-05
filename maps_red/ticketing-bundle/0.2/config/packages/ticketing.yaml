@@ -1,0 +1,47 @@
+ticketing:
+
+    # The name of the default status
+    default_status_name:  open
+
+    # Enable the seen/unseen display for tickets
+    enable_history:       true
+
+    # Set a role that will have access to the "staff" tickets
+    restricted_tickets_role: ROLE_USER
+
+    # if true, all new tickets will only be accessible to the owner and the restricted_ticket_role. If false, all new tickets will be public
+    enable_ticket_restriction: true
+    entities:
+        ticket:               App\Entity\Ticket
+        ticket_category:      App\Entity\TicketCategory
+        ticket_comment:       App\Entity\TicketComment
+        ticket_history:       App\Entity\TicketHistory
+        ticket_keyword:       App\Entity\TicketKeyword
+        ticket_status:        App\Entity\TicketStatus
+        ticket_priority:      App\Entity\TicketPriority
+    templates:
+        layout:               '@Ticketing/base.html.twig'
+        index:                '@Ticketing/ticketing/index.html.twig'
+        new:                  '@Ticketing/ticketing/new.html.twig'
+    assets:
+        stylesheets:
+            - bundles/ticketing/vendor/css/bootstrap.min.css
+            - bundles/ticketing/vendor/css/bootstrap-datepicker3.min.css
+            - bundles/ticketing/vendor/css/font-awesome.min.css
+            - bundles/ticketing/vendor/css/select2.min.css
+            - bundles/ticketing/vendor/css/ionicons.min.css
+            - bundles/ticketing/vendor/css/dataTables.bootstrap.min.css
+            - bundles/ticketing/css/AdminLTE.min.css
+            - bundles/ticketing/css/skin-ticketing.min.css
+            - bundles/ticketing/css/helper.css
+        javascripts:
+            - bundles/ticketing/vendor/js/jquery.min.js
+            - bundles/ticketing/vendor/js/bootstrap.min.js
+            - bundles/ticketing/vendor/js/adminlte.min.js
+            - bundles/ticketing/vendor/js/bootstrap-datepicker.min.js
+            - bundles/ticketing/vendor/js/bootstrap-datepicker.fr.min.js
+            - bundles/ticketing/vendor/js/select2.min.js
+            - bundles/ticketing/vendor/js/select2-fr.min.js
+            - bundles/ticketing/vendor/js/dataTables.min.js
+            - bundles/ticketing/vendor/js/dataTables.bootstrap.min.js
+            - bundles/ticketing/js/script.js
