@@ -1,12 +1,12 @@
 {
     "bundles": {
-      "Maps_red\\TicketingBundle\\TicketingBundle": ["all"]
+        "Maps_red\\TicketingBundle\\TicketingBundle": ["all"]
     },
     "copy-from-recipe": {
-      "config/": "%CONFIG_DIR%/",
-      "src/": "%SRC_DIR%/"
+        "config/": "%CONFIG_DIR%/",
+        "src/": "%SRC_DIR%/"
     },
     "composer-scripts": {
-      "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
+        "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
     }
 }
