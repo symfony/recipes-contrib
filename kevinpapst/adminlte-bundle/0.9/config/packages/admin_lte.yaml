@@ -1,0 +1,23 @@
+# Configuration file for the AdminLTE bundle
+#
+# For more information about the bundle settings visit:
+# https://github.com/kevinpapst/AdminLTEBundle/blob/master/Resources/docs/configurations.md
+#
+# For tabs in the control_sidebar (right screen) add the 'control_sidebar' config key:
+# https://github.com/kevinpapst/AdminLTEBundle/blob/master/Resources/docs/control_sidebar.md
+
+admin_lte:
+    options:
+        skin: skin-blue
+        fixed_layout: false
+        boxed_layout: false
+        collapsed_sidebar: false
+        mini_sidebar: false
+
+    knp_menu:
+        enable: false
+
+    routes:
+        adminlte_welcome: home
+        adminlte_login: login
+        adminlte_profile: profile
