@@ -1,0 +1,8 @@
+positive_vote:
+    path: /vote-positive/{_locale}/{id}
+    controller: Msalsas\VotingBundle\Controller\VoteController:votePositive
+    methods: POST
+negative_vote:
+    path: /vote-negative/{_locale}/{id}
+    controller: Msalsas\VotingBundle\Controller\VoteController:voteNegative
+    methods: POST
