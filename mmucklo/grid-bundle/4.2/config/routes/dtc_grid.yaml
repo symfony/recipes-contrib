@@ -1,0 +1,2 @@
+dtc_grid:
+    resource: '@DtcGridBundle/Resources/config/routing.yml'
