@@ -50,6 +50,7 @@ DirectoryIndex index.php
 
     # If the requested filename exists, simply serve it.
     # We only want to let Apache serve files and not directories.
+    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_FILENAME} -f [OR]
     RewriteCond %{REQUEST_FILENAME} -f
     RewriteRule ^ - [L]
 
