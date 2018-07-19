@@ -6,6 +6,6 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "MERITOO_FORM_NOVALIDATE": false
+        "MERITOO_FORM_NOVALIDATE": "false"
     }
 }
