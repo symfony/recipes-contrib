@@ -1,7 +1,0 @@
-<bg=blue;fg=white>              </>
-<bg=blue;fg=white> What's next? </>
-<bg=blue;fg=white>              </>
-
-  * go to the 'config/packages/mukadi_settings.yaml' file and your settings form.
-
-  * <fg=blue>Read</> the documentation at <comment>https://github.com/mbo2olivier/mukadi-settings-bundle</>
