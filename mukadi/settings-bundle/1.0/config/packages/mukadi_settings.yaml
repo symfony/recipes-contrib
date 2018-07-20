@@ -1,0 +1,7 @@
+mukadi_settings:
+#    settings:
+#        currency: 
+#            type: choice 
+#            options:
+#                label: 'Set default currency'
+#                choices: '(one, two, three)'
