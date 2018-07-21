@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Meritoo\\CommonBundle\\MeritooCommonBundle::class": ["all"]
+        "Meritoo\\CommonBundle\\MeritooCommonBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
