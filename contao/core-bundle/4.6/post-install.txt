@@ -2,9 +2,10 @@
 <bg=blue;fg=white> Contao configuration </>
 <bg=blue;fg=white>                      </>
 
-  * Add the Contao routes at the end of your <fg=green>config/routing.yaml</>
-    file
+  * Manually add the Contao routes to your <fg=green>config/routing.yaml</>
+    and be sure that they will be loaded at the very end.
 
-  * Edit your <fg=green>config/security.yaml</>
+  * Edit your <fg=green>config/security.yaml</> and include all the necessary
+    providers, firewalls and access control sections.
 
 Documentation: https://github.com/contao/core-bundle
