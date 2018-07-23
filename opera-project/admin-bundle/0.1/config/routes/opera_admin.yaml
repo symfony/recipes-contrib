@@ -1,0 +1,4 @@
+opera_admin_bundle:
+    resource: '@OperaAdminBundle/Controller/'
+    prefix: /admin
+    type: annotation

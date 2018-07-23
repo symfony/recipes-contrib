@@ -1,0 +1,6 @@
+# Run bin/console doctrine:schema:update or make:migrate as your prefer
+# And after uncomment
+
+# opera_core_bundle:
+#     resource: .
+#     type: opera

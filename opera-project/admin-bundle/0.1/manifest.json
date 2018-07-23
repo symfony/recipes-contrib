@@ -1,0 +1,10 @@
+{
+    "bundles": {
+        "Opera\\AdminBundle\\OperaAdminBundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
