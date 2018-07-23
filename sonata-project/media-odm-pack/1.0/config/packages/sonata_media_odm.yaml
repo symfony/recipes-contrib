@@ -1,0 +1,6 @@
+sonata_media:
+    class:
+        media: App\Document\SonataMediaMedia
+        gallery: App\Document\SonataMediaGallery
+        gallery_has_media: App\Document\SonataMediaGalleryHasMedia
+    db_driver: doctrine_mongodb

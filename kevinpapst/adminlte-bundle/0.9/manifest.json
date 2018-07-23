@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "KevinPapst\\AdminLTEBundle\\AdminLTEBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

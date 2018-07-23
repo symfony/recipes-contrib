@@ -1,0 +1,3 @@
+# Read the documentation: https://core-bundle.leapt.io/configuration_reference.html
+leapt_core:
+    upload_dir: '%kernel.project_dir%/public'

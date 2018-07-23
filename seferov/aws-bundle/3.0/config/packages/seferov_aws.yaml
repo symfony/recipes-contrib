@@ -1,0 +1,7 @@
+seferov_aws:
+    credentials:
+        key: '%env(AWS_CREDENTIALS_KEY)%'
+        secret: '%env(AWS_CREDENTIALS_SECRET)%'
+    region: 'eu-central-1'
+    # Here you can set service specific credentials and config.
+    # See https://github.com/seferov/awsBundle/blob/master/Resources/doc/configuration.md

@@ -1,0 +1,14 @@
+{
+    "copy-from-recipe": {
+        "codeception.yaml": "codeception.yml",
+        "tests/_data/": "tests/_data/",
+        "tests/_output/": "tests/_output/",
+        "tests/_support/": "tests/_support",
+        "tests/acceptance/": "tests/acceptance/",
+        "tests/functional/": "tests/functional/",
+        "tests/unit/": "tests/unit/",
+        "tests/acceptance.suite.yaml": "tests/acceptance.suite.yml",
+        "tests/functional.suite.yaml": "tests/functional.suite.yml",
+        "tests/unit.suite.yaml": "tests/unit.suite.yml"
+    }
+}

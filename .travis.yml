@@ -25,4 +25,4 @@ install:
     - composer config extra.symfony.allow-contrib true
 
 script:
-    - composer req "${PACKAGES}"
+    - composer req --ignore-platform-reqs "${PACKAGES}"
