@@ -8,7 +8,7 @@
     },
     "composer-scripts": {
         "contao:install %PUBLIC_DIR%": "symfony-cmd",
-        "contao:symlinks": "symfony-cmd"
+        "contao:symlinks %PUBLIC_DIR%": "symfony-cmd"
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
