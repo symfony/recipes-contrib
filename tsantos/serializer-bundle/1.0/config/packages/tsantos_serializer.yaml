@@ -1,0 +1,6 @@
+tsantos_serializer:
+    generation_strategy: file_not_exists
+#    mapping:
+#        paths:
+#            - { namespace: "App\\Entity", path: "%kernel.project_dir%/src/Entity" }
+#            - { namespace: "App\\Document", path: "%kernel.project_dir%/config/serializer" }
