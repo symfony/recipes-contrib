@@ -7,7 +7,7 @@
         "Contao\\InstallationBundle\\ContaoInstallationBundle": ["all"]
     },
     "composer-scripts": {
-        "contao:install": "symfony-cmd",
+        "contao:install %PUBLIC_DIR%": "symfony-cmd",
         "contao:symlinks": "symfony-cmd"
     },
     "copy-from-recipe": {
