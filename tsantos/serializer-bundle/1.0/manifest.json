@@ -1,7 +1,6 @@
 {
     "bundles": {
-        "TSantos\\SerializerBundle\\TSantosSerializerBundle": ["all"],
-        "Symfony\\Bundle\\TwigBundle\\TwigBundle": ["dev", "test"]
+        "TSantos\\SerializerBundle\\TSantosSerializerBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
