@@ -1,0 +1,10 @@
+<bg=blue;fg=white>                      </>
+<bg=blue;fg=white> Contao configuration </>
+<bg=blue;fg=white>                      </>
+
+  * Add the Contao routes at the end of your <fg=green>config/routing.yaml</>
+    file
+
+  * Edit your <fg=green>config/security.yaml</>
+
+Documentation: https://github.com/contao/core-bundle

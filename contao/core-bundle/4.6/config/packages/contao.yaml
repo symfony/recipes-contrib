@@ -1,6 +1,8 @@
 # Contao configuration
+# For a complete configuration guide, please visit
+# https://github.com/contao/core-bundle
 contao:
-    web_dir:                  "%kernel.project_dir%/web"
+    web_dir:                  "%kernel.project_dir%/public"
     prepend_locale:           false
     encryption_key:           "%kernel.secret%"
     url_suffix:               .html
