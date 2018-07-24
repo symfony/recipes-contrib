@@ -4,4 +4,4 @@
 #
 meritoo_common:
     form:
-        novalidate: "%env(resolve:MERITOO_FORM_NOVALIDATE)%"
+        novalidate: "%env(bool:MERITOO_FORM_NOVALIDATE)%"
