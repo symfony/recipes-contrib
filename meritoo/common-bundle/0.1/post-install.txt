@@ -3,4 +3,4 @@
 <bg=blue;fg=white>                                 </>
 
   * <fg=blue>Read</> the documentation at <comment>https://github.com/meritoo/common-bundle#usage</>
-  * <fg=blue>Use</> configuration described at <comment>https://github.com/meritoo/common-bundle#configuration</>
+  * <fg=blue>Configure</> using options described at <comment>https://github.com/meritoo/common-bundle#configuration</>
