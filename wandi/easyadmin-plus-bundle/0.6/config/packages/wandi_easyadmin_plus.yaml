@@ -1,0 +1,60 @@
+#wandi_easy_admin_plus:
+#    translator:
+#        # defines the locales you want to manage (if not set, take the default locale)
+#        locales:
+#            - fr
+#            - en
+#        # defines the directories in which you want to extract translations files (if not set, take the default translations dir)
+#        paths:
+#            - translations
+#        # defines a list of domains you want to exclude from admin (if not set, no excluded domain)
+#        excluded_domains:
+#            - validators
+#    generator:
+#        # the amount of spaces to use for indentation of nested nodes
+#        dump_indentation: 4
+#        # the level of indentation
+#        dump_inline: 6
+#        # name of the backend displayed
+#        name_backend: "Back Office"
+#        # translation domain is applied to all entities
+#        translation_domain: "EasyAdminPlusBundle"
+#        # list of bundles whose entities will not be generated
+#        bundles_filter:
+#            - WandiEasyAdminPlusBundle
+#        # list of available actions for each method
+#        methods:
+#            list:
+#                - new
+#                - show
+#                - edit
+#                - delete
+#            show:
+#                - edit
+#                - delete
+#            edit: []
+#            new: []
+#        # list of icons to display for each action
+#        icons:
+#            actions:
+#                new: add
+#                show: search
+#                edit: edit
+#                delete: trash
+#        fields:
+#            methods:
+#                - new
+#                - show
+#            labels: ~
+#        # sort rules according to the type of property
+#        sort:
+#            methods:
+#                - list
+#            properties:
+#                - { name: position, order: ASC}
+#                - { name: id, order: DESC}
+#        # list of web assets paths to load in the backend pages
+#        assets:
+#            js:
+#                - /bundles/cksourceckfinder/ckfinder/ckfinder.js
+#            css: []
