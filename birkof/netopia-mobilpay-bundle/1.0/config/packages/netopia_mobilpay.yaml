@@ -1,13 +1,7 @@
-parameters:
-    env(NETOPIA_MOBILPAY_PAYMENT_URL): 'http://sandboxsecure.mobilpay.ro' # http://sandboxsecure.mobilpay.ro or https://secure.mobilpay.ro
-    env(NETOPIA_MOBILPAY_PUBLIC_CERT): 'config/netopia_mobilpay/public.cer'
-    env(NETOPIA_MOBILPAY_PRIVATE_KEY): 'config/netopia_mobilpay/private.key'
-    env(NETOPIA_MOBILPAY_SIGNATURE): 'XXXX-XXXX-XXXX-XXXX-XXXX' # Signature from mobilpay
-
 netopia_mobilpay:
-    payment_url:        '%env(string:NETOPIA_MOBILPAY_PAYMENT_URL)%'
-    public_cert:         '%env(resolve:NETOPIA_MOBILPAY_PUBLIC_CERT)%'
-    private_key:        '%env(resolve:NETOPIA_MOBILPAY_PRIVATE_KEY)%'
-    signature:          '%env(string:NETOPIA_MOBILPAY_SIGNATURE)%'
+    payment_url:        '%env(NETOPIA_MOBILPAY_PAYMENT_URL)%'
+    public_cert:        '%env(NETOPIA_MOBILPAY_PUBLIC_CERT)%'
+    private_key:        '%env(NETOPIA_MOBILPAY_PRIVATE_KEY)%'
+    signature:          '%env(NETOPIA_MOBILPAY_SIGNATURE)%'
     return_url:         'netopia_mobilpay_return_url'
     confirm_url:        'netopia_mobilpay_confirm_url'

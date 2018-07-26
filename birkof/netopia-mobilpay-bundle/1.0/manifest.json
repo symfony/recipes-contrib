@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "birkof\NetopiaMobilPay\\NetopiaMobilPayBundle": ["all"]
+        "birkof\\NetopiaMobilPay\\NetopiaMobilPayBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
