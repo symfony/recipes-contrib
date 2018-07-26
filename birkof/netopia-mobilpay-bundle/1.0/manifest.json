@@ -5,7 +5,6 @@
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     },
-    "aliases": ["netopia-mobilpay"],
     "gitignore": [
         "/%CONFIG_DIR%/netopia_mobilpay/*.key",
         "/%CONFIG_DIR%/netopia_mobilpay/*.cer"
