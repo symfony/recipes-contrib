@@ -1,0 +1,14 @@
+{
+    "container": {
+        "encrypt_key": "%env(GDPR_ENCRYPT_KEY)%"
+    },
+    "env": {
+        "GDPR_ENCRYPT_KEY": "%generate(secret, 32)%"
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "bundles": {
+        "SpecShaper\\EncryptBundle\\SpecShaperEncryptBundle": ["all"]
+    }
+}
