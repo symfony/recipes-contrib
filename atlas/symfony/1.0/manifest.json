@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Atlas\\Symfony\\AtlasBundle": ["all"]
+    },
+    "copy-from-package": {
+        "Resources/config/atlas.yaml": "%CONFIG_DIR%/atlas.yaml"
+    },
+    "env": {
+        "ATLAS_PDO_DSN": "sqlite::memory:",
+        "ATLAS_PDO_USERNAME": "",
+        "ATLAS_PDO_PASSWORD": ""
+    }
+}
