@@ -1,0 +1,7 @@
+demontpx_parsedown:
+    # Enabled automatic line breaks
+    breaks_enabled: false
+    # Escapes markup (HTML)
+    markup_escaped: false
+    # Enable automatic URL linking
+    urls_linked: true
