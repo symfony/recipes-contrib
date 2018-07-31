@@ -1,7 +1,4 @@
 # Read the documentation: https://github.com/SebTM/inwx-api-bundle
 inwx_api:
-    #environment: "test"
-    username: "username"
-    password: "password"
-    #language: "en"
-    #debug: false
+    username: '%env(resolve:INWX_USERNAME)%'
+    password: '%env(resolve:INWX_PASSWORD)%'
