@@ -1,0 +1,4 @@
+# Read the documentation: https://github.com/SebTM/inwx-api-bundle
+inwx_api:
+    username: '%env(resolve:INWX_USERNAME)%'
+    password: '%env(resolve:INWX_PASSWORD)%'
