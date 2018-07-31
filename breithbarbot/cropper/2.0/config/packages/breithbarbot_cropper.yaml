@@ -1,9 +1,10 @@
 # Read the documentation: https://github.com/breithbarbot/cropper/blob/master/Resources/doc/index.md
 breithbarbot_cropper:
     mappings:
+#        # A example custom mapping name
 #        user_avatar:
 #            routes:
-#                # Your personalized route which will take care of the save of the image
+#                # A custom route name which will take care of saving the image
 #                path_add:    'app_cropper_avatar_add'
 #
 #            # Definition of cropped image properties (width, height and ratio)
