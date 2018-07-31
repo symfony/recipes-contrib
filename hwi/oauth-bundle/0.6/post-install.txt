@@ -3,7 +3,7 @@
 <bg=blue;fg=white>                                          </>
 
   * <fg=blue>Configure</> your application:
-    1. Add firewall by adding <comment>- secured_area:
+    1. Add firewall by adding <comment>- main:
                                              anonymous: true
                                              oauth:
                                                  resource_owners:
