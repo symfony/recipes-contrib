@@ -1,7 +1,7 @@
 # Read the documentation: https://github.com/breithbarbot/cropper/blob/master/Resources/doc/index.md
 breithbarbot_cropper:
     mappings:
-#        # A example custom mapping name
+#        # An example of a custom mapping name
 #        user_avatar:
 #            routes:
 #                # A custom route name which will take care of saving the image
