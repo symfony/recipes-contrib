@@ -1,0 +1,4 @@
+wandi_mailer:
+    sender:
+        name: 'example'
+        address: 'hello@example.com'
