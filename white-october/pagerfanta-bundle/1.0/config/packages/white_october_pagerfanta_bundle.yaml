@@ -1,0 +1,4 @@
+white_october_pagerfanta:
+    exceptions_strategy:
+        out_of_range_page:        ~
+        not_valid_current_page:   ~
