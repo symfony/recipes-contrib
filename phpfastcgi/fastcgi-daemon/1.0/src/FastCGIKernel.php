@@ -3,21 +3,23 @@
 namespace App;
 
 use PHPFastCGI\FastCGIDaemon\Http\RequestInterface;
-use PHPFastCGI\FastCGIDaemon\KernelInterface;
-use Symfony\Component\HttpKernel\HttpKernelInterface;
+use PHPFastCGI\FastCGIDaemon\KernelInterface as PHPFastCGIKernel;
+use Symfony\Component\HttpKernel\KernelInterface;
 use Symfony\Component\HttpKernel\TerminableInterface;
 
-class FastCGIKernel implements KernelInterface
+class FastCGIKernel implements PHPFastCGIKernel
 {
     private $kernel;
 
-    public function __construct(HttpKernelInterface $kernel)
+    public function __construct(KernelInterface $kernel)
     {
         $this->kernel = $kernel;
     }
 
     public function handleRequest(RequestInterface $request)
     {
+        $this->kernel->boot(); // Or ->reboot()
+
         $symfonyRequest = $request->getHttpFoundationRequest();
         $symfonyResponse = $this->kernel->handle($symfonyRequest);
 
@@ -28,3 +30,4 @@ class FastCGIKernel implements KernelInterface
         return $symfonyResponse;
     }
 }
+

@@ -1,6 +1,6 @@
 services:
     App\FastCGIKernel:
-        arguments: ['@App\Kernel']
+        autowire: true
 
     PHPFastCGI\FastCGIDaemon\Driver\DriverContainer: ~
     PHPFastCGI\FastCGIDaemon\Command\DaemonRunCommand:
