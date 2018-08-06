@@ -23,7 +23,7 @@
 #                     - { type: 'tab' , label: 'Informations', icon: 'user' }
 #                     - title
 #                     - slug
-#                     - status
+#                     - { property: 'status', type: 'choice', type_options: { choices: { 'published': 'published', 'draft': 'draft' } } }
 #                     - route
 #                     - layout
 #                     - { type: 'tab' , label: 'SEO', icon: 'search' }
