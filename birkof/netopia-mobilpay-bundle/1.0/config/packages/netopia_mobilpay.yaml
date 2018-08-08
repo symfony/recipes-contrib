@@ -3,5 +3,4 @@ netopia_mobilpay:
     public_cert:        '%env(NETOPIA_MOBILPAY_PUBLIC_CERT)%'
     private_key:        '%env(NETOPIA_MOBILPAY_PRIVATE_KEY)%'
     signature:          '%env(NETOPIA_MOBILPAY_SIGNATURE)%'
-    return_url:         'netopia_mobilpay_return_url'
-    confirm_url:        'netopia_mobilpay_confirm_url'
+    sms_service:        '%env(NETOPIA_MOBILPAY_SMS_SERVICE)%'
