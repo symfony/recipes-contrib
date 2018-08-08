@@ -1,4 +1,4 @@
-# Ignore everything
+# Exclude SSL files from pushing
 *
 
 # But not these files...
