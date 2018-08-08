@@ -1,31 +1,16 @@
 ## This is a sample easy admin configuration
 ## Copy Page Section to your own easy admin configuration
+#
+# imports:
+#    - { resource: "@OperaMediaBundle/Resources/config/easy_admin.yaml" }
+#    - { resource: "@OperaAdminBundle/Resources/config/easy_admin.yaml" }
 
 # easy_admin:
 #     design:
 #         menu:
 #             - { label: 'Layout', children: ['Page'] }
-#             - { label: 'Content', children: ['Article'] }
+#             - { label: 'Content', children: ['Article', { label: 'Medias', route: 'opera_admin_media_list' }] }
 
 #     entities:
 #         Article:
 #             class: App\Entity\Article
-#         Page:
-#             class: Opera\CoreBundle\Entity\Page
-#             list:
-#                 fields: [ 'slug', 'title', 'status', 'route' ]
-#                 actions: 
-#                     - edit
-#                     - delete
-#                     - { name: 'opera_admin_pages_blocks', type: 'route', label: 'Layout' } 
-#             form:
-#                 fields:
-#                     - { type: 'tab' , label: 'Informations', icon: 'user' }
-#                     - title
-#                     - slug
-#                     - { property: 'status', type: 'choice', type_options: { choices: { 'published': 'published', 'draft': 'draft' } } }
-#                     - route
-#                     - layout
-#                     - { type: 'tab' , label: 'SEO', icon: 'search' }
-#                     - { property: meta_keyword, type: textarea }
-#                     - { property: meta_description, type: textarea }
