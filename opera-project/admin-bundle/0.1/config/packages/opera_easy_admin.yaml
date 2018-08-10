@@ -1,9 +1,8 @@
 ## This is a sample easy admin configuration
 ## Copy Page Section to your own easy admin configuration
 #
-# imports:
-#    - { resource: "@OperaMediaBundle/Resources/config/easy_admin.yaml" }
-#    - { resource: "@OperaAdminBundle/Resources/config/easy_admin.yaml" }
+imports:
+    - { resource: "@OperaAdminBundle/Resources/config/easy_admin.yaml" }
 
 # easy_admin:
 #     design:
