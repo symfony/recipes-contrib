@@ -1,5 +1,0 @@
-# Exclude SSL files from pushing
-*
-
-# But not these files...
-!.gitignore
