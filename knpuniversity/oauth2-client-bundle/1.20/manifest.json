@@ -4,11 +4,5 @@
 	},
 	"copy-from-recipe": {
 			"config/": "%CONFIG_DIR%/"
-	},
-	"env": {
-			"#1": "Register for a facebook oauth app:",
-			"#2": "https://developers.facebook.com/apps/",
-			"FB_ID": "facebook-app-id",
-			"FB_SECRET": "facebook-secret"
 	}
 }
