@@ -1,16 +1,11 @@
 knpu_oauth2_client:
-    # configure your clients as described here: https://github.com/knpuniversity/oauth2-client-bundle#configuration
     clients:
-        # # will create a service: "knpu.oauth2.client.facebook_main"
-        # first, run `composer require league/oauth2-facebook`
-        # facebook_main:
+        # configure your clients as described here: https://github.com/knpuniversity/oauth2-client-bundle#configuration
+        # make sure to composer require the package for the provider type
+        # clientname: 
         #     # this will be one of the supported types
-        #     type: facebook
-        #     client_id: '%env(FB_ID)%'
-        #     client_secret: '%env(FB_SECRET)%'
+        #     type: some_type
+        #     client_id: '%env(OAUTH_SOMETYPE_ID)%'
+        #     client_secret: '%env(OAUTH_SOMETYPE_SECRET)%'
         #     # the route that you're redirected to after
-        #     # see the controller example below
-        #     redirect_route: connect_facebook_check
-        #     # route parameters to pass to your route, if needed
-        #     redirect_params: {}
-        #     graph_api_version: v2.12
+        #     redirect_route: oauth_clientname_check
