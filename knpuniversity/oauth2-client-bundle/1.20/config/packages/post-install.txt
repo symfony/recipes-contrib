@@ -2,7 +2,6 @@
 <bg=blue;fg=white> What's next for KnpUOAuth2ClientBundle? </>
 <bg=blue;fg=white>                                          </>
 
-  * <fg=blue>Configure</> your oauth2 clients:
-    Add clients as described at <comment>https://github.com/knpuniversity/oauth2-client-bundle#configuration</> in your security firewalls section.
-
-  * <fg=blue>Read</> the documentation at <comment>https://github.com/knpuniversity/oauth2-client-bundle</>
+  * <fg=blue>Download & configure your OAuth2 clients in </> your oauth2 clients:
+    <comment>config/packages/knpu_oauth2_client</>
+  <comment>https://github.com/knpuniversity/oauth2-client-bundle#configuring-a-client</>
