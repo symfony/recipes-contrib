@@ -1,11 +1,4 @@
 knpu_oauth2_client:
     clients:
         # configure your clients as described here: https://github.com/knpuniversity/oauth2-client-bundle#configuration
-        # make sure to composer require the package for the provider type
-        # clientname: 
-        #     # this will be one of the supported types
-        #     type: some_type
-        #     client_id: '%env(OAUTH_SOMETYPE_ID)%'
-        #     client_secret: '%env(OAUTH_SOMETYPE_SECRET)%'
-        #     # the route that you're redirected to after
-        #     redirect_route: oauth_clientname_check
+        
