@@ -18,7 +18,7 @@ class FastCGIKernel implements PHPFastCGIKernel
 
     public function handleRequest(RequestInterface $request)
     {
-        $this->kernel->boot(); // Or ->reboot()
+        $this->kernel->boot(); 
 
         $symfonyRequest = $request->getHttpFoundationRequest();
         $symfonyResponse = $this->kernel->handle($symfonyRequest);
