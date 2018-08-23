@@ -1,0 +1,14 @@
+lireincore_imgcache:
+    driver: gd
+#    srcdir: '%kernel.project_dir%/path/to/source/images'
+    destdir: '%kernel.project_dir%/public/thumbs'
+    webdir: '%kernel.project_dir%/public'
+#    baseurl: 'https:\\sitename.com'
+#    postprocessors:
+#        - 'jpegoptim'
+#        - { type: 'optipng', params: { level: 3 } }
+#    presets:
+#        preset_name:
+#            effects:
+#                - { type: 'resize', params: { width: 500, height: '50%' } }
+#                - 'grayscale'
