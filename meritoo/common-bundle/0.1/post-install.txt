@@ -1,0 +1,6 @@
+<bg=blue;fg=white>                                 </>
+<bg=blue;fg=white> Meritoo Common Bundle installed </>
+<bg=blue;fg=white>                                 </>
+
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/meritoo/common-bundle#usage</>
+  * <fg=blue>Configure</> using options described at <comment>https://github.com/meritoo/common-bundle#configuration</>
