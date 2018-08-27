@@ -1,0 +1,7 @@
+<bg=blue;fg=white>              </>
+<bg=blue;fg=white> What's next? </>
+<bg=blue;fg=white>              </>
+
+  * You have installed the ProntoMobileBundle! What to do next is described in the documentation:
+
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/Pronto-am/MobileBundle#step-4-setup-the-database</>

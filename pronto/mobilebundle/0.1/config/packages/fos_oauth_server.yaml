@@ -1,0 +1,8 @@
+fos_oauth_server:
+    db_driver: orm
+    client_class:        Pronto\MobileBundle\Entity\Application
+    access_token_class:  Pronto\MobileBundle\Entity\AccessToken
+    refresh_token_class: Pronto\MobileBundle\Entity\RefreshToken
+    auth_code_class:     Pronto\MobileBundle\Entity\AuthCode
+    service:
+        user_provider: Pronto\MobileBundle\Provider\AppUserProvider
