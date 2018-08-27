@@ -1,0 +1,9 @@
+twig:
+    paths: ['%kernel.project_dir%/templates']
+    debug: '%kernel.debug%'
+    strict_variables: '%kernel.debug%'
+    globals:
+        pronto_mobile: '@pronto_mobile.global.app'
+        json_translator: '@pronto_mobile.global.json_translator'
+        languages: '@pronto_mobile.global.languages_loader'
+        entry_value_parser: '@pronto_mobile.collection.entry_value_parser'

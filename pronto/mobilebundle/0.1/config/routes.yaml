@@ -1,0 +1,3 @@
+pronto_mobile:
+    resource: '@ProntoMobileBundle/Resources/config/routing.yaml'
+    schemes: [http]
