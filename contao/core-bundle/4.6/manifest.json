@@ -1,0 +1,18 @@
+{
+    "bundles": {
+        "Contao\\CoreBundle\\ContaoCoreBundle": ["all"]
+    },
+    "composer-scripts": {
+        "contao:install %PUBLIC_DIR%": "symfony-cmd",
+        "contao:symlinks %PUBLIC_DIR%": "symfony-cmd"
+    },
+    "gitignore": [
+        "/assets/",
+        "/files/",
+        "/system/*",
+        "!/system/config/",
+        "/system/config/localconfig.php",
+        "/system/config/tcpdf.php",
+        "/system/modules/*/.skip"
+    ]
+}
