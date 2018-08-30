@@ -2,7 +2,7 @@ cache_tool:
     # Config mode: (cli|fastcgi)
     adapter: '%env(resolve:CACHETOOL_ADAPTER)%'
     # Config fastcgi url
-    env(CACHETOOL_FASTCGI): '%env(resolve:CACHETOOL_FASTCGI)%'
+    fastcgi: '%env(resolve:CACHETOOL_FASTCGI)%'
 
     # Disable APC commands
     apc: '%env(resolve:CACHETOOL_APC)%'
