@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Slot\\MandrillBundle\\SlotMandrillBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "MANDRILL_API_KEY": "",
+        "MANDRILL_DEFAULT_SENDER": "info@example.com"
+    }
+}
