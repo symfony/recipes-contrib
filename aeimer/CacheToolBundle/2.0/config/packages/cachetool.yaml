@@ -1,0 +1,19 @@
+parameters:
+    env(CACHETOOL_ADAPTER): fastcgi
+    env(CACHETOOL_FASTCGI): 127.0.0.1:9000
+    env(CACHETOOL_APC): true
+    env(CACHETOOL_APCU): true
+    env(CACHETOOL_OPCACHE): true
+
+cache_tool:
+    # Config mode: (cli|fastcgi)
+    adapter: '%env(resolve:CACHETOOL_ADAPTER)%'
+    # Config fastcgi url
+    env(CACHETOOL_FASTCGI): '%env(resolve:CACHETOOL_FASTCGI)%'
+
+    # Disable APC commands
+    apc: '%env(resolve:CACHETOOL_APC)%'
+    # Disable APCu commands
+    apcu: '%env(resolve:CACHETOOL_APCU)%'
+    # Disable Opcache commands
+    opcache: '%env(resolve:CACHETOOL_OPCACHE)%'
