@@ -5,8 +5,8 @@ cache_tool:
     fastcgi: '%env(resolve:CACHETOOL_FASTCGI)%'
 
     # Disable APC commands
-    apc: '%env(resolve:CACHETOOL_APC)%'
+    apc: '%env(bool:resolve:CACHETOOL_APC)%'
     # Disable APCu commands
-    apcu: '%env(resolve:CACHETOOL_APCU)%'
+    apcu: '%env(bool:resolve:CACHETOOL_APCU)%'
     # Disable Opcache commands
-    opcache: '%env(resolve:CACHETOOL_OPCACHE)%'
+    opcache: '%env(bool:resolve:CACHETOOL_OPCACHE)%'
