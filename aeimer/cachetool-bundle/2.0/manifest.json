@@ -1,5 +1,4 @@
 {
-    "aliases": ["cachetool"],
     "bundles": {
         "CacheTool\\Bundle\\CacheToolBundle": ["all"]
     },
