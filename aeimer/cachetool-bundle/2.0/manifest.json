@@ -2,6 +2,13 @@
     "bundles": {
         "CacheTool\\Bundle\\CacheToolBundle": ["all"]
     },
+    "container": {
+        "env(CACHETOOL_ADAPTER)": "fastcgi",
+        "env(CACHETOOL_FASTCGI)": "127.0.0.1:9000",
+        "env(CACHETOOL_APC)": "true",
+        "env(CACHETOOL_APCU)": "true",
+        "env(CACHETOOL_OPCACHE)": "true"
+    },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     },
