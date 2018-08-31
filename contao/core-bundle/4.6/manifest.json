@@ -1,0 +1,25 @@
+{
+    "bundles": {
+        "Knp\\Bundle\\MenuBundle\\KnpMenuBundle": ["all"],
+        "Knp\\Bundle\\MenuBundle\\KnpTimeBundle": ["all"],
+        "Nelmio\\CorsBundle\\NelmioCorsBundle": ["all"],
+        "Contao\\CoreBundle\\ContaoCoreBundle": ["all"],
+        "Contao\\InstallationBundle\\ContaoInstallationBundle": ["all"]
+    },
+    "composer-scripts": {
+        "contao:install %PUBLIC_DIR%": "symfony-cmd",
+        "contao:symlinks %PUBLIC_DIR%": "symfony-cmd"
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "gitignore": [
+        "/assets/",
+        "/files/",
+        "/system/*",
+        "!/system/config/",
+        "/system/config/localconfig.php",
+        "/system/config/tcpdf.php",
+        "/system/modules/*/.skip"
+    ]
+}
