@@ -1,5 +1,0 @@
-<bg=blue;fg=white>                                   </>
-<bg=blue;fg=white> Next for LireinCoreImgCacheBundle </>
-<bg=blue;fg=white>                                   </>
-
-  * <fg=blue>Read</> the documentation at <comment>https://github.com/lireincore/LireinCoreImgCacheBundle/blob/master/README.md</>
