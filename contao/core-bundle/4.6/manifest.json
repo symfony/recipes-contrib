@@ -12,6 +12,10 @@
     "gitignore": [
         "/assets/",
         "/files/",
+        "/public/assets",
+        "/public/files/",
+        "/public/share/",
+        "/public/system/",
         "/system/*",
         "!/system/config/",
         "/system/config/localconfig.php",
