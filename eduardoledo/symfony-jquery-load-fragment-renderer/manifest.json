@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "EduardoLedo\\JQueryLoadBundle\\JQueryLoadBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
