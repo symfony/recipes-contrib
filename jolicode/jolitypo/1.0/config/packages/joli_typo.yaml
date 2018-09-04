@@ -1,0 +1,10 @@
+joli_typo:
+    presets:
+        fr:
+            # Please refer to the documentation at https://github.com/jolicode/JoliTypo/blob/master/README.md
+            # to learn more about fixers and how to combine them.
+            fixers: [ Ellipsis, Dimension, Dash, SmartQuotes, FrenchNoBreakSpace, CurlyQuote, Trademark ]
+            locale: fr_FR
+        en:
+            fixers: [ Ellipsis, Dimension, Dash, SmartQuotes, CurlyQuote, Trademark ]
+            locale: en_GB
