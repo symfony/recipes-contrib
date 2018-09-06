@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Yokai\\EnumBundle\\YokaiEnumBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "src/": "%SRC_DIR%/"
+    }
+}

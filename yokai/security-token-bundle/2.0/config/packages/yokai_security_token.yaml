@@ -1,0 +1,13 @@
+yokai_security_token:
+    tokens:
+        # Define here all the tokens you want your application to handle
+        # Documentation : https://github.com/yokai-php/security-token-bundle/blob/master/Resources/doc/2-configuration.md
+
+        # Keep default values for your token ("+2 days" duration, 1 usage, keep "+1 month")
+        reset_password: ~
+
+        # Or configure everything
+        2fa_auth:
+            duration: '+3 minutes'
+            usages: 2
+            keep: '+2 days'

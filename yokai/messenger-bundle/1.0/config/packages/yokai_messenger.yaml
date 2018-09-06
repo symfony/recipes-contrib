@@ -1,0 +1,46 @@
+yokai_messenger:
+    channels:
+        # Each channel has its own global configuration
+        swiftmailer:
+            # Send messages as email using Swiftmailer library
+            # Documentation : https://github.com/yokai-php/messenger-bundle/blob/master/Resources/docs/channels/swiftmailer.md
+            enabled: false
+        doctrine:
+            # Save messages in a SQL database using Doctrine ORM
+            # Documentation : https://github.com/yokai-php/messenger-bundle/blob/master/Resources/docs/channels/doctrine.md
+            enabled: false
+        mobile:
+            # Send messages as mobile push notifications using sly/notification-pusher library
+            # Documentation : https://github.com/yokai-php/messenger-bundle/blob/master/Resources/docs/channels/mobile.md
+            enabled: false
+        twilio:
+            # Documentation : https://github.com/yokai-php/messenger-bundle/blob/master/Resources/docs/channels/twilio.md
+            enabled: false
+
+    # Register here all the messages you want your application to handle
+    # Documentation : https://github.com/yokai-php/messenger-bundle/blob/master/Resources/docs/configuration.md
+    messages:
+
+        # Messages can be sent through a single channel
+        -
+            id: forgot_password
+            channels: swiftmailer
+            swiftmailer:
+                subject: forgot_password.title
+                template: messages/forgot_password/email.html.twig
+                template_vars: [ link ]
+                translation_catalog: email_messages
+
+        # Messages can also be sent through multiple channels at once, options may be common or specific to each channel
+        -
+            id: order_accepted
+            channels: [swiftmailer, mobile]
+            defaults:
+                subject: order_accepted.title
+                template_vars: [ order, date ]
+            swiftmailer:
+                template: messages/order_accepted/email.html.twig
+                translation_catalog: email_messages
+            mobile:
+                template: messages/order_accepted/mobile.txt.twig
+                translation_catalog: mobile_messages
