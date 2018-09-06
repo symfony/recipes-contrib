@@ -1,2 +1,3 @@
 ruwler:
     api_key: '%env(RUWLER_API_KEY)%'
+
