@@ -1,0 +1,3 @@
+enqueue:
+    async_commands:
+        enabled: true
