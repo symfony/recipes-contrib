@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Ruwler\\SdkBundle\\RuwlerSdkBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "RUWLER_SDK_API_KEY": ""
+    }
+}
