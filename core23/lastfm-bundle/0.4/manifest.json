@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Core23\\LastFmBundle\\Core23LastFmBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "LASTFM_API_ID": "",
+        "LASTFM_API_SECRET": ""
+    }
+}
