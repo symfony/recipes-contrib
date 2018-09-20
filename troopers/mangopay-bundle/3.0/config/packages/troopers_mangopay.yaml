@@ -1,0 +1,4 @@
+troopers_mangopay:
+    client_id: "%env(TROOPERS_MANGOPAY_CLIENT_ID)%"
+    client_password: "%env(TROOPERS_MANGOPAY_CLIENT_PASSWORD)%"
+    base_url: "%env(TROOPERS_MANGOPAY_BASE_URL)%"
