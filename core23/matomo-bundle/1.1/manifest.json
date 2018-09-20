@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Core23\\MatomoBundle\\Core23MatomoBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
