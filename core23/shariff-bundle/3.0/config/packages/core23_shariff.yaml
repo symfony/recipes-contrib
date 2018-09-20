@@ -1,0 +1,15 @@
+core23_shariff:
+    services:
+        facebook:
+            app_id:  '%env(FACEBOOK_API_ID)%'
+            secret:  '%env(FACEBOOK_API_SECRET)%'
+
+sonata_block:
+    blocks:
+        core23_shariff.block.share:
+
+doctrine_cache:
+    providers:
+        core23_shariff:
+            type: php_file
+            namespace: core23_shariff
