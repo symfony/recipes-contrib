@@ -1,0 +1,10 @@
+{
+    "bundles": {
+      "Ijanki\\Bundle\\PrometheusBundle\\IjankiPrometheusBundle": [
+          "all"
+      ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

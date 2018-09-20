@@ -1,0 +1,7 @@
+{
+    "bundles": {
+      "Ijanki\\Bundle\\FtpBundle\\IjankiFtpBundle": [
+          "all"
+      ]
+    }
+}
