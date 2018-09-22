@@ -4,5 +4,5 @@
 
   * Install the Symfony Maker Bundle using <info>composer require maker --dev</>. It's required for the next step.
 
-  * Run <info>bin/console make:user:msgphp</>. It will guide you through the basic setup by asking a series of questions
-    and generates the minimal application source files needed.
+  * Run <info>bin/console make:user:msgphp</>. It will guide you through the basic setup by asking a series of
+    questions and generates the minimal application source files needed.
