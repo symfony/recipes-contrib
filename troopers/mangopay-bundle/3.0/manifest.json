@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Troopers\\MangopayBundle\\TroopersMangopayBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "TROOPERS_MANGOPAY_CLIENT_ID": "%generate(secret)%",
+        "TROOPERS_MANGOPAY_CLIENT_PASSWORD": "%generate(secret)%",
+        "TROOPERS_MANGOPAY_BASE_URL": "https://api.sandbox.mangopay.com"
+    }
+}
