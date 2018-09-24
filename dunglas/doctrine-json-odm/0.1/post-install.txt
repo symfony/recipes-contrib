@@ -1,6 +1,0 @@
-<bg=blue;fg=white>              </>
-<bg=blue;fg=white> What's next? </>
-<bg=blue;fg=white>              </>
-
-  * The <comment>json_document</> column type is now available
-  * Go to https://github.com/dunglas/doctrine-json-odm for examples and docs
