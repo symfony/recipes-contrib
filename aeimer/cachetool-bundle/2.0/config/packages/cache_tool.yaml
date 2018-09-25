@@ -1,0 +1,13 @@
+cache_tool:
+    # Config mode: (cli|fastcgi)
+    adapter: '%env(resolve:CACHETOOL_ADAPTER)%'
+    # Config fastcgi url
+    fastcgi: '%env(resolve:CACHETOOL_FASTCGI)%'
+
+    # Disable APC commands
+    apc: '%env(bool:resolve:CACHETOOL_APC)%'
+    # Disable APCu commands
+    # TODO: Add APCu commands
+    #apcu: '%env(bool:resolve:CACHETOOL_APCU)%'
+    # Disable Opcache commands
+    opcache: '%env(bool:resolve:CACHETOOL_OPCACHE)%'
