@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "Dunglas\\DoctrineJsonOdm\\Bundle\\DunglasDoctrineJsonOdmBundle": ["all"]
+    }
+}
