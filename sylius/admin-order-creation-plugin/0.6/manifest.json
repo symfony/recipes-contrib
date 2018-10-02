@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Sylius\\AdminOrderCreationPlugin\\SyliusAdminOrderCreationPlugin": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

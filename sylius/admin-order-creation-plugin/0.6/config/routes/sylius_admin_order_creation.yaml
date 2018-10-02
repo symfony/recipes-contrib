@@ -1,0 +1,2 @@
+sylius_admin_order_creation:
+    resource: "@SyliusAdminOrderCreationPlugin/Resources/config/app/routing.yml"
