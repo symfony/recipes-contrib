@@ -1,0 +1,69 @@
+# To get started with security, check out the documentation:
+# https://symfony.com/doc/current/security.html
+security:
+
+    encoders:
+        Pronto\MobileBundle\Entity\User: bcrypt
+        Pronto\MobileBundle\Entity\AppUser: bcrypt
+
+    access_control:
+        - { path: ^/login, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/reset, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/plugins, roles: [ROLE_SUPER_ADMIN] }
+        - { path: ^/admin/customers, roles: [ROLE_SUPER_ADMIN] }
+        - { path: ^/admin/notifications/segments, roles: [ROLE_SUPER_ADMIN] }
+        - { path: ^/admin/users/app, roles: [ROLE_USER] }
+        - { path: ^/admin/users, roles: [ROLE_ADMIN, ROLE_SUPER_ADMIN] }
+        - { path: ^/admin, roles: ROLE_USER }
+
+
+    # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
+    providers:
+        cms_users:
+            entity: { class: Pronto\MobileBundle\Entity\User, property: email }
+        app_users:
+            id: pronto_mobile.security.app_user_provider
+
+
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|scss|images|js)/
+            security: false
+
+        oauth_token:
+            pattern:    ^/oauth/v2/token
+            security:   false
+
+        oauth_authorize:
+            pattern:    ^/oauth/v2/auth
+            anonymous:  true
+
+        api:
+            pattern:    ^/api
+            stateless:  true
+            anonymous:  true
+            fos_oauth:  true
+            provider: app_users
+
+        main:
+            anonymous: ~
+
+            switch_user: { role: ROLE_SUPER_ADMIN, parameter: _switch_user }
+            provider: cms_users
+
+            guard:
+                provider: cms_users
+                authenticators:
+                    - pronto_mobile.security.login_form_authenticator
+            # activate different ways to authenticate
+
+            # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
+            #http_basic: ~
+
+            # https://symfony.com/doc/current/security/form_login_setup.html
+            #form_login: ~
+
+            logout:
+                path: /logout
+                target: /login
