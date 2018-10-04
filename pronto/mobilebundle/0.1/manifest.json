@@ -1,0 +1,14 @@
+{
+  "bundles": {
+    "Doctrine\\Bundle\\DoctrineCacheBundle\\DoctrineCacheBundle": ["all"],
+    "Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle": ["all"],
+    "Doctrine\\Bundle\\FixturesBundle\\DoctrineFixturesBundle": ["dev", "test"],
+    "FOS\\OAuthServerBundle\\FOSOAuthServerBundle": ["all"],
+    "Doctrine\\Bundle\\MigrationsBundle\\DoctrineMigrationsBundle": ["all"],
+    "Symfony\\Bundle\\SwiftmailerBundle\\SwiftmailerBundle": ["all"],
+    "Pronto\\MobileBundle\\ProntoMobileBundle": ["all"]
+  },
+  "copy-from-recipe": {
+    "config/": "%CONFIG_DIR%/"
+  }
+}
