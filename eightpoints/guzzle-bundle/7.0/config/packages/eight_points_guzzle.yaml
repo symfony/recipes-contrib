@@ -3,7 +3,7 @@
 # https://github.com/8p/EightPointsGuzzleBundle/blob/master/src/Resources/doc/configuration-reference.md
 eight_points_guzzle:
     # (de)activate logging/profiler; default: %kernel.debug%
-    logging: true
+#    logging: true
 
     clients:
         my_client:
