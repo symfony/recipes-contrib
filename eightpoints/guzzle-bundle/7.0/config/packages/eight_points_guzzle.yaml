@@ -1,17 +1,35 @@
+# EightPoints GuzzleBundle
+# A full list of configuration options can be found here:
+# https://github.com/8p/EightPointsGuzzleBundle/blob/master/src/Resources/doc/configuration-reference.md
 eight_points_guzzle:
+    # (de)activate logging/profiler; default: %kernel.debug%
+    logging: true
+
     clients:
         my_client:
             # Write here the host where to do requests
-            # base_url: "http://target.url"
+#            base_url: "http://target.url"
 
+            # Request options: http://docs.guzzlephp.org/en/stable/request-options.html
             options:
+                # timeout in seconds
                 timeout: 30
 
-                # Configure headers.
-                # More info: http://docs.guzzlephp.org/en/stable/request-options.html#headers
+                # set to false to disable throwing exceptions on an HTTP protocol errors (4xx and 5xx responses)
+                http_errors: true
+
+                # each key is the name of a header, and each value is a string or array of strings representing the
+                # header field values.
                 headers:
-                    User-Agent: "EightpointsGuzzleBundle/7.0"
+                    User-Agent: "EightPointsGuzzleBundle/v7"
 
             # Find plugins here:
             # https://github.com/8p/EightPointsGuzzleBundle#known-and-supported-plugins
-            plugin: ~
+            plugin:
+                # https://github.com/gregurco/GuzzleBundleOAuth2Plugin
+#                oauth2:
+#                    base_uri:       "https://example.com"
+#                    token_url:      "/oauth/token"
+#                    client_id:      "test-client-id"
+#                    client_secret:  "test-client-secret" # optional
+#                    scope:          "administration"
