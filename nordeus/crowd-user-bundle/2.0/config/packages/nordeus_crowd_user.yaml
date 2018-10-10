@@ -1,0 +1,14 @@
+nordeus_crowd_user:
+    # REQUIRED:
+    crowd_application_name: '%env(NORDEUS_CROWD_APPLICATION_NAME)%'
+    crowd_service_url: http://crowd.your_domain.com:8095
+    sso_cookie_domain: your_domain.com
+    crowd_application_password: '%env(NORDEUS_CROWD_APPLICATION_PASSWORD)%'
+    roles_to_groups: '%env(NORDEUS_CROWD_ROLES_TO_GROUPS)%'
+    # OPTIONAL:
+    user_class: Nordeus\CrowdUserBundle\Security\User\CrowdUser
+    sso_cookie_name: crowd.token_key
+    service_uri: /crowd/rest/usermanagement/1/
+    curl_timeout: 2
+    connection_retries: 2
+    user_refresh_time: 600 # seconds

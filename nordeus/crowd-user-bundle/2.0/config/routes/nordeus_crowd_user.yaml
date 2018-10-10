@@ -1,0 +1,2 @@
+nordeus_crowd_user:
+    resource: "@NordeusCrowdUserBundle/Resources/config/crowd_user_routing.yml"

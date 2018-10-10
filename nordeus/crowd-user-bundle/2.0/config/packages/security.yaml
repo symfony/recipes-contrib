@@ -1,0 +1,24 @@
+security:
+    role_hierarchy:
+        ROLE_ADMIN: ROLE_USER
+
+    providers:
+        crowd_provider:
+            id: crowd.user_provider
+
+    firewalls:
+        main:
+            pattern: ^/
+            crowd_form_login:
+                login_path: nordeus_crowd_user_login
+                check_path: nordeus_crowd_user_login_check
+                default_target_path: /
+            crowd_sso: true
+            logout:
+                path: nordeus_crowd_user_logout
+            anonymous: ~
+            access_denied_handler: crowd.access_denied_handler
+
+    access_control:
+        - { path: ^/(_(profiler|wdt)|img|css|js|login), role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/, role: ROLE_USER }
