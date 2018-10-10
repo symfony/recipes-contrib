@@ -7,10 +7,6 @@
     },
     "env": {
         "NORDEUS_CROWD_APPLICATION_NAME": "crowd_application_name",
-        "NORDEUS_CROWD_APPLICATION_PASSWORD": "crowd_application_password",
-        "NORDEUS_CROWD_ROLES_TO_GROUPS": {
-            "ROLE_USER": [ "users" ],
-            "ROLE_ADMIN": [ "admins", "superadmins" ]
-        }
+        "NORDEUS_CROWD_APPLICATION_PASSWORD": "crowd_application_password"
     }
 }
