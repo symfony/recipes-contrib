@@ -1,0 +1,11 @@
+ambta_doctrine_encrypt:
+    # Secret Key path
+    # secret_directory_path: '%kernel.project_dir%'   # Default value
+
+    # You can choose between the following encryption types. Uncomment them to use one.
+    # Halite
+    # encryptor_class: Halite
+
+    # Defuse
+    # encryptor_class: Defuse
+
