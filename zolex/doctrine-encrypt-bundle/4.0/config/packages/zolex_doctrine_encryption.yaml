@@ -2,10 +2,7 @@ ambta_doctrine_encrypt:
     # Secret Key path
     # secret_directory_path: '%kernel.project_dir%'   # Default value
 
-    # You can choose between the following encryption types. Uncomment them to use one.
-    # Halite
-    # encryptor_class: Halite
-
-    # Defuse
-    # encryptor_class: Defuse
+    # Encryption algorithm; You can choose between Halite and Defuse
+    # You need to install the needed package for the algo you choose to use
+    encryptor_class: Halite # Or Defuse
 
