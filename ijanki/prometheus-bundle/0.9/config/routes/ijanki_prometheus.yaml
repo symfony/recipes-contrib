@@ -1,3 +1,0 @@
-ijanki_prometheus:
-    resource: "@IjankiPrometheusBundle/Resources/config/routing.yml"
-    prefix: /
