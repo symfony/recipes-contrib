@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Nordeus\\CrowdUserBundle\\NordeusCrowdUserBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "NORDEUS_CROWD_APPLICATION_NAME": "crowd_application_name",
+        "NORDEUS_CROWD_APPLICATION_PASSWORD": "crowd_application_password"
+    }
+}
