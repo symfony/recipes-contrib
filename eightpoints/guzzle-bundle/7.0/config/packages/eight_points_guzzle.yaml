@@ -2,13 +2,10 @@
 # A full list of configuration options can be found here:
 # https://github.com/8p/EightPointsGuzzleBundle/blob/master/src/Resources/doc/configuration-reference.md
 eight_points_guzzle:
-    # (de)activate logging/profiler; default: %kernel.debug%
-#    logging: true
-
     clients:
         my_client:
             # Write here the host where to do requests
-#            base_url: "http://target.url"
+            # base_url: "http://target.url"
 
             # Request options: http://docs.guzzlephp.org/en/stable/request-options.html
             options:
@@ -26,10 +23,3 @@ eight_points_guzzle:
             # Find plugins here:
             # https://github.com/8p/EightPointsGuzzleBundle#known-and-supported-plugins
             plugin: ~
-                # https://github.com/gregurco/GuzzleBundleOAuth2Plugin
-#                oauth2:
-#                    base_uri:       "https://example.com"
-#                    token_url:      "/oauth/token"
-#                    client_id:      "test-client-id"
-#                    client_secret:  "test-client-secret" # optional
-#                    scope:          "administration"
