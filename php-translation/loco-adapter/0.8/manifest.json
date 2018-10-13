@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Translation\\PlatformAdapter\\Loco\\Bridge\\Symfony\\TranslationAdapterLocoBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "LOCO_PROJECT_API_KEY": ""
+    }
+}
