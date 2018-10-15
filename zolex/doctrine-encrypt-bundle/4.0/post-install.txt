@@ -1,7 +1,7 @@
-<bg=blue;fg=white>                                                          </>
-<bg=blue;fg=white> You now can choose the wanted algorithm in the           </>
-<bg=blue;fg=white> config/packages/zolex_doctrine_encyption.yaml file       </>
-<bg=blue;fg=white>                                                          </>
-<bg=blue;fg=white> Now install the required packages for encryption:        </>
-<bg=blue;fg=white> https://github.com/zolex/DoctrineEncryptBundle#michaeldegrootdoctrineencryptbundle </>
-<bg=blue;fg=white>                                                          </>
+<bg=blue;fg=white>                                                             </>
+<bg=blue;fg=white> You now can choose the wanted algorithm in the              </>
+<bg=blue;fg=white> config/packages/zolex_doctrine_encyption.yaml file          </>
+<bg=blue;fg=white>                                                             </>
+<bg=blue;fg=white> Now install the required packages for encryption:           </>
+<bg=blue;fg=white> https://github.com/zolex/DoctrineEncryptBundle#using-halite </>
+<bg=blue;fg=white>                                                             </>
