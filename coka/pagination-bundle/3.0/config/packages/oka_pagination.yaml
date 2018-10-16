@@ -1,3 +1,0 @@
-oka_pagination:
-    db_driver: orm
-    model_manager_name: default
