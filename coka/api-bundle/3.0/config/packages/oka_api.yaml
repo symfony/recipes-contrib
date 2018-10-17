@@ -1,5 +1,4 @@
 oka_api:
-    model_manager_name: null
     cors:
         default:
             allow_credentials: true
