@@ -1,0 +1,9 @@
+# Aws Ses Monitor
+shq_aws_ses_monitor:
+    endpoint:
+        # Use Ngrok to test the bundle on development
+        scheme: '%env(NGROK_APP_SCHEME)%'
+        host: '%env(NGROK_APP_HOST)%'
+    identities:
+        # This is a test identity to use only on development
+        test_aws@example.com: ~

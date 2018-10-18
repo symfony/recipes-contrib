@@ -1,0 +1,15 @@
+{
+    "bundles": {
+        "SerendipityHQ\\Bundle\\AwsSesMonitorBundle\\SHQAwsSesMonitorBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "NGROK_APP_SCHEME": "https",
+        "NGROK_APP_HOST": "xxxxxxxx.ngrok.io",
+        "AWS_SES_TOPIC_BOUNCES": "your-app-dev-ses-bounces-topic",
+        "AWS_SES_TOPIC_COMPLAINTS": "your-app-dev-ses-complaints-topic",
+        "AWS_SES_TOPIC_DELIVERIES": "your-app-dev-ses-deliveries-topic"
+    }
+}

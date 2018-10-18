@@ -1,0 +1,3 @@
+_shq_aws_ses_monitor:
+    resource: '@SHQAwsSesMonitorBundle/Resources/config/routing.yml'
+    prefix: /endpoints/aws

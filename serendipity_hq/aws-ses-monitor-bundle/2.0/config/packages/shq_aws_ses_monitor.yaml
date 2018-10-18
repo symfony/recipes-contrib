@@ -1,0 +1,47 @@
+# Aws Ses Monitor
+shq_aws_ses_monitor:
+    endpoint:
+        # We suggest to use an environment variable: '%env(APP_SCHEME)%'
+        scheme: 'https'
+        # We suggest to use an environment variable: '%env(APP_HOST)%'
+        host: 'example.com'
+    identities:
+        example.com:
+            # https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-email-2010-12-01.html#setidentitydkimenabled
+            dkim: true
+            # https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-email-2010-12-01.html#setidentityfeedbackforwardingenabled
+            feedback_forwarding: true
+            # https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-email-2010-12-01.html#setidentityheadersinnotificationsenabled
+            headers_in_notification: true
+            # https://docs.aws.amazon.com/aws-sdk-php/v3/api/api-email-2010-12-01.html#setidentitymailfromdomain
+            # The custom MAIL FROM domain that you want the verified identity to use.
+            # The MAIL FROM domain must
+            #   1) be a subdomain of the verified identity,
+            #   2) not be used in a "From" address if the MAIL FROM domain is the destination of email feedback
+            #      forwarding (for more information, see the Amazon SES Developer Guide), and
+            #   3) not be used to receive emails. A value of null disables the custom MAIL FROM setting for the
+            #      identity.
+            from_domain: www.trustback.me
+            on_mx_failure: 'UseDefaultValue'
+            bounces:
+                track: true
+                filter:
+                    soft_as_hard: true
+                    max_bounces: 5
+                    soft_blacklist_time: 'forever'
+                    hard_blacklist_time: 'forever'
+                    force_send: false
+            complaints:
+                track: true
+                filter:
+                    blacklist_time: 'forever'
+                    force_send: false
+            deliveries:
+                track: true
+        hello@example.com:
+            bounces:
+                topic: 'use_domain'
+            complaints:
+                topic: 'use_domain'
+            deliveries:
+                topic: 'use_domain'
