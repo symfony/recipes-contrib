@@ -3,4 +3,4 @@ dekalee_mailjet:
     secret_key: '%env(DEKALEE_MAILJET_SECRET_KEY)%'
     base_template_id: '%env(DEKALEE_MAILJET_BASE_TEMPLATE_ID)%'
     reporting_email: '%env(DEKALEE_MAILJET_EMAIL_REPORTING)%'
-    force_deliver: "%env(DEKALEE_MAILJET_FORCE_DELIVER)%"
+    force_deliver: false
