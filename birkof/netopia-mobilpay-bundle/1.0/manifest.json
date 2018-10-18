@@ -7,14 +7,12 @@
     },
     "gitignore": [
         "/%CONFIG_DIR%/netopia_mobilpay/*.key",
-        "/%CONFIG_DIR%/netopia_mobilpay/*.cer",
-        "/%CONFIG_DIR%/netopia_mobilpay/*.json"
+        "/%CONFIG_DIR%/netopia_mobilpay/*.cer"
     ],
     "env": {
         "NETOPIA_MOBILPAY_PAYMENT_URL": "http://sandboxsecure.mobilpay.ro",
         "NETOPIA_MOBILPAY_PUBLIC_CERT": "%kernel.project_dir%/%CONFIG_DIR%/netopia_mobilpay/public.cer",
         "NETOPIA_MOBILPAY_PRIVATE_KEY": "%kernel.project_dir%/%CONFIG_DIR%/netopia_mobilpay/private.key",
-        "NETOPIA_MOBILPAY_SMS_SERVICES": "%kernel.project_dir%/%CONFIG_DIR%/netopia_mobilpay/sms_services.json",
         "NETOPIA_MOBILPAY_SIGNATURE": "XXXX-XXXX-XXXX-XXXX-XXXX"
     }
 }
