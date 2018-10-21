@@ -1,4 +1,8 @@
 {
+    "bundles": {
+        "TwanHaverkamp\\CoreBundle\\Twig\\CoreExtension": ["all"],
+        "TwanHaverkamp\\NavigationBundle\\Twig\\NavigationExtension": ["all"]
+    },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     }
