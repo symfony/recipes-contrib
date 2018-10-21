@@ -1,9 +1,5 @@
 {
-    "container": {
-        "TwanHaverkamp\\NavigationBundle\\Twig\\NavigationExtension": {
-            "arguments": {
-                "$provider": "@TwanHaverkamp\\NavigationBundle\\Provider\\EntityProvider"
-            }
-        }
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
     }
 }
