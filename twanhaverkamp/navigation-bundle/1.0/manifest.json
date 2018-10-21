@@ -1,0 +1,9 @@
+{
+    "container": {
+        "TwanHaverkamp\\NavigationBundle\\Twig\\NavigationExtension": {
+            "arguments": {
+                "$provider": "@TwanHaverkamp\\NavigationBundle\\Provider\\EntityProvider"
+            }
+        }
+    }
+}
