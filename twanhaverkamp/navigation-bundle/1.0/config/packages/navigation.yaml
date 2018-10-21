@@ -4,3 +4,5 @@ services:
     TwanHaverkamp\NavigationBundle\Twig\NavigationExtension:
         arguments:
             $provider: '@TwanHaverkamp\NavigationBundle\Provider\EntityProvider'
+        tags:
+            { name: twig.extension }
