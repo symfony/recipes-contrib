@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "EN\\IgdbApiBundle\\ENIgdbApiBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "gitignore": [
+        "/config/packages/en_igdb_api.yaml"
+    ]
+}
