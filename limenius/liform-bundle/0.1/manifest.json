@@ -1,5 +1,0 @@
-{
-    "bundles": {
-        "Limenius\\LiformBundle\\LimeniusLiformBundle": ["all"]
-    }
-}

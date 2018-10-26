@@ -1,0 +1,13 @@
+{
+  "bundles": {
+    "Limenius\\LiformBundle\\LimeniusLiformBundle": [
+      "all"
+    ]
+  },
+  "aliases": [
+    "liform-recipes"
+  ],
+  "env": {
+    "TEST_ENV_BOWLS": "test"
+  }
+}
