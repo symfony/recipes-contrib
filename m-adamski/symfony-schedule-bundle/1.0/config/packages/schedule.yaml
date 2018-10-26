@@ -1,0 +1,2 @@
+schedule:
+    manager: Adamski\Symfony\ScheduleBundle\Model\ScheduleManager
