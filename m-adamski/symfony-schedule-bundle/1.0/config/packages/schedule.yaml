@@ -1,2 +1,2 @@
-schedule:
-    manager: App\Model\ScheduleManager
+# schedule:
+#     manager: App\Model\ScheduleManager
