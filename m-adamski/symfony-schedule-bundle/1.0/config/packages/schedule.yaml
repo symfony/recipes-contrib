@@ -1,0 +1,2 @@
+schedule:
+    manager: App\Model\ScheduleManager
