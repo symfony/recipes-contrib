@@ -1,10 +1,10 @@
 {
-  "bundles": {
-    "Limenius\\LiformBundle\\LimeniusLiformBundle": [
-      "all"
+    "bundles": {
+        "Limenius\\LiformBundle\\LimeniusLiformBundle": [
+        "all"
+        ]
+    },
+    "aliases": [
+        "liform-recipes"
     ]
-  },
-  "aliases": [
-    "liform-recipes"
-  ]
 }
