@@ -5,7 +5,8 @@
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     },
-    "gitignore": [
-        "/config/packages/en_igdb_api.yaml"
-    ]
+    "env": {
+        "YOUR_BASE_URL": "",
+        "YOUR_API_KEY": ""
+    }
 }
