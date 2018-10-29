@@ -1,0 +1,5 @@
+<bg=blue;fg=white>                                </>
+<bg=blue;fg=white> MercesLab GoogleFixturesBundle </>
+<bg=blue;fg=white>                                </>
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/MercesLyon/GoogleFixturesBundle</>
+  * <fg=blue>Configure</> using the <comment>GOOGLE_CREDENTIALS</> env variable
