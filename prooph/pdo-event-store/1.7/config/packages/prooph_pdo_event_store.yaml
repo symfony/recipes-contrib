@@ -1,0 +1,22 @@
+services:
+    _defaults:
+        public: false
+
+    Prooph\EventStore\EventStore: '@app.event_store.default'
+
+    app.event_store.default:
+        class: Prooph\EventStore\Pdo\MySqlEventStore
+        arguments:
+            - '@prooph_event_store.message_factory'
+            - '@app.event_store.pdo_connection.mysql'
+            - '@app.event_store.mysql.persistence_strategy'
+
+    app.event_store.pdo_connection.mysql:
+        class: \PDO
+        arguments:
+            - '%env(MYSQL_DSN)%'
+            - '%env(MYSQL_USER)%'
+            - '%env(MYSQL_PASSWORD)%'
+
+    app.event_store.mysql.persistence_strategy:
+        class: Prooph\EventStore\Pdo\PersistenceStrategy\MySqlSingleStreamStrategy
