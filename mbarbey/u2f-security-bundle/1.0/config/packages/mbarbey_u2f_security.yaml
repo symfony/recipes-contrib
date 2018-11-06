@@ -1,0 +1,5 @@
+mbarbey_u2f_security:
+    authentication_route: user_authenticate_u2f
+    whitelist_routes:
+        - login
+        - logout
