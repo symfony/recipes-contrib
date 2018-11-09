@@ -4,6 +4,7 @@ services:
     ReCaptcha\ReCaptcha:
         arguments:
             $secret: '%env(GOOGLE_RECAPTCHA_SECRET)%'
+            $requestMethod: '@ReCaptcha\RequestMethod'
 
     # Curl is set here as default transport to communicate with Google servers.
     # If you do not have php-curl extension, you can change for a socket or a plain POST request.
