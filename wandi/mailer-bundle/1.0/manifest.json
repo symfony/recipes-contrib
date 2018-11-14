@@ -2,7 +2,11 @@
     "bundles": {
         "Wandi\\MailerBundle\\WandiMailerBundle": ["all"]
     },
-    "copy-from-recipe": { 
+    "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "WANDI_MAILER_SENDER_NAME": "Zinédine Zidane",
+        "WANDI_MAILER_SENDER_ADDRESS": "zinedine.zidane@france.fr"
     }
 }
