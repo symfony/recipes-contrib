@@ -1,6 +1,2 @@
 artprima_prometheus_metrics:
-    namespace: myapp
     type: in_memory
-    ignored_routes:
-    - prometheus_bundle_prometheus
-    - _wdt
