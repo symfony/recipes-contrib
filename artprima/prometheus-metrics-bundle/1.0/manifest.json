@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Artprima\\PrometheusMetricsBundle\\ArtprimaPrometheusMetricsBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
