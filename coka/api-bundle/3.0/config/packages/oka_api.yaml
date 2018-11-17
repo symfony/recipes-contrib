@@ -1,0 +1,14 @@
+oka_api:
+    cors:
+        default:
+            allow_credentials: true
+            expose_headers: ['Accept-Encoding']
+            max_age: 3600
+    firewalls:
+        wsse:
+            enabled: false
+    security_behaviors:
+        password_updater: true
+    response:
+        compression:
+            enabled: false
