@@ -1,9 +1,0 @@
-{
-    "bundles": {
-        "TwanHaverkamp\\CoreBundle\\CoreBundle": ["all"],
-        "TwanHaverkamp\\NavigationBundle\\NavigationBundle": ["all"]
-    },
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    }
-}

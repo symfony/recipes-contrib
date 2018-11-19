@@ -1,8 +1,0 @@
-services:
-    # if you would like to load navigation items from a YAML file see:
-    # https://github.com/twanhaverkamp/navigation-bundle#step-1-pass-the-yamlprovider-as-argument
-    TwanHaverkamp\NavigationBundle\Twig\NavigationExtension:
-        arguments:
-            $provider: '@TwanHaverkamp\NavigationBundle\Provider\EntityProvider'
-        tags:
-            { name: twig.extension }
