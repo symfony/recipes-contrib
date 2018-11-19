@@ -12,7 +12,6 @@
     1. Create a <comment>navigation-<name>.yaml</> file
     2. Add navigation items as follow:
 
-    <bg=yellow;fg=black>                        </>
     <bg=yellow;fg=black> foo:                   </>
     <bg=yellow;fg=black>     label: foo         </>
     <bg=yellow;fg=black>     route: foo         </>
@@ -20,6 +19,5 @@
     <bg=yellow;fg=black>         bar:           </>
     <bg=yellow;fg=black>             label: bar </>
     <bg=yellow;fg=black>             route: bar </>
-    <bg=yellow;fg=black>                        </>
 
-  * <fg=blue>Read</> the documentation at <comment>https://github.com/twanhaverkamp/navigation-bundle</>
+  <fg=blue>Read</> the documentation at <comment>https://github.com/twanhaverkamp/navigation-bundle</>
