@@ -1,5 +1,8 @@
 {
     "bundles": {
         "TwanHaverkamp\\NavigationBundle\\NavigationBundle": ["all"]
-    }
+    },
+    "gitignore": [
+        "/vendor/"
+    ]
 }
