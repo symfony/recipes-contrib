@@ -1,0 +1,34 @@
+service_bus_symfony:
+  entry_point_name: symfony_demo
+
+  auto_import:
+    sagas: true
+    handlers: true
+    directories:
+      - '%kernel.project_dir%/src'
+    excluded_files: []
+  transport:
+    dsn: amqp://admin:admin123@localhost
+    queue:
+      name: demo.messages
+      durable: true
+    topic:
+      name: demo
+      durable: true
+      key: demo
+  database:
+    adapter: Desperado\ServiceBus\Infrastructure\Storage\SQL\AmpPostgreSQL\AmpPostgreSQLAdapter
+    dsn: pgsql://demo:123456789@localhost/demo
+    create_schema: true
+  logger:
+    level: debug
+    colorize: true
+  shutdown:
+    stop_after: null
+    stop_signals:
+      signals: [2, 15]
+      stop_delay: 10
+  debug:
+    enable_loop_block_monitoring: true
+    enable_garbage_collector: true
+    stop_when_files_changed: false

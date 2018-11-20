@@ -1,0 +1,27 @@
+#!/usr/bin/env php
+<?php
+
+/**
+ * PHP Service Bus (publish-subscribe pattern implementation) Symfony bundle
+ * Supports Saga pattern and Event Sourcing
+ *
+ * @author  Maksim Masiukevich <desperado@minsk-info.ru>
+ * @license MIT
+ * @license https://opensource.org/licenses/MIT
+ */
+
+declare(strict_types = 1);
+
+namespace Desperado\SymfonyServiceBus\Bin;
+
+use App\Kernel;
+use Desperado\SymfonyServiceBus\Init\Application;
+use Symfony\Component\Dotenv\Dotenv;
+
+include \dirname(__DIR__) . '/../vendor/autoload.php';
+
+$kernel = new Kernel(\getenv('APP_ENV'), \getenv('APP_DEBUG'));
+$kernel->boot();
+
+$application = new Application($kernel->getContainer());
+$application->run();

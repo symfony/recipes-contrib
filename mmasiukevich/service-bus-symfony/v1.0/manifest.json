@@ -1,0 +1,13 @@
+{
+  "aliases": ["symfony-service-bus"],
+  "bundles": {
+    "Desperado\\SymfonyServiceBus\\ServiceBusSymfonyBundle": ["all"]
+  },
+  "copy-from-recipe": {
+    "config/": "%CONFIG_DIR%/",
+    "bin/": "%BIN_DIR%/"
+  },
+  "composer-scripts": {
+    "cache:clear": "symfony-cmd"
+  }
+}
