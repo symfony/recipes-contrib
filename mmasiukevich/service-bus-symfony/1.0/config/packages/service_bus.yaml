@@ -5,7 +5,7 @@ service_bus_symfony:
         sagas: true
         handlers: true
         directories: ['%kernel.project_dir%/src']
-      excluded_files: []
+        excluded_files: []
     transport:
         dsn: amqp://admin:admin123@localhost
         queue:
