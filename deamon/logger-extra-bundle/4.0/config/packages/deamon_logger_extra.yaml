@@ -4,5 +4,5 @@ deamon_logger_extra:
     application: ~
     # the handler to update
     handlers: 'main'
-    # configuration for all optionnal fields
+    # configuration for all optional fields
     config: ~
