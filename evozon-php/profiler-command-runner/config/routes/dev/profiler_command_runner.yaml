@@ -1,2 +1,2 @@
 web_profiler_profiler:
-  resource: '@ProfilerCommandRunnerBundle/Resources/config/routes.xml'
+    resource: '@ProfilerCommandRunnerBundle/Resources/config/routes.xml'
