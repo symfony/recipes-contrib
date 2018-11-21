@@ -1,0 +1,8 @@
+{
+  "bundles": {
+    "Evozon\\Bundle\\ProfilerCommandRunner\\ProfilerCommandRunnerBundle": ["dev", "test"]
+  },
+  "copy-from-recipe": {
+    "config/": "%CONFIG_DIR%/"
+  }
+}
