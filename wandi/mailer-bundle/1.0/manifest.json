@@ -6,7 +6,7 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "WANDI_MAILER_SENDER_NAME": "Zinédine Zidane",
-        "WANDI_MAILER_SENDER_ADDRESS": "zinedine.zidane@france.fr"
+        "WANDI_MAILER_SENDER_NAME": "Example",
+        "WANDI_MAILER_SENDER_ADDRESS": "example@domain.tld"
     }
 }
