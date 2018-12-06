@@ -1,0 +1,13 @@
+{
+    "aliases": [
+        "octopouce-admin"
+    ],
+    "bundles": {
+        "Octopouce\\AdminBundle\\OctopouceAdminBundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
