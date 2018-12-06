@@ -1,4 +1,4 @@
- {
+{
     "bundles": {
         "Octopouce\\AdminBundle\\OctopouceAdminBundle": [
             "all"
