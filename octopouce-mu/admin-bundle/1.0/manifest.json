@@ -1,7 +1,4 @@
 {
-    "aliases": [
-        "octopouce-admin"
-    ],
     "bundles": {
         "Octopouce\\AdminBundle\\OctopouceAdminBundle": [
             "all"
