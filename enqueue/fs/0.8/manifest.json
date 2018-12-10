@@ -1,5 +1,0 @@
-{
-    "env": {
-        "ENQUEUE_DSN": "file:///%VAR_DIR%/enqueue"
-    }
-}

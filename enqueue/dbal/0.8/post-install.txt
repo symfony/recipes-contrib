@@ -1,0 +1,5 @@
+<bg=blue;fg=white>               </>
+<bg=blue;fg=white> New transport </>
+<bg=blue;fg=white>               </>
+
+  * the DSN used in ENQUEUE_DSN should start with <fg=green>mysql://</>.
