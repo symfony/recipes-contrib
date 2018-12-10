@@ -1,0 +1,3 @@
+enqueue:
+    default:
+        async_events: true
