@@ -6,7 +6,7 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "MJ_APIKEY_PUBLIC": "your-api_key",
-        "MJ_APIKEY_PRIVATE": "@@your-secret_key"
+        "MAILJET_APIKEY_PUBLIC": "your-api_key",
+        "MAILJET_APIKEY_PRIVATE": "@@your-secret_key"
     }
 }
