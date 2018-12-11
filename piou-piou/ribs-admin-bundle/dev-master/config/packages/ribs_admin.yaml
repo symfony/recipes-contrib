@@ -1,6 +1,30 @@
+services:
+    PiouPiou\RibsAdminBundle\EventListener\GuidAwareListener:
+        arguments: [ "@service_container" ]
+        tags:
+            - { name: doctrine.orm.entity_listener }
+
+    ribs_admin.acess_rights:
+        class: PiouPiou\RibsAdminBundle\Service\AccessRights
+        arguments: ['@service_container', "@router", "@session", "@request_stack", "@ribs_admin.globals", "@ribs_admin.module_service"]
+        tags:
+            - {name: kernel.event_listener, event: kernel.controller}
+        public: true
+
+    ribs_admin.globals:
+        class: PiouPiou\RibsAdminBundle\Service\Globals
+        public: true
+
+    ribs_admin.module_service:
+        class: PiouPiou\RibsAdminBundle\Service\ModuleService
+        arguments: ['@service_container', "@ribs_admin.globals"]
+        public: true
+
 framework:
     assets:
-        json_manifest_path: '%kernel.project_dir%/public/build/manifest.json'
+        packages:
+            ribs-admin-bundle:
+                json_manifest_path: '%kernel.project_dir%/public/build/ribs-admin-bundle/manifest.json'
 
 twig:
     globals:
