@@ -13,22 +13,25 @@ services:
         class: Buzz\Client\FileGetContents
         arguments:
             - '@Psr\Http\Message\ResponseFactoryInterface'
-            - timeout: 10
-              allow_redirects: false
+            -
+                timeout: 10
+                allow_redirects: false
 
     buzz.client.curl:
         class: Buzz\Client\Curl
         arguments:
             - '@Psr\Http\Message\ResponseFactoryInterface'
-            - timeout: 10
-              allow_redirects: false
+            -
+                timeout: 10
+                allow_redirects: false
 
     buzz.client.multi_curl:
         class: Buzz\Client\MultiCurl
         arguments:
             - '@Psr\Http\Message\ResponseFactoryInterface'
-            - timeout: 10
-              allow_redirects: false
+            -
+                timeout: 10
+                allow_redirects: false
 
     # Browser
     Buzz\Browser:
