@@ -5,8 +5,11 @@ services:
 
     # Tell the auto wire system to use "FileGetContents" client as default client.
     # Set this to any of the other clients below (e.g. Curl or MultiCurl) to use a different default client.
-    Buzz\Client\BuzzClientInterface: '@buzz.client.multi_curl'
+    Buzz\Client\BuzzClientInterface: '@buzz.client.file_get_contents'
     Buzz\Client\BatchClientInterface: '@buzz.client.multi_curl'
+
+    # Register alias for PSR-18
+    Psr\Http\Client\ClientInterface: '@Buzz\Client\BuzzClientInterface'
 
     # Clients
     buzz.client.file_get_contents:
