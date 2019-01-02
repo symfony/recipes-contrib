@@ -1,0 +1,6 @@
+#eg: - {'type' : 'text', 'data' : '../blacklist.txt'}
+stockopedia_email_checker:
+    blacklist_domains:
+            -
+    whitelist_domains:
+            -

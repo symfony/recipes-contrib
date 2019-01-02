@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "Stockopedia\\EmailChecker\\StockopediaEmailCheckerBundle" : ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+    },
+    "composer-scripts": {
+        "stockopedia:update-disposable-email-list": "symfony-cmd"
+    },
+    "gitignore": [
+        "/vendor/"
+    ]
+}
