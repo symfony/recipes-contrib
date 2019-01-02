@@ -1,0 +1,3 @@
+xsolve_face_validator:
+    azure_subscription_key: '%env(AZURE_FACE_SUBSCRIPTION_KEY)%'
+    region: 'westeurope'

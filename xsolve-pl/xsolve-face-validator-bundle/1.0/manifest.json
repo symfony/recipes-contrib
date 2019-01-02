@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "XSolve\\FaceValidatorBundle\\XSolveFaceValidatorBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "Get the Azure Face API key on https://azure.microsoft.com/en-us/try/cognitive-services/?api=face-api",
+        "AZURE_FACE_SUBSCRIPTION_KEY": ""
+    }
+}
