@@ -11,7 +11,7 @@
 #   |    +-------------------- hour (0 - 23)
 #   +------------------------- min (0 - 59)
 scheduler:
-    enable: true
-    log: true
     tasks:
+        # You may define all of your scheduled tasks here.
+        # To get started, let's look at an example of scheduling a task (command).
         #- { name: example:command arg --option, expression: "* * * * *" }
