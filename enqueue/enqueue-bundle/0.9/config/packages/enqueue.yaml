@@ -1,4 +1,4 @@
 enqueue:
     default:
-        transport: '%env(ENQUEUE_DSN)%'
+        transport: '%env(resolve:ENQUEUE_DSN)%'
         client: ~
