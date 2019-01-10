@@ -1,8 +1,8 @@
 {
-  "bundles": {
-    "Andchir\\ImportExportBundle\\ImportExportBundle": ["all"]
-  },
-  "copy-from-recipe": {
-    "config/": "%CONFIG_DIR%/"
-  }
+    "bundles": {
+        "Andchir\\ImportExportBundle\\ImportExportBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
 }

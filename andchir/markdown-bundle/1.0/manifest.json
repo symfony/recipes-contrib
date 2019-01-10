@@ -1,8 +1,8 @@
 {
-  "bundles": {
-    "Andchir\\MarkdownBundle\\MarkdownBundle": ["all"]
-  },
-  "copy-from-recipe": {
-    "config/": "%CONFIG_DIR%/"
-  }
+    "bundles": {
+        "Andchir\\MarkdownBundle\\MarkdownBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
 }
