@@ -1,0 +1,10 @@
+{
+    "bundles": {
+        "Spy\\TimelineBundle\\SpyTimelineBundle": ["all"],
+        "Sonata\\TimelineBundle\\SonataTimelineBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "src/": "%SRC_DIR%/"
+    }
+}
