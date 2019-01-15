@@ -5,6 +5,6 @@ dh_doctrine_audit:
     entities:
 #        MyBundle\Entity\MyAuditedEntity1: ~   # all MyAuditedEntity1 properties are audited
 #        MyBundle\Entity\MyAuditedEntity2:
-#            ignored_columns:                  # properties ignored by the audit process
+#            ignored_columns:                  # MyAuditedEntity2 properties to be ignored by the audit process
 #                - createdAt
 #                - updatedAt
