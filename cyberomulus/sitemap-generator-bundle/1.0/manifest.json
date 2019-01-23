@@ -1,5 +1,5 @@
 {
-     "bundles": {
+    "bundles": {
         "Cyberomulus\\SiteMapGeneratorBundle\\CyberomulusSiteMapGeneratorBundle": ["all"]
     },
     "copy-from-recipe": {
