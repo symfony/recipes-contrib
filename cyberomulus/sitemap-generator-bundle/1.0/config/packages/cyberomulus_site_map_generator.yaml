@@ -1,0 +1,18 @@
+cyberomulus_site_map_generator:
+    defaults_values:
+        # Set the defaults values on url entries (false by default)
+        url:
+            # true for set a datetime at now if is null
+            last_modification_now: false
+            # Set this frequence if is null (never | yearly | monthly | weekly | daily | hourly | always)
+#           change_frequence:     "weekly" # One of "never"; "yearly"; "monthly"; "weekly"; "daily"; "hourly"; "always"
+            # Set this priority if is null (a float between 0.0 and 1.0)
+#           priority:             0.1
+        # Set the defaults values on image entries
+#       image:
+            # Set this title if is null
+#            title:                "A defaut title"
+            # Set this caption if is null
+#           caption:              "A defaut caption"
+            # Set this license if is null
+#           license:              "A defaut license"
