@@ -1,0 +1,6 @@
+KunstmaanSitemapBundle:
+    resource: "@KunstmaanSitemapBundle/Resources/config/routing.yml"
+    # If your site is not multi language, remove the "{_locale}/" part of prefix and requirements
+    prefix:   /
+    requirements:
+        _locale: "%requiredlocales%"

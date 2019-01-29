@@ -1,0 +1,5 @@
+imports:
+    - { resource: '../kunstmaancms/**/*.yml', ignore_errors: true}
+
+kunstmaan_page_part:
+    extended_pagepart_chooser: true
