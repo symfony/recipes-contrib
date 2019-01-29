@@ -1,0 +1,16 @@
+# Read more about Graphqlite available options at: https://graphqlite.thecodingmachine.io/docs/symfony-bundle
+graphqlite:
+    namespace:
+        controllers: App\Controller\
+        types:
+            - App\
+    debug:
+        # Include exception messages in output when an error arises
+        INCLUDE_DEBUG_MESSAGE: false
+        # Include stacktrace in output when an error arises
+        INCLUDE_TRACE: false
+        # Exceptions are not caught by the engine and propagated to Symfony
+        RETHROW_INTERNAL_EXCEPTIONS: false
+        # Exceptions that do not implement ClientAware interface are
+        # not caught by the engine and propagated to Symfony.
+        RETHROW_UNSAFE_EXCEPTIONS: true
