@@ -1,4 +1,4 @@
 neo4j:
     connections:
         default:
-            dsn: "%env(NEO4J_DEFAULT_CONNECTION)%"
+            dsn: '%env(resolve:NEO4J_DEFAULT_CONNECTION_DSN)%'
