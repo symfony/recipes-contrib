@@ -1,0 +1,11 @@
+<bg=blue;fg=white>                                   </>
+<bg=blue;fg=white> Next: AwsPushBundle Configuration </>
+<bg=blue;fg=white>                                   </>
+
+  * You can add more platforms to your config in config/packages/awspush.yaml
+
+  * You can remove the AWS credentials if they are configured in your app env or
+    via an EC2 role.
+
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/mcfedr/awspushbundle/blob/master/README.md</>
+
