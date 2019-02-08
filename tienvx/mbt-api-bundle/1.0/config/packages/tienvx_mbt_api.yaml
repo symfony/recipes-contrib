@@ -1,0 +1,4 @@
+tienvx_mbt_api:
+    java_binary: '%env(JAVA_BINARY)%'
+    plantuml_binary: '%env(PLANTUML_BINARY)%'
+    console_binary: '%env(CONSOLE_BINARY)%'
