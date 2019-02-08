@@ -9,16 +9,3 @@ commercetools:
                 scope: '%env(CTP_SCOPE)%'
                 oauth_url: '%env(CTP_AUTH_URL)%'
                 api_url: '%env(CTP_API_URL)%'
-    defaults:
-        country: DE
-        context:
-            locale: en
-            graceful: true
-    project_settings:
-        countries:
-            - DE
-        currencies:
-            - EUR
-        languages:
-            - en
-        messages: false
