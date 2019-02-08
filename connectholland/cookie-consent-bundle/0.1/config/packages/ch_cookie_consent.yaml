@@ -1,5 +1,1 @@
-ch_cookie_consent:
-    #theme: 'light'
-    #categories: ['analytics', 'tracking', 'marketing', 'social_media']
-    #excluded_routes: ~
-    #excluded_paths: ~
+ch_cookie_consent: ~
