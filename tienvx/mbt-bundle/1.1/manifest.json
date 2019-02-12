@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Tienvx\\Bundle\\MbtBundle\\TienvxMbtBundle": ["all"]
+    },
+    "container": {
+        "screenshots_dir": "%kernel.project_dir%/var/screenshots"
+    }
+}
