@@ -6,8 +6,6 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "#1": "To create a demo account, visit https://demo.yousign.fr/fr/public/api/registration",
-        "#2": "YOUSIGN_ENV should be 'demo' or 'prod'",
         "YOUSIGN_API_URL": "https://apidemo.yousign.fr:8181",
         "YOUSIGN_IFRAME_URL": "https://demo.yousign.fr",
         "YOUSIGN_API_KEY": "api_key",
