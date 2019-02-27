@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "SymfonyBundles\\ODMFixturesBundle\\SymfonyBundlesODMFixturesBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "aliases": ["doctrine-odm-fixtures", "odm-yaml-fixtures", "odm-fixtures"]
+}
