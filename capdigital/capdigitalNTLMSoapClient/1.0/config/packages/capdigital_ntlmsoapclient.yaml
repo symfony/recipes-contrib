@@ -1,0 +1,9 @@
+#capntlmsoapclient:
+capdigital_ntlmsoapclient:
+    feeds:
+        article:
+            title:       'My articles/posts'
+            description: 'Latest articles'
+            link:        'http://vincent.composieux.fr'
+            encoding:    'utf-8'
+            author:      'Vincent Composieux' # Only required for Atom feeds
