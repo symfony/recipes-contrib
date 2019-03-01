@@ -1,4 +1,4 @@
-vich_uploader_test:
+capdigital_ntlmsoapclient:
     db_driver: orm
 
     #mappings:
