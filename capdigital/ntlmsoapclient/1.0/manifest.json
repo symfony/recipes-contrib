@@ -3,6 +3,6 @@
         "Capdigital\\NTLMSoapClient\\CapdigitalNTLMSOAPClient": ["all"]
     },
     "copy-from-recipe": {
-        "config1/": "%CONFIG_DIR%/"
+        "config/": "%CONFIG_DIR%/"
     }
 }
