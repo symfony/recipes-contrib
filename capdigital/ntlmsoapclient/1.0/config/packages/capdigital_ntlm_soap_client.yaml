@@ -1,4 +1,4 @@
 capdigital_ntlm_soap_client:
-    url: ""
+    url: " "
     user: ""
     password: ""
