@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Capdigital\\NTLMSoapClient\\CapdigitalNTLMSoapClient": ["all"]
+        "Capdigital\\NtlmSoapClient\\CapdigitalNtlmSoapClient": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
