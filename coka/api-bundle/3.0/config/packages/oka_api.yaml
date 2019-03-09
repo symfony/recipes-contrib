@@ -8,7 +8,7 @@ oka_api:
         wsse:
             enabled: false
     security_behaviors:
-        password_updater: true
+        password_updater: false
     response:
         compression:
             enabled: false
