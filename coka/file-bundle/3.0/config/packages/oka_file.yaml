@@ -1,13 +1,8 @@
 oka_file:
     db_driver: orm
-    model_manager_name: ~
     storage:
         root_path: '%env(OKAFILE_STORAGE_ROOT_PATH)%'
         webserver:
             scheme: http
             host: '%env(OKAFILE_STORAGE_WEB_SERVER_HOST)%'
-            port: 80
-            path: '/'
-        image:
-            dominant_color: true
 
