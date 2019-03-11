@@ -1,0 +1,4 @@
+{
+    "bundles": {
+        "Capdigital\\NtlmSoapClient\\CapdigitalNtlmSoapClient": ["all"]
+}
