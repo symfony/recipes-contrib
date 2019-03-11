@@ -1,0 +1,7 @@
+capdigital_ntlm_soap_client:
+    url: ""
+    port: ""
+    server: ""
+    society: ""
+    user: ""
+    password: ""
