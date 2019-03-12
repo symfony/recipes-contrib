@@ -1,7 +1,9 @@
 {
     "bundles": {
         "Commercetools\\Symfony\\CtpBundle\\CtpBundle": ["all"],
-        "Commercetools\\Symfony\\CustomerBundle\\CustomerBundle": ["all"]
+        "Commercetools\\Symfony\\CustomerBundle\\CustomerBundle": ["all"],
+        "Commercetools\\Symfony\\SetupBundle\\SetupBundle": ["dev"],
+        "Commercetools\\Symfony\\StateBundle\\StateBundle": ["dev"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
