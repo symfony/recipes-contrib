@@ -3,4 +3,4 @@ KunstmaanAdminListBundle:
     # If your site is not multi language, remove the "{_locale}/" part of the prefix and the requirements
     prefix:   /{_locale}/
     requirements:
-        _locale: "%requiredlocales%"
+        _locale: "%kunstmaan_admin.required_locales%"
