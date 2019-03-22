@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "Crayner\\Doctrine\\CraynerDoctrineBundle": ["all"]
+    }
+}

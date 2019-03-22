@@ -1,0 +1,5 @@
+<bg=blue;fg=white>                                                  </>
+<bg=blue;fg=white> Next: Craig Rayner Doctrine Bundle Configuration </>
+<bg=blue;fg=white>                                                  </>
+
+Documentation: https://github.com/crayner/doctrine-bundle
