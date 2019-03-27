@@ -1,6 +1,6 @@
 <?php
 
-use MsgPhp\User\Entity\User;
+use MsgPhp\User\User;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 
 return function (ContainerConfigurator $container) {
