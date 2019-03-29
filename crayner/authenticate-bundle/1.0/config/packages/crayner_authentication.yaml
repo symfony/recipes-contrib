@@ -17,6 +17,7 @@ crayner_authenticate:
         maximum_available: 'argon2i'
         minimum_available: 'md5'
         always_upgrade: true
+    # User and Device Lock ...
     manage_failures:
         count: 3
         wait_time: 20 # Minutes
