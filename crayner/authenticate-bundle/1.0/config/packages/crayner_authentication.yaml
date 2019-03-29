@@ -37,6 +37,7 @@ crayner_authenticate:
             special_characters: 'Your password must contain a special character. !#@$%^&*)(\][><?:;+-'
             use_number: 'Your password must contain a number.'
             translation_domain: validators
+    #Rotate Passwords
     rotate_password:
         keep_last_number: 0
         keep_for_days: 0
