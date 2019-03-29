@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Crayner\\Authentication\\CraynerAuthenticationBundle": ["all"]
+        "Crayner\\Authenticate\\CraynerAuthenticateBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
