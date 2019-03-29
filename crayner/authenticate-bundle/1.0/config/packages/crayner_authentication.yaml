@@ -23,6 +23,7 @@ crayner_authenticate:
         wait_time: 20 # Minutes
         session: true
         user: true
+    # Password Validation
     password_validation:
         min_length: 8
         max_length: 150
