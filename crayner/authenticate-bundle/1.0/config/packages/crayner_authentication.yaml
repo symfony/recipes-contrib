@@ -1,0 +1,43 @@
+crayner_authenticate:
+    user_class: Crayner\Authenticate\Entity\User
+    mailer_available: true
+    highest_available_encoder:
+        # Argon2i Options
+        memory_cost: 16384
+        time_cost: 2
+        threads: 4
+        # BCrypt Options
+        cost: 15
+        # SHA256/MD5 Options
+        iterations_sha256: 1
+        iterations_md5: 1
+        encode_as_base64: false
+        password_salt_mask: '{password}{{salt}}'
+        # Global Options
+        maximum_available: 'argon2i'
+        minimum_available: 'md5'
+        always_upgrade: true
+    manage_failures:
+        count: 3
+        wait_time: 20 # Minutes
+        session: true
+        user: true
+    password_validation:
+        min_length: 8
+        max_length: 150
+        case_difference: true
+        special_characters: true
+        use_number: true
+        error_messages:
+            min_length: 'Your password needs to be %d characters long.'
+            max_length: 'Your password needs to be less than %d characters long.'
+            case_difference: 'Your password must contain upper and lower case characters.'
+            special_characters: 'Your password must contain a special character. !#@$%^&*)(\][><?:;+-'
+            use_number: 'Your password must contain a number.'
+            translation_domain: validators
+    rotate_password:
+        keep_last_number: 0
+        keep_for_days: 0
+        change_every: 60
+        message: 'The password has been used before.'
+        translation_domain: validators
