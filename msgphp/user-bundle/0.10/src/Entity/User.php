@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entity\User;
+namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use MsgPhp\User\User as BaseUser;
