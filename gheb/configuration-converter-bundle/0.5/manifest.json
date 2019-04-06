@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Gheb\\ConfigurationConverter\\ConfigurationConverterBundle": ["dev"]
+        "ConfigurationConverter\\ConfigurationConverterBundle": ["dev"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
