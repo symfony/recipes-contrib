@@ -19,4 +19,3 @@ ijanki_prometheus:
             gauge:
                 labels: [app, section]
                 help: is the data fresh
-
