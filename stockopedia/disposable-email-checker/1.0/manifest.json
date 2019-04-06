@@ -7,8 +7,5 @@
     },
     "composer-scripts": {
         "stockopedia:update-disposable-email-list": "symfony-cmd"
-    },
-    "gitignore": [
-        "/vendor/"
-    ]
+    }
 }
