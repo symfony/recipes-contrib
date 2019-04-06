@@ -1,0 +1,21 @@
+<bg=blue;fg=white>              </>
+<bg=blue;fg=white> What's next? </>
+<bg=blue;fg=white>              </>
+
+  - If not, install a driver storage and change it in <fg=green>config/packages/fos_user.yaml</>
+
+  - Modify your email address config in <fg=green>.env</>
+
+  - Uncomment <fg=green>csrf_protection</> and make sure <fg=green>twig engine</> is turned on by adding in <fg=green>config/packages/framework.yaml</>:
+
+framework:
+    # ...
+    csrf_protection: true
+    templating:
+        engines: ['twig']
+
+  - Create your User class
+    https://symfony.com/doc/master/bundles/FOSUserBundle/index.html#step-3-create-your-user-class
+
+  - Modify your security configuration in <fg=green>config/packages/security.yaml</>
+    https://symfony.com/doc/master/bundles/FOSUserBundle/index.html#step-4-configure-your-application-s-security-yml
