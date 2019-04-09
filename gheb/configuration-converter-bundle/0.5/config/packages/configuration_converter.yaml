@@ -1,0 +1,2 @@
+configuration_converter:
+    api_platform_default_export_dir: '%kernel.project_dir%/config/packages/api-platform/' #(default)
