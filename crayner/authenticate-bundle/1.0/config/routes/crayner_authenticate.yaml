@@ -1,3 +1,4 @@
 controllers:
     resource: '@CraynerAuthenticateBundle/Controller'
     type: annotation
+# Add some crap so I can restart TRAVIS TEST
