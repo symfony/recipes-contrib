@@ -1,4 +1,4 @@
-# Read more about Graphqlite available options at: https://graphqlite.thecodingmachine.io/docs/symfony-bundle
+# Read more about GraphQLite available options at: https://graphqlite.thecodingmachine.io/docs/symfony-bundle
 graphqlite:
     namespace:
         controllers: App\Controller\
