@@ -1,0 +1,27 @@
+teebb_tui_editor:
+    #enable: true                           # Whether to enable tui.editor.
+    #jquery: true                           # Whether to enable jquery in dependencies.
+    #jquery_path: ~                         # Custom jquery path.
+    #editor_js_path: ~                      # Custom tui.editor js path.
+
+    default_config: basic_config
+
+    configs:
+        basic_config:
+            to_html: false                  # Save to database use html syntax?
+            #previewStyle: 'vertical'       # Markdown editor's preview style (tab, vertical)
+            #height: '400px'                # Editor's height style value. Height is applied as border-box ex) '300px', '100%', 'auto'
+            #initialEditType: 'markdown'    # Initial editor type (markdown, wysiwyg)
+            exts:                           # exts must defined as array
+                - scrollSync
+                - colorSyntax
+                - uml
+                - chart
+                - mark
+                - table
+
+
+twig:
+    form_themes:
+        - '@TeebbTuiEditor/Form/tuieditor_widget.html.twig'
+
