@@ -1,3 +1,0 @@
-EndroidQrCodeBundle:
-    resource: "@EndroidQrCodeBundle/Resources/config/routes.yaml"
-    prefix: /qrcode

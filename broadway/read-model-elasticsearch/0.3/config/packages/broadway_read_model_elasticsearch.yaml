@@ -1,0 +1,18 @@
+broadway:
+    read_model: broadway.read_model.elasticsearch.repository_factory
+
+services:
+    broadway.elasticsearch.client_factory:
+        class: Broadway\ReadModel\ElasticSearch\ElasticSearchClientFactory
+
+    broadway.read_model.elasticsearch.repository_factory:
+        class: Broadway\ReadModel\ElasticSearch\ElasticSearchRepositoryFactory
+        arguments:
+            - "@broadway.elasticsearch.client"
+            - "@broadway.serializer.readmodel"
+
+    broadway.elasticsearch.client:
+        class: Elasticsearch\Client
+        factory: ['@broadway.elasticsearch.client_factory', create]
+        arguments:
+            - "%elasticsearch%"

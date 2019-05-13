@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "Doctrine\\Bundle\\PHPCRBundle\\DoctrinePHPCRBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "src/": "%SRC_DIR%/"
+    },
+    "env": {
+        "PHPCR_USER": "admin",
+        "PHPCR_PASSWORD": "admin",
+        "PHPCR_WORKSPACE": "default"
+    }
+}

@@ -1,0 +1,16 @@
+netopia_mobilpay_return_url:
+    path: /netopia-mobilpay/thank-you
+    methods: GET
+    defaults:
+        _controller: FrameworkBundle:Redirect:redirect
+        route: default
+        permanent: true
+
+netopia_mobilpay_confirm_url:
+    path: /netopia-mobilpay/confirm
+    methods: POST
+    defaults:
+        _controller: FrameworkBundle:Redirect:redirect
+        route: default
+        permanent: true
+

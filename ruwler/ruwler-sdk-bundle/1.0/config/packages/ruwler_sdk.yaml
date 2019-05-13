@@ -1,0 +1,2 @@
+ruwler_sdk:
+    api_key: '%env(RUWLER_SDK_API_KEY)%'

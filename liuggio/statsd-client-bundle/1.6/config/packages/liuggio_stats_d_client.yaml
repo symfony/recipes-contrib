@@ -1,0 +1,5 @@
+liuggio_stats_d_client:
+    connection:
+        host: '%env(STATS_D_HOST)%'
+        port: '%env(STATS_D_PORT)%'
+        protocol: '%env(STATS_D_PROTOCOL)%'

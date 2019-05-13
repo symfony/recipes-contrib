@@ -1,0 +1,13 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "container": {
+        "mongodb_uri": "%env(BROADWAY_EVENT_STORE_MONGODB_URI)%",
+        "mongodb_database": "%env(BROADWAY_EVENT_STORE_MONGODB_DATABASE)%"
+    },
+    "env": {
+        "BROADWAY_EVENT_STORE_MONGODB_URI": "mongodb://127.0.0.1/",
+        "BROADWAY_EVENT_STORE_MONGODB_DATABASE": "default"
+    }
+}

@@ -1,0 +1,11 @@
+<bg=blue;fg=white>              </>
+<bg=blue;fg=white> What's next? </>
+<bg=blue;fg=white>              </>
+
+  * <fg=blue>Finish</> bundle configuration:
+    1. Open <comment>config/packages/twig.yaml</>
+    2. Add form template to form_themes section like this:
+
+    twig:
+        form_themes:
+            - '@I18nForm/bootstrap_4_form.html.twig'

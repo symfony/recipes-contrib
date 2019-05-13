@@ -4,5 +4,8 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
-    }
+    },
+    "gitignore": [
+        "/public/media/cache/"
+    ]
 }

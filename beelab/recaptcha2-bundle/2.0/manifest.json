@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Beelab\\Recaptcha2Bundle\\BeelabRecaptcha2Bundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "APP_RECAPTCHA_SITE_KEY": "needed",
+        "APP_RECAPTCHA_SECRET": "needed"
+    }
+}    

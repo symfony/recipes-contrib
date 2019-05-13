@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Core23\\ShariffBundle\\Core23ShariffBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "FACEBOOK_API_ID": "",
+        "FACEBOOK_API_SECRET": ""
+    }
+}

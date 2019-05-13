@@ -1,5 +1,0 @@
-{
-    "env": {
-        "ENQUEUE_DSN": "beanstalk:"
-    }
-}

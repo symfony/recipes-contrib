@@ -1,3 +1,0 @@
-endroid_cm_sms:
-    disable_delivery: true
-    delivery_phone_numbers: []

@@ -1,0 +1,25 @@
+{
+    "bundles": {
+        "Contao\\CoreBundle\\ContaoCoreBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "composer-scripts": {
+        "contao:install %PUBLIC_DIR%": "symfony-cmd",
+        "contao:symlinks %PUBLIC_DIR%": "symfony-cmd"
+    },
+    "gitignore": [
+        "/assets/",
+        "/files/",
+        "/public/assets",
+        "/public/files/",
+        "/public/share/",
+        "/public/system/",
+        "/system/*",
+        "!/system/config/",
+        "/system/config/localconfig.php",
+        "/system/config/tcpdf.php",
+        "/system/modules/*/.skip"
+    ]
+}

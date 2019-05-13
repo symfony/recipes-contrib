@@ -1,0 +1,6 @@
+artprima_prometheus_metrics:
+    namespace: myapp
+    type: apcu
+    ignored_routes:
+    - prometheus_bundle_prometheus
+    - _wdt

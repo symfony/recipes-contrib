@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Seferov\\AwsBundle\\SeferovAwsBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "AWS_CREDENTIALS_KEY": "CHANGE_THIS",
+        "AWS_CREDENTIALS_SECRET": "CHANGE_THIS"
+    }
+}

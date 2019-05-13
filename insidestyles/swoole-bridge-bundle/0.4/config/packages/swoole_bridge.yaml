@@ -1,0 +1,4 @@
+swoole_bridge:
+    server:
+        host: "%env(SWOOLE_SERVER_HOST)%"
+        port: "%env(SWOOLE_SERVER_PORT)%"

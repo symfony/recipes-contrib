@@ -1,0 +1,18 @@
+{
+    "bundles": {
+        "Swarrot\\SwarrotBundle\\SwarrotBundle": ["all"]
+    },
+    "container": {
+        "my_consumer.processor.service": "App\\Consumer\\MyConsumer"
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "src/": "%SRC_DIR%/"
+    },
+    "env": {
+        "RABBITMQ_HOST": "127.0.0.1",
+        "RABBITMQ_PORT": "5672",
+        "RABBITMQ_LOGIN": "user",
+        "RABBITMQ_PASSWORD": "password"
+    }
+}

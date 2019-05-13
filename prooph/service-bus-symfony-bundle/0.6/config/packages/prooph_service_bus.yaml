@@ -1,0 +1,13 @@
+prooph_service_bus:
+    command_buses:
+        default_command_bus: ~
+    event_buses:
+        default_event_bus: ~
+    query_buses:
+        default_query_bus: ~
+
+services:
+    _defaults:
+        public: false
+
+    Prooph\ServiceBus\CommandBus: '@prooph_service_bus.default_command_bus'

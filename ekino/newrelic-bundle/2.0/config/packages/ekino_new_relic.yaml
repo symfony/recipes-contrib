@@ -1,0 +1,6 @@
+ekino_new_relic:
+    enabled: false
+    application_name: 'My Symfony Application' # Remove this to use the value from php.ini
+    api_key: "%env(NEWRELIC_API_KEY)%"
+    exceptions: true
+    deprecations: true

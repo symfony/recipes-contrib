@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Atlas\\Symfony\\AtlasBundle": ["all"]
+    },
+    "copy-from-package": {
+        "Resources/config/atlas.yaml": "%CONFIG_DIR%/packages/atlas.yaml"
+    },
+    "env": {
+        "ATLAS_PDO_DSN": "",
+        "ATLAS_PDO_USERNAME": "",
+        "ATLAS_PDO_PASSWORD": ""
+    }
+}

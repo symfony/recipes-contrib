@@ -1,0 +1,6 @@
+picoss_yousign:
+    api_url: '%env(YOUSIGN_API_URL)%'
+    iframe_url: '%env(YOUSIGN_IFRAME_URL)%'
+    api_key: '%env(YOUSIGN_API_KEY)%'
+    username: '%env(YOUSIGN_USERNAME)%'
+    password: '%env(YOUSIGN_PASSWORD)%'

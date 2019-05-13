@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Flagception\\Bundle\\FlagceptionBundle\\FlagceptionBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

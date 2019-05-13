@@ -1,0 +1,11 @@
+KunstmaanSeoBundle:
+    resource: "@KunstmaanSeoBundle/Resources/config/routing.yml"
+    # If your site is not multi language, remove the "{_locale}/" part of prefix and requirements
+    prefix: /{_locale}/
+    requirements:
+        _locale: "%kunstmaan_admin.required_locales%"
+
+# Robots.txt
+KunstmaanSeoBundle_robots:
+    resource: "@KunstmaanSeoBundle/Controller/RobotsController.php"
+    type: annotation

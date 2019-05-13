@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "MsgPhp\\EavBundle\\MsgPhpEavBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "src/": "%SRC_DIR%/"
+    }
+}

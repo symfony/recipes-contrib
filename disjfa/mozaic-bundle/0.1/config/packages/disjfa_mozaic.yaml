@@ -1,0 +1,4 @@
+disjfa_mozaic:
+    unsplash:
+        application_id: '%env(resolve:UNSPLASH_APPLICATION_ID)%'
+        secret: '%env(resolve:UNSPLASH_APPLICATION_SECRET)%'

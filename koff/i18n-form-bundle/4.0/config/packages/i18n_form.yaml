@@ -1,0 +1,4 @@
+i18n_form:
+    locales: 'en' # array or string separated with "|" or ","
+#    required_locales: 'en'
+#    excluded_fields: 'id|locale|translatable'

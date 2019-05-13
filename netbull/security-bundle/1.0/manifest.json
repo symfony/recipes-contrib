@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "NetBull\\SecurityBundle\\NetBullSecurityBundle": ["all"]
+    },
+    "composer-scripts": {
+        "vendor/bin/browscap-php browscap:fetch": "php-script",
+        "vendor/bin/browscap-php browscap:convert": "php-script"
+    }
+}

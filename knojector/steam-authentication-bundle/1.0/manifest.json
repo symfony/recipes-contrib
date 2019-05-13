@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Knojector\\SteamAuthenticationBundle\\KnojectorSteamAuthenticationBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "STEAM_API_KEY": ""
+    }
+}
