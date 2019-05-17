@@ -1,0 +1,2 @@
+js_translation_api:
+    resource: '@JsTranslationBundle/Resources/config/routing.yml'
