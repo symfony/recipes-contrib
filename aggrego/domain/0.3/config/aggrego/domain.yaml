@@ -1,0 +1,28 @@
+services:
+    # Domain Board
+    aggrego.domain.board.repository:
+        alias: 'aggrego.file_domain_repository.domain.board.repository'
+
+    aggrego.domain.api.create_board.use_case:
+        class: Aggrego\Domain\Api\Command\CreateBoard\UseCase
+        arguments:
+            - "@aggrego.domain_event_producer.domain.repository"
+            - "@aggrego.domain.board.new_board_factory"
+
+    aggrego.domain.api.transform_board.use_case:
+        class: Aggrego\Domain\Api\Command\TransformBoard\UseCase
+        arguments:
+            - "@aggrego.domain_event_producer.domain.repository"
+            - "@aggrego.domain.board.from_board_factory"
+
+    aggrego.domain.board.new_board_factory:
+        class: Aggrego\Domain\Board\NewBoardFactory
+        arguments:
+            - ['@aggrego.domain.data_board.board.builder']
+            - "@aggrego.domain.profile.board_construction.factory"
+
+    aggrego.domain.board.from_board_factory:
+        class: Aggrego\Domain\Board\FromBoardFactory
+        arguments:
+            - ['@aggrego.domain.data_board.board.builder']
+            - "@aggrego.domain.profile.board_transformation.factory"
