@@ -6,6 +6,10 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
+        "MERITOO_DEFAULT_LOCALE": "en",
         "MERITOO_FORM_NOVALIDATE": "false"
+    },
+    "container": {
+        "locale": "%env(MERITOO_DEFAULT_LOCALE)%"
     }
 }
