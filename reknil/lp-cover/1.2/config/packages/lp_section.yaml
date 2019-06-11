@@ -1,3 +1,0 @@
-twig:
-    globals:
-        cover: '@App\Service\CoverSection'
