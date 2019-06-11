@@ -1,3 +1,3 @@
 twig:
     globals:
-        myvar: 'XXX'
+        cover: '@App\Service\CoverSection'
