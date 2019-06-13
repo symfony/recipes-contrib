@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Vatri\\GoogleDriveBundle": ["all"]
+        "Vatri\\GoogleDriveBundle\\VatriGoogleDriveBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
