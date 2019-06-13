@@ -3,7 +3,7 @@ vatri_google_drive:
     vatri_google_drive.redirect_after_login_url: '%env(VATRI_GOOGLE_DRIVE_REDIRECT_AFTER_AUTH)%'
     #  vatri_google_drive.session_access_token_key: vatri_google_drive.access_token
     vatri_google_drive.cookie_access_token_key: vatri_google_drive_access_token
-    vatri_google_drive.session.key.redirect_path_after_auth: vatri_google_drive.session_redirect_path_after_auth
+    vatri_google_drive__session__key__redirect_path_after_auth: vatri_google_drive.session_redirect_path_after_auth
 
 services:
 
