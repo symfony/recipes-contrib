@@ -1,4 +1,4 @@
-container:
+parameters:
     vatri_google_drive.credentials_file: '%kernel.project_dir%/%env(VATRI_GOOGLE_DRIVE_CREDENTIALS_FILE)%'
     vatri_google_drive.redirect_after_login_url: '%env(VATRI_GOOGLE_DRIVE_REDIRECT_AFTER_AUTH)%'
     #  vatri_google_drive.session_access_token_key: vatri_google_drive.access_token
