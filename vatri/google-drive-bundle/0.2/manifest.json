@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Vatri\\GoogleDriveBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "VATRI_GOOGLE_DRIVE_CREDENTIALS_FILE": "config/google-drive-api-client_secrets.json",
+        "VATRI_GOOGLE_DRIVE_REDIRECT_AFTER_AUTH": "/"
+    }
+}

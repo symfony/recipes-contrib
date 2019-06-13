@@ -1,0 +1,3 @@
+vatri_google_drive:
+    resource: '@VatriGoogleDriveBundle/Controller/'
+    type:     annotation
