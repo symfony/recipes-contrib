@@ -4,11 +4,3 @@ oka_api:
             allow_credentials: true
             expose_headers: ['Accept-Encoding']
             max_age: 3600
-    firewalls:
-        wsse:
-            enabled: false
-    security_behaviors:
-        password_updater: false
-    response:
-        compression:
-            enabled: false
