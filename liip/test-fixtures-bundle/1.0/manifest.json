@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Liip\\TestFixturesBundle\\LiipTestFixturesBundle": ["test"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
