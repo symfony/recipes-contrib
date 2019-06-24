@@ -1,0 +1,5 @@
+<bg=blue;fg=white>              </>
+<bg=blue;fg=white> What's next? </>
+<bg=blue;fg=white>              </>
+
+  * Now install MJML into your project via Yarn or npm : yarn add mjml or npm install mjml --save
