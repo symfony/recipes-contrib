@@ -1,7 +1,6 @@
 {
     "copy-from-package": {
-        "config/": "%CONFIG_DIR%/",
-        "src/": "%SRC_DIR%/"
+        "config/": "%CONFIG_DIR%/"
     },
     "env": {
         "AWS_SNS_DSN": "enqueue://acme?topic[name]=my_sns_topic",
