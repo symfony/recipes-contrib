@@ -1,0 +1,6 @@
+services:
+    Bref\Logger\StderrLogger: ~
+
+    # Register aliases
+    logger: '@Bref\Logger\StderrLogger'
+    Psr\Log\LoggerInterface: '@Bref\Logger\StderrLogger'
