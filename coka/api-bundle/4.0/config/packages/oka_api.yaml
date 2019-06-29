@@ -1,0 +1,6 @@
+oka_api:
+    cors:
+        default:
+            allow_credentials: true
+            expose_headers: ['Accept-Encoding']
+            max_age: 3600

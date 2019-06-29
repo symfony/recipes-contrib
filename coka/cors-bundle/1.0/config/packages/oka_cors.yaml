@@ -1,0 +1,4 @@
+oka_cors:
+    default:
+        expose_headers: ['Accept-Encoding']
+        max_age: 3600

@@ -1,0 +1,4 @@
+oka_wsse_authentication:
+    db_driver: orm
+    nonce:
+        save_path: '%kernel.cache_dir%/oka_wsse/nonces'
