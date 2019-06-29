@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Insidestyles\\JsonRpcBundle\\JsonRpcBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
