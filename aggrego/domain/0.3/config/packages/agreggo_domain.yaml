@@ -8,20 +8,20 @@ services:
 
     Aggrego\Domain\Api\Command\CreateBoard\UseCase:
         arguments:
-            - "@Aggrego\Domain\Board\Repository"
-            - "@Aggrego\Domain\Board\NewBoardFactory"
+            - '@Aggrego\Domain\Board\Repository'
+            - '@Aggrego\Domain\Board\NewBoardFactory'
 
     Aggrego\Domain\Api\Command\TransformBoard\UseCase:
         arguments:
-            - "@Aggrego\Domain\Board\Repository"
-            - "@Aggrego\Domain\Board\FromBoardFactory"
+            - '@Aggrego\Domain\Board\Repository'
+            - '@Aggrego\Domain\Board\FromBoardFactory'
 
     Aggrego\Domain\Board\NewBoardFactory:
         arguments:
             - ['@Aggrego.domain.data_board.board.builder']
-            - "@Aggrego\Domain\Profile\BoardTransformation\Factory"
+            - '@Aggrego\Domain\Profile\BoardTransformation\Factory'
 
     Aggrego\Domain\Board\FromBoardFactory:
         arguments:
             - ['@aggrego.domain.data_board.board.builder']
-            - "@Aggrego\Domain\Profile\BoardTransformation\Factory"
+            - '@Aggrego\Domain\Profile\BoardTransformation\Factory'
