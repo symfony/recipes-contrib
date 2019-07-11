@@ -4,14 +4,13 @@ doctrine_phpcr:
         backend:
             type: doctrinedbal
             connection: default
-            caches:
-                meta: doctrine_cache.providers.phpcr_meta
-                nodes: doctrine_cache.providers.phpcr_nodes
             parameters:
                 jackalope.check_login_on_server: false
         workspace: '%env(PHPCR_WORKSPACE)%'
         username: '%env(PHPCR_USER)%'
         password: '%env(PHPCR_PASSWORD)%'
+        #logging: '%kernel.debug%'
+        #profiling: '%kernel.debug%'
     # enable the ODM layer
     odm:
         auto_mapping: true
@@ -26,9 +25,3 @@ doctrine_phpcr:
                 prefix: App\Document\
                 is_bundle: false
         # add your locale configuration here as described in: https://symfony.com/doc/current/cmf/bundles/phpcr_odm/multilang.html#translation-configuration
-doctrine_cache:
-    providers:
-        phpcr_meta:
-            type: file_system
-        phpcr_nodes:
-            type: file_system
