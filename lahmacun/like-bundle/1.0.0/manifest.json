@@ -1,0 +1,11 @@
+{
+  "aliases": [
+    "lahmacun-like"
+  ],
+  "bundles": {
+    "Lahmacun\\LikeBundle\\LahmacunLikeBundle": ["all"]
+  },
+  "copy-from-recipe": {
+    "config/": "%CONFIG_DIR%/"
+  }
+}

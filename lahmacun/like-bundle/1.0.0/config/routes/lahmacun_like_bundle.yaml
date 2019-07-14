@@ -1,0 +1,3 @@
+lahmacun_like_bundle_controllers:
+  resource: Lahmacun\LikeBundle\Controller
+  type: annotation
