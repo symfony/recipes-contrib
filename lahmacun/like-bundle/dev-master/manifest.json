@@ -1,7 +1,4 @@
 {
-    "aliases": [
-        "lahmacun-like"
-    ],
     "bundles": {
         "Lahmacun\\LikeBundle\\LahmacunLikeBundle": ["all"]
     },
