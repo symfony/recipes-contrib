@@ -1,0 +1,5 @@
+<bg=green;fg=white>              </>
+<bg=green;fg=white> Bundle Installed successfully. </>
+<bg=green;fg=white>              </>
+
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/lahmacun/like-bundle</>
