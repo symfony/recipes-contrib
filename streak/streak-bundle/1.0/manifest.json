@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Streak\\StreakBundle\\StreakBundle": ["all"]
+    },
+    "env": {
+        "EVENT_STORE_POSTGRES_DATABASE": "streak",
+        "EVENT_STORE_POSTGRES_HOSTNAME": "localhost",
+        "EVENT_STORE_POSTGRES_PORT": "5432",
+        "EVENT_STORE_POSTGRES_USERNAME": "user",
+        "EVENT_STORE_POSTGRES_PASSWORD": "pass",
+        "EVENT_STORE_DATABASE_URL": "pgsql://${EVENT_STORE_POSTGRES_USERNAME}:${EVENT_STORE_POSTGRES_PASSWORD}@${EVENT_STORE_POSTGRES_HOSTNAME}:${EVENT_STORE_POSTGRES_PORT}/${EVENT_STORE_POSTGRES_DATABASE}"
+    }
+}
