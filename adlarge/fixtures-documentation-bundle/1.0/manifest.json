@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Adlarge\\FixturesDocumentationBundle\\AdlargeFixturesDocumentationBundle": ["dev"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "composer-scripts": {
+        "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
+    }
+}
