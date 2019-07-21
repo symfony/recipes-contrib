@@ -7,7 +7,7 @@
     },
     "env": {
         "BOTJAEGER_NEXMO_API_KEY": "your-api-public-key",
-        "BOTJAEGER_NEXMO_SEC_KEY": "your-api-secret-key",
+        "BOTJAEGER_NEXMO_API_SECRET": "your-api-secret-key",
         "BOTJAEGER_NEXMO_API_BRAND": "your-brand-name"
     }
 }
