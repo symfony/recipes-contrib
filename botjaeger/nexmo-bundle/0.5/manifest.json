@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Botjaeger\\NexmoBundle": ["all"]
+        "Botjaeger\\NexmoBundle\\BotjaegerNexmoBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
