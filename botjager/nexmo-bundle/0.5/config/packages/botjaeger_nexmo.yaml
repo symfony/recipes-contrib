@@ -1,0 +1,4 @@
+botjaeger_nexmo:
+    api_key: "%env(BOTJAEGER_NEXMO_API_KEY)%"
+    sec_key: "%env(BOTJAEGER_NEXMO_SEC_KEY)%"
+    api_brand: "%env(BOTJAEGER_NEXMO_API_BRAND)%"
