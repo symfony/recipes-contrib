@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "Conduction\\CommonGroundBundle\\CommonGroundBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "Resources/config/": "%CONFIG_DIR%/packages",
+        "Resources/public/": "%PUBLIC_DIR%/bundles/commonground",
+    },
+    "env": {
+        "CONDUCTION_COMMONGROUND_BAG_APIKEY": "",
+        "CONDUCTION_COMMONGROUND_KVK_APIKEY": ""
+    },
+    "aliases": ["commonground"]
+}

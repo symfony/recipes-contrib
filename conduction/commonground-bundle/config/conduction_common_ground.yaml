@@ -1,0 +1,35 @@
+conduction_common_ground:      
+    bag:
+        # cashing is a common ground hot patato, from a data at the source perspective we don't want to duplicate data
+        # but.... city and street names are not going to change regularly, so to prevent unnecessary api calls cashing makes sense
+        #
+        # Therefore we are going to allow cashing on the bag api
+        #
+        # Valid values:
+        # - false (no cashing)
+        # - integer (cash for given amount of milliseconds)
+        # - a valid php datetime input (cash item deleted at that date), https://www.php.net/manual/en/function.strtotime.php
+        cash:        
+            nummeraanduiding: 604800000 # 1 week      
+            woonplaats: 'January 1st Next Year' # By law Dutch localities only change in January the first      
+            openbareruimte:  604800000 # 1 week      
+            panden: 604800000 # 1 week
+            verblijfsobject: 604800000 # 1 week
+            ligplaatsen: 604800000 # 1 week
+            standplaatsen: 604800000 # 1 week
+        # Get your BAG api key at https://bag.basisregistraties.overheid.nl/restful-api, or by sending a email to dataplatform@kadaster.nl        
+        apikey: 'ChangeMe' 
+        # The default BAG api location, change this if yoy are using an NLX adaptor
+        location: 'https://bag.basisregistraties.overheid.nl/api/v1/' 
+    kvk:
+        # Get your KVK api key at https://www.kvk.nl/producten-bestellen/koppeling-handelsregister/kvk-api/        
+        apikey: 'ChangeMe' 
+        # The default KVK api location, change this if yoy are using an NLX adaptor, but keep in mind that the kvk uses port 443
+        location: 'https://api.kvk.nl:443/' 
+        
+services:    
+    # please note that last definitions always *replace* previous ones
+    conduction.commonground.bag:
+        class: App\Conduction\CommonGroundBundel\Service\KadasterService
+        arguments: 
+            - []
