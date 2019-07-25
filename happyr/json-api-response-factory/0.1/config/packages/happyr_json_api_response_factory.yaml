@@ -1,0 +1,11 @@
+services:
+    Happyr\JsonApiResponseFactory\ResponseFactory:
+        arguments: ['@happyr.fractal.manager']
+
+    happyr.fractal.manager:
+        class: League\Fractal\Manager
+        calls:
+            - [setSerializer, ['@happyr.fractal.json_api_serializer']]
+
+    happyr.fractal.json_api_serializer:
+        class: League\Fractal\Serializer\JsonApiSerializer
