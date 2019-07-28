@@ -5,8 +5,7 @@ services:
         autoconfigure: true
 
     # Enable DTO handler.
-    # Comment or remove a line, if you don't want to use the defaults or add
-    # your own handlers to the list.
+    # Comment or remove a line, if you don't want to use the defaults or add your own handlers to the list.
     # See any of the default handlers for reference.
     Basster\LazyResponseBundle\Response\Handler\JsonSerializeResponseHandler: ~
     Basster\LazyResponseBundle\Response\Handler\RedirectResponseHandler: ~
