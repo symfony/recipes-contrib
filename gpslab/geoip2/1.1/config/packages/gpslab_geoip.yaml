@@ -6,4 +6,4 @@ gpslab_geoip:
     url: 'https://geolite.maxmind.com/download/geoip/database/GeoLite2-City.mmdb.gz'
 
     # Get model data in this locale
-    locales: [ '%locale%' ]
+    locales: [ 'en' ]
