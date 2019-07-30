@@ -2,6 +2,9 @@
     "bundles": {
         "GpsLab\\Bundle\\GeoIP2Bundle\\GpsLabGeoIP2Bundle": ["all"]
     },
+    "container": {
+        "locale": "en"
+    },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     },
