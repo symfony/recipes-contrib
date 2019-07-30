@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "HugoSoltys\\FitzBundle\\FitzBundle": ["dev", "test"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
+

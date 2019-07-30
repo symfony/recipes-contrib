@@ -1,0 +1,3 @@
+fitz:
+    composer_path: '/usr/local/bin/composer'
+    queue_file_path: '%kernel.project_dir%/vendor/hugosoltys/fitz-bundle'
