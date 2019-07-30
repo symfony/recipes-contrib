@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "GpsLab\\Bundle\\GeoIP2Bundle\\GpsLabGeoIP2Bundle": ["all"]
+    },
+    "composer-scripts": {
+        "geoip2:update": "symfony-cmd"
+    }
+}
