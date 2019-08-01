@@ -4,4 +4,4 @@ services:
         autowire: true
         autoconfigure: true
 
-    NicoHaase\TwigIsbnFormatter\IsbnFormatterExtension: ~
+    NicoHaase\TwigIsbnFormatter\IsbnFormatterExtension: null

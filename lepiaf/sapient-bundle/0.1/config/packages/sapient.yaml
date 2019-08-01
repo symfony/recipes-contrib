@@ -5,5 +5,5 @@ sapient:
     guzzle_middleware:
         unseal: false
         verify: false
-    sealing_public_keys: ~
-    verifying_public_keys: ~
+    sealing_public_keys: null
+    verifying_public_keys: null

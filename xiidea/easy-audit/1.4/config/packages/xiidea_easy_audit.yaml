@@ -2,4 +2,4 @@
 xiidea_easy_audit:
     entity_class: Xiidea\EasyAuditBundle\Entity\BaseAuditLog
     default_logger: false
-    user_property : ~ # or username
+    user_property : null # or username

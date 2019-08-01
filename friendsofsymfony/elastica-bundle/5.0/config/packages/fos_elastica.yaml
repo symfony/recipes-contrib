@@ -3,4 +3,4 @@ fos_elastica:
     clients:
         default: { host: localhost, port: 9200 }
     indexes:
-        app: ~
+        app: null

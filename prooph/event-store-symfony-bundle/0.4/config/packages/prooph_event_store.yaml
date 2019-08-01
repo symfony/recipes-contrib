@@ -7,4 +7,4 @@ services:
     _defaults:
         public: false
 
-    Prooph\EventSourcing\EventStoreIntegration\AggregateTranslator: ~
+    Prooph\EventSourcing\EventStoreIntegration\AggregateTranslator: null

@@ -2,6 +2,6 @@ json_rpc_api:
     handlers:
         main:
             path: /api
-            host: ~
-            serializer: ~
-            logger: ~
+            host: null
+            serializer: null
+            logger: null
