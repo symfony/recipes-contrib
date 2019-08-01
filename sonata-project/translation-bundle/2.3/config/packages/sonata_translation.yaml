@@ -5,7 +5,7 @@ sonata_admin:
 
 sonata_block:
     blocks:
-        sonata_translation.block.locale_switcher: ~
+        sonata_translation.block.locale_switcher: null
 
 sonata_translation:
     locales: ['en']

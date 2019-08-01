@@ -5,4 +5,4 @@ default:
                 - App\Tests\Behat\DemoContext
 
     extensions:
-        FriendsOfBehat\SymfonyExtension: ~
+        FriendsOfBehat\SymfonyExtension: null

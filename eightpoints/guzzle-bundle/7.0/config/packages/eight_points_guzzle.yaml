@@ -22,4 +22,4 @@ eight_points_guzzle:
 
             # Find plugins here:
             # https://github.com/8p/EightPointsGuzzleBundle#known-and-supported-plugins
-            plugin: ~
+            plugin: null

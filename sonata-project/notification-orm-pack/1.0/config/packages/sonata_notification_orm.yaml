@@ -1,6 +1,6 @@
 sonata_notification:
     backend: sonata.notification.backend.doctrine
     backends:
-        doctrine: ~
+        doctrine: null
     class:
         message: App\Entity\SonataNotificationMessage

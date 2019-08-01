@@ -7,4 +7,4 @@ omnipay:
     data_keys:
         paymentId: ['orderNumber']
         customerEmail: ['customerNumber']
-    gateways: ~
+    gateways: null
