@@ -1,0 +1,13 @@
+nameisis_cache:
+    enabled: false
+
+services:
+    nameisis.cache.listener:
+        class: Nameisis\Cache\EventListener\CacheListener
+        arguments:
+            - '@annotation_reader'
+            - '@service_container'
+            - null
+            - null
+        tags:
+            -   name: kernel.event_subscriber
