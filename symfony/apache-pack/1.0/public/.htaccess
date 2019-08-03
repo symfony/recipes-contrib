@@ -53,6 +53,9 @@ DirectoryIndex index.php
     RewriteCond %{REQUEST_FILENAME} -f
     RewriteRule ^ - [L]
 
+    # Rewrites link with anchor
+    RewriteRule ^(.*)#(.*)$ %{REQUEST_URI} [R=301,L,NE]
+
     # Rewrite all other queries to the front controller.
     RewriteRule ^ %{ENV:BASE}/index.php [L]
 </IfModule>
