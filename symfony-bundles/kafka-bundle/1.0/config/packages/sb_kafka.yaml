@@ -1,17 +1,17 @@
 sb_kafka:
     producers:
         configuration:
-            group.id: 'main_group'
-            log.connection.close: 'false'
-            metadata.broker.list: '%env(resolve:KAFKA_BROKERS)%'
-            queue.buffering.max.messages: 10000000
+            group_id: 'main_group'
+            log_connection_close: 'false'
+            metadata_broker_list: '%env(resolve:KAFKA_BROKERS)%'
+            queue_buffering_max_messages: 10000000
 
     consumers:
         configuration:
-            group.id: 'main_group'
-            log.connection.close: 'false'
-            metadata.broker.list: '%env(resolve:KAFKA_BROKERS)%'
+            group_id: 'main_group'
+            log_connection_close: 'false'
+            metadata_broker_list: '%env(resolve:KAFKA_BROKERS)%'
 
     topics:
         configuration:
-            auto.offset.reset: smallest
+            auto_offset_reset: smallest
