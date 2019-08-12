@@ -10,5 +10,6 @@ trikoder_oauth2:
         public_key: /var/oauth/public.key                       # Change this
 
     persistence:
-        doctrine:
-            entity_manager: default
+        in_memory: null
+#        doctrine:
+#            entity_manager: default
