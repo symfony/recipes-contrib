@@ -14,12 +14,5 @@
   3. <question>Update the database</>
     * Update the database so bundle entities can be persisted using Doctrine: <comment>bin/console doctrine:schema:update --force</>
 
-  4. <question>Import routes</>
-    * Import the routes inside your <info>config/routes.yaml</> file:
-      <comment>
-      oauth2:
-          resource: '@TrikoderOAuth2Bundle/Resources/config/routes.xml'
-      </>
-
-  5. <question>Read the docs</>
+  4. <question>Read the docs</>
     * Read the documentation at <comment>https://github.com/trikoder/oauth2-bundle/blob/master/docs/basic-setup.md</>
