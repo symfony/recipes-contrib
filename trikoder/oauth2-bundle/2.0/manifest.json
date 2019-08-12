@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Trikoder\\Bundle\\OAuth2Bundle\\TrikoderOAuth2Bundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "OAUTH2_ENCRYPTION_KEY": "%generate(secret)%"
+    }
+}
