@@ -1,0 +1,3 @@
+scssphp:
+    enabled: true
+    autoUpdate: false
