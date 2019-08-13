@@ -15,4 +15,4 @@
     * Update the database so bundle entities can be persisted using Doctrine: <comment>bin/console doctrine:schema:update --force</>
 
   4. <question>Read the docs</>
-    * Read the documentation at <comment>https://github.com/trikoder/oauth2-bundle/blob/master/docs/basic-setup.md</>
+    * Read the documentation at <comment>https://github.com/trikoder/oauth2-bundle/blob/v2.x/docs/basic-setup.md</>
