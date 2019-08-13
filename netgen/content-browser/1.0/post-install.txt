@@ -1,6 +1,6 @@
-<bg=blue;fg=white>                                    </>
-<bg=blue;fg=white> Next: Netgen Content Browser docs  </>
-<bg=blue;fg=white>                                    </>
+<bg=blue;fg=white>                             </>
+<bg=blue;fg=white> Netgen Content Browser docs </>
+<bg=blue;fg=white>                             </>
 
   * Learn how to integrate Content Browser into your CMS backend by reading
-    the documentation located at: https://docs.netgen.io/projects/layouts/en/latest/
+    the documentation located at: <comment>https://docs.netgen.io/projects/cb/en/latest/</>
