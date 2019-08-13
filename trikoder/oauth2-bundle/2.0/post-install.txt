@@ -12,11 +12,11 @@
     ii)  Configure the <info>encryption_key</> with a secure encryption key: <comment>https://oauth2.thephpleague.com/installation/#string-password</>
 
   3. <question>Update the database</>
-    * Update the database so bundle entities can be persisted using Doctrine: <comment>bin/console doctrine:schema:update --force</>
+    i)   Update the database so bundle entities can be persisted using Doctrine: <comment>bin/console doctrine:schema:update --force</>
 
   4. <question>Install a PSR 7/17 implementation</>
     i)   Require a PSR 7/17 implementation. We recommend that you use nyholm/psr7.
     ii)  (Optional) Choose a different implementation package: https://github.com/trikoder/oauth2-bundle/blob/v2.x/docs/psr-implementation-switching.md
 
   5. <question>Read the docs</>
-    * Read the documentation at <comment>https://github.com/trikoder/oauth2-bundle/blob/v2.x/docs/basic-setup.md</>
+    i)   Read the documentation at <comment>https://github.com/trikoder/oauth2-bundle/blob/v2.x/docs/basic-setup.md</>
