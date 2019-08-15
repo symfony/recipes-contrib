@@ -5,8 +5,14 @@ services:
         autoconfigure: true
 
     # Enable DTO handler.
-    # Comment or remove a line, if you don't want to use the defaults or add your own handlers to the list.
+    # Comment or remove, if you don't want to use the default.
     # See any of the default handlers for reference.
-    Basster\LazyResponseBundle\Response\Handler\JsonSerializeResponseHandler: ~
     Basster\LazyResponseBundle\Response\Handler\RedirectResponseHandler: ~
-    Basster\LazyResponseBundle\Response\Handler\TwigResponseHandler: ~
+
+    # Requires twig
+    # Basster\LazyResponseBundle\Response\Handler\TwigResponseHandler: ~
+
+    # Requires symfony/serializer
+    # Basster\LazyResponseBundle\Response\Handler\JsonSerializeResponseHandler: ~
+
+    # Feel free to add your own handlers:
