@@ -1,0 +1,15 @@
+gpslab_domain_event:
+    # Event bus service
+    # Support 'listener_located', 'queue' or a custom service
+    bus: 'listener_located'
+
+    # Event queue service
+    # Support 'pull_memory', 'subscribe_executing' or a custom service
+    queue: 'pull_memory'
+
+    # Event listener locator
+    # Support 'symfony', 'container', 'direct_binding' or custom service
+    locator: 'symfony'
+
+    # Publish domain events post a Doctrine flush event
+    publish_on_flush: true
