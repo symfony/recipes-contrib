@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "Twc\\BusBundle\\TwcBusBundle::class": ["all"]
+    }    
+}
