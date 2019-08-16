@@ -1,0 +1,11 @@
+maksze_telemetry:
+    #yandex_metrika:
+        #- {id: any_id}
+    #yandex_webmaster:
+        #- {id: any_id}
+    #google_search_console:
+        #- {id: any_id}
+    #google_analytics:
+        #- {id: any_id}
+    #facebook_pixel:
+        #- {id: any_id}
