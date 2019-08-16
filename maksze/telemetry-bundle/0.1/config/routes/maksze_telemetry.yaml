@@ -1,0 +1,3 @@
+_maksze_telemetry:
+    resource: '@MaksZeTelemetryBundle/Resources/config/routes.xml'
+    prefix: /
