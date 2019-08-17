@@ -1,5 +1,4 @@
 {
-    "aliases": ["dockfony"],
     "copy-from-package": {
         "docker-files/docker/": "%SRC_DIR%/../docker/",
         "docker-files/docker-compose.yml": "%SRC_DIR%/../docker-compose.yml",
