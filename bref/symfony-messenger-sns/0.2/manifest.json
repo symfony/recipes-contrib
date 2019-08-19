@@ -3,7 +3,7 @@
         "config/": "%CONFIG_DIR%/packages/"
     },
     "env": {
-        "AWS_SNS_DSN": "enqueue://acme?topic[name]=my_sns_topic",
+        "AWS_SNS_DSN": "enqueue://default?topic[name]=my_sns_topic",
         "#AWS_SNS_DSN": "amqp://guest:guest@127.0.0.1:5672/%2f/fake_sns"
     }
 }
