@@ -5,10 +5,10 @@
 
 maksze_telemetry:
     yandex_metrika:
-        #- {id: any_id}
+        #- {id: '%env(YANDEX_METRIKA_ID)%'}
     yandex_webmaster:
-        #- {id: any_id}
+        #- {id: '%env(YANDEX_WEBMASTER_ID)%'}
     google_search_console:
-        #- {id: any_id}
+        #- {id: '%env(GOOGLE_SEARCH_CONSOLE_ID)%'}
     google_analytics:
-        #- {id: any_id}
+        #- {id: '%env(GOOGLE_ANALYTICS_ID)%'}

@@ -4,5 +4,11 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "YANDEX_METRIKA_ID": "any_id",
+        "YANDEX_WEBMASTER_ID": "any_id",
+        "GOOGLE_SEARCH_CONSOLE_ID": "any_id",
+        "GOOGLE_ANALYTICS_ID": "any_id"
     }
 }
