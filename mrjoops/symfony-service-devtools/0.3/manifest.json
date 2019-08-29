@@ -1,0 +1,16 @@
+{
+    "copy-from-package": {
+        ".php_cs.dist": ".php_cs.dist",
+        "bitbucket-pipelines.yml": "bitbucket-pipelines.yml",
+        "docker-compose.yml": "docker-compose.yml",
+        "Dockerfile": "Dockerfile",
+        "Makefile": "Makefile",
+        "phpcs.xml.dist": "phpcs.xml.dist",
+        "phpmd.xml": "phpmd.xml",
+        "phpstan.neon.dist": "phpstan.neon.dist"
+    },
+    "gitignore": [
+        "/phpstan.neon",
+        "/test-reports/"
+    ]
+}
