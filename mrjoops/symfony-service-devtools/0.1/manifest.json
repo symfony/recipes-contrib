@@ -8,11 +8,7 @@
         "phpstan.neon.dist": "phpstan.neon.dist"
     },
     "gitignore": [
-        "/.php_cs",
-        "/.php_cs.cache",
-        "/.phpcs.xml",
         "/phpstan.neon",
-        "/test-reports/",
-        "/vendor/"
+        "/test-reports/"
     ]
 }
