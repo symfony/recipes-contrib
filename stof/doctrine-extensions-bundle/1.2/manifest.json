@@ -1,4 +1,5 @@
 {
+    "aliases": ["doctrine-extensions-bundle"],
     "bundles": {
         "Stof\\DoctrineExtensionsBundle\\StofDoctrineExtensionsBundle": ["all"]
     },
