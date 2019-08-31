@@ -1,0 +1,16 @@
+{
+    "bundles": {
+        "ArtoxLab\\Bundle\\CleanArchitectureBundle\\ArtoxLabCleanArchitectureBundle": ["all"]
+    },
+    "copy-from-package": {
+        "Layers/Application/": "%SRC_DIR%/Application/",
+        "Layers/Domain/": "%SRC_DIR%/Domain/",
+        "Layers/Infrastructure/": "%SRC_DIR%/Infrastructure/",
+        "Layers/Interfaces/": "%SRC_DIR%/Interfaces/"
+    },
+    "gitignore": [
+        ".env",
+        "/.idea/",
+        ".DS_Store"
+    ]
+}
