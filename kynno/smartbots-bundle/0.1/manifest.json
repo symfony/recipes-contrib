@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Kynno\\SmartBotsBundle\\SmartBotsBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "BOT_KYNNO_SECRET": "pwd",
+        "SMARTBOTS_API_KEY": "default_api_key"
+    }
+}
