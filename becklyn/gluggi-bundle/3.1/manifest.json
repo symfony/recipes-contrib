@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Becklyn\\GluggiBundle\\GluggiBundle": ["dev"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
