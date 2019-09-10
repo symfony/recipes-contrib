@@ -3,7 +3,7 @@
         "ArtoxLab\\Bundle\\ClarcBundle\\ArtoxLabClarcBundle": ["all"]
     },
     "copy-from-package": {
-        "Layers/Entities/": "%SRC_DIR%/Domain/",
+        "Layers/Entities/": "%SRC_DIR%/Entities/",
         "Layers/UseCases/": "%SRC_DIR%/UseCases/",
         "Layers/Interfaces/": "%SRC_DIR%/Interfaces/",
         "Layers/Infrastructure/": "%SRC_DIR%/Infrastructure/"
