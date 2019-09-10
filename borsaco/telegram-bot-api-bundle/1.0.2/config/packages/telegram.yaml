@@ -17,13 +17,13 @@ telegram_bot_api:
         # The bot name
         first:
             # Your bot token: (required)
-            token: 123456789:ABCD1234****4321CBA
+            token: '123456789:ABCD1234****4321CBA'
         second:
             # Your bot token: (required)
-            token: 123456789:ABCD1234****4321CBA
+            token: '123456789:ABCD1234****4321CBA'
         foo:
             # Your bot token: (required)
-            token: 123456789:ABCD1234****4321CBA
+            token: '123456789:ABCD1234****4321CBA'
     
     # The default bot returned when you call getBot()
     default: 'second' 
