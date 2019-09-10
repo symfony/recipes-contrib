@@ -1,0 +1,16 @@
+{
+    "bundles": {
+        "ArtoxLab\\Bundle\\ClarcBundle\\ArtoxLabClarcBundle": ["all"]
+    },
+    "copy-from-package": {
+        "Layers/Entities/": "%SRC_DIR%/Domain/",
+        "Layers/UseCases/": "%SRC_DIR%/UseCases/",
+        "Layers/Interfaces/": "%SRC_DIR%/Interfaces/",
+        "Layers/Infrastructure/": "%SRC_DIR%/Infrastructure/"
+    },
+    "gitignore": [
+        ".env",
+        "/.idea/",
+        ".DS_Store"
+    ]
+}
