@@ -7,7 +7,9 @@
     "env": {
         "DB_DATABASE": "symfony",
         "DB_USERNAME": "symfony",
-        "DB_PASSWORD": "%generate(secret)%"
+        "DB_PASSWORD": "%generate(secret)%",
+        "REDIS_HOST": "redis",
+        "REDIS_PORT": "6379"
     },
     "gitignore": [
         "/docker/"
