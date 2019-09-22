@@ -1,0 +1,3 @@
+tienvx_mbt_api:
+    dot_binary: '%env(DOT_BINARY)%'
+    console_binary: '%env(CONSOLE_BINARY)%'
