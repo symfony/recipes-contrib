@@ -4,5 +4,8 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "ELASTICSEARCH_URL": "http://localhost:9200/"
     }
 }
