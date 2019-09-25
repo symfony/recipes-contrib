@@ -1,0 +1,6 @@
+services:
+    Zendesk\API\HttpClient:
+        arguments:
+            - '%env(ZENDESK_API_SUBDOMAIN)%'
+        calls:
+            - ['setAuth', ['basic', { username: '%env(ZENDESK_API_USERNAME)%', token: '%env(ZENDESK_API_TOKEN)%' }]]

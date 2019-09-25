@@ -1,0 +1,12 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#0": "To retrieve an API token for your Zendesk server, you can read this doc:",
+        "#1": "https://support.zendesk.com/hc/en-us/articles/226022787-Generating-a-new-API-token-",
+        "ZENDESK_API_SUBDOMAIN": "",
+        "ZENDESK_API_USERNAME": "",
+        "ZENDESK_API_TOKEN": ""
+    }
+}
