@@ -4,4 +4,3 @@ oka_file:
         root_path: '%env(OKAFILE_STORAGE_ROOT_PATH)%'
         webserver:
             host: '%env(OKAFILE_STORAGE_WEB_SERVER_HOST)%'
-
