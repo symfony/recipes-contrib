@@ -1,6 +1,15 @@
+parameters:
+    # Adds a fallback OKAFILE_STORAGE_ROOT_PATH if the env var is not set.
+    # Adds a fallback OKAFILE_STORAGE_WEB_SERVER_HOST if the env var is not set.
+    # This allows you to run cache:warmup even if your
+    # environment variables are not available yet.
+    # You should not need to change this value.
+    env(OKAFILE_STORAGE_ROOT_PATH): '%kernel.project_dir%/public'
+    env(OKAFILE_STORAGE_WEB_SERVER_HOST): 'localhost'
+
 oka_file:
     db_driver: orm
     storage:
-        root_path: '%env(OKAFILE_STORAGE_ROOT_PATH)%'
+        root_path: '%env(resolve:OKAFILE_STORAGE_ROOT_PATH)%'
         webserver:
-            host: '%env(OKAFILE_STORAGE_WEB_SERVER_HOST)%'
+            host: '%env(resolve:OKAFILE_STORAGE_WEB_SERVER_HOST)%'
