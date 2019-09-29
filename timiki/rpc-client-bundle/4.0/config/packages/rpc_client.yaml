@@ -6,4 +6,4 @@ rpc_client:
     #   name_1: RPC_SERVER_URL_1
     #   name_2: RPC_SERVER_URL_2
 
-    connection: ~
+    connection: null
