@@ -25,7 +25,7 @@ rpc_server:
     # id cache service, must be instance of Doctrine\Common\Cache\CacheProvider
     # by default use file cache
 
-    cache: ~
+    cache: null
 
     # id serializer service, must be instance of Timiki\Bundle\RpcServerBundle\Serializer\SerializerInterface
     # by default use 'rpc.server.serializer.base' service
