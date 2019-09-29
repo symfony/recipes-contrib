@@ -1,5 +1,4 @@
 {
-    "aliases": ["rpc-client", "timiki-rpc-client"],
     "bundles": {
         "Timiki\\Bundle\\RpcClientBundle\\RpcClientBundle": ["all"]
     },
