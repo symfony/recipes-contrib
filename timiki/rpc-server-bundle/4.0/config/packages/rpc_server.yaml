@@ -1,0 +1,33 @@
+# Read the documentation: https://github.com/timiki/rpc-server-bundle
+
+rpc_server:
+
+    # mapping configs
+    #
+    # Default mapping
+    #   mapping: '%kernel.root_dir%/Method'
+    #
+    # Multi dir mapping
+    #   mapping:
+    #   - '%kernel.root_dir%/Method1'
+    #   - '%kernel.root_dir%/Method2'
+    #
+    # Multi handler|dir mapping
+    #   mapping:
+    #    v1:
+    #       - '%kernel.root_dir%/Method/V1'
+    #    v2:
+    #       - '%kernel.root_dir%/Method/V2'
+    #
+
+    mapping: '%kernel.root_dir%/Method'
+
+    # id cache service, must be instance of Doctrine\Common\Cache\CacheProvider
+    # by default use file cache
+
+    cache: ~
+
+    # id serializer service, must be instance of Timiki\Bundle\RpcServerBundle\Serializer\SerializerInterface
+    # by default use 'rpc.server.serializer.base' service
+
+    serializer: 'rpc.server.serializer.base'

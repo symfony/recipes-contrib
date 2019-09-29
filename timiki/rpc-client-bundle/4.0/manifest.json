@@ -1,0 +1,9 @@
+{
+    "aliases": ["rpc-client", "timiki-rpc-client"],
+    "bundles": {
+        "Timiki\\Bundle\\RpcClientBundle\\RpcClientBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
