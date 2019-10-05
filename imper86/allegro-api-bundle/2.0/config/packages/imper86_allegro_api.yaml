@@ -1,4 +1,0 @@
-imper86_allegro_api:
-    sandbox: true
-    client_id: '%env(ALLEGRO_CLIENT_ID)%'
-    client_secret: '%env(ALLEGRO_CLIENT_SECRET)%'
