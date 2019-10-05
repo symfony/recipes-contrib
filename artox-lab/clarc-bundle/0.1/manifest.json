@@ -10,10 +10,5 @@
         "Layers/UseCases/": "%SRC_DIR%/UseCases/",
         "Layers/Interfaces/": "%SRC_DIR%/Interfaces/",
         "Layers/Infrastructure/": "%SRC_DIR%/Infrastructure/"
-    },
-    "gitignore": [
-        ".env",
-        "/.idea/",
-        ".DS_Store"
-    ]
+    }
 }
