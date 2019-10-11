@@ -1,3 +1,3 @@
 kibatic_timezone:
-    default_display_timezone: '%env(DEFAULT_DISPLAY_TIMEZONE)%'
+    default_display_timezone:  '%env(DEFAULT_DISPLAY_TIMEZONE)%'
     timezone_provider: '%env(TIMEZONE_PROVIDER_SERVICE_ID)%'
