@@ -1,0 +1,3 @@
+parameters:
+    data_directory: '%kernel.project_dir%/data/'
+    ribs_cron:
