@@ -4,9 +4,5 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
-    },
-    "env": {
-        "DEFAULT_DISPLAY_TIMEZONE": "Europe/Paris",
-        "TIMEZONE_PROVIDER_SERVICE_ID": "kibatic_timezone.default_provider"
     }
 }
