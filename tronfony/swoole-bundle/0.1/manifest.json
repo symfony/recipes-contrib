@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Tronfony\\Bundle\\SwooleBundle": ["all"]
+        "Tronfony\\Bundle\\SwooleBundle\\SwooleBundle": ["all"]
     },
     "copy-from-recipe": {
         "bin/": "%BIN_DIR%"
