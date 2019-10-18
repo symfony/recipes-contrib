@@ -2,24 +2,6 @@
 
 rpc_server:
 
-    # mapping configs
-    #
-    # Default mapping
-    #   mapping: '%kernel.root_dir%/Method'
-    #
-    # Multi dir mapping
-    #   mapping:
-    #   - '%kernel.root_dir%/Method1'
-    #   - '%kernel.root_dir%/Method2'
-    #
-    # Multi handler|dir mapping
-    #   mapping:
-    #    v1:
-    #       - '%kernel.root_dir%/Method/V1'
-    #    v2:
-    #       - '%kernel.root_dir%/Method/V2'
-    #
-
     mapping: '%kernel.root_dir%/Method'
 
     # id cache service, must be instance of Doctrine\Common\Cache\CacheProvider
