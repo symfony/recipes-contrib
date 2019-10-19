@@ -1,3 +1,6 @@
 parameters:
-    data_directory: '%kernel.project_dir%/data/'
-    ribs_cron:
+  data_directory: '%kernel.project_dir%/data/'
+  ribs_cron_ip_external:
+  ribs_cron_ip_internal: "127.0.0.1"
+  ribs_cron:
+#    testCronCall: "* * * * *"
