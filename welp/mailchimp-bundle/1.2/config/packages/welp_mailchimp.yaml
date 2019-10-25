@@ -1,0 +1,5 @@
+# Read the documentation: https://welpdev.github.io/mailchimp-bundle/
+
+welp_mailchimp:
+    api_key: YOURMAILCHIMPAPIKEY
+    list_provider: 'welp_mailchimp.list_provider'
