@@ -10,7 +10,7 @@
        bundle
     2. Check that the Page and User entities were copied to the correct entity folder, and are configured correctly
     3. Clear the cache again so that the new config files are loaded correctly.
-    4. Back up your database.
+    4. Check your database configuration, and back up your database if you haven't done so already.
     5. Update your database <fg=blue>bin/console doctrine:schema:update</> or using the doctrine migrate commands
     6. Use the command networking:initcms:install to install setup the DB install fixtures and create a superuser admin
     7. OR you can use the networking:initcms:data-setup if you just want to install the data structure and fixtures
