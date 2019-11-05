@@ -7,8 +7,8 @@ docusign:
         default_document_type:
             signatures:
                 - page: 1 # default
-                  x_position: 200 # top left corner in pixels
-                  y_position: 400 # top left corner in pixels
+                    x_position: 200 # top left corner in pixels
+                    y_position: 400 # top left corner in pixels
     storages:
         docusign.storage:
             adapter: 'local'
