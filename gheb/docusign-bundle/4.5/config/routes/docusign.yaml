@@ -1,0 +1,2 @@
+docusign:
+  resource: '@DocusignBundle/Resources/config/routing.xml'

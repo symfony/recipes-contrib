@@ -1,0 +1,5 @@
+docusign:
+    access_token: "YourAccessToken"
+    account_id: "yourAccountId"
+    default_signer_name: "Your Signer Name"
+    default_signer_email: "you@email.tld"
