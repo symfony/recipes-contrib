@@ -8,7 +8,8 @@
         "src/": "%SRC_DIR%/"
     },
     "env": {
-        "LOCALE": "en"
+        "LOCALE": "en",
+        "DATABASE_DRIVER": "mysql"
     },
     "composer-scripts": {
         "ckeditor:install --clear=drop": "symfony-cmd",
