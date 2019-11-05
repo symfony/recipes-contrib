@@ -1,0 +1,18 @@
+<bg=blue;fg=white>              </>
+<bg=blue;fg=white> What's next? </>
+<bg=blue;fg=white>              </>
+
+  * The <fg=blue>InitCmsBundle</> imports many configuration files, such as doctrine.yaml, security.yaml etc. In order
+  to ensure your app will work please do the following:
+    1. Check that all files imported via the networking_init_cms.yaml file are not overwritten with a similar
+       configuration file in your /config/packages folder. !IMPORTANT the doctrine.yaml and security.yaml must be either
+       deleted, or configured along the lines of the provided default doctrine and security configs provided in the
+       bundle
+    2. Check that the Page and User entities were copied to the correct entity folder, and are configured correctly
+    3. Clear the cache again so that the new config files are loaded correctly.
+    4. Back up your database.
+    5. Update your database <fg=blue>bin/console doctrine:schema:update</> or using the doctrine migrate commands
+    6. Use the command networking:initcms:install to install setup the DB install fixtures and create a superuser admin
+    7. OR you can use the networking:initcms:data-setup if you just want to install the data structure and fixtures
+    8. Enable or copy the security configuration file that is commented out in the networking_init_cms.yaml file
+    9. Set up your managed languages for the lexik translation bundle
