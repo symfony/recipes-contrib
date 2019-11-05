@@ -6,13 +6,12 @@
   to ensure your app will work please do the following:
     1. Check that all files imported via the networking_init_cms.yaml file are not overwritten with a similar
        configuration file in your /config/packages folder. !IMPORTANT the doctrine.yaml and security.yaml must be either
-       deleted, or configured along the lines of the provided default doctrine and security configs provided in the
-       bundle
-    2. Check that the Page and User entities were copied to the correct entity folder, and are configured correctly
-    3. Clear the cache again so that the new config files are loaded correctly.
-    4. Check your database configuration, and back up your database if you haven't done so already.
-    5. Update your database <fg=blue>bin/console doctrine:schema:update</> or using the doctrine migrate commands
-    6. Use the command networking:initcms:install to install setup the DB install fixtures and create a superuser admin
-    7. OR you can use the networking:initcms:data-setup if you just want to install the data structure and fixtures
-    8. Enable or copy the security configuration file that is commented out in the networking_init_cms.yaml file
-    9. Set up your managed languages for the lexik translation bundle
+       deleted, or update/extended with the configuration as proposed in the doctrine.yaml and security.yaml files
+       included with the CMS.
+    2. Check that the Page and User entities were copied to the correct entity folder, and are configured correctly.
+    3. Configure your languages in the networking_init_cms.yaml file, for multi-language support.
+    4. Clear the cache again so that the new config files are loaded correctly.
+    5. Check your database configuration, and back up your database if you haven't done so already.
+    6. Update your database <fg=blue>bin/console doctrine:schema:update</> or using the doctrine migrate commands
+    7. Use the command networking:initcms:install to install the DB install fixtures and create a superuser admin.
+       ALTERNATIVELY you can use the networking:initcms:data-setup if you just want to install the data structure and fixtures
