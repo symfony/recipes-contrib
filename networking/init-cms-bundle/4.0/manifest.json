@@ -13,6 +13,6 @@
     },
     "composer-scripts": {
         "ckeditor:install --clear=drop": "symfony-cmd",
-        "assets:install %PUBLIC_DIR%": "symfony-cmd"
+        "assets:install --symlink %PUBLIC_DIR%": "symfony-cmd"
     }
 }
