@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Slmder\\SlmderFilterBundle": ["all"]
+        "Slmder\\SlmderFilterBundle\\SlmderFilterBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
