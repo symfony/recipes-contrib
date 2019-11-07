@@ -3,6 +3,6 @@
         "Slmder\\SlmderFilterBundle": ["all"]
     },
     "copy-from-recipe": {
-        "config/packages/slmder_filter.yaml": "%CONFIG_DIR%/packages/slmder_filter.yaml"
+        "slmder_filter.yaml": "%CONFIG_DIR%/packages/slmder_filter.yaml"
     }
 }
