@@ -1,0 +1,5 @@
+slmder_filter:
+    checkers_enabled: true
+    default_operator: like
+    default_order_direction: ASC
+    trigger_on_pagination_items: true
