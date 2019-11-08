@@ -3,4 +3,3 @@ slmder_filter:
     default_operator: like
     default_order_direction: ASC
     trigger_on_pagination_items: true
-    
