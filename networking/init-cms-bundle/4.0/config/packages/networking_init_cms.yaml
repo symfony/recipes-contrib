@@ -21,6 +21,9 @@ imports:
 # Set templating to twig. FOSUserBundle requires templating to be setup
 framework:
     templating:      { engines: ['twig'] }
+    pools:
+        page.cache:
+            adapter: cache.app
 
 # Set up the serializer to read config file for App Page and User entities
 jms_serializer:
