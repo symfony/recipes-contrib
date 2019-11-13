@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "GlobeGroup\\MattermostLoggerBundle\\MattermostLoggerBundle": ["all"]
+    },
+    "env": {
+        "MATTERMOST_TRANSPORT_DSN": "amqp://guest:guest@rabbitmq:5672/%2f/mattermost",
+        "LOGGED_HTTP_STATUS_CODES": "500",
+        "LOG_RESPONSE_CONTENT": "true",
+        "MATTERMOST_CHANNEL_ID": "",
+        "MATTERMOST_ACCESS_TOKEN": "",
+        "MATTERMOST_BASE_URL": "url"
+    }
+}
