@@ -15,3 +15,4 @@
     6. Update your database <fg=blue>bin/console doctrine:schema:update</> or using the doctrine migrate commands
     7. Use the command networking:initcms:install to install the DB install fixtures and create a superuser admin.
        ALTERNATIVELY you can use the networking:initcms:data-setup if you just want to install the data structure and fixtures
+    8. Enable or disable full page caching by setting networking_init_cms.cache.activate to true/false
