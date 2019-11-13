@@ -54,7 +54,7 @@ networking_init_cms:
     cache:
         activate: true #default false
         cache_time: 86400 #default value
-        cache_service_class: 'Networking\InitCmsBundle\Lib\PhpCache' #default value
+        cache_service: 'Networking\InitCmsBundle\Cache\PageCache' #default value
 
     # Show admin toolbar when in the frontend
     admin_toolbar:
