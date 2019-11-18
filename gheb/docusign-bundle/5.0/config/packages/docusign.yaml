@@ -9,7 +9,7 @@ docusign:
         user_guid: "%env(DOCUSIGN_USER_GUID)%"
 
     # Your DocuSign account id
-    account_id: "%env(DOCUSIGN_ACCOUNT_ID)%"
+    account_id: "%env(int:DOCUSIGN_ACCOUNT_ID)%"
 
     default_signer_name: "Grégoire Hébert" # Name of the person that will be notified and will sign the document if none is sent to the url.
     default_signer_email: "gregoire@les-tilleuls.coop" # Mail of the person that will be notified and will sign the document if none is sent to the url.
