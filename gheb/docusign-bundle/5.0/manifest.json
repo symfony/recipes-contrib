@@ -5,12 +5,6 @@
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     },
-    "env": {
-        "DOCUSIGN_PRIVATE_KEY_PATH": "",
-        "DOCUSIGN_INTEGRATION_KEY": "",
-        "DOCUSIGN_USER_GUID": "",
-        "DOCUSIGN_ACCOUNT_ID": "1234567"
-    },
     "gitignore": [
         "/%CONFIG_DIR%/jwt/*.pem"
     ]
