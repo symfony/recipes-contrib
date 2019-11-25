@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "Lolautruche\\PaylineBundle\\LolautruchePaylineBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "PAYLINE_MERCHANT_ID": "your_payline_merchant_id",
+        "PAYLINE_ACCESS_KEY": "your_payline_access_key",
+        "PAYLINE_CONTRACT_NUMBER": "your_payline_contract_number",
+        "PAYLINE_ENVIRONMENT": "homo"
+    }
+}

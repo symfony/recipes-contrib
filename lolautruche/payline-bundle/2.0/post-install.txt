@@ -1,0 +1,16 @@
+<bg=blue;fg=white>                                                 </>
+<bg=blue;fg=white> You just installed lolautruche/playline-bundle! </>
+<bg=blue;fg=white> What's next?                                    </>
+<bg=blue;fg=white>                                                 </>
+
+  * <fg=blue>Use</> the default storage immediately:
+
+      public function __construct(FilesystemInterface $defaultStorage)
+      {
+          ...
+      }
+
+  * <fg=blue>Configure</> Payline environment variables and settings in <comment>config/packages/payline.yaml</comment>.
+
+  * <fg=blue>Read</> the documentation at:
+    <comment>https://github.com/lolautruche/LolautruchePaylineBundle/blob/master/Resources/doc/00-index.md</>
