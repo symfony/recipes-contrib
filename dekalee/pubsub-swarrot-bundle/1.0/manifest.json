@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Dekalee\\PubSubSwarrotBundle\\DekaleePubSubSwarrotBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#DEKALEE_PUBSUB_SWARROT_KEY_FILE_PATH": "your-pub_sub-key-file-path"
+    }
+}
