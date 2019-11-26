@@ -3,7 +3,9 @@
 <bg=blue;fg=white> What's next?                                    </>
 <bg=blue;fg=white>                                                 </>
 
-  * <fg=blue>Configure</> Payline environment variables in <comment>.env</comment>.
+  * <fg=blue>Configure</> Payline environment variables in <comment>.env</comment>;
+
+  * <fg=blue>Encrypt sensitive environment variables</> with <comment>bin/console secrets:set</comment> command (optional);
 
   * <fg=blue>Read</> the documentation at:
     <comment>https://github.com/lolautruche/LolautruchePaylineBundle/blob/master/Resources/doc/00-index.md</>
