@@ -1,7 +1,7 @@
 httplug:
     plugins:
-        redirect:
-            preserve_header: true
+        retry:
+            retry: 1
 
     discovery:
         client: 'auto'
