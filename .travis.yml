@@ -11,7 +11,9 @@ matrix:
         - php: 7.4snapshot
           env: SKELETON_VERSION="^3.4"
         - php: 7.4snapshot
-          env: SKELETON_VERSION="^4.0"
+          env: SKELETON_VERSION="^4.4"
+        - php: 7.4snapshot
+          env: SKELETON_VERSION="^5.0"
 
 before_install:
     - phpenv config-rm xdebug.ini || true
