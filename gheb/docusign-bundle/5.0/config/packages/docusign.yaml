@@ -4,7 +4,7 @@ docusign:
 
     # Authentication credentials to log into docusign.
     auth_jwt:
-        private_key: "%env(DOCUSIGN_PRIVATE_KEY_PATH)%"
+        private_key: "%env(resolve:DOCUSIGN_PRIVATE_KEY_PATH)%"
         integration_key: "%env(DOCUSIGN_INTEGRATION_KEY)%"
         user_guid: "%env(DOCUSIGN_USER_GUID)%"
 
