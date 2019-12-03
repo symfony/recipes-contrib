@@ -1,0 +1,3 @@
+shopkeeper4_comments:
+    resource: '@CommentsBundle'
+    type: annotation
