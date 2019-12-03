@@ -1,0 +1,5 @@
+survos_workflow:
+  direction: LR
+  entities: ~
+#    - App\Entity\Headline
+#    - App\Entity\Media

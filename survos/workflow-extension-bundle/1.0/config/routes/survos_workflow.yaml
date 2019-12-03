@@ -1,0 +1,4 @@
+survos_workflow_bundle:
+    resource: '@SurvosWorkflowBundle/Controller/WorkflowController.php'
+    prefix: /workflow
+    type: annotation
