@@ -1,5 +1,5 @@
 survos_workflow:
-  direction: LR
-  entities: null
-#    - App\Entity\Headline
-#    - App\Entity\Media
+    direction: LR
+    entities: null
+    #    - App\Entity\Headline
+    #    - App\Entity\Media
