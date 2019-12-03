@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Debril\\RssAtomBundle\\DebrilRssAtomBundle": ["all"]
+        "Survos\\WorkflowBundle\\SurvosWorkflowBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
