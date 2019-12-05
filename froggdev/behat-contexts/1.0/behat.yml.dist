@@ -11,14 +11,14 @@ default:
                 - FeatureContext:
                     kernel: '@kernel'
                 - froggdev\BehatContexts\Context:
-                    - exportPath: d:\test\
+                    - exportPath: c:\example\
                     - reportPath: public/output/behat
                     - doScreenshot: true
                     - doMail: true
-                    - smtp: messagerie.uniprevoyance.intraxa
+                    - smtp: smtp.server.ext
                     - smtpPort: 25
-                    - mailFrom: 'behat@uniprevoyance.fr'
-                    - mailTo: 'remy.marsiglietti-prestataire@uniprevoyance.fr'
+                    - mailFrom: 'mailfrom@example.fr'
+                    - mailTo: 'mailto@example.fr'
 
         # config advanced demo suite
         advancedFeature:
@@ -31,14 +31,14 @@ default:
                     kernel: '@kernel'
                 # froggdev extra Contexts 
                 - froggdev\BehatContexts\Context:
-                    - exportPath: d:\test\
+                    - exportPath: c:\example\
                     - reportPath: public/output/behat
                     - doScreenshot: true
                     - doMail: true
-                    - smtp: messagerie.uniprevoyance.intraxa
+                    - smtp: smtp.server.ext
                     - smtpPort: 25
-                    - mailFrom: 'behat@uniprevoyance.fr'
-                    - mailTo: 'remy.marsiglietti-prestataire@uniprevoyance.fr'
+                    - mailFrom: 'mailfrom@example.fr'
+                    - mailTo: 'mailto@example.fr'
 
     ##########
     # CONFIG #
