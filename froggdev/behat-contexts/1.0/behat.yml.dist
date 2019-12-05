@@ -1,0 +1,103 @@
+default:
+
+    ##############
+    # SUITE LIST #
+    ##############
+
+    suites:
+        default:
+            paths: ['%paths.base%/features/demo.feature']
+            contexts:
+                - FeatureContext:
+                    kernel: '@kernel'
+                - froggdev\BehatContexts\Context:
+                    - exportPath: d:\test\
+                    - reportPath: public/output/behat
+                    - doScreenshot: true
+                    - doMail: true
+                    - smtp: messagerie.uniprevoyance.intraxa
+                    - smtpPort: 25
+                    - mailFrom: 'behat@uniprevoyance.fr'
+                    - mailTo: 'remy.marsiglietti-prestataire@uniprevoyance.fr'
+
+        # config advanced demo suite
+        advancedFeature:
+            # Suite path 
+            paths: ['%paths.base%/features/extraFeature']
+            # Suite Contexts 
+            contexts:
+                # BeHat default Contexts 
+                - FeatureContext:
+                    kernel: '@kernel'
+                # froggdev extra Contexts 
+                - froggdev\BehatContexts\Context:
+                    - exportPath: d:\test\
+                    - reportPath: public/output/behat
+                    - doScreenshot: true
+                    - doMail: true
+                    - smtp: messagerie.uniprevoyance.intraxa
+                    - smtpPort: 25
+                    - mailFrom: 'behat@uniprevoyance.fr'
+                    - mailTo: 'remy.marsiglietti-prestataire@uniprevoyance.fr'
+
+    ##########
+    # CONFIG #
+    ##########
+
+    extensions:
+        # Extension required from symfony
+        Behat\Symfony2Extension:
+            kernel:
+                bootstrap: features/bootstrap/bootstrap.php
+                class: App\Kernel
+
+        # Browser
+        Behat\MinkExtension:
+            base_url: https://url_to_the_dev
+            files_path: dev
+            browser_name: chrome
+            goutte: ~
+            selenium2: ~
+            sessions: ~
+
+        # Export HTML Rendering
+        emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
+              name: html
+              renderer: Twig
+              file_name: index
+              print_args: true
+              print_outp: true
+              loop_break: true
+
+    ##########
+    # OUTPUT #
+    ##########
+
+    # report HTML result path (must be the same as reportPath in context config
+    # reportPath default value is public/output/behat
+    formatters:
+        pretty:
+        html:
+            output_path: '%paths.base%/public/output/behat'
+
+    exceptions:
+        # Output verbosity (1, 2, 3, 4) default 1
+        verbosity: 4
+
+    ############
+    # PROFILES #
+    ############
+
+#behat -p re7
+re7:
+    extensions:
+        Behat\MinkExtension:
+            base_url: https://url_to_the_re7
+            files_path: re7
+
+#behat -p ie
+ie:
+    extensions:
+        # Browser
+        Behat\MinkExtension:
+            browser_name: ie
