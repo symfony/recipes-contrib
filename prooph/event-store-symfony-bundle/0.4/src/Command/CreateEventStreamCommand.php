@@ -7,16 +7,18 @@ namespace App\Command;
 use Prooph\EventStore\EventStore;
 use Prooph\EventStore\Stream;
 use Prooph\EventStore\StreamName;
-use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
+use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-final class CreateEventStreamCommand extends ContainerAwareCommand
+final class CreateEventStreamCommand extends Command
 {
     private $eventStore;
 
     public function __construct(EventStore $eventStore)
     {
+        parent::__construct();
+
         $this->eventStore = $eventStore;
     }
 
