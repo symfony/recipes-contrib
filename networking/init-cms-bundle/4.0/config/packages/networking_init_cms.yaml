@@ -53,7 +53,7 @@ networking_init_cms:
                 - { name: header , class: 'col-md-12'}
                 - { name: left , class: 'col-md-3'}
                 - { name: right , class: 'col-md-9'}
-                -
+
     #Set a cookie in the fronted end for language. If disabled, the URL will be prefixed with the locale
     #allow_locale_cookie: true
 
