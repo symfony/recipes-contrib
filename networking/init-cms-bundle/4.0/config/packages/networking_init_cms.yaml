@@ -18,14 +18,6 @@ imports:
 # Default security configuration
 #    - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/security.yaml" }
 
-# Set templating to twig. FOSUserBundle requires templating to be setup
-framework:
-    templating:      { engines: ['twig'] }
-    cache:
-        pools:
-            page.cache:
-                adapter: cache.app #Setup page cache using template from cache.app
-
 # Set up the serializer to read config file for App Page and User entities
 jms_serializer:
     metadata:
@@ -37,52 +29,14 @@ jms_serializer:
                 namespace_prefix: "App"
                 path: "%kernel.project_dir%/config/serializer"
 
-# Translation bundle configuration, swap environment variables if mange_locales_only option set to false
-lexik_translation:
-    fallback_locale:  '%env(LOCALE)%'      # (required) default locale to use
-    managed_locales: [ '%env(LOCALE)%'] # !IMPORTANT: Change to strings and not environment variables
-    resources_registration:
-        type:                 all  # all | files | database
-        managed_locales_only: false # set to true to only include managed_locales
-
 
 networking_init_cms:
-    # Set a cookie in the fronted end for language. If disabled, the URL will be prefixed with the locale
-    allow_locale_cookie: true
-
-    # Simple php based cache for caching the rendered HTML in the frontend
-    cache:
-        activate: true #default false
-        cache_time: 86400 #default value
-        cache_service: 'Networking\InitCmsBundle\Cache\PageCache' #default value
-
-    # Show admin toolbar when in the frontend
-    admin_toolbar:
-        toolbar: true #Default is activated
-        position: 'top' #Choices are 'top' or 'bottom'
-    translation_fallback_route: 'initcms_404' #Default fallback to 404 page
-    no_translation_template: '@NetworkingInitCms/no_translation_found.html.twig' #
-    404_template: '@NetworkingInitCms/error_404.html.twig' #Fallback to a 404 page included
-    # Tag tree for use in the media manager
-    show_tag_tree: true #Default is true
-    multiple_media_tags: true #Default is true
-
-    # Language set up, label is used in the default frontend language switcher menu
-    languages:
-        - {label: 'Deutsch', locale: 'de'}
-        - {label: 'English', locale: 'en'}
-
-    # Add content types here
-    content_types:
-        - { name: 'Text' , class: 'Networking\InitCmsBundle\Entity\Text'}
-        - { name: 'Gallery Viewer' , class: 'Networking\InitCmsBundle\Entity\GalleryView'}
-
-    # Classes to be used for the page and user entities
+    #Base classes to be used for the page and user entities
     class:
         page: "App\\Entity\\Page"
         user: "App\\Entity\\User"
 
-    # Default template settings to get you started
+    # Bootstrap some template settings to get you started
     templates:
         'app_single_column':
             template: "@NetworkingInitCms/sandbox/page/one_column.html.twig"
@@ -99,3 +53,35 @@ networking_init_cms:
                 - { name: header , class: 'col-md-12'}
                 - { name: left , class: 'col-md-3'}
                 - { name: right , class: 'col-md-9'}
+                -
+    #Set a cookie in the fronted end for language. If disabled, the URL will be prefixed with the locale
+    #allow_locale_cookie: true
+
+    #Simple php based cache for caching the rendered HTML in the frontend
+    cache:
+        activate: true #enable for product, false in dev config
+    #    cache_time: 86400 #default value
+    #    cache_service: 'Networking\InitCmsBundle\Cache\PageCache' #default value
+
+    #Show admin toolbar when in the frontend
+    #admin_toolbar:
+    #    toolbar: true #Default is activated
+    #    position: 'top' #Choices are 'top' or 'bottom'
+
+    #translation_fallback_route: 'initcms_404' #Default fallback to 404 page
+    #no_translation_template: '@NetworkingInitCms/no_translation_found.html.twig' #
+    #404_template: '@NetworkingInitCms/error_404.html.twig' #Fallback to a 404 page included
+
+    # Tag tree for use in the media manager
+    #show_tag_tree: true #Default is true
+    #multiple_media_tags: true #Default is true
+
+    #Language set up, label is used in the default frontend language switcher menu
+    #languages:
+    #    - {label: 'Deutsch', locale: 'de'}
+    #    - {label: 'English', locale: 'en'}
+
+    #Add content types here
+    #content_types:
+    #    - { name: 'Text' , class: 'Networking\InitCmsBundle\Entity\Text'}
+    #    - { name: 'Gallery Viewer' , class: 'Networking\InitCmsBundle\Entity\GalleryView'}
