@@ -7,9 +7,3 @@ services:
             - '@prooph_service_bus.default_event_bus'
         tags:
             - { name: 'prooph_event_store.default.plugin' }
-
-    Prooph\EventStoreBusBridge\TransactionManager:
-        arguments:
-            - '@app.event_store.default'
-        tags:
-            - { name: 'prooph_service_bus.default_command_bus.plugin' }
