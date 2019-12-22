@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "SebTM\\INWX\\InwxApiBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "INWX_USERNAME": "",
+        "INWX_PASSWORD": ""
+    }
+}
