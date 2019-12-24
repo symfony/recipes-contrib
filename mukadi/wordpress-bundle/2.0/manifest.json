@@ -2,13 +2,11 @@
     "bundles": {
         "Mukadi\\WordpressBundle\\MukadiWordpressBundle": ["all"]
     },
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/",
-        "public/": "%PUBLIC_DIR%",
-        "sf-wp-bootstrap.php": "sf-wp-bootstrap.php"
-    },
     "copy-from-package": {
-        "wp-cli.yml": "wp-cli.yml"
+        "res/wp-cli.yml": "wp-cli.yml",
+        "res/config/": "%CONFIG_DIR%/",
+        "res/public/": "%PUBLIC_DIR%",
+        "res/sf-wp-bootstrap.php": "sf-wp-bootstrap.php"
     },
     "env": {
         "WP_PREFIX": "wp_",
