@@ -1,8 +1,7 @@
 {
     "bundles": {
-        "UniteCMS\\CoreBundle\\UniteCMSCoreBundle": [
-            "all"
-        ]
+        "Symfony\\Bundle\\TwigBundle\\TwigBundle": ["all"],
+        "UniteCMS\\CoreBundle\\UniteCMSCoreBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
