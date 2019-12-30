@@ -12,7 +12,7 @@
     2. Run command: bin/console <info>unite:user:create</info> to create your admin user
 
   * Start unite cms:
-    1. Run dev server: bin/console <info>server:run</info>
+    1. Run dev server: <info>symfony serve</info>
     2. Login with your admin user
 
   * <fg=blue>Read</> the documentation at <comment>https://docs.unitecms.io</>
