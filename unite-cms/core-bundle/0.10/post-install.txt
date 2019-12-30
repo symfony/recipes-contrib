@@ -1,0 +1,13 @@
+<bg=blue;fg=white>              </>
+<bg=blue;fg=white> What's next? </>
+<bg=blue;fg=white>              </>
+
+  * Create your first admin user:
+    1. Check your schema in <info>/config/unite/default/schema.graphql</info> (we added a default Admin user type, however you are free to change this
+    2. Run command: bin/console <info>unite:user:create</info> to create your admin user
+
+  * Start unite cms:
+    1. Run dev server: bin/console <info>server:run</info>
+    2. Login with your admin user
+
+  * <fg=blue>Read</> the documentation at <comment>https://docs.unitecms.io</>

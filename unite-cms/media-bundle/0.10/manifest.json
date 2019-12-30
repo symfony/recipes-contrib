@@ -1,0 +1,5 @@
+{
+  "bundles": {
+    "UniteCMS\\CoreBundle\\UniteCMSMediaBundle": ["all"]
+  }
+}

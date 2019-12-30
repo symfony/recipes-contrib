@@ -1,0 +1,39 @@
+
+# Content & User types
+
+"""Demo Content"""
+type DemoContent implements UniteContent {
+    id: ID
+    _meta: UniteContentMeta
+
+    """Demo title"""
+    title: String! @textField
+
+    """Content"""
+    content: String @textField(escape: false)
+}
+
+
+"""Administrators"""
+type Admin implements UniteUser
+@passwordAuthenticator(passwordField: "password")
+@emailPasswordReset(emailField: "username", passwordField: "password")
+@emailInvite(if: "%(IS_ADMIN)%", emailField: "username", passwordField: "password") {
+    _meta: UniteContentMeta
+    id: ID
+    username: String! @emailField
+    password: NULL @passwordField
+}
+
+
+
+# Admin fragments
+
+fragment content on DemoContent @tableAdminView {
+    title @adminField(inlineCreate: true)
+    content @wysiwygAdminField
+}
+
+fragment admins on Admin @tableAdminView {
+    username
+}
