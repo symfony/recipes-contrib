@@ -16,3 +16,4 @@
     2. Login with your admin user
 
   * <fg=blue>Read</> the documentation at <comment>https://docs.unitecms.io</>
+
