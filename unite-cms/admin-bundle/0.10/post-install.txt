@@ -3,7 +3,7 @@
 <bg=blue;fg=white>              </>
 
   * Create a database*
-    1. We enabled doctrine ORM adapter as a default. You can change this in config
+    1. We enabled doctrine ORM adapter as a default. You can change this in unite_cms config
     2. Check the DATABASE_URL env parameter
     3. Run command: bin/console <info>doctrine:schema:update</info> to create the database
 
