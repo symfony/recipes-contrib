@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "UniteCMS\\CoreBundle\\UniteCMSAdminBundle": [
+        "UniteCMS\\AdminBundle\\UniteCMSAdminBundle": [
             "all"
         ]
     },
