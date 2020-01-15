@@ -16,3 +16,8 @@ services:
             $botKey: '%env(resolve:TG_BOT_API_KEY)%'
             $apiClient: '@TgBotApi\BotApiBase\ApiClientInterface'
             $normalizer:  '@TgBotApi\BotApiBase\NormalizerInterface'
+
+    TgBotApi\BotApiBase\BotApiComplete:
+        parent: TgBotApi\BotApiBase\BotApi
+
+    TgBotApi\BotApiBase\BotApiInterface: '@TgBotApi\BotApiBase\BotApi'
