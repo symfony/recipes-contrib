@@ -8,3 +8,5 @@ services:
         public: false
 
     Prooph\EventSourcing\EventStoreIntegration\AggregateTranslator: null
+
+    Prooph\EventStore\EventStore: '@app.event_store.default'
