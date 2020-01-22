@@ -1,7 +1,6 @@
 fm_elfinder:
     instances:
         default:
-            include_assets: true
             relative_path: true
             connector:
                 roots:
