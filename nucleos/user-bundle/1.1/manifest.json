@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Nucleos\\UserBundle\\NucleosUserBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "src/": "%SRC_DIR%/"
+    },
+    "env": {
+        "MAIL_SENDER": "no-reply@localhost"
+    }
+}
+
