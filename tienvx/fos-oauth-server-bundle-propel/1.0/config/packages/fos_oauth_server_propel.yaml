@@ -1,0 +1,9 @@
+fos_oauth_server:
+    db_driver: propel    # Drivers available: orm, mongodb, propel or custom
+    client_class:        FOS\OAuthServerBundle\Propel\Client
+    access_token_class:  FOS\OAuthServerBundle\Propel\AccessToken
+    refresh_token_class: FOS\OAuthServerBundle\Propel\RefreshToken
+    auth_code_class:     FOS\OAuthServerBundle\Propel\AuthCode
+framework:
+    templating:
+        engines: ['twig']
