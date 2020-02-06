@@ -1,4 +1,3 @@
-# https://github.com/knojector/SteamAuthenticationBundle for configuration documentation
 soljian_steam_authentication:
     api_key: "%env(STEAM_API_KEY)%"
     login_route: ''
