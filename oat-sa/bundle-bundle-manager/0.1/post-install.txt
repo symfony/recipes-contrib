@@ -1,0 +1,7 @@
+<bg=blue;fg=white>                     </>
+<bg=blue;fg=white> Next: Bundle Manager Configuration </>
+<bg=blue;fg=white>                     </>
+
+  * Configure your parameters in <fg=green>config/packages/bundle_manager.yaml</>
+
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/oat-sa/bundle-bundle-manager</>

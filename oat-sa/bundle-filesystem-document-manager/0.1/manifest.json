@@ -1,0 +1,11 @@
+{
+    "aliases": [
+        "filesystem-document-driver"
+    ],
+    "bundles": {
+        "OAT\\Bundle\\FilesystemDocumentManagerBundle\\FilesystemDocumentManagerBundle": [ "all" ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

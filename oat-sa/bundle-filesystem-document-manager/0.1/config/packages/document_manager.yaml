@@ -1,0 +1,9 @@
+document_manager:
+    connections:
+        filesystemConnection:
+            driver: 'filesystem'
+            options: []
+    handlers:
+        filesystemHandler:
+            connection: filesystemConnection
+            classes: ~

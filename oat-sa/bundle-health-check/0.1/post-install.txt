@@ -1,0 +1,7 @@
+<bg=blue;fg=white>                     </>
+<bg=blue;fg=white> Next: Health Check configuration </>
+<bg=blue;fg=white>                     </>
+
+  * Configure your health check routes in <fg=green>config/routes/health_check.yaml</>
+
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/oat-sa/bundle-health-check</>

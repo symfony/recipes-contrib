@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "OAT\\Bundle\\BigtableDocumentManagerBundle\\BigtableDocumentManagerBundle": [ "all" ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "GOOGLE_CLOUD_PROJECT": "<project-id>",
+        "GOOGLE_CLOUD_INSTANCE": "<instance-id>",
+        "GOOGLE_APPLICATION_CREDENTIALS": "<path-to-credentials-json-key-file>"
+    }
+}

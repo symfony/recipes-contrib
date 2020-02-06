@@ -1,0 +1,11 @@
+document_manager:
+    connections:
+        bigtableConnection:
+            driver: 'gcp-bigtable'
+            options:
+                instanceId:
+                    value: '%env(resolve:GOOGLE_CLOUD_INSTANCE)%'
+    handlers:
+        bigtableHandler:
+            connection: bigtableConnection
+            classes: ~
