@@ -1,4 +1,4 @@
 bundle_manager:
     adapter:
         name: 'local_filesystem'    # the name of the adapter which get returned by AdapterInterface::getName()
-        options: ~                  # to pass custom key-value pairs to the adapter implementation
+        options: null               # to pass custom key-value pairs to the adapter implementation

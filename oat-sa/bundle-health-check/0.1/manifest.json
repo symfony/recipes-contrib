@@ -1,7 +1,4 @@
 {
-    "aliases": [
-        "health-check"
-    ],
     "bundles": {
         "OAT\\Bundle\\HealthCheckBundle\\HealthCheckBundle": [ "all" ]
     },

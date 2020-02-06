@@ -1,7 +1,4 @@
 {
-    "aliases": [
-        "filesystem-document-driver"
-    ],
     "bundles": {
         "OAT\\Bundle\\FilesystemDocumentManagerBundle\\FilesystemDocumentManagerBundle": [ "all" ]
     },

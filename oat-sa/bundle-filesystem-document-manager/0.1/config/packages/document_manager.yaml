@@ -6,4 +6,4 @@ document_manager:
     handlers:
         filesystemHandler:
             connection: filesystemConnection
-            classes: ~
+            classes: null

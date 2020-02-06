@@ -8,4 +8,4 @@ document_manager:
     handlers:
         bigtableHandler:
             connection: bigtableConnection
-            classes: ~
+            classes: null
