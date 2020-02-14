@@ -6,7 +6,7 @@ webauthn:
     creation_profiles:
         default:
             rp:
-                name: '%env(RELAYING_PARTY_NAME)%' # CHANGE THIS!
+                name: '%env(RELAYING_PARTY_NAME)%' # Please adapt the env file with the correct relaying party ID or set null
                 id: '%env(RELAYING_PARTY_ID)%' # Please adapt the env file with the correct relaying party ID or set null
     request_profiles:
         default:
