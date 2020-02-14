@@ -1,43 +1,13 @@
+# Please see the following page for more information: https://webauthn-doc.spomky-labs.com/the-webauthn-server/the-symfony-way#configuration
+
 webauthn:
-#    logger: null
     credential_repository: 'Webauthn\Bundle\Repository\DummyPublicKeyCredentialSourceRepository' # CREATE YOUR REPOSITORY AND CHANGE THIS!
     user_repository: 'Webauthn\Bundle\Repository\DummyPublicKeyCredentialUserEntityRepository' # CREATE YOUR REPOSITORY AND CHANGE THIS!
-    token_binding_support_handler: 'Webauthn\TokenBinding\IgnoreTokenBindingHandler'
     creation_profiles:
         default:
             rp:
                 name: '%env(RELAYING_PARTY_NAME)%' # CHANGE THIS!
                 id: '%env(RELAYING_PARTY_ID)%' # Please adapt the env file with the correct relaying party ID or set null
-#                icon: null #
-#            challenge_length: 32
-#            timeout: 60000
-#            authenticator_selection_criteria:
-#                attachment_mode: !php/const Webauthn\AuthenticatorSelectionCriteria::AUTHENTICATOR_ATTACHMENT_NO_PREFERENCE
-#                require_resident_key: false
-#                user_verification: !php/const Webauthn\AuthenticatorSelectionCriteria::USER_VERIFICATION_REQUIREMENT_PREFERRED
-#            extensions:
-#                loc: true
-#            public_key_credential_parameters: # You should not change this list
-#                - !php/const Cose\Algorithms::COSE_ALGORITHM_EdDSA #Order is important. Preferred algorithms go first
-#                - !php/const Cose\Algorithms::COSE_ALGORITHM_ES256
-#                - !php/const Cose\Algorithms::COSE_ALGORITHM_ES256K
-#                - !php/const Cose\Algorithms::COSE_ALGORITHM_ES384
-#                - !php/const Cose\Algorithms::COSE_ALGORITHM_ES512
-#                - !php/const Cose\Algorithms::COSE_ALGORITHM_RS256
-#                - !php/const Cose\Algorithms::COSE_ALGORITHM_RS384
-#                - !php/const Cose\Algorithms::COSE_ALGORITHM_RS512
-#                - !php/const Cose\Algorithms::COSE_ALGORITHM_PS256
-#                - !php/const Cose\Algorithms::COSE_ALGORITHM_PS384
-#                - !php/const Cose\Algorithms::COSE_ALGORITHM_PS512
-#            attestation_conveyance: !php/const Webauthn\PublicKeyCredentialCreationOptions::ATTESTATION_CONVEYANCE_PREFERENCE_NONE
     request_profiles:
         default:
             rp_id: '%env(RELAYING_PARTY_ID)%' # Please adapt the env file with the correct relaying party ID or set null
-#            challenge_length: 32
-#            timeout: 60000
-#            user_verification: !php/const Webauthn\AuthenticatorSelectionCriteria::USER_VERIFICATION_REQUIREMENT_PREFERRED
-#            extensions:
-#                loc: true
-#    metadata_service:
-#        enabled: false
-#        repository: 'App\Repository\MetadataStatementRepository'
