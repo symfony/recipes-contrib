@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "Sonata\\Form\\Bridge\\Symfony\\Bundle\\SonataFormBundle": ["all"]
+    }
+}
