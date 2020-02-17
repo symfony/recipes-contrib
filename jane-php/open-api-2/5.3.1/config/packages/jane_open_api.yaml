@@ -1,0 +1,3 @@
+#services:
+#    MyApp\Library\Generated\Client:
+#        factory: [MyApp\Library\Generated\Client, create]

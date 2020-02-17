@@ -3,11 +3,11 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use Jane\JsonSchema\Command\GenerateCommand;
+use Jane\OpenApiCommon\Command\GenerateCommand;
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Output\NullOutput;
 
 $command = new GenerateCommand();
-$inputArray = new ArrayInput(['--config-file' => __DIR__ . '/../config/jane/config.php'], $command->getDefinition());
+$inputArray = new ArrayInput(['--config-file' => __DIR__ . '/../config/jane/open_api.php'], $command->getDefinition());
 
 $command->execute($inputArray, new NullOutput());
