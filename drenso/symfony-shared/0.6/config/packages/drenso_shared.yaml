@@ -1,0 +1,3 @@
+drenso_shared:
+    gravatar:
+        fallback_style: 'mp' # Define a fallback style for accounts without a gravatar, see https://en.gravatar.com/site/implement/images/#default-image
