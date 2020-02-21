@@ -1,0 +1,4 @@
+pn_vote:
+    cookie_name: pn_vote
+    cookie_lifetime: '+1 year'
+    csrf: true
