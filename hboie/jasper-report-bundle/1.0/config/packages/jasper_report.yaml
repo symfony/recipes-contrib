@@ -1,5 +1,0 @@
-hboie_jasper_report:
-    host:      'http://localhost:8080/jasperserver'
-    username:  jasperadmin
-    password:  jasperadmin
-    org_id:    null
