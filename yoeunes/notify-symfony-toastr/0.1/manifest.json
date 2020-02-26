@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Yoeunes\\Notify\\Toastr\\Symfony\\NotifyToastrBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
