@@ -1,0 +1,7 @@
+msalsas_gdpr_consent_banner:
+    has_translations: true
+    css: default
+    fade_time: 2
+    text_message: ""
+    accept_message: ""
+    time_to_expire: 30 days
