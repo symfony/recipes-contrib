@@ -15,6 +15,7 @@
         "Recipe/src/": "%SRC_DIR%/",
         "Recipe/templates/": "templates/",
         "Recipe/tests/": "tests/",
-        "Recipe/translations/": "translations/"
+        "Recipe/translations/": "translations/",
+        "Recipe/config-buider.js": "/"
     }
 }
