@@ -1,0 +1,17 @@
+{
+    "container": {
+        "locale": "fr_FR",
+        "email_contact": "contact@app_name.com",
+        "email_name": "Contact AppName",
+        "email_sender": "no-reply@app_name.com"
+    },
+    "copy-from-package": {
+        "Recipe/config/": "%CONFIG_DIR%/",
+        "Recipe/features/": "features/",
+        "Recipe/spec/": "spec/",
+        "Recipe/src/": "%SRC_DIR%/",
+        "Recipe/templates/": "templates/",
+        "Recipe/tests/": "tests/",
+        "Recipe/translations/": "translations/"
+    }
+}
