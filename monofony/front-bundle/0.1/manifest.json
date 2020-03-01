@@ -1,4 +1,7 @@
 {
+    "bundles": {
+        "Monofony\\Bundle\\FrontBundle\\MonofonyFrontBundle": ["all"]
+    },
     "copy-from-package": {
         "Recipe/assets/": "assets/",
         "recipe/config/": "%CONFIG_DIR%/",

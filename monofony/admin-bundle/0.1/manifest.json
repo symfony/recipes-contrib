@@ -1,4 +1,7 @@
 {
+    "bundles": {
+        "Monofony\\Bundle\\AdminBundle\\MonofonyAdminBundle": ["all"]
+    },
     "copy-from-package": {
         "Recipe/assets/": "assets/",
         "Recipe/config/": "%CONFIG_DIR%/",
