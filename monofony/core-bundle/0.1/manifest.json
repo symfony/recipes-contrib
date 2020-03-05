@@ -16,6 +16,6 @@
         "Recipe/templates/": "templates/",
         "Recipe/tests/": "tests/",
         "Recipe/translations/": "translations/",
-        "Recipe/config-buider.js": "/"
+        "Recipe/config-builder.js": "config-builder.js"
     }
 }
