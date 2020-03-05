@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Monofony\\Bundle\\FrontBundle\\MonofonyFrontBundle": ["all"]
+    },
+    "copy-from-package": {
+        "Recipe/assets/": "assets/",
+        "Recipe/config/": "%CONFIG_DIR%/",
+        "Recipe/features/": "features/",
+        "Recipe/src/": "%SRC_DIR%/",
+        "Recipe/templates/": "templates/",
+        "Recipe/tests/": "tests/"
+    }
+}
