@@ -3,7 +3,7 @@
         "Monofony\\Bundle\\CoreBundle\\MonofonyCoreBundle": ["all"]
     },
     "container": {
-        "locale": "fr_FR",
+        "locale": "en",
         "email_contact": "contact@example.com",
         "email_name": "Contact AppName",
         "email_sender": "no-reply@example.com"
