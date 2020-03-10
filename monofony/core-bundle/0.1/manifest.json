@@ -4,9 +4,9 @@
     },
     "container": {
         "locale": "fr_FR",
-        "email_contact": "contact@app_name.com",
+        "email_contact": "contact@example.com",
         "email_name": "Contact AppName",
-        "email_sender": "no-reply@app_name.com"
+        "email_sender": "no-reply@example.com"
     },
     "copy-from-package": {
         "Recipe/config/": "%CONFIG_DIR%/",
