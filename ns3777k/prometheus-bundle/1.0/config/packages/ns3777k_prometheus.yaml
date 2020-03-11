@@ -3,5 +3,4 @@ ns3777k_prometheus:
     adapter: apcu
 
     listener:
-        enabled: true
         ignored_routes: [metrics, _wdt]
