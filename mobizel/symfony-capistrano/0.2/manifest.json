@@ -1,0 +1,7 @@
+{
+    "copy-from-package": {
+        "Capfile": "Capfile",
+        "Gemfile": "Gemfile",
+        "etc/": "etc/"
+    }
+}
