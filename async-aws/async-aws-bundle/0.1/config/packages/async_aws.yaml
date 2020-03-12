@@ -5,5 +5,5 @@ async_aws:
         accessKeyId: '%env(AWS_KEY)%'
         accessKeySecret: '%env(AWS_SECRET)%'
 
-    # All installed clients are automatically autowrired. Use this section to customize clients
+    # All installed clients are automatically autowired. Use this section to customize clients
     clients:
