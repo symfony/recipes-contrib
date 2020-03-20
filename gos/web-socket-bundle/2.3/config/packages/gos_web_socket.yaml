@@ -1,0 +1,9 @@
+gos_web_socket:
+    server:
+        host: '%env(GOS_WEB_SOCKET_SERVER_IP)%'       # The host IP address to bind to
+        port: '%env(int:GOS_WEB_SOCKET_SERVER_PORT)%' # The port the websocket server will listen on
+        router:
+            resources:
+                -
+                    resource: '%kernel.project_dir%/config/pubsub/websocket/*'
+                    type: 'glob'
