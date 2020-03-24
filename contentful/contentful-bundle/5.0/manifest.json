@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "Contentful\\ContentfulBundle\\ContentfulBundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "CONTENTFUL_SPACE_ID": "cfexampleapi",
+        "CONTENTFUL_ACCESS_TOKEN": "b4c0n73n7fu1"
+    }
+}
