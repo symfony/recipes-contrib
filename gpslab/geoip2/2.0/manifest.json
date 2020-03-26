@@ -9,6 +9,6 @@
         "geoip2:update": "symfony-cmd"
     },
     "env": {
-        "GEOIP_LICENSE": ""
+        "GEOIP_LICENSE": "YOUR-LICENSE-KEY"
     }
 }
