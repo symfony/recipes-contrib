@@ -1,0 +1,9 @@
+{
+    "copy-from-recipe": {
+        "bin/": "%BIN_DIR%/",
+        "config/": "%CONFIG_DIR%/"
+    },
+    "conflict": {
+        "symfony/symfony": "<5.0"
+    }
+}

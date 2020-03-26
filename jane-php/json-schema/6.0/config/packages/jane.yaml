@@ -1,0 +1,6 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+#    MyApp\Library\Generated\Normalizer\JaneObjectNormalizer: null
