@@ -7,8 +7,5 @@
     },
     "composer-scripts": {
         "geoip2:update": "symfony-cmd"
-    },
-    "env": {
-        "GEOIP_LICENSE": "YOUR-LICENSE-KEY"
     }
 }
