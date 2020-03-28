@@ -1,0 +1,7 @@
+consul:
+    service:
+        name: 'symfony-app'
+        host: 'localhost'
+        port: 8000
+    client:
+        base_uri: http://127.0.0.1:8500
