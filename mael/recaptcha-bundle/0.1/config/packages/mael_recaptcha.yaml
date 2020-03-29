@@ -1,0 +1,3 @@
+mael_recaptcha:
+    key: 'your_key'
+    secret: 'your_secret_key'
