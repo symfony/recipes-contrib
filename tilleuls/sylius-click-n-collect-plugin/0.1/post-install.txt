@@ -1,0 +1,11 @@
+<bg=blue;fg=white>                         </>
+<bg=blue;fg=white> Finish the installation </>
+<bg=blue;fg=white>                         </>
+
+  * You're not ready to use the plugin yet. First you must:
+    1. Update your entities
+    2. Override the default templates
+    3. Create your Click 'N' Collect locations
+    4. Create a shipping method
+
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/coopTilleuls/CoopTilleulsSyliusClickNCollectPlugin#install</>
