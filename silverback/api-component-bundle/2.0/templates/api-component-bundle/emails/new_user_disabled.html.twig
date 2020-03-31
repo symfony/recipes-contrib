@@ -1,0 +1,9 @@
+{% extends "emails/_template.html.twig" %}
+
+{% block content %}
+  <h1 class="text-center">We are reviewing your account</h1>
+  <spacer size="16"></spacer>
+  <p>Dear {{ user.name }},</p>
+  <p>Thank you for signing up to the website. An administrator will review your registration and you will receive another email once we have enabled your account.</p>
+  <p>Many thanks,<br />The Website Team</p>
+{% endblock %}
