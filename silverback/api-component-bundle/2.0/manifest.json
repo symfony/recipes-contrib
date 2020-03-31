@@ -2,6 +2,7 @@
     "copy-from-recipe": {
         "assets/": "assets/",
         "config/": "%CONFIG_DIR%/",
+        "src/": "%SRC_DIR%/",
         "templates/": "templates/"
     },
     "env": {
