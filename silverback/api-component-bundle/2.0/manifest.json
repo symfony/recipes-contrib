@@ -1,0 +1,11 @@
+{
+    "copy-from-recipe": {
+        "assets/": "assets/",
+        "config/": "%CONFIG_DIR%/",
+        "templates/": "templates/"
+    },
+    "env": {
+        "WEBSITE_EMAIL_ADDRESS": "noreply@website.com",
+        "WEBSITE_NAME": "My New Website"
+    }
+}

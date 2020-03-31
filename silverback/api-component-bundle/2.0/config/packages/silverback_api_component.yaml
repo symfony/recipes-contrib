@@ -1,0 +1,4 @@
+silverback_api_component:
+  user:
+    class_name: App\Entity\User
+    change_username_path: /account/confirm-username/{{ token }}/{{ email }}
