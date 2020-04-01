@@ -1,0 +1,8 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    _instanceof:
+        Rewieer\TaskSchedulerBundle\Task\TaskInterface:
+            tags: ['ts.task']
