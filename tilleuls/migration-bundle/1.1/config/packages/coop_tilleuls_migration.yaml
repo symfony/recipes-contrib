@@ -4,7 +4,6 @@ coop_tilleuls_migration:
 
 doctrine:
     dbal:
-        default_connection: default
         connections:
             legacy:
                 wrapper_class: 'CoopTilleuls\MigrationBundle\Doctrine\DBAL\DisabledConnection'
