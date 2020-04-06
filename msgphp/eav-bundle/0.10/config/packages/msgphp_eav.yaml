@@ -1,0 +1,4 @@
+msgphp_eav:
+    class_mapping:
+        MsgPhp\Eav\Attribute: App\Entity\Attribute
+        MsgPhp\Eav\AttributeValue: App\Entity\AttributeValue
