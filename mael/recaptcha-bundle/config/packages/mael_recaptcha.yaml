@@ -1,3 +1,0 @@
-mael_recaptcha:
-    key: '%env(resolve:MAEL_RECAPTCHA_KEY)%'
-    secret: '%env(resolve:MAEL_RECAPTCHA_SECRET)%'
