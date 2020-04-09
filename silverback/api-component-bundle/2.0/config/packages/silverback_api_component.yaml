@@ -1,4 +1,15 @@
 silverback_api_component:
+  website_name: New Website
   user:
     class_name: App\Entity\User
-    change_username_path: /account/confirm-username/{{ token }}/{{ email }}
+    email_verification:
+      default: false
+      verify_on_register: true
+      deny_unverified_login: true
+    change_email_address:
+      default_verify_path: /account/confirm-username/{{ token }}/{{ email }}
+    password_reset:
+      default_reset_path: /reset-password/{{ token }}/{{ email }}
+  security:
+    tokens:
+      - '%env(API_SECRET_TOKEN)%'
