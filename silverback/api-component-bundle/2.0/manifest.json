@@ -1,12 +1,10 @@
 {
     "copy-from-recipe": {
-        "assets/": "assets/",
         "config/": "%CONFIG_DIR%/",
         "src/": "%SRC_DIR%/",
-        "templates/": "templates/"
     },
     "env": {
-        "WEBSITE_EMAIL_ADDRESS": "noreply@website.com",
-        "WEBSITE_NAME": "My New Website"
+        "MAILER_EMAIL": "\"My Website <website@website.com>\"",
+        "API_SECRET_TOKEN": "%generate(secret)%"
     }
 }
