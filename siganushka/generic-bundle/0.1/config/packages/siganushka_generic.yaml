@@ -1,2 +1,2 @@
 siganushka_generic:
-    table_prefix: null
+    table_prefix: null # e.g "tbl_"
