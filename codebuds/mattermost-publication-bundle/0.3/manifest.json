@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Codebuds\\MattermostPublicationBundle": ["all"]
+        "CodeBuds\\MattermostPublicationBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
