@@ -1,5 +1,5 @@
 mattermost_publication:
     webhook_url: '%env(MATTERMOST_WEBHOOK_URL)%'
+    channel: null
     username: null
     icon_url: null
-    channel: null
