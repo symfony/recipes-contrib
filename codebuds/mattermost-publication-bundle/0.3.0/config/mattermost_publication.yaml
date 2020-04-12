@@ -1,0 +1,5 @@
+mattermost_publication:
+  webhook_url: '%env(MATTERMOST_WEBHOOK_URL)%'
+  username: ~
+  icon_url: ~
+  channel: ~
