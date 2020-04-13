@@ -8,6 +8,6 @@
     "env": {
         "OTOBUL_EPAYBG_MIN": "YOUR_EPAYBG_MIN",
         "OTOBUL_EPAYBG_SECRET": "YOUR_EPAYBG_SECRET",
-        "OTOBUL_EPAYBG_IS_DEMO": true
+        "OTOBUL_EPAYBG_IS_DEMO": "true"
     }
 }
