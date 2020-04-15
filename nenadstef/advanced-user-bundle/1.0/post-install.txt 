@@ -1,0 +1,5 @@
+<bg=blue;fg=white>                     </>
+<bg=blue;fg=white> Next: Configuration </>
+<bg=blue;fg=white>                     </>
+
+  * Configure your parameters in <fg=green>config/packages/advanced_user.yaml</>
