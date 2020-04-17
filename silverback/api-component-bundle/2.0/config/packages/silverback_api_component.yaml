@@ -13,3 +13,5 @@ silverback_api_component:
   security:
     tokens:
       - '%env(API_SECRET_TOKEN)%'
+  publishable:
+    permission: "is_granted('ROLE_EDITOR')"
