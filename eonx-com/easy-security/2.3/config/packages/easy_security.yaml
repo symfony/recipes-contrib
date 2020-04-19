@@ -1,0 +1,5 @@
+easy_security:
+    context_service_id: App\Security\Interfaces\ContextInterface
+    token_decoder: chain
+    permissions_locations:
+        - App\Security\Interfaces\PermissionsInterface
