@@ -1,0 +1,7 @@
+easy_pagination:
+    resolver: in_query
+    start_size:
+        start_attribute: page
+        start_default: 1
+        size_attribute: perPage
+        size_default: 15
