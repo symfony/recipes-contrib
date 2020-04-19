@@ -1,0 +1,7 @@
+#
+# All configuration options are described here:
+# https://github.com/meritoo/common-bundle/blob/master/docs/Configuration.md
+#
+meritoo_common:
+    form:
+        novalidate: "%env(bool:MERITOO_FORM_NOVALIDATE)%"

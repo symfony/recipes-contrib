@@ -1,0 +1,7 @@
+symfony_connect_callback:
+    path: /connect/callback
+
+symfony_connect_login:
+    path: /connect/login
+    methods: [GET]
+    controller: SymfonyCorp\Bundle\ConnectBundle\Controller\OAuthController::newSessionAction

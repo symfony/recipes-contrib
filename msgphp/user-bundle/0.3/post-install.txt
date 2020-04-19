@@ -1,8 +1,0 @@
-<bg=blue;fg=white>                       </>
-<bg=blue;fg=white> User management setup </>
-<bg=blue;fg=white>                       </>
-
-  * Install the Symfony Maker Bundle using <info>composer require maker --dev</>. It's required for the next step.
-
-  * Run <info>bin/console make:user</>. It will guide you through the basic setup by asking a series of questions
-    and generates the minimal application source files needed.

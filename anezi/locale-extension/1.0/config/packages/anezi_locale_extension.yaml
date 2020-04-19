@@ -1,0 +1,8 @@
+services:
+    anezi_twig.locale_extension:
+        class: Anezi\Locale\Twig\Extension\LocaleExtension
+        public:    false
+        arguments:
+            $locales: ['fr', 'en'] # Edit here for your needs.
+        tags:
+            - { name: twig.extension }

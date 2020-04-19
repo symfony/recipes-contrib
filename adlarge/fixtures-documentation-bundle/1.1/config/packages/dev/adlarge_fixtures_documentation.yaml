@@ -1,0 +1,4 @@
+adlarge_fixtures_documentation:
+    title: 'Fixtures documentation'
+    reloadCommands:
+        - php bin/console doctrine:fixtures:load

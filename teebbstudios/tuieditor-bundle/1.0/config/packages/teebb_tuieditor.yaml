@@ -1,0 +1,14 @@
+# Read the documentation: https://github.com/teebbstudios/TeebbTuiEditorBundle/blob/master/README.md
+teebb_tui_editor:
+    default_config: basic_config
+    configs:
+        basic_config:
+            to_html: false
+            exts:
+                - scrollSync
+                - colorSyntax
+                - uml
+                - chart
+                - mark
+                - table
+

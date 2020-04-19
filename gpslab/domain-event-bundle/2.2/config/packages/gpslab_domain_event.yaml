@@ -1,0 +1,5 @@
+# see https://github.com/gpslab/domain-event-bundle/blob/master/README.md#configuration
+
+gpslab_domain_event:
+    # Publish domain events post a Doctrine flush event
+    publish_on_flush: true

@@ -1,5 +1,1 @@
-{
-    "env": {
-        "ENQUEUE_DSN": "mysql://"
-    }
-}
+{}

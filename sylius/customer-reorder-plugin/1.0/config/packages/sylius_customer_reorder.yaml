@@ -1,0 +1,2 @@
+imports:
+    - { resource: "@SyliusCustomerReorderPlugin/Resources/config/config.yml" }

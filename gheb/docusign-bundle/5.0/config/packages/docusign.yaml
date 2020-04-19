@@ -1,0 +1,38 @@
+docusign:
+    demo: "%kernel.debug%"
+    mode: embedded # Mode used to sign (remote or embedded)
+
+    # Authentication credentials to log into docusign.
+    auth_jwt:
+        private_key: "%env(resolve:DOCUSIGN_PRIVATE_KEY_PATH)%"
+        integration_key: "%env(DOCUSIGN_INTEGRATION_KEY)%"
+        user_guid: "%env(DOCUSIGN_USER_GUID)%"
+
+    # Your DocuSign account id
+    account_id: "%env(int:DOCUSIGN_ACCOUNT_ID)%"
+
+    default_signer_name: "Grégoire Hébert" # Name of the person that will be notified and will sign the document if none is sent to the url.
+    default_signer_email: "gregoire@les-tilleuls.coop" # Mail of the person that will be notified and will sign the document if none is sent to the url.
+
+    api_uri: "https://www.docusign.net/restapi" # DocuSign api uri. When demo is true, the bundle replace it by `https://demo.docusign.net/restapi`
+
+    callback: "docusign_callback" # Your route where to redirect the user after signature
+
+    # To sign you need to generate a route to call.
+    # The route name will be formated `docusign.sign.{signaturename}` for this one it will be `docusign.sign.my_embedded_signature` and will have `my_embedded_signature` as attribute type
+    # By defining this, you have a full control over the security applied to this route. see https://symfony.com/doc/current/security/access_control.html
+    sign_path: '/my/embedded/sign/path'
+
+    # Where to position the signature
+    signatures:
+        # this is an array of positions, you can have multiple signatures locations per pages
+        -
+            page: 1 # Default
+            x_position: 200 # Top left corner in pixels
+            y_position: 400 # Top left corner in pixels
+
+    # Defines where are stored the documents
+    storage:
+        adapter: 'local'
+        options:
+            directory: '%kernel.project_dir%/var/storage/default'

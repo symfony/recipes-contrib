@@ -1,0 +1,4 @@
+# Read the official documentation page of this bundle for further information about all possible configurations.
+# http://tsantos-serializer-bundle.readthedocs.io/
+tsantos_serializer:
+    generation_strategy: file_not_exists

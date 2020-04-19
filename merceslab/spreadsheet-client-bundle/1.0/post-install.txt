@@ -1,0 +1,5 @@
+<bg=blue;fg=white>                                   </>
+<bg=blue;fg=white> MercesLab SpreadsheetClientBundle </>
+<bg=blue;fg=white>                                   </>
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/MercesLyon/spreadsheet-client-bundle</>
+  * <fg=blue>Configure</> using the <comment>GOOGLE_CREDENTIALS</> env variable and in the <comment>config/packages/merces_lab_spreadsheet_client.yaml</> configuration file

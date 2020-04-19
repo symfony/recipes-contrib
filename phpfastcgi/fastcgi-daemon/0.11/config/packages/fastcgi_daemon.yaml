@@ -1,0 +1,9 @@
+services:
+    App\FastCGIKernel:
+        autowire: true
+
+    PHPFastCGI\FastCGIDaemon\Driver\DriverContainer: null
+    PHPFastCGI\FastCGIDaemon\Command\DaemonRunCommand:
+        arguments: ['@App\FastCGIKernel', '@PHPFastCGI\FastCGIDaemon\Driver\DriverContainer', 'fastcgi-daemon:run']
+        tags:
+            - { name: console.command }

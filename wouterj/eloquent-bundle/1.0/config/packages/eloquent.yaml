@@ -6,4 +6,4 @@ wouterj_eloquent:
     username: '%env(DB_USERNAME)%'
     password: '%env(DB_PASSWORD)%'
     # Uncomment the following line to enable the Eloquent ORM
-    #eloquent: ~
+    #eloquent: null

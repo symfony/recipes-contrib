@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Knyk\\MailboxBundle\\MailboxBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

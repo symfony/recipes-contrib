@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Imper86\\AllegroApiBundle\\Imper86AllegroApiBundle": ["all"]
+    },
+    "env": {
+        "ALLEGRO_CLIENT_ID": "your_client_id",
+        "ALLEGRO_CLIENT_SECRET": "your_client_secret"
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

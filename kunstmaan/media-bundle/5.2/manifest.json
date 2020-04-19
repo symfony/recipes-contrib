@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "Kunstmaan\\MediaBundle\\KunstmaanMediaBundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "public/": "%PUBLIC_DIR%/"
+    },
+    "gitignore": [
+        "/public/uploads/"
+    ]
+}

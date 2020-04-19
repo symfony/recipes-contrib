@@ -1,0 +1,11 @@
+services:
+    ravenflux.twig.extension.php_functions:
+        class: RavenFlux\Twig\PhpFunctionsExtension
+        arguments:
+            - #first argument are functions
+                - 'count'
+            - #second argument are filters
+                - 'nl2br'
+        tags:
+            -
+                name: twig.extension

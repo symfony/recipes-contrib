@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "NavBundle\\NavBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "src/": "%SRC_DIR%/"
+    },
+    "env": {
+        "NAV_URL": "http://user:password@host/WS/Page/"
+    }
+}

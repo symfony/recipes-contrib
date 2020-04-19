@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "EN\\IgdbApiBundle\\ENIgdbApiBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "YOUR_BASE_URL": "",
+        "YOUR_API_KEY": ""
+    }
+}

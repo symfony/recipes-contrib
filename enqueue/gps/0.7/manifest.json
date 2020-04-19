@@ -1,5 +1,5 @@
 {
     "env": {
-        "ENQUEUE_DSN": "gps:"
+        "PUBSUB_EMULATOR_HOST": "http://localhost:8900"
     }
 }

@@ -1,0 +1,6 @@
+netopia_mobilpay:
+    payment_url:        '%env(NETOPIA_MOBILPAY_PAYMENT_URL)%'
+    public_cert:        '%env(NETOPIA_MOBILPAY_PUBLIC_CERT)%'
+    private_key:        '%env(NETOPIA_MOBILPAY_PRIVATE_KEY)%'
+    signature:          '%env(NETOPIA_MOBILPAY_SIGNATURE)%'
+

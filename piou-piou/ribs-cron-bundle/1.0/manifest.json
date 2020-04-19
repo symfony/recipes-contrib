@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "PiouPiou\\RibsCronBundle\\RibsCronBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "IP_CRON_EXTERNAL": "",
+        "IP_CRON_INTERNAL": "127.0.0.1"
+    }
+}

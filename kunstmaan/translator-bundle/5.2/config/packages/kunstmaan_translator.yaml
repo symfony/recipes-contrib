@@ -1,0 +1,4 @@
+kunstmaan_translator:
+    enabled: true
+    # Add your preferred locales here
+    managed_locales: ['nl', 'en', 'de', 'fr']

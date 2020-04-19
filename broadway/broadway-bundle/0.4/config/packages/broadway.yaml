@@ -18,7 +18,7 @@ broadway:
         dispatch_events: false
 
         # a service definition id implementing Psr\Log\LoggerInterface
-        logger: ~
+        logger: null
 
     saga:
         enabled: false

@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "AsyncAws\\Symfony\\Bundle\\AsyncAwsBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "AWS_KEY": "your-aws-key",
+        "AWS_SECRET": "your-aws-secret"
+    }
+}

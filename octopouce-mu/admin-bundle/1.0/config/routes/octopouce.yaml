@@ -1,0 +1,2 @@
+_octopouce_admin:
+    resource: "@OctopouceAdminBundle/Resources/config/routing/routing.yaml"

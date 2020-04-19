@@ -1,0 +1,4 @@
+# Get your credentials by signing up here: https://api.igdb.com/admin and put them in your .env file
+en_igdb_api:
+    base_url: '%env(YOUR_BASE_URL)%'
+    api_key: '%env(YOUR_API_KEY)%'
