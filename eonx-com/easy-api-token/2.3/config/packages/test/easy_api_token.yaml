@@ -5,7 +5,7 @@ easy_api_token:
                 - user-apikey
                 - jwt-header
 
-        user-apikey: ~
+        user-apikey: null
         jwt-header:
             driver: firebase
             options:

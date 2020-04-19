@@ -4,5 +4,10 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
+    },
+    "container": {
+        "auth0_placeholder_param": "",
+        "auth0_token_issuer": "%env(default:auth0_placeholder_param:AUTH0_TOKEN_ISSUER)%",
+        "auth0_token_audience": "%env(default:auth0_placeholder_param:AUTH0_TOKEN_AUDIENCE)%"
     }
 }
