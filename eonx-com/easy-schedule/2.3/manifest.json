@@ -1,5 +1,0 @@
-{
-    "bundles": {
-        "EonX\\EasySchedule\\Bridge\\Symfony\\EasyScheduleBundle": ["all"]
-    }
-}
