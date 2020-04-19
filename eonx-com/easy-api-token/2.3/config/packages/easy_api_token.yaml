@@ -1,0 +1,20 @@
+parameters:
+    auth0_placeholder_param: ''
+    auth0_token_issuer: '%env(default:auth0_placeholder_param:AUTH0_TOKEN_ISSUER)%'
+    auth0_token_audience: '%env(default:auth0_placeholder_param:AUTH0_TOKEN_AUDIENCE)%'
+
+easy_api_token:
+    decoders:
+        chain:
+            list:
+                - user-apikey
+                - jwt-header
+
+        user-apikey: ~
+        jwt-header:
+            driver: auth0
+            options:
+                allowed_algos: ['RS256']
+                authorized_iss: ['%auth0_token_issuer%']
+                private_key: ''
+                valid_audiences: ['%auth0_token_audience%']
