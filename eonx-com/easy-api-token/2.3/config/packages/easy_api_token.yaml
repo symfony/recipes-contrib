@@ -1,8 +1,3 @@
-parameters:
-    auth0_placeholder_param: ''
-    auth0_token_issuer: '%env(default:auth0_placeholder_param:AUTH0_TOKEN_ISSUER)%'
-    auth0_token_audience: '%env(default:auth0_placeholder_param:AUTH0_TOKEN_AUDIENCE)%'
-
 easy_api_token:
     decoders:
         chain:
@@ -10,7 +5,7 @@ easy_api_token:
                 - user-apikey
                 - jwt-header
 
-        user-apikey: ~
+        user-apikey: null
         jwt-header:
             driver: auth0
             options:
