@@ -1,0 +1,4 @@
+easy_core:
+    api_platform:
+        custom_pagination_enabled: true
+        simple_data_persister_enabled: true
