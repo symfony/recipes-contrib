@@ -1,0 +1,15 @@
+easy_api_token:
+    decoders:
+        chain:
+            list:
+                - user-apikey
+                - jwt-header
+
+        user-apikey: null
+        jwt-header:
+            driver: auth0
+            options:
+                allowed_algos: ['RS256']
+                authorized_iss: ['%auth0_token_issuer%']
+                private_key: ''
+                valid_audiences: ['%auth0_token_audience%']

@@ -1,0 +1,17 @@
+easy_api_token:
+    decoders:
+        chain:
+            list:
+                - user-apikey
+                - jwt-header
+
+        user-apikey: null
+        jwt-header:
+            driver: firebase
+            options:
+                algo: 'HS256'
+                allowed_algos: ['HS256']
+                leeway: 1
+                param: 'sub'
+                private_key: 'my-key'
+                public_key: 'my-key'
