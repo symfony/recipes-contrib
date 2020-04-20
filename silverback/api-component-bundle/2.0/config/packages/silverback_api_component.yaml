@@ -7,9 +7,9 @@ silverback_api_component:
       verify_on_register: true
       deny_unverified_login: true
     change_email_address:
-      default_verify_path: /account/confirm-username/{{ token }}/{{ email }}
+      default_verify_path: /verify-new-email/{{ username }}/{{ token }}
     password_reset:
-      default_reset_path: /reset-password/{{ token }}/{{ email }}
+      default_reset_path: /reset-password/{{ username }}/{{ token }}
   security:
     tokens:
       - '%env(API_SECRET_TOKEN)%'
