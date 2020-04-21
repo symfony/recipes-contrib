@@ -3,13 +3,17 @@ silverback_api_component:
   user:
     class_name: App\Entity\User
     email_verification:
-      default: false
+      default_value: false
       verify_on_register: true
+      verify_on_change: true
       deny_unverified_login: true
-    change_email_address:
-      default_verify_path: /verify-new-email/{{ username }}/{{ token }}
+      email:
+        redirect_path_query: ~
+        default_redirect_path: /verify-new-email/{{ username }}/{{ token }}
     password_reset:
-      default_reset_path: /reset-password/{{ username }}/{{ token }}
+      email:
+        redirect_path_query: ~
+        default_redirect_path: /reset-password/{{ username }}/{{ token }}
   security:
     tokens:
       - '%env(API_SECRET_TOKEN)%'
