@@ -1,0 +1,7 @@
+enhavo_shop_admin:
+    resource: "@EnhavoShopBundle/Resources/config/routing/admin.yml"
+    prefix: /admin
+
+enhavo_shop_theme:
+    resource: "@EnhavoShopBundle/Resources/config/routing/theme.yml"
+    prefix: /

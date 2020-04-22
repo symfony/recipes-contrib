@@ -1,0 +1,19 @@
+enhavo_newsletter_newsletter:
+    resource: "@EnhavoNewsletterBundle/Resources/config/routing/admin/newsletter.yml"
+    prefix: /admin
+
+enhavo_newsletter_subscriber:
+    resource: "@EnhavoNewsletterBundle/Resources/config/routing/admin/subscriber.yml"
+    prefix: /admin
+
+enhavo_newsletter_group:
+    resource: "@EnhavoNewsletterBundle/Resources/config/routing/admin/group.yml"
+    prefix: /admin
+
+enhavo_newsletter_theme:
+    resource: "@EnhavoNewsletterBundle/Resources/config/routing/theme/newsletter.yml"
+    prefix: /
+
+enhavo_newsletter_subscribe:
+    resource: "@EnhavoNewsletterBundle/Resources/config/routing/subscribe.yml"
+    prefix: /

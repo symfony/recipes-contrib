@@ -1,0 +1,3 @@
+enhavo_block:
+    resource: "@EnhavoBlockBundle/Resources/config/routing/routing.yml"
+    prefix: /admin

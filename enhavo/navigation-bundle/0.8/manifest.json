@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Enhavo\\Bundle\\NavigationBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

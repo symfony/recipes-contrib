@@ -1,0 +1,11 @@
+enhavo_user_admin:
+    resource: "@EnhavoUserBundle/Resources/config/routing/admin.yml"
+    prefix: /admin
+
+enhavo_group_admin_group:
+    resource: "@EnhavoUserBundle/Resources/config/routing/admin/group.yml"
+    prefix: /admin
+
+enhavo_user_theme:
+    resource: "@EnhavoUserBundle/Resources/config/routing/theme.yml"
+    prefix: /

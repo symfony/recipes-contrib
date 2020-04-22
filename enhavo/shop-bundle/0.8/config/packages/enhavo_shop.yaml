@@ -1,0 +1,2 @@
+imports:
+    - { resource: '@EnhavoShopBundle/Resources/config/app/config.yml' }

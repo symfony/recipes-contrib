@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Enhavo\\Bundle\\UserBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "assets/": "assets/"
+    }
+}

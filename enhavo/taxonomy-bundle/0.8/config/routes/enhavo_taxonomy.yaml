@@ -1,0 +1,3 @@
+enhavo_taxonomy_taxonomy:
+    resource: "@EnhavoTaxonomyBundle/Resources/config/routing/routing.yml"
+    prefix: /admin

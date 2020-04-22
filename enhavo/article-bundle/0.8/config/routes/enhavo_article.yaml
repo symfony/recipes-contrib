@@ -1,0 +1,7 @@
+enhavo_article_admin:
+    resource: "@EnhavoArticleBundle/Resources/config/routing/admin.yml"
+    prefix: /admin
+
+enhavo_article_theme:
+    resource: "@EnhavoArticleBundle/Resources/config/routing/theme.yml"
+    prefix: /

@@ -1,0 +1,7 @@
+enhavo_navigation:
+    resource: "@EnhavoNavigationBundle/Resources/config/routing/navigation.yml"
+    prefix: /admin
+
+enhavo_navigation_form:
+    resource: "@EnhavoNavigationBundle/Resources/config/routing/form.yml"
+    prefix: /

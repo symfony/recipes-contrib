@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Enhavo\\Bundle\\MediaBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "assets/": "assets/"
+    }
+}
