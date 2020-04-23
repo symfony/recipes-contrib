@@ -10,7 +10,6 @@
         "JACQUESNDL_MAILER_SENDER_ADDRESS": "example@domain.tld"
     },
     "conflict": {
-        "symfony/framework-bundle": "<4.4",
-        "symfony/twig-bundle": "<4.4"
+        "symfony/symfony": "<4.4"
     }
 }
