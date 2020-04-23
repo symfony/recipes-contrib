@@ -1,3 +1,4 @@
 enhavo_dashboard:
     resource: "@EnhavoDashboardBundle/Resources/config/routing.yml"
     prefix: /admin
+
