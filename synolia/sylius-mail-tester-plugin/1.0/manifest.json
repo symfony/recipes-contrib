@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Synolia\\SyliusMailTesterPlugin\\SynoliaSyliusMailTesterPlugin": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
