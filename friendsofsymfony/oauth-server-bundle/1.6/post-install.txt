@@ -1,0 +1,5 @@
+<bg=blue;fg=white>                      </>
+<bg=blue;fg=white> FOSOAuthServerBundle </>
+<bg=blue;fg=white>                      </>
+
+  * <fg=blue>Continue installation</> Read the documentation: https://github.com/FriendsOfSymfony/FOSOAuthServerBundle/blob/master/Resources/doc/index.md
