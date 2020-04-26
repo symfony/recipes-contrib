@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Enhavo\\Bundle\\PageBundle": ["all"]
+        "Enhavo\\Bundle\\PageBundle\\EnhavoPageBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"

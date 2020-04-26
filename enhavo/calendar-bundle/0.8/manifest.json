@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Enhavo\\Bundle\\CalendarBundle": ["all"]
+        "Enhavo\\Bundle\\CalendarBundle\\EnhavoCalendarBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
