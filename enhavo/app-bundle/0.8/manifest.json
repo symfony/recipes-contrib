@@ -4,9 +4,6 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/",
-        "assets/": "assets/",
-        "package.json": "package.json",
-        "tsconfig.json": "tsconfig.json",
-        "webpack.config.js": "webpack.config.js"
+        "assets/": "assets/"
     }
 }
