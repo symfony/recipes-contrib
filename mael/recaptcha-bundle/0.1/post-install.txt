@@ -1,3 +1,3 @@
 <bg=blue;fg=white> Next for MaelRecaptchaBundle </>
-    * <fg=blue>Edit mael_recaptcha.yaml</> add you keys
+    * <fg=blue>Edit mael_recaptcha.yaml</> add you keys in your .env file
     * <fg=blue>Read</>documentation at <comment>https://github.com/Mael-91/MaelRecaptchaBundle/blob/master/README.md</>
