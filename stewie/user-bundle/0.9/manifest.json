@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Stewie\\UserBundle\\StewieUserBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "var/": "%VAR_DIR%/"
+    }
+}

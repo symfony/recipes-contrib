@@ -1,0 +1,61 @@
+stewie_user:
+
+    max_rows: 10  #'%max_rows%'
+    from_email: 'name@domain.com' #'%from_email%'
+    register: true
+    routing:
+        after_login: 'login'
+        after_logout: 'logout'
+
+twig:
+    debug: '%kernel.debug%'
+    strict_variables: '%kernel.debug%'
+    form_themes: ['bootstrap_4_layout.html.twig']
+    globals:
+        stewie_user_register: true
+
+stof_doctrine_extensions:
+    orm:
+        default:
+            sluggable: true
+            timestampable: true
+            loggable: true
+
+vich_uploader:
+
+    mappings:
+
+        stewie_user_avatar:
+            uri_prefix: ''
+            upload_destination: '%kernel.project_dir%/var/stewie/user-bundle/avatar'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+
+            inject_on_load: false
+            delete_on_update: true
+            delete_on_remove: true
+
+liip_imagine:
+
+    loaders:
+        default:
+            filesystem:
+                data_root:
+                  - '%kernel.project_dir%/var/stewie/user-bundle/avatar'
+
+    filter_sets:
+
+        stewie_user_thumb_filter:
+            filters:
+                thumbnail:
+                    size: [32, 32]
+                    mode: outbound
+        stewie_user_medium_filter:
+            filters:
+                thumbnail:
+                    size: [200, 200]
+                    mode: outbound
+        stewie_user_large_filter:
+            filters:
+                thumbnail:
+                    size: [400, 400]
+                    mode: outbound
