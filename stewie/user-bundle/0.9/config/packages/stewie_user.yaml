@@ -40,7 +40,7 @@ liip_imagine:
         default:
             filesystem:
                 data_root:
-                  - '%kernel.project_dir%/var/stewie/user-bundle/avatar'
+                    - '%kernel.project_dir%/var/stewie/user-bundle/avatar'
 
     filter_sets:
 
