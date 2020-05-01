@@ -1,4 +1,4 @@
-silverback_api_component:
+silverback_api_components:
   website_name: New Website
   user:
     class_name: App\Entity\User
