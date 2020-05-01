@@ -1,21 +1,21 @@
 silverback_api_components:
-  website_name: New Website
-  user:
-    class_name: App\Entity\User
-    email_verification:
-      default_value: false
-      verify_on_register: true
-      verify_on_change: true
-      deny_unverified_login: true
-      email:
-        redirect_path_query: ~
-        default_redirect_path: /verify-new-email/{{ username }}/{{ token }}
-    password_reset:
-      email:
-        redirect_path_query: ~
-        default_redirect_path: /reset-password/{{ username }}/{{ token }}
-  security:
-    tokens:
-      - '%env(API_SECRET_TOKEN)%'
-  publishable:
-    permission: "is_granted('ROLE_ADMIN')"
+    website_name: New Website
+    user:
+        class_name: App\Entity\User
+        email_verification:
+            default_value: false
+            verify_on_register: true
+            verify_on_change: true
+            deny_unverified_login: true
+            email:
+                redirect_path_query: null
+                default_redirect_path: /verify-new-email/{{ username }}/{{ token }}
+        password_reset:
+            email:
+                redirect_path_query: null
+                default_redirect_path: /reset-password/{{ username }}/{{ token }}
+    security:
+        tokens:
+            - '%env(API_SECRET_TOKEN)%'
+    publishable:
+        permission: "is_granted('ROLE_ADMIN')"
