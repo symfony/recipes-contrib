@@ -1,0 +1,2 @@
+monsieur_biz_rich_editor_plugin:
+    resource: "@MonsieurBizSyliusRichEditorPlugin/Resources/config/routing.yaml"
