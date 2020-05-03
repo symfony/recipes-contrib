@@ -1,4 +1,4 @@
-# Read documentation at https://github.com/async-aws/symfony-bundle
+# Read documentation at https://async-aws.com/integration/symfony-bundle.html
 async_aws:
     config:
         region: eu-central-1
