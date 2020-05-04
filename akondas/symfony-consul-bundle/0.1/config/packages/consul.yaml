@@ -1,7 +1,7 @@
 consul:
     service:
-        name: 'symfony-app'
-        host: 'localhost'
-        port: 8000
+        name: '%env(resolve:CONSUL_SERVICE_NAME)%'
+        host: '%env(resolve:CONSUL_SERVICE_HOST)%'
+        port: '%env(resolve:CONSUL_SERVICE_PORT)%'
     client:
-        base_uri: http://127.0.0.1:8500
+        base_uri: '%env(resolve:CONSUL_CLIENT_BASE_URI)%'
