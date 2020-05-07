@@ -19,6 +19,7 @@ use Symfony\Component\Validator\Mapping\ClassMetadata;
  *     itemOperations={
  *         "get"={"security"="is_granted('ROLE_SUPER_ADMIN') or object == user"},
  *         "put"={"security"="is_granted('ROLE_SUPER_ADMIN') or object == user"},
+ *         "patch"={"security"="is_granted('ROLE_SUPER_ADMIN') or object == user"},
  *         "delete"={"security"="is_granted('ROLE_SUPER_ADMIN')"}
  *     }
  * )
