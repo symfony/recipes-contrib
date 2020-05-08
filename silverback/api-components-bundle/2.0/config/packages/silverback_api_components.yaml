@@ -9,7 +9,7 @@ silverback_api_components:
             deny_unverified_login: true
             email:
                 redirect_path_query: null
-                default_redirect_path: /verify-new-email/{{ username }}/{{ token }}
+                default_redirect_path: /verify-new-email/{{ username }}/{{ new_email }}/{{ token }}
         password_reset:
             email:
                 redirect_path_query: null
