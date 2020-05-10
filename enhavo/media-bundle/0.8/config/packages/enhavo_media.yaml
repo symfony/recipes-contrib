@@ -1,2 +1,2 @@
 imports:
-    - { resource: "@SyliusAdminOrderCreationPlugin/Resources/config/app/config.yml" }
+    - { resource: "@EnhavoMediaBundle/Resources/config/app/config.yml" }
