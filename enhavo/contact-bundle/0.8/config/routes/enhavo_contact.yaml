@@ -1,3 +1,0 @@
-enhavo_contact:
-    resource: "@EnhavoContactBundle/Resources/config/routing.yml"
-    prefix: /

@@ -1,2 +1,0 @@
-imports:
-    - { resource: '@EnhavoSidebarBundle/Resources/config/app/config.yml' }

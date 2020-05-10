@@ -1,3 +1,0 @@
-enhavo_redirect_admin:
-    resource: "@EnhavoRedirectBundle/Resources/config/routing/redirect.yml"
-    prefix: /admin

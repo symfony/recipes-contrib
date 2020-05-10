@@ -1,3 +1,0 @@
-enhavo_sitemap:
-    resource: "@EnhavoContentBundle/Resources/config/routing/sitemap.yml"
-    prefix: /

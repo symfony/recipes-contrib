@@ -1,8 +1,0 @@
-{
-    "bundles": {
-        "Enhavo\\Bundle\\SliderBundle\\EnhavoSliderBundle": ["all"]
-    },
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    }
-}

@@ -1,8 +1,0 @@
-{
-    "bundles": {
-        "Enhavo\\Bundle\\ArticleBundle\\EnhavoArticleBundle": ["all"]
-    },
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    }
-}

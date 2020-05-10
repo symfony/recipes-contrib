@@ -1,3 +1,0 @@
-enhavo_comment_admin:
-    resource: "@EnhavoCommentBundle/Resources/config/routing/admin/*"
-    prefix: /admin

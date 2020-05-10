@@ -1,3 +1,0 @@
-enhavo_theme:
-    resource: "@EnhavoThemeBundle/Resources/config/routing/admin/*"
-    prefix: /admin

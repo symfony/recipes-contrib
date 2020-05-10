@@ -1,8 +1,0 @@
-{
-    "bundles": {
-        "Enhavo\\Bundle\\NewsletterBundle\\EnhavoNewsletterBundle": ["all"]
-    },
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    }
-}

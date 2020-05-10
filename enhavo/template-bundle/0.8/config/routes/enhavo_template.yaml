@@ -1,3 +1,0 @@
-enhavo_template:
-    resource: "@EnhavoTemplateBundle/Resources/config/routing/template.yml"
-    prefix: /admin
