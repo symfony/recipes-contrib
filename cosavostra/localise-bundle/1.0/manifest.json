@@ -1,0 +1,13 @@
+{
+  "bundles": {
+    "CosaVostra\\LocaliseBundle\\LocaliseBundle": ["all"]
+  },
+  "env": {
+    "LOCALISE_EXPORT_KEY": "localise_api_key_to_replace"
+  },
+  "gitignore": [
+    "!/translations/.gitignore",
+    "!/translations/.gitkeep",
+    "/translations/*"
+  ]
+}
