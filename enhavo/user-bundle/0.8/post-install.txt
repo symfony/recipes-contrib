@@ -1,0 +1,8 @@
+<bg=blue;fg=white>                                      </>
+<bg=blue;fg=white> enhavo UserBundle, Next?             </>
+<bg=blue;fg=white>                                      </>
+
+  * Read the documentation and follow the steps to finish the
+    installation
+
+<bg=red;fg=white>Read:</> http://docs.enhavo.com/book/user-bundle/installation.html
