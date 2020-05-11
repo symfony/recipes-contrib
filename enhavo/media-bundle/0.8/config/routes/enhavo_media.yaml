@@ -1,3 +1,7 @@
-sylius_admin_order_creation:
-    resource: "@SyliusAdminOrderCreationPlugin/Resources/config/app/routing.yml"
+enhavo_media:
+    resource: "@EnhavoMediaBundle/Resources/config/routing/admin.yml"
+    prefix: /admin
 
+enhavo_media_theme:
+    resource: "@EnhavoMediaBundle/Resources/config/routing/theme.yml"
+    prefix: /

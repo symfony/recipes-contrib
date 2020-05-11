@@ -1,2 +1,3 @@
-imports:
-    - { resource: '@EnhavoAppBundle/Resources/config/app/config.yml' }
+enhavo_app_admin:
+    resource: "@EnhavoAppBundle/Resources/config/routing/admin.yml"
+    prefix: /admin
