@@ -1,0 +1,3 @@
+fresh_centrifugo:
+    jwt:
+        ttl: 86400 # 1 day
