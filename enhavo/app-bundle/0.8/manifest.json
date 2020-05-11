@@ -6,5 +6,8 @@
         "config/": "%CONFIG_DIR%/",
         "assets/": "assets/",
         "public/": "%PUBLIC_DIR%/"
+    },
+    "env": {
+        "APP_DEFAULT_LOCALE": "en"
     }
 }
