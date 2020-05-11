@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "CosaVostra\\LocaliseBundle\\LocaliseBundle": ["all"]
+        "CosaVostra\\LocaliseBundle\\CosaVostraLocaliseBundle": ["all"]
     },
     "env": {
         "LOCALISE_EXPORT_KEY": "localise_api_key_to_replace"
