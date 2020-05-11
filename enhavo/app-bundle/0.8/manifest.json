@@ -2,12 +2,22 @@
     "bundles": {
         "Enhavo\\Bundle\\AppBundle\\EnhavoAppBundle": ["all"]
     },
+    "container": {
+        "locale": "en"
+    },
+    "env": {
+        "MAILER_FROM": "no-reply@email.com",
+        "MAILER_TO": "my@email.com",
+        "MAILER_NAME": "enhavo",
+        "MAILER_DELIVERY_ADDRESS": "my@email.com"
+    },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/",
         "assets/": "assets/",
         "public/": "%PUBLIC_DIR%/"
     },
-    "env": {
-        "APP_DEFAULT_LOCALE": "en"
-    }
+    "gitignore": [
+        "/public/build/*",
+        "!/public/build/.gitignore"
+    ]
 }
