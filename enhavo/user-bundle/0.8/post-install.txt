@@ -1,10 +1,10 @@
-<bg=blue;fg=white>                                               </>
-<bg=blue;fg=white>  Complete EnhavoUserBundle installation ...   </>
-<bg=blue;fg=white>                                               </>
+<bg=blue;fg=white>                                              </>
+<bg=blue;fg=white>  Complete EnhavoUserBundle installation ...  </>
+<bg=blue;fg=white>                                              </>
 
-  * Update your packages.json
+  * Update your <fg=green>packages.json</>
 
-        <fg=green>$ yarn add @enhavo/user</>
+      <fg=green>$ yarn add @enhavo/user</>
 
   * Register encore package
   * Update configuration

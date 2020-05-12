@@ -1,10 +1,10 @@
 <bg=blue;fg=white>                                               </>
-<bg=blue;fg=white>  Complete EnhavoMediaBundle installation ...   </>
+<bg=blue;fg=white>  Complete EnhavoMediaBundle installation ...  </>
 <bg=blue;fg=white>                                               </>
 
-  * Update your packages.json
+  * Update your <fg=green>packages.json</>
 
-        <fg=green>$ yarn add @enhavo/media</>
+      <fg=green>$ yarn add @enhavo/media</>
 
   * Register form package
   * Register encore package

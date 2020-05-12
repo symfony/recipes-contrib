@@ -1,6 +1,6 @@
-<bg=blue;fg=white>                                              </>
-<bg=blue;fg=white>  Complete EnhavoAppBundle installation ...   </>
-<bg=blue;fg=white>                                              </>
+<bg=blue;fg=white>                                             </>
+<bg=blue;fg=white>  Complete EnhavoAppBundle installation ...  </>
+<bg=blue;fg=white>                                             </>
 
   * Update your <fg=green>package.json</> file
   * Update your <fg=green>webpack.config.js</> file
