@@ -17,8 +17,8 @@
         "public/": "%PUBLIC_DIR%/"
     },
     "gitignore": [
-        "public/build/*",
-        "!public/build/.gitignore",
+        "public/build/enhavo/*",
+        "public/build/theme/*",
         "public/js/fos_routes.js"
     ]
 }

@@ -1,8 +1,17 @@
-<bg=blue;fg=white>                                      </>
-<bg=blue;fg=white> enhavo DashboardBundle, Next?        </>
-<bg=blue;fg=white>                                      </>
+<bg=blue;fg=white>                                                    </>
+<bg=blue;fg=white>  Complete EnhavoDashboardBundle installation ...   </>
+<bg=blue;fg=white>                                                    </>
 
-  * Read the documentation and follow the steps to finish the
-    installation
+  * Update your packages.json
 
-<bg=red;fg=white>Read:</> http://docs.enhavo.com/book/dashboard-bundle/installation.html
+        <fg=green>$ yarn add @enhavo/dashboard</>
+
+  * Register encore package
+  * Update your configurations
+  * Build your assets with
+
+      <fg=green>$ yarn encore dev</>
+      <fg=green>$ yarn routes:dump</>
+
+<fg=green>  Read more details about the steps:</>
+<fg=blue>  https://docs.enhavo.com/book/dashboard-bundle/installation.html</>

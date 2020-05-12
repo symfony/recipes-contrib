@@ -1,8 +1,18 @@
-<bg=blue;fg=white>                                      </>
-<bg=blue;fg=white> enhavo UserBundle, Next?             </>
-<bg=blue;fg=white>                                      </>
+<bg=blue;fg=white>                                               </>
+<bg=blue;fg=white>  Complete EnhavoUserBundle installation ...   </>
+<bg=blue;fg=white>                                               </>
 
-  * Read the documentation and follow the steps to finish the
-    installation
+  * Update your packages.json
 
-<bg=red;fg=white>Read:</> http://docs.enhavo.com/book/user-bundle/installation.html
+        <fg=green>$ yarn add @enhavo/user</>
+
+  * Register encore package
+  * Update configuration
+  * Migrate database
+  * Build your assets with
+
+      <fg=green>$ yarn encore dev</>
+      <fg=green>$ yarn routes:dump</>
+
+<fg=green>  Read more details about the steps:</>
+<fg=blue>  https://docs.enhavo.com/book/user-bundle/installation.html</>
