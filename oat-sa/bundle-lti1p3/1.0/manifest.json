@@ -1,7 +1,4 @@
 {
-    "aliases": [
-        "lti1p3"
-    ],
     "bundles": {
         "OAT\\Bundle\\Lti1p3Bundle\\Lti1p3Bundle": [ "all" ]
     },

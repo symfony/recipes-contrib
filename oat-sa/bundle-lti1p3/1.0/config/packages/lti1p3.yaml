@@ -4,12 +4,12 @@ lti1p3:
             key_set_name: "platformSet"
             public_key: "file://%kernel.project_dir%/config/secrets/dev/public.key"
             private_key: "file://%kernel.project_dir%/config/secrets/dev/private.key"
-            private_key_passphrase: ~
+            private_key_passphrase: null
         toolKey:
             key_set_name: "toolSet"
             public_key: "file://%kernel.project_dir%/config/secrets/dev/public.key"
             private_key: "file://%kernel.project_dir%/config/secrets/dev/private.key"
-            private_key_passphrase: ~
+            private_key_passphrase: null
     platforms:
         localPlatform:
             name: "Local platform"
@@ -21,8 +21,8 @@ lti1p3:
             name: "Local tool"
             audience: "http://localhost/tool"
             oidc_login_initiation_url: "http://localhost/lti1p3/oidc/login-initiation"
-            launch_url: ~
-            deep_link_launch_url: ~
+            launch_url: "http://localhost/lti1p3/tool/launch"
+            deep_link_launch_url: null
     registrations:
         local:
             client_id: "client_id"
@@ -32,5 +32,6 @@ lti1p3:
                 - "deploymentId1"
             platform_key_chain: "platformKey"
             tool_key_chain: "toolKey"
-            platform_jwks_url: ~
-            tool_jwks_url: ~
+            platform_jwks_url: null
+            tool_jwks_url: null
+
