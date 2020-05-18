@@ -8,4 +8,4 @@
 
   * <fg=blue>Read</> the documentation at <comment>https://github.com/oat-sa/bundle-lti1p3</>
 
-  * <fg=red>IMPORTANT</> The keys generated in <comment>config/secrets/dev/</> folder are default development keys, <fg=red>DO NOT USE THEM IN PRODUCTION</>.
+  * <fg=red>!! IMPORTANT !!</> The keys generated in <comment>config/secrets/dev/</> folder are default development keys, <fg=red>DO NOT USE THEM IN PRODUCTION!</>.
