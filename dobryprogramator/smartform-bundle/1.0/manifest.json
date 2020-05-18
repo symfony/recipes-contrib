@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "DobryProgramator\\SmartformBundle\\DobryProgramatorSmartformBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "SMARTFORM_CLIENT_ID": ""
+    }
+}

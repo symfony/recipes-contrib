@@ -1,0 +1,8 @@
+# Read the documentation: https://github.com/vincentchalamon/nav-bundle
+nav:
+    enable_profiler: '%kernel.debug%'
+    url: '%env(NAV_URL)%' # i.e.: https://user:pass@www.example.com/NAV_WS/
+    paths:
+        App:
+            path: '%kernel.project_dir%/src/Entity'
+            namespace: 'App/Entity'

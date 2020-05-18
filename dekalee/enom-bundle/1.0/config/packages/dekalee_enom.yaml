@@ -1,0 +1,4 @@
+dekalee_enom:
+    uid: '%env(ENOM_UID)%'
+    password: '%env(ENOM_PASSWORD)%'
+    base_url: '%env(ENOM_BASE_URL)%'

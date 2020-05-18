@@ -1,0 +1,10 @@
+# Read the documentation: https://github.com/coopTilleuls/CoopTilleulsMigrationBundle/blob/master/Resources/doc/getting_started.md
+coop_tilleuls_migration:
+    legacy_connection_name: legacy
+
+doctrine:
+    dbal:
+        connections:
+            legacy:
+                wrapper_class: 'CoopTilleuls\MigrationBundle\Doctrine\DBAL\DisabledConnection'
+                url: "%env(LEGACY_DATABASE_URL)%"

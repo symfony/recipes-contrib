@@ -1,0 +1,3 @@
+msgphp_user:
+    class_mapping:
+        MsgPhp\User\User: App\Entity\User

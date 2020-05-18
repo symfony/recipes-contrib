@@ -1,0 +1,18 @@
+baldinof_road_runner:
+    # The kernel is preserved between requests. Change this to `true`
+    # if you want to reboot it, and use a fresh container on each request.
+    should_reboot_kernel: false
+
+    # Integrations are automatically detected, depending on installed bundle & current configuration
+    # See https://github.com/baldinof/roadrunner-bundle#integrations
+    default_integrations: true
+
+    # Allow to send prometheus metrics to the master RoadRunner process,
+    # via a `Spiral\RoadRunner\MetricsInterface` service.
+    # See https://github.com/baldinof/roadrunner-bundle#metrics
+    metrics_enabled: false
+
+    # You can use middlewares to manipulate PSR requests & responses.
+    # See https://github.com/baldinof/roadrunner-bundle#middlewares
+    # middlewares:
+    #     - App\Middleware\YourMiddleware

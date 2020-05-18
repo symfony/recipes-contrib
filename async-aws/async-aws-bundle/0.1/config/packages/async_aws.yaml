@@ -1,0 +1,9 @@
+# Read documentation at https://async-aws.com/integration/symfony-bundle.html
+async_aws:
+    config:
+        region: eu-central-1
+        accessKeyId: '%env(AWS_KEY)%'
+        accessKeySecret: '%env(AWS_SECRET)%'
+
+    # All installed clients are automatically autowired. Use this section to customize clients
+    clients:

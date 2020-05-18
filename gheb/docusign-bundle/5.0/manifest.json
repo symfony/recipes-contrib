@@ -1,0 +1,17 @@
+{
+    "bundles": {
+        "\\DocusignBundle\\DocusignBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "DOCUSIGN_PRIVATE_KEY_PATH": "%kernel.project_dir%/%CONFIG_DIR%/jwt/docusign.pem",
+        "DOCUSIGN_INTEGRATION_KEY": "UUID-DOCUSIGN-INTEGRATION-KEY",
+        "DOCUSIGN_USER_GUID": "UUID-DOCUSIGN-USER-GUID",
+        "DOCUSIGN_ACCOUNT_ID": "1234567"
+    },
+    "gitignore": [
+        "/%CONFIG_DIR%/jwt/*.pem"
+    ]
+}

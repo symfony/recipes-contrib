@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "CoopTilleuls\\SyliusQuickImportPlugin\\CoopTilleulsSyliusQuickImportPlugin": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

@@ -1,0 +1,4 @@
+kunstmaan_node:
+    lock:
+        enabled: true
+    enable_permissions: false

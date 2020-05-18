@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "CodeBuds\\MattermostPublicationBundle\\MattermostPublicationBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "MATTERMOST_WEBHOOK_URL": "http://{your-mattermost-site}/hooks/xxx-generatedkey-xxx"
+    }
+}

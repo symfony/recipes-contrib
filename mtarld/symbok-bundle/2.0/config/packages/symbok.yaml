@@ -1,0 +1,4 @@
+symbok:
+    # Namespaces that you want to be processed by symbok
+    namespaces:
+        # - 'App\Entity'
