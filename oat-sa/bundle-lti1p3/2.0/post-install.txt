@@ -8,4 +8,4 @@
 
   * <fg=blue>Configure</> the platform and tools automated routes in file <fg=green>config/routes/lti1p3.yaml</>
 
-  * <fg=blue>Read</> the documentation at <href=https://github.com/oat-sa/bundle-lti1p3>https://github.com/oat-sa/bundle-lti1p3</>
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/oat-sa/bundle-lti1p3</>
