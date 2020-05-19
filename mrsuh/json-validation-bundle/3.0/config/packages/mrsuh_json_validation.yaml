@@ -1,0 +1,4 @@
+mrsuh_json_validation:
+    enable_request_listener: true
+    enable_response_listener: true
+    enable_exception_listener: true
