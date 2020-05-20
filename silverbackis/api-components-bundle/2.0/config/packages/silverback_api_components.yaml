@@ -18,8 +18,5 @@ silverback_api_components:
             email:
                 redirect_path_query: null
                 default_redirect_path: /confirm-new-email/{{ username }}/{{ new_email }}/{{ token }}
-    security:
-        tokens:
-            - '%env(API_SECRET_TOKEN)%'
     publishable:
         permission: "is_granted('ROLE_ADMIN')"
