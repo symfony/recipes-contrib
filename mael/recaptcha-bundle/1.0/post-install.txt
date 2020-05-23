@@ -1,4 +1,0 @@
-<bg=blue;fg=white> Next for MaelRecaptchaBundle </>
-    * <fg=blue>Edit</> your .env file
-    * <fg=blue>Change</> <fg=white>MAEL_RECAPTCHA_KEY</> by your public key and <fg=white>MAEL_RECAPTCHA_SECRET</> by your secret key in your .env file, 
-    * <fg=blue>Read</>documentation at <comment>https://github.com/Mael-91/MaelRecaptchaBundle/blob/master/README.md</>
