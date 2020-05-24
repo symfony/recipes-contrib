@@ -1,11 +1,12 @@
 {
-  "bundles": {
-    "Jurry\\RabbitMQ\\AmqpHandlerBundle": ["all"]
-  },
-  "copy-from-recipe": {
-    "config/": "%CONFIG_DIR%/"
-  },
-  "gitignore": [
-    ".idea/"
-  ]
+    "bundles": {
+        "Jurry\\RabbitMQ\\AmqpHandlerBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "gitignore": [
+        ".idea/"
+    ]
 }
+

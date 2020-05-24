@@ -13,3 +13,4 @@ amqp_handler:
         async_queue:
             name: stores_async
             message_ttl: 10000 # 10 seconds
+
