@@ -1,0 +1,15 @@
+amqp_handler:
+#    You can define connection in both ways: as array or as a string
+#    connection: 'tcp://guest:guest@172.18.0.01:5672'
+    connection:
+        host: 172.18.0.1
+        port: 5672
+        user: guest
+        password: guest
+    queues_properties:
+        sync_queue:
+            name: stores_sync
+            message_ttl: 10000 # 10 seconds
+        async_queue:
+            name: stores_async
+            message_ttl: 10000 # 10 seconds
