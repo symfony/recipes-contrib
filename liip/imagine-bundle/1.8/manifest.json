@@ -6,6 +6,6 @@
         "config/": "%CONFIG_DIR%/"
     },
     "gitignore": [
-        "/public/media/cache/"
+        "/%PUBLIC_DIR%/media/cache/"
     ]
 }
