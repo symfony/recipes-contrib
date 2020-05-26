@@ -6,6 +6,6 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "RABBIT_MQ_DSN": "tcp://guest:guest@localhost:5672"
+        "RABBIT_MQ_DSN": "tcp://guest:guest@127.0.0.1:5672"
     }
 }
