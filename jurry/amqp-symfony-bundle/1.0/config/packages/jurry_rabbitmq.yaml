@@ -1,5 +1,5 @@
 amqp_handler:
-    connection: 'tcp://guest:guest@localhost:5672'
+    connection: '%env'
     queues_properties:
         sync_queue:
             name: stores_sync
