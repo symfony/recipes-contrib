@@ -1,5 +1,5 @@
 amqp_handler:
-    connection: '%env'
+    connection: '%env(RABBIT_MQ_DSN)%'
     queues_properties:
         sync_queue:
             name: stores_sync
