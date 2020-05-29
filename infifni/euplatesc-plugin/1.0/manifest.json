@@ -1,5 +1,4 @@
 {
-    "aliases": ["sylius-euplatesc-plugin", "sylius-euplatesc", "infifni-euplatesc-plugin"],
     "bundles": {
         "Infifni\\SyliusEuPlatescPlugin\\InfifniSyliusEuPlatescPlugin": ["all"]
     },
