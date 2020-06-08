@@ -1,4 +1,5 @@
 tbbc_money:
-  currencies: ["USD", "EUR"]
-  reference_currency: "EUR"
-  decimals: 2
+    currencies: ["USD", "EUR"]
+    reference_currency: "EUR"
+    decimals: 2
+
