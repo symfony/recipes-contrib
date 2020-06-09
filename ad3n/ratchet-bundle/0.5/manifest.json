@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Ihsan\\RatchetBundle\\IhsanRatchetBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "WEB_SOCKET_PORT": "7777"
+    }
+}
+
