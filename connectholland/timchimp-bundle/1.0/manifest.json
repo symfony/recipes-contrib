@@ -1,0 +1,10 @@
+{
+    "bundles": {
+        "Symfony\\Bundle\\FrameworkBundle\\FrameworkBundle": ["all"],
+        "ConnectHolland\\TimechimpBundle\\ConnecthollandTimechimpBundle": ["all"]
+    },
+    "env": {
+        "TIMECHIMPBUNDLE_ACCESS_TOKEN": "baerer-token-value"
+    },
+    "aliases": ["timechimp", "connectholland-timechimp"]
+}
