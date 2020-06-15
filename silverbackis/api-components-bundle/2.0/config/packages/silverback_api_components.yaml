@@ -1,5 +1,12 @@
 silverback_api_components:
     website_name: New Website
+    refresh_token:
+        handler_id: silverback.api_component.refresh_token.storage.doctrine
+        options:
+            class: App\Entity\RefreshToken
+        cookie_name: api_component
+        ttl: 604800 # 1 week
+        database_user_provider: database
     user:
         class_name: App\Entity\User
         email_verification:
@@ -20,3 +27,5 @@ silverback_api_components:
                 default_redirect_path: /confirm-new-email/{{ username }}/{{ new_email }}/{{ token }}
     publishable:
         permission: "is_granted('ROLE_ADMIN')"
+    route_security:
+#        - { route: "/user-area*", security: "is_granted('ROLE_USER')" }

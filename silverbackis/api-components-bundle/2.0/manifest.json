@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Silverback\\ApiComponentsBundle": ["all"]
+        "Silverback\\ApiComponentsBundle\\SilverbackApiComponentsBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/",
