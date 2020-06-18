@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "ConnectHolland\\UptimeRobotBundle\\ConnecthollandUptimeRobotBundle": ["all"]
+    },
+    "env": {
+        "UPTIMEROBOT_API_KEY": "api_key"
+    }
+}
