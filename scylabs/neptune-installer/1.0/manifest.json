@@ -1,0 +1,5 @@
+{
+    "copy-from-package": {
+        "public/css/": "%PUBLIC_DIR%/css/"
+    }
+}
