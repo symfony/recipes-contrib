@@ -1,5 +1,5 @@
 {
-    "skel/copy-from-package": { 
+    "copy-from-package": { 
         "skel/public/css/": "%PUBLIC_DIR%",
         "skel/public/js/": "%PUBLIC_DIR%",
         "skel/public/mail/": "%PUBLIC_DIR%",
