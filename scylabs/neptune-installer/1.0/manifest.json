@@ -1,7 +1,21 @@
 {
     "copy-from-package": { 
-        "public/css/": "%PUBLIC_DIR%/css/"
-
-        
+        "public/css/": "%PUBLIC_DIR%/css/",
+        "public/js/": "%PUBLIC_DIR%/js/",
+        "public/mail/": "%PUBLIC_DIR%/mail/",
+        "public/.htaccess": "%PUBLIC_DIR%/.htaccess",
+        "src/Controller/": "%SRC_DIR%/Controller",
+        "src/Entity/": "%SRC_DIR%/Entity/",
+        "src/Form/": "%SRC_DIR%/Form/",
+        "src/Repository/": "%SRC_DIR%/Repository/",
+        "src/Twig/": "%SRC_DIR%/Twig/",
+        "templates/api": "%TEMPLATES_DIR%/api/",
+        "templates/page": "%TEMPLATES_DIR%/page/",
+        "templates/zone": "%TEMPLATES_DIR%/zone/",
+        "templates/footer.html.twig": "%TEMPLATES_DIR%/footer.html.twig",
+        "templates/header.html.twig": "%TEMPLATES_DIR%/header.html.twig",
+        "templates/layout.html.twig": "%TEMPLATES_DIR%/layout.html.twig",
+        "templates/mention.html.twig": "%TEMPLATES_DIR%/mention.html.twig",
+        "templates/zones.html.twig": "%TEMPLATES_DIR%/zones.html.twig"
     }
 }
