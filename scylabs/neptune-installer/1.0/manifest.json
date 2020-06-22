@@ -1,5 +1,5 @@
 {
-    "copy-from-package": {
+    "copy-from-package": { 
         "public/css/": "%PUBLIC_DIR%",
         "public/js/": "%PUBLIC_DIR%",
         "public/mail/": "%PUBLIC_DIR%",
