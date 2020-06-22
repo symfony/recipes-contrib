@@ -1,5 +1,7 @@
 {
     "copy-from-package": {
-        "public/css/": "%PUBLIC_DIR%"
+        "public/*": "%PUBLIC_DIR%",
+        "src/*": "%SRC_DIR%",
+        "templates/*": "%TEMPLATES_DIR%"
     }
 }
