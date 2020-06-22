@@ -1,21 +1,21 @@
 {
-    "copy-from-package": { 
-        "public/css/": "%PUBLIC_DIR%",
-        "public/js/": "%PUBLIC_DIR%",
-        "public/mail/": "%PUBLIC_DIR%",
-        "public/.htaccess": "%PUBLIC_DIR%",
-        "src/Controller/": "%SRC_DIR%",
-        "src/Entity/": "%SRC_DIR%",
-        "src/Form/": "%SRC_DIR%",
-        "src/Repository/": "%SRC_DIR%",
-        "src/Twig/": "%SRC_DIR%",
-        "templates/api": "%TEMPLATES_DIR%",
-        "templates/page": "%TEMPLATES_DIR%",
-        "templates/zone": "%TEMPLATES_DIR%",
-        "templates/footer.html.twig": "%TEMPLATES_DIR%",
-        "templates/header.html.twig": "%TEMPLATES_DIR%",
-        "templates/layout.html.twig": "%TEMPLATES_DIR%",
-        "templates/mention.html.twig": "%TEMPLATES_DIR%",
-        "templates/zones.html.twig": "%TEMPLATES_DIR%"
+    "skel/copy-from-package": { 
+        "skel/public/css/": "%PUBLIC_DIR%",
+        "skel/public/js/": "%PUBLIC_DIR%",
+        "skel/public/mail/": "%PUBLIC_DIR%",
+        "skel/public/.htaccess": "%PUBLIC_DIR%",
+        "skel/src/Controller/": "%SRC_DIR%",
+        "skel/src/Entity/": "%SRC_DIR%",
+        "skel/src/Form/": "%SRC_DIR%",
+        "skel/src/Repository/": "%SRC_DIR%",
+        "skel/src/Twig/": "%SRC_DIR%",
+        "skel/templates/api": "%TEMPLATES_DIR%",
+        "skel/templates/page": "%TEMPLATES_DIR%",
+        "skel/templates/zone": "%TEMPLATES_DIR%",
+        "skel/templates/footer.html.twig": "%TEMPLATES_DIR%",
+        "skel/templates/header.html.twig": "%TEMPLATES_DIR%",
+        "skel/templates/layout.html.twig": "%TEMPLATES_DIR%",
+        "skel/templates/mention.html.twig": "%TEMPLATES_DIR%",
+        "skel/templates/zones.html.twig": "%TEMPLATES_DIR%"
     }
 }
