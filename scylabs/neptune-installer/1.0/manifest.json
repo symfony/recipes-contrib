@@ -46,5 +46,6 @@
         "templates/layout.html.twig": "%TEMPLATES_DIR%",
         "templates/mention.html.twig": "%TEMPLATES_DIR%",
         "templates/zones.html.twig": "%TEMPLATES_DIR%"
+        
     }
 }
