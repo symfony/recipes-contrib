@@ -1,4 +1,4 @@
-engima972_user:
+enigma972_user:
     # if this value equal true, the User should confirm theire mail
     check_mail: false
     # The validity duration in secondes, 4 houres by default (14,400 sec)
