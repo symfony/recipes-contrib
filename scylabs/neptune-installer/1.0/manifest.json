@@ -1,17 +1,46 @@
 {
     "copy-from-package": { 
-        "public/css/": "%PUBLIC_DIR%",
-        "public/js/": "%PUBLIC_DIR%",
-        "public/mail/": "%PUBLIC_DIR%",
+        "public/css/zone/contact_form.less": "%PUBLIC_DIR%/css/zone/",
+        "public/css/footer.less": "%PUBLIC_DIR%/css/",
+        "public/css/globals.less": "%PUBLIC_DIR%/css/",
+        "public/css/header.less": "%PUBLIC_DIR%/css/",
+        "public/css/import.less": "%PUBLIC_DIR%/css/",
+        "public/css/structure.less": "%PUBLIC_DIR%/css/",
+        "public/css/style.less": "%PUBLIC_DIR%/css/",
+        
+        "public/js/edc.js": "%PUBLIC_DIR%/js/",
+        "public/js/edc.min.js": "%PUBLIC_DIR%/js/",
+        "public/js/lazyLoad.js": "%PUBLIC_DIR%/js/",
+        "public/js/lazyLoad.min.js": "%PUBLIC_DIR%/js/",
+        "public/js/zone/contact_form.js": "%PUBLIC_DIR%/js/zone/",
+
         "public/.htaccess": "%PUBLIC_DIR%",
-        "src/Controller/": "%SRC_DIR%",
-        "src/Entity/": "%SRC_DIR%",
-        "src/Form/": "%SRC_DIR%",
-        "src/Repository/": "%SRC_DIR%",
-        "src/Twig/": "%SRC_DIR%",
-        "templates/api": "%TEMPLATES_DIR%",
-        "templates/page": "%TEMPLATES_DIR%",
-        "templates/zone": "%TEMPLATES_DIR%",
+
+        "src/Controller/AjaxController.php": "%SRC_DIR%/Controller/",
+        "src/Controller/ApiController.php": "%SRC_DIR%/Controller/",
+        "src/Controller/ContactController.php": "%SRC_DIR%/Controller/",
+        "src/Controller/LegalNoticeController.php": "%SRC_DIR%/Controller/",
+
+        "src/Entity/ContactRequest": "%SRC_DIR%/Entity/",
+
+        "src/Form/ContactForm.php": "%SRC_DIR%/Form/",
+
+        "src/Repository/ContactRequestRepository.php": "%SRC_DIR%/Repository/",
+
+        "src/Twig/BaseExtension.php": "%SRC_DIR%/Twig/",
+        "src/Twig/FileExistExtension.php": "%SRC_DIR%/Twig/",
+
+        "templates/api/mail/contact_client.html.twig": "%TEMPLATES_DIR%/api/mail/",
+        "templates/api/mail/contact_webmaster.html.twig": "%TEMPLATES_DIR%/api/mail/",
+        "templates/api/mail/devis_webmaster.html.twig": "%TEMPLATES_DIR%/api/mail/",
+        "templates/api/mail/layout.html.twig": "%TEMPLATES_DIR%/api/mail/",
+        
+        "templates/api/contact_form.html.twig": "%TEMPLATES_DIR%/api/",
+
+        "templates/page/home.html.twig": "%TEMPLATES_DIR%/page/",
+        "templates/page/page.html.twig": "%TEMPLATES_DIR%/page/",
+        "templates/zone/contact_form.html.twig": "%TEMPLATES_DIR%/zone/",
+    
         "templates/footer.html.twig": "%TEMPLATES_DIR%",
         "templates/header.html.twig": "%TEMPLATES_DIR%",
         "templates/layout.html.twig": "%TEMPLATES_DIR%",
