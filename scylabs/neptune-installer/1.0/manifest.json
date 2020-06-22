@@ -1,10 +1,10 @@
 {
     "copy-from-package": { 
         "public/css/": "%PUBLIC_DIR%/css/",
-    
+        "public/js/": "%PUBLIC_DIR%/js/",
         "public/mail/": "%PUBLIC_DIR%/mail/",
         "public/.htaccess": "%PUBLIC_DIR%/.htaccess",
-        "src/Controller/": "%SRC_DIR%/Controller",
+        "src/Controller/": "%SRC_DIR%/Controller/",
         "src/Entity/": "%SRC_DIR%/Entity/",
         "src/Form/": "%SRC_DIR%/Form/",
         "src/Repository/": "%SRC_DIR%/Repository/",
