@@ -31,22 +31,22 @@ install:
 
 before_script:
   - |
-      install_package() {
-          composer require --ignore-platform-reqs $1
-          EXIT_CODE=$?
+    install_package() {
+        composer require --ignore-platform-reqs $1
+        EXIT_CODE=$?
 
-          MESSAGE="";
-          if [[ EXIT_CODE -eq 0 ]]; then
+        MESSAGE="";
+        if [[ EXIT_CODE -eq 0 ]]; then
             exit 0;
-          elif [[ EXIT_CODE -eq 1 ]]; then
+        elif [[ EXIT_CODE -eq 1 ]]; then
             MESSAGE="Could not install package";
-          elif [[ EXIT_CODE -eq 2 ]]; then
+        elif [[ EXIT_CODE -eq 2 ]]; then
             MESSAGE="Could not resolve dependencies.\n# You can ignore this error if your package does not support Symfony $SKELETON_VERSION";
-          fi
+        fi
 
-          echo -e "#\n#\n#\n# $MESSAGE\n#\n#\n#\n";
-          exit $EXIT_CODE;
-     }
-     export -f install_package
+        echo -e "#\n#\n#\n# $MESSAGE\n#\n#\n#\n";
+        exit $EXIT_CODE;
+    }
+    export -f install_package
 
 script: install_package $(echo $PACKAGES)
