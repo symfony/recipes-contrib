@@ -39,7 +39,7 @@ before_script:
         if [[ EXIT_CODE -eq 0 ]]; then
             exit 0;
         elif [[ EXIT_CODE -eq 1 ]]; then
-            MESSAGE="Could not install package";
+            MESSAGE="Could not install package and configure package.";
         elif [[ EXIT_CODE -eq 2 ]]; then
             MESSAGE="Could not resolve dependencies.\n# You can ignore this error if your package does not support Symfony $SKELETON_VERSION";
         fi
