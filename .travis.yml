@@ -32,7 +32,7 @@ install:
 before_script:
   - |
     install_package() {
-        composer require --ignore-platform-reqs $1 $2;
+        composer require --ignore-platform-reqs $@;
         EXIT_CODE=$?;
 
         MESSAGE="";
