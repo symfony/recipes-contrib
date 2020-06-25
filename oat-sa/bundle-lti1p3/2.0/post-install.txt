@@ -1,6 +1,6 @@
-<bg=blue;fg=white>                     </>
+<bg=blue;fg=white>                                    </>
 <bg=blue;fg=white> Next: LTI 1.3 bundle configuration </>
-<bg=blue;fg=white>                     </>
+<bg=blue;fg=white>                                    </>
 
   * <fg=blue>Create</> development keys: <comment>mkdir -p config/secrets/dev && openssl genrsa -out config/secrets/dev/private.key 2048 && openssl rsa -in config/secrets/dev/private.key -outform PEM -pubout -out config/secrets/dev/public.key</>
 
