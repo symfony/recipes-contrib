@@ -14,9 +14,6 @@ matrix:
           env: SKELETON_VERSION="^4.4"
         - php: 7.4
           env: SKELETON_VERSION="^5.0"
-    allow_failures:
-        - php: 7.4
-          env: SKELETON_VERSION="^3.4"
 
 before_install:
     - phpenv config-rm xdebug.ini || true
@@ -31,7 +28,8 @@ install:
 
 script:
     - |
-      EXIT_CODE=$(composer req --ignore-platform-reqs $(echo $PACKAGES))
+      EXIT_CODE=$(composer req --ignore-platform-reqs $(echo $PACKAGES));
+      echo "Exit code: $EXIT_CODE";
       if [[ EXIT_CODE -eq 0 ]]; then
         exit 0;
       elif [[ EXIT_CODE -eq 1 ]]; then
