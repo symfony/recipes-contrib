@@ -30,4 +30,17 @@ install:
     - composer config extra.symfony.allow-contrib true
 
 script:
-    - composer req --ignore-platform-reqs $(echo $PACKAGES)
+    - |
+      EXIT_CODE=$(composer req --ignore-platform-reqs $(echo $PACKAGES))
+      if [[ EXIT_CODE -eq 0 ]]; then
+        exit 0;
+      elif [[ EXIT_CODE -eq 1 ]]; then
+        echo "Could not install package";
+        exit 1;
+      elif [[ EXIT_CODE -eq 2 ]]; then
+        echo "Could not resolve dependencies. You can ignore this error if your package does not support Symfony $SKELETON_VERSION";
+        exit 1;
+      fi
+
+      exit $EXIT_CODE;
+

@@ -1,0 +1,6 @@
+# Read documentation at https://async-aws.com/integration/symfony-bundle.html
+async_aws:
+    config:
+
+    # All installed clients are automatically autowired. Use this section to customize clients
+    clients:
