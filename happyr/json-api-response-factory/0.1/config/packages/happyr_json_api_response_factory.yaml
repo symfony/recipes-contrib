@@ -1,5 +1,4 @@
 services:
-
     Happyr\JsonApiResponseFactory\ResponseFactory:
         arguments: ['@happyr.fractal.manager']
 
