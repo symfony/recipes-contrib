@@ -32,8 +32,8 @@ install:
 before_script:
   - |
     install_package() {
-        composer require --ignore-platform-reqs $1
-        EXIT_CODE=$?
+        composer require --ignore-platform-reqs $(echo $1);
+        EXIT_CODE=$?;
 
         MESSAGE="";
         if [[ EXIT_CODE -eq 0 ]]; then
@@ -49,4 +49,4 @@ before_script:
     }
     export -f install_package
 
-script: install_package $(echo $PACKAGES)
+script: install_package $PACKAGES
