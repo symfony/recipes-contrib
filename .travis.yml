@@ -44,7 +44,7 @@ before_script:
             MESSAGE="Could not resolve dependencies.\n# You can ignore this error if your package does not support Symfony $SKELETON_VERSION";
         fi
 
-        echo -e "#\n#\n#\n# $MESSAGE\n#\n#\n#\n";
+        echo -e "\n#\n#\n# $MESSAGE\n#\n#\n#\n";
         exit $EXIT_CODE;
     }
     export -f install_package
