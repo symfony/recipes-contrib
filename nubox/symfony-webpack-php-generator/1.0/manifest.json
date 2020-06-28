@@ -3,7 +3,7 @@
         "NuBox\\WebPack\\Generator\\SymfonyWebpackPHPGeneratorBundle": ["all"]
     },
     "composer-scripts": {
-        "nubox:webpack:config:apply -l": "symfony-cmd"
+        "nubox:webpack:config:apply": "symfony-cmd"
     },
     "gitignore": [
         "webpack.config.js.bak"
