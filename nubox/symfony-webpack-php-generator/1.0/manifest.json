@@ -1,5 +1,8 @@
 {
     "bundles": {
         "NuBox\\WebPack\\Generator\\SymfonyWebpackPHPGeneratorBundle": ["all"]
+    },
+    "composer-scripts": {
+        "nubox:webpack:config:apply -l": "symfony-cmd"
     }
 }
