@@ -3,6 +3,6 @@
         "EcPhp\\EuLoginBundle\\EuLoginBundle": ["all"]
     },
     "copy-from-package": {
-        "Resources/": "%CONFIG_DIR%/"
+        "Resources/config/": "%CONFIG_DIR%/"
     }
 }
