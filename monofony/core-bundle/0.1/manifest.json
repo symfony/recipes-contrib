@@ -17,5 +17,9 @@
         "Recipe/tests/": "tests/",
         "Recipe/translations/": "translations/",
         "Recipe/config-builder.js": "config-builder.js"
-    }
+    },
+    "gitignore": [
+        "/public/assets",
+        "/public/media"
+    ]
 }
