@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "Zenstruck\\Foundry\\Bundle\\ZenstruckFoundryBundle": ["dev", "test"]
+    }
+}
