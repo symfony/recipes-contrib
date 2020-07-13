@@ -16,5 +16,12 @@
         "templates/layout.html.twig": "%TEMPLATES_DIR%/layout.html.twig",
         "templates/mention.html.twig": "%TEMPLATES_DIR%/mention.html.twig",
         "templates/zones.html.twig": "%TEMPLATES_DIR%/zones.html.twig"
+    },
+    "gitignore": [
+        "/public/uploads/"
+    ],
+    "container": {
+        "uploads_directory": "%kernel.project_dir%/public/uploads/",
+        "langs": ["fr"] 
     }
 }
