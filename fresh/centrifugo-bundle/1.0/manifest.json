@@ -3,8 +3,7 @@
         "Fresh\\CentrifugoBundle\\FreshCentrifugoBundle": ["all"]
     },
     "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/",
-        "src/": "%SRC_DIR%/"
+        "config/": "%CONFIG_DIR%/"
     },
     "env": {
         "CENTRIFUGO_API_KEY": "%generate(secret)%",
