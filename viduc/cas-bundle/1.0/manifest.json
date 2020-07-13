@@ -1,7 +1,4 @@
 {
-    "aliases": [
-        "cas-etq"
-    ],
     "bundles": {
         "Viduc\\CasBundle\\CasBundle": [
             "all"
