@@ -1,3 +1,0 @@
-cas:
-    host: "%env(CAS_HOST)%",
-    port: "%env(CAS_PORT)"
