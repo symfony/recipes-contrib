@@ -1,0 +1,17 @@
+{
+  "aliases": [
+    "cas-etq"
+  ],
+  "bundles": {
+    "Viduc\\CasBundle\\CasBundle": [
+      "all"
+    ]
+  },
+  "env": {
+    "CAS_HOST": "monserveurcas.fr",
+    "CAS_PORT": 443
+  },
+  "copy-from-recipe": {
+    "config/": "%CONFIG_DIR%/"
+  }
+}
