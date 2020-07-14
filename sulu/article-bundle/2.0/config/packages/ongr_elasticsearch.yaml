@@ -1,0 +1,8 @@
+ongr_elasticsearch:
+    analysis:
+        tokenizer:
+            pathTokenizer:
+                type: path_hierarchy
+        analyzer:
+            pathAnalyzer:
+                tokenizer: pathTokenizer
