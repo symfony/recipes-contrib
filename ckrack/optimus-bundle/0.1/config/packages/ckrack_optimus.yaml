@@ -1,0 +1,8 @@
+ckrack_optimus:
+    # Set options, as documented at https://github.com/jenssegers/optimus#usage
+    prime: "%env(int:OPTIMUS_PRIME)%"
+    inverse: "%env(int:OPTIMUS_INVERSE)%"
+    random: "%env(int:OPTIMUS_RANDOM)%"
+
+    # if set to true, param converter will continue with the next available param converters
+    passthrough: true
