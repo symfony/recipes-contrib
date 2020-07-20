@@ -1,0 +1,11 @@
+{% set path = options.link.url|default(path(options.link.route, options.link.parameters|default({}))) %}
+
+<a href="{{ path }}">
+    {% if action.icon is defined %}
+        {# Here is an example with font-awesome plus icon #}
+        <i class="fas fa-{{ action.icon }}"></i>
+    {% endif %}
+    {% if action.label is defined %}
+        {{ action.label|trans }}
+    {% endif %}
+</a>

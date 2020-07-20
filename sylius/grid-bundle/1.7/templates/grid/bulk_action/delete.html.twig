@@ -1,0 +1,12 @@
+{% set path = options.link.url|default(path(options.link.route|default(grid.requestConfiguration.getRouteName('bulk_delete')), options.link.parameters|default({}))) %}
+
+<a href="{{ path }}">
+    <form action="{{ url }}" method="post">
+        <input type="hidden" name="_method" value="DELETE">
+        <button type="submit">
+            {# Here is an example with font-awesome plus icon #}
+            <i class="fas fa-trash"></i> {{ action.label|trans }}
+        </button>
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('bulk_delete') }}" />
+    </form>
+</a>

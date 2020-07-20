@@ -1,0 +1,40 @@
+# @see https://github.com/Sylius/SyliusGridBundle/blob/master/docs/configuration.md
+sylius_grid:
+    grids:
+        first_grid_example:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: App\Entity\YourEntity
+            sorting:
+                createdAt: desc
+            fields:
+                # @see field types https://github.com/Sylius/SyliusGridBundle/blob/master/docs/field_types.md
+                name:
+                    type: string
+                    label: Name
+                    sortable: null
+                createdAt:
+                    type: datetime
+                    label: Creation date
+                    options:
+                        format: 'Y:m:d H:i:s' # this is the default value, but you can modify it
+            filters:
+                # @see https://github.com/Sylius/SyliusGridBundle/blob/master/docs/filters.md
+                search:
+                    type: string
+                    label: Search
+                    options:
+                        fields: [name]
+            actions:
+                main:
+                    create:
+                        type: create
+                item:
+                    show:
+                        type: show
+                    update:
+                        type: update
+                    delete:
+                        type: delete
+

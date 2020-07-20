@@ -1,0 +1,24 @@
+imports:
+    - { resource: '../sylius/grids.yaml' }
+
+sylius_grid:
+    # Defines here your own templates for built-in actions and filters
+    templates:
+        action:
+            # To add custom actions:
+            # @see https://github.com/Sylius/SyliusGridBundle/blob/master/docs/custom_action.md
+            default: "grid/action/default.html.twig"
+            create: "grid/action/create.html.twig"
+            delete: "grid/Action/delete.html.twig"
+            show: "grid/action/show.html.twig"
+            update: "grid/action/update.html.twig"
+        bulk_action:
+            delete: "grid/bulk_action/delete.html.twig"
+        filter:
+            string: "grid/filter/string.html.twig"
+            boolean: "grid/filter/boolean.html.twig"
+            date: "grid/filter/date.html.twig"
+            entity: "grid/filter/entity.html.twig"
+            money: "grid/filter/money.html.twig"
+            exists: "grid/filter/exists.html.twig"
+            select: "grid/filter/select.html.twig"

@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Sylius\\Bundle\\GridBundle\\SyliusGridBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "templates/": "templates/"
+    }
+}
