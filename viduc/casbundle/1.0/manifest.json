@@ -5,9 +5,7 @@
         ]
     },
     "env": {
-        "CAS_HOST": "monserveurcas.fr",
-        "CAS_PORT": "443",
-        "CAS_VERSION": "2."
+        "CAS_HOST": "monserveurcas.fr"
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
