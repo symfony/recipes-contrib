@@ -4,5 +4,10 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "SULU_FORM_EMAIL_FROM": "",
+        "SULU_FORM_EMAIL_TO": "",
+        "SULU_FORM_EMAIL_SENDER": ""
     }
 }

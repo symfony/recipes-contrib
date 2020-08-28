@@ -1,8 +1,8 @@
 sulu_form:
     mail:
-        from: "%sulu_admin.email%"
-        to: "%sulu_admin.email%"
-        sender: "%sulu_admin.email%"
+        from: "%env(resolve:SULU_FORM_EMAIL_FROM)%"
+        to: "%env(resolve:SULU_FORM_EMAIL_TO)%"
+        sender: "%env(resolve:SULU_FORM_EMAIL_SENDER)%"
 
 framework:
     esi: true
