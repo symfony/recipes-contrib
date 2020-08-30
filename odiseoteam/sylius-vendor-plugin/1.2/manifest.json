@@ -1,6 +1,5 @@
 {
     "bundles": {
-        "Vich\\UploaderBundle\\VichUploaderBundle": ["all"],
         "Odiseo\\SyliusVendorPlugin\\OdiseoSyliusVendorPlugin": ["all"]
     },
     "copy-from-recipe": {
