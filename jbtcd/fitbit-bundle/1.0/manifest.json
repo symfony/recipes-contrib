@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "FitbitBundle\\FitbitBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "FITBIT_CLIENT_ID": "not-a-real-id",
+        "FITBIT_CLIENT_SECRET": "not-a-real-secret"
+    }
+}
