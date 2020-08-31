@@ -243,9 +243,9 @@ nelmio_api_doc:
                     tags:
                     - "Fields / Field"
                     parameters:
-                        - name: field
-                          in: path
-                          description: ID du champ à supprimer
+                    -   name: field
+                        in: path
+                        description: ID du champ à supprimer
 
             # Sections
             /api/section/:
