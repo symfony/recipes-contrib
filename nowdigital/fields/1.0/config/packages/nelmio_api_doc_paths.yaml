@@ -1,0 +1,363 @@
+
+nelmio_api_doc:
+    documentation:
+        paths:
+
+            # VFormCategory
+            /api/vform-category/:
+                # Ajout d'une VFormCategory
+                post:
+                    tags:
+                    - "Fields / VFormCategory"
+                    parameters:
+                    -   in: body
+                        name: VFormCategory
+                        description: La nouvelle catégorie de formulaire
+                        schema:
+                            title: Une catégorie de formulaire (VFormCategory)
+                            type: object
+                            properties:
+                                icon:
+                                    type: string
+                                    description: Icône utilisée
+                                    example: "id-cards"
+                                singleName:
+                                    type: string
+                                    description: Nom de la catégorie au singulier
+                                    example: "Ma nouvelle catégorie"
+                                pluralName:
+                                    type: string
+                                    description: Nom de la catégorie au pluriel
+                                    example: "Mes nouvelles catégories"
+                                position:
+                                    type: integer
+                                    description: Position de la catégorie dans le listing
+                                    example: 1
+                            required:
+                                - singleName
+                                - pluralName
+                                - position
+            /api/vform-category/{vFormCategoryId}:
+                # Suppression d'une VFormCategory
+                delete:
+                    tags:
+                    - "Fields / VFormCategory"
+                    parameters:
+                    - name: vFormCategoryId
+                      in: path
+                      description: "Id de l'objet à supprimer"
+                      required: true
+                # Modification d'une VFormCategory
+                put:
+                    tags:
+                    - "Fields / VFormCategory"
+                    parameters:
+                    -   name: vFormCategoryId
+                        in: path
+                        description: "Id de l'objet à modifier"
+                        required: true
+                    -   in: body
+                        name: VFormCategory
+                        description: Les données à modifier
+                        schema:
+                            title: Une catégorie de formulaire (VFormCategory)
+                            type: object
+                            properties:
+                                icon:
+                                    type: string
+                                    description: Icône utilisée
+                                    example: "id-cards"
+                                singleName:
+                                    type: string
+                                    description: Nom de la catégorie au singulier
+                                    example: "Ma catégorie éditée"
+                                pluralName:
+                                    type: string
+                                    description: Nom de la catégorie au pluriel
+                                    example: "Mes catégories éditées"
+                                position:
+                                    type: integer
+                                    description: Position de la catégorie dans le listing
+                                    example: 1
+                            required:
+                            - singleName
+                            - pluralName
+                            - position
+
+            # VForm
+            /api/vform/:
+                # Ajout d'un VForm
+                post:
+                    tags:
+                    - "Fields / VForm"
+                    parameters:
+                    -   in: body
+                        name: VForm
+                        description: Le formulaire à créer
+                        schema:
+                            title: Un formulaire (VForm)
+                            type: object
+                            properties:
+                                name:
+                                    type: string
+                                    description: Nom du formulaire
+                                    example: "Mon nouveau formulaire"
+                                category:
+                                    type: integer
+                                    description: ID de la catégorie de formulaire
+                            required:
+                                - name
+                                - category
+            /api/vform/{vFormId}:
+                # Suppression d'un VForm
+                delete:
+                    tags:
+                    - "Fields / VForm"
+                parameters:
+                -   name: vFormId
+                    in: path
+                    description: "Id de l'objet à supprimer"
+                    required: true
+                # Modification d'un VForm
+                put:
+                    tags:
+                    - "Fields / VForm"
+                    parameters:
+                    -   name: vFormId
+                        in: path
+                        description: "Id de l'objet à modifier"
+                        required: true
+                    -   in: body
+                        name: VForm
+                        description: Les données du formulaire à modifier
+                        schema:
+                            title: Un formulaire (VForm)
+                            type: object
+                            properties:
+                                name:
+                                    type: string
+                                    description: Nom du formulaire
+                                    example: "Nouveau nom"
+                                state:
+                                    type: integer
+                                    description: L'état de publication du formulaire
+                                    example: 1
+                                category:
+                                    type: integer
+                                    description: ID de la catégorie de formulaire
+
+            # VFormRecord
+            /api/vform-record/:
+                # Ajout d'un VFormRecord
+                post:
+                    tags:
+                    - "Fields / VFormRecord"
+                    parameters:
+                    -   in: body
+                        name: VFormRecord
+                        description: Le VFormRecord à créer
+                        schema:
+                            title: Un VFormRecord
+                            type: object
+                            properties:
+                                vForm:
+                                    type: integer
+                                    description: ID du VForm lié
+                            required:
+                            - vForm
+            /api/vform-record/{vFormRecord}:
+                # Suppression d'un VFormRecord
+                delete:
+                    tags:
+                    - "Fields / VFormRecord"
+                parameters:
+                -   name: vFormRecord
+                    in: path
+                    description: "Id de l'objet à supprimer"
+                    required: true
+            /api/vform-record/{vFormRecord}/user/{user}:
+                # Ajout d'un VFormRecordUser
+                post:
+                    tags:
+                    - "Fields / VFormRecord"
+                    parameters:
+                    -   name: vFormRecord
+                        in: path
+                        description: "Id du VFormRecord"
+                        required: true
+                    -   name: vFormRecord
+                        in: path
+                        description: "Id de l'utilisateur"
+                        required: true
+                # Supression d'un VFormRecordUser
+                delete:
+                    tags:
+                    - "Fields / VFormRecord"
+                    parameters:
+                    -   name: vFormRecord
+                        in: path
+                        description: "Id du VFormRecord"
+                        required: true
+                    -   name: vFormRecord
+                        in: path
+                        description: "Id de l'utilisateur"
+                        required: true
+
+            # Champs
+            /api/field/create/on-section/{sectionId}:
+                # Ajout d'un champ
+                post:
+                    tags:
+                    - "Fields / Field"
+                    parameters:
+                    -   name: sectionId
+                        in: path
+                        type: integer
+                        description: ID de la section dans laquelle créer le champ
+                        required: true
+                    -   name: format
+                        in: formData
+                        type: string
+                        description: Format de la configuration
+                        default: yaml
+                        enum:
+                        - yaml
+                        - json
+                    -   name: configuration
+                        in: formData
+                        type: string
+                        format: textarea
+                        description: Configuration du champ. Voir un exemple dans `src/Resources/demo/hr_record_fields.yaml`
+                        required: true
+                    -   name: mode
+                        in: formData
+                        type: string
+                        description: Définit s'il faut créer un ou plusieurs champs à partir de la configuration fournie.
+                        default: single
+                        enum:
+                        - multiple
+                        - single
+            /api/field/{field}:
+                # Suppression d'un champ
+                delete:
+                    tags:
+                    - "Fields / Field"
+                    parameters:
+                        - name: field
+                          in: path
+                          description: ID du champ à supprimer
+
+            # Sections
+            /api/section/:
+                # Ajout d'une section
+                post:
+                    tags:
+                    - "Fields / Section"
+                    parameters:
+                    -   in: body
+                        name: Section
+                        description: La nouvelle section
+                        schema:
+                            title: Une section
+                            type: object
+                            properties:
+                                vForm:
+                                    type: integer
+                                    description: ID du VForm
+                                name:
+                                    type: string
+                                    description: Nom de la section
+                                    example: "Nouvelle section"
+                                state:
+                                    type: integer
+                                    description: L'état de publication de la section
+                                    example: 1
+                                position:
+                                    type: integer
+                                    description: La position de la section dans le VForm
+                            required:
+                                - vForm
+                                - name
+            /api/section/{sectionId}/export:
+                # Exportation des champs de la section
+                get:
+                    tags:
+                    - "Fields / Section"
+                    parameters:
+                    -   name: sectionId
+                        in: path
+                        type: integer
+                        description: ID de la section à récupérer
+                        required: true
+                    -   name: format
+                        in: query
+                        type: string
+                        description: Format de la configuration
+                        default: json
+                        enum:
+                        - json
+                        - yaml
+            /api/section/{sectionId}:
+                # Récupérer une section, avec ou sans ses champs
+                get:
+                    tags:
+                    - "Fields / Section"
+                    parameters:
+                    -   name: sectionId
+                        in: path
+                        type: integer
+                        description: ID de la section à récupérer
+                        required: true
+                    -   in: query
+                        name: fields
+                        type: boolean
+                        default: true
+                        description: Récupérer les champs également. Activé par défaut
+                    -   in: query
+                        name: filter
+                        type: string
+                        description: Filtrer les champs
+                        default: published
+                        enum:
+                        - published
+                        - all
+                        - allWithDeleted
+                # Modifier une section
+                put:
+                    tags:
+                    - "Fields / Section"
+                    parameters:
+                        -   in: path
+                            name: sectionId
+                            type: integer
+                            description: ID de la section à modifier
+                        -   in: body
+                            name: section
+                            description: Les données de la section
+                            schema:
+                                title: La section
+                                type: object
+                                properties:
+                                    name:
+                                        type: string
+                                        description: Nouveau nom de la section
+                                    vForm:
+                                        type: integer
+                                        description: Déplacer la section vers un nouveau VForm
+                                    position:
+                                        type: integer
+                                        description: Nouvelle position de la section
+            # Users
+            /api/users/by-roles:
+                get:
+                    parameters:
+                    -   name: roles
+                        in: query
+                        required: true
+                        description: Tableau des rôles, en JSON
+                        type: array
+                        items:
+                            type: string
+                        style: form
+                    tags:
+                    - Utilisateurs

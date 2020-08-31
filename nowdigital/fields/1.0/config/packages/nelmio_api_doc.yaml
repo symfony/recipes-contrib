@@ -1,0 +1,28 @@
+# Fichiers de configuration
+imports:
+    - { resource: ./nelmio_api_doc_paths.yaml }
+
+nelmio_api_doc:
+    documentation:
+        info:
+            title: Fields
+            description: Fields API pour ProRH
+            version: 1.0.0
+        tags:
+        -   name: Utilisateurs
+            description: Utilisateurs PRORH
+        -   name: Fields / VFormCategory
+            description: Catégories de formulaire
+        -   name: Fields / VForm
+            description: Formulaires
+        -   name: Fields / VFormRecord
+            description: Enregistrements de formulaires
+        -   name: Fields / Field
+            description: Gestion des champs
+        -   name: Fields / Section
+            description: Sections de VForm
+
+    areas: # to filter documented areas
+        default:
+            path_patterns:
+            - ^/api(?!/doc$) # Accepts routes under /api except /api/doc
