@@ -1,6 +1,6 @@
 {
 	"bundles": {
-		"Ise\\WebSecurityBundle\\IseWbeSecurityBundle": ["all"]
+		"Ise\\WebSecurityBundle\\IseWebSecurityBundle": ["all"]
 	},
 	"copy-from-recipe": {
 		"config/": "%CONFIG_DIR%/"
