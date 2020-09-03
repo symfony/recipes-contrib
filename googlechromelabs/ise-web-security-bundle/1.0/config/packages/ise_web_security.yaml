@@ -10,4 +10,4 @@ ise_web_security:
             active: true
             allowed_endpoints: []
         trusted_types:
-            enabled: false
+            active: false
