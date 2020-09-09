@@ -1,0 +1,5 @@
+services:
+    Klaviyo\Klaviyo:
+        arguments:
+            $private_key: '%env(KLAVIYO_PRIVATE_KEY)%'
+            $public_key: '%env(KLAVIYO_PUBLIC_KEY)%'
