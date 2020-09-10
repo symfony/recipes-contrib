@@ -1,5 +1,6 @@
 {
     "bundles": {
+        "Teknoo\\DI\\SymfonyBridge\\DIBridgeBundle": ["all"],
         "Teknoo\\East\\FoundationBundle\\EastFoundationBundle": ["all"]
     },
     "copy-from-recipe": {
