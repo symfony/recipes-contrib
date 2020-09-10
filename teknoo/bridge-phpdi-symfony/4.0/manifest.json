@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "Teknoo\\DI\\SymfonyBridge\\DIBridgeBundle": ["all"]
+    }
+}
