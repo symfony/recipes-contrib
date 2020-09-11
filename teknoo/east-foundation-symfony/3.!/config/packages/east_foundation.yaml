@@ -3,3 +3,6 @@ di_bridge:
     definitions:
         - '%kernel.project_dir%/vendor/teknoo/east-foundation/src/di.php'
         - '%kernel.project_dir%/vendor/teknoo/east-foundation/infrastructures/symfony/Resources/config/di.php'
+        - '%kernel.project_dir%/vendor/teknoo/east-foundation/infrastructures/symfony/Resources/config/laminas_di.php'
+    import:
+        Psr\Log\LoggerInterface: 'logger'
