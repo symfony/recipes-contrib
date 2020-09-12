@@ -1,4 +1,5 @@
 {
+    "aliases": ["teknoo-east", "east-foundation"],
     "bundles": {
         "Teknoo\\DI\\SymfonyBridge\\DIBridgeBundle": ["all"],
         "Teknoo\\East\\FoundationBundle\\EastFoundationBundle": ["all"]
