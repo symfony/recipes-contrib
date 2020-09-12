@@ -1,0 +1,27 @@
+admin_website_home:
+  path: '/admin'
+  defaults: { _controller: 'teknoo.east.website.endpoint.static', 'template': '@TeknooEastWebsite/Admin/index.html.twig' }
+
+admin_website_logout:
+  path: '/admin/logout'
+  defaults: { _controller: 'teknoo.east.website.endpoint.static', 'template': '@TeknooEastWebsite/Admin/login.html.twig' }
+
+admin_website_login:
+  path: '/admin/login'
+  defaults: { _controller: 'teknoo.east.website.endpoint.static', 'template': '@TeknooEastWebsite/Admin/login.html.twig' }
+
+admin_website_check:
+  path: '/admin/check'
+  defaults: { _controller: 'teknoo.east.website.endpoint.static', 'template': '@TeknooEastWebsite/Admin/index.html.twig' }
+
+admin_media_embedded_list:
+  path: '/admin/media/embedded/list'
+  methods:  ['GET']
+  defaults: { _controller: 'teknoo.east.website.endpoint.admin.list.media', viewPath: '@TeknooEastWebsite/AdminMedia/popup.html.twig' }
+
+admin_website:
+  resource: '@TeknooEastWebsiteBundle/Resources/config/admin_routing.yml'
+  prefix: '/admin'
+
+website:
+  resource: '@TeknooEastWebsiteBundle/Resources/config/routing.yml'

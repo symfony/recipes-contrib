@@ -1,0 +1,48 @@
+# To get started with security, check out the documentation:
+# http://symfony.com/doc/current/security.html
+security:
+    encoders:
+        Teknoo\East\WebsiteBundle\Object\User:
+            algorithm: 'sha512'
+            iterations: 100
+            encode_as_base64: false
+
+    role_hierarchy:
+        ROLE_ADMIN: 'ROLE_USER'
+
+    providers:
+        main:
+            id: 'teknoo.east.website.bundle.user_provider'
+
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        #Admin area, allow anonymous for login
+        admin_login:
+            pattern: '^/admin/login$'
+            security: false
+
+        #require admin role for all others pages
+        admin_area:
+            pattern: '^/admin'
+            form_login:
+                check_path: 'admin_website_check'
+                login_path: 'admin_website_login'
+                default_target_path: 'admin_website_home'
+                always_use_default_target_path: false
+                use_referer: true
+            logout:
+                path: 'admin_website_logout'
+                target: 'admin_website_home'
+
+        main:
+            anonymous: ~
+
+    access_control:
+        #Admin : require role admin
+        - { path: '^/admin/', roles: ROLE_ADMIN, requires_channel: https }
+        #Front : available for anyone
+        - { path: '^/', roles: [ROLE_USER,IS_AUTHENTICATED_ANONYMOUSLY], requires_channel: https }
