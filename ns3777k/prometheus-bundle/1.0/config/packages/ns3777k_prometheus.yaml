@@ -1,0 +1,6 @@
+ns3777k_prometheus:
+    namespace: app
+    adapter: apcu
+
+    listener:
+        ignored_routes: [metrics, _wdt]

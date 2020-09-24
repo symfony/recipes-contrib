@@ -1,0 +1,6 @@
+<bg=blue;fg=white>                              </>
+<bg=blue;fg=white> DekaleeAutopilotSwarrot, What's next? </>
+<bg=blue;fg=white>                              </>
+
+  * The Dekalee/AutopilotBundle needs your pubsub configuration.
+    Modify your DEKALEE_AUTOPILOT_APIKEY config in <fg=green>.env</>

@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Mael\\MaelRecaptchaBundle\\MaelRecaptchaBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "MAEL_RECAPTCHA_KEY": "YOUR_RECAPTCHA_KEY",
+        "MAEL_RECAPTCHA_SECRET": "YOUR_RECAPTCHA_SECRET"
+    }
+}

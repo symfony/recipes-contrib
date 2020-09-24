@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "Akondas\\ConsulBundle\\ConsulBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "CONSUL_SERVICE_NAME": "symfony-app",
+        "CONSUL_SERVICE_HOST": "localhost",
+        "CONSUL_SERVICE_PORT": "8000",
+        "CONSUL_CLIENT_BASE_URI": "http://127.0.0.1:8500"
+    }
+}

@@ -1,0 +1,3 @@
+monsieurbiz_sylius_alert_message_admin:
+    resource: "@MonsieurBizSyliusAlertMessagePlugin/Resources/config/routing/admin.yaml"
+    prefix: /admin

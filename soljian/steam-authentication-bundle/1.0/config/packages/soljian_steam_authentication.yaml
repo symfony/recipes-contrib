@@ -1,0 +1,5 @@
+soljian_steam_authentication:
+    api_key: "%env(STEAM_API_KEY)%"
+    login_route: ''
+    login_redirect: ''
+    user_class: ''

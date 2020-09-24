@@ -1,0 +1,2 @@
+dekalee_autopilot:
+    api_key: '%env(DEKALEE_AUTOPILOT_APIKEY)%'
