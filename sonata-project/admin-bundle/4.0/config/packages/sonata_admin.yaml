@@ -1,0 +1,14 @@
+sonata_admin:
+    title: 'Sonata Admin'
+    dashboard:
+        blocks:
+            - { type: sonata.admin.block.admin_list, position: left }
+
+sonata_block:
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts: [admin]
+
+webpack_encore:
+    builds:
+        sonata_admin: '%kernel.project_dir%/public/bundles/sonataadmin/dist'
