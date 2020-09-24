@@ -1,0 +1,3 @@
+enigma972_user:
+    resource:  '@Enigma972UserBundle/Controller/'
+    type: annotation
