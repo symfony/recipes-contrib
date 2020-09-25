@@ -34,6 +34,11 @@ security:
                 default_target_path: 'admin_website_home'
                 always_use_default_target_path: false
                 use_referer: true
+                csrf_token_generator: 'security.csrf.token_manager'
+            remember_me:
+                secret: '%env(APP_REMEMBER_SECRET)%'
+                secure: true
+                httponly: true
             logout:
                 path: 'admin_website_logout'
                 target: 'admin_website_home'
