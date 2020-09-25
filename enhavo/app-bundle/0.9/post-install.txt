@@ -1,0 +1,15 @@
+<bg=blue;fg=white>                                             </>
+<bg=blue;fg=white>  Complete EnhavoAppBundle installation ...  </>
+<bg=blue;fg=white>                                             </>
+
+  * Update your <fg=green>package.json</> file
+  * Update your <fg=green>webpack.config.js</> file
+  * Update your configurations
+  * Add a <fg=green>tsconfig.json</> file
+  * Build your assets with
+
+      <fg=green>$ yarn encore dev</>
+      <fg=green>$ yarn routes:dump</>
+
+<fg=green>  Read more details about the steps:</>
+<fg=blue>  https://docs.enhavo.com/book/app-bundle/installation.html</>
