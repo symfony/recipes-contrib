@@ -5,7 +5,6 @@
   * Update your <fg=green>package.json</> file
   * Update your <fg=green>webpack.config.js</> file
   * Update your configurations
-  * Add a <fg=green>tsconfig.json</> file
   * Build your assets with
 
       <fg=green>$ yarn encore dev</>

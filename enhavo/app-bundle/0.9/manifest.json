@@ -14,7 +14,8 @@
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/",
         "assets/": "assets/",
-        "public/": "%PUBLIC_DIR%/"
+        "public/": "%PUBLIC_DIR%/",
+        "tsconfig.json": "tsconfig.json"
     },
     "gitignore": [
         "public/build/enhavo/*",
