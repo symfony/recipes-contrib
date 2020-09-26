@@ -1,0 +1,11 @@
+oka_service_discovery:
+    cache_id: cache.app
+    load_balancing_algorithm: 'round-robin'
+    dsn: 'php://array'
+    options:
+        # Put the options of catalog for the current registry
+#        services:
+#          localhost:
+#            - scheme: 'http'
+#              host: 127.0.0.1
+#              port: 80
