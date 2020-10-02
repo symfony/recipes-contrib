@@ -1,0 +1,20 @@
+# Read the documentation: https://github.com/dneustadt/DneustadtCsrfCookieBundle/blob/main/README.md
+dneustadt_csrf_cookie:
+#   Generally enable/disable the CSRF protection
+    enable: true
+#   ID used to generate token
+#    id: csrf
+#   Name of the cookie the token is stored in
+#    name: XSRF-TOKEN
+#   Cookie expiration
+#    expire: 0
+#   Cookie path
+#    path: /
+#   Cookie domain
+#    domain: null
+#   Cookie secure
+#    secure: false
+#   Name of the HTTP header the token is expected to be stored in
+#    header: X-XSRF-TOKEN
+#   Cookie same site policy
+#    sameSite: lax
