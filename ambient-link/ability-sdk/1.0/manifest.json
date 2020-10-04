@@ -1,0 +1,12 @@
+{
+    "env": {
+        "AMBIENT_LINK_HOST": "",
+        "AMBIENT_LINK_PORT": "1883",
+        "AMBIENT_LINK_USERNAME":  "",
+        "AMBIENT_LINK_PASSWORD": "",
+        "AMBIENT_LINK_MONKEY_ID":  ""
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
