@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "OAT\\Bundle\\Lti1p3Bundle\\Lti1p3Bundle": [ "all" ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "LTI1P3_SERVICE_ENCRYPTION_KEY": "%generate(secret)%"
+    }
+}
