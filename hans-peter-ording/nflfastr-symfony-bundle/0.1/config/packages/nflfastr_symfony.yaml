@@ -1,5 +1,4 @@
 nflfastr_symfony:
-    timezone: Europe/Berlin
     sources:
         playByPlay:
             baseUrl: https://github.com/guga31bb/nflfastR-data
@@ -7,3 +6,4 @@ nflfastr_symfony:
         roster:
             baseUrl: https://github.com/mrcaseb/nflfastR-roster
             path: tree/master/data/seasons
+    timezone: Europe/Berlin
