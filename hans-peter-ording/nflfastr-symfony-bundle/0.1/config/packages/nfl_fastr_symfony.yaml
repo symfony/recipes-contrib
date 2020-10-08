@@ -1,4 +1,4 @@
-nflfastr_symfony:
+nfl_fastr_symfony:
     timezone: Europe/Berlin
     sources:
         playByPlay:
