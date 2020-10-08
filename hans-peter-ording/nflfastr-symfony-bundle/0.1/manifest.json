@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "HansPeterOrding\\NflfastrSymfonyBundle\\NflfastrSymfonyBundle": [
+        "HansPeterOrding\\NflFastrSymfonyBundle\\NflFastrSymfonyBundle": [
             "all"
         ]
     },
