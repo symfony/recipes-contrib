@@ -6,3 +6,4 @@ nflfastr_symfony:
         roster:
             baseUrl: https://github.com/mrcaseb/nflfastR-roster
             path: tree/master/data/seasons
+    timezone: Europe/Berlin
