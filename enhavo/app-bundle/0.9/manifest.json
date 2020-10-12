@@ -7,9 +7,8 @@
     },
     "env": {
         "MAILER_FROM": "no-reply@email.com",
-        "MAILER_TO": "my@email.com",
         "MAILER_NAME": "enhavo",
-        "MAILER_DELIVERY_ADDRESS": "my@email.com"
+        "MAILER_TO": "my@email.com"
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/",
