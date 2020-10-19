@@ -1,0 +1,15 @@
+<bg=blue;fg=white>                                                   </>
+<bg=blue;fg=white>  Complete EnhavoDashboardBundle installation ...  </>
+<bg=blue;fg=white>                                                   </>
+
+  * Update your <fg=green>packages.json</>
+
+      <fg=green>$ yarn add @enhavo/dashboard</>
+
+  * Build your assets with
+
+      <fg=green>$ yarn encore dev</>
+      <fg=green>$ yarn routes:dump</>
+
+<fg=green>  Read more details about the steps:</>
+<fg=blue>  https://docs.enhavo.com/book/dashboard-bundle/installation.html</>

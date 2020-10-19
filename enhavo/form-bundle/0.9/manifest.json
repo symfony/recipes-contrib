@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Enhavo\\Bundle\\FormBundle\\EnhavoFormBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "assets/": "assets/"
+    }
+}

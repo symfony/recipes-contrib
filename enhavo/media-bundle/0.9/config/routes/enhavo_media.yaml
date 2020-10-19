@@ -1,0 +1,7 @@
+enhavo_media_admin:
+    resource: "@EnhavoMediaBundle/Resources/config/routes/admin/*"
+    prefix: /admin
+
+enhavo_media_theme:
+    resource: "@EnhavoMediaBundle/Resources/config/routes/theme/*"
+    prefix: /
