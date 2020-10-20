@@ -7,7 +7,7 @@ elastic_apm:
 #    environment: dev # The environment of your service
 #    serverUrl: 'http://localhost:8200' # The URL for your APM service. The URL must be fully qualified, including the protocol and port.
 #    secretToken: null # The secret token required to send data to your APM service
-#    hostname: ~ # The OS hostname on which the agent is running
+#    hostname: null # The OS hostname on which the agent is running
 #    env: [] # $_SERVER vars to send to the APM Server, empty set sends all. Keys are case sensitive
 #    cookies: [] # Cookies to send to the APM Server, empty set sends all. Keys are case sensitive
 #    httpClient: [] # HTTP Client
