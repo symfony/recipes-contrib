@@ -1,0 +1,8 @@
+{
+  "bundles": {
+    "Chq81\\ElasticApmBundle\\ElasticApmBundle": ["all"]
+  },
+  "copy-from-recipe": {
+    "config/": "%CONFIG_DIR%/"
+  }
+}
