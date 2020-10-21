@@ -2,5 +2,5 @@
 <bg=blue;fg=white> Next: ElasticApmBundle configuration </>
 <bg=blue;fg=white>                                      </>
 
-  * <fg=blue>Configure</> bundle in <comment>config/packages/scheduler.yaml</>
+  * <fg=blue>Configure</> bundle in <comment>config/packages/elastic_apm.yaml</>
   * <fg=blue>Read</> the documentation at <comment>https://github.com/chq81/elastic-apm-bundle/blob/master/README.md</>
