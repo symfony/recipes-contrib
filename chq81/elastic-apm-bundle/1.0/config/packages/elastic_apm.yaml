@@ -23,6 +23,6 @@ elastic_apm:
         enabled: true # Activating capturing of transactions, default is true
     errors: # Captures errors
         enabled: true # Activating capturing of errors, default is true
-#       exclude:
-#           status_codes: [] # Status codes which should not be captured. The default is none.
-#           exceptions: [] # Exceptions which should not be captured. The default is none.
+#        exclude:
+#            status_codes: [] # Status codes which should not be captured. The default is none.
+#            exceptions: [] # Exceptions which should not be captured. The default is none.
