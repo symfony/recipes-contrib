@@ -20,9 +20,9 @@ elastic_apm:
                             # data sent to APM. Unsampled transactions are still reported to APM, including the overall
                             # transaction time, but will have no details. The default is to sample all (1.0) transactions
     transactions: # Captures transactions
-       enabled: true # Activating capturing of transactions, default is true
+        enabled: true # Activating capturing of transactions, default is true
     errors: # Captures errors
-       enabled: true # Activating capturing of errors, default is true
+        enabled: true # Activating capturing of errors, default is true
 #       exclude:
 #           status_codes: [] # Status codes which should not be captured. The default is none.
 #           exceptions: [] # Exceptions which should not be captured. The default is none.
