@@ -1,28 +1,28 @@
 elastic_apm:
     enabled: true # Activate the APM Agent, default is true
     serviceName: 'Symfony APM App' # The name of your service, required
+    serverUrl: 'http://localhost:8200' # The URL for your APM service. The URL must be fully qualified, including the protocol and port.
+#    secretToken: null # The secret token required to send data to your APM service
 #    serviceVersion: null # The version of your deployed service
 #    frameworkName: # The name of the application framework
 #    frameworkVersion: # The version of the application framework
 #    environment: dev # The environment of your service
-#    serverUrl: 'http://localhost:8200' # The URL for your APM service. The URL must be fully qualified, including the protocol and port.
-#    secretToken: null # The secret token required to send data to your APM service
 #    hostname: null # The OS hostname on which the agent is running
 #    env: [] # $_SERVER vars to send to the APM Server, empty set sends all. Keys are case sensitive
 #    cookies: [] # Cookies to send to the APM Server, empty set sends all. Keys are case sensitive
-#    httpClient: [] # HTTP Client
+#    httpClient: null # HTTP Client
 #    timeout: 10 # Timeout for HTTP client
 #    logger: null # The logger for the agent
 #    logLevel: INFO # The log level of the logger
-#    stackTraceLimit: 0 # Depth of a transaction stack trace. The default (0) is unlimited depth.
+#    stackTraceLimit: 0 # The depth of a transaction stack trace. The default (0) is unlimited depth.
 #    transactionSampleRate: 1.0 # Transactions will be sampled at the given rate (1.0 being 100%)
                             # Sampling a transaction means that the context and child events will be included in the
                             # data sent to APM. Unsampled transactions are still reported to APM, including the overall
                             # transaction time, but will have no details. The default is to sample all (1.0) transactions
-#    transactions: # Captures transactions
-#       enabled: true # Activating capturing of transactions, default is true
-#    errors: # Captures errors
-#       enabled: true # Activating capturing of errors, default is true
+    transactions: # Captures transactions
+       enabled: true # Activating capturing of transactions, default is true
+    errors: # Captures errors
+       enabled: true # Activating capturing of errors, default is true
 #       exclude:
 #           status_codes: [] # Status codes which should not be captured. The default is none.
 #           exceptions: [] # Exceptions which should not be captured. The default is none.
