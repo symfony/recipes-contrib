@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "FluxSE\\SyliusPayumStripePlugin\\FluxSESyliusPayumStripePlugin::class": ["all"]
+    }
+}
