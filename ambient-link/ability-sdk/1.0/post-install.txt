@@ -17,7 +17,7 @@
         {
             $roomName = $event->roomName();
 
-            $this->logger->debug(sprintf('Some person enters room %s', $roomName));
+            $this->logger->debug(sprintf('Some person enters room "%s".', $roomName));
 
             // @todo implement logic here
         }
