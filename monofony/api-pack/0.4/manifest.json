@@ -1,0 +1,8 @@
+{
+    "copy-from-package": {
+        ".recipe/config/": "%CONFIG_DIR%/",
+        ".recipe/spec/": "spec/",
+        ".recipe/src/": "%SRC_DIR%/",
+        ".recipe/tests/": "tests/"
+    }
+}
