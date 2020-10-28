@@ -1,0 +1,4 @@
+siganushka_generic:
+    # table_prefix: null # 可选，默认为 null，为 null 时不添加表前缀
+    # json_encode_options: 271 # 默认值支持中文编码
+    # disable_html5_validation: true # 可选项，默认为 true，为 false 时开启 HTML5 验证
