@@ -1,7 +1,7 @@
 supervisor_rest:
-    default_environment: all
+    default_environment: dev
     servers:
-        all:
+        dev:
             application:
                 scheme: http
                 host: localhost
