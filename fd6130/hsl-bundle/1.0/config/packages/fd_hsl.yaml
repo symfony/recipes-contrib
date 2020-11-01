@@ -1,3 +1,21 @@
 fd_hsl:
     paginator:
-        default_limit: 30
+        default_limit: 5
+        
+    # This is image upload listener for VichUploaderBundle.
+    # If you don't want use this listener, just set enable to false.
+    hsl_image_upload_listener:
+        enable: true
+        allowed_image_extension: ['jpg']
+        # Every image you upload will save as the extension you defined.
+        # Please provide extension name without any punctuation.
+        # null mean do nothing.
+        save_as_extension: null
+        # In bytes
+        max_allowed_size: 1000000
+        quality: 90
+        # Resize the image if it over the maximum allowed width
+        resize:
+          enable: true
+          # In pixel
+          max_allowed_width: 1024
