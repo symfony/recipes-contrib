@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Fd\\HslBundle\\FdHslBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%"
+    },
+    "aliases": ["fdhsl", "fd_hsl", "fd-hsl"]
+}
