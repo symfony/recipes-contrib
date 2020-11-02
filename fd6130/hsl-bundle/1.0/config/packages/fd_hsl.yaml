@@ -1,6 +1,6 @@
 fd_hsl:
     paginator:
-        default_limit: 5
+        default_limit: 30
         
     # This is image upload listener for VichUploaderBundle.
     # If you don't want use this listener, just set enable to false.
