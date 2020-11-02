@@ -12,8 +12,8 @@ fd_hsl:
         save_as_extension: null
         quality: 90
         resize:
-          enable: false
-          # If image larger then this width (px), it will be resize.
-          resize_when_width_exceed: 1024
-          # Resize to width
-          resize_to_width: 1024
+            enable: false
+            # If image larger then this width (px), it will be resize.
+            resize_when_width_exceed: 1024
+            # Resize to width
+            resize_to_width: 1024
