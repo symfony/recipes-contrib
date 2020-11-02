@@ -6,16 +6,14 @@ fd_hsl:
     # If you don't want use this listener, just set enable to false.
     hsl_image_upload_listener:
         enable: true
-        allowed_image_extension: ['jpg']
         # Every image you upload will save as the extension you defined.
         # Please provide extension name without any punctuation.
         # null mean do nothing.
         save_as_extension: null
-        # In bytes
-        max_allowed_size: 1000000
         quality: 90
-        # Resize the image if it over the maximum allowed width
         resize:
-          enable: true
-          # In pixel
-          max_allowed_width: 1024
+          enable: false
+          # If image larger then this width (px), it will be resize.
+          resize_when_width_exceed: 1024
+          # Resize to width
+          resize_to_width: 1024
