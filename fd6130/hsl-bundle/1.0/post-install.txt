@@ -4,6 +4,6 @@
 
   * <fg=blue>Features</> from this bundle:
     1. You can now create DTO, Transformer, API Controller using our <comment>make:hsl</>command.
-    2. You may modify the <info>default_limit</> in <comment>config/packages/fd_hsl.yaml</> for pagination limit.
+    2. Modify the configuration at <comment>config/packages/fd_hsl.yaml</>.
 
   * <fg=blue>Read</> the documentation at <comment>https://github.com/fd6130/hsl-bundle</>
