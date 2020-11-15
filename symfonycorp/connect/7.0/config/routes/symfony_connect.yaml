@@ -1,0 +1,3 @@
+symfony_connect:
+    prefix: /connect
+    resource: '@SymfonyConnectBundle/Resources/config/routing/connect.xml'

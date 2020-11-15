@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "EcPhp\\CasBundle\\CasBundle": ["all"]
+    },
+    "copy-from-package": {
+        "Resources/config/": "%CONFIG_DIR%/"
+    }
+}

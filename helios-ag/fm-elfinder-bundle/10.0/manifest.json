@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "FM\\ElfinderBundle\\FMElfinderBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "composer-scripts": {
+        "elfinder:install": "symfony-cmd"
+    }
+}

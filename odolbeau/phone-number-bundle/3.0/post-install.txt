@@ -1,0 +1,9 @@
+<bg=green;fg=white></>
+<bg=green;fg=white> Uncomment the configuration provided for doctrine
+<bg=green;fg=white> and now can use the phone bundle as described here: </>
+<bg=green;fg=white> https://github.com/odolbeau/phone-number-bundle#usage </>
+<bg=green;fg=white> The Doctrine configuration has been already done.</>
+<bg=green;fg=white> You now can use `phone_number` as an ORM-Type: </>
+
+  /** @ORM\Column(type="phone_number") */
+  private $phoneNumber;

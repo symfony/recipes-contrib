@@ -1,0 +1,11 @@
+lolautruche_payline:
+    merchant_id: '%env(PAYLINE_MERCHANT_ID)%'
+    access_key: '%env(PAYLINE_ACCESS_KEY)%'
+    contract_number: '%env(PAYLINE_CONTRACT_NUMBER)%'
+    environment: '%env(PAYLINE_ENVIRONMENT)%'
+    # Can be EUR (or €), USD (or $), POUND (or £).
+    default_currency: '€'
+    # Route name for the confirmation page the user will be redirected to, once the payment has been processed.
+    default_confirmation_route: 'route_name_for_confirmation_page'
+    # Route name for the error page the user will be redirected to if there was an error with the payment.
+    default_error_route: 'route_name_for_error_page'

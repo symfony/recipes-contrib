@@ -1,0 +1,16 @@
+{
+    "bundles": {
+        "Sulu\\Bundle\\ArticleBundle\\SuluArticleBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "copy-from-package": {
+        "Resources/doc/default.xml": "%CONFIG_DIR%/templates/articles/default.xml",
+        "Resources/doc/default.html.twig": "templates/articles/default.html.twig"
+    },
+    "env": {
+        "ELASTICSEARCH_HOST": "127.0.0.1:9200",
+        "ELASTICSEARCH_INDEX": "su_articles"
+    }
+}

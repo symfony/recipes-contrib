@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Dekalee\\AutopilotBundle\\DekaleeAutopilotBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#DEKALEE_AUTOPILOT_APIKEY": "the-autopilot-api-key"
+    }
+}

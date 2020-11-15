@@ -1,0 +1,2 @@
+dobry_programator_smartform:
+    client_id: '%env(SMARTFORM_CLIENT_ID)%'

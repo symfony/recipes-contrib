@@ -1,0 +1,4 @@
+jacquesndl_mailer:
+    sender:
+        name: '%env(JACQUESNDL_MAILER_SENDER_NAME)%'
+        address: '%env(JACQUESNDL_MAILER_SENDER_ADDRESS)%'

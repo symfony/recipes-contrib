@@ -1,0 +1,8 @@
+{
+    "copy-from-recipe": {
+        "depfile.yaml": "depfile.yaml"
+    },
+    "gitignore": [
+        "/.deptrac.cache"
+    ]
+}

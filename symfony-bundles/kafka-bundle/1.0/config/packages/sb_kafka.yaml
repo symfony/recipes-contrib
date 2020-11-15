@@ -11,7 +11,3 @@ sb_kafka:
             group.id: 'main_group'
             log.connection.close: 'false'
             metadata.broker.list: '%env(resolve:KAFKA_BROKERS)%'
-
-    topics:
-        configuration:
-            auto.offset.reset: smallest

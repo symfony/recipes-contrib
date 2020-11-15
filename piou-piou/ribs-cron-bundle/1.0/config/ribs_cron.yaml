@@ -1,0 +1,6 @@
+parameters:
+    data_directory: '%kernel.project_dir%/data/'
+    ribs_cron_ip_external: '%env(IP_CRON_EXTERNAL)%'
+    ribs_cron_ip_internal: '%env(IP_CRON_INTERNAL)%'
+    ribs_cron:
+#       testCronCall: '* * * * *'

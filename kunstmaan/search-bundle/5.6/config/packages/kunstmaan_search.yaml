@@ -1,0 +1,8 @@
+# Default we set the used elasticsearch version to 7 in the "kunstmaan_search.elasticsearch_version" parameter.
+# If you want to use Elasticsearch 6, change the value of the "kunstmaan_search.elasticsearch_version" parameter to "6" and run "composer req ruflin/elastica ^6.0"
+kunstmaan_search:
+    connection:
+        driver: elastic_search
+        host: localhost
+        port: 9200
+    index_prefix: myproject # TODO: Change this prefix to you liking. Maybe the name of your project
