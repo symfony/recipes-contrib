@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "FluxSE\\SyliusPayumStripePlugin\\FluxSESyliusPayumStripePlugin::class": ["all"]
+        "FluxSE\\SyliusPayumStripePlugin\\FluxSESyliusPayumStripePlugin": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
