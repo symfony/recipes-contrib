@@ -1,2 +1,0 @@
-siganushka_generic:
-    resource: "@SiganushkaGenericBundle/Resources/config/routing/routes.xml"
