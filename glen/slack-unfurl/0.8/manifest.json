@@ -1,0 +1,7 @@
+{
+    "env": {
+        "APP_PREFIX": "/",
+        "SLACK_VERIFICATION_TOKEN": "Z2xlbi9zbGFjay11bmZ1cmw",
+        "SLACK_API_TOKEN": "xoxp-xxx"
+    }
+}
