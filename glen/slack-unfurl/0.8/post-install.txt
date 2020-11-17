@@ -1,3 +1,4 @@
 Getting started using <options=bold>slack-unfurl</>. What's next?
 
   * Configure Slack Token and Verification: <comment>https://github.com/glensc/slack-unfurl#slack-app</>
+  * Add providers: <comment>https://github.com/glensc/slack-unfurl#adding-providers</>
