@@ -1,0 +1,17 @@
+# @see https://github.com/Sylius/SyliusResourceBundle/blob/master/docs/index.md
+sylius_resource:
+    # Override default settings
+    settings:
+        #paginate: null
+        #limit: null
+        #allow_paginate: [10, 20, 30]
+        #default_page_size: 10
+        #sortable: null
+        #filterable: false
+        #criteria: null
+
+    # Configure your resources
+    resources:
+        #app.book:
+            #classes:
+                #model: App\Entity\Book
