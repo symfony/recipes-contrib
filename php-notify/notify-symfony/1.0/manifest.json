@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Notify\\Symfony\\NotifyBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "public/": "%PUBLIC_DIR%"
+    }
+}
