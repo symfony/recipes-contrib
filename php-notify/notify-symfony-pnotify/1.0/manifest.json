@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Notify\\Symfony\\NotifyBundle": ["all"],
+        "Notify\\Symfony\\Pnotify\\NotifyPnotifyBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

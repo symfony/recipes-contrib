@@ -1,0 +1,8 @@
+notify:
+    default: 'toastr'
+    scripts:
+        - '/vendor/php-notify/notify/assets/js/notify.js'
+    styles: []
+    adapters: []
+    stamps_middlewares: []
+
