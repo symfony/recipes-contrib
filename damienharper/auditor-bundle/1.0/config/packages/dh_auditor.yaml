@@ -1,5 +1,5 @@
 dh_auditor:
-  # Configuration reference available at:
-  # http://localhost:8000/docs/auditor-bundle/configuration/reference.html
+    # Configuration reference available at:
+    # http://localhost:8000/docs/auditor-bundle/configuration/reference.html
 
-  enabled: true
+    enabled: true
