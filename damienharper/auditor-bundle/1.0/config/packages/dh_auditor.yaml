@@ -1,5 +1,0 @@
-dh_auditor:
-    # Configuration reference available at:
-    # https://damienharper.github.io/auditor-docs/docs/auditor-bundle/configuration/reference.html
-
-    enabled: true
