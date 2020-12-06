@@ -1,2 +1,11 @@
+monolog:
+    channels:
+        - 'git'
+
 services:
-    GitWrapper\GitWrapper: null
+    GitWrapper\EventSubscriber\GitLoggerEventSubscriber:
+        $logger: '@monolog.logger.git'
+
+    GitWrapper\GitWrapper:
+        calls:
+            - addLoggerEventSubscriber: ['@GitWrapper\EventSubscriber\GitLoggerEventSubscriber']
