@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "MGDSoft\\Stackdriver\\MGDSoftStackdriverBundle": ["prod"]
+        "MGDSoft\\Stackdriver\\MgdsoftStackdriverBundle": ["prod"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
