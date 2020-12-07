@@ -5,10 +5,10 @@
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     },
-    "gitignore": [
-        "/config/keys/google_service_account.json"
-    ],
     "env": {
         "GOOGLE_SERVICE_ACCOUNT": "%kernel.project_dir%/config/keys/google_service_account.json"
-    }
+    },
+    "gitignore": [
+        "/config/keys/google_service_account.json"
+    ]
 }
