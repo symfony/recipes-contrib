@@ -1,0 +1,5 @@
+<bg=blue;fg=white>                                       </>
+<bg=blue;fg=white> MGD Stackdriver installed in PROD ENV </>
+<bg=blue;fg=white>                                       </>
+
+
