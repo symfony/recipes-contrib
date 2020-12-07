@@ -1,3 +1,3 @@
 mgd_stackdriver:
-    credentials_json_file: "%kernel.project_dir%/config/keys/google_service_account.json"
+    credentials_json_file: "%env(resolve:GOOGLE_SERVICE_ACCOUNT)%'"
     level: info
