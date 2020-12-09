@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "MGDSoft\\Stackdriver\\MgdsoftStackdriverBundle": ["prod"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "GOOGLE_SERVICE_ACCOUNT": "%kernel.project_dir%/config/keys/google_service_account.json"
+    },
+    "gitignore": [
+        "/config/keys/google_service_account.json"
+    ]
+}

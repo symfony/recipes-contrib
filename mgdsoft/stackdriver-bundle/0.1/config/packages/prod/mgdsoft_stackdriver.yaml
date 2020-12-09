@@ -1,0 +1,3 @@
+mgdsoft_stackdriver:
+    credentials_json_file: "%env(resolve:GOOGLE_SERVICE_ACCOUNT)%'"
+    level: info
