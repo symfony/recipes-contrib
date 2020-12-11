@@ -1,0 +1,17 @@
+{
+    "bundles": {
+        "BNNVARA\\SimpleBusAwsBridgeBundle\\SimpleBusAwsBridgeBundle": ["all"],
+        "SimpleBus\\SymfonyBridge\\SimpleBusCommandBusBundle": ["all"],
+        "SimpleBus\\SymfonyBridge\\SimpleBusEventBusBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "AWS_KEY": "REPLACE_ME",
+        "AWS_SECRET": "REPLACE_ME",
+        "AWS_REGION": "REPLACE_ME",
+        "AWS_TOPIC_ARN": "REPLACE_ME",
+        "AWS_QUEUE": "REPLACE_ME"
+    }
+}

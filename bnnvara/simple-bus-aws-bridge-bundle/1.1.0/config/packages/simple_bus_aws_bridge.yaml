@@ -1,0 +1,27 @@
+simple_bus_aws_bridge:
+    credentials:
+        key: '%env(AWS_KEY)%'
+        secret: '%env(AWS_SECRET)%'
+        region: '%env(AWS_REGION)%'
+    topic:topic:
+        name: '%env(AWS_TOPIC_ARN)%'
+        version: '2010-03-31'
+        credentials:
+            key: '%env(AWS_KEY)%'
+            secret: '%env(AWS_SECRET)%'
+            region: '%env(AWS_REGION)%'
+        asynchronous_events:
+            - event1
+            - event2
+    queue:
+        url: '%env(AWS_QUEUE)%'
+        credentials:
+            key: '%env(AWS_KEY)%'
+            secret: '%env(AWS_SECRET)%'
+            region: '%env(AWS_REGION)%'
+        version: '2012-11-05'
+
+simple_bus_asynchronous:
+    events:
+        strategy: 'predefined'
+        publisher_service_id: BNNVARA\SimpleBusAwsBridge\Publisher\SnsPublisher
