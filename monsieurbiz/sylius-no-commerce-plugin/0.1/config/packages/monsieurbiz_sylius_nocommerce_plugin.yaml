@@ -1,0 +1,2 @@
+imports:
+    - { resource: "@MonsieurBizSyliusNoCommercePlugin/Resources/config/config.yaml" }
