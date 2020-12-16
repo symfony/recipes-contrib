@@ -1,3 +1,4 @@
 mgdsoft_stackdriver:
-    credentials_json_file: "%env(resolve:GOOGLE_SERVICE_ACCOUNT)%'"
+    # to test in local
+    # credentials_json_file: "google_acount_service.json'"
     level: info
