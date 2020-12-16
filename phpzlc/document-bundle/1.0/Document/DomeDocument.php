@@ -1,12 +1,6 @@
 <?php
-/**
- * PhpStorm.
- * User: Jay
- * Date: 2020/10/20
- */
 
 namespace App\Document;
-
 
 use PHPZlc\Document\Document;
 
