@@ -1,0 +1,28 @@
+flasher:
+    default: 'template'
+    adapters:
+        template:
+            default: 'tailwindcss'
+            templates:
+                tailwindcss:
+                    view: '@Flasher/tailwindcss.html.twig'
+                    styles:
+                        - 'https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css'
+
+                tailwindcss_bg:
+                    view: '@Flasher/tailwindcss_bg.html.twig'
+                    styles:
+                        - 'https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css'
+
+                bootstrap:
+                    view: '@Flasher/bootstrap.html.twig'
+                    styles:
+                        - 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css'
+            scripts:
+                - '/bundles/flasher/flasher-template.js'
+
+            styles: [ ]
+
+            options:
+                timeout: 5000
+                position: 'top-right'
