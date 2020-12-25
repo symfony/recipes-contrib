@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "EFrane\\TusBundle\\Bundle\\TusBundle": ["all"]
+    }
+}
