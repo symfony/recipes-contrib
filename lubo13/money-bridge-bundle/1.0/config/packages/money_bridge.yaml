@@ -1,0 +1,6 @@
+money_bridge:
+    integer_part: 12 # How many digits will you have before the dot -> 1234.
+    fractional_part: !php/const Money\Bridge\Util\AmountFormatter::MONEY_FRACTIONAL_PART # How many digits will you have after the dot -> .00
+    default_currency_code: 'EUR' # With this option you can control default currency (useful with usage of Serializer or [Api Platform](https://api-platform.com/)).
+    allowed_currency_code: [ 'EUR' ] # With this option you can control allowed currency when the Currency is validated.
+    amount_validation_rule: positive # There are two option positive or positive_or_zero. With this option, you can control input data on Deserialization process. (useful with usage of Serializer or [Api Platform](https://api-platform.com/))
