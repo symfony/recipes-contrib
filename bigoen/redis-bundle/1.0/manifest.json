@@ -1,8 +1,0 @@
-{
-    "bundles": {
-        "Bigoen\\RedisBundle\\BigoenRedisBundle": ["all"]
-    },
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    }
-}
