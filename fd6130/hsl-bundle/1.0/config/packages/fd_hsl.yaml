@@ -2,18 +2,5 @@ fd_hsl:
     paginator:
         default_limit: 30
         
-    # This is image upload listener for VichUploaderBundle.
-    # If you don't want use this listener, just set enable to false.
-    hsl_image_upload_listener:
-        enable: true
-        # Every image you upload will save as the extension you defined.
-        # Please provide extension name without any punctuation.
-        # null mean do nothing.
-        save_as_extension: null
-        quality: 90
-        resize:
-            enable: false
-            # If image larger then this width (px), it will be resize.
-            resize_when_width_exceed: 1024
-            # Resize to width
-            resize_to_width: 1024
+    # For full configuration, please refer to documentation at:
+    # https://github.com/fd6130/hsl-bundle
