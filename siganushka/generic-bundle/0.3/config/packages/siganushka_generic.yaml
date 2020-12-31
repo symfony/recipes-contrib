@@ -1,4 +1,3 @@
 siganushka_generic:
-    table_prefix: null # 可选，默认值为 null，为 null 时不添加表前缀
-    json_encode_options: 271 # 可选，默认值为 271，支持中文编码
-    disable_html5_validation: true # 可选，默认值为 true，为 false 时开启 HTML5 验证
+    # see documentation:
+    # https://github.com/siganushka/generic-bundle/blob/master/docs/configuration.md
