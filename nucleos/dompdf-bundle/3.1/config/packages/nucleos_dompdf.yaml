@@ -1,0 +1,3 @@
+nucleos_dompdf:
+    defaults:
+        chroot: '%kernel.project_dir%/public/assets'
