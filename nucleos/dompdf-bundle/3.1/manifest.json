@@ -1,4 +1,7 @@
 {
+    "bundles": {
+        "Nucleos\\DompdfBundle\\NucleosDompdfBundle": ["all"]
+    },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     }
