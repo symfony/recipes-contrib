@@ -4,7 +4,7 @@
     },
     "env": {
         "API_KEY": "123ABC",
-        "DIRETORIO_RAIZ": "seu/diretorio/aqui/",
+        "DIRETORIO_RAIZ": "seu/diretorio/aqui/"
     },
     "gitignore": [
         ".env.local",
