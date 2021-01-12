@@ -3,7 +3,7 @@
 		"bin/compressor": ""
 	},
 	"env": {
-		"API_KEY": "123ABC",
+		"API_KEY": "123ABC1",
 		"DIRETORIO_RAIZ": "seu/diretorio/aqui/"
 	},
 	"gitignore": [
