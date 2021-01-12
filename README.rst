@@ -29,12 +29,7 @@ automatically merged when the following conditions are met (in that order):
 * Someone (not the Symfony bot nor the pull request author) approved the pull
   request;
 
-* The pull request author or the reviewer is a "trusted user", which means
-  one of the following:
-
-  * a Symfony Core Merger;
-
-  * the Github owner for all modified packages.
+* The pull request author or the reviewer is a Symfony Core Merger.
 
 .. _`Symfony Flex`: https://github.com/symfony/flex
 .. _`Symfony recipes`: https://github.com/symfony/recipes
