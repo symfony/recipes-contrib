@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Sentry\\SentryBundle\\SentryBundle": ["all"]
+        "Sentry\\SentryBundle\\SentryBundle": ["prod"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
