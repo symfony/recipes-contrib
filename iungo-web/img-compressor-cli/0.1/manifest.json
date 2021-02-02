@@ -5,9 +5,5 @@
 	"env": {
 		"API_KEY": "123ABC1",
 		"DIRETORIO_RAIZ": "seu/diretorio/aqui/"
-	},
-	"gitignore": [
-		".env.local",
-		"/vendor/"
-	]
+	}
 }
