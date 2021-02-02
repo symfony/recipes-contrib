@@ -1,0 +1,3 @@
+nucleos_dompdf:
+    defaults:
+        chroot: '%kernel.project_dir%/public/assets' # See https://github.com/dompdf/dompdf/wiki/Usage#security-restrictions-for-local-files
