@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "Reconnect\\S3Bundle\\S3Bundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "BUCKET_HOST": "",
+        "BUCKET_NAME": "",
+        "BUCKET_KEY": "",
+        "BUCKET_SECRET": ""
+    }
+}
