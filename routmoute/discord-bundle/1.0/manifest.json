@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Routmoute\\Bundle\\DiscordBundle\\RoutmouteDiscordBundle": ["all"]
+        "Routmoute\\Bundle\\RoutmouteDiscordBundle\\RoutmouteDiscordBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
