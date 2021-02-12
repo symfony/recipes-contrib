@@ -41,7 +41,7 @@ A recipe for a bundle should not contain all the configuration the bundle has to
 offer. A good recipe only contains a suggestion config for an application. That
 is config that needs to be configured but no real default value exists.
 
-Example: The "items per page" in a paginator bundle or API credentials for an API
+**Example:** The "items per page" in a paginator bundle or API credentials for an API
 client bundle.
 
 If environment variables are used, they must be provided to the bundle's config.
@@ -55,17 +55,17 @@ Modify Other Bundle's config
 The general rule is that no recipe should modify other bundle's configuration. There
 is however one exception. A recipe is allowed to append to a "config collection".
 
-Example: Add a new connection to DoctrineBundle or add a new cache adapter to Symfony
+**Example:** Add a new connection to DoctrineBundle or add a new cache adapter to Symfony
 Framework bundle.
 
 Maintainability
 ###############
 
-The recipes contrib repository should contain the recipes for packages. Using
-"`copy-from-package` Configurator" for routes and config is not allowed. That would
+The symfony/recipes-contrib repository should contain the config for packages. Using
+"``copy-from-package`` Configurator" for routes and config is not allowed. That would
 make the recipes impossible to maintain and to assure their quality.
 
-Recipes is also not a replacement for `composer create-project`. That means it is
+Recipes is also not a replacement for ``composer create-project``. That means it is
 not intended to be used as "bootstrap full application" and copy a lot of PHP code,
 front-end assets etc. Recipes are for quick installation of packages.
 
