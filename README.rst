@@ -35,7 +35,7 @@ Best Practices
 --------------
 
 Default Bundle Config
-=====================
+#####################
 
 A recipe for a bundle should not contain all the configuration the bundle has to
 offer. A good recipe only contains a suggestion config for an application. That
@@ -50,7 +50,7 @@ A bundle without config or routes do not need a recipe. Flex is smart enough to
 install that bundle anyways.
 
 Modify Other Bundle's config
-============================
+############################
 
 The general rule is that no recipe should modify other bundle's configuration. There
 is however one exception. A recipe is allowed to append to a "config collection".
@@ -59,7 +59,7 @@ Example: Add a new connection to DoctrineBundle or add a new cache adapter to Sy
 Framework bundle.
 
 Maintainability
-===============
+###############
 
 The recipes contrib repository should contain the recipes for packages. Using
 "`copy-from-package` Configurator" for routes and config is not allowed. That would
