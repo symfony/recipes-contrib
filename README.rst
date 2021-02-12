@@ -34,3 +34,21 @@ automatically merged when the following conditions are met (in that order):
 .. _`Symfony Flex`: https://github.com/symfony/flex
 .. _`Symfony recipes`: https://github.com/symfony/recipes
 .. _`documentation`: https://github.com/symfony/recipes
+
+Best practices
+--------------
+
+1. A recipe for a bundle should not contain all the default config. A good
+recipe only contains suggestion config for an application. That is config that needs
+to be configured but no real default value exists.
+
+2. No recipe should modify other bundle's configuration. The only exception is when
+a recipe append to a collection.
+
+3. No config should be "copied from package". That makes the recipes impossible
+to maintain and to assure their quality.
+
+4. Most Symfony bundles do not need a recipe. A bundle without config or routes
+will be installed by Flex with no recipe required.
+
+5. If environment variables are used, they must be provided to the bundle's config.
