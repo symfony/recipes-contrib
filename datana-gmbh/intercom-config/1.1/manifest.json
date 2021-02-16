@@ -1,0 +1,9 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "INTERCOM_WORKSPACE_APP_ID": "",
+        "INTERCOM_IDENTITY_VERIFICATION_SECRET": ""
+    }
+}

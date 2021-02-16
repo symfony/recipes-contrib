@@ -1,0 +1,3 @@
+LolautruchePaylineBundle:
+    resource: '@LolautruchePaylineBundle/Resources/config/routing.yml'
+    prefix: /

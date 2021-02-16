@@ -1,0 +1,16 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+
+use Jane\OpenApiCommon\Console\Command\GenerateCommand;
+use Symfony\Component\Console\Input\ArrayInput;
+use Symfony\Component\Console\Output\NullOutput;
+use Jane\OpenApiCommon\Console\Loader\ConfigLoader;
+use Jane\OpenApiCommon\Console\Loader\OpenApiMatcher;
+use Jane\OpenApiCommon\Console\Loader\SchemaLoader;
+
+$command = new GenerateCommand(new ConfigLoader(), new SchemaLoader(), new OpenApiMatcher());
+$inputArray = new ArrayInput(['--config-file' => __DIR__ . '/../config/jane/open_api.php'], $command->getDefinition());
+
+$command->execute($inputArray, new NullOutput());

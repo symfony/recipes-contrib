@@ -1,0 +1,6 @@
+{
+    "copy-from-package": {
+        "bin/phpscan": "%BIN_DIR%/phpscan",
+        "config/phpscan.yaml": "%CONFIG_DIR%/phpscan.yaml"
+    }
+}

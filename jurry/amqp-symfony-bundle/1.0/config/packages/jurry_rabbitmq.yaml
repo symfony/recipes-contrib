@@ -1,0 +1,9 @@
+amqp_handler:
+    connection: '%env(JURRY_RABBIT_MQ_DSN)%'
+    queues_properties:
+        sync_queue:
+            name: stores_sync
+            message_ttl: 10000 # 10 seconds
+        async_queue:
+            name: stores_async
+            message_ttl: 10000 # 10 seconds

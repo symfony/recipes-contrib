@@ -1,0 +1,15 @@
+services:
+    GitWrapper\GitWrapper: null
+
+
+# To add logging capabilities use monolog and this configuration:
+#monolog:
+#    channels:
+#        - 'git'
+
+#services:
+#    GitWrapper\EventSubscriber\GitLoggerEventSubscriber:
+#        $logger: '@monolog.logger.git'
+#    GitWrapper\GitWrapper:
+#        calls:
+#            - addLoggerEventSubscriber: ['@GitWrapper\EventSubscriber\GitLoggerEventSubscriber']

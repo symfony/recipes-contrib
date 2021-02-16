@@ -1,0 +1,2 @@
+dekalee_pub_sub_swarrot:
+    key_file_path: '%env(DEKALEE_PUBSUB_SWARROT_KEY_FILE_PATH)%'

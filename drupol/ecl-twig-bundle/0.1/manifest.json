@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "drupol\\EclTwigBundle\\EclTwigBundle": ["all"]
+    },
+    "copy-from-package": {
+        ".recipe/config/": "%CONFIG_DIR%/"
+    }
+}

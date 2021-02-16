@@ -1,0 +1,4 @@
+sulu_article_api:
+    resource: '@SuluArticleBundle/Resources/config/routing_api.yml'
+    type: rest
+    prefix: /admin/api

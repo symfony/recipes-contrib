@@ -1,0 +1,5 @@
+hboie_jasper_report:
+    host:      'http://localhost:8080/jasperserver'
+    username:  '%env(HBOIE_JASPER_REPORT_USERNAME)%'
+    password:  '%env(HBOIE_JASPER_REPORT_PASSWORD)%'
+    org_id:    '%env(HBOIE_JASPER_REPORT_ORGID)%'

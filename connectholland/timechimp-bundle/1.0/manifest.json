@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "ConnectHolland\\TimechimpBundle\\ConnecthollandTimechimpBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "TIMECHIMPBUNDLE_ACCESS_TOKEN": "baerer-token-value"
+    }
+}

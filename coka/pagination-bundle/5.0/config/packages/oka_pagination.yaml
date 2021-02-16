@@ -1,0 +1,4 @@
+oka_pagination:
+    db_driver: orm
+    twig:
+        enabled: false

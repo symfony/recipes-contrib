@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "lib": [ "es2015", "dom" ],
+        "module": "amd",
+        "target": "es5",
+        "allowJs": true,
+        "noImplicitAny": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "experimentalDecorators": true
+    },
+    "include": [
+        "./assets/**/*"
+    ]
+}

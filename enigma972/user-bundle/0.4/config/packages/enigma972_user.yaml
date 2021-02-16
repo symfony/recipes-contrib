@@ -1,0 +1,10 @@
+enigma972_user:
+    # if this value equal true, the User should confirm theire mail
+    check_mail: false
+    # The validity duration in secondes, 4 houres by default (14,400 sec)
+    reset_password_code_validity:  14400
+    # where to redirect after login
+    target: home
+    # the no reply email for this app
+    no_reply_mail: no-reply@mail.com
+    not_send_welcome_mail: true

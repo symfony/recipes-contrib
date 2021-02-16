@@ -1,0 +1,9 @@
+otobul_epaybg:
+    # Identification number of the merchant
+    min: '%env(OTOBUL_EPAYBG_MIN)%'
+
+    # The secret word of the merchant
+    secret: '%env(OTOBUL_EPAYBG_SECRET)%'
+
+    # If true all requests will be sent to ePay.bg’s Demo System
+    isDemo: '%env(bool:OTOBUL_EPAYBG_IS_DEMO)%'

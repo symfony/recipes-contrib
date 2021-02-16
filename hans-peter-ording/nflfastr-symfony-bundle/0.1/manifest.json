@@ -1,0 +1,10 @@
+{
+    "bundles": {
+        "HansPeterOrding\\NflFastrSymfonyBundle\\NflFastrSymfonyBundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
