@@ -1,7 +1,0 @@
-routmoute_discord:
-    client_id: '%env(ROUTMOUTE_DISCORD_CLIENT_ID)%'
-    client_secret: '%env(ROUTMOUTE_DISCORD_CLIENT_SECRET)%'
-    redirect_path: routmoute_discord_receiver
-    scope:
-        - identify
-        - email
