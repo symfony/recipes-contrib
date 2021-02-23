@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "KnpU\\LoremIpsumBundle\\KnpULoremIpsumBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "KNPU_LOREM_IPSUM_FOO": "hello",
+        "KNPU_LOREM_IPSUM_BAR": "world"
+    }
+}
