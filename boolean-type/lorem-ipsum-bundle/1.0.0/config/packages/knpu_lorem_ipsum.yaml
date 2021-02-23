@@ -1,0 +1,10 @@
+# Опр-е этих настроек должно нах-иться в этом ф-ле (назв-е кот-го, кстати, не важно), а не в "services.yaml",
+# иначе будет ошибка "The configuration key "word_provider" is unsupported for definition 
+# "knpu_lorem_ipsum" in "D:\server\www\first_project\src\../config/services.yaml". 
+# Allowed configuration keys are "alias", "parent", "class"...". Это происх-ит потому, что опр-е сервиса
+# KnpuLoremIpsum и конф-ция его настроек сервиса происх-ит в папке *бандла*, а не в гл. прилож-ии.
+# Эти настройки передаются в KnpULoremIpsumExtension. Там они обрабатываются и передаются дальше
+# в KnpU\LoremIpsumBundle\KnpUIpsum.
+knpu_lorem_ipsum:
+#    word_provider: App\Service\CustomWordProvider # Commented out because of compiler pass implementation (see https://symfonycasts.com/screencast/symfony-bundle/tags-compiler-pass )
+    min_sunshine: 10
