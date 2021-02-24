@@ -1,9 +1,9 @@
-# Read the documentation: https://github.com/1up-lab/OneupFlysystemBundle/blob/release/3.x/Resources/doc/index.md
+# Read the documentation: https://github.com/1up-lab/OneupFlysystemBundle
 oneup_flysystem:
     adapters:
         default_adapter:
             local:
-                directory: '%kernel.cache_dir%/flysystem'
+                location: '%kernel.cache_dir%/flysystem'
     filesystems:
         default_filesystem:
             adapter: default_adapter
