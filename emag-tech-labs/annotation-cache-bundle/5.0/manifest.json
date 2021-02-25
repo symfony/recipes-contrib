@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "EmagTechLabs\\AnnotationCacheBundle\\AnnotationCacheBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
