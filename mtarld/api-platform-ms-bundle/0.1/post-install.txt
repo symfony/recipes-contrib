@@ -1,0 +1,7 @@
+<bg=blue;fg=white>                                      </>
+<bg=blue;fg=white> What's next for ApiPlatformMsBundle? </>
+<bg=blue;fg=white>                                      </>
+
+  * <fg=blue>Configure</> the bundle:
+    <comment>config/packages/api_platform_ms.yaml</>
+    <comment>https://github.com/mtarld/api-platform-ms-bundle</>
