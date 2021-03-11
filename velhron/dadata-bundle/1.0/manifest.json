@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Velhron\\DadataBundle\\VelhronDadataBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "DADATA_TOKEN": "your-token",
+        "DADATA_SECRET": "your-secret"
+    }
+}

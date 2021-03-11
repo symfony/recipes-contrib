@@ -1,0 +1,8 @@
+<bg=blue;fg=white>              </>
+<bg=blue;fg=white> What`s next? </>
+<bg=blue;fg=white>              </>
+
+  * Modify your DADATA_TOKEN config in <fg=green>.env</>
+  * Modify your DADATA_SECRET config in <fg=green>.env</>
+
+More details: https://github.com/Velhron/dadata-bundle
