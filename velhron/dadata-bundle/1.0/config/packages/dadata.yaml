@@ -1,3 +1,3 @@
 velhron_dadata:
     token: '%env(DADATA_TOKEN)%'
-    private_key: '%env(DADATA_SECRET)%'
+    secret: '%env(DADATA_SECRET)%'
