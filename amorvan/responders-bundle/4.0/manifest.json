@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Morvan\\Bundle\\RespondersBundle\\MorvanResponderBundle": ["all"]
+        "Morvan\\Bundle\\RespondersBundle\\MorvanRespondersBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
