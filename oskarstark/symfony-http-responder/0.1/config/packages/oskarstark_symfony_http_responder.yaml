@@ -1,2 +1,5 @@
 services:
+    _defaults:
+        autowire: true
+
     OskarStark\Symfony\Http\Responder: null
