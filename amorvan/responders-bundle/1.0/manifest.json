@@ -1,4 +1,7 @@
 {
+    "bundles": {
+        "Algolia\\SearchBundle\\AlgoliaSearchBundle": ["all"]
+    },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     }
