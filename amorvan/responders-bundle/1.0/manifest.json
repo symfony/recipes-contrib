@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Algolia\\SearchBundle\\AlgoliaSearchBundle": ["all"]
+        "Morvan\\Bundle\\RespondersBundle\\MorvanResponderBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
