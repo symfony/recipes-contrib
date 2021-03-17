@@ -1,0 +1,2 @@
+services:
+    OskarStark\Symfony\Http\Responder: null
