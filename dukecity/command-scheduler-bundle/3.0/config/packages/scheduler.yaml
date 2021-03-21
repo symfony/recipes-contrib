@@ -1,5 +1,5 @@
 # See full configuration at
-#     https://github.com/Dukecity/CommandSchedulerBundle/wiki/Configuration
+# https://github.com/Dukecity/CommandSchedulerBundle/wiki/Configuration
 dukecity_command_scheduler:
 
     # Scheduler will write output files here. set false to disable it.
