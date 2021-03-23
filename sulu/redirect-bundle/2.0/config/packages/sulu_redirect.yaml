@@ -1,0 +1,14 @@
+sulu_redirect:
+    # When enabled, this feature automatically creates redirects with http status code 410 when a document with route or a route entity is removed.
+    # gone_on_remove:
+    #     enabled: true
+
+    # You can configure the directory where the uploaded csv files should be stored
+    # imports:
+    #     path: '%kernel.project_dir%/var/uploads/redirects'
+
+    # Configuring the objects for `redirect_route` allows setting a custom entity or repository class
+    # objects:
+        # redirect_route:
+            # model: Sulu\Bundle\RedirectBundle\Entity\RedirectRoute
+            # repository: Sulu\Bundle\RedirectBundle\Entity\RedirectRouteRepository
