@@ -7,4 +7,4 @@
     2. If the statements look fine to you, run the same command using <info>--force</> to execute them.
     3. Make sure your user has all the necessary permissions for the <fg=green>SuluFormBundle</>.
 
-  * <fg=blue>Read</> the documentation at <comment>https://github.com/sulu/SuluFormBundle/blob/master/Resources/doc/index.md</>
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/sulu/SuluFormBundle/blob/2.x/Resources/doc/index.md</>
