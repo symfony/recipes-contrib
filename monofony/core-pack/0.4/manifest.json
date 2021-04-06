@@ -15,6 +15,10 @@
         ".recipe/translations/": "translations/",
         ".recipe/config-builder.js": "config-builder.js"
     },
+    "env": {
+        "OAUTH_CLIENT_ID": "%generate(secret)%",
+        "OAUTH_SECRET": "%generate(secret)%"
+    },
     "gitignore": [
         "/public/assets",
         "/public/media"
