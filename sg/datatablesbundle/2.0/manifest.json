@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "Sg\\DatatablesBundle\\SgDatatablesBundle": ["all"]
+    }
+}
