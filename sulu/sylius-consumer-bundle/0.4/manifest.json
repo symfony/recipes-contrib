@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Sulu\\Bundle\\SyliusConsumerBundle\\SuluSyliusConsumerBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "SYLIUS_BASE_URL": "",
+        "SULU_SYLIUS_MESSENGER_TRANSPORT_DSN": ""
+    }
+}
