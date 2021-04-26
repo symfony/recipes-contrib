@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "MeiliSearch\\Bundle\\MeiliSearchBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "MEILISEARCH_URL": "http://127.0.0.1:7700",
+        "MEILISEARCH_API_KEY": ""
+    }
+}
