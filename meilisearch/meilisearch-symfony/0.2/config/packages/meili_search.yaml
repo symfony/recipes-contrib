@@ -1,9 +1,11 @@
 meili_search:
     prefix: '%env(MEILISEARCH_PREFIX)%' # Use a prefix for index names based en env var
 #    nbResults: 10 # Retrieve less results on search (default: 20)
-    indices:
-        - name: samples
-          class: App\Entity\Sample
+#    indices:
+#        - name: samples
+#          class: App\Entity\Sample
+#        - name: other_samples
+#          class: App\Entity\OtherSample
 
 
 
