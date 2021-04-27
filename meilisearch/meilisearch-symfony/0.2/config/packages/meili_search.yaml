@@ -1,2 +1,0 @@
-meili_search:
-    prefix: '%env(MEILISEARCH_PREFIX)%' # Use a prefix for index names based en env var
