@@ -4,13 +4,13 @@ namespace App\Document;
 
 use PHPZlc\Document\Document;
 
-class DomeDocument extends Document
+class DemoDocument extends Document
 {
-    public function domeAction()
+    public function demoAction()
     {
         $this->add()
             ->setTitle('演示接口')
-            ->setUrl('/dome')
+            ->setUrl('/demo')
             ->setReturnType('html')
             ->setReturn('演示接口')
             ->generate();
