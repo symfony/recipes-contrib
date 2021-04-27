@@ -1,0 +1,7 @@
+meili_search:
+    prefix: '%env(MEILISEARCH_PREFIX)%' # Use a prefix for index names based on env var
+#    indices:
+#        - name: samples
+#          class: App\Entity\Sample
+#        - name: other_samples
+#          class: App\Entity\OtherSample
