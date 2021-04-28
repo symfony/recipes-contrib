@@ -16,8 +16,8 @@ plugins:
     - ./vendor/bref/bref
 
 functions:
-    # This function run the Symfony application
-    website:
+    # This function runs the Symfony website/API
+    web:
         handler: public/index.php
         timeout: 28 # in seconds (API Gateway has a timeout of 29 seconds)
         layers:
@@ -40,7 +40,6 @@ package:
         - '!public/build/**'
         - '!tests/**'
         - '!var/**'
-        - '!.env'
         # If you want to include files and folders that are part of excluded folders,
         # add them at the end
         - 'var/cache/prod/**'
