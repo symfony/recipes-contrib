@@ -1,0 +1,4 @@
+uploaded_file_type:
+  configurations:
+    default:
+      filesystem: 'oneup_flysystem.default_filesystem'

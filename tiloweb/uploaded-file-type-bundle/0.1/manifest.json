@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Tiloweb\\UploadedFileTypeBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "aliases": ["uploaded-file-type", "uploaded-file-type-bundle"]
+}
