@@ -24,7 +24,7 @@ functions:
             - ${bref:layer.php-80-fpm}
         events:
             - httpApi: '*'
-    # This function lets us run console commands in Lambda
+    # This function let us run console commands in Lambda
     console:
         handler: bin/console
         timeout: 120 # in seconds
