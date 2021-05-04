@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "IDCI\\Bundle\\KeycloakSecurityBundle\\": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
