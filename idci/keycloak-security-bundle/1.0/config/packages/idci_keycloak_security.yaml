@@ -1,6 +1,6 @@
 idci_keycloak_security:
     server_url: 'http://localhost:8080/auth'
-    realm: 'MyRealm'
+    realm: 'realm-name'
     client_id: 'my-client-id'
     client_secret: 'my-client-secret'
     default_target_path: 'app_home'
