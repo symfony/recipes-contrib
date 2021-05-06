@@ -1,0 +1,22 @@
+mobizel_markdown_docs:
+    contexts:
+        main:
+            path: /docs
+            docs_dir: '%kernel.project_dir%/docs'
+
+        # You can add as many contexts you need
+
+        #legacy:
+        #    path: /{version}
+        #    docs_dir: '%kernel.project_dir%/legacy_docs/{version}'
+        #    requirements:
+        #        version: '(\d+)\.(\d+)'
+
+        # You can use several url parameters
+
+        #packages:
+        #    path: /packages/{package}/{version}
+        #    docs_dir: '%kernel.project_dir%/packages_docs/{package}/{version}'
+        #    requirements:
+        #        package: '.+'
+        #        version: '(\d+)\.(\d+)'
