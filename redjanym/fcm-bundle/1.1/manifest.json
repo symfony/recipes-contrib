@@ -4,5 +4,8 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "FCM_SERVER_KEY": "YOUR_FIREBASE_CLOUD_MESSAGING_SERVER_KEY"
     }
 }
