@@ -1,7 +1,7 @@
 {
     "bundles": {
         "Ecocode\\SyliusBasePricePlugin\\EcocodeSyliusBasePricePlugin": ["all"],
-        "Sylius\\Bundle\\UiBundle\\SyliusUiBundle": ["all"],
+        "Sylius\\Bundle\\UiBundle\\SyliusUiBundle": ["all"]
     },
     "copy-from-package": {
         "data/config/packages/ecocode_sylius_base_price_plugin.yaml": "%CONFIG_DIR%/packages/ecocode_sylius_base_price_plugin.yaml",
