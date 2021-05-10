@@ -1,0 +1,3 @@
+monsieurbiz_richeditor_admin:
+    resource: "@MonsieurBizSyliusRichEditorPlugin/Resources/config/routing/admin.yaml"
+    prefix: /%sylius_admin.path_name%
