@@ -4,4 +4,4 @@
 
   * <fg=blue>Run</> <fg=green>doctrine:migrations:diff</> to create migration file
   * <fg=blue>Then</> <fg=green>doctrine:migrations:migrate</> to alter database
-  * <fg=blue>Configure plugin</> in <fg=green>config/packages/ecocode_sylius_base_price_plugin.yaml</> to match your shop needs.
+  * <fg=blue>Configure plugin</> in <fg=green>config/packages/ecocode_sylius_base_price_plugin.yaml</> to match your shop needs
