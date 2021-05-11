@@ -1,6 +1,6 @@
-<bg=blue;fg=white>                               </>
-<bg=blue;fg=white> Ecocode SyliusBasePricePlugin </>
-<bg=blue;fg=white>                               </>
+<bg=blue;fg=white>                                </>
+<bg=blue;fg=white> Ecocode SyliusBasePricePlugin  </>
+<bg=blue;fg=white>                                </>
 
   * <fg=blue>Run</> <fg=green>doctrine:migrations:diff</> to create migration file
   * <fg=blue>Then</> <fg=green>doctrine:migrations:migrate</> to update database
