@@ -1,4 +1,6 @@
 meili_search:
+    url: '%env(MEILISEARCH_URL)%'
+    api_key: '%env(MEILISEARCH_API_KEY)%'
     prefix: '%env(MEILISEARCH_PREFIX)%' # Use a prefix for index names based on env var
 #    indices:
 #        - name: samples
