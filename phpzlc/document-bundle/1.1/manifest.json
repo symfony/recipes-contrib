@@ -1,0 +1,17 @@
+{
+    "bundles": {
+        "PHPZlc\\Document\\DocumentBundle\\DocumentBundle": ["all"]
+    },
+    "copy-from-package": {
+        "src/DocumentBundle/phpzlc-document.yaml":  "config/packages/phpzlc-document.yaml"
+    },
+    "copy-from-recipe": {
+        "Document/":"src/Document/"
+    },
+    "env": {
+        "DOC_HOST": "http://dome-api.com"
+    },
+    "gitignore": [
+        "public/apidoc/"
+    ]
+}
