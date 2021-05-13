@@ -1,1 +1,9 @@
-../3.0/manifest.json
+{
+    "copy-from-recipe": {
+        "phpcs.xml.dist": "phpcs.xml.dist"
+    },
+    "gitignore": [
+        "/.phpcs-cache",
+        "/phpcs.xml"
+    ]
+}
