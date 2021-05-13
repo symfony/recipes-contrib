@@ -8,15 +8,10 @@ cache:
 matrix:
     fast_finish: true
     include:
-        - php: 7.4
-          env: SKELETON_VERSION="^3.4"
-        - php: 7.4
+        - php: 8.0
           env: SKELETON_VERSION="^4.4"
-        - php: 7.4
+        - php: 8.0
           env: SKELETON_VERSION="^5.0"
-    allow_failures:
-        - php: 7.4
-          env: SKELETON_VERSION="^3.4"
 
 before_install:
     - phpenv config-rm xdebug.ini || true
@@ -32,7 +27,7 @@ install:
 before_script:
   - |
     install_package() {
-        composer require $@;
+        composer require --ignore-platform-reqs $@;
         EXIT_CODE=$?;
 
         MESSAGE="";
