@@ -1,0 +1,3 @@
+monsieurbiz_coliship_admin:
+    resource: "@MonsieurBizSyliusColishipPlugin/Resources/config/routes/admin.yaml"
+    prefix: /%sylius_admin.path_name%

@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Fresh\\CentrifugoBundle\\FreshCentrifugoBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "CENTRIFUGO_API_KEY": "%generate(secret)%",
+        "CENTRIFUGO_API_ENDPOINT": "http://localhost:8000/api",
+        "CENTRIFUGO_SECRET": "%generate(secret)%"
+    }
+}

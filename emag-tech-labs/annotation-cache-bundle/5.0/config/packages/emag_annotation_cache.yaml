@@ -1,0 +1,4 @@
+annotation_cache:
+    provider: cache.app
+    ignore_namespaces:
+        - 'App\Entity'

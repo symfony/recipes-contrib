@@ -1,0 +1,3 @@
+services:
+    OskarStark\Twig\EnvVarExtension:
+        tags: ['twig.extension']

@@ -1,0 +1,4 @@
+mgdsoft_stackdriver:
+    # to test in local
+    # credentials_json_file: null
+    level: info

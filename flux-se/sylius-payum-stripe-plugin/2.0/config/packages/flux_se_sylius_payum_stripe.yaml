@@ -1,0 +1,11 @@
+imports:
+    - { resource: "@FluxSESyliusPayumStripePlugin/Resources/config/config.yaml" }
+
+flux_se_sylius_payum_stripe:
+    line_item_image:
+        # This is the imagine filter use to get the image displayed on Stripe Checkout Session
+        # (default: the filter uses into `@ShopBundle/Product/Show/_images.html.twig`)
+        imagine_filter: 'sylius_shop_product_original'
+        # Fallback image used when no image is set on a product and also when you test this plugin
+        # from a private web server (ex: from localhost)
+        fallback_image: 'https://placehold.it/400x300'

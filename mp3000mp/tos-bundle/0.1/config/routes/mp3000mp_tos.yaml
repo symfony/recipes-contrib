@@ -1,0 +1,3 @@
+mp3000mp_tos:
+    resource: "@Mp3000mpTOSBundle/Resources/config/routes.yaml"
+    prefix: /tos
