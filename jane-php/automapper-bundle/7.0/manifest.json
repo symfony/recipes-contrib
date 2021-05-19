@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "Jane\\Bundle\\AutoMapperBundle\\JaneAutoMapperBundle": ["all"]
+    }
+}
