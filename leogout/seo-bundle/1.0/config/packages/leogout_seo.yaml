@@ -3,7 +3,7 @@ leogout_seo:
     # loads the services but they won't render anything.
     # See https://github.com/leogout/SeoBundle#configuration-reference to configure them.
     # See https://github.com/leogout/SeoBundle#setting-values-dynamically to use them directly in your controller.
-    general: ~
-    basic: ~
-    og: ~
-    twitter: ~
+    general: null
+    basic: null
+    og: null
+    twitter: null

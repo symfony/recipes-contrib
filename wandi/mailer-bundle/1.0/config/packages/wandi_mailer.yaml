@@ -1,0 +1,4 @@
+wandi_mailer:
+    sender:
+        name: '%env(WANDI_MAILER_SENDER_NAME)%'
+        address: '%env(WANDI_MAILER_SENDER_ADDRESS)%'

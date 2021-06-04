@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Payum\\Bundle\\PayumBundle\\PayumBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/payum.yaml": "%CONFIG_DIR%/packages/payum.yaml"
+    }
+}

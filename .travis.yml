@@ -8,14 +8,14 @@ cache:
 matrix:
     fast_finish: true
     include:
-        - php: 7.1
-          env: SKELETON_VERSION="^3.4"
-        - php: 7.1
-          env: SKELETON_VERSION="^4.0"
+        - php: 8.0
+          env: SKELETON_VERSION="^4.4"
+        - php: 8.0
+          env: SKELETON_VERSION="^5.0"
 
 before_install:
     - phpenv config-rm xdebug.ini || true
-    - export SYMFONY_ENDPOINT=https://symfony.sh/r/github.com/symfony/recipes-contrib/${TRAVIS_PULL_REQUEST}
+    - export SYMFONY_ENDPOINT=https://flex.symfony.com/r/github.com/symfony/recipes-contrib/${TRAVIS_PULL_REQUEST}
     - export PACKAGES=$(curl -s $SYMFONY_ENDPOINT | sed -En 's/.*composer req "([^"]+)".*/\1/p')
     - echo "$PACKAGES"
 
@@ -24,5 +24,24 @@ install:
     - cd flex
     - composer config extra.symfony.allow-contrib true
 
-script:
-    - composer req --ignore-platform-reqs "${PACKAGES}"
+before_script:
+  - |
+    install_package() {
+        composer require --ignore-platform-reqs $@;
+        EXIT_CODE=$?;
+
+        MESSAGE="";
+        if [[ EXIT_CODE -eq 0 ]]; then
+            exit 0;
+        elif [[ EXIT_CODE -eq 1 ]]; then
+            MESSAGE="Could not install package and configure package.";
+        elif [[ EXIT_CODE -eq 2 ]]; then
+            MESSAGE="Could not resolve dependencies.\n# You can ignore this error if your package does not support Symfony $SKELETON_VERSION";
+        fi
+
+        echo -e "\n#\n#\n# $MESSAGE\n#\n#\n#\n";
+        exit $EXIT_CODE;
+    }
+    export -f install_package
+
+script: install_package $(echo $PACKAGES)

@@ -1,0 +1,10 @@
+{
+    "bundles": {
+        "Mukadi\\WalletBundle\\MukadiWalletBundle": ["all"]
+    },
+    "copy-from-package": {
+        "res/config/": "%CONFIG_DIR%/",
+        "res/Entity/": "%SRC_DIR%/Entity/",
+        "res/Repository/": "%SRC_DIR%/Repository/"
+    }
+}

@@ -1,0 +1,10 @@
+dh_doctrine_audit:
+    # Configuration reference available at:
+    # https://github.com/DamienHarper/DoctrineAuditBundle#configuration
+
+    entities:
+#        MyBundle\Entity\MyAuditedEntity1: null   # all MyAuditedEntity1 properties are audited
+#        MyBundle\Entity\MyAuditedEntity2:
+#            ignored_columns:                  # MyAuditedEntity2 properties to be ignored by the audit process
+#                - createdAt
+#                - updatedAt

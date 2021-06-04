@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Lexik\\Bundle\\CronFileGeneratorBundle\\LexikCronFileGeneratorBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

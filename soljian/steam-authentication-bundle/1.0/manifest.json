@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Soljian\\SteamAuthenticationBundle\\SoljianSteamAuthenticationBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": { 
+        "STEAM_API_KEY": ""
+    }
+}

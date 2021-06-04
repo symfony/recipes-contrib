@@ -4,6 +4,6 @@
     },
     "env": {
         "#1": "Get your API key form https://app.mailgun.com/app/domains",
-        "MAILGUN_API_KEY": "\"replace_me\""
+        "MAILGUN_API_KEY": "replace_me"
     }
 }

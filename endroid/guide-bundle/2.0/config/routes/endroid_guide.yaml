@@ -1,3 +1,0 @@
-endroid_guide:
-    resource: "@EndroidGuideBundle/Resources/config/routes.yaml"
-    prefix: /guide

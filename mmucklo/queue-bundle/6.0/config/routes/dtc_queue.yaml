@@ -1,0 +1,2 @@
+dtc_queue:
+    resource: '@DtcQueueBundle/Resources/config/routing.yml'

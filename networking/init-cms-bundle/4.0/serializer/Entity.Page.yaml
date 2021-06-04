@@ -1,0 +1,77 @@
+App\Entity\Page:
+    properties:
+        id:
+            type: integer
+        createdAt:
+            type: DateTime
+        updatedAt:
+            type: DateTime
+        pageName:
+            type: string
+        metaTitle:
+            type: string
+        url:
+            type: string
+        path:
+            type: string
+        level:
+            type: integer
+        metaKeyword:
+            type: string
+        metaDescription:
+            type: string
+        parent:
+            accessor:
+                getter: convertParentToInteger
+            type: integer
+        alias:
+            accessor:
+                getter: convertAliasToInteger
+            type: integer
+        parents:
+            accessor:
+                getter: convertParentsToArray
+            type: array
+        children:
+            accessor:
+                getter: convertChildrenToIntegerArray
+            type: array
+        allChildren:
+            exclude: true
+        layoutBlock:
+            type: ArrayCollection<Networking\InitCmsBundle\Entity\LayoutBlock>
+        menuItem:
+            exclude: true
+            accessor:
+                getter: prepareMenuItemsForSerialization
+            type: ArrayCollection<Networking\InitCmsBundle\Entity\MenuItem>
+        isHome:
+            type: boolean
+        status:
+            type: string
+        visibility:
+            type: string
+        activeFrom:
+            type: DateTime
+        activeTo:
+            type: DateTime
+        locale:
+            type: string
+        translations:
+            accessor:
+                getter: convertTranslationsToIntegerArray
+            type: array
+        originals:
+            accessor:
+                getter: convertOriginalsToIntegerArray
+            type: array
+        snapshots:
+            exclude: true
+        snapshotClassType:
+            type: string
+        oldTitle:
+            exclude: true
+        tags:
+            exclude: true
+        contentRoute:
+            exclude: true

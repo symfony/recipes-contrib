@@ -1,0 +1,13 @@
+sulu_sylius_consumer:
+    sylius_base_url: '%env(SYLIUS_BASE_URL)%'
+    # taxon_category_adapter:
+    #     enabled: true
+
+framework:
+    messenger:
+        transports:
+            sulu_sylius_transport: '%env(SULU_SYLIUS_MESSENGER_TRANSPORT_DSN)%'
+        buses:
+            sulu_sylius_producer.messenger_bus:
+                middleware:
+                    - doctrine_transaction

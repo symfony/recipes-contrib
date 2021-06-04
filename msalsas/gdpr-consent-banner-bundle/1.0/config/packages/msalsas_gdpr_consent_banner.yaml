@@ -1,0 +1,4 @@
+# See all configuration options at https://github.com/msalsas/MsalsasGdprConsentBannerBundle/blob/master/Resources/doc/index.rst
+msalsas_gdpr_consent_banner:
+    fade_time: 2
+    time_to_expire: 30 days

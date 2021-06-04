@@ -1,0 +1,9 @@
+# Read the documentation: https://github.com/timiki/rpc-client-bundle
+
+rpc_client:
+
+    # connection:
+    #   name_1: RPC_SERVER_URL_1
+    #   name_2: RPC_SERVER_URL_2
+
+    connection: null

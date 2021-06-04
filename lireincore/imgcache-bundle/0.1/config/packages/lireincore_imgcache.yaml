@@ -1,0 +1,4 @@
+lireincore_imgcache:
+    driver: gd
+    destdir: '%kernel.project_dir%/public/thumbs'
+    webdir: '%kernel.project_dir%/public'

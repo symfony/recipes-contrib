@@ -1,0 +1,5 @@
+zephyrhq_allmysms:
+    api_login: '%env(ALLMYSMS_LOGIN)%'
+    api_key: '%env(ALLMYSMS_KEY)%'
+    simulate: '%env(ALLMYSMS_SIMULATE)%'
+    simple_sms: false

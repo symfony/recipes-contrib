@@ -1,0 +1,21 @@
+exercise_html_purifier:
+    default_cache_serializer_path: '%kernel.cache_dir%/htmlpurifier'
+
+    html_profiles:
+        default:
+            config:
+                # the charset used by the original contents
+                Core.Encoding: 'UTF-8'
+                # full configuration reference: http://htmlpurifier.org/live/configdoc/plain.html
+
+# Read the https://github.com/Exercise/HTMLPurifierBundle/blob/master/README.md file
+# to know how to whitelist elements
+
+#            # whitelist attributes by tag
+#            attributes: []
+
+#            # whitelist elements by name
+#            elements: []
+
+#            # list of elements that cannot have attributes
+#            blank_elements: []

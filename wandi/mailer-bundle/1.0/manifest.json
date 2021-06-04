@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Wandi\\MailerBundle\\WandiMailerBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "WANDI_MAILER_SENDER_NAME": "Example",
+        "WANDI_MAILER_SENDER_ADDRESS": "example@domain.tld"
+    }
+}

@@ -1,0 +1,8 @@
+supervisor_rest:
+    default_environment: dev
+    servers:
+        dev:
+            application:
+                scheme: http
+                host: localhost
+                port: 9006

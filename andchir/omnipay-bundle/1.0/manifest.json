@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Andchir\\OmnipayBundle\\OmnipayBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

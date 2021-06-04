@@ -1,0 +1,8 @@
+# Read the README file for more detailed configuration information
+# https://github.com/gpslab/geoip2
+gpslab_geoip:
+    # You should specify your personal licence key
+    license: 'YOUR-LICENSE-KEY'
+
+    # Edition ID of database you need
+    edition: 'GeoLite2-City'

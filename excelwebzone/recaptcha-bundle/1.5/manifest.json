@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "EWZ\\Bundle\\RecaptchaBundle\\EWZRecaptchaBundle": ["all"]
+    },
+    "env": {
+        "EWZ_RECAPTCHA_SITE_KEY": "",
+        "EWZ_RECAPTCHA_SECRET": ""
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

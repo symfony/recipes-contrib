@@ -1,0 +1,5 @@
+health_check_check:
+    resource: '@HealthCheckBundle/Resources/config/routing/health_check_check.yaml'
+
+health_check_ping:
+    resource: '@HealthCheckBundle/Resources/config/routing/health_check_ping.yaml'

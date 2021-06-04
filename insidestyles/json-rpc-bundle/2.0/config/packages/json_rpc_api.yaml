@@ -1,0 +1,14 @@
+json_rpc_api:
+    handlers:
+        auth:
+            path: /auth
+            host: null
+            serializer: null
+            logger: null
+            annotation: null
+        main:
+            path: /api/v1
+            host: null
+            serializer: null
+            logger: null
+            annotation: null

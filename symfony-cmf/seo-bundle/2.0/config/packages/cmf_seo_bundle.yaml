@@ -1,6 +1,6 @@
 # Read the documentation: https://symfony.com/doc/master/cmf/bundles/seo/configuration.html
 cmf_seo:
     persistence:
-        phpcr: ~
+        phpcr: null
     title: '%%content_title%% | Insert your base Title'
     description: '%%content_description%% Insert you base description here.'

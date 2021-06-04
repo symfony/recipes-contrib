@@ -1,0 +1,2 @@
+AdlargeFixturesDocumentation:
+    resource: '@AdlargeFixturesDocumentationBundle/Resources/config/routing.yml'

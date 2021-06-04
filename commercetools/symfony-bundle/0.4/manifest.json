@@ -1,0 +1,18 @@
+{
+    "bundles": {
+        "Commercetools\\Symfony\\CtpBundle\\CtpBundle": ["all"],
+        "Commercetools\\Symfony\\SetupBundle\\SetupBundle": ["dev"],
+        "Commercetools\\Symfony\\StateBundle\\StateBundle": ["dev"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "CTP_CLIENT_ID": "<your-client-id>",
+        "CTP_CLIENT_SECRET": "<your-client-secret>",
+        "CTP_PROJECT_KEY": "<your-project-id>",
+        "CTP_AUTH_URL": "https://auth.commercetools.com",
+        "CTP_API_URL": "https://api.commercetools.com",
+        "CTP_SCOPES": "<your-desired-scopes>"
+    }
+}

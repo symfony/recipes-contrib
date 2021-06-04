@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Dtc\\QueueBundle\\DtcQueueBundle": ["all"]
+    },
+    "copy-from-package": {
+        "Resources/config/dtc_queue.yaml": "%CONFIG_DIR%/packages/dtc_queue.yaml"
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

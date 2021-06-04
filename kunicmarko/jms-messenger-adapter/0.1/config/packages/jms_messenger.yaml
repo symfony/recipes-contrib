@@ -1,0 +1,7 @@
+# Read the documentation: https://github.com/kunicmarko20/jms-messenger-adapter#documentation
+
+framework:
+    messenger:
+        enabled: true
+        serializer:
+            default_serializer: messenger.transport.jms_serializer

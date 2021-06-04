@@ -1,0 +1,8 @@
+fm_elfinder:
+    instances:
+        default:
+            connector:
+                roots:
+                    uploads:
+                        driver: LocalFileSystem
+                        path: uploads
