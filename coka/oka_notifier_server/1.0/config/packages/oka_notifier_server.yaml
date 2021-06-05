@@ -1,0 +1,22 @@
+oka_notifier_server:
+    channels:
+        # Uncommented here if you want to enable specific channel
+#        email:
+#            enabled: true
+#        sms:
+#            enabled: true
+#        smpp:
+#            dsn: '%env(resolve:NOTIFIER_SMPP_DSN)%'
+#        clickatell:
+#            url: '%env(resolve:NOTIFIER_CLICKATELL_URL)%'
+#            token: '%env(NOTIFIER_CLICKATELL_API_TOKEN)%'
+#        infobip:
+#            url: '%env(resolve:NOTIFIER_INFOBIP_URL)%'
+#            api_key: '%env(NOTIFIER_INFOBIP_API_KEY)%'
+#        firebase:
+#            enabled: true
+
+    # Uncommented here if you want to enable reporting
+#    reporting:
+#        db_driver: mongodb
+#        class_name: App\Document\SendReport
