@@ -1,0 +1,15 @@
+fitbit:
+    # Get client ID and Secret, register an app here: https://dev.fitbit.com/apps
+    clientId: '%env(FITBIT_CLIENT_ID)%'
+    clientSecret: '%env(FITBIT_CLIENT_SECRET)%'
+    # For available scopes, see here: https://dev.fitbit.com/build/reference/web-api/oauth2/#scope
+    scopes:
+        - activity
+        - heartrate
+        - location
+        - nutrition
+        - profile
+        - settings
+        - sleep
+        - social
+        - weight

@@ -1,5 +1,0 @@
-{
-    "bundles": {
-        "Fidry\\AliceDataFixtures\\Bridge\\Symfony\\FidryAliceDataFixturesBundle": ["dev", "test"]
-    }
-}

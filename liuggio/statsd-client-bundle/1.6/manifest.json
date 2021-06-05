@@ -8,6 +8,6 @@
     "env": {
         "STATS_D_HOST": "",
         "STATS_D_PORT": "",
-        "STATS_D_PROTOCOL": "upd"
+        "STATS_D_PROTOCOL": "udp"
     }
 }

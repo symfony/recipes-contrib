@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "Mcfedr\\AwsPushBundle\\McfedrAwsPushBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "AWS_PUSH_DEFAULT_PLATFORM_ARN": "arn:aws:sns:us-east-1:123456789012:app/APNS/my-app-ios",
+        "AWS_ACCESS_KEY_ID": "not-a-real-key",
+        "AWS_SECRET_ACCESS_KEY": "not-a-real-secret",
+        "AWS_REGION": "us-east-1"
+    }
+}

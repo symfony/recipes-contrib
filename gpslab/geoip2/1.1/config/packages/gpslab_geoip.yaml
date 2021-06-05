@@ -1,0 +1,9 @@
+gpslab_geoip:
+    # Path to download GeoIP database.
+    cache: '%kernel.cache_dir%/GeoLite2-City.mmdb'
+
+    # URL for download new GeoIP database.
+    url: 'https://geolite.maxmind.com/download/geoip/database/GeoLite2-City.mmdb.gz'
+
+    # Get model data in this locale
+    locales: [ 'en' ]

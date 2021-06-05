@@ -1,0 +1,10 @@
+#Please learn more about alertify contexts https://github.com/Troopers/AlertifyBundle/blob/master/Resources/doc/configuration.md
+troopers_alertify:
+    contexts:
+        front:
+            engine: "notie"
+            layout: "top"
+            translationDomain: "messages"
+            options:
+                alertTime: 10
+

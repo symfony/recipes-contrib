@@ -1,0 +1,2 @@
+imper86_allegro_api:
+    resource: '@Imper86AllegroApiBundle/Resources/config/routes.xml'

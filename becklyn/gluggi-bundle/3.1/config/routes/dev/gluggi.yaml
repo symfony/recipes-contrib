@@ -1,0 +1,3 @@
+_import.gluggi:
+    resource: "@GluggiBundle/Resources/config/routes.yaml"
+    prefix: /_layout/

@@ -10,7 +10,7 @@ sonata_admin:
             - bundles/sonatapage/sonata-page.back.min.css
 
 sonata_page:
-    slugify_service: sonata.core.slugify.cocur
+    slugify_service: sonata.page.slugify.cocur
     multisite: host
     use_streamed_response: false
 

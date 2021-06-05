@@ -1,0 +1,17 @@
+{
+    "copy-from-package": {
+        "docker-files/docker/": "%SRC_DIR%/../docker/",
+        "docker-files/docker-compose.yml": "%SRC_DIR%/../docker-compose.yml",
+        "docker-files/dockfony": "%SRC_DIR%/../dockfony"
+    },
+    "env": {
+        "DB_DATABASE": "symfony",
+        "DB_USERNAME": "symfony",
+        "DB_PASSWORD": "%generate(secret)%",
+        "REDIS_HOST": "redis",
+        "REDIS_PORT": "6379"
+    },
+    "gitignore": [
+        "/docker/"
+    ]
+}

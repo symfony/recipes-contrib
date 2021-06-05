@@ -2,4 +2,4 @@
 
 qandidate_toggle:
     persistence: config
-    toggles: ~
+    toggles: null

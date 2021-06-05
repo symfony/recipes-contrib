@@ -1,0 +1,2 @@
+artprima_prometheus_metrics:
+    type: in_memory

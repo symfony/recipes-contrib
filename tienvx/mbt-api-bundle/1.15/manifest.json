@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Tienvx\\Bundle\\MbtApiBundle\\TienvxMbtApiBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "DOT_BINARY": "dot"
+    }
+}

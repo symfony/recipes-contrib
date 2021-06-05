@@ -1,0 +1,9 @@
+
+{
+    "bundles": {
+        "RedRat\\ApiHelperBundle\\ApiHelperBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

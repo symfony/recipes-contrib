@@ -1,0 +1,9 @@
+gpslab_pagination:
+    # Page range used in pagination control
+    max_navigate: 5
+
+    # Name of URL parameter for page number
+    parameter_name: 'page'
+
+    # Sliding pagination controls template
+    template: 'GpsLabPaginationBundle::pagination.html.twig'

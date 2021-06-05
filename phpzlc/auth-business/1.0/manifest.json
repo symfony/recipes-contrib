@@ -1,0 +1,8 @@
+{
+    "copy-from-package": {
+        "Business/": "src/Business/",
+        "Entity/": "src/Entity/",
+        "Repository/": "src/Repository/",
+        "phpzlc-auth-business.yaml": "config/packages/phpzlc-auth-business.yaml"
+    }
+}

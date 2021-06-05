@@ -1,0 +1,16 @@
+{
+    "bundles": {
+        "IDCI\\Bundle\\KeycloakSecurityBundle\\IDCIKeycloakSecurityBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "KEYCLOAK_SERVER_BASE_URL": "http://keycloak:8080",
+        "KEYCLOAK_SERVER_PUBLIC_BASE_URL": "${KEYCLOAK_SERVER_BASE_URL}",
+        "KEYCLOAK_SERVER_PRIVATE_BASE_URL": "${KEYCLOAK_SERVER_BASE_URL}",
+        "KEYCLOAK_REALM": "",
+        "KEYCLOAK_CLIENT_ID": "",
+        "KEYCLOAK_CLIENT_SECRET": ""
+    }
+}

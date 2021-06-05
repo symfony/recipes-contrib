@@ -1,0 +1,18 @@
+services:
+    AmbientLink\SDK\SmartMonkeyConnection:
+        arguments: ['@amnient.link_connection_settings', '%env(AMBIENT_LINK_USERNAME)%', '%env(AMBIENT_LINK_PASSWORD)%']
+
+    amnient.link_connection_settings:
+        class: PhpMqtt\Client\ConnectionSettings
+
+    PhpMqtt\Client\Contracts\MQTTClient: '@PhpMqtt\Client\MQTTClient'
+    PhpMqtt\Client\MQTTClient:
+        arguments:
+            - '%env(AMBIENT_LINK_HOST)%'
+            - '%env(AMBIENT_LINK_PORT)%'
+            - '%env(AMBIENT_LINK_MONKEY_ID)%'
+
+    AmbientLink\SDK\Mqtt\MqttAdapter:
+        arguments:
+            $username: '%env(AMBIENT_LINK_USERNAME)%'
+            $password: '%env(AMBIENT_LINK_PASSWORD)%'

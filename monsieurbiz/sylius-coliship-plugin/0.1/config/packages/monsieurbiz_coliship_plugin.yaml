@@ -1,0 +1,4 @@
+imports:
+    - { resource: "@MonsieurBizSyliusColishipPlugin/Resources/config/monsieurbiz/settings.yaml" }
+    - { resource: "@MonsieurBizSyliusColishipPlugin/Resources/config/sylius/grid.yaml" }
+    - { resource: "@MonsieurBizSyliusColishipPlugin/Resources/config/sylius/ui.yaml" }

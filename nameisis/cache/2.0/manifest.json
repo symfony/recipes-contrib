@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Nameisis\\Cache\\NameisisCache": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

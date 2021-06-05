@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "MeteoConcept\\HCaptchaBundle\\MeteoConceptHCaptchaBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "HCAPTCHA_SECRET": "0x0000000000000000000000000000000000000000"
+    }
+}

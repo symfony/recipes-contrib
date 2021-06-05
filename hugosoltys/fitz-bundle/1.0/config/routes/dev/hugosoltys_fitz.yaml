@@ -1,0 +1,2 @@
+fitz:
+    resource: "@FitzBundle/Resources/config/routing.xml"

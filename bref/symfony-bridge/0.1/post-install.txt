@@ -1,0 +1,8 @@
+<bg=blue;fg=white>                     </>
+<bg=blue;fg=white> Bref Symfony Bridge </>
+<bg=blue;fg=white>                     </>
+
+  * <fg=blue>Read</> the full documentation to properly configure your
+    Symfony application at <comment>https://bref.sh/docs/frameworks/symfony.html</>
+
+  * Bref documentation: <comment>https://bref.sh/docs/</>

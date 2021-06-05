@@ -1,0 +1,8 @@
+{
+    "copy-from-package": {
+        "Business/": "src/Business/",
+        "DataFixtures/": "src/DataFixtures/",
+        "Entity/": "src/Entity/",
+        "Repository/": "src/Repository/"
+    }
+}

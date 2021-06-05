@@ -1,0 +1,11 @@
+lti1p3_jwks:
+    resource: '@Lti1p3Bundle/Resources/config/routing/jwks.yaml'
+
+lti1p3_message_platform:
+    resource: '@Lti1p3Bundle/Resources/config/routing/message/platform.yaml'
+
+lti1p3_message_tool:
+    resource: '@Lti1p3Bundle/Resources/config/routing/message/tool.yaml'
+
+lti1p3_service_platform:
+    resource: '@Lti1p3Bundle/Resources/config/routing/service/platform.yaml'

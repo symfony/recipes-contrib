@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "AsyncAws\\Symfony\\Bundle\\AsyncAwsBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

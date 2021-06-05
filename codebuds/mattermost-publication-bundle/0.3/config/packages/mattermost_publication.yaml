@@ -1,0 +1,5 @@
+mattermost_publication:
+    webhook_url: '%env(MATTERMOST_WEBHOOK_URL)%'
+    # You can also set the default channel, username and icon_url
+    # for more information you can checkout the bundle documentation
+    # https://github.com/codebuds33/mattermost-publication-bundle/blob/master/README.md

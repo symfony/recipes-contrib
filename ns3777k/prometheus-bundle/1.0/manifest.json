@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Ns3777k\\PrometheusBundle\\Ns3777kPrometheusBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

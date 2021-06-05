@@ -8,4 +8,4 @@ overblog_graphql:
                 -
                     type: yaml
                     dir: "%kernel.project_dir%/config/graphql/types"
-                    suffix: ~
+                    suffix: null

@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Troopers\\AlertifyBundle\\TroopersAlertifyBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
+

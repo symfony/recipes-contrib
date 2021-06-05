@@ -1,0 +1,25 @@
+services:
+    jane.serializer.json_encode:
+        class: Symfony\Component\Serializer\Encoder\JsonEncode
+        arguments:
+            - { json_encode_options: 64 } # \JSON_UNESCAPED_SLASHES
+
+    jane.serializer.json_decode:
+        class: Symfony\Component\Serializer\Encoder\JsonDecode
+        arguments:
+            - { json_decode_associative: false }
+
+    jane.serializer.json_encoder:
+        class: Symfony\Component\Serializer\Encoder\JsonEncoder
+        arguments:
+            - '@jane.serializer.json_encode'
+            - '@jane.serializer.json_decode'
+
+#    jane.serializer.object:
+#        class: MyApp\Library\Generated\Normalizer\JaneObjectNormalizer
+#
+#    jane.serializer:
+#        class: Symfony\Component\Serializer\Serializer
+#        arguments:
+#            - ['@serializer.denormalizer.array', '@jane.serializer.object']
+#            - ['@jane.serializer.json_encoder']

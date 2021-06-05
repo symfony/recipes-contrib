@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "CoopTilleuls\\MigrationBundle\\CoopTilleulsMigrationBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "LEGACY_DATABASE_URL": "mysql://legacy_db_user:legacy_db_password@127.0.0.1:3306/legacy_db_name"
+    }
+}

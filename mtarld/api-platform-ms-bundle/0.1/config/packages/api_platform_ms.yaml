@@ -1,0 +1,10 @@
+api_platform_ms:
+    # Name of the current microservice
+    name: app
+
+    # List of related microservices
+    #microservices:
+    #    product:
+    #       base_uri: https://product.api
+    #       api_path: /api
+    #       format: jsonld

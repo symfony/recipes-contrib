@@ -7,6 +7,6 @@ snc_redis:
 # how to configure the bundle.
 #
 #        default:
-#            type: predis
+#            type: phpredis
 #            alias: default
 #            dsn: "%env(REDIS_URL)%"

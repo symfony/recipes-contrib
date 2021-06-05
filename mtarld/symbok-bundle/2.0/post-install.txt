@@ -1,0 +1,6 @@
+<bg=blue;fg=white>                                          </>
+<bg=blue;fg=white> What's next for SymbokBundle? </>
+<bg=blue;fg=white>                                          </>
+
+  * <fg=blue>Configure</> bundle in <comment>config/packages/symbok.yaml</>
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/mtarld/symbok-bundle/blob/master/src/Resources/doc/index.md</>

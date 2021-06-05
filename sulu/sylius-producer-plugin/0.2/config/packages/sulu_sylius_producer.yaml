@@ -1,0 +1,7 @@
+imports:
+    - { resource: "@SuluSyliusProducerPlugin/Resources/config/app/config.yaml" }
+
+framework:
+    messenger:
+        transports:
+            sulu_sylius_transport: '%env(SULU_SYLIUS_MESSENGER_TRANSPORT_DSN)%'

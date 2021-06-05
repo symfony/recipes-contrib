@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "Ckrack\\OptimusBundle\\CkrackOptimusBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "Replace these env vars with the output of `php vendor/bin/optimus spark -f env`",
+        "OPTIMUS_PRIME": "3",
+        "OPTIMUS_INVERSE": "715827883",
+        "OPTIMUS_RANDOM": "1592469642"
+    }
+}

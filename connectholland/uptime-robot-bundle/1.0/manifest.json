@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "ConnectHolland\\UptimeRobotBundle\\ConnecthollandUptimeRobotBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "UPTIMEROBOT_API_KEY": "api_key"
+    }
+}
