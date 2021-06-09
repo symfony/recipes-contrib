@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "EcPhp\\EuLoginApiAuthenticationBundle\\EuLoginApiAuthenticationBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "EULOGIN_CLIENT_ID": "",
+        "EULOGIN_CLIENT_SECRET": "",
+        "EULOGIN_ENV": "acceptance"
+    }
+}
