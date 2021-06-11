@@ -4,7 +4,9 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/",
-        "src/": "%SRC_DIR%",
-        "templates/": "templates/"
+        "src/": "%SRC_DIR%"
+    },
+    "copy-from-package": {
+        "src/Resources/views/bundles/": "templates/bundles/"
     }
 }
