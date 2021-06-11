@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Nedac\\SyliusOrderNowPlugin\\NedacSyliusOrderNowPlugin": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "copy-from-package": {
+        "src/Resources/views/bundles/": "templates/bundles/",
+        "src/Resources/views/form/": "templates/form/",
+        "src/Resources/views/Product/": "templates/Product/"
+    }
+}
