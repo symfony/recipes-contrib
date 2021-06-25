@@ -1,4 +1,3 @@
 _svc_param:
     resource: '@SvcParamBundle/src/Resources/config/routes.xml'
     prefix: /svc-param/{_locale}
-    requirements: {"_locale": "%app.supported_locales%"}
