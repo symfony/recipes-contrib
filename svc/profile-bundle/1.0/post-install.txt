@@ -1,0 +1,2 @@
+  * Please adapt config/routes/svc-profile.yaml and define your route
+  * create table (bin/console doctrine:schema:update --force or create a migration)
