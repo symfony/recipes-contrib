@@ -1,4 +1,0 @@
-jobs:
-    exclude:
-        -   php: 8.0
-            env: SKELETON_VERSION="^5.0"
