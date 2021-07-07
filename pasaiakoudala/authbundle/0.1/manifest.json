@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "PasaiakoUdala\\AuthBundle\\PasaiakoUdalaAuthBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "LDAP_IP": "XXX.XXX.XXX.XXX",
+        "LDAP_BASE_DN": "DC=DOMAIN,DC=net",
+        "LDAP_SEARCH_DN": "CN=LDAPUSER,CN=Users,DC=pasaia,DC=net",
+        "LDAP_PASSWD": "LDAP_PASSWD"
+    }
+}
