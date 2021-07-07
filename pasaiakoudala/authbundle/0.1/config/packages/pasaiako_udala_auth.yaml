@@ -1,6 +1,5 @@
 pasaiako_udala_auth:
-  LDAP_ADMIN_TALDEAK: "Rol-taldea1, Rol-taldea2"
-  LDAP_KUDEATU_TALDEAK: "Rol-taldea1, Rol-taldea2"
-  LDAP_USER_TALDEA: "Rol-taldea1, Rol-taldea2"
-  route_after_successfull_login: "default2"
-  
+    LDAP_ADMIN_TALDEAK: "Rol-taldea1, Rol-taldea2"
+    LDAP_KUDEATU_TALDEAK: "Rol-taldea1, Rol-taldea2"
+    LDAP_USER_TALDEA: "Rol-taldea1, Rol-taldea2"
+    route_after_successfull_login: "default2"
