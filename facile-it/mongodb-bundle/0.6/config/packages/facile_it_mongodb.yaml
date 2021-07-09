@@ -10,7 +10,7 @@ mongo_db_bundle:
             ssl:              false
             connectTimeoutMS: 3000
             readPreference:   primaryPreferred # see https://docs.mongodb.com/manual/reference/read-preference/#primary for info
-  
+
     connections:
         default:
             client_name:    default
