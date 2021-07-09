@@ -1,0 +1,20 @@
+name: Q&A
+
+on:
+    pull_request:
+
+defaults:
+    run:
+        shell: bash
+
+jobs:
+
+    tests:
+        name: Checks
+        runs-on: Ubuntu-20.04
+
+        steps:
+            -
+                name: Checkout
+                uses: actions/checkout@v2
+                id: checkout
