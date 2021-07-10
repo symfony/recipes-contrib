@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Monofony\\Bundle\\ApiBundle\\MonofonyApiBundle": ["all"]
+    },
+    "copy-from-package": {
+        "Recipe/config/": "%CONFIG_DIR%/",
+        "Recipe/tests/": "tests/"
+    }
+}

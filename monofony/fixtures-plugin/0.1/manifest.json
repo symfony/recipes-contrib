@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Monofony\\Plugin\\FixturesPlugin\\MonofonyFixturesPlugin": ["all"]
+    },
+    "copy-from-package": {
+        "Recipe/config/": "%CONFIG_DIR%/",
+        "Recipe/src/": "%SRC_DIR%/"
+    }
+}
