@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "EonX\\EasyCore\\Bridge\\Symfony\\EasyCoreBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
