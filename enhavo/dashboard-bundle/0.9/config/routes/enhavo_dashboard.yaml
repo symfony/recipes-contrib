@@ -1,0 +1,3 @@
+enhavo_dashboard_admin:
+    resource: "@EnhavoDashboardBundle/Resources/config/routes/admin/*"
+    prefix: /admin

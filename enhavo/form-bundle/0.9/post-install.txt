@@ -1,0 +1,14 @@
+<bg=blue;fg=white>                                              </>
+<bg=blue;fg=white>  Complete EnhavoFormBundle installation ...  </>
+<bg=blue;fg=white>                                              </>
+
+  * Update your <fg=green>packages.json</>
+
+      <fg=green>$ yarn add @enhavo/form</>
+
+  * Build your assets with
+
+      <fg=green>$ yarn encore dev</>
+
+<fg=green>  Read more details about the steps:</>
+<fg=blue>  https://docs.enhavo.com/book/form-bundle/installation.html</>
