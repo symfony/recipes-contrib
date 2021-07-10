@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Neo4j\\Neo4jBundle\\Neo4jBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "NEO4J_DEFAULT_CONNECTION_DSN": "bolt://foo:bar@localhost:7687"
+    }
+}
