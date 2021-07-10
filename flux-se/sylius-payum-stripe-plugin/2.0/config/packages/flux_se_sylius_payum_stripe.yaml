@@ -2,10 +2,20 @@ imports:
     - { resource: "@FluxSESyliusPayumStripePlugin/Resources/config/config.yaml" }
 
 flux_se_sylius_payum_stripe:
+    # Enable/Disable the refund state machine callback
+    # By default it is disabled
+    refund_disabled: true
+    # Other possible values can be found here :
+    # https://stripe.com/docs/api/checkout/sessions/create#create_checkout_session-payment_method_types
+    payment_method_types:
+        - card
     line_item_image:
         # This is the imagine filter use to get the image displayed on Stripe Checkout Session
         # (default: the filter uses into `@ShopBundle/Product/Show/_images.html.twig`)
         imagine_filter: 'sylius_shop_product_original'
         # Fallback image used when no image is set on a product and also when you test this plugin
         # from a private web server (ex: from localhost)
-        fallback_image: 'https://placehold.it/400x300'
+        fallback_image: 'https://via.placeholder.com/300'
+        # Localhost images are not displayed by Stripe because it cache them on a CDN, this preg_match()
+        # pattern will allow the line item image provider to test if the image is from a localhost network or not.
+        localhost_pattern: '#//localhost#'
