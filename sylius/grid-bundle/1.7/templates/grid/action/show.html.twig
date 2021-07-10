@@ -1,0 +1,6 @@
+{% set path = options.link.url|default(path(options.link.route|default(grid.requestConfiguration.getRouteName('show')), options.link.parameters|default({'id': data.id}))) %}
+
+<a href="{{ path }}">
+    {# Here is an example with font-awesome plus icon #}
+    <i class="fas fa-search"></i> {{ (action.label|default('Show'))|trans }}
+</a>

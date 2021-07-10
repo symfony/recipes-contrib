@@ -1,0 +1,6 @@
+{% set path = options.link.url|default(path(options.link.route|default(grid.requestConfiguration.getRouteName('update')), options.link.parameters|default({'id': data.id}))) %}
+
+<a href="{{ path }}">
+    {# Here is an example with font-awesome plus icon #}
+    <i class="fas fa-pencil"></i> {{ (action.label|default('Edit'))|trans }}
+</a>
