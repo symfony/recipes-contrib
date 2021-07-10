@@ -1,0 +1,2 @@
+bigoen_mercure_twig:
+    public_url: "%env(MERCURE_TWIG_PUBLISH_URL)%"

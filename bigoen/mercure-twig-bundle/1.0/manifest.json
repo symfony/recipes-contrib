@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Bigoen\\MercureTwigBundle\\BigoenMercureTwigBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "MERCURE_TWIG_PUBLISH_URL": "http://mercure/.well-known/mercure"
+    }
+}
