@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Routmoute\\Bundle\\RoutmouteDiscordBundle\\RoutmouteDiscordBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "ROUTMOUTE_DISCORD_CLIENT_ID": "YourDiscordClientId",
+        "ROUTMOUTE_DISCORD_CLIENT_SECRET": "YourDiscordClientSecret",
+        "ROUTMOUTE_DISCORD_BOT_TOKEN": "YourDiscordBotToken"
+    }
+}
