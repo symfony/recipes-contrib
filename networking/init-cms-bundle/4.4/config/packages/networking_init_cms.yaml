@@ -7,7 +7,6 @@ imports:
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/oneup_uploader.yaml" }
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/sonata_admin.yaml" }
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/sonata_block.yaml" }
-    - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/sonata_core.yaml" }
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/sonata_doctrine_admin.yaml" }
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/sonata_media.yaml" }
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/sonata_notification.yaml" }
