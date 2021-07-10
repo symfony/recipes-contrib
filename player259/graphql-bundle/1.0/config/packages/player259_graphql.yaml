@@ -1,0 +1,4 @@
+# Read the documentation: https://github.com/player259/graphql-bundle/blob/master/Resources/doc/index.rst#configuration
+#player259_graphql:
+#    debug: '%kernel.debug%'
+#    logger: '?logger'

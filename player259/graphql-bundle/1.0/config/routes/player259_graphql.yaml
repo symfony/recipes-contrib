@@ -1,0 +1,10 @@
+# Read the documentation: https://github.com/player259/graphql-bundle/blob/master/Resources/doc/index.rst#installation
+# Resource file contains single /graphql action
+player259_graphql:
+    resource: '@Player259GraphQLBundle/Resources/config/routing.xml'
+    prefix: /
+
+# To assign an endpoint to a specific url
+#player259_graphql_index:
+#    path: /graphql
+#    controller: Player259\GraphQLBundle\Controller\GraphQLController
