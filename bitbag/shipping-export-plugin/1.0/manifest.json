@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "BitBag\\SyliusShippingExportPlugin\\BitBagSyliusShippingExportPlugin": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "gitignore": [
+        "/shipping_labels/"
+    ]
+}
