@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Silverback\\ApiComponentsBundle\\SilverbackApiComponentsBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "src/": "%SRC_DIR%/"
+    },
+    "env": {
+        "MAILER_EMAIL": "\"My Website <website@website.com>\""
+    }
+}
