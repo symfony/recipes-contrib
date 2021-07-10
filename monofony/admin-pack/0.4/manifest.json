@@ -1,0 +1,11 @@
+{
+    "copy-from-package": {
+        ".recipe/assets/": "assets/",
+        ".recipe/config/": "%CONFIG_DIR%/",
+        ".recipe/features/": "features/",
+        ".recipe/spec/": "spec/",
+        ".recipe/src/": "%SRC_DIR%/",
+        ".recipe/templates/": "templates/",
+        ".recipe/tests/": "tests/"
+    }
+}
