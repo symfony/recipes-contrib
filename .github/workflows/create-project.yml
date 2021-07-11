@@ -41,6 +41,7 @@ jobs:
                     composer create-project --ansi "symfony/skeleton:^4" v4
                     cd v4
                     composer config extra.symfony.allow-contrib true
+                    composer config minimum-stability dev
                     composer require --ansi --ignore-platform-reqs $PACKAGES
                     EXIT_CODE=$?
 
@@ -57,4 +58,5 @@ jobs:
                     composer create-project --ansi "symfony/skeleton:^5" v5
                     cd v5
                     composer config extra.symfony.allow-contrib true
+                    composer config minimum-stability dev
                     composer require --ansi --ignore-platform-reqs $PACKAGES
