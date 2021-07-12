@@ -1,0 +1,9 @@
+coop_tilleuls_sylius_click_n_collect_shop:
+    resource: "@CoopTilleulsSyliusClickNCollectPlugin/Resources/config/shop_routing.yml"
+    prefix: /{_locale}
+    requirements:
+        _locale: ^[a-z]{2}(?:_[A-Z]{2})?$
+
+coop_tilleuls_sylius_click_n_collect_admin:
+    resource: "@CoopTilleulsSyliusClickNCollectPlugin/Resources/config/admin_routing.yml"
+    prefix: /admin
