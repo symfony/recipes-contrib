@@ -1,0 +1,7 @@
+# Default configuration for "SvcUtilBundle"
+svc_util:
+    mailer:
+        # Default sender mail address
+        mail_address:         dev@sv-systems.com
+        # Default sender name
+        mail_name:            'Test User'

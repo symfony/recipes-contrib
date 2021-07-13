@@ -1,0 +1,10 @@
+{
+    "bundles": {
+        "Svc\\ParamBundle\\SvcParamBundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

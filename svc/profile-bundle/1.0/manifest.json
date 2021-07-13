@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Svc\\ProfileBundle\\SvcProfileBundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "SVC_PROFILE_HASH_SECRET": "%generate(secret)%"
+    }
+}
