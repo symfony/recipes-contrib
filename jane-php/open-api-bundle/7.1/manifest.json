@@ -1,6 +1,8 @@
 {
+    "bundles": {
+        "Jane\\Bundle\\OpenApiBundle\\JaneOpenApiBundle": ["dev"]
+    },
     "copy-from-recipe": {
-        "bin/": "%BIN_DIR%/",
         "config/": "%CONFIG_DIR%/"
     },
     "conflict": {
