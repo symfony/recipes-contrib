@@ -1,0 +1,7 @@
+kunstmaan_admin:
+    multi_language: true
+    required_locales: nl|fr|en
+    default_locale: en
+    admin_locales: ['en']
+    website_title: 'MyProject' #Rename this to your website name
+    exception_logging: false

@@ -1,0 +1,2 @@
+imports:
+    - { resource: "@NedacSyliusMinimumOrderValuePlugin/Resources/config/config.yaml" }
