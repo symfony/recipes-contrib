@@ -20,3 +20,13 @@ oka_notifier_server:
 #    reporting:
 #        db_driver: mongodb
 #        class_name: App\Document\SendReport
+
+# Fix doctrine ODM mappings
+#doctrine_mongodb:
+#    document_managers:
+#        default:
+#            mappings:
+#                OkaNotifierServerBundle:
+#                    type: xml
+#                    dir: '%kernel.project_dir%/vendor/coka/notifier-server-bundle/config/doctrine'
+#                    prefix: 'Oka\Notifier\ServerBundle\Model'
