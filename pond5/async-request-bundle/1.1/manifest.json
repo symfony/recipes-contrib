@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Pond5\\AsyncRequestBundle\\Pond5AsyncRequestBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

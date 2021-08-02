@@ -3,13 +3,6 @@
 <bg=blue;fg=white> What's next?                                </>
 <bg=blue;fg=white>                                             </>
 
-  * <fg=blue>Use</> the default storage immediately:
-
-      public function __construct(FilesystemInterface $defaultStorage)
-      {
-          ...
-      }
-
   * <fg=blue>Configure</> your own storages in <comment>config/packages/flysystem.yaml</comment>.
 
   * <fg=blue>Read</> the documentation at:
