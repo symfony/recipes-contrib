@@ -1,3 +1,0 @@
-svc_profile:
-    # Enable captcha for change email/password forms?
-    enableCaptcha: false

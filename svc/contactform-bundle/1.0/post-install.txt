@@ -1,1 +1,0 @@
-  * Please adapt config/packages/svc-contactform.yaml
