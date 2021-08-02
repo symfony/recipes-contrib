@@ -1,14 +1,5 @@
 inspector:
     ingestion_key: '%env(INSPECTOR_INGESTION_KEY)%'
-    url: https://ingest.inspector.dev
-    enabled: true
-    unhandled_exceptions: true
-    query: true
-    query_bindings: false
-    templates: true
-    user: true
-    transport: async
-    server_sampling_ratio: 0
     ignore_routes:
         - '_wdt'
         - '_profiler'
