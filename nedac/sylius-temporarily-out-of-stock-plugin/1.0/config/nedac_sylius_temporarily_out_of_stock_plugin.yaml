@@ -1,0 +1,5 @@
+doctrine:
+    orm:
+        dql:
+            string_functions:
+                FIRST: Nedac\SyliusTemporarilyOutOfStockPlugin\Doctrine\Dql\FirstFunction

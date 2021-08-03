@@ -1,0 +1,13 @@
+odiseo_sylius_vendor_plugin_admin:
+    resource: "@OdiseoSyliusVendorPlugin/Resources/config/routing/admin.yaml"
+    prefix: /admin
+
+odiseo_sylius_vendor_plugin_shop:
+    resource: "@OdiseoSyliusVendorPlugin/Resources/config/routing/shop.yaml"
+    prefix: /{_locale}/vendors
+    requirements:
+        _locale: ^[a-z]{2}(?:_[A-Z]{2})?$
+
+odiseo_sylius_vendor_plugin_api:
+    resource: "@OdiseoSyliusVendorPlugin/Resources/config/routing/api.yaml"
+    prefix: /api

@@ -1,0 +1,10 @@
+<bg=blue;fg=white>                              </>
+<bg=blue;fg=white> Eta orain zer? </>
+<bg=blue;fg=white>                              </>
+
+* eguneratu datu basea, erabiltzailearen taula sortzeko
+php bin/console
+
+* moldatu security.yaml fitxategia
+rm config/package/security.yaml
+mv config/package/security.yaml.dist config/package/security.yaml

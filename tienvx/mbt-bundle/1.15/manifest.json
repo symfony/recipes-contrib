@@ -4,7 +4,7 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/",
-        "var/storage/screenshots/": "%VAR_DIR%/storage/screenshots/"
+        "var/": "%VAR_DIR%/"
     },
     "env": {
         "EMAIL_FROM": "from@example.com",

@@ -1,0 +1,8 @@
+# Read the documentation: https://github.com/FriendsOfSymfony/FOSOAuthServerBundle/blob/master/Resources/doc/index.md#step-5-configure-fosoauthserverbundle
+fos_oauth_server:
+    db_driver: orm
+
+    client_class: App\Entity\Client
+    access_token_class: App\Entity\AccessToken
+    refresh_token_class: App\Entity\RefreshToken
+    auth_code_class: App\Entity\AuthCode
