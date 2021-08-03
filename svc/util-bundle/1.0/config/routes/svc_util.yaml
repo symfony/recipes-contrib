@@ -1,0 +1,3 @@
+_svc_util:
+    resource: '@SvcUtilBundle/src/Resources/config/routes.xml'
+    prefix: /svc-util/{_locale}
