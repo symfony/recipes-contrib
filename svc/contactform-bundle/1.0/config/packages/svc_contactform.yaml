@@ -1,0 +1,6 @@
+svc_contactform:
+    # Email adress for contact mails
+    contact_mail:         dev@sv-systems.com
+
+    # Which route should by called after amil sent
+    route_after_send:     index

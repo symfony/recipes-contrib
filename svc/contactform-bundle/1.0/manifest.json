@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Svc\\ContactformBundle\\SvcContactformBundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "assets/": "assets/"
+    }
+}
