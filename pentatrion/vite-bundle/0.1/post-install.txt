@@ -4,10 +4,10 @@
 
   <fg=blue;options=bold>Configure</> <fg=blue>your transformations:</>
     1. Verify and uncomment the configuration in <comment>%CONFIG_DIR%/packages/pentatrion_vite.yaml</>.
-    1. Verify the Vite configuration in <comment>/vite.config.js</>.
-    2. Install npm and run <comment>npm i</>.
-    3. Add JS Twig function <comment>{{ vite_entry_script_tags('app.js') }}</> into your base.html.twig.
-    4. Add CSS Twig function <comment>{{ vite_entry_link_tags('app.js') }}</> into your base.html.twig.
-    5. Start the development server: <comment>npm run dev</>.
-    6. Start coding into <comment>assets/app.js</>
+    2. Verify the Vite configuration in <comment>/vite.config.js</>.
+    3. Install npm and run <comment>npm i</>.
+    4. Add JS Twig function <comment>{{ vite_entry_script_tags('app.js') }}</> into your base.html.twig.
+    5. Add CSS Twig function <comment>{{ vite_entry_link_tags('app.js') }}</> into your base.html.twig.
+    6. Start the development server: <comment>npm run dev</>.
+    7. Start coding into <comment>assets/app.js</>
 
