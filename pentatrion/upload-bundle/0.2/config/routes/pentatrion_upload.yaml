@@ -1,0 +1,3 @@
+_pentatrion_upload:
+    resource: "@PentatrionUploadBundle/Controller/UploadController.php"
+    type: annotation

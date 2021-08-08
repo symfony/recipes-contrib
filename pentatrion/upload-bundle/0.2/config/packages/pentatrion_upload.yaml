@@ -1,0 +1,7 @@
+pentatrion_upload:
+    # default configuration
+    origins:
+        public_uploads:
+            path: "%kernel.project_dir%/public/uploads"
+            liip_path: "/uploads"
+    liip_filters: ["small"]
