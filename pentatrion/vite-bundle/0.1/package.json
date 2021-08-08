@@ -6,6 +6,6 @@
     },
     "license": "UNLICENSED",
     "devDependencies": {
-        "vite": "^2.4.0"
+        "vite": "^2.4"
     }
 }

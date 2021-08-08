@@ -1,9 +1,9 @@
-pentatrion_vite:
-  # Base public path when served in development or production
-  # base: /build/
+# pentatrion_vite:
+#   # Base public path when served in development or production
+#   base: /build/
 
-  # Server options
-  # server:
-  #   host: localhost
-  #   port: 3000
-  #   https: false
+#   # Server options
+#   server:
+#     host: localhost
+#     port: 3000
+#     https: false
