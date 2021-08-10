@@ -1,0 +1,6 @@
+monsieur_sloop_woleet:
+    #API TOKEN
+    api_token: "YOUR_API_TOKEN"
+    #CALLBACK SECRET
+    callback_secret: "YOUR_API_CALLBACK_SECRET"
+
