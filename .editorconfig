@@ -5,6 +5,6 @@ root = true
 [*]
 end_of_line = LF
 
-[*.json]
+[*.{json,yaml}]
 indent_style = space
 indent_size = 4
