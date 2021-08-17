@@ -1,3 +1,0 @@
-comments:
-    comment_class: App\MainBundle\Document\Comment
-    status_default: pending

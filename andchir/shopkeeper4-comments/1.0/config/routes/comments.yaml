@@ -1,3 +1,0 @@
-comments:
-    resource: '@CommentsBundle'
-    type: annotation

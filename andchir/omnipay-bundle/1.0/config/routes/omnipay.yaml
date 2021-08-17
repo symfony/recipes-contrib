@@ -1,3 +1,0 @@
-omnipay:
-    resource: "@OmnipayBundle/Resources/config/routing.yml"
-    prefix: /
