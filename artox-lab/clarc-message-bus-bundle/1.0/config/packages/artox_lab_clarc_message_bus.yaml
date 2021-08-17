@@ -1,5 +1,0 @@
-artox_lab_clarc_message_bus:
-    bus:
-        middleware:
-            add_redelivery_stamp_middleware:
-                retry_count: 10

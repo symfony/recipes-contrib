@@ -1,8 +1,0 @@
-{
-    "bundles": {
-        "ArtoxLab\\Bundle\\ClarcMessageBusBundle\\ArtoxLabClarcMessageBusBundle": ["all"]
-    },
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    }
-}

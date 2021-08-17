@@ -1,4 +1,0 @@
-artox_lab_sms:
-    providers:
-        # You must to define at least one provider configuration
-        # See more info at https://github.com/artox-lab/sms-bundle
