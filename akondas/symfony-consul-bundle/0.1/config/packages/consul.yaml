@@ -1,7 +1,0 @@
-consul:
-    service:
-        name: '%env(resolve:CONSUL_SERVICE_NAME)%'
-        host: '%env(resolve:CONSUL_SERVICE_HOST)%'
-        port: '%env(resolve:CONSUL_SERVICE_PORT)%'
-    client:
-        base_uri: '%env(resolve:CONSUL_CLIENT_BASE_URI)%'
