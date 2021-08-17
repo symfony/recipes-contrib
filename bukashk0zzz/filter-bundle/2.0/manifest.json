@@ -1,8 +1,0 @@
-{
-    "bundles": {
-        "Bukashk0zzz\\FilterBundle\\Bukashk0zzzFilterBundle": ["all"]
-    },
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    }
-}

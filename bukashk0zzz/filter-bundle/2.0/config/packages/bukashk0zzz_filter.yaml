@@ -1,3 +1,0 @@
-bukashk0zzz_filter:
-    # Enable if you need auto filtering form data before constraint(Validation) check
-    auto_filter_forms: false

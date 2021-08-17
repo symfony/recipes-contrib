@@ -1,6 +1,0 @@
-bukashk0zzz_liip_imagine_serialization:
-    # Set true for generating url for vichUploader fields
-    vichUploaderSerialize: false
-
-    # Set true for adding original field value to object
-    includeOriginal: false
