@@ -1,8 +1,0 @@
-{
-    "bundles": {
-        "MonsieurSloop\\Bundle\\WoleetBundle\\MonsieurSloopWoleetBundle": ["all"]
-    },
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    }
-}

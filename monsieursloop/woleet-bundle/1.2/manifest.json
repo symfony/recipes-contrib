@@ -4,5 +4,9 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "WOLEET_API_TOKEN": "your_api_token",
+        "WOLEET_CALLBACK_SECRET": "your_callback_secret"
     }
 }

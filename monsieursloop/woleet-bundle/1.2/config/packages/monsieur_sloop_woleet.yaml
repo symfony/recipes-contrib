@@ -1,6 +1,6 @@
 monsieur_sloop_woleet:
-    #API TOKEN
-    api_token: "YOUR_API_TOKEN"
-    #CALLBACK SECRET
-    callback_secret: "YOUR_API_CALLBACK_SECRET"
+    #API KEY
+    api_token: "%env(WOLEET_API_TOKEN)%"
+    #API CALLBACK KEY
+    callback_secret: "%env(WOLEET_CALLBACK_SECRET)%"
 
