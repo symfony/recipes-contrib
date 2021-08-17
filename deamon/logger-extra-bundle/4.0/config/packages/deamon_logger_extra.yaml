@@ -1,8 +1,0 @@
-# see https://github.com/FrDeamon/logger-extra-bundle/blob/master/README.md#config-reference
-deamon_logger_extra:
-    # the application name
-    application: null
-    # the handler to update
-    handlers: 'main'
-    # configuration for all optional fields
-    config: null
