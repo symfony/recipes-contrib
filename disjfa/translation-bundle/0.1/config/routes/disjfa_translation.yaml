@@ -1,4 +1,0 @@
-disjfa_translation:
-    resource: '@DisjfaTranslationBundle/Controller/'
-    type:     annotation
-    prefix:   /admin
