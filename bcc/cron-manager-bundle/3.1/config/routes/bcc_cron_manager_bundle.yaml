@@ -1,3 +1,0 @@
-BCCCronManagerBundle:
-    resource: "@BCCCronManagerBundle/Resources/config/routing.xml"
-    prefix:   admin/cron-manager
