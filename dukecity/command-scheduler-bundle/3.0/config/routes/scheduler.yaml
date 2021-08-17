@@ -1,3 +1,0 @@
-dukecity_command_scheduler:
-    resource: "@DukecityCommandSchedulerBundle/Resources/config/routing.php"
-    prefix:   /

@@ -1,8 +1,0 @@
-{
-    "bundles": {
-        "Dukecity\\CommandSchedulerBundle\\DukecityCommandSchedulerBundle": ["all"]
-    },
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    }
-}
