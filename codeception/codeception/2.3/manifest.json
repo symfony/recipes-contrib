@@ -1,6 +1,0 @@
-{
-    "copy-from-recipe": {
-        "codeception.yml": "codeception.yml",
-        "tests/": "tests/"
-    }
-}
