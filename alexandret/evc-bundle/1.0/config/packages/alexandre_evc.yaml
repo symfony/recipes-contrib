@@ -1,4 +1,0 @@
-alexandre_evc:
-    api_id: '%env(EVC_API)%'
-    username: '%env(EVC_USERNAME)%'
-    password: '%env(EVC_PASSWORD)%'
