@@ -1,4 +1,0 @@
-crayner_authenticate:
-    resource: '@CraynerAuthenticateBundle/Resources/config/routes.yaml'
-    prefix: /security
-
