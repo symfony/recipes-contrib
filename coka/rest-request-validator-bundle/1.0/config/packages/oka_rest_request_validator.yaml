@@ -1,3 +1,0 @@
-oka_rest_request_validator:
-    exception:
-        enabled: true
