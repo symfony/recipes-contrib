@@ -1,5 +1,0 @@
-services:
-    Datana\Intercom\Config\Config:
-        arguments:
-            - '%env(INTERCOM_WORKSPACE_APP_ID)%'
-            - '%env(INTERCOM_IDENTITY_VERIFICATION_SECRET)%'
