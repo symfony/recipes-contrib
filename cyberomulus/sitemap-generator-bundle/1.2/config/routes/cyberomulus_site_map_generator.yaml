@@ -1,2 +1,0 @@
-cyberomulus_sitemapgenerator:
-    resource: '@CyberomulusSiteMapGeneratorBundle/Resources/config/routes.xml'

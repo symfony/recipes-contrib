@@ -1,6 +1,0 @@
-cyberomulus_site_map_generator:
-    defaults_values:
-        # Set the defaults values on url entries (false by default)
-        url:
-            # true for set a datetime at now if is null
-            last_modification_now:         true
