@@ -1,3 +1,0 @@
-dekalee_cdn77:
-    login: "%env(DEKALEE_CDN77_LOGIN)%"
-    password: "%env(DEKALEE_CDN77_PASSWORD)%"
