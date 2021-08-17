@@ -1,3 +1,0 @@
-_import.becklyn_translations:
-    resource: '@BecklynTranslationsBundle/Resources/config/routes.yaml'
-    prefix: /_v/translations/
