@@ -1,8 +1,0 @@
-{
-    "bundles": {
-        "Stof\\DoctrineExtensionsBundle\\StofDoctrineExtensionsBundle": ["all"]
-    },
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    }
-}
