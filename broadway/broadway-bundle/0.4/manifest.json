@@ -1,8 +1,0 @@
-{
-    "bundles": {
-        "Broadway\\Bundle\\BroadwayBundle\\BroadwayBundle": ["all"]
-    },
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    }
-}
