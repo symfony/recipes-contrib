@@ -1,8 +1,0 @@
-{
-    "bundles": {
-        "Assoconnect\\MJMLBundle\\AssoconnectMJMLBundle": ["all"]
-    },
-    "gitignore": [
-        "/templates/mjml/*.html.twig"
-    ]
-}
