@@ -1,8 +1,0 @@
-{
-    "bundles": {
-        "Debril\\RssAtomBundle\\DebrilRssAtomBundle": ["all"]
-    },
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    }
-}

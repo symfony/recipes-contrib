@@ -1,2 +1,0 @@
-rss_atom_bundle:
-    resource: "@DebrilRssAtomBundle/Resources/config/routing.yml"
