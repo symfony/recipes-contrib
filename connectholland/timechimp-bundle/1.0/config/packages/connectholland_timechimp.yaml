@@ -1,2 +1,0 @@
-connectholland_timechimp:
-    api_key: '%env(string:TIMECHIMP_ACCESS_TOKEN)%'
