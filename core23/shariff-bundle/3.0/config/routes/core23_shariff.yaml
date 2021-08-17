@@ -1,3 +1,0 @@
-core23_shariff:
-    resource: '@Core23ShariffBundle/Resources/config/routing/backend.yml'
-    prefix: /shariff

@@ -1,4 +1,0 @@
-core23_facebook:
-    api:
-        app_id:      '%env(FACEBOOK_API_ID)%'
-        app_secret:  '%env(FACEBOOK_API_SECRET)%'

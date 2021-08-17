@@ -1,4 +1,0 @@
-core23_lastfm:
-    api:
-        app_id:         '%env(LASTFM_API_ID)%'
-        shared_secret:  '%env(LASTFM_API_SECRET)%'
