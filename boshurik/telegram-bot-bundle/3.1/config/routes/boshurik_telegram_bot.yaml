@@ -1,3 +1,0 @@
-boshurik_telegram_bot_routing:
-    resource: "@BoShurikTelegramBotBundle/Resources/config/routing.yml"
-    prefix: "/_telegram/%telegram_route_secret%"

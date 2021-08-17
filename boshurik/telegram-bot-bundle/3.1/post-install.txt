@@ -1,6 +1,0 @@
-<bg=blue;fg=white>                            </>
-<bg=blue;fg=white> Next for TelegramBotBundle </>
-<bg=blue;fg=white>                            </>
-
-  * <fg=blue>Set</> <comment>TELEGRAM_BOT_TOKEN</> in your environment
-  * <fg=blue>Read</> the documentation at <comment>https://github.com/BoShurik/TelegramBotBundle</>
