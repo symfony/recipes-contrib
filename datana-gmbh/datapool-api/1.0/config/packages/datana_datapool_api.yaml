@@ -7,3 +7,18 @@ services:
             - '%env(DATAPOOL_API_BASE_URI)%'
             - '%env(DATAPOOL_API_USERNAME)%'
             - '%env(DATAPOOL_API_PASSWORD)%'
+
+    Datana\Datapool\Api\AktenEventLogApi: ~
+    Datana\Datapool\Api\NullAktenEventLogApi: ~
+
+when@prod:
+    services:
+        Datana\Datapool\Api\AktenEventLogApiInterface: '@Datana\Datapool\Api\AktenEventLogApi'
+
+when@dev:
+    services:
+        Datana\Datapool\Api\AktenEventLogApiInterface: '@Datana\Datapool\Api\NullAktenEventLogApi'
+
+when@test:
+    services:
+        Datana\Datapool\Api\AktenEventLogApiInterface: '@Datana\Datapool\Api\NullAktenEventLogApi'
