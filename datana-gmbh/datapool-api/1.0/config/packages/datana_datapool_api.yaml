@@ -11,14 +11,20 @@ services:
     Datana\Datapool\Api\AktenEventLogApi: ~
     Datana\Datapool\Api\NullAktenEventLogApi: ~
 
+    Datana\Datapool\Api\AktenzeichenApi: ~
+    Datana\Datapool\Api\FakeAktenzeichenApi: ~
+
 when@prod:
     services:
         Datana\Datapool\Api\AktenEventLogApiInterface: '@Datana\Datapool\Api\AktenEventLogApi'
+        Datana\Datapool\Api\AktenzeichenApiInterface: '@Datana\Datapool\Api\AktenzeichenApi'
 
 when@dev:
     services:
         Datana\Datapool\Api\AktenEventLogApiInterface: '@Datana\Datapool\Api\NullAktenEventLogApi'
+        Datana\Datapool\Api\AktenzeichenApiInterface: '@Datana\Datapool\Api\FakeAktenzeichenApi'
 
 when@test:
     services:
         Datana\Datapool\Api\AktenEventLogApiInterface: '@Datana\Datapool\Api\NullAktenEventLogApi'
+        Datana\Datapool\Api\AktenzeichenApiInterface: '@Datana\Datapool\Api\FakeAktenzeichenApi'
