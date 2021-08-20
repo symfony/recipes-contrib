@@ -1,0 +1,7 @@
+services:
+    _defaults:
+        autowire: true
+
+    Datana\Bridge\Symfony\Mailer\Sendgrid\Transport\SendgridDynamicTemplateTransportFactory:
+        parent: 'mailer.transport_factory.abstract'
+        tags: ['mailer.transport_factory']
