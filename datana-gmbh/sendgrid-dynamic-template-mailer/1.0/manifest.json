@@ -3,6 +3,6 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "SENDGRID_DSN": "sendgrid+template://KEY@default"
+        "MAILER_DSN": "sendgrid+template://KEY@default"
     }
 }
