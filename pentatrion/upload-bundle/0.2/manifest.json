@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Pentatrion\\UploadBundle\\PentatrionUploadBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
