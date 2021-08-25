@@ -1,8 +1,10 @@
 {
-  "bundles": {
-    "DeloachTech\\TestingBundle\\DeLoachTechTestingBundle": ["all"]
-  },
-  "copy-from-recipe": {
-    "config/": "%CONFIG_DIR%/"
-  }
+    "bundles": {
+        "DeloachTech\\TestingBundle\\DeLoachTechTestingBundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
 }

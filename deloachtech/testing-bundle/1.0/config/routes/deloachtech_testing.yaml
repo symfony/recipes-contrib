@@ -1,2 +1,2 @@
 deloachtech_testing_bundle:
-  resource: '@DeLoachTechTestingBundle/config/routes.yaml'
+    resource: '@DeLoachTechTestingBundle/config/routes.yaml'
