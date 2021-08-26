@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "DeloachTech\\TestingBundle\\DeLoachTechTestingBundle": [
+        "DeLoachTech\\TestingBundle\\DeLoachTechTestingBundle": [
             "all"
         ]
     },
