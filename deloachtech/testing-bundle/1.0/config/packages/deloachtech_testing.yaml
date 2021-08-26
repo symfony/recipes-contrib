@@ -1,4 +1,5 @@
 deloachtech_testing:
+    foo: 'bar'
 
-    bar: true
+
 
