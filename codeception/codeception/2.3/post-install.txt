@@ -1,4 +1,3 @@
-<fg=white;bg=magenta> Bootstrapping Codeception </fg=white;bg=magenta>
 File codeception.yml created        <- global configuration
 tests/unit created                  <- unit tests
 tests/unit.suite.yml written        <- unit tests suite configuration

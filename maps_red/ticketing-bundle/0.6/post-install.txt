@@ -1,7 +1,3 @@
-<bg=blue;fg=white>              </>
-<bg=blue;fg=white> What's next? </>
-<bg=blue;fg=white>              </>
-
 Please update config/packages/doctrine.yaml to link the entities correctly.
   - For this please read the following documentation :
     * https://github.com/Mapsred/TicketingBundle/blob/master/docs/2-setting_up_the_entities.md#b---fill-the-doctrine-configuration

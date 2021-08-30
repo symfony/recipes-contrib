@@ -1,7 +1,3 @@
-<bg=blue;fg=white>                                                </>
-<bg=blue;fg=white> Next: Symfony Health Check Bundle Configuration </>
-<bg=blue;fg=white>                                                </>
-
   *. Add healthcheck firewall to <fg=green>config/security.yaml</> file
 
 <comment>

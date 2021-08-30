@@ -1,5 +1,1 @@
-<bg=blue;fg=white>              </>
-<bg=blue;fg=white> What's next? </>
-<bg=blue;fg=white>              </>
-
   * <fg=blue>Read</> the documentation at <comment>https://github.com/birkof/netopia-mobilpay-bundle</>

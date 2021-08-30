@@ -1,7 +1,3 @@
-<bg=yellow;fg=black>                          </>
-<bg=yellow;fg=black> Using Gearman in Enqueue </>
-<bg=yellow;fg=black>                          </>
-
   * Configure <comment>ENQUEUE_DSN=gearman://example:5555</comment>
     in your <comment>.env</comment> file.
 
