@@ -1,6 +1,2 @@
-<bg=blue;fg=white>                               </>
-<bg=blue;fg=white> Supervisor bundle - next steps</>
-<bg=blue;fg=white>                               </>
-
   * <fg=blue>Configure</> instances in <comment>imper86_supervisor.yaml</> in your <comment>config/packages</> directory
   * <fg=blue>Create supervisor config</> with command <comment>./bin/console i86:supervisor:rebuild</>

@@ -1,7 +1,3 @@
-<bg=yellow;fg=black>                             </>
-<bg=yellow;fg=black> Using Amazon SQS in Enqueue </>
-<bg=yellow;fg=black>                             </>
-
   * Configure <comment>ENQUEUE_DSN=sqs:?key=aKey&secret=aSecret&region=aRegion</comment>
     in your <comment>.env</comment> file.
 

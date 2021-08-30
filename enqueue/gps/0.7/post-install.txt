@@ -1,7 +1,3 @@
-<bg=yellow;fg=black>                                 </>
-<bg=yellow;fg=black> Using Google Pub Sub in Enqueue </>
-<bg=yellow;fg=black>                                 </>
-
   * Configure <comment>ENQUEUE_DSN=gps:</comment> in your <comment>.env</comment> file.
 
   * Also configure the <comment>PUBSUB_EMULATOR_HOST</comment> environment

@@ -1,7 +1,3 @@
-<bg=blue;fg=white>                      </>
-<bg=blue;fg=white> OAuth2 Configuration </>
-<bg=blue;fg=white>                      </>
-
   1. <bg=magenta;fg=white> Provide a key pair </>
     i)   Generate a private/public key pair (preferably with a password): <comment>https://oauth2.thephpleague.com/installation/#generating-public-and-private-keys</>
     ii)  Configure the <info>private_key</> and <info>public_key</> with the respective key locations

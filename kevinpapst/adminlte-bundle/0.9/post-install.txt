@@ -1,7 +1,3 @@
-<bg=blue;fg=white>                              </>
-<bg=blue;fg=white> Next: AdminLTE Configuration </>
-<bg=blue;fg=white>                              </>
-
   * <fg=blue>Finish</> bundle configuration:
     1. Open <comment>config/packages/admin_lte.yaml</> and adjust to your needs
     2. Create a layout file that uses:

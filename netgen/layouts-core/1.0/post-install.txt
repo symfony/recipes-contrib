@@ -1,7 +1,3 @@
-<bg=blue;fg=white>                              </>
-<bg=blue;fg=white> Netgen Layouts configuration </>
-<bg=blue;fg=white>                              </>
-
   * For Netgen Layouts to function, you need to import the database tables
     into your database. Currently, only MySQL is supported. To import the tables,
     use the following command from your project root:

@@ -1,6 +1,2 @@
-<bg=blue;fg=white>                                          </>
-<bg=blue;fg=white> What's next for Karser Recaptcha3 Bundle?   </>
-<bg=blue;fg=white>                                          </>
-
   * <fg=blue>Make sure</> you have proper values in your .env file
   * <fg=blue>Read</> the documentation at <comment>https://github.com/karser/KarserRecaptcha3Bundle</>

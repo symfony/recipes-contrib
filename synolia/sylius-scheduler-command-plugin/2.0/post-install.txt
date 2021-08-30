@@ -1,6 +1,2 @@
-<bg=blue;fg=white>                                      </>
-<bg=blue;fg=white> Synolia SyliusSchedulerCommandPlugin </>
-<bg=blue;fg=white>                                      </>
-
   * <fg=blue>Run</> <fg=green>doctrine:migrations:migrate</> to upgrade database
   * <fg=blue>Add Cron</> on <fg=green>synolia:scheduler-run</> to execute scheduled commands

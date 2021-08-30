@@ -1,7 +1,3 @@
-<bg=blue;fg=white>                       </>
-<bg=blue;fg=white> To finish the install </>
-<bg=blue;fg=white>                       </>
-
   * Your ability is almost ready:
     1. Edit <comment>src/AbilityEventSubscriber</comment> and <info>implement</info> your logic:
 
