@@ -1,7 +1,3 @@
-<bg=blue;fg=white>                           </>
-<bg=blue;fg=white> Service Bus Configuration </>
-<bg=blue;fg=white>                           </>
-
   * Verify and uncomment the configuration in <comment>%CONFIG_DIR%/packages/prooph_service_bus.yaml</>
     to register message handlers
 

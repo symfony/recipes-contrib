@@ -1,7 +1,3 @@
-<bg=blue;fg=white>                                      </>
-<bg=blue;fg=white> Next: OptimusBundle Configuration </>
-<bg=blue;fg=white>                                      </>
-
   * Generate your spark numbers by running <fg=green>php vendor/bin/optimus spark -f env</>
     and configure them in your <fg=green>.env</>
 

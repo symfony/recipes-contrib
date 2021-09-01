@@ -1,0 +1,9 @@
+  <fg=blue;options=bold>Configure</> <fg=blue>your transformations:</>
+    1. Install optional dependencies <comment>composer require symfony/validator liip/imagine-bundle imagine/imagine</>.
+    2. Verify and uncomment the configuration in <comment>%CONFIG_DIR%/packages/pentatrion_upload.yaml</>.
+    3. Create directory with Apache user access on <comment>public/uploads</>.
+
+  <fg=blue>If you have installed </><fg=blue;options=bold>liip/imagine-bundle</><fg=blue>:</>
+
+    1. Complete the configuration of <comment>%CONFIG_DIR%/packages/liip_imagine.yaml</> with your filters.
+    2. Create directory with Apache user access on <comment>public/media</>.

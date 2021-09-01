@@ -1,7 +1,3 @@
-<bg=yellow;fg=black>                        </>
-<bg=yellow;fg=black> Using Kafka in Enqueue </>
-<bg=yellow;fg=black>                        </>
-
   * Configure <comment>ENQUEUE_DSN=kafka://</comment>
     in your <comment>.env</comment> file.
 

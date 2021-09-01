@@ -1,8 +1,0 @@
-{
-    "bundles": {
-        "Scheb\\TwoFactorBundle\\SchebTwoFactorBundle": ["all"]
-    },
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    }
-}

@@ -1,5 +1,3 @@
-  <bg=blue;fg=white>         Getting started using </><bg=blue;fg=white;options=bold>liip/monitor-bundle</><bg=blue;fg=white>          </>
-
   <options=bold>Configure</> the bundle and routes:
     1. You <options=bold>MUST</> verify the configuration in <comment>%CONFIG_DIR%/packages/monitor.yaml</>.
     2. You <options=bold>MAY</> configure additional your checks and reporters, see the README.md for instructions.

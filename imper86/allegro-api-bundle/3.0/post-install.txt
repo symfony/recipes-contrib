@@ -1,7 +1,3 @@
-<bg=blue;fg=white>                         </>
-<bg=blue;fg=white> Allegro API - next steps</>
-<bg=blue;fg=white>                         </>
-
   * <fg=blue>Register your application</> by visiting <comment>https://apps.developer.allegro.pl/</> or <comment>https://apps.developer.allegro.pl.allegrosandbox.pl/</>
   * <fg=blue>Edit .env.local</> with your client id and client secret
   * <fg=blue>Configure</> bundle - <comment>imper86_allegro_api.yaml</> in your <comment>config/packages</> directory

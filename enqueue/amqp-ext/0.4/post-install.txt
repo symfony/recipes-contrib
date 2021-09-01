@@ -1,7 +1,3 @@
-<bg=yellow;fg=black>                           </>
-<bg=yellow;fg=black> Using amqp-ext in Enqueue </>
-<bg=yellow;fg=black>                           </>
-
   * Configure <comment>ENQUEUE_DSN=amqp://user:pass@example.com:10000/%2f</comment>
     in your <comment>.env</comment> file.
 

@@ -1,0 +1,3 @@
+isaac_gaze_symfony:
+    resource: '@ISAACGazeSymfonyBundle/config/routing.xml'
+    prefix: /gaze

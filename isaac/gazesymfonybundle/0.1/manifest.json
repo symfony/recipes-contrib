@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "ISAAC\\GazeSymfonyBundle\\ISAACGazeSymfonyBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "GAZEHUB_URL": "http://localhost:3333",
+        "GAZE_PRIVATE_KEY_CONTENTS": ""
+    }
+}
