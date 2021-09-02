@@ -19,7 +19,7 @@ class Config
      *
      * @return string
      */
-    public function getPublishing()
+    public static function getPublishing()
     {
         return '';
     }
@@ -29,7 +29,7 @@ class Config
      *
      * @return string
      */
-    public function getExplain()
+    public static function getExplain()
     {
         return '';
     }
@@ -39,7 +39,7 @@ class Config
      *
      * @return string
      */
-    public function getNote()
+    public static function getNote()
     {
         return '';
     }
@@ -49,7 +49,7 @@ class Config
      *
      * @return string
      */
-    public function getAppendix()
+    public static function getAppendix()
     {
         return '';
     }
@@ -59,7 +59,7 @@ class Config
      *
      * @return mixed
      */
-    public function getHost()
+    public static function getHost()
     {
         return $_ENV['DOC_HOST'];
     }
