@@ -1,0 +1,7 @@
+Please adapt    config/packages/integrated_content.yaml
+                config/packages/integrated_social.yaml
+                config/packages/integrated_solr.yaml
+                config/packages/integrated_storage.yaml
+                config/packages/integrated_user.yaml
+
+Please run console command: integrated:install to configure integrated databases & assets

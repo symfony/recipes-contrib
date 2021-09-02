@@ -1,0 +1,7 @@
+integrated_social:
+    facebook:
+        app_id: '%env(resolve:FACEBOOK_APP_ID)%'
+        app_secret: '%env(resolve:FACEBOOK_APP_SECRET)%'
+    twitter:
+        consumer_key: '%env(resolve:TWITTER_CONSUMER_KEY)%'
+        consumer_secret: '%env(resolve:TWITTER_CONSUMER_SECRET)%'

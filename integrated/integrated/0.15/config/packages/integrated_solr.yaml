@@ -1,0 +1,9 @@
+integrated_solr:
+    endpoints:
+        default:
+            host: '%env(resolve:SOLR_HOST)%'
+            port: '%env(resolve:SOLR_PORT)%'
+            username: '%env(resolve:SOLR_USERNAME)%'
+            password: '%env(resolve:SOLR_PASSWORD)%'
+            core: '%env(resolve:SOLR_CORE)%'
+            timeout: '%env(resolve:SOLR_TIMEOUT)%'

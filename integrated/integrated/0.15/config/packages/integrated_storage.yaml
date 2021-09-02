@@ -1,0 +1,4 @@
+integrated_storage:
+    resolver:
+        integrated:
+            public: '/files'

@@ -1,0 +1,46 @@
+{
+    "bundles": {
+        "Integrated\\Bundle\\AssetBundle\\IntegratedAssetBundle": ["all"],
+        "Integrated\\Bundle\\ContentBundle\\IntegratedContentBundle": ["all"],
+        "Integrated\\Bundle\\FormTypeBundle\\IntegratedFormTypeBundle": ["all"],
+        "Integrated\\Bundle\\SolrBundle\\IntegratedSolrBundle": ["all"],
+        "Integrated\\Bundle\\StorageBundle\\IntegratedStorageBundle": ["all"],
+        "Integrated\\Bundle\\UserBundle\\IntegratedUserBundle": ["all"],
+        "Integrated\\Bundle\\LockingBundle\\IntegratedLockingBundle": ["all"],
+        "Integrated\\Bundle\\SlugBundle\\IntegratedSlugBundle": ["all"],
+        "Integrated\\Bundle\\ThemeBundle\\IntegratedThemeBundle": ["all"],
+        "Integrated\\Bundle\\PageBundle\\IntegratedPageBundle": ["all"],
+        "Integrated\\Bundle\\BlockBundle\\IntegratedBlockBundle": ["all"],
+        "Integrated\\Bundle\\ChannelBundle\\IntegratedChannelBundle": ["all"],
+        "Integrated\\Bundle\\WebsiteBundle\\IntegratedWebsiteBundle": ["all"],
+        "Integrated\\Bundle\\MenuBundle\\IntegratedMenuBundle": ["all"],
+        "Integrated\\Bundle\\WorkflowBundle\\IntegratedWorkflowBundle": ["all"],
+        "Integrated\\Bundle\\ContentHistoryBundle\\IntegratedContentHistoryBundle": ["all"],
+        "Integrated\\Bundle\\ImageBundle\\IntegratedImageBundle": ["all"],
+        "Integrated\\Bundle\\CommentBundle\\IntegratedCommentBundle": ["all"],
+        "Integrated\\Bundle\\InstallerBundle\\IntegratedInstallerBundle": ["all"],
+        "Integrated\\Bundle\\SocialBundle\\IntegratedSocialBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "composer-scripts": {
+        "cache:clear": "symfony-cmd",
+        "integrated:install": "symfony-cmd"
+    },
+    "env": {
+        "MAILER_FROM": "",
+        "MAILER_NAME": "",
+        "FACEBOOK_APP_ID": "facebook_app_id",
+        "FACEBOOK_APP_SECRET": "facebook_app_secret",
+        "TWITTER_CONSUMER_KEY": "twitter_consumer_key",
+        "TWITTER_CONSUMER_SECRET": "twitter_consumer_secret",
+        "SOLR_HOST": "solr",
+        "SOLR_PORT": "8983",
+        "SOLR_USERNAME": "",
+        "SOLR_PASSWORD": "",
+        "SOLR_CORE": "integrated",
+        "SOLR_TIMEOUT": "200"
+    },
+    "gitignore": []
+}

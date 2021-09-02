@@ -1,0 +1,3 @@
+integrated_user:
+    mailer_from: '%env(resolve:MAILER_FROM)%'
+    mailer_name: '%env(resolve:MAILER_NAME)%'
