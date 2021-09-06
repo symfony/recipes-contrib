@@ -8,6 +8,9 @@ services:
             - '%env(DATAPOOL_API_USERNAME)%'
             - '%env(DATAPOOL_API_PASSWORD)%'
 
+    Datana\Datapool\Api\AktenApi: ~
+    Datana\Datapool\Api\AktenApiInterface: '@Datana\Datapool\Api\AktenApi'
+
     Datana\Datapool\Api\AktenEventLogApi: ~
     Datana\Datapool\Api\NullAktenEventLogApi: ~
 
