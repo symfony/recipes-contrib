@@ -1,3 +1,0 @@
-saas_provider:
-    client_entity: App\Entity\Tenant
-    global_url: app.yourdomain.tld
