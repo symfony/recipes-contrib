@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "ABEL\\Bundle\\keycloakBearerOnlyAdapterBundle": ["all"]
+        "ABEL\\Bundle\\keycloakBearerOnlyAdapterBundle\\ABELkeycloakBearerOnlyAdapterBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
