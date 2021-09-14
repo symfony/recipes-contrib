@@ -1,0 +1,4 @@
+saas_provider:
+    client_entity: App\Entity\Client
+    global_url: app.yourdomain.tld
+    apikey: "Your unused apikey"

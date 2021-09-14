@@ -1,4 +1,4 @@
-  {
+{
     "bundles": {
         "Fluxter\\SaasProviderBundle\\SaasProviderBundle": ["all"]
     },
