@@ -5,4 +5,4 @@
   * Edit the configuration in <fg=green>config/packages/algolia_search.yaml</>
     to start indexing your data.
 
-Documentation: https://www.algolia.com/doc/api-client/symfony/
+Documentation: https://www.algolia.com/doc/framework-integration/symfony/getting-started/algolia-searchbundle/
