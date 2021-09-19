@@ -1,0 +1,48 @@
+{
+    "locks": {
+        "enqueue/enqueue-bundle": {
+            "version": "0.4",
+            "recipe": {
+                "repo": "0.4",
+                "branch": "master",
+                "version": "0.4",
+                "ref": "e6967b803aa3ae4b09fcaab0102d79798726d032"
+            }
+        }
+    },
+    "manifests": {
+        "enqueue/enqueue-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "enqueue/enqueue-bundle",
+            "version": "0.4",
+            "manifest": {
+                "bundles": {
+                    "Enqueue\\Bundle\\EnqueueBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "ENQUEUE_DSN": "null://"
+                }
+            },
+            "files": {
+                "config/packages/enqueue.yaml": {
+                    "contents": "enqueue:\n    transport:\n        default: '%env(resolve:ENQUEUE_DSN)%'\n    client: null\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/test/enqueue.yaml": {
+                    "contents": "enqueue:\n    transport:\n        default: 'null://'\n    client:\n        traceable_producer: true\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "enqueue/enqueue-bundle:0.4@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

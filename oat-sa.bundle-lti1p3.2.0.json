@@ -1,0 +1,48 @@
+{
+    "locks": {
+        "oat-sa/bundle-lti1p3": {
+            "version": "2.0",
+            "recipe": {
+                "repo": "2.0",
+                "branch": "master",
+                "version": "2.0",
+                "ref": "f78f0066e7d021430ae554c44754c0ee16ba1b51"
+            }
+        }
+    },
+    "manifests": {
+        "oat-sa/bundle-lti1p3": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "oat-sa/bundle-lti1p3",
+            "version": "2.0",
+            "manifest": {
+                "bundles": {
+                    "OAT\\Bundle\\Lti1p3Bundle\\Lti1p3Bundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "LTI1P3_SERVICE_ENCRYPTION_KEY": "%generate(secret)%"
+                }
+            },
+            "files": {
+                "config/routes/lti1p3.yaml": {
+                    "contents": "lti1p3_jwks:\n    resource: '@Lti1p3Bundle/Resources/config/routing/jwks.yaml'\n\nlti1p3_message_platform:\n    resource: '@Lti1p3Bundle/Resources/config/routing/message/platform.yaml'\n\nlti1p3_message_tool:\n    resource: '@Lti1p3Bundle/Resources/config/routing/message/tool.yaml'\n\nlti1p3_service_platform:\n    resource: '@Lti1p3Bundle/Resources/config/routing/service/platform.yaml'\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/lti1p3.yaml": {
+                    "contents": "lti1p3:\n    key_chains:\n        platformKey:\n            key_set_name: \"platformSet\"\n            public_key: \"file://%kernel.project_dir%/config/secrets/dev/public.key\"\n            private_key: \"file://%kernel.project_dir%/config/secrets/dev/private.key\"\n            private_key_passphrase: null\n        toolKey:\n            key_set_name: \"toolSet\"\n            public_key: \"file://%kernel.project_dir%/config/secrets/dev/public.key\"\n            private_key: \"file://%kernel.project_dir%/config/secrets/dev/private.key\"\n            private_key_passphrase: null\n    platforms:\n        localPlatform:\n            name: \"Local platform\"\n            audience: \"http://localhost/platform\"\n            oidc_authentication_url: \"http://localhost/lti1p3/oidc/login-authentication\"\n            oauth2_access_token_url: \"http://localhost/lti1p3/auth/platformKey/token\"\n    tools:\n        localTool:\n            name: \"Local tool\"\n            audience: \"http://localhost/tool\"\n            oidc_login_initiation_url: \"http://localhost/lti1p3/oidc/login-initiation\"\n            launch_url: \"http://localhost/lti1p3/tool/launch\"\n            deep_link_launch_url: null\n    registrations:\n        local:\n            client_id: \"client_id\"\n            platform: \"localPlatform\"\n            tool: \"localTool\"\n            deployment_ids:\n                - \"deploymentId1\"\n            platform_key_chain: \"platformKey\"\n            tool_key_chain: \"toolKey\"\n            platform_jwks_url: null\n            tool_jwks_url: null\n\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "oat-sa/bundle-lti1p3:2.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

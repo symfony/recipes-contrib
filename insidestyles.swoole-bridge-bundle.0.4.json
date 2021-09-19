@@ -1,0 +1,44 @@
+{
+    "locks": {
+        "insidestyles/swoole-bridge-bundle": {
+            "version": "0.4",
+            "recipe": {
+                "repo": "0.4",
+                "branch": "master",
+                "version": "0.4",
+                "ref": "402eaa02072db0ea84ab414628e4eb47f5894029"
+            }
+        }
+    },
+    "manifests": {
+        "insidestyles/swoole-bridge-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "insidestyles/swoole-bridge-bundle",
+            "version": "0.4",
+            "manifest": {
+                "bundles": {
+                    "Insidestyles\\SwooleBridgeBundle\\SwooleBridgeBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SWOOLE_SERVER_HOST": "127.0.0.1",
+                    "SWOOLE_SERVER_PORT": "8080"
+                }
+            },
+            "files": {
+                "config/packages/swoole_bridge.yaml": {
+                    "contents": "swoole_bridge:\n    server:\n        host: \"%env(SWOOLE_SERVER_HOST)%\"\n        port: \"%env(SWOOLE_SERVER_PORT)%\"\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "insidestyles/swoole-bridge-bundle:0.4@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

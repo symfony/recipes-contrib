@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "biig/domain": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "280d89cd33040967e09b4b7259fcb404adae1c5f"
+            }
+        }
+    },
+    "manifests": {
+        "biig/domain": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "biig/domain",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Biig\\Component\\Domain\\Integration\\Symfony\\DomainBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/biig_domain.yaml": {
+                    "contents": "biig_domain:\n    # Learn more about configuration in the bundle configuration reference\n    # https://github.com/biig-io/DomainComponent/blob/v1/docs/domain_event_dispatcher.md#configuration-reference\n\n    # Post persist events are *not* activated by default, you need to enable the post persist listeners\n    persist_listeners:\n        # As doctrine supports many connections, you need to enable your connections one by one\n        doctrine: ['default']\n\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "biig/domain:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

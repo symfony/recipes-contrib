@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "macpaw/symfony-health-check-bundle": {
+            "version": "0.1",
+            "recipe": {
+                "repo": "0.1",
+                "branch": "master",
+                "version": "0.1",
+                "ref": "ba4b50177ad3c5e019062ce8b559d0e7e7e1d1eb"
+            }
+        }
+    },
+    "manifests": {
+        "macpaw/symfony-health-check-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "macpaw/symfony-health-check-bundle",
+            "version": "0.1",
+            "manifest": {
+                "bundles": {
+                    "SymfonyHealthCheckBundle\\SymfonyHealthCheckBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/symfony_health_check.yaml": {
+                    "contents": "health_check:\n    resource: '@SymfonyHealthCheckBundle/Resources/config/routes.xml'\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/symfony_health_check.yaml": {
+                    "contents": "symfony_health_check:\n    health_checks:\n        - id: symfony_health_check.status_up_check\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "macpaw/symfony-health-check-bundle:0.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

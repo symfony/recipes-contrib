@@ -1,0 +1,41 @@
+{
+    "locks": {
+        "phpfastcgi/fastcgi-daemon": {
+            "version": "0.11",
+            "recipe": {
+                "repo": "0.11",
+                "branch": "master",
+                "version": "0.11",
+                "ref": "2011211eeb0a0c800ca496b090c65d161f5c3ed6"
+            }
+        }
+    },
+    "manifests": {
+        "phpfastcgi/fastcgi-daemon": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "phpfastcgi/fastcgi-daemon",
+            "version": "0.11",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "src/FastCGIKernel.php": {
+                    "contents": "<?php\n\nnamespace App;\n\nuse PHPFastCGI\\FastCGIDaemon\\Http\\RequestInterface;\nuse PHPFastCGI\\FastCGIDaemon\\KernelInterface as PHPFastCGIKernel;\nuse Symfony\\Component\\HttpKernel\\KernelInterface;\nuse Symfony\\Component\\HttpKernel\\TerminableInterface;\n\nclass FastCGIKernel implements PHPFastCGIKernel\n{\n    private $kernel;\n\n    public function __construct(KernelInterface $kernel)\n    {\n        $this->kernel = $kernel;\n    }\n\n    public function handleRequest(RequestInterface $request)\n    {\n        $this->kernel->boot(); \n\n        $symfonyRequest = $request->getHttpFoundationRequest();\n        $symfonyResponse = $this->kernel->handle($symfonyRequest);\n\n        if ($this->kernel instanceof TerminableInterface) {\n            $this->kernel->terminate($symfonyRequest, $symfonyResponse);\n        }\n\n        return $symfonyResponse;\n    }\n}\n\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/fastcgi_daemon.yaml": {
+                    "contents": "services:\n    App\\FastCGIKernel:\n        autowire: true\n\n    PHPFastCGI\\FastCGIDaemon\\Driver\\DriverContainer: null\n    PHPFastCGI\\FastCGIDaemon\\Command\\DaemonRunCommand:\n        arguments: ['@App\\FastCGIKernel', '@PHPFastCGI\\FastCGIDaemon\\Driver\\DriverContainer', 'fastcgi-daemon:run']\n        tags:\n            - { name: console.command }\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "phpfastcgi/fastcgi-daemon:0.11@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

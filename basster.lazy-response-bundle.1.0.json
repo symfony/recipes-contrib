@@ -1,0 +1,35 @@
+{
+    "locks": {
+        "basster/lazy-response-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "eb9db09d43c64894b6f4d4ab04ed90cbe1197c9b"
+            }
+        }
+    },
+    "manifests": {
+        "basster/lazy-response-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "basster/lazy-response-bundle",
+            "version": "1.0",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/basster_lazy_response.yaml": {
+                    "contents": "services:\n    _defaults:\n        public: false\n        autowire: true\n        autoconfigure: true\n\n    # Enable DTO handler.\n    # Comment or remove, if you don't want to use the default.\n    # See any of the default handlers for reference.\n    Basster\\LazyResponseBundle\\Response\\Handler\\RedirectResponseHandler: null\n\n    # Requires twig\n    # Basster\\LazyResponseBundle\\Response\\Handler\\TwigResponseHandler: null\n\n    # Requires symfony/serializer\n    # Basster\\LazyResponseBundle\\Response\\Handler\\JsonSerializeResponseHandler: null\n\n    # Feel free to add your own handlers:\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "basster/lazy-response-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

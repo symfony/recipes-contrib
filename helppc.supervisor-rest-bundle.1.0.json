@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "helppc/supervisor-rest-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "ded2189f8ad3ce92113da2db2c5ab1bd91af69fc"
+            }
+        }
+    },
+    "manifests": {
+        "helppc/supervisor-rest-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "helppc/supervisor-rest-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "HelpPC\\Bundle\\SupervisorRestBundle\\SupervisorRestBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/helppc_supervisor_rest.yaml": {
+                    "contents": "supervisor:\n    resource: '@SupervisorRestBundle/Resources/config/routing.xml'\n    prefix:   /api/supervisor\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/helppc_supervisor_rest.yaml": {
+                    "contents": "supervisor_rest:\n    default_environment: dev\n    servers:\n        dev:\n            application:\n                scheme: http\n                host: localhost\n                port: 9006\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "helppc/supervisor-rest-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

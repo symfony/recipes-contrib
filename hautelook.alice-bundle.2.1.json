@@ -1,0 +1,52 @@
+{
+    "locks": {
+        "hautelook/alice-bundle": {
+            "version": "2.1",
+            "recipe": {
+                "repo": "2.1",
+                "branch": "master",
+                "version": "2.1",
+                "ref": "d515775bf9a8ae4171adacbb116760c02f30c858"
+            }
+        }
+    },
+    "manifests": {
+        "hautelook/alice-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "hautelook/alice-bundle",
+            "version": "2.1",
+            "manifest": {
+                "bundles": {
+                    "Hautelook\\AliceBundle\\HautelookAliceBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "fixtures/": "fixtures/"
+                }
+            },
+            "files": {
+                "config/packages/dev/hautelook_alice.yaml": {
+                    "contents": "hautelook_alice:\n    fixtures_path: fixtures\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/test/hautelook_alice.yaml": {
+                    "contents": "imports:\n    - { resource: ../dev/hautelook_alice.yaml }\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "fixtures/.gitignore": {
+                    "contents": "",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "hautelook/alice-bundle:2.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

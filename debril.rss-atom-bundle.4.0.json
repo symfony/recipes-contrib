@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "debril/rss-atom-bundle": {
+            "version": "4.0",
+            "recipe": {
+                "repo": "4.0",
+                "branch": "master",
+                "version": "4.0",
+                "ref": "2c23ed747eda9f4c13f5e7eb55fffa1091fdd505"
+            }
+        }
+    },
+    "manifests": {
+        "debril/rss-atom-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "debril/rss-atom-bundle",
+            "version": "4.0",
+            "manifest": {
+                "bundles": {
+                    "Debril\\RssAtomBundle\\DebrilRssAtomBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/rss_atom.yaml": {
+                    "contents": "rss_atom_bundle:\n    resource: \"@DebrilRssAtomBundle/Resources/config/routing.yml\"\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/rss_atom.yaml": {
+                    "contents": "debril_rss_atom:\n    # switch to true if you need to set cache-control: private\n    private: false\n    # switch to true if you need to always send status 200\n    force_refresh: false\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "debril/rss-atom-bundle:4.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

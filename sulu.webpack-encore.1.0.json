@@ -1,0 +1,43 @@
+{
+    "locks": {
+        "sulu/webpack-encore": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "03949e142faeaaefbdd442bbc1ccd374ab8048da"
+            }
+        }
+    },
+    "manifests": {
+        "sulu/webpack-encore": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "sulu/webpack-encore",
+            "version": "1.0",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "copy-from-package": {
+                    "assets/": "assets/"
+                },
+                "gitignore": [
+                    "node_modules/",
+                    "npm-debug.log",
+                    "yarn-error.log"
+                ]
+            },
+            "files": {
+                "config/packages/assets.yaml": {
+                    "contents": "framework:\n    assets:\n        packages:\n            website:\n                json_manifest_path: '%kernel.project_dir%/public/build/website/manifest.json'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "sulu/webpack-encore:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

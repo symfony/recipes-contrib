@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "sonata-project/notification-bundle": {
+            "version": "3.4",
+            "recipe": {
+                "repo": "3.4",
+                "branch": "master",
+                "version": "3.4",
+                "ref": "222a1549f627f9faef39c0dd3cba1194a5175c00"
+            }
+        }
+    },
+    "manifests": {
+        "sonata-project/notification-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "sonata-project/notification-bundle",
+            "version": "3.4",
+            "manifest": {
+                "bundles": {
+                    "Sonata\\NotificationBundle\\SonataNotificationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sonata_notification.yaml": {
+                    "contents": "sonata_notification:\n    consumers:\n        register_default: false\n    admin:\n        enabled: false\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "sonata-project/notification-bundle:3.4@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

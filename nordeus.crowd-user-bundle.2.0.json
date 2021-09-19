@@ -1,0 +1,49 @@
+{
+    "locks": {
+        "nordeus/crowd-user-bundle": {
+            "version": "2.0",
+            "recipe": {
+                "repo": "2.0",
+                "branch": "master",
+                "version": "2.0",
+                "ref": "cf39e8a9ebad184c8478c234c8be3b3193ea7238"
+            }
+        }
+    },
+    "manifests": {
+        "nordeus/crowd-user-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "nordeus/crowd-user-bundle",
+            "version": "2.0",
+            "manifest": {
+                "bundles": {
+                    "Nordeus\\CrowdUserBundle\\NordeusCrowdUserBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "NORDEUS_CROWD_APPLICATION_NAME": "crowd_application_name",
+                    "NORDEUS_CROWD_APPLICATION_PASSWORD": "crowd_application_password"
+                }
+            },
+            "files": {
+                "config/routes/nordeus_crowd_user.yaml": {
+                    "contents": "nordeus_crowd_user:\n    resource: \"@NordeusCrowdUserBundle/Resources/config/routing.yaml\"\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/nordeus_crowd_user.yaml": {
+                    "contents": "# https://github.com/Nordeus/CrowdUserBundle#4-configure-parameters\nnordeus_crowd_user:\n    crowd_application_name: '%env(NORDEUS_CROWD_APPLICATION_NAME)%'\n    crowd_application_password: '%env(NORDEUS_CROWD_APPLICATION_PASSWORD)%'\n    crowd_service_url: http://crowd.your_domain.com:8095\n    sso_cookie_domain: your_domain.com\n    roles_to_groups:\n        ROLE_USER: [ users ]\n        ROLE_ADMIN: [ admins, superadmins ]\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "nordeus/crowd-user-bundle:2.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

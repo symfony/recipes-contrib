@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "knplabs/dictionary-bundle": {
+            "version": "2.0",
+            "recipe": {
+                "repo": "2.0",
+                "branch": "master",
+                "version": "2.0",
+                "ref": "fdf88f39d4c2ad0197bfeff8af4539220c4ce8d3"
+            }
+        }
+    },
+    "manifests": {
+        "knplabs/dictionary-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "knplabs/dictionary-bundle",
+            "version": "2.0",
+            "manifest": {
+                "bundles": {
+                    "Knp\\DictionaryBundle\\KnpDictionaryBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/knp_dictionary.yaml": {
+                    "contents": "knp_dictionary:\n    dictionaries: []\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "knplabs/dictionary-bundle:2.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

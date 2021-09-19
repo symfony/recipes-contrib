@@ -1,0 +1,91 @@
+{
+    "locks": {
+        "enhavo/app-bundle": {
+            "version": "0.9",
+            "recipe": {
+                "repo": "0.9",
+                "branch": "master",
+                "version": "0.9",
+                "ref": "293c9bf6865e324e7af3a204b8b7ffedbd3dee74"
+            }
+        }
+    },
+    "manifests": {
+        "enhavo/app-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "enhavo/app-bundle",
+            "version": "0.9",
+            "manifest": {
+                "bundles": {
+                    "Enhavo\\Bundle\\AppBundle\\EnhavoAppBundle": [
+                        "all"
+                    ]
+                },
+                "container": {
+                    "locale": "en"
+                },
+                "env": {
+                    "MAILER_FROM": "no-reply@email.com",
+                    "MAILER_NAME": "enhavo",
+                    "MAILER_TO": "my@email.com"
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "assets/": "assets/",
+                    "public/": "%PUBLIC_DIR%/",
+                    "tsconfig.json": "tsconfig.json"
+                },
+                "gitignore": [
+                    "public/build/enhavo/*",
+                    "public/build/theme/*",
+                    "public/js/fos_routes.js"
+                ]
+            },
+            "files": {
+                "public/build/.gitignore": {
+                    "contents": "",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/routes/enhavo_app.yaml": {
+                    "contents": "enhavo_app_admin:\n    resource: \"@EnhavoAppBundle/Resources/config/routes/admin/*\"\n    prefix: /admin\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/enhavo_app.yaml": {
+                    "contents": "enhavo_app:\n    mailer:\n        defaults:\n            from: '%env(resolve:MAILER_FROM)%'\n            name: '%env(resolve:MAILER_NAME)%'\n            to: '%env(resolve:MAILER_TO)%'\n    menu:\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "assets/services/enhavo/enhavo_app.yaml": {
+                    "contents": "imports:\n    -\n        path: '@enhavo/app/services/*'\n\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "assets/theme/base.js": {
+                    "contents": "import './styles/base.scss';\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "assets/theme/images/.gitignore": {
+                    "contents": "",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "assets/theme/styles/base.scss": {
+                    "contents": "",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "tsconfig.json": {
+                    "contents": "{\n    \"compilerOptions\": {\n        \"lib\": [ \"es2015\", \"dom\" ],\n        \"module\": \"amd\",\n        \"target\": \"es5\",\n        \"allowJs\": true,\n        \"noImplicitAny\": true,\n        \"suppressImplicitAnyIndexErrors\": true,\n        \"moduleResolution\": \"node\",\n        \"sourceMap\": true,\n        \"experimentalDecorators\": true\n    },\n    \"include\": [\n        \"./assets/**/*\"\n    ]\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "enhavo/app-bundle:0.9@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "locks": {
+        "phpzlc/upload-business": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "0ee83366aa91f01f299c2742dd44cac78834ad93"
+            }
+        }
+    },
+    "manifests": {
+        "phpzlc/upload-business": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "phpzlc/upload-business",
+            "version": "1.0",
+            "manifest": {
+                "copy-from-package": {
+                    "routing/": "config/routing/",
+                    "Business/": "src/Business/",
+                    "Controller/": "src/Controller/",
+                    "public/": "public/",
+                    "Document/": "src/Document/"
+                }
+            },
+            "files": [],
+            "origin": "phpzlc/upload-business:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

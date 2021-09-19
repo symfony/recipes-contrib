@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "odolbeau/phone-number-bundle": {
+            "version": "3.0",
+            "recipe": {
+                "repo": "3.0",
+                "branch": "master",
+                "version": "3.0",
+                "ref": "4388686329b81291918a948cd42891829fb1de71"
+            }
+        }
+    },
+    "manifests": {
+        "odolbeau/phone-number-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "odolbeau/phone-number-bundle",
+            "version": "3.0",
+            "manifest": {
+                "bundles": {
+                    "Misd\\PhoneNumberBundle\\MisdPhoneNumberBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/misd_phone_number.yaml": {
+                    "contents": "# To persist libphonenumber\\PhoneNumber objects, add the Misd\\PhoneNumberBundle\\Doctrine\\DBAL\\Types\\PhoneNumberType mapping to your application's config.\n# This requires: doctrine/doctrine-bundle\n#doctrine:\n#    dbal:\n#        types:\n#            phone_number: Misd\\PhoneNumberBundle\\Doctrine\\DBAL\\Types\\PhoneNumberType\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "odolbeau/phone-number-bundle:3.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

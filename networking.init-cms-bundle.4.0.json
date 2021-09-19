@@ -1,0 +1,74 @@
+{
+    "locks": {
+        "networking/init-cms-bundle": {
+            "version": "4.0",
+            "recipe": {
+                "repo": "4.0",
+                "branch": "master",
+                "version": "4.0",
+                "ref": "bfda6b9bc4c321733c085d065a74aaaca0997ed7"
+            }
+        }
+    },
+    "manifests": {
+        "networking/init-cms-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "networking/init-cms-bundle",
+            "version": "4.0",
+            "manifest": {
+                "bundles": {
+                    "Networking\\InitCmsBundle\\NetworkingInitCmsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "serializer/": "%CONFIG_DIR%/serializer/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "env": {
+                    "LOCALE": "en",
+                    "DATABASE_DRIVER": "mysql"
+                },
+                "composer-scripts": {
+                    "ckeditor:install --clear=drop": "symfony-cmd"
+                }
+            },
+            "files": {
+                "src/Entity/Page.php": {
+                    "contents": "<?php\nnamespace App\\Entity;\n\nuse Doctrine\\Common\\Collections\\ArrayCollection;\nuse Gedmo\\Mapping\\Annotation as Gedmo;\nuse Networking\\InitCmsBundle\\Entity\\BasePage;\nuse Doctrine\\ORM\\Mapping as ORM;\nuse Networking\\InitCmsBundle\\Model\\ContentRoute;\n\n/**\n *\n * @author Yorkie Chadwick <y.chadwick@networking.ch>\n *\n * @ORM\\Entity\n * @ORM\\Table(name=\"page\",\n *     uniqueConstraints={@ORM\\UniqueConstraint(name=\"path_idx\", columns={\n *         \"path\", \"locale\"\n *     })}\n * )\n * @ORM\\HasLifecycleCallbacks()\n */\nclass Page extends BasePage{\n\n    /**\n     * @var integer $id\n     *\n     * @ORM\\Column(type=\"integer\")\n     * @ORM\\Id\n     * @ORM\\GeneratedValue(strategy=\"IDENTITY\")\n     */\n    protected $id;\n\n    /**\n     * @var ContentRoute\n     * @ORM\\OneToOne(\n     *      targetEntity = \"Networking\\InitCmsBundle\\Entity\\ContentRoute\",\n     *      cascade={\"remove\", \"persist\"}\n     * )\n     * @ORM\\JoinColumn(name=\"content_route_id\", referencedColumnName=\"id\")\n     */\n    protected $contentRoute;\n\n    /**\n     * @ORM\\OneToMany(targetEntity=\"Networking\\InitCmsBundle\\Entity\\LayoutBlock\",\n     *      mappedBy=\"page\",\n     *      cascade={\"remove\", \"persist\"},\n     *      orphanRemoval=true\n     * )\n     * @ORM\\OrderBy({\"sortOrder\" = \"ASC\"})\n     */\n    protected $layoutBlock;\n\n    /**\n     * @ORM\\OneToMany(targetEntity=\"Networking\\InitCmsBundle\\Entity\\MenuItem\",\n     *      mappedBy=\"page\",\n     *      cascade={\"remove\"},\n     *      orphanRemoval=true\n     * )\n     */\n    protected $menuItem;\n\n    /**\n     * @ORM\\OneToMany(targetEntity=\"Networking\\InitCmsBundle\\Entity\\PageSnapshot\",\n     *      mappedBy=\"page\",\n     *      cascade={\"remove\"},\n     *      orphanRemoval=true\n     * )\n     * @ORM\\OrderBy({\"version\" = \"DESC\"})\n     */\n    protected $snapshots;\n\n    /**\n     * @ORM\\OneToMany(targetEntity=\"App\\Entity\\Page\",\n     *      mappedBy=\"parent\"\n     * )\n     */\n    protected $children;\n\n    /**\n     * @var Page\n     * @ORM\\ManyToOne(targetEntity=\"App\\Entity\\Page\" )\n     * @ORM\\JoinColumn(name=\"alias_id\", referencedColumnName=\"id\", onDelete=\"SET NULL\")\n     */\n    protected $alias;\n\n    /**\n     * @var Page\n     * @ORM\\ManyToOne(targetEntity=\"App\\Entity\\Page\", inversedBy=\"children\", cascade=\"persist\" )\n     * @ORM\\JoinColumn(name=\"parent_id\", referencedColumnName=\"id\", onDelete=\"SET NULL\")\n     * @Gedmo\\TreeParent\n     */\n    protected $parent;\n\n    /**\n     * @var ArrayCollection $originals\n     * @ORM\\ManyToMany(\n     *      targetEntity=\"App\\Entity\\Page\",\n     *      inversedBy=\"translations\",\n     *      cascade={\"persist\"}\n     * )\n     * @ORM\\JoinTable(\n     *      name=\"page_translation\",\n     *      joinColumns={\n     *          @ORM\\JoinColumn(name=\"translation_id\", referencedColumnName=\"id\")\n     *      },\n     *      inverseJoinColumns={\n     *          @ORM\\JoinColumn(name=\"original_id\", referencedColumnName=\"id\")\n     *      }\n     * )\n     */\n    protected $originals;\n\n    /**\n     * @var ArrayCollection $translations\n     * @ORM\\ManyToMany(\n     *      targetEntity=\"App\\Entity\\Page\",\n     *      mappedBy=\"originals\",\n     *      cascade={\"persist\"}\n     * )\n     */\n    protected $translations;\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "src/Entity/User.php": {
+                    "contents": "<?php\n\nnamespace App\\Entity;\n\nuse Networking\\InitCmsBundle\\Entity\\BaseUser;\nuse Doctrine\\ORM\\Mapping as ORM;\n\n/**\n * User\n *\n * @ORM\\Table(name=\"fos_user_user\")\n * @ORM\\Entity()\n */\nclass User extends BaseUser{\n\n    /**\n     * @var int\n     *\n     * @ORM\\Column(name=\"id\", type=\"integer\")\n     * @ORM\\Id\n     * @ORM\\GeneratedValue(strategy=\"AUTO\")\n     */\n    protected $id;\n\n    /**\n     * @var \\Networking\\InitCmsBundle\\Model\\AdminSettings\n     * @ORM\\Column(name=\"admin_settings\", type=\"object\", nullable=true)\n     */\n    protected $adminSettings;\n\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/routes/networking_init_cms.yaml": {
+                    "contents": "networking_init_cms:\n    resource: \"@NetworkingInitCmsBundle/Resources/config/routing/routing.yaml\"\n    prefix:   /\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/dev/networking_init_cms.yaml": {
+                    "contents": "networking_init_cms:\n    cache:\n        activate: false\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/networking_init_cms.yaml": {
+                    "contents": "imports:\n    - { resource: \"@NetworkingInitCmsBundle/Resources/config/cms/doctrine.yaml\" }\n    - { resource: \"@NetworkingInitCmsBundle/Resources/config/cms/fos_ck_editor.yaml\" }\n    - { resource: \"@NetworkingInitCmsBundle/Resources/config/cms/fos_user.yaml\" }\n    - { resource: \"@NetworkingInitCmsBundle/Resources/config/cms/mopa_bootstrap.yaml\" }\n    - { resource: \"@NetworkingInitCmsBundle/Resources/config/cms/oneup_flysystem.yaml\" }\n    - { resource: \"@NetworkingInitCmsBundle/Resources/config/cms/oneup_uploader.yaml\" }\n    - { resource: \"@NetworkingInitCmsBundle/Resources/config/cms/sonata_admin.yaml\" }\n    - { resource: \"@NetworkingInitCmsBundle/Resources/config/cms/sonata_block.yaml\" }\n    - { resource: \"@NetworkingInitCmsBundle/Resources/config/cms/sonata_core.yaml\" }\n    - { resource: \"@NetworkingInitCmsBundle/Resources/config/cms/sonata_doctrine_admin.yaml\" }\n    - { resource: \"@NetworkingInitCmsBundle/Resources/config/cms/sonata_formatter.yaml\" }\n    - { resource: \"@NetworkingInitCmsBundle/Resources/config/cms/sonata_media.yaml\" }\n    - { resource: \"@NetworkingInitCmsBundle/Resources/config/cms/sonata_notification.yaml\" }\n    - { resource: \"@NetworkingInitCmsBundle/Resources/config/cms/sonata_user.yaml\" }\n    - { resource: \"@NetworkingInitCmsBundle/Resources/config/cms/stof_doctrine_extensions.yaml\" }\n    - { resource: \"@NetworkingInitCmsBundle/Resources/config/cms/symfony_cmf_routing_extra.yaml\" }\n# Default security configuration\n#    - { resource: \"@NetworkingInitCmsBundle/Resources/config/cms/security.yaml\" }\n\n# Set up the serializer to read config file for App Page and User entities\njms_serializer:\n    metadata:\n        directories:\n            NetworkingSonataMediaBundle:\n                namespace_prefix: \"Sonata\\\\MediaBundle\"\n                path: \"@NetworkingInitCmsBundle/Resources/config/serializer\"\n            app:\n                namespace_prefix: \"App\"\n                path: \"%kernel.project_dir%/config/serializer\"\n\n\nnetworking_init_cms:\n    #Base classes to be used for the page and user entities\n    class:\n        page: \"App\\\\Entity\\\\Page\"\n        user: \"App\\\\Entity\\\\User\"\n\n    # Bootstrap some template settings to get you started\n    templates:\n        'app_single_column':\n            template: \"@NetworkingInitCms/sandbox/page/one_column.html.twig\"\n            name: \"Single Column\"\n            icon: \"bundles/networkinginitcms/img/template_header_one_column.png\"\n            zones:\n                - { name: header, class: 'col-md-12' }\n                - { name: main_content, class: 'col-md-12'}\n        'app_two_column':\n            template: \"@NetworkingInitCms/sandbox/page/two_column.html.twig\"\n            name: \"Two Column\"\n            icon: \"bundles/networkinginitcms/img/template_header_two_column.png\"\n            zones:\n                - { name: header , class: 'col-md-12'}\n                - { name: left , class: 'col-md-3'}\n                - { name: right , class: 'col-md-9'}\n    cache:\n        activate: true #enable for product, false in dev config\n\n    # For more information regarding configuration of the CMS Bundle, please visit the following documentation\n    # https://github.com/networking/init-cms-bundle/blob/master/doc/configuration.md\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "serializer/Entity.Page.yaml": {
+                    "contents": "App\\Entity\\Page:\n    properties:\n        id:\n            type: integer\n        createdAt:\n            type: DateTime\n        updatedAt:\n            type: DateTime\n        pageName:\n            type: string\n        metaTitle:\n            type: string\n        url:\n            type: string\n        path:\n            type: string\n        level:\n            type: integer\n        metaKeyword:\n            type: string\n        metaDescription:\n            type: string\n        parent:\n            accessor:\n                getter: convertParentToInteger\n            type: integer\n        alias:\n            accessor:\n                getter: convertAliasToInteger\n            type: integer\n        parents:\n            accessor:\n                getter: convertParentsToArray\n            type: array\n        children:\n            accessor:\n                getter: convertChildrenToIntegerArray\n            type: array\n        allChildren:\n            exclude: true\n        layoutBlock:\n            type: ArrayCollection<Networking\\InitCmsBundle\\Entity\\LayoutBlock>\n        menuItem:\n            exclude: true\n            accessor:\n                getter: prepareMenuItemsForSerialization\n            type: ArrayCollection<Networking\\InitCmsBundle\\Entity\\MenuItem>\n        isHome:\n            type: boolean\n        status:\n            type: string\n        visibility:\n            type: string\n        activeFrom:\n            type: DateTime\n        activeTo:\n            type: DateTime\n        locale:\n            type: string\n        translations:\n            accessor:\n                getter: convertTranslationsToIntegerArray\n            type: array\n        originals:\n            accessor:\n                getter: convertOriginalsToIntegerArray\n            type: array\n        snapshots:\n            exclude: true\n        snapshotClassType:\n            type: string\n        oldTitle:\n            exclude: true\n        tags:\n            exclude: true\n        contentRoute:\n            exclude: true\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "networking/init-cms-bundle:4.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

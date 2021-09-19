@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "monsieurbiz/sylius-alert-message-plugin": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "9eafe2a0e8d63693fe2b3b93806d10bd8e18294a"
+            }
+        }
+    },
+    "manifests": {
+        "monsieurbiz/sylius-alert-message-plugin": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "monsieurbiz/sylius-alert-message-plugin",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "MonsieurBiz\\SyliusAlertMessagePlugin\\MonsieurBizSyliusAlertMessagePlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/monsieurbiz_sylius_alert_message_plugin.yaml": {
+                    "contents": "monsieurbiz_sylius_alert_message_admin:\n    resource: \"@MonsieurBizSyliusAlertMessagePlugin/Resources/config/routing/admin.yaml\"\n    prefix: /admin\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/monsieurbiz_sylius_alert_message_plugin.yaml": {
+                    "contents": "imports:\n    - { resource: \"@MonsieurBizSyliusAlertMessagePlugin/Resources/config/config.yaml\" }\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "monsieurbiz/sylius-alert-message-plugin:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

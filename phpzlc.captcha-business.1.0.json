@@ -1,0 +1,32 @@
+{
+    "locks": {
+        "phpzlc/captcha-business": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "a2f09f8cfbc645246d1b156f11459a1b37365eeb"
+            }
+        }
+    },
+    "manifests": {
+        "phpzlc/captcha-business": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "phpzlc/captcha-business",
+            "version": "1.0",
+            "manifest": {
+                "copy-from-package": {
+                    "Business/": "src/Business/",
+                    "Controller/": "src/Controller/",
+                    "routing/": "config/routing/",
+                    "Document/": "src/Document/"
+                }
+            },
+            "files": [],
+            "origin": "phpzlc/captcha-business:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

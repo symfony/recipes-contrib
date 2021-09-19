@@ -1,0 +1,50 @@
+{
+    "locks": {
+        "tienvx/mbt-bundle": {
+            "version": "1.15",
+            "recipe": {
+                "repo": "1.15",
+                "branch": "master",
+                "version": "1.15",
+                "ref": "c3dee2d3577c6878d256536e85dbed9be529e354"
+            }
+        }
+    },
+    "manifests": {
+        "tienvx/mbt-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "tienvx/mbt-bundle",
+            "version": "1.15",
+            "manifest": {
+                "bundles": {
+                    "Tienvx\\Bundle\\MbtBundle\\TienvxMbtBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "var/": "%VAR_DIR%/"
+                },
+                "env": {
+                    "EMAIL_FROM": "from@example.com",
+                    "ADMIN_URL": "http://localhost"
+                }
+            },
+            "files": {
+                "var/storage/screenshots/.gitignore": {
+                    "contents": "",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/tienvx_mbt.yaml": {
+                    "contents": "tienvx_mbt:\n    email_from: '%env(EMAIL_FROM)%'\n    admin_url: '%env(ADMIN_URL)%'\n\nflysystem:\n    storages:\n        mbt.storage:\n            adapter: 'local'\n            options:\n                directory: \"%kernel.project_dir%/var/storage/screenshots\"\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "tienvx/mbt-bundle:1.15@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

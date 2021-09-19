@@ -1,0 +1,57 @@
+{
+    "locks": {
+        "contao/core-bundle": {
+            "version": "4.6",
+            "recipe": {
+                "repo": "4.6",
+                "branch": "master",
+                "version": "4.6",
+                "ref": "f92ce23cb3d97f3f69d2fd448fb3dde0023a6b90"
+            }
+        }
+    },
+    "manifests": {
+        "contao/core-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "contao/core-bundle",
+            "version": "4.6",
+            "manifest": {
+                "bundles": {
+                    "Contao\\CoreBundle\\ContaoCoreBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "composer-scripts": {
+                    "contao:install %PUBLIC_DIR%": "symfony-cmd",
+                    "contao:symlinks %PUBLIC_DIR%": "symfony-cmd"
+                },
+                "gitignore": [
+                    "/assets/",
+                    "/files/",
+                    "/public/assets",
+                    "/public/files/",
+                    "/public/share/",
+                    "/public/system/",
+                    "/system/*",
+                    "!/system/config/",
+                    "/system/config/localconfig.php",
+                    "/system/config/tcpdf.php",
+                    "/system/modules/*/.skip"
+                ]
+            },
+            "files": {
+                "config/packages/contao_core.yaml": {
+                    "contents": "# See https://github.com/contao/core-bundle\ncontao:\n    web_dir: \"%kernel.project_dir%/public\"\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "contao/core-bundle:4.6@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

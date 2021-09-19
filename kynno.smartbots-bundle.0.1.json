@@ -1,0 +1,44 @@
+{
+    "locks": {
+        "kynno/smartbots-bundle": {
+            "version": "0.1",
+            "recipe": {
+                "repo": "0.1",
+                "branch": "master",
+                "version": "0.1",
+                "ref": "fce1ecbb1fef50d90cf4415538f063838eb4c4c8"
+            }
+        }
+    },
+    "manifests": {
+        "kynno/smartbots-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "kynno/smartbots-bundle",
+            "version": "0.1",
+            "manifest": {
+                "bundles": {
+                    "Kynno\\SmartBotsBundle\\SmartBotsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "BOT_KYNNO_SECRET": "pwd",
+                    "SMARTBOTS_API_KEY": "default_api_key"
+                }
+            },
+            "files": {
+                "config/packages/smartbots.yaml": {
+                    "contents": "kynno_smartbots:\n    api_key: \"%env(SMARTBOTS_API_KEY)%\"\n    bots:\n        Kynno:\n            name: \"KynnoSystem Resident\"\n            botSecret: \"%env(BOT_KYNNO_SECRET)%\"\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "kynno/smartbots-bundle:0.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

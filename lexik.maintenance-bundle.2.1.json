@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "lexik/maintenance-bundle": {
+            "version": "2.1",
+            "recipe": {
+                "repo": "2.1",
+                "branch": "master",
+                "version": "2.1",
+                "ref": "c7b1a155b60c553d2c6e272d210e8614c89a7e5c"
+            }
+        }
+    },
+    "manifests": {
+        "lexik/maintenance-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "lexik/maintenance-bundle",
+            "version": "2.1",
+            "manifest": {
+                "bundles": {
+                    "Lexik\\Bundle\\MaintenanceBundle\\LexikMaintenanceBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/lexik_maintenance.yaml": {
+                    "contents": "lexik_maintenance:\n    driver:\n        class: '\\Lexik\\Bundle\\MaintenanceBundle\\Drivers\\FileDriver'\n        options: { file_path: '%kernel.project_dir%/var/cache/lock' }\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "lexik/maintenance-bundle:2.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

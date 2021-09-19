@@ -1,0 +1,38 @@
+{
+    "locks": {
+        "bref/symfony-bridge": {
+            "version": "0.1",
+            "recipe": {
+                "repo": "0.1",
+                "branch": "master",
+                "version": "0.1",
+                "ref": "073e577186ef96e4f26df1f8a3dc14a48826d364"
+            }
+        }
+    },
+    "manifests": {
+        "bref/symfony-bridge": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "bref/symfony-bridge",
+            "version": "0.1",
+            "manifest": {
+                "copy-from-recipe": {
+                    "serverless.yaml": "serverless.yml"
+                },
+                "gitignore": [
+                    "/.serverless/"
+                ]
+            },
+            "files": {
+                "serverless.yaml": {
+                    "contents": "# Read the documentation at https://www.serverless.com/framework/docs/providers/aws/guide/serverless.yml/\nservice: symfony\n\nprovider:\n    name: aws\n    # The AWS region in which to deploy (us-east-1 is the default)\n    region: us-east-1\n    # The stage of the application, e.g. dev, production, staging\u2026 ('dev' is the default)\n    stage: dev\n    runtime: provided.al2\n    environment:\n        # Symfony environment variables\n        APP_ENV: prod\n\nplugins:\n    - ./vendor/bref/bref\n\nfunctions:\n    # This function runs the Symfony website/API\n    web:\n        handler: public/index.php\n        timeout: 28 # in seconds (API Gateway has a timeout of 29 seconds)\n        layers:\n            - ${bref:layer.php-80-fpm}\n        events:\n            - httpApi: '*'\n    # This function let us run console commands in Lambda\n    console:\n        handler: bin/console\n        timeout: 120 # in seconds\n        layers:\n            - ${bref:layer.php-80} # PHP\n            - ${bref:layer.console} # The \"console\" layer\n\npackage:\n    patterns:\n        # Excluded files and folders for deployment\n        - '!assets/**'\n        - '!node_modules/**'\n        - '!public/build/**'\n        - '!tests/**'\n        - '!var/**'\n        # If you want to include files and folders that are part of excluded folders,\n        # add them at the end\n        - 'var/cache/prod/**'\n        - 'public/build/entrypoints.json'\n        - 'public/build/manifest.json'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "bref/symfony-bridge:0.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

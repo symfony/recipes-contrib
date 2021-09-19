@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "monsieurbiz/sylius-cms-page-plugin": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "e01b794cd3e5223081fb548c75114c1e77e07f34"
+            }
+        }
+    },
+    "manifests": {
+        "monsieurbiz/sylius-cms-page-plugin": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "monsieurbiz/sylius-cms-page-plugin",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "MonsieurBiz\\SyliusCmsPagePlugin\\MonsieurBizSyliusCmsPagePlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/monsieurbiz_sylius_cms_page_plugin.yaml": {
+                    "contents": "monsieurbiz_cms_page_admin:\n    resource: \"@MonsieurBizSyliusCmsPagePlugin/Resources/config/routing/admin.yaml\"\n    prefix: /%sylius_admin.path_name%\n\nmonsieurbiz_cms_page_shop:\n    resource: \"@MonsieurBizSyliusCmsPagePlugin/Resources/config/routing/shop.yaml\"\n    prefix: /{_locale}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/monsieurbiz_sylius_cms_page_plugin.yaml": {
+                    "contents": "imports:\n    - { resource: \"@MonsieurBizSyliusCmsPagePlugin/Resources/config/config.yaml\" }\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "monsieurbiz/sylius-cms-page-plugin:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

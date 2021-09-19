@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "mtarld/symbok-bundle": {
+            "version": "2.0",
+            "recipe": {
+                "repo": "2.0",
+                "branch": "master",
+                "version": "2.0",
+                "ref": "c1ae1108fa1d7889f0c105c956f74f141cef52dc"
+            }
+        }
+    },
+    "manifests": {
+        "mtarld/symbok-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "mtarld/symbok-bundle",
+            "version": "2.0",
+            "manifest": {
+                "bundles": {
+                    "Mtarld\\SymbokBundle\\SymbokBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/symbok.yaml": {
+                    "contents": "symbok:\n    # Namespaces that you want to be processed by symbok\n    namespaces:\n        # - 'App\\Entity'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "mtarld/symbok-bundle:2.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

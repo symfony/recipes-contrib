@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "mmucklo/grid-bundle": {
+            "version": "4.0",
+            "recipe": {
+                "repo": "4.0",
+                "branch": "master",
+                "version": "4.0",
+                "ref": "aa1e653947a4639bce8d2dec6dc52ae80187befa"
+            }
+        }
+    },
+    "manifests": {
+        "mmucklo/grid-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "mmucklo/grid-bundle",
+            "version": "4.0",
+            "manifest": {
+                "bundles": {
+                    "Dtc\\GridBundle\\DtcGridBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/dtc_grid.yaml": {
+                    "contents": "dtc_grid:\n    resource: '@DtcGridBundle/Resources/config/routing.yml'\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/dtc_grid.yaml": {
+                    "contents": "dtc_grid:\n    purl: 'https://cdnjs.cloudflare.com/ajax/libs/purl/2.3.1/purl.min.js'\n    jquery:\n        url: 'https://code.jquery.com/jquery-3.3.1.min.js'\n        integrity: sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=\n        crossorigin: anonymous\n    datatables:\n        css:\n            - 'https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css'\n        js:\n            - 'https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js'\n            - 'https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js'\n    theme:\n        css:\n            - 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'\n            - 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css'\n        js:\n            - 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'\n            - 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js'\n    page_div_style: 'margin: 10px'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "mmucklo/grid-bundle:4.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "locks": {
+        "gpslab/geoip2": {
+            "version": "1.1",
+            "recipe": {
+                "repo": "1.1",
+                "branch": "master",
+                "version": "1.1",
+                "ref": "84b62eac7e6c96fcb349b86435bb59a9b550b6ef"
+            }
+        }
+    },
+    "manifests": {
+        "gpslab/geoip2": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "gpslab/geoip2",
+            "version": "1.1",
+            "manifest": {
+                "bundles": {
+                    "GpsLab\\Bundle\\GeoIP2Bundle\\GpsLabGeoIP2Bundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "composer-scripts": {
+                    "geoip2:update": "symfony-cmd"
+                }
+            },
+            "files": {
+                "config/packages/gpslab_geoip.yaml": {
+                    "contents": "gpslab_geoip:\n    # Path to download GeoIP database.\n    cache: '%kernel.cache_dir%/GeoLite2-City.mmdb'\n\n    # URL for download new GeoIP database.\n    url: 'https://geolite.maxmind.com/download/geoip/database/GeoLite2-City.mmdb.gz'\n\n    # Get model data in this locale\n    locales: [ 'en' ]\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "gpslab/geoip2:1.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

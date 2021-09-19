@@ -1,0 +1,56 @@
+{
+    "locks": {
+        "orbitale/cms-bundle": {
+            "version": "3.0",
+            "recipe": {
+                "repo": "3.0",
+                "branch": "master",
+                "version": "3.0",
+                "ref": "069435187e19a4592d1b08b30c24af83ee74f246"
+            }
+        }
+    },
+    "manifests": {
+        "orbitale/cms-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "orbitale/cms-bundle",
+            "version": "3.0",
+            "manifest": {
+                "bundles": {
+                    "Orbitale\\Bundle\\CmsBundle\\OrbitaleCmsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "src/Entity/Page.php": {
+                    "contents": "<?php\n\nnamespace App\\Entity;\n\nuse Orbitale\\Bundle\\CmsBundle\\Entity\\Page as BasePage;\nuse Doctrine\\ORM\\Mapping as ORM;\n\n/**\n * @ORM\\Entity(repositoryClass=\"Orbitale\\Bundle\\CmsBundle\\Repository\\PageRepository\")\n * @ORM\\Table(name=\"orbitale_cms_pages\")\n */\nclass Page extends BasePage\n{\n    /**\n     * @var int\n     * @ORM\\Column(name=\"id\", type=\"integer\")\n     * @ORM\\Id\n     * @ORM\\GeneratedValue(strategy=\"AUTO\")\n     */\n    protected $id;\n\n    /**\n     * @return int\n     */\n    public function getId()\n    {\n        return $this->id;\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "src/Entity/Category.php": {
+                    "contents": "<?php\n\nnamespace App\\Entity;\n\nuse Orbitale\\Bundle\\CmsBundle\\Entity\\Category as BaseCategory;\nuse Doctrine\\ORM\\Mapping as ORM;\n\n/**\n * @ORM\\Entity(repositoryClass=\"Orbitale\\Bundle\\CmsBundle\\Repository\\CategoryRepository\")\n * @ORM\\Table(name=\"orbitale_cms_categories\")\n */\nclass Category extends BaseCategory\n{\n    /**\n     * @var int\n     * @ORM\\Column(name=\"id\", type=\"integer\")\n     * @ORM\\Id\n     * @ORM\\GeneratedValue(strategy=\"AUTO\")\n     */\n    protected $id;\n\n    /**\n     * @return int\n     */\n    public function getId()\n    {\n        return $this->id;\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/routes/orbitale_cms.yaml": {
+                    "contents": "orbitale_cms_category:\n    resource: \"@OrbitaleCmsBundle/Resources/config/routing/categories.yaml\"\n    prefix:   /category/\n\norbitale_cms_page:\n    resource: \"@OrbitaleCmsBundle/Resources/config/routing/pages.yaml\"\n    prefix:   /page/\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/orbitale_cms.yaml": {
+                    "contents": "orbitale_cms:\n    page_class: App\\Entity\\Page\n    category_class: App\\Entity\\Category\n# Define your layout here if you need a custom layout for your CMS\n#    layouts:\n#         main: { resource: base.html.twig }\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "orbitale/cms-bundle:3.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

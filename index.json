@@ -1,0 +1,1552 @@
+{
+    "aliases": [],
+    "recipes": {
+        "ad3n/ratchet-bundle": [
+            "0.4"
+        ],
+        "adback/adback-sdk-php-symfony": [
+            "2.4"
+        ],
+        "adlarge/fixtures-documentation-bundle": [
+            "1.1"
+        ],
+        "ajardin/docker-symfony": [
+            "0.2"
+        ],
+        "akondas/symfony-consul-bundle": [
+            "0.1"
+        ],
+        "alexandret/evc-bundle": [
+            "1.0"
+        ],
+        "algolia/algolia-search-bundle": [
+            "2.2"
+        ],
+        "algolia/search-bundle": [
+            "3.0"
+        ],
+        "ambient-link/ability-sdk": [
+            "1.0"
+        ],
+        "andchir/omnipay-bundle": [
+            "1.0"
+        ],
+        "andchir/shopkeeper4-comments": [
+            "1.0"
+        ],
+        "anezi/locale-extension": [
+            "1.0"
+        ],
+        "antishov/doctrine-extensions-bundle": [
+            "1.4"
+        ],
+        "anyx/login-gate-bundle": [
+            "1.0"
+        ],
+        "armin/scssphp-bundle": [
+            "1.0"
+        ],
+        "artox-lab/clarc-bundle": [
+            "0.1"
+        ],
+        "artox-lab/clarc-message-bus-bundle": [
+            "1.0"
+        ],
+        "artox-lab/sms-bundle": [
+            "1.0"
+        ],
+        "artprima/prometheus-metrics-bundle": [
+            "1.0"
+        ],
+        "assoconnect/mjml-bundle": [
+            "1.0"
+        ],
+        "async-aws/async-aws-bundle": [
+            "0.1",
+            "1.0"
+        ],
+        "atlas/symfony": [
+            "1.0"
+        ],
+        "aws/aws-sdk-php-symfony": [
+            "1.3"
+        ],
+        "backup-manager/symfony": [
+            "2.1"
+        ],
+        "baldinof/roadrunner-bundle": [
+            "0.1",
+            "1.2",
+            "2.0"
+        ],
+        "basster/lazy-response-bundle": [
+            "1.0"
+        ],
+        "basster/twig-base64-extension": [
+            "1.0"
+        ],
+        "bcc/cron-manager-bundle": [
+            "3.1"
+        ],
+        "becklyn/assets-bundle": [
+            "2.4"
+        ],
+        "becklyn/gluggi-bundle": [
+            "3.1"
+        ],
+        "becklyn/javascript-routing": [
+            "1.0"
+        ],
+        "becklyn/translations": [
+            "1.0"
+        ],
+        "beelab/recaptcha2-bundle": [
+            "2.0"
+        ],
+        "beelab/tag-bundle": [
+            "1.3"
+        ],
+        "beelab/test-bundle": [
+            "2.0"
+        ],
+        "biig/domain": [
+            "1.0"
+        ],
+        "birkof/netopia-mobilpay-bundle": [
+            "1.0"
+        ],
+        "bitbag/shipping-export-plugin": [
+            "1.0"
+        ],
+        "boshurik/telegram-bot-bundle": [
+            "3.1"
+        ],
+        "botjaeger/nexmo-bundle": [
+            "0.5"
+        ],
+        "bref/symfony-bridge": [
+            "0.1"
+        ],
+        "broadway/broadway-bundle": [
+            "0.4"
+        ],
+        "broadway/event-store-dbal": [
+            "0.1",
+            "0.2"
+        ],
+        "broadway/event-store-mongodb": [
+            "0.2"
+        ],
+        "broadway/read-model-elasticsearch": [
+            "0.3"
+        ],
+        "broadway/read-model-mongodb": [
+            "0.2"
+        ],
+        "bukashk0zzz/filter-bundle": [
+            "2.0"
+        ],
+        "bukashk0zzz/liip-imagine-serialization-bundle": [
+            "2.0"
+        ],
+        "cache/adapter-bundle": [
+            "1.1"
+        ],
+        "cache/cache-bundle": [
+            "1.0"
+        ],
+        "ckrack/optimus-bundle": [
+            "0.1"
+        ],
+        "codebuds/mattermost-publication-bundle": [
+            "0.3"
+        ],
+        "codeception/codeception": [
+            "2.3"
+        ],
+        "coka/api-bundle": [
+            "3.0",
+            "4.0"
+        ],
+        "coka/cors-bundle": [
+            "1.0"
+        ],
+        "coka/file-bundle": [
+            "3.0"
+        ],
+        "coka/pagination-bundle": [
+            "3.0",
+            "5.0"
+        ],
+        "coka/rate-limit-bundle": [
+            "1.0"
+        ],
+        "coka/rest-request-validator-bundle": [
+            "1.0"
+        ],
+        "coka/wsse-authentication-bundle": [
+            "1.0"
+        ],
+        "commercetools/symfony-bundle": [
+            "0.4"
+        ],
+        "comsave/salesforce-outbound-message-bundle": [
+            "0.3"
+        ],
+        "connectholland/cookie-consent-bundle": [
+            "0.4"
+        ],
+        "connectholland/timechimp-bundle": [
+            "1.0"
+        ],
+        "connectholland/uptime-robot-bundle": [
+            "1.0"
+        ],
+        "contao/core-bundle": [
+            "4.6"
+        ],
+        "contao/installation-bundle": [
+            "4.6"
+        ],
+        "contentful/contentful-bundle": [
+            "3.0",
+            "4.0"
+        ],
+        "core23/facebook-bundle": [
+            "0.4"
+        ],
+        "core23/gdpr-bundle": [
+            "0.2"
+        ],
+        "core23/lastfm-bundle": [
+            "0.4"
+        ],
+        "core23/matomo-bundle": [
+            "1.1"
+        ],
+        "core23/shariff-bundle": [
+            "3.0"
+        ],
+        "cpliakas/git-wrapper": [
+            "3.0"
+        ],
+        "crayner/authenticate-bundle": [
+            "1.0"
+        ],
+        "csa/guzzle-bundle": [
+            "3.0"
+        ],
+        "cyberomulus/sitemap-generator-bundle": [
+            "1.2"
+        ],
+        "dama/doctrine-test-bundle": [
+            "4.0"
+        ],
+        "damienharper/auditor-bundle": [
+            "4.0"
+        ],
+        "damienharper/doctrine-audit-bundle": [
+            "1.0"
+        ],
+        "datana-gmbh/intercom-config": [
+            "1.1"
+        ],
+        "datana-gmbh/sendgrid-dynamic-template-mailer": [
+            "1.0"
+        ],
+        "deamon/logger-extra-bundle": [
+            "4.0"
+        ],
+        "debril/rss-atom-bundle": [
+            "4.0"
+        ],
+        "dekalee/autopilot-bundle": [
+            "1.0"
+        ],
+        "dekalee/cdn77-bundle": [
+            "1.4"
+        ],
+        "dekalee/enom-bundle": [
+            "1.0"
+        ],
+        "dekalee/mailjet-bundle": [
+            "0.5",
+            "2.1"
+        ],
+        "dekalee/pubsub-swarrot-bundle": [
+            "1.0"
+        ],
+        "disjfa/mozaic-bundle": [
+            "0.1"
+        ],
+        "disjfa/translation-bundle": [
+            "0.1"
+        ],
+        "dobryprogramator/smartform-bundle": [
+            "1.0"
+        ],
+        "dockfony/dockfony": [
+            "5.0"
+        ],
+        "doctrine/mongodb-odm-bundle": [
+            "3.3"
+        ],
+        "doctrine/phpcr-bundle": [
+            "2.0"
+        ],
+        "doctrine/phpcr-dbal-symfony-pack": [
+            "1.0"
+        ],
+        "drenso/symfony-shared": [
+            "0.8"
+        ],
+        "drupol/ecl-twig-bundle": [
+            "0.1"
+        ],
+        "dukecity/command-scheduler-bundle": [
+            "3.0"
+        ],
+        "dunglas/digital-ocean-bundle": [
+            "1.0"
+        ],
+        "dunglas/doctrine-json-odm": [
+            "0.1"
+        ],
+        "ecphp/api-gw-authentication-bundle": [
+            "1.0"
+        ],
+        "ecphp/cas-bundle": [
+            "1.0",
+            "2.0"
+        ],
+        "ecphp/eu-login-api-authentication-bundle": [
+            "1.0"
+        ],
+        "ecphp/eu-login-bundle": [
+            "1.0",
+            "2.0"
+        ],
+        "egeloen/ckeditor-bundle": [
+            "5.0"
+        ],
+        "eightpoints/guzzle-bundle": [
+            "7.0"
+        ],
+        "ekino/newrelic-bundle": [
+            "1.3",
+            "2.0"
+        ],
+        "eko/feedbundle": [
+            "1.2"
+        ],
+        "ekreative/health-check-bundle": [
+            "1.5"
+        ],
+        "elao/enum": [
+            "1.7"
+        ],
+        "elephantly/kahlan-bundle": [
+            "0.9"
+        ],
+        "emag-tech-labs/annotation-cache-bundle": [
+            "5.0"
+        ],
+        "emag-tech-labs/rabbitmq-bundle": [
+            "2.0"
+        ],
+        "emanuilnikolov/igdb-api-bundle": [
+            "1.0"
+        ],
+        "enhavo/app-bundle": [
+            "0.9"
+        ],
+        "enigma972/user-bundle": [
+            "0.4"
+        ],
+        "enqueue/amqp-bunny": [
+            "0.7"
+        ],
+        "enqueue/amqp-ext": [
+            "0.4",
+            "0.7"
+        ],
+        "enqueue/amqp-lib": [
+            "0.7"
+        ],
+        "enqueue/async-command": [
+            "0.9"
+        ],
+        "enqueue/async-event-dispatcher": [
+            "0.7",
+            "0.9"
+        ],
+        "enqueue/dbal": [
+            "0.4"
+        ],
+        "enqueue/enqueue-bundle": [
+            "0.4",
+            "0.9"
+        ],
+        "enqueue/fs": [
+            "0.4"
+        ],
+        "enqueue/gearman": [
+            "0.7"
+        ],
+        "enqueue/gps": [
+            "0.7"
+        ],
+        "enqueue/job-queue-pack": [
+            "0.8",
+            "0.9"
+        ],
+        "enqueue/messenger-adapter": [
+            "0.1"
+        ],
+        "enqueue/mongodb": [
+            "0.8"
+        ],
+        "enqueue/pheanstalk": [
+            "0.5"
+        ],
+        "enqueue/rdkafka": [
+            "0.7",
+            "0.8"
+        ],
+        "enqueue/redis": [
+            "0.7"
+        ],
+        "enqueue/sqs": [
+            "0.7"
+        ],
+        "enqueue/stomp": [
+            "0.7"
+        ],
+        "enqueue/wamp": [
+            "0.9"
+        ],
+        "excelwebzone/recaptcha-bundle": [
+            "1.5"
+        ],
+        "exercise/htmlpurifier-bundle": [
+            "0.2",
+            "3.0"
+        ],
+        "expertcoder/swiftmailer-send-grid-bundle": [
+            "2.0"
+        ],
+        "facile-it/mongodb-bundle": [
+            "0.6"
+        ],
+        "felds/quick-mailer-bundle": [
+            "5.0"
+        ],
+        "ferror/phpscan": [
+            "1.0"
+        ],
+        "flagception/flagception-bundle": [
+            "3.0"
+        ],
+        "flux-se/sylius-payum-stripe-plugin": [
+            "1.2",
+            "2.0"
+        ],
+        "fresh/centrifugo-bundle": [
+            "1.3"
+        ],
+        "fresh/doctrine-enum-bundle": [
+            "6.0"
+        ],
+        "friends-of-behat/symfony-extension": [
+            "2.0"
+        ],
+        "friendsofsymfony/ckeditor-bundle": [
+            "2.0"
+        ],
+        "friendsofsymfony/elastica-bundle": [
+            "5.0"
+        ],
+        "friendsofsymfony/jsrouting-bundle": [
+            "2.0",
+            "2.3"
+        ],
+        "friendsofsymfony/oauth-server-bundle": [
+            "1.6"
+        ],
+        "friendsofsymfony/rest-bundle": [
+            "2.2"
+        ],
+        "geosocio/http-serializer-bundle": [
+            "2.0"
+        ],
+        "gheb/configuration-converter-bundle": [
+            "0.5"
+        ],
+        "gheb/data-migrations-bundle": [
+            "1.3"
+        ],
+        "gheb/docusign-bundle": [
+            "5.0"
+        ],
+        "goetas/twital-bundle": [
+            "1.3"
+        ],
+        "goksagun/scheduler-bundle": [
+            "0.1",
+            "1.0"
+        ],
+        "gonzakpo/websocket-bundle": [
+            "1.0"
+        ],
+        "google/apiclient": [
+            "2.0"
+        ],
+        "google/recaptcha": [
+            "1.1"
+        ],
+        "googlechromelabs/ise-web-security-bundle": [
+            "1.0"
+        ],
+        "gpslab/domain-event-bundle": [
+            "2.2"
+        ],
+        "gpslab/geoip2": [
+            "1.1",
+            "2.0"
+        ],
+        "gpslab/pagination-bundle": [
+            "1.2"
+        ],
+        "hans-peter-ording/nflfastr-symfony-bundle": [
+            "0.9"
+        ],
+        "happyr/json-api-response-factory": [
+            "0.1"
+        ],
+        "happyr/linkedin-api-client": [
+            "1.0"
+        ],
+        "hautelook/alice-bundle": [
+            "2.1"
+        ],
+        "hboie/jasper-report-bundle": [
+            "1.1"
+        ],
+        "helios-ag/fm-elfinder-bundle": [
+            "7.0",
+            "10.0"
+        ],
+        "helppc/supervisor-bundle": [
+            "1.0"
+        ],
+        "helppc/supervisor-rest-bundle": [
+            "1.0"
+        ],
+        "holadev/amp-toolbox-bundle": [
+            "0.1"
+        ],
+        "horlyk/fetch-xml-bundle": [
+            "1.1"
+        ],
+        "hugosoltys/fitz-bundle": [
+            "1.0"
+        ],
+        "hwi/oauth-bundle": [
+            "0.6"
+        ],
+        "idci/keycloak-security-bundle": [
+            "1.0"
+        ],
+        "ijanki/prometheus-bundle": [
+            "0.9"
+        ],
+        "ikoene/marvel-api-bundle": [
+            "0.5"
+        ],
+        "imper86/allegro-api-bundle": [
+            "3.0"
+        ],
+        "imper86/jobby-cron-bundle": [
+            "1.0"
+        ],
+        "imper86/supervisor-bundle": [
+            "2.2"
+        ],
+        "indragunawan/api-rate-limit-bundle": [
+            "0.2"
+        ],
+        "infifni/euplatesc-plugin": [
+            "1.0"
+        ],
+        "insidestyles/json-rpc-bundle": [
+            "1.0",
+            "2.0"
+        ],
+        "insidestyles/swoole-bridge-bundle": [
+            "0.4"
+        ],
+        "inspector-apm/inspector-symfony": [
+            "1.0"
+        ],
+        "isaac/gazesymfonybundle": [
+            "0.1"
+        ],
+        "jacquesndl/mailer-bundle": [
+            "1.0"
+        ],
+        "jane-php/json-schema": [
+            "5.0",
+            "6.0"
+        ],
+        "jane-php/open-api-common": [
+            "6.0"
+        ],
+        "jawira/case-converter-twig": [
+            "0.0"
+        ],
+        "jbtcd/fitbit-bundle": [
+            "1.0"
+        ],
+        "jmose/command-scheduler-bundle": [
+            "2.0"
+        ],
+        "jms/serializer-bundle": [
+            "2.0",
+            "3.0"
+        ],
+        "jolicode/gif-exception-bundle": [
+            "1.0"
+        ],
+        "jolicode/jolitypo": [
+            "1.0"
+        ],
+        "jonathankablan/fast-entity-bundle": [
+            "2.0"
+        ],
+        "jsor/doctrine-postgis": [
+            "1.7"
+        ],
+        "jupi007/prestashop-webservice-bundle": [
+            "1.0"
+        ],
+        "jurry/amqp-symfony-bundle": [
+            "1.0"
+        ],
+        "karser/karser-recaptcha3-bundle": [
+            "0.1"
+        ],
+        "kerox/twig-image-placeholder-extension": [
+            "1.0"
+        ],
+        "kevinpapst/adminlte-bundle": [
+            "0.9"
+        ],
+        "kibatic/timezone-bundle": [
+            "1.0"
+        ],
+        "klaviyo/php-sdk": [
+            "2.0"
+        ],
+        "kms/froala-editor-bundle": [
+            "3.0"
+        ],
+        "knojector/steam-authentication-bundle": [
+            "1.0"
+        ],
+        "knplabs/dictionary-bundle": [
+            "2.0"
+        ],
+        "knplabs/github-api": [
+            "2.6"
+        ],
+        "knplabs/knp-snappy-bundle": [
+            "1.5"
+        ],
+        "knplabs/packagist-api": [
+            "1.6"
+        ],
+        "knpuniversity/oauth2-client-bundle": [
+            "1.20"
+        ],
+        "knyk/mailbox-bundle": [
+            "1.0"
+        ],
+        "koff/i18n-form-bundle": [
+            "4.0"
+        ],
+        "kriswallsmith/buzz": [
+            "0.17",
+            "1.0"
+        ],
+        "kunicmarko/jms-messenger-adapter": [
+            "0.1"
+        ],
+        "kunstmaan/admin-bundle": [
+            "5.2",
+            "5.9"
+        ],
+        "kunstmaan/adminlist-bundle": [
+            "5.2"
+        ],
+        "kunstmaan/config-bundle": [
+            "5.2"
+        ],
+        "kunstmaan/dashboard-bundle": [
+            "5.2"
+        ],
+        "kunstmaan/form-bundle": [
+            "5.2"
+        ],
+        "kunstmaan/media-bundle": [
+            "5.2"
+        ],
+        "kunstmaan/menu-bundle": [
+            "5.2"
+        ],
+        "kunstmaan/node-bundle": [
+            "5.2",
+            "5.5"
+        ],
+        "kunstmaan/pagepart-bundle": [
+            "5.2"
+        ],
+        "kunstmaan/redirect-bundle": [
+            "5.2"
+        ],
+        "kunstmaan/search-bundle": [
+            "5.2",
+            "5.6"
+        ],
+        "kunstmaan/seo-bundle": [
+            "5.2"
+        ],
+        "kunstmaan/sitemap-bundle": [
+            "5.2"
+        ],
+        "kunstmaan/translator-bundle": [
+            "5.2"
+        ],
+        "kunstmaan/user-management-bundle": [
+            "5.2"
+        ],
+        "kynno/smartbots-bundle": [
+            "0.1"
+        ],
+        "lag/adminbundle": [
+            "1.0"
+        ],
+        "league/flysystem-bundle": [
+            "1.0"
+        ],
+        "league/tactician-bundle": [
+            "1.0"
+        ],
+        "leapt/core-bundle": [
+            "2.2"
+        ],
+        "leapt/im-bundle": [
+            "2.0"
+        ],
+        "leogout/seo-bundle": [
+            "1.0"
+        ],
+        "lepiaf/sapient-bundle": [
+            "0.1"
+        ],
+        "lexik/cron-file-generator-bundle": [
+            "1.0"
+        ],
+        "lexik/maintenance-bundle": [
+            "2.1"
+        ],
+        "liip/imagine-bundle": [
+            "1.8"
+        ],
+        "liip/monitor-bundle": [
+            "2.6"
+        ],
+        "lireincore/imgcache-bundle": [
+            "0.1"
+        ],
+        "liuggio/statsd-client-bundle": [
+            "1.6"
+        ],
+        "lolautruche/payline-bundle": [
+            "2.0"
+        ],
+        "long-running/long-running": [
+            "0.1"
+        ],
+        "loophp/psr17": [
+            "1.0"
+        ],
+        "m-adamski/symfony-mailer-bundle": [
+            "1.0"
+        ],
+        "m-adamski/symfony-schedule-bundle": [
+            "1.0"
+        ],
+        "maba/webpack-bundle": [
+            "1.0"
+        ],
+        "machy8/webloader-bundle": [
+            "1.1"
+        ],
+        "macpaw/sentry-monolog-adapter": [
+            "0.0"
+        ],
+        "macpaw/symfony-health-check-bundle": [
+            "0.1"
+        ],
+        "mael/intervention-image-bundle": [
+            "1.0"
+        ],
+        "mael/recaptcha-bundle": [
+            "0.1"
+        ],
+        "mailgun/mailgun-php": [
+            "2.3"
+        ],
+        "mailjet/mailjet-bundle": [
+            "1.0"
+        ],
+        "mailxpert/apibundle": [
+            "0.1"
+        ],
+        "makasim/yadm-bundle": [
+            "0.2"
+        ],
+        "maksze/telemetry-bundle": [
+            "0.4"
+        ],
+        "mapado/rest-client-sdk-bundle": [
+            "0.24"
+        ],
+        "maps_red/ticketing-bundle": [
+            "0.6"
+        ],
+        "mbarbey/u2f-security-bundle": [
+            "1.0"
+        ],
+        "mcfedr/awspushbundle": [
+            "6.11"
+        ],
+        "mediamonks/rest-api-bundle": [
+            "3.0"
+        ],
+        "mediamonks/sonata-media-bundle": [
+            "2.0"
+        ],
+        "merceslab/spreadsheet-client-bundle": [
+            "1.0"
+        ],
+        "meritoo/common-bundle": [
+            "0.1"
+        ],
+        "meteo-concept/hcaptcha-bundle": [
+            "1.0"
+        ],
+        "mgdsoft/stackdriver-bundle": [
+            "0.1"
+        ],
+        "misd/phone-number-bundle": [
+            "1.3"
+        ],
+        "mixpanel/mixpanel-php": [
+            "2.8"
+        ],
+        "mmoreram/gearman-bundle": [
+            "4.1"
+        ],
+        "mmucklo/grid-bundle": [
+            "4.0",
+            "4.2",
+            "5.0"
+        ],
+        "mmucklo/queue-bundle": [
+            "3.0",
+            "4.0",
+            "6.0"
+        ],
+        "mobizel/markdown-docs-bundle": [
+            "0.1",
+            "0.9"
+        ],
+        "mobizel/symfony-capistrano": [
+            "0.2"
+        ],
+        "moneyphp/money-bundle": [
+            "0.1"
+        ],
+        "monsieurbiz/sylius-admin-better-login-plugin": [
+            "1.0"
+        ],
+        "monsieurbiz/sylius-alert-message-plugin": [
+            "1.0"
+        ],
+        "monsieurbiz/sylius-cms-page-plugin": [
+            "1.0"
+        ],
+        "monsieurbiz/sylius-coliship-plugin": [
+            "0.1"
+        ],
+        "monsieurbiz/sylius-no-commerce-plugin": [
+            "0.1"
+        ],
+        "monsieurbiz/sylius-rich-editor-plugin": [
+            "1.0"
+        ],
+        "monsieurbiz/sylius-sales-reports-plugin": [
+            "1.0"
+        ],
+        "monsieurbiz/sylius-settings-plugin": [
+            "1.0"
+        ],
+        "monsieursloop/woleet-bundle": [
+            "1.0",
+            "1.2"
+        ],
+        "mp3000mp/tos-bundle": [
+            "0.1"
+        ],
+        "msalsas/gdpr-consent-banner-bundle": [
+            "1.0"
+        ],
+        "msalsas/voting-bundle": [
+            "1.0"
+        ],
+        "msgphp/eav-bundle": [
+            "0.10"
+        ],
+        "msgphp/user-bundle": [
+            "0.10"
+        ],
+        "mtarld/api-platform-ms-bundle": [
+            "0.1"
+        ],
+        "mtarld/symbok-bundle": [
+            "2.0"
+        ],
+        "mukadi/wallet-bundle": [
+            "1.0"
+        ],
+        "mukadi/wordpress-bundle": [
+            "1.0",
+            "1.1",
+            "2.0"
+        ],
+        "nbgrp/env-bundle": [
+            "1.0"
+        ],
+        "nedac/sylius-minimum-order-value-plugin": [
+            "1.0"
+        ],
+        "nedac/sylius-order-now-plugin": [
+            "1.0"
+        ],
+        "nedac/sylius-temporarily-out-of-stock-plugin": [
+            "1.0"
+        ],
+        "nella/monolog-tracy-bundle": [
+            "2.0"
+        ],
+        "nelmio/api-doc-bundle": [
+            "2.13",
+            "3.0"
+        ],
+        "nelmio/solarium-bundle": [
+            "2.4"
+        ],
+        "neo4j/neo4j-bundle": [
+            "0.4"
+        ],
+        "netbull/security-bundle": [
+            "1.0"
+        ],
+        "netgen/content-browser": [
+            "1.0"
+        ],
+        "netgen/layouts-core": [
+            "1.0"
+        ],
+        "networking/init-cms-bundle": [
+            "4.0"
+        ],
+        "nicohaase/twig-isbn-formatter": [
+            "0.1"
+        ],
+        "nordeus/crowd-user-bundle": [
+            "2.0"
+        ],
+        "notfloran/mjml-bundle": [
+            "3.0"
+        ],
+        "ns3777k/prometheus-bundle": [
+            "1.0"
+        ],
+        "nubox/symfony-webpack-php-generator": [
+            "1.0"
+        ],
+        "nuboxdevcom/maintenance-bundle": [
+            "2.0"
+        ],
+        "nucleos/dompdf-bundle": [
+            "3.1"
+        ],
+        "nucleos/user-bundle": [
+            "1.1"
+        ],
+        "numberninecms/cms": [
+            "0.2"
+        ],
+        "oat-sa/bundle-health-check": [
+            "1.0"
+        ],
+        "oat-sa/bundle-lti1p3": [
+            "2.0",
+            "3.0"
+        ],
+        "octopouce-mu/admin-bundle": [
+            "1.0"
+        ],
+        "odiseoteam/sylius-vendor-plugin": [
+            "1.2"
+        ],
+        "odolbeau/phone-number-bundle": [
+            "3.0"
+        ],
+        "omines/datatables-bundle": [
+            "0.1"
+        ],
+        "oneup/flysystem-bundle": [
+            "3.0",
+            "4.0"
+        ],
+        "oneup/uploader-bundle": [
+            "2.0"
+        ],
+        "onurb/doctrine-yuml-bundle": [
+            "1.1"
+        ],
+        "orbitale/cms-bundle": [
+            "3.0"
+        ],
+        "orbitale/easyimpress-bundle": [
+            "1.0"
+        ],
+        "oskarstark/env-var-extension": [
+            "1.0"
+        ],
+        "oskarstark/no-floc-listener": [
+            "0.1"
+        ],
+        "oskarstark/readable-filesize-extension": [
+            "0.1"
+        ],
+        "oskarstark/symfony-http-responder": [
+            "0.1"
+        ],
+        "otobul/epaybg-bundle": [
+            "1.0"
+        ],
+        "overblog/graphiql-bundle": [
+            "0.1"
+        ],
+        "overblog/graphql-bundle": [
+            "0.9",
+            "0.11",
+            "0.12"
+        ],
+        "pablok/supercache-bundle": [
+            "0.5"
+        ],
+        "pasaiakoudala/authbundle": [
+            "0.1"
+        ],
+        "payplug/sylius-payplug-plugin": [
+            "0.2"
+        ],
+        "payum/payum-bundle": [
+            "2.4"
+        ],
+        "pentatrion/upload-bundle": [
+            "0.2"
+        ],
+        "pentatrion/vite-bundle": [
+            "0.1"
+        ],
+        "php-amqplib/rabbitmq-bundle": [
+            "1.12"
+        ],
+        "php-http/httplug-bundle": [
+            "1.6"
+        ],
+        "php-translation/loco-adapter": [
+            "0.8"
+        ],
+        "php-translation/symfony-bundle": [
+            "0.4",
+            "0.10"
+        ],
+        "phpfastcache/phpfastcache-bundle": [
+            "3.0"
+        ],
+        "phpfastcgi/fastcgi-daemon": [
+            "0.11"
+        ],
+        "phpzlc/admin": [
+            "1.0"
+        ],
+        "phpzlc/admin-business": [
+            "1.0"
+        ],
+        "phpzlc/auth-business": [
+            "1.0"
+        ],
+        "phpzlc/captcha-business": [
+            "1.0"
+        ],
+        "phpzlc/document-bundle": [
+            "1.1"
+        ],
+        "phpzlc/phpzlc": [
+            "1.0"
+        ],
+        "phpzlc/platform-business": [
+            "1.0"
+        ],
+        "phpzlc/rbac-business": [
+            "1.0"
+        ],
+        "phpzlc/upload-business": [
+            "1.0"
+        ],
+        "picoss/yousign-bundle": [
+            "2.0",
+            "2.2"
+        ],
+        "pierstoval/character-manager": [
+            "0.5"
+        ],
+        "piou-piou/ribs-cron-bundle": [
+            "1.0"
+        ],
+        "player259/graphql-bundle": [
+            "1.0"
+        ],
+        "pomm-project/pomm-bundle": [
+            "2.3"
+        ],
+        "pond5/async-request-bundle": [
+            "1.1"
+        ],
+        "prolix/maintenance-bundle": [
+            "2.1"
+        ],
+        "prooph/event-store-bus-bridge": [
+            "3.1"
+        ],
+        "prooph/event-store-symfony-bundle": [
+            "0.4"
+        ],
+        "prooph/pdo-event-store": [
+            "1.7"
+        ],
+        "prooph/service-bus-symfony-bundle": [
+            "0.6"
+        ],
+        "pugx/geo-form-bundle": [
+            "0.2"
+        ],
+        "pusher/pusher-php-server": [
+            "3.0"
+        ],
+        "qandidate/toggle-bundle": [
+            "1.0"
+        ],
+        "qossmic/deptrac-shim": [
+            "0.7"
+        ],
+        "ramsey/uuid-doctrine": [
+            "1.3"
+        ],
+        "ravenflux/php-functions": [
+            "3.0"
+        ],
+        "ravenflux/sort-functions": [
+            "3.0"
+        ],
+        "reconnect/s3bundle": [
+            "0.1"
+        ],
+        "redirectionio/proxy-symfony": [
+            "0.1",
+            "0.2"
+        ],
+        "redjanym/fcm-bundle": [
+            "1.1"
+        ],
+        "redrat/api-helper-bundle": [
+            "0.1"
+        ],
+        "ro0nl/http-responder": [
+            "0.1"
+        ],
+        "rokka/client-bundle": [
+            "1.0"
+        ],
+        "roukmoute/hashids-bundle": [
+            "1.4"
+        ],
+        "routmoute/routmoute-discord-bundle": [
+            "1.1"
+        ],
+        "rundum/event-base": [
+            "0.0"
+        ],
+        "ruwler/ruwler-sdk-bundle": [
+            "1.0"
+        ],
+        "scheb/two-factor-bundle": [
+            "3.16"
+        ],
+        "sebtm/inwx-api-bundle": [
+            "0.1",
+            "0.2",
+            "1.0"
+        ],
+        "secit-pl/imap-bundle": [
+            "1.0"
+        ],
+        "seferov/aws-bundle": [
+            "3.0"
+        ],
+        "sensiolabs/connect-bundle": [
+            "4.0"
+        ],
+        "sentry/sentry-symfony": [
+            "1.0",
+            "3.0"
+        ],
+        "sg/datatablesbundle": [
+            "1.0"
+        ],
+        "siganushka/generic-bundle": [
+            "0.3"
+        ],
+        "siganushka/region-bundle": [
+            "0.1"
+        ],
+        "silasjoisten/sonata-multiupload-bundle": [
+            "2.1"
+        ],
+        "slot/mandrill-bundle": [
+            "1.1"
+        ],
+        "snc/redis-bundle": [
+            "2.0"
+        ],
+        "soljian/steam-authentication-bundle": [
+            "1.0"
+        ],
+        "sonata-project/admin-bundle": [
+            "3.31",
+            "3.64",
+            "4.0"
+        ],
+        "sonata-project/classification-bundle": [
+            "3.7"
+        ],
+        "sonata-project/core-bundle": [
+            "3.9"
+        ],
+        "sonata-project/form-extensions": [
+            "1.0",
+            "1.4"
+        ],
+        "sonata-project/media-bundle": [
+            "3.13"
+        ],
+        "sonata-project/media-odm-pack": [
+            "1.0"
+        ],
+        "sonata-project/media-orm-pack": [
+            "1.0"
+        ],
+        "sonata-project/notification-bundle": [
+            "3.4"
+        ],
+        "sonata-project/notification-orm-pack": [
+            "1.0"
+        ],
+        "sonata-project/page-bundle": [
+            "3.9"
+        ],
+        "sonata-project/translation-bundle": [
+            "2.3"
+        ],
+        "spiechu/symfony-commons-bundle": [
+            "0.1"
+        ],
+        "spomky-labs/jose-bundle": [
+            "2.2"
+        ],
+        "spomky-labs/lexik-jose-bridge": [
+            "1.0",
+            "2.0"
+        ],
+        "sprintechnology/firebase-cloud-messaging": [
+            "1.0"
+        ],
+        "squizlabs/php_codesniffer": [
+            "3.0",
+            "3.6"
+        ],
+        "sroze/messenger-enqueue-transport": [
+            "0.1"
+        ],
+        "sroze/openwhisk-bundle": [
+            "0.2"
+        ],
+        "stefandoorn/sitemap-plugin": [
+            "1.0"
+        ],
+        "stof/doctrine-extensions-bundle": [
+            "1.2"
+        ],
+        "sulu/article-bundle": [
+            "2.0"
+        ],
+        "sulu/form-bundle": [
+            "2.0"
+        ],
+        "sulu/headless-bundle": [
+            "0.1"
+        ],
+        "sulu/redirect-bundle": [
+            "2.0"
+        ],
+        "sulu/sylius-consumer-bundle": [
+            "0.4"
+        ],
+        "sulu/sylius-producer-plugin": [
+            "0.2"
+        ],
+        "sulu/webpack-encore": [
+            "1.0"
+        ],
+        "suncat/mobile-detect-bundle": [
+            "1.0"
+        ],
+        "svc/contactform-bundle": [
+            "1.0"
+        ],
+        "svc/param-bundle": [
+            "1.0"
+        ],
+        "svc/util-bundle": [
+            "1.0"
+        ],
+        "swag-industries/melodiia": [
+            "0.7"
+        ],
+        "swarrot/swarrot-bundle": [
+            "1.6"
+        ],
+        "sylius/admin-order-creation-plugin": [
+            "0.6"
+        ],
+        "sylius/customer-order-cancellation-plugin": [
+            "0.2"
+        ],
+        "sylius/customer-reorder-plugin": [
+            "1.0"
+        ],
+        "sylius/invoicing-plugin": [
+            "0.5"
+        ],
+        "sylius/refund-plugin": [
+            "0.4"
+        ],
+        "sylius/resource-bundle": [
+            "1.6"
+        ],
+        "symfony-bundles/kafka-bundle": [
+            "1.0"
+        ],
+        "symfony-bundles/redis-bundle": [
+            "2.0"
+        ],
+        "symfony/apache-pack": [
+            "1.0"
+        ],
+        "symfonycorp/connect": [
+            "7.0"
+        ],
+        "symfonycorp/connect-bundle": [
+            "5.0"
+        ],
+        "synolia/sylius-mail-tester-plugin": [
+            "1.0"
+        ],
+        "synolia/sylius-scheduler-command-plugin": [
+            "1.0",
+            "2.0"
+        ],
+        "systemsdk/easy-log-bundle": [
+            "1.10"
+        ],
+        "tattali/calendar-bundle": [
+            "1.1"
+        ],
+        "tbbc/money-bundle": [
+            "4.0"
+        ],
+        "tbmatuka/editorjs-bundle": [
+            "0.1"
+        ],
+        "teebbstudios/tuieditor-bundle": [
+            "1.0"
+        ],
+        "tg-bot-api/bot-api-base": [
+            "1.0"
+        ],
+        "tgalopin/html-sanitizer-bundle": [
+            "1.0"
+        ],
+        "thecodingmachine/graphqlite-bundle": [
+            "3.0",
+            "4.0"
+        ],
+        "thecodingmachine/tdbm-bundle": [
+            "5.0"
+        ],
+        "theplankmeister/form-data-transposer": [
+            "1.0"
+        ],
+        "tienvx/mbt-api-bundle": [
+            "1.0",
+            "1.12",
+            "1.15"
+        ],
+        "tienvx/mbt-bundle": [
+            "1.7",
+            "1.15",
+            "1.17"
+        ],
+        "tilleuls/forgot-password-bundle": [
+            "1.0"
+        ],
+        "tilleuls/migration-bundle": [
+            "1.1"
+        ],
+        "tilleuls/sylius-quick-import-plugin": [
+            "0.1"
+        ],
+        "tilleuls/url-signer-bundle": [
+            "1.0"
+        ],
+        "timiki/rpc-client-bundle": [
+            "4.0"
+        ],
+        "timiki/rpc-server-bundle": [
+            "4.0",
+            "4.2"
+        ],
+        "toiba/fullcalendar-bundle": [
+            "6.2"
+        ],
+        "trikoder/oauth2-bundle": [
+            "2.0",
+            "3.0"
+        ],
+        "troopers/alertify-bundle": [
+            "3.0"
+        ],
+        "troopers/mangopay-bundle": [
+            "3.0"
+        ],
+        "tsantos/serializer-bundle": [
+            "1.0"
+        ],
+        "velhron/dadata-bundle": [
+            "1.0"
+        ],
+        "verschoof/transip-api-bundle": [
+            "1.2"
+        ],
+        "vich/uploader-bundle": [
+            "1.7"
+        ],
+        "vincentchalamon/nav-bundle": [
+            "1.0"
+        ],
+        "wandi/easyadmin-plus-bundle": [
+            "0.1",
+            "0.3"
+        ],
+        "wandi/mailer-bundle": [
+            "1.0"
+        ],
+        "web-auth/webauthn-symfony-bundle": [
+            "3.0"
+        ],
+        "webinarium/symfony-lazysec": [
+            "2.0",
+            "2.1",
+            "2.3"
+        ],
+        "weglot/translate-bundle": [
+            "0.6"
+        ],
+        "wemakecustom/doctrine-naming-strategy-bundle": [
+            "1.0"
+        ],
+        "willdurand/geocoder-bundle": [
+            "4.1",
+            "5.0"
+        ],
+        "willdurand/hateoas-bundle": [
+            "1.4",
+            "2.0"
+        ],
+        "wisembly/amqp-bundle": [
+            "1.3",
+            "1.4"
+        ],
+        "wouterj/eloquent-bundle": [
+            "1.0"
+        ],
+        "wow-apps/symfony-slack-bot": [
+            "3.2",
+            "4.0"
+        ],
+        "xcore/inline-editing-bundle": [
+            "1.2"
+        ],
+        "xiidea/easy-audit": [
+            "1.4",
+            "2.0"
+        ],
+        "yamilovs/sms-bundle": [
+            "1.0"
+        ],
+        "ywh/cvss-bundle": [
+            "1.0"
+        ],
+        "ywh/doctrine-encryption-bundle": [
+            "1.0"
+        ],
+        "zendesk/zendesk_api_client_php": [
+            "2.2"
+        ],
+        "zephyr/allmysms-bundle": [
+            "1.0"
+        ]
+    },
+    "versions": [],
+    "git_url": "https://github.com/symfony/recipes-contrib.git",
+    "tree_template": "https://github.com/symfony/recipes-contrib/tree/{tree}/{package}/{version}",
+    "recipe_template": "https://raw.githubusercontent.com/symfony/recipes-contrib/flex/main/{package_dotted}.{version}.json",
+    "is_contrib": true
+}

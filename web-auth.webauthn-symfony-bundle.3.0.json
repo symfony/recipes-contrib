@@ -1,0 +1,49 @@
+{
+    "locks": {
+        "web-auth/webauthn-symfony-bundle": {
+            "version": "3.0",
+            "recipe": {
+                "repo": "3.0",
+                "branch": "master",
+                "version": "3.0",
+                "ref": "9926090a80c2cceeffe96e6c3312b397ea55d4a7"
+            }
+        }
+    },
+    "manifests": {
+        "web-auth/webauthn-symfony-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "web-auth/webauthn-symfony-bundle",
+            "version": "3.0",
+            "manifest": {
+                "bundles": {
+                    "Webauthn\\Bundle\\WebauthnBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%"
+                },
+                "env": {
+                    "RELAYING_PARTY_ID": "example.com",
+                    "RELAYING_PARTY_NAME": "My Application"
+                }
+            },
+            "files": {
+                "config/routes/webauthn_routes.yaml": {
+                    "contents": "webauthn_routes:\n    resource: .\n    type: webauthn\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/webauthn.yaml": {
+                    "contents": "# Please see the following page for more information: https://webauthn-doc.spomky-labs.com/the-webauthn-server/the-symfony-way#configuration\n\nwebauthn:\n    credential_repository: 'Webauthn\\Bundle\\Repository\\DummyPublicKeyCredentialSourceRepository' # CREATE YOUR REPOSITORY AND CHANGE THIS!\n    user_repository: 'Webauthn\\Bundle\\Repository\\DummyPublicKeyCredentialUserEntityRepository' # CREATE YOUR REPOSITORY AND CHANGE THIS!\n    creation_profiles:\n        default:\n            rp:\n                name: '%env(RELAYING_PARTY_NAME)%' # Please adapt the env file with the correct relaying party ID or set null\n                id: '%env(RELAYING_PARTY_ID)%' # Please adapt the env file with the correct relaying party ID or set null\n    request_profiles:\n        default:\n            rp_id: '%env(RELAYING_PARTY_ID)%' # Please adapt the env file with the correct relaying party ID or set null\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "web-auth/webauthn-symfony-bundle:3.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "contao/installation-bundle": {
+            "version": "4.6",
+            "recipe": {
+                "repo": "4.6",
+                "branch": "master",
+                "version": "4.6",
+                "ref": "00cb02ec7764a4674daa86d4d793aff2335138cc"
+            }
+        }
+    },
+    "manifests": {
+        "contao/installation-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "contao/installation-bundle",
+            "version": "4.6",
+            "manifest": {
+                "bundles": {
+                    "Contao\\InstallationBundle\\ContaoInstallationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/contao_installation.yaml": {
+                    "contents": "contao_installation:\n    resource: \"@ContaoInstallationBundle/Resources/config/routing.yml\"\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "contao/installation-bundle:4.6@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

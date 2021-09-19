@@ -1,0 +1,43 @@
+{
+    "locks": {
+        "symfony-bundles/redis-bundle": {
+            "version": "2.0",
+            "recipe": {
+                "repo": "2.0",
+                "branch": "master",
+                "version": "2.0",
+                "ref": "2becca99cc83c0e6d2ad68875fa84c516298dec4"
+            }
+        }
+    },
+    "manifests": {
+        "symfony-bundles/redis-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "symfony-bundles/redis-bundle",
+            "version": "2.0",
+            "manifest": {
+                "bundles": {
+                    "SymfonyBundles\\RedisBundle\\SymfonyBundlesRedisBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "REDIS_URL": "tcp://127.0.0.1:6379?database=0"
+                }
+            },
+            "files": {
+                "config/packages/sb_redis.yaml": {
+                    "contents": "sb_redis:\n    clients:\n        default:\n            $options:    []\n            $parameters: ['%env(REDIS_URL)%']\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "symfony-bundles/redis-bundle:2.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

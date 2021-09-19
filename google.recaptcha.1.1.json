@@ -1,0 +1,44 @@
+{
+    "locks": {
+        "google/recaptcha": {
+            "version": "1.1",
+            "recipe": {
+                "repo": "1.1",
+                "branch": "master",
+                "version": "1.1",
+                "ref": "e5a4aa21f2e98d7440ae9aab6b56e307f99dd084"
+            }
+        }
+    },
+    "manifests": {
+        "google/recaptcha": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "google/recaptcha",
+            "version": "1.1",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "To use Google Recaptcha, you must register a site on Recaptcha's admin panel:",
+                    "#2": "https://www.google.com/recaptcha/admin",
+                    "GOOGLE_RECAPTCHA_SITE_KEY": "",
+                    "GOOGLE_RECAPTCHA_SECRET": ""
+                },
+                "container": {
+                    "google_recaptcha_site_key": "%env(GOOGLE_RECAPTCHA_SITE_KEY)%"
+                }
+            },
+            "files": {
+                "config/packages/google_recaptcha.yaml": {
+                    "contents": "services:\n\n    # Inject this service in your controllers/services to verify a submitted captcha.\n    ReCaptcha\\ReCaptcha:\n        arguments:\n            $secret: '%env(GOOGLE_RECAPTCHA_SECRET)%'\n            $requestMethod: '@ReCaptcha\\RequestMethod'\n\n    # Curl is set here as default transport to communicate with Google servers.\n    # If you do not have php-curl extension, you can change for a socket or a plain POST request.\n    # Check out the repository for all other request methods:\n    # https://github.com/google/recaptcha/tree/master/src/ReCaptcha/RequestMethod\n    ReCaptcha\\RequestMethod: '@ReCaptcha\\RequestMethod\\CurlPost'\n    ReCaptcha\\RequestMethod\\CurlPost: null\n    ReCaptcha\\RequestMethod\\Curl: null\n\n# Uncomment this line if you want to inject the site key to all your Twig templates.\n# You can also inject the \"google_recaptcha_site_key\" container parameter to your controllers.\n#twig:\n#    globals:\n#        google_recaptcha_site_key: '%google_recaptcha_site_key%'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "google/recaptcha:1.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

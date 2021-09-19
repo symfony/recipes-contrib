@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "oneup/uploader-bundle": {
+            "version": "2.0",
+            "recipe": {
+                "repo": "2.0",
+                "branch": "master",
+                "version": "2.0",
+                "ref": "b19678d1535b9fe7cdf4647fd3483455e4fca458"
+            }
+        }
+    },
+    "manifests": {
+        "oneup/uploader-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "oneup/uploader-bundle",
+            "version": "2.0",
+            "manifest": {
+                "bundles": {
+                    "Oneup\\UploaderBundle\\OneupUploaderBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/oneup_uploader.yaml": {
+                    "contents": "oneup_uploader:\n    resource: .\n    type: uploader\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/oneup_uploader.yaml": {
+                    "contents": "# Read the documentation: https://github.com/1up-lab/OneupUploaderBundle/blob/master/Resources/doc/index.md\noneup_uploader:\n    mappings:\n        # This is a mapping example, remove it and create your own mappings.\n        gallery:\n            frontend: dropzone # or any uploader you use in the frontend\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "oneup/uploader-bundle:2.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

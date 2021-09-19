@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "redrat/api-helper-bundle": {
+            "version": "0.1",
+            "recipe": {
+                "repo": "0.1",
+                "branch": "master",
+                "version": "0.1",
+                "ref": "afa449503f091ecaa5e1303c0e9bdd923187a7fc"
+            }
+        }
+    },
+    "manifests": {
+        "redrat/api-helper-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "redrat/api-helper-bundle",
+            "version": "0.1",
+            "manifest": {
+                "bundles": {
+                    "RedRat\\ApiHelperBundle\\ApiHelperBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/redrat_api_helper.yaml": {
+                    "contents": "redrat_api_helper:\n    paths:\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "redrat/api-helper-bundle:0.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "locks": {
+        "phpzlc/auth-business": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "2c1ca19d8a406130101d0bf03905ed97a876cc74"
+            }
+        }
+    },
+    "manifests": {
+        "phpzlc/auth-business": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "phpzlc/auth-business",
+            "version": "1.0",
+            "manifest": {
+                "copy-from-package": {
+                    "Business/": "src/Business/",
+                    "Entity/": "src/Entity/",
+                    "Repository/": "src/Repository/",
+                    "phpzlc-auth-business.yaml": "config/packages/phpzlc-auth-business.yaml"
+                }
+            },
+            "files": [],
+            "origin": "phpzlc/auth-business:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "locks": {
+        "beelab/test-bundle": {
+            "version": "2.0",
+            "recipe": {
+                "repo": "2.0",
+                "branch": "master",
+                "version": "2.0",
+                "ref": "54e66717d8cf2abacb3f90fd8e34561dbb4b313d"
+            }
+        }
+    },
+    "manifests": {
+        "beelab/test-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "beelab/test-bundle",
+            "version": "2.0",
+            "manifest": {
+                "bundles": {
+                    "Beelab\\TestBundle\\BeelabTestBundle": [
+                        "test"
+                    ]
+                }
+            },
+            "files": [],
+            "origin": "beelab/test-bundle:2.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

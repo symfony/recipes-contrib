@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "roukmoute/hashids-bundle": {
+            "version": "1.4",
+            "recipe": {
+                "repo": "1.4",
+                "branch": "master",
+                "version": "1.4",
+                "ref": "cbd9de476f57c91bd6f8a4db1fd0ed05befa8fc4"
+            }
+        }
+    },
+    "manifests": {
+        "roukmoute/hashids-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "roukmoute/hashids-bundle",
+            "version": "1.4",
+            "manifest": {
+                "bundles": {
+                    "Roukmoute\\HashidsBundle\\RoukmouteHashidsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/roukmoute_hashids.yaml": {
+                    "contents": "# Read the documentation: https://github.com/roukmoute/HashidsBundle/blob/master/README.md\nroukmoute_hashids:\n    salt: 'change me'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "roukmoute/hashids-bundle:1.4@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

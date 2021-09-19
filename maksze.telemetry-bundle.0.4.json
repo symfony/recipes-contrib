@@ -1,0 +1,51 @@
+{
+    "locks": {
+        "maksze/telemetry-bundle": {
+            "version": "0.4",
+            "recipe": {
+                "repo": "0.4",
+                "branch": "master",
+                "version": "0.4",
+                "ref": "2f5d98fd0e0ef44b7dd1f71d1681bfe6624894e0"
+            }
+        }
+    },
+    "manifests": {
+        "maksze/telemetry-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "maksze/telemetry-bundle",
+            "version": "0.4",
+            "manifest": {
+                "bundles": {
+                    "MaksZe\\TelemetryBundle\\MaksZeTelemetryBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "YANDEX_METRIKA_ID": "any_id",
+                    "YANDEX_WEBMASTER_ID": "any_id",
+                    "GOOGLE_SEARCH_CONSOLE_ID": "any_id",
+                    "GOOGLE_ANALYTICS_ID": "any_id"
+                }
+            },
+            "files": {
+                "config/routes/maksze_telemetry.yaml": {
+                    "contents": "_maksze_telemetry:\n    resource: '@MaksZeTelemetryBundle/Resources/config/routes.xml'\n    prefix: /\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/maksze_telemetry.yaml": {
+                    "contents": "# Configuration file for the MaksZeTelemetry bundle\n#\n# For more information about the bundle settings visit:\n# https://github.com/maksze/MaksZeTelemetryBundle/blob/master/README.md\n\nmaksze_telemetry:\n    yandex_metrika:\n        #- {id: '%env(YANDEX_METRIKA_ID)%'}\n    yandex_webmaster:\n        #- {id: '%env(YANDEX_WEBMASTER_ID)%'}\n    google_search_console:\n        #- {id: '%env(GOOGLE_SEARCH_CONSOLE_ID)%'}\n    google_analytics:\n        #- {id: '%env(GOOGLE_ANALYTICS_ID)%'}\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "maksze/telemetry-bundle:0.4@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "rokka/client-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "079018e260fe4f80b4a1a56ad90f419d1ee0a594"
+            }
+        }
+    },
+    "manifests": {
+        "rokka/client-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "rokka/client-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Rokka\\RokkaClientBundle\\RokkaClientBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Get your API key from https://rokka.io/",
+                    "ROKKA_API_KEY": "API_KEY_replace_me",
+                    "ROKKA_ORGANIZATION": "ROKKA_ORG_replace_me"
+                }
+            },
+            "files": {
+                "config/packages/rokka.yaml": {
+                    "contents": "rokka_client:\n    # Api-Key value given on registration of the user. Get your API key from https://rokka.io/\n    api_key:      \"%env(ROKKA_API_KEY)%\" # Required\n    # Organization value like \"my-org\" for use in calls to the API.\n    organization: \"%env(ROKKA_ORGANIZATION)%\" # Required\n\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "rokka/client-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

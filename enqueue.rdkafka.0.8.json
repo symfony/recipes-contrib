@@ -1,0 +1,25 @@
+{
+    "locks": {
+        "enqueue/rdkafka": {
+            "version": "0.8",
+            "recipe": {
+                "repo": "0.8",
+                "branch": "master",
+                "version": "0.8",
+                "ref": "52a1ce303070ba433874414402e240cca13ed17d"
+            }
+        }
+    },
+    "manifests": {
+        "enqueue/rdkafka": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "enqueue/rdkafka",
+            "version": "0.8",
+            "manifest": [],
+            "files": [],
+            "origin": "enqueue/rdkafka:0.8@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

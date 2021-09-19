@@ -1,0 +1,38 @@
+{
+    "locks": {
+        "mixpanel/mixpanel-php": {
+            "version": "2.8",
+            "recipe": {
+                "repo": "2.8",
+                "branch": "master",
+                "version": "2.8",
+                "ref": "11d9b1125137cb0ddb519084f3884d4c5f72d6a1"
+            }
+        }
+    },
+    "manifests": {
+        "mixpanel/mixpanel-php": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "mixpanel/mixpanel-php",
+            "version": "2.8",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MIXPANEL_PROJECT_TOKEN": ""
+                }
+            },
+            "files": {
+                "config/packages/mixpanel.yaml": {
+                    "contents": "services:\n    Mixpanel:\n        class: \\Mixpanel\n        factory: ['Mixpanel', 'getInstance']\n        arguments:\n            - '%env(MIXPANEL_PROJECT_TOKEN)%'\n# uncomment if EU resident\n#            - { 'host': 'api-eu.mixpanel.com' }\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "mixpanel/mixpanel-php:2.8@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

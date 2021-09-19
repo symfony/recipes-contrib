@@ -1,0 +1,49 @@
+{
+    "locks": {
+        "symfonycorp/connect": {
+            "version": "7.0",
+            "recipe": {
+                "repo": "7.0",
+                "branch": "master",
+                "version": "7.0",
+                "ref": "882c945750a86da9e87b297509c3068bf1479c2b"
+            }
+        }
+    },
+    "manifests": {
+        "symfonycorp/connect": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "symfonycorp/connect",
+            "version": "7.0",
+            "manifest": {
+                "bundles": {
+                    "SymfonyCorp\\Connect\\SymfonyConnectBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%"
+                },
+                "env": {
+                    "SYMFONY_CONNECT_APP_ID": "",
+                    "SYMFONY_CONNECT_APP_SECRET": ""
+                }
+            },
+            "files": {
+                "config/routes/symfony_connect.yaml": {
+                    "contents": "symfony_connect:\n    prefix: /connect\n    resource: '@SymfonyConnectBundle/Resources/config/routing/connect.xml'\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/symfony_connect.yaml": {
+                    "contents": "symfony_connect:\n    app_id: '%env(SYMFONY_CONNECT_APP_ID)%'\n    app_secret: '%env(SYMFONY_CONNECT_APP_SECRET)%'\n    scope: 'SCOPE_PUBLIC'\n    # start_template: null\n    # failure_template: null\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "symfonycorp/connect:7.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

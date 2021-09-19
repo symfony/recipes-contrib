@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "league/tactician-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "222c3d39d38378bc6a9790a0b5baf841ba6679b9"
+            }
+        }
+    },
+    "manifests": {
+        "league/tactician-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "league/tactician-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "League\\Tactician\\Bundle\\TacticianBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/league_tactician.yaml": {
+                    "contents": "# Library documentation: http://tactician.thephpleague.com/\n# Bundle documentation: https://github.com/thephpleague/tactician-bundle/blob/v1.0/README.md\ntactician:\n    commandbus:\n        default:\n            middleware:\n# Security middleware - https://github.com/thephpleague/tactician-bundle#security-middleware-tacticianmiddlewaresecurity\n#                - tactician.middleware.security\n# Validator middleware - https://github.com/thephpleague/tactician-bundle/tree/v1.0#validator-middleware-tacticianmiddlewarevalidator\n#                - tactician.middleware.validator\n# Locking middleware - http://tactician.thephpleague.com/plugins/locking-middleware/\n#                - tactician.middleware.locking\n# Doctrine transactional middleware, requires additional package - https://github.com/thephpleague/tactician-doctrine\n#                - tactician.middleware.doctrine\n                - tactician.middleware.command_handler\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "league/tactician-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

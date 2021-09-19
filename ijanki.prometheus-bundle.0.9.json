@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "ijanki/prometheus-bundle": {
+            "version": "0.9",
+            "recipe": {
+                "repo": "0.9",
+                "branch": "master",
+                "version": "0.9",
+                "ref": "ae78a53bfda8545e0835c7ac1a0ca3be155749ef"
+            }
+        }
+    },
+    "manifests": {
+        "ijanki/prometheus-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "ijanki/prometheus-bundle",
+            "version": "0.9",
+            "manifest": {
+                "bundles": {
+                    "Ijanki\\Bundle\\PrometheusBundle\\IjankiPrometheusBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/ijanki_prometheus.yaml": {
+                    "contents": "ijanki_prometheus:\n    resource: \"@IjankiPrometheusBundle/Resources/config/routing.yml\"\n    prefix: /\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/ijanki_prometheus.yaml": {
+                    "contents": "ijanki_prometheus:\n    storage_adapter_service: TweedeGolf\\PrometheusClient\\Storage\\ApcuAdapter\n    metrics_path: /metrics\n    collectors:\n        http_requests_total:\n            counter:\n                labels: [url, code]\n                help: Number of requests\n        http_request_duration_seconds:\n            gauge:\n                labels: [url]\n                help: Response time\n        http_request_duration_seconds_bucket:\n            histogram:\n                labels: [url]\n                help: Response times histogram\n                buckets: [0.1, 0.2, 0.3, 0.5, 0.7, 1, 2, 5, 10, 30, 60]\n        data_is_fresh:\n            gauge:\n                labels: [app, section]\n                help: is the data fresh\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "ijanki/prometheus-bundle:0.9@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

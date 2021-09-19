@@ -1,0 +1,35 @@
+{
+    "locks": {
+        "jsor/doctrine-postgis": {
+            "version": "1.7",
+            "recipe": {
+                "repo": "1.7",
+                "branch": "master",
+                "version": "1.7",
+                "ref": "211979f7917bf6edb8fc5006a17b2e84e8e84d50"
+            }
+        }
+    },
+    "manifests": {
+        "jsor/doctrine-postgis": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "jsor/doctrine-postgis",
+            "version": "1.7",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/jsor_doctrine_postgis.yaml": {
+                    "contents": "services:\n    Jsor\\Doctrine\\PostGIS\\Event\\ORMSchemaEventSubscriber:\n        tags: [{ name: doctrine.event_subscriber, connection: default }]\n\ndoctrine:\n    dbal:\n        mapping_types:\n            _text: string\n        types:\n            geometry: 'Jsor\\Doctrine\\PostGIS\\Types\\GeometryType'\n    orm:\n        dql:\n            string_functions:\n                ST_AsGeoJSON: 'Jsor\\Doctrine\\PostGIS\\Functions\\ST_AsGeoJSON'\n                ST_GeomFromGeoJSON: 'Jsor\\Doctrine\\PostGIS\\Functions\\ST_GeomFromGeoJSON'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "jsor/doctrine-postgis:1.7@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

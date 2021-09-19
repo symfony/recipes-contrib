@@ -1,0 +1,34 @@
+{
+    "locks": {
+        "drenso/symfony-shared": {
+            "version": "0.8",
+            "recipe": {
+                "repo": "0.8",
+                "branch": "master",
+                "version": "0.8",
+                "ref": "cef2554f9f54ca6ad5c007f4e2bc6b8b0382dba5"
+            }
+        }
+    },
+    "manifests": {
+        "drenso/symfony-shared": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "drenso/symfony-shared",
+            "version": "0.8",
+            "manifest": {
+                "bundles": {
+                    "Drenso\\Shared\\DrensoSharedBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-package": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": [],
+            "origin": "drenso/symfony-shared:0.8@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

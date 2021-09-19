@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "disjfa/translation-bundle": {
+            "version": "0.1",
+            "recipe": {
+                "repo": "0.1",
+                "branch": "master",
+                "version": "0.1",
+                "ref": "8da88d4e40049729892ac1cc38182ecad6e23e64"
+            }
+        }
+    },
+    "manifests": {
+        "disjfa/translation-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "disjfa/translation-bundle",
+            "version": "0.1",
+            "manifest": {
+                "bundles": {
+                    "Disjfa\\TranslationBundle\\DisjfaTranslationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/disjfa_translation.yaml": {
+                    "contents": "disjfa_translation:\n    resource: '@DisjfaTranslationBundle/Controller/'\n    type:     annotation\n    prefix:   /admin\n",
+                    "executable": true,
+                    "encoding": ""
+                }
+            },
+            "origin": "disjfa/translation-bundle:0.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

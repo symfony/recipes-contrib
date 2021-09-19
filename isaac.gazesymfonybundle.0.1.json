@@ -1,0 +1,49 @@
+{
+    "locks": {
+        "isaac/gazesymfonybundle": {
+            "version": "0.1",
+            "recipe": {
+                "repo": "0.1",
+                "branch": "master",
+                "version": "0.1",
+                "ref": "8119b37711d2e82ba0139ddbb508d286693aeb6b"
+            }
+        }
+    },
+    "manifests": {
+        "isaac/gazesymfonybundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "isaac/gazesymfonybundle",
+            "version": "0.1",
+            "manifest": {
+                "bundles": {
+                    "ISAAC\\GazeSymfonyBundle\\ISAACGazeSymfonyBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "GAZEHUB_URL": "http://localhost:3333",
+                    "GAZE_PRIVATE_KEY_CONTENTS": ""
+                }
+            },
+            "files": {
+                "config/routes/isaac_gaze_symfony.yaml": {
+                    "contents": "isaac_gaze_symfony:\n    resource: '@ISAACGazeSymfonyBundle/config/routing.xml'\n    prefix: /gaze\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/isaac_gaze_symfony.yaml": {
+                    "contents": "isaac_gaze_symfony:\n    publisher:\n        gazehub_url: '%env(GAZEHUB_URL)%'\n        private_key_content: '%env(GAZE_PRIVATE_KEY_CONTENTS)%'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "isaac/gazesymfonybundle:0.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

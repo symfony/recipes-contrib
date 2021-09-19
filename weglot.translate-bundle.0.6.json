@@ -1,0 +1,43 @@
+{
+    "locks": {
+        "weglot/translate-bundle": {
+            "version": "0.6",
+            "recipe": {
+                "repo": "0.6",
+                "branch": "master",
+                "version": "0.6",
+                "ref": "3cbe2d280746adbf6d41a7551fd1a8a123a17413"
+            }
+        }
+    },
+    "manifests": {
+        "weglot/translate-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "weglot/translate-bundle",
+            "version": "0.6",
+            "manifest": {
+                "bundles": {
+                    "Weglot\\TranslateBundle\\WeglotTranslateBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "WG_API_KEY": "..."
+                }
+            },
+            "files": {
+                "config/packages/weglot_translate.yaml": {
+                    "contents": "weglot_translate:\n    api_key: '%env(WG_API_KEY)%'\n    original_language : 'en'\n    cache: true\n    destination_languages:\n        - 'fr'\n        - 'de'\n\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "weglot/translate-bundle:0.6@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

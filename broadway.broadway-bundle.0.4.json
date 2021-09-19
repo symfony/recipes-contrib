@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "broadway/broadway-bundle": {
+            "version": "0.4",
+            "recipe": {
+                "repo": "0.4",
+                "branch": "master",
+                "version": "0.4",
+                "ref": "0601c67ff07896a752e5a72381a22254ff754ea1"
+            }
+        }
+    },
+    "manifests": {
+        "broadway/broadway-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "broadway/broadway-bundle",
+            "version": "0.4",
+            "manifest": {
+                "bundles": {
+                    "Broadway\\Bundle\\BroadwayBundle\\BroadwayBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/broadway.yaml": {
+                    "contents": "# see https://github.com/broadway/broadway-bundle\n\nbroadway:\n\n    # a service definition id implementing Broadway\\EventStore\\EventStore\n    event_store: broadway.event_store.in_memory\n\n    # a service definition id implementing Broadway\\ReadModel\\RepositoryFactory\n    read_model: broadway.read_model.in_memory.repository_factory\n\n    # service definition ids implementing Broadway\\Serializer\\Serializer\n    serializer:\n        payload:   broadway.simple_interface_serializer\n        readmodel: broadway.simple_interface_serializer\n        metadata:  broadway.simple_interface_serializer\n\n    command_handling:\n        dispatch_events: false\n\n        # a service definition id implementing Psr\\Log\\LoggerInterface\n        logger: null\n\n    saga:\n        enabled: false\n\n        # a service definition id implementing Broadway\\Saga\\State\\RepositoryInterface\n        state_repository: broadway.saga.state.in_memory_repository\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "broadway/broadway-bundle:0.4@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

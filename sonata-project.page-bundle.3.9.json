@@ -1,0 +1,66 @@
+{
+    "locks": {
+        "sonata-project/page-bundle": {
+            "version": "3.9",
+            "recipe": {
+                "repo": "3.9",
+                "branch": "master",
+                "version": "3.9",
+                "ref": "a46c459627c260caa16cf0234378d54b99c3b969"
+            }
+        }
+    },
+    "manifests": {
+        "sonata-project/page-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "sonata-project/page-bundle",
+            "version": "3.9",
+            "manifest": {
+                "bundles": {
+                    "Sonata\\PageBundle\\SonataPageBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "src/Entity/SonataPageSite.php": {
+                    "contents": "<?php\n\ndeclare(strict_types=1);\n\nnamespace App\\Entity;\n\nuse Doctrine\\ORM\\Mapping as ORM;\nuse JMS\\Serializer\\Annotation as Serializer;\nuse Sonata\\PageBundle\\Entity\\BaseSite;\n\n/**\n * @ORM\\Entity\n * @ORM\\Table(name=\"page__site\")\n * @ORM\\HasLifecycleCallbacks\n */\nclass SonataPageSite extends BaseSite\n{\n    /**\n     * @ORM\\Id\n     * @ORM\\Column(type=\"integer\")\n     * @ORM\\GeneratedValue(strategy=\"AUTO\")\n     * \\\\ Serializer\\Groups(groups={\"sonata_api_read\",\"sonata_api_write\",\"sonata_search\"})\n     *\n     * @var int\n     */\n    protected $id;\n\n    public function getId()\n    {\n        return $this->id;\n    }\n\n    /**\n     * @ORM\\PrePersist\n     */\n    public function prePersist(): void\n    {\n        parent::prePersist();\n    }\n\n    /**\n     * @ORM\\PreUpdate\n     */\n    public function preUpdate(): void\n    {\n        parent::preUpdate();\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "src/Entity/SonataPageSnapshot.php": {
+                    "contents": "<?php\n\ndeclare(strict_types=1);\n\nnamespace App\\Entity;\n\nuse Doctrine\\ORM\\Mapping as ORM;\nuse JMS\\Serializer\\Annotation as Serializer;\nuse Sonata\\PageBundle\\Entity\\BaseSnapshot;\n\n/**\n * @ORM\\Entity\n * @ORM\\Table(name=\"page__snapshot\", indexes={\n *     @ORM\\Index(\n *         name=\"idx_snapshot_dates_enabled\", columns={\"publication_date_start\", \"publication_date_end\",\"enabled\"\n *     })\n * })\n */\nclass SonataPageSnapshot extends BaseSnapshot\n{\n    /**\n     * @ORM\\Id\n     * @ORM\\Column(type=\"integer\")\n     * @ORM\\GeneratedValue(strategy=\"AUTO\")\n     * // Serializer\\Groups(groups={\"sonata_api_read\",\"sonata_api_write\",\"sonata_search\"})\n     *\n     * @var int\n     */\n    protected $id;\n\n    /**\n     * @ORM\\ManyToOne(\n     *     targetEntity=\"App\\Entity\\SonataPageSite\",\n     *     cascade={\"persist\"}\n     * )\n     * @ORM\\JoinColumn(name=\"site_id\", referencedColumnName=\"id\", onDelete=\"CASCADE\")\n     *\n     * @var SonataPageSite\n     */\n    protected $site;\n\n    /**\n     * @ORM\\ManyToOne(\n     *     targetEntity=\"App\\Entity\\SonataPagePage\",\n     *     cascade={\"persist\"}\n     * )\n     * @ORM\\JoinColumn(name=\"page_id\", referencedColumnName=\"id\", onDelete=\"CASCADE\")\n     *\n     * @var SonataPagePage\n     */\n    protected $page;\n\n    public function getId()\n    {\n        return $this->id;\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "src/Entity/SonataPagePage.php": {
+                    "contents": "<?php\n\ndeclare(strict_types=1);\n\nnamespace App\\Entity;\n\nuse Doctrine\\ORM\\Mapping as ORM;\nuse JMS\\Serializer\\Annotation as Serializer;\nuse Sonata\\PageBundle\\Entity\\BasePage;\n\n/**\n * @ORM\\Entity\n * @ORM\\Table(name=\"page__page\")\n * @ORM\\HasLifecycleCallbacks\n */\nclass SonataPagePage extends BasePage\n{\n    /**\n     * @ORM\\Id\n     * @ORM\\Column(type=\"integer\")\n     * @ORM\\GeneratedValue(strategy=\"AUTO\")\n     * // Serializer\\Groups(groups={\"sonata_api_read\",\"sonata_api_write\",\"sonata_search\"})\n     *\n     * @var int\n     */\n    protected $id;\n\n    /**\n     * @ORM\\OneToMany(\n     *     targetEntity=\"App\\Entity\\SonataPagePage\",\n     *     mappedBy=\"parent\", cascade={\"persist\"}, orphanRemoval=false\n     * )\n     * @ORM\\OrderBy({\"position\"=\"ASC\"})\n     *\n     * @var SonataPagePage[]\n     */\n    protected $children;\n\n    /**\n     * @ORM\\OneToMany(\n     *     targetEntity=\"App\\Entity\\SonataPageBlock\",\n     *     mappedBy=\"page\", cascade={\"remove\", \"persist\", \"refresh\", \"merge\", \"detach\"}, orphanRemoval=false\n     * )\n     * @ORM\\OrderBy({\"position\"=\"ASC\"})\n     *\n     * @var SonataPageBlock[]\n     */\n    protected $blocks;\n\n    /**\n     * @ORM\\ManyToOne(\n     *     targetEntity=\"App\\Entity\\SonataPageSite\",\n     *     cascade={\"persist\"}\n     * )\n     * @ORM\\JoinColumn(name=\"site_id\", referencedColumnName=\"id\", onDelete=\"CASCADE\")\n     *\n     * @var SonataPageSite\n     */\n    protected $site;\n\n    /**\n     * @ORM\\ManyToOne(\n     *     targetEntity=\"App\\Entity\\SonataPagePage\",\n     *     inversedBy=\"children\", cascade={\"persist\"}\n     * )\n     * @ORM\\JoinColumn(name=\"parent_id\", referencedColumnName=\"id\", onDelete=\"CASCADE\")\n     *\n     * @var SonataPagePage\n     */\n    protected $parent;\n\n    /**\n     * @ORM\\OneToMany(\n     *     targetEntity=\"App\\Entity\\SonataPagePage\",\n     *     mappedBy=\"target\", orphanRemoval=false\n     * )\n     *\n     * @var SonataPagePage[]\n     */\n    protected $sources;\n\n    /**\n     * @ORM\\ManyToOne(\n     *     targetEntity=\"App\\Entity\\SonataPagePage\",\n     *     inversedBy=\"sources\", cascade={\"persist\"}\n     * )\n     * @ORM\\JoinColumn(name=\"target_id\", referencedColumnName=\"id\", onDelete=\"CASCADE\")\n     *\n     * @var SonataPagePage\n     */\n    protected $target;\n\n    public function getId()\n    {\n        return $this->id;\n    }\n\n    /**\n     * @ORM\\PrePersist\n     */\n    public function prePersist(): void\n    {\n        parent::prePersist();\n    }\n\n    /**\n     * @ORM\\PreUpdate\n     */\n    public function preUpdate(): void\n    {\n        parent::preUpdate();\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "src/Entity/SonataPageBlock.php": {
+                    "contents": "<?php\n\ndeclare(strict_types=1);\n\nnamespace App\\Entity;\n\nuse Doctrine\\ORM\\Mapping as ORM;\nuse JMS\\Serializer\\Annotation as Serializer;\nuse Sonata\\PageBundle\\Entity\\BaseBlock;\n\n/**\n * @ORM\\Entity\n * @ORM\\Table(name=\"page__block\")\n * @ORM\\HasLifecycleCallbacks\n */\nclass SonataPageBlock extends BaseBlock\n{\n    /**\n     * @ORM\\Id\n     * @ORM\\Column(type=\"integer\")\n     * @ORM\\GeneratedValue(strategy=\"AUTO\")\n     * // Serializer\\Groups(groups={\"sonata_api_read\",\"sonata_api_write\",\"sonata_search\"})\n     *\n     * @var int\n     */\n    protected $id;\n\n    /**\n     * @ORM\\OneToMany(\n     *     targetEntity=\"App\\Entity\\SonataPageBlock\",\n     *     mappedBy=\"parent\", cascade={\"remove\", \"persist\"}, orphanRemoval=true\n     * )\n     * @ORM\\OrderBy({\"position\"=\"ASC\"})\n     *\n     * @var SonataPageBlock[]\n     */\n    protected $children;\n\n    /**\n     * @ORM\\ManyToOne(\n     *     targetEntity=\"App\\Entity\\SonataPageBlock\",\n     *     inversedBy=\"children\"\n     * )\n     * @ORM\\JoinColumn(name=\"parent_id\", referencedColumnName=\"id\", onDelete=\"CASCADE\")\n     *\n     * @var SonataPageBlock\n     */\n    protected $parent;\n\n    /**\n     * @ORM\\ManyToOne(\n     *     targetEntity=\"App\\Entity\\SonataPagePage\",\n     *     inversedBy=\"blocks\", cascade={\"persist\"}\n     * )\n     * @ORM\\JoinColumn(name=\"page_id\", referencedColumnName=\"id\", onDelete=\"CASCADE\")\n     *\n     * @var SonataPagePage\n     */\n    protected $page;\n\n    public function getId()\n    {\n        return $this->id;\n    }\n\n    /**\n     * @ORM\\PrePersist\n     */\n    public function prePersist(): void\n    {\n        parent::prePersist();\n    }\n\n    /**\n     * @ORM\\PreUpdate\n     */\n    public function preUpdate(): void\n    {\n        parent::preUpdate();\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/routes/sonata_page.yaml": {
+                    "contents": "#sonata_page_api:\n#    resource: '@SonataPageBundle/Resources/config/routing/api.xml'\n#    prefix: /\n\n#sonata_page_cache:\n#    resource: '@SonataPageBundle/Resources/config/routing/cache.xml'\n#    prefix: /\n\nsonata_page_exceptions:\n    resource: '@SonataPageBundle/Resources/config/routing/exceptions.xml'\n    prefix: /\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/sonata_page.yaml": {
+                    "contents": "sonata_block:\n    context_manager: sonata.page.block.context_manager\n    default_contexts: [sonata_page_bundle]\n\nsonata_admin:\n    assets:\n        extra_javascripts:\n            - bundles/sonatapage/sonata-page.back.min.js\n        extra_stylesheets:\n            - bundles/sonatapage/sonata-page.back.min.css\n\nsonata_page:\n    slugify_service: sonata.page.slugify.cocur\n    multisite: host\n    use_streamed_response: false\n\n    router_auto_register:\n        enabled: true\n        priority: 150\n    ignore_route_patterns:\n        - ^(.*)admin(.*)   # ignore admin route, ie route containing 'admin'\n        - ^_(.*)          # ignore symfony routes\n    ignore_routes:\n        - sonata_page_cache_esi\n        - sonata_page_cache_ssi\n        - sonata_page_js_sync_cache\n        - sonata_page_js_async_cache\n        - sonata_cache_esi\n        - sonata_cache_ssi\n        - sonata_cache_js_async\n        - sonata_cache_js_sync\n        - sonata_cache_apc\n    ignore_uri_patterns:\n        - ^/admin\\/   # ignore admin route, ie route containing 'admin'\n\n    default_template: default\n    templates:\n        default:\n            path: '@SonataPage/layout.html.twig'\n            name: 'default'\n            containers:\n                header:\n                    name: Header\n                content_top:\n                    name: Top content\n                content:\n                    name: Main content\n                content_bottom:\n                    name: Bottom content\n                footer:\n                    name: Footer\n            matrix:\n                layout: |\n                    HHHHHHHH\n                    HHHHHHHH\n                    TTTTTTTT\n                    TTTTTTTT\n                    CCCCCCCC\n                    CCCCCCCC\n                    BBBBBBBB\n                    BBBBBBBB\n                    FFFFFFFF\n                    FFFFFFFF\n\n                mapping:\n                    H: header\n                    T: content_top\n                    C: content\n                    B: content_bottom\n                    F: footer\n\n    direct_publication: '%kernel.debug%'\n\n    catch_exceptions:\n        not_found: [404]    # render 404 page with \"not_found\" key (name generated: _page_internal_error_{key})\n        fatal:     [500]    # so you can use the same page for different http errors or specify specific page for each error\n\n    class:\n        page: 'App\\Entity\\SonataPagePage'\n        snapshot: 'App\\Entity\\SonataPageSnapshot'\n        block: 'App\\Entity\\SonataPageBlock'\n        site: 'App\\Entity\\SonataPageSite'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "sonata-project/page-bundle:3.9@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

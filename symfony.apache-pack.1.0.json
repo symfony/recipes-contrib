@@ -1,0 +1,35 @@
+{
+    "locks": {
+        "symfony/apache-pack": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "9d254a22efca7264203eea98b866f16f944b2f09"
+            }
+        }
+    },
+    "manifests": {
+        "symfony/apache-pack": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "symfony/apache-pack",
+            "version": "1.0",
+            "manifest": {
+                "copy-from-recipe": {
+                    "public/": "%PUBLIC_DIR%/"
+                }
+            },
+            "files": {
+                "public/.htaccess": {
+                    "contents": "# Use the front controller as index file. It serves as a fallback solution when\n# every other rewrite/redirect fails (e.g. in an aliased environment without\n# mod_rewrite). Additionally, this reduces the matching process for the\n# start page (path \"/\") because otherwise Apache will apply the rewriting rules\n# to each configured DirectoryIndex file (e.g. index.php, index.html, index.pl).\nDirectoryIndex index.php\n\n# By default, Apache does not evaluate symbolic links if you did not enable this\n# feature in your server configuration. Uncomment the following line if you\n# install assets as symlinks or if you experience problems related to symlinks\n# when compiling LESS/Sass/CoffeScript assets.\n# Options +FollowSymlinks\n\n# Disabling MultiViews prevents unwanted negotiation, e.g. \"/index\" should not resolve\n# to the front controller \"/index.php\" but be rewritten to \"/index.php/index\".\n<IfModule mod_negotiation.c>\n    Options -MultiViews\n</IfModule>\n\n<IfModule mod_rewrite.c>\n    RewriteEngine On\n\n    # Determine the RewriteBase automatically and set it as environment variable.\n    # If you are using Apache aliases to do mass virtual hosting or installed the\n    # project in a subdirectory, the base path will be prepended to allow proper\n    # resolution of the index.php file and to redirect to the correct URI. It will\n    # work in environments without path prefix as well, providing a safe, one-size\n    # fits all solution. But as you do not need it in this case, you can comment\n    # the following 2 lines to eliminate the overhead.\n    RewriteCond %{REQUEST_URI}::$0 ^(/.+)/(.*)::\\2$\n    RewriteRule .* - [E=BASE:%1]\n\n    # Sets the HTTP_AUTHORIZATION header removed by Apache\n    RewriteCond %{HTTP:Authorization} .+\n    RewriteRule ^ - [E=HTTP_AUTHORIZATION:%0]\n\n    # Redirect to URI without front controller to prevent duplicate content\n    # (with and without `/index.php`). Only do this redirect on the initial\n    # rewrite by Apache and not on subsequent cycles. Otherwise we would get an\n    # endless redirect loop (request -> rewrite to front controller ->\n    # redirect -> request -> ...).\n    # So in case you get a \"too many redirects\" error or you always get redirected\n    # to the start page because your Apache does not expose the REDIRECT_STATUS\n    # environment variable, you have 2 choices:\n    # - disable this feature by commenting the following 2 lines or\n    # - use Apache >= 2.3.9 and replace all L flags by END flags and remove the\n    #   following RewriteCond (best solution)\n    RewriteCond %{ENV:REDIRECT_STATUS} =\"\"\n    RewriteRule ^index\\.php(?:/(.*)|$) %{ENV:BASE}/$1 [R=301,L]\n\n    # If the requested filename exists, simply serve it.\n    # We only want to let Apache serve files and not directories.\n    # Rewrite all other queries to the front controller.\n    RewriteCond %{REQUEST_FILENAME} !-f\n    RewriteRule ^ %{ENV:BASE}/index.php [L]\n</IfModule>\n\n<IfModule !mod_rewrite.c>\n    <IfModule mod_alias.c>\n        # When mod_rewrite is not available, we instruct a temporary redirect of\n        # the start page to the front controller explicitly so that the website\n        # and the generated links can still be used.\n        RedirectMatch 307 ^/$ /index.php/\n        # RedirectTemp cannot be used instead\n    </IfModule>\n</IfModule>\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "symfony/apache-pack:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

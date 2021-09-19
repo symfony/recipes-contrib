@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "leogout/seo-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "664d3f978cca5b6e4e4314e05e5e89b1cbf36858"
+            }
+        }
+    },
+    "manifests": {
+        "leogout/seo-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "leogout/seo-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Leogout\\Bundle\\SeoBundle\\LeogoutSeoBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/leogout_seo.yaml": {
+                    "contents": "leogout_seo:\n    # By default, the SEO generators services are not loaded if you don't configure them. The following default configuration\n    # loads the services but they won't render anything.\n    # See https://github.com/leogout/SeoBundle#configuration-reference to configure them.\n    # See https://github.com/leogout/SeoBundle#setting-values-dynamically to use them directly in your controller.\n    general: null\n    basic: null\n    og: null\n    twitter: null\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "leogout/seo-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

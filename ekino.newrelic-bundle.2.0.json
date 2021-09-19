@@ -1,0 +1,49 @@
+{
+    "locks": {
+        "ekino/newrelic-bundle": {
+            "version": "2.0",
+            "recipe": {
+                "repo": "2.0",
+                "branch": "master",
+                "version": "2.0",
+                "ref": "c6535bb5fa418c5180be1b5c219e277d5f5a9998"
+            }
+        }
+    },
+    "manifests": {
+        "ekino/newrelic-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "ekino/newrelic-bundle",
+            "version": "2.0",
+            "manifest": {
+                "bundles": {
+                    "Ekino\\NewRelicBundle\\EkinoNewRelicBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Get the REST API key of your NewRelic Account on https://docs.newrelic.com/docs/apis/rest-api-v2/requirements/api-keys. Using an API key is optional.",
+                    "NEWRELIC_API_KEY": "FIXME"
+                }
+            },
+            "files": {
+                "config/packages/prod/ekino_new_relic.yaml": {
+                    "contents": "ekino_new_relic:\n    enabled: true\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/ekino_new_relic.yaml": {
+                    "contents": "ekino_new_relic:\n    enabled: false\n    application_name: 'My Symfony Application' # Remove this to use the value from php.ini\n    api_key: \"%env(NEWRELIC_API_KEY)%\"\n    exceptions: true\n    deprecations: true\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "ekino/newrelic-bundle:2.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

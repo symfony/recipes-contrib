@@ -1,0 +1,44 @@
+{
+    "locks": {
+        "seferov/aws-bundle": {
+            "version": "3.0",
+            "recipe": {
+                "repo": "3.0",
+                "branch": "master",
+                "version": "3.0",
+                "ref": "d18c7b465e03373d9305cbcc534dedf108e8aeca"
+            }
+        }
+    },
+    "manifests": {
+        "seferov/aws-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "seferov/aws-bundle",
+            "version": "3.0",
+            "manifest": {
+                "bundles": {
+                    "Seferov\\AwsBundle\\SeferovAwsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "AWS_CREDENTIALS_KEY": "CHANGE_THIS",
+                    "AWS_CREDENTIALS_SECRET": "CHANGE_THIS"
+                }
+            },
+            "files": {
+                "config/packages/seferov_aws.yaml": {
+                    "contents": "seferov_aws:\n    credentials:\n        key: '%env(AWS_CREDENTIALS_KEY)%'\n        secret: '%env(AWS_CREDENTIALS_SECRET)%'\n    region: 'eu-central-1'\n    # Here you can set service specific credentials and config.\n    # See https://github.com/seferov/awsBundle/blob/master/Resources/doc/configuration.md\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "seferov/aws-bundle:3.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

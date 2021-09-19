@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "macpaw/sentry-monolog-adapter": {
+            "version": "0.0",
+            "recipe": {
+                "repo": "0.0",
+                "branch": "master",
+                "version": "0.0",
+                "ref": "fac1514766f2d80aeeb89f566a4fb62a388890e0"
+            }
+        }
+    },
+    "manifests": {
+        "macpaw/sentry-monolog-adapter": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "macpaw/sentry-monolog-adapter",
+            "version": "0.0",
+            "manifest": {
+                "bundles": {
+                    "SentryMonologAdapter\\SentryMonologAdapterBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sentry_monolog_adapter.yaml": {
+                    "contents": "sentry_monolog_adapter:\n    messenger_logging_middleware:\n        logging_strategies:\n            - id: sentry_monolog_adapter.log_all_strategy\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "macpaw/sentry-monolog-adapter:0.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

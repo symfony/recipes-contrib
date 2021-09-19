@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "sonata-project/core-bundle": {
+            "version": "3.9",
+            "recipe": {
+                "repo": "3.9",
+                "branch": "master",
+                "version": "3.9",
+                "ref": "2f69bd1995730b73a5211a9707622fb25a925df7"
+            }
+        }
+    },
+    "manifests": {
+        "sonata-project/core-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "sonata-project/core-bundle",
+            "version": "3.9",
+            "manifest": {
+                "bundles": {
+                    "Sonata\\CoreBundle\\SonataCoreBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sonata_core.yaml": {
+                    "contents": "sonata_core:\n    form:\n        mapping:\n            enabled: false\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "sonata-project/core-bundle:3.9@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "locks": {
+        "dobryprogramator/smartform-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "92670c4f45005e719b91e925149d9555de322069"
+            }
+        }
+    },
+    "manifests": {
+        "dobryprogramator/smartform-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "dobryprogramator/smartform-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "DobryProgramator\\SmartformBundle\\DobryProgramatorSmartformBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SMARTFORM_CLIENT_ID": ""
+                }
+            },
+            "files": {
+                "config/packages/dobry_programator_smartform.yaml": {
+                    "contents": "dobry_programator_smartform:\n    client_id: '%env(SMARTFORM_CLIENT_ID)%'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "dobryprogramator/smartform-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

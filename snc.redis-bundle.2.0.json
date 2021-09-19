@@ -1,0 +1,44 @@
+{
+    "locks": {
+        "snc/redis-bundle": {
+            "version": "2.0",
+            "recipe": {
+                "repo": "2.0",
+                "branch": "master",
+                "version": "2.0",
+                "ref": "85bbdb3d2db531e20874de29bab0587f93604fa8"
+            }
+        }
+    },
+    "manifests": {
+        "snc/redis-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "snc/redis-bundle",
+            "version": "2.0",
+            "manifest": {
+                "bundles": {
+                    "Snc\\RedisBundle\\SncRedisBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "passwords that contain special characters (@, %, :, +) must be urlencoded",
+                    "REDIS_URL": "redis://localhost"
+                }
+            },
+            "files": {
+                "config/packages/snc_redis.yaml": {
+                    "contents": "snc_redis:\n    clients:\n\n# Define your clients here. The example below connects to database 0 of the default Redis server.\n#\n# See https://github.com/snc/SncRedisBundle/blob/master/Resources/doc/index.md for instructions on\n# how to configure the bundle.\n#\n#        default:\n#            type: phpredis\n#            alias: default\n#            dsn: \"%env(REDIS_URL)%\"\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "snc/redis-bundle:2.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

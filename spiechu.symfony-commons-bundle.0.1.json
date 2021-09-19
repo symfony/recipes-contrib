@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "spiechu/symfony-commons-bundle": {
+            "version": "0.1",
+            "recipe": {
+                "repo": "0.1",
+                "branch": "master",
+                "version": "0.1",
+                "ref": "6e5883906690f78f929a02e7a23d09ffd7e72e80"
+            }
+        }
+    },
+    "manifests": {
+        "spiechu/symfony-commons-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "spiechu/symfony-commons-bundle",
+            "version": "0.1",
+            "manifest": {
+                "bundles": {
+                    "Spiechu\\SymfonyCommonsBundle\\SpiechuSymfonyCommonsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%"
+                }
+            },
+            "files": {
+                "config/packages/spiechu_symfony_commons.yaml": {
+                    "contents": "spiechu_symfony_commons:\n    # bundle configuration available at\n    # https://github.com/spiechu/symfony-commons-bundle/blob/master/README.md\n    get_method_override:\n        enabled:              false\n    response_schema_validation:\n        enabled:              false\n    api_versioning:\n        enabled:              false\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "spiechu/symfony-commons-bundle:0.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

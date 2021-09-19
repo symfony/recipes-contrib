@@ -1,0 +1,44 @@
+{
+    "locks": {
+        "slot/mandrill-bundle": {
+            "version": "1.1",
+            "recipe": {
+                "repo": "1.1",
+                "branch": "master",
+                "version": "1.1",
+                "ref": "9699b1844f1c1aa58699ce7073867ec36a09082a"
+            }
+        }
+    },
+    "manifests": {
+        "slot/mandrill-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "slot/mandrill-bundle",
+            "version": "1.1",
+            "manifest": {
+                "bundles": {
+                    "Slot\\MandrillBundle\\SlotMandrillBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MANDRILL_API_KEY": "",
+                    "MANDRILL_DEFAULT_SENDER": "info@example.com"
+                }
+            },
+            "files": {
+                "config/packages/slot_mandrill.yaml": {
+                    "contents": "slot_mandrill:\n    api_key: '%env(MANDRILL_API_KEY)%'\n    default:\n        sender: '%env(MANDRILL_DEFAULT_SENDER)%'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "slot/mandrill-bundle:1.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

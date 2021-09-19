@@ -1,0 +1,44 @@
+{
+    "locks": {
+        "nelmio/solarium-bundle": {
+            "version": "2.4",
+            "recipe": {
+                "repo": "2.4",
+                "branch": "master",
+                "version": "2.4",
+                "ref": "dd8a4574b91d26fb70f10efe395c6d4e655bdf71"
+            }
+        }
+    },
+    "manifests": {
+        "nelmio/solarium-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "nelmio/solarium-bundle",
+            "version": "2.4",
+            "manifest": {
+                "bundles": {
+                    "Nelmio\\SolariumBundle\\NelmioSolariumBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SOLR_HOST": "localhost",
+                    "SOLR_CORE": "example"
+                }
+            },
+            "files": {
+                "config/packages/nelmio_solarium.yaml": {
+                    "contents": "nelmio_solarium:\n    endpoints:\n        default:\n            host: \"%env(SOLR_HOST)%\"\n            core: \"%env(SOLR_CORE)%\"\n            # The following are the default parameters for Solarium client:\n            # scheme: http\n            # port: 8983\n            # path: /solr\n            # timeout: 5\n    clients:\n        default:\n            endpoints: [default]\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "nelmio/solarium-bundle:2.4@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

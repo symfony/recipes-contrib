@@ -1,0 +1,51 @@
+{
+    "locks": {
+        "sonata-project/media-bundle": {
+            "version": "3.13",
+            "recipe": {
+                "repo": "3.13",
+                "branch": "master",
+                "version": "3.13",
+                "ref": "e25412e53b20827db07abb6f2aa0b8e4d26c284c"
+            }
+        }
+    },
+    "manifests": {
+        "sonata-project/media-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "sonata-project/media-bundle",
+            "version": "3.13",
+            "manifest": {
+                "bundles": {
+                    "Sonata\\MediaBundle\\SonataMediaBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "public/": "%PUBLIC_DIR%/"
+                }
+            },
+            "files": {
+                "public/upload/media/.gitignore": {
+                    "contents": "*\n!.gitignore\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/routes/sonata_media.yaml": {
+                    "contents": "sonata_media_gallery:\n    resource: '@SonataMediaBundle/Resources/config/routing/gallery.xml'\n    prefix: /media/gallery\n\nsonata_media:\n    resource: '@SonataMediaBundle/Resources/config/routing/media.xml'\n    prefix: /media\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/sonata_media.yaml": {
+                    "contents": "sonata_media:\n    default_context: default\n    contexts:\n        default:\n            providers:\n                - sonata.media.provider.dailymotion\n                - sonata.media.provider.youtube\n                - sonata.media.provider.image\n                - sonata.media.provider.file\n                - sonata.media.provider.vimeo\n\n            formats:\n                small: { width: 100 , quality: 70}\n                big:   { width: 500 , quality: 70}\n\n    cdn:\n        server:\n            path: /upload/media\n\n    filesystem:\n        local:\n            # Directory for uploads should be writable\n            directory: \"%kernel.project_dir%/public/upload/media\"\n            create: false\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "sonata-project/media-bundle:3.13@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

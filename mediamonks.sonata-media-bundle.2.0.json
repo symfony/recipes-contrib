@@ -1,0 +1,54 @@
+{
+    "locks": {
+        "mediamonks/sonata-media-bundle": {
+            "version": "2.0",
+            "recipe": {
+                "repo": "2.0",
+                "branch": "master",
+                "version": "2.0",
+                "ref": "4b7d6c885c1ee9912186a9c65f3e439114135add"
+            }
+        }
+    },
+    "manifests": {
+        "mediamonks/sonata-media-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "mediamonks/sonata-media-bundle",
+            "version": "2.0",
+            "manifest": {
+                "bundles": {
+                    "MediaMonks\\SonataMediaBundle\\MediaMonksSonataMediaBundle": [
+                        "all"
+                    ]
+                },
+                "env": {
+                    "MEDIA_REDIRECT_URL": "https://media-redirect-url/"
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "src/Entity/Media.php": {
+                    "contents": "<?php\n\nnamespace App\\Entity;\n\nuse Doctrine\\ORM\\Mapping as ORM;\nuse MediaMonks\\SonataMediaBundle\\Entity\\Media as BaseMedia;\n\n/**\n * @ORM\\Entity(repositoryClass=\"MediaMonks\\SonataMediaBundle\\Repository\\MediaRepository\")\n * @ORM\\Table\n */\nclass Media extends BaseMedia\n{\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/routes/mediamonks_sonata_media.yaml": {
+                    "contents": "mediamonks_sonata_media_admin:\n    resource: \"@MediaMonksSonataMediaBundle/Resources/config/routing_admin.yml\"\n\nmediamonks_sonata_media:\n    resource: \"@MediaMonksSonataMediaBundle/Resources/config/routing.yml\"\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/mediamonks_sonata_media.yaml": {
+                    "contents": "mediamonks_sonata_media:\n    filesystem_private: 'oneup_flysystem.default_filesystem_filesystem'\n    filesystem_public: 'oneup_flysystem.default_filesystem_filesystem'\n    redirect_url: '%env(MEDIA_REDIRECT_URL)%'\n    model_class: App\\Entity\\Media\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "mediamonks/sonata-media-bundle:2.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

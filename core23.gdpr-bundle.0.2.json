@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "core23/gdpr-bundle": {
+            "version": "0.2",
+            "recipe": {
+                "repo": "0.2",
+                "branch": "master",
+                "version": "0.2",
+                "ref": "49fe404d938474efdce54f7d4bf6ef45ed177953"
+            }
+        }
+    },
+    "manifests": {
+        "core23/gdpr-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "core23/gdpr-bundle",
+            "version": "0.2",
+            "manifest": {
+                "bundles": {
+                    "Core23\\GDPRBundle\\Core23GDPRBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/core23_gdpr.yaml": {
+                    "contents": "sonata_block:\n    blocks:\n        core23_gdpr.block.information: null\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "core23/gdpr-bundle:0.2@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

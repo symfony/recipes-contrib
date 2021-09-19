@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "moneyphp/money-bundle": {
+            "version": "0.1",
+            "recipe": {
+                "repo": "0.1",
+                "branch": "master",
+                "version": "0.1",
+                "ref": "20d27a8c7ab6850350a000f9b2ebbe729932dca9"
+            }
+        }
+    },
+    "manifests": {
+        "moneyphp/money-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "moneyphp/money-bundle",
+            "version": "0.1",
+            "manifest": {
+                "bundles": {
+                    "Money\\MoneyBundle\\MoneyBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/money.yaml": {
+                    "contents": "services:\n    Money\\Currencies:\n        alias: \"moneyphp.iso.currencies\"\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "moneyphp/money-bundle:0.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

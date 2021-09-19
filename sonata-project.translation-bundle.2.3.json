@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "sonata-project/translation-bundle": {
+            "version": "2.3",
+            "recipe": {
+                "repo": "2.3",
+                "branch": "master",
+                "version": "2.3",
+                "ref": "65f0e544ca19d262268e1f1ce2b4cbbe459a4a97"
+            }
+        }
+    },
+    "manifests": {
+        "sonata-project/translation-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "sonata-project/translation-bundle",
+            "version": "2.3",
+            "manifest": {
+                "bundles": {
+                    "Sonata\\TranslationBundle\\SonataTranslationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sonata_translation.yaml": {
+                    "contents": "sonata_admin:\n    assets:\n        extra_stylesheets:\n            - bundles/sonatatranslation/css/sonata-translation.css\n\nsonata_block:\n    blocks:\n        sonata_translation.block.locale_switcher: null\n\nsonata_translation:\n    locales: ['en']\n    default_locale: 'en'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "sonata-project/translation-bundle:2.3@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

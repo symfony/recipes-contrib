@@ -1,0 +1,39 @@
+{
+    "locks": {
+        "mailgun/mailgun-php": {
+            "version": "2.3",
+            "recipe": {
+                "repo": "2.3",
+                "branch": "master",
+                "version": "2.3",
+                "ref": "9aea325919644b58a53edf71d1212005e7081cad"
+            }
+        }
+    },
+    "manifests": {
+        "mailgun/mailgun-php": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "mailgun/mailgun-php",
+            "version": "2.3",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Get your API key form https://app.mailgun.com/app/domains",
+                    "MAILGUN_API_KEY": "replace_me"
+                }
+            },
+            "files": {
+                "config/packages/mailgun.yaml": {
+                    "contents": "services:\n    Mailgun\\Mailgun:\n        class: Mailgun\\Mailgun\n        factory: ['Mailgun\\Mailgun', create]\n        arguments: ['%env(MAILGUN_API_KEY)%']\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "mailgun/mailgun-php:2.3@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

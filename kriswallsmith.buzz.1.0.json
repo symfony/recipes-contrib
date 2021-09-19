@@ -1,0 +1,35 @@
+{
+    "locks": {
+        "kriswallsmith/buzz": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "7238da98cc4912f7ff0a124cbac6e89ffb149db2"
+            }
+        }
+    },
+    "manifests": {
+        "kriswallsmith/buzz": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "kriswallsmith/buzz",
+            "version": "1.0",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/buzz.yaml": {
+                    "contents": "# Read more about client options at: https://github.com/kriswallsmith/Buzz/blob/master/doc/client.md\nservices:\n    _defaults:\n        public: false\n\n    # Tell the auto wire system to use \"FileGetContents\" client as default client.\n    # Set this to any of the other clients below (e.g. Curl or MultiCurl) to use a different default client.\n    Buzz\\Client\\BuzzClientInterface: '@buzz.client.file_get_contents'\n    Buzz\\Client\\BatchClientInterface: '@buzz.client.multi_curl'\n\n    # Register alias for PSR-18\n    Psr\\Http\\Client\\ClientInterface: '@Buzz\\Client\\BuzzClientInterface'\n\n    # Clients\n    buzz.client.file_get_contents:\n        class: Buzz\\Client\\FileGetContents\n        arguments:\n            - '@Psr\\Http\\Message\\ResponseFactoryInterface'\n            -\n                timeout: 10\n                allow_redirects: false\n\n    buzz.client.curl:\n        class: Buzz\\Client\\Curl\n        arguments:\n            - '@Psr\\Http\\Message\\ResponseFactoryInterface'\n            -\n                timeout: 10\n                allow_redirects: false\n\n    buzz.client.multi_curl:\n        class: Buzz\\Client\\MultiCurl\n        arguments:\n            - '@Psr\\Http\\Message\\ResponseFactoryInterface'\n            -\n                timeout: 10\n                allow_redirects: false\n\n    # Browser\n    Buzz\\Browser:\n        arguments: ['@Buzz\\Client\\BuzzClientInterface', '@Psr\\Http\\Message\\RequestFactoryInterface']\n        calls:\n            - ['addMiddleware', ['@buzz.middleware.content_length']]\n            - ['addMiddleware', ['@buzz.middleware.logger']]\n\n    # Middleware\n    buzz.middleware.content_length:\n        class: Buzz\\Middleware\\ContentLengthMiddleware\n\n    buzz.middleware.logger:\n        class: Buzz\\Middleware\\LoggerMiddleware\n        arguments: ['@?logger']\n        tags:\n            - { name: monolog.logger, channel: buzz }\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "kriswallsmith/buzz:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

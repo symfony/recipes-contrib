@@ -1,0 +1,61 @@
+{
+    "locks": {
+        "sonata-project/classification-bundle": {
+            "version": "3.7",
+            "recipe": {
+                "repo": "3.7",
+                "branch": "master",
+                "version": "3.7",
+                "ref": "e79fbb2e8658677e5d5d9199db7d2735332c4b7d"
+            }
+        }
+    },
+    "manifests": {
+        "sonata-project/classification-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "sonata-project/classification-bundle",
+            "version": "3.7",
+            "manifest": {
+                "bundles": {
+                    "Sonata\\ClassificationBundle\\SonataClassificationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "src/Entity/SonataClassificationCategory.php": {
+                    "contents": "<?php\n\ndeclare(strict_types=1);\n\nnamespace App\\Entity;\n\nuse Doctrine\\ORM\\Mapping as ORM;\nuse JMS\\Serializer\\Annotation as Serializer;\nuse Sonata\\ClassificationBundle\\Entity\\BaseCategory;\nuse Sonata\\MediaBundle\\Model\\MediaInterface;\nuse Symfony\\Component\\Validator\\Constraints as Assert;\n\n/**\n * @ORM\\Entity\n * @ORM\\Table(name=\"classification__category\")\n * @ORM\\HasLifecycleCallbacks\n */\nclass SonataClassificationCategory extends BaseCategory\n{\n    /**\n     * @ORM\\Id\n     * @ORM\\Column(type=\"integer\")\n     * @ORM\\GeneratedValue(strategy=\"AUTO\")\n     * // Serializer\\Groups(groups={\"sonata_api_read\", \"sonata_api_write\", \"sonata_search\"})\n     *\n     * @var int\n     */\n    protected $id;\n\n    /**\n     * @ORM\\OneToMany(\n     *     targetEntity=\"App\\Entity\\SonataClassificationCategory\",\n     *     mappedBy=\"parent\", cascade={\"persist\"}, orphanRemoval=true\n     * )\n     * @ORM\\OrderBy({\"position\"=\"ASC\"})\n     *\n     * @var SonataClassificationCategory[]\n     */\n    protected $children;\n\n    /**\n     * @ORM\\ManyToOne(\n     *     targetEntity=\"App\\Entity\\SonataClassificationCategory\",\n     *     inversedBy=\"children\", cascade={\"persist\", \"refresh\", \"merge\", \"detach\"}\n     * )\n     * @ORM\\JoinColumn(name=\"parent_id\", referencedColumnName=\"id\", onDelete=\"CASCADE\")\n     *\n     * @var SonataClassificationCategory\n     */\n    protected $parent;\n\n    /**\n     * @ORM\\ManyToOne(\n     *     targetEntity=\"App\\Entity\\SonataClassificationContext\",\n     *     cascade={\"persist\"}\n     * )\n     * @ORM\\JoinColumn(name=\"context\", referencedColumnName=\"id\", nullable=false)\n     * @Assert\\NotNull()\n     *\n     * @var SonataClassificationContext\n     */\n    protected $context;\n\n    public function getId()\n    {\n        return $this->id;\n    }\n\n    final public function setMedia(MediaInterface $media = null)\n    {\n        parent::setMedia($media);\n    }\n\n    /**\n     * @ORM\\PrePersist\n     */\n    public function prePersist(): void\n    {\n        parent::prePersist();\n    }\n\n    /**\n     * @ORM\\PreUpdate\n     */\n    public function preUpdate(): void\n    {\n        parent::preUpdate();\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "src/Entity/SonataClassificationContext.php": {
+                    "contents": "<?php\n\ndeclare(strict_types=1);\n\nnamespace App\\Entity;\n\nuse Doctrine\\ORM\\Mapping as ORM;\nuse JMS\\Serializer\\Annotation as Serializer;\nuse Sonata\\ClassificationBundle\\Entity\\BaseContext;\n\n/**\n * @ORM\\Entity\n * @ORM\\Table(name=\"classification__context\")\n * @ORM\\HasLifecycleCallbacks\n */\nclass SonataClassificationContext extends BaseContext\n{\n    /**\n     * @ORM\\Id\n     * @ORM\\Column(type=\"string\")\n     * @ORM\\GeneratedValue(strategy=\"NONE\")\n     * // Serializer\\Groups(groups={\"sonata_api_read\", \"sonata_api_write\", \"sonata_search\"})\n     *\n     * @var int\n     */\n    protected $id;\n\n    public function getId()\n    {\n        return $this->id;\n    }\n\n    /**\n     * @ORM\\PrePersist\n     */\n    public function prePersist(): void\n    {\n        parent::prePersist();\n    }\n\n    /**\n     * @ORM\\PreUpdate\n     */\n    public function preUpdate(): void\n    {\n        parent::preUpdate();\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "src/Entity/SonataClassificationTag.php": {
+                    "contents": "<?php\n\ndeclare(strict_types=1);\n\nnamespace App\\Entity;\n\nuse Doctrine\\ORM\\Mapping as ORM;\nuse JMS\\Serializer\\Annotation as Serializer;\nuse Sonata\\ClassificationBundle\\Entity\\BaseTag;\n\n/**\n * @ORM\\Entity\n * @ORM\\Table(name=\"classification__tag\")\n * @ORM\\HasLifecycleCallbacks\n */\nclass SonataClassificationTag extends BaseTag\n{\n    /**\n     * @ORM\\Id\n     * @ORM\\Column(type=\"integer\")\n     * @ORM\\GeneratedValue(strategy=\"AUTO\")\n     * // Serializer\\Groups(groups={\"sonata_api_read\", \"sonata_api_write\", \"sonata_search\"})\n     *\n     * @var int\n     */\n    protected $id;\n\n    /**\n     * @ORM\\ManyToOne(\n     *     targetEntity=\"App\\Entity\\SonataClassificationContext\",\n     *     cascade={\"persist\"}\n     * )\n     * @ORM\\JoinColumn(name=\"context\", referencedColumnName=\"id\", nullable=false)\n     *\n     * @var SonataClassificationContext\n     */\n    protected $context;\n\n    public function getId()\n    {\n        return $this->id;\n    }\n\n    /**\n     * @ORM\\PrePersist\n     */\n    public function prePersist(): void\n    {\n        parent::prePersist();\n    }\n\n    /**\n     * @ORM\\PreUpdate\n     */\n    public function preUpdate(): void\n    {\n        parent::preUpdate();\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "src/Entity/SonataClassificationCollection.php": {
+                    "contents": "<?php\n\ndeclare(strict_types=1);\n\nnamespace App\\Entity;\n\nuse Doctrine\\ORM\\Mapping as ORM;\nuse JMS\\Serializer\\Annotation as Serializer;\nuse Sonata\\ClassificationBundle\\Entity\\BaseCollection;\n\n/**\n * @ORM\\Entity\n * @ORM\\Table(name=\"classification__collection\")\n * @ORM\\HasLifecycleCallbacks\n */\nclass SonataClassificationCollection extends BaseCollection\n{\n    /**\n     * @ORM\\Id\n     * @ORM\\Column(type=\"integer\")\n     * @ORM\\GeneratedValue(strategy=\"AUTO\")\n     * // Serializer\\Groups(groups={\"sonata_api_read\", \"sonata_api_write\", \"sonata_search\"})\n     *\n     * @var int\n     */\n    protected $id;\n\n    /**\n     * @ORM\\ManyToOne(\n     *     targetEntity=\"App\\Entity\\SonataClassificationContext\",\n     *     cascade={\"persist\"}\n     * )\n     * @ORM\\JoinColumn(name=\"context\", referencedColumnName=\"id\", nullable=false)\n     *\n     * @var SonataClassificationContext\n     */\n    protected $context;\n\n    public function getId()\n    {\n        return $this->id;\n    }\n\n    /**\n     * @ORM\\PrePersist\n     */\n    public function prePersist(): void\n    {\n        parent::prePersist();\n    }\n\n    /**\n     * @ORM\\PreUpdate\n     */\n    public function preUpdate(): void\n    {\n        parent::preUpdate();\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/sonata_classification.yaml": {
+                    "contents": "sonata_classification:\n    class:\n        category: App\\Entity\\SonataClassificationCategory\n        collection: App\\Entity\\SonataClassificationCollection\n        context: App\\Entity\\SonataClassificationContext\n        tag: App\\Entity\\SonataClassificationTag\n        media: App\\Entity\\SonataMediaMedia\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "sonata-project/classification-bundle:3.7@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "locks": {
+        "merceslab/spreadsheet-client-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "5ab4169af35adc11b321284dc75f00da8d0cadf7"
+            }
+        }
+    },
+    "manifests": {
+        "merceslab/spreadsheet-client-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "merceslab/spreadsheet-client-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "MercesLab\\Bundle\\SpreadsheetClientBundle\\MercesLabSpreadsheetClientBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "GOOGLE_CREDENTIALS": ""
+                }
+            },
+            "files": {
+                "config/packages/merces_lab_spreadsheet_client.yaml": {
+                    "contents": "merces_lab_spreadsheet_client:\n    google:\n        credentials: '%env(GOOGLE_CREDENTIALS)%'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "merceslab/spreadsheet-client-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

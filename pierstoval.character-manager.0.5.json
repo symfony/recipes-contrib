@@ -1,0 +1,56 @@
+{
+    "locks": {
+        "pierstoval/character-manager": {
+            "version": "0.5",
+            "recipe": {
+                "repo": "0.5",
+                "branch": "master",
+                "version": "0.5",
+                "ref": "f3223cfb6af047c8b9ba13c8491d10d98eb604df"
+            }
+        }
+    },
+    "manifests": {
+        "pierstoval/character-manager": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "pierstoval/character-manager",
+            "version": "0.5",
+            "manifest": {
+                "bundles": {
+                    "Pierstoval\\Bundle\\CharacterManagerBundle\\PierstovalCharacterManagerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "src/CharacterGenerator/Step01.php": {
+                    "contents": "<?php\n\nnamespace App\\CharacterGenerator;\n\nuse Pierstoval\\Bundle\\CharacterManagerBundle\\Action\\StepAction;\nuse Symfony\\Component\\HttpFoundation\\Response;\n\nclass Step01 extends StepAction\n{\n    /**\n     * {@inheritdoc}\n     */\n    public function execute(): Response\n    {\n        // Render and/or execute the current step right here.\n        // You must return a `Response` object, like a controller would need to.\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "src/Entity/Character.php": {
+                    "contents": "<?php\n\nnamespace App\\Entity;\n\nuse Pierstoval\\Bundle\\CharacterManagerBundle\\Entity\\Character as BaseCharacter;\nuse Doctrine\\ORM\\Mapping as ORM;\n\nclass Character extends BaseCharacter\n{\n    /**\n     * @var int\n     * @ORM\\Column(name=\"id\", type=\"integer\")\n     * @ORM\\Id\n     * @ORM\\GeneratedValue(strategy=\"AUTO\")\n     */\n    protected $id;\n\n    public function getId(): ?int\n    {\n        return $this->id;\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/routes/pierstoval_character_manager.yaml": {
+                    "contents": "generator_steps:\n    resource: \"@PierstovalCharacterManagerBundle/Controller/StepController.php\"\n    type:     annotation\n    prefix:   /character_generator/\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/pierstoval_character_manager.yaml": {
+                    "contents": "pierstoval_character_manager:\n    character_class: App\\Entity\\Character\n    steps:\n        step_01:\n            action: App\\CharacterGenerator\\Step01\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "pierstoval/character-manager:0.5@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

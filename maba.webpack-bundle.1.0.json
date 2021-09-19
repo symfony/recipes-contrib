@@ -1,0 +1,50 @@
+{
+    "locks": {
+        "maba/webpack-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "33b0bf2e73d774902dd21bab3d93f5b5ce459668"
+            }
+        }
+    },
+    "manifests": {
+        "maba/webpack-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "maba/webpack-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Maba\\Bundle\\WebpackBundle\\MabaWebpackBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "assets/": "assets/"
+                },
+                "copy-from-package": {
+                    "src/Resources/defaultConfig/latest/package.json": "package.json",
+                    "src/Resources/defaultConfig/latest/webpack.config.js": "%CONFIG_DIR%/webpack.config.js"
+                },
+                "gitignore": [
+                    "/node_modules/"
+                ],
+                "composer-scripts": {
+                    "maba:webpack:install-node-modules": "symfony-cmd"
+                }
+            },
+            "files": {
+                "assets/.gitignore": {
+                    "contents": "",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "maba/webpack-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "dama/doctrine-test-bundle": {
+            "version": "4.0",
+            "recipe": {
+                "repo": "4.0",
+                "branch": "master",
+                "version": "4.0",
+                "ref": "56eaa387b5e48ebcc7c95a893b47dfa1ad51449c"
+            }
+        }
+    },
+    "manifests": {
+        "dama/doctrine-test-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "dama/doctrine-test-bundle",
+            "version": "4.0",
+            "manifest": {
+                "bundles": {
+                    "DAMA\\DoctrineTestBundle\\DAMADoctrineTestBundle": [
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/test/dama_doctrine_test_bundle.yaml": {
+                    "contents": "dama_doctrine_test:\n    enable_static_connection: true\n    enable_static_meta_data_cache: true\n    enable_static_query_cache: true\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "dama/doctrine-test-bundle:4.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

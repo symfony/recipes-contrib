@@ -1,0 +1,50 @@
+{
+    "locks": {
+        "jms/serializer-bundle": {
+            "version": "2.0",
+            "recipe": {
+                "repo": "2.0",
+                "branch": "master",
+                "version": "2.0",
+                "ref": "fe60ce509ef04a3f40da96e3979bc8d9b13b2372"
+            }
+        }
+    },
+    "manifests": {
+        "jms/serializer-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "jms/serializer-bundle",
+            "version": "2.0",
+            "manifest": {
+                "bundles": {
+                    "JMS\\SerializerBundle\\JMSSerializerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/dev/jms_serializer.yaml": {
+                    "contents": "jms_serializer:\n    visitors:\n        json:\n            options:\n                - JSON_PRETTY_PRINT\n                - JSON_UNESCAPED_SLASHES\n                - JSON_PRESERVE_ZERO_FRACTION\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/prod/jms_serializer.yaml": {
+                    "contents": "jms_serializer:\n    visitors:\n        json:\n            options:\n                - JSON_UNESCAPED_SLASHES\n                - JSON_PRESERVE_ZERO_FRACTION\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/jms_serializer.yaml": {
+                    "contents": "jms_serializer:\n    visitors:\n        xml:\n            format_output: '%kernel.debug%'\n#    metadata:\n#        auto_detection: false\n#        directories:\n#            any-name:\n#                namespace_prefix: \"My\\\\FooBundle\"\n#                path: \"@MyFooBundle/Resources/config/serializer\"\n#            another-name:\n#                namespace_prefix: \"My\\\\BarBundle\"\n#                path: \"@MyBarBundle/Resources/config/serializer\"\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "jms/serializer-bundle:2.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

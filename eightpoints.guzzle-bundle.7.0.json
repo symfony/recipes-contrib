@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "eightpoints/guzzle-bundle": {
+            "version": "7.0",
+            "recipe": {
+                "repo": "7.0",
+                "branch": "master",
+                "version": "7.0",
+                "ref": "7babb21a3928e44e485391907e3abc346804e0d2"
+            }
+        }
+    },
+    "manifests": {
+        "eightpoints/guzzle-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "eightpoints/guzzle-bundle",
+            "version": "7.0",
+            "manifest": {
+                "bundles": {
+                    "EightPoints\\Bundle\\GuzzleBundle\\EightPointsGuzzleBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/eight_points_guzzle.yaml": {
+                    "contents": "# EightPoints GuzzleBundle\n# A full list of configuration options can be found here:\n# https://github.com/8p/EightPointsGuzzleBundle/blob/master/src/Resources/doc/configuration-reference.md\neight_points_guzzle:\n    clients:\n        my_client:\n            # Write here the host where to do requests\n            # base_url: \"http://target.url\"\n\n            # Request options: http://docs.guzzlephp.org/en/stable/request-options.html\n            options:\n                # timeout in seconds\n                timeout: 30\n\n                # set to false to disable throwing exceptions on an HTTP protocol errors (4xx and 5xx responses)\n                http_errors: true\n\n                # each key is the name of a header, and each value is a string or array of strings representing the\n                # header field values.\n                headers:\n                    User-Agent: \"EightPointsGuzzleBundle/v7\"\n\n            # Find plugins here:\n            # https://github.com/8p/EightPointsGuzzleBundle#known-and-supported-plugins\n            plugin: null\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "eightpoints/guzzle-bundle:7.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "kunstmaan/node-bundle": {
+            "version": "5.2",
+            "recipe": {
+                "repo": "5.2",
+                "branch": "master",
+                "version": "5.2",
+                "ref": "dc1275d2e7548fba16eb631049f26ccef4523b8e"
+            }
+        }
+    },
+    "manifests": {
+        "kunstmaan/node-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "kunstmaan/node-bundle",
+            "version": "5.2",
+            "manifest": {
+                "bundles": {
+                    "Kunstmaan\\NodeBundle\\KunstmaanNodeBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/kunstmaan_node.yaml": {
+                    "contents": "KunstmaanNodeBundle:\n    resource: \"@KunstmaanNodeBundle/Resources/config/routing.yml\"\n    # If your site is not multi language, remove the \"{_locale}/\" part of the prefix and the requirements\n    prefix:   /{_locale}/\n    requirements:\n        _locale: \"%kunstmaan_admin.required_locales%\"\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/kunstmaan_node.yaml": {
+                    "contents": "kunstmaan_node:\n    lock:\n        enabled: true\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "kunstmaan/node-bundle:5.2@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

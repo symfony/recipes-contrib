@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "jonathankablan/fast-entity-bundle": {
+            "version": "2.0",
+            "recipe": {
+                "repo": "2.0",
+                "branch": "master",
+                "version": "2.0",
+                "ref": "bc39fd65adffdb41898701f635e819416744f98f"
+            }
+        }
+    },
+    "manifests": {
+        "jonathankablan/fast-entity-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "jonathankablan/fast-entity-bundle",
+            "version": "2.0",
+            "manifest": {
+                "bundles": {
+                    "Jonathankablan\\Bundle\\FastEntityBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/fast_entity.yaml": {
+                    "contents": "fast_entity:\n    tables:\n        - { name: 'admin' }\n        - { name: 'formation' }\n    schema:\n        # User\n        - { entity: 'admin', property: 'username', type: 'string', length: 255, nullable: true }\n        - { entity: 'admin', property: 'password', type: 'string', length: 255, nullable: true }\n        - { entity: 'admin', property: 'email', type: 'string', length: 255, nullable: true }\n        - { entity: 'admin', property: 'active', type: 'boolean', nullable: true }\n        - { entity: 'admin', property: 'created', type: 'datetime', nullable: true }\n        - { entity: 'admin', property: 'updated', type: 'datetime', nullable: true }\n        # Formation\n        - { entity: 'formation', property: 'location', type: 'string', length: 255, nullable: true }\n        - { entity: 'formation', property: 'price', type: 'integer', length: 11, nullable: true }\n        - { entity: 'formation', property: 'created', type: 'datetime', nullable: true }\n        - { entity: 'formation', property: 'updated', type: 'datetime', nullable: true }\n    relations:\n        - { entityTo: 'admin', entityFrom: 'formation', relation: 'OneToOne' }\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "jonathankablan/fast-entity-bundle:2.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

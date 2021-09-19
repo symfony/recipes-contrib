@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "cyberomulus/sitemap-generator-bundle": {
+            "version": "1.2",
+            "recipe": {
+                "repo": "1.2",
+                "branch": "master",
+                "version": "1.2",
+                "ref": "444f9d4165852dbf7af8a6cbaa63715531f394c6"
+            }
+        }
+    },
+    "manifests": {
+        "cyberomulus/sitemap-generator-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "cyberomulus/sitemap-generator-bundle",
+            "version": "1.2",
+            "manifest": {
+                "bundles": {
+                    "Cyberomulus\\SiteMapGeneratorBundle\\CyberomulusSiteMapGeneratorBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/cyberomulus_site_map_generator.yaml": {
+                    "contents": "cyberomulus_sitemapgenerator:\n    resource: '@CyberomulusSiteMapGeneratorBundle/Resources/config/routes.xml'\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/cyberomulus_site_map_generator.yaml": {
+                    "contents": "cyberomulus_site_map_generator:\n    defaults_values:\n        # Set the defaults values on url entries (false by default)\n        url:\n            # true for set a datetime at now if is null\n            last_modification_now:         true\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "cyberomulus/sitemap-generator-bundle:1.2@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

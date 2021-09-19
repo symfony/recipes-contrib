@@ -1,0 +1,43 @@
+{
+    "locks": {
+        "wow-apps/symfony-slack-bot": {
+            "version": "4.0",
+            "recipe": {
+                "repo": "4.0",
+                "branch": "master",
+                "version": "4.0",
+                "ref": "13f0faeb4edc98b33972b7f99e80b91e34050874"
+            }
+        }
+    },
+    "manifests": {
+        "wow-apps/symfony-slack-bot": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "wow-apps/symfony-slack-bot",
+            "version": "4.0",
+            "manifest": {
+                "bundles": {
+                    "WowApps\\SlackBundle\\WowAppsSlackBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "WOW_APPS_SLACK_BOT_API_URL": ""
+                }
+            },
+            "files": {
+                "config/packages/wow_apps_slack.yaml": {
+                    "contents": "# SlackBot Configuration\n# Documentation https://github.com/wow-apps/symfony-slack-bot/wiki\nwow_apps_slack:\n    api_url: '%env(WOW_APPS_SLACK_BOT_API_URL)%'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "wow-apps/symfony-slack-bot:4.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

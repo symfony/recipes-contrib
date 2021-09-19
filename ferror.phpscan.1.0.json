@@ -1,0 +1,30 @@
+{
+    "locks": {
+        "ferror/phpscan": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "5507bd1012c4c6bb9680b733ce0d167b27c97d73"
+            }
+        }
+    },
+    "manifests": {
+        "ferror/phpscan": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "ferror/phpscan",
+            "version": "1.0",
+            "manifest": {
+                "copy-from-package": {
+                    "bin/phpscan": "%BIN_DIR%/phpscan",
+                    "config/phpscan.yaml": "%CONFIG_DIR%/phpscan.yaml"
+                }
+            },
+            "files": [],
+            "origin": "ferror/phpscan:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

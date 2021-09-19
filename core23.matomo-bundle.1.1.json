@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "core23/matomo-bundle": {
+            "version": "1.1",
+            "recipe": {
+                "repo": "1.1",
+                "branch": "master",
+                "version": "1.1",
+                "ref": "2b9e18de0ac9dd663b19444fc83240a4c02eb569"
+            }
+        }
+    },
+    "manifests": {
+        "core23/matomo-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "core23/matomo-bundle",
+            "version": "1.1",
+            "manifest": {
+                "bundles": {
+                    "Core23\\MatomoBundle\\Core23MatomoBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/core23_matomo.yaml": {
+                    "contents": "sonata_block:\n    blocks:\n        core23_matomo.block.statistic:\n        core23_matomo.block.tracker:\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "core23/matomo-bundle:1.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

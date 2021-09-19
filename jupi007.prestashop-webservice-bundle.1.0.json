@@ -1,0 +1,44 @@
+{
+    "locks": {
+        "jupi007/prestashop-webservice-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "d3b32d4cf79c652245dbf70eb97609dc85dc789d"
+            }
+        }
+    },
+    "manifests": {
+        "jupi007/prestashop-webservice-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "jupi007/prestashop-webservice-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Jupi007\\PrestaShopWebserviceBundle\\Jupi007PrestaShopWebserviceBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "PRESTA_WEBSERVICE_ROOT_PATH": "https://absolute-path-to-your-store.com",
+                    "PRESTA_WEBSERVICE_AUTH_KEY": "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789"
+                }
+            },
+            "files": {
+                "config/packages/jupi007_presta_shop_webservice.yaml": {
+                    "contents": "jupi007_presta_shop_webservice:\n    connection:\n        store_root_path: '%env(PRESTA_WEBSERVICE_ROOT_PATH)%'\n        authentication_key: '%env(PRESTA_WEBSERVICE_AUTH_KEY)%'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "jupi007/prestashop-webservice-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

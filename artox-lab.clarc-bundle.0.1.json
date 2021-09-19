@@ -1,0 +1,46 @@
+{
+    "locks": {
+        "artox-lab/clarc-bundle": {
+            "version": "0.1",
+            "recipe": {
+                "repo": "0.1",
+                "branch": "master",
+                "version": "0.1",
+                "ref": "5b211da937aafccca43bcea381f3f2db7edc918f"
+            }
+        }
+    },
+    "manifests": {
+        "artox-lab/clarc-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "artox-lab/clarc-bundle",
+            "version": "0.1",
+            "manifest": {
+                "bundles": {
+                    "ArtoxLab\\Bundle\\ClarcBundle\\ArtoxLabClarcBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "copy-from-package": {
+                    "Layers/Entities/": "%SRC_DIR%/Entities/",
+                    "Layers/UseCases/": "%SRC_DIR%/UseCases/",
+                    "Layers/Interfaces/": "%SRC_DIR%/Interfaces/",
+                    "Layers/Infrastructure/": "%SRC_DIR%/Infrastructure/"
+                }
+            },
+            "files": {
+                "config/packages/artox_lab_clarc.yaml": {
+                    "contents": "artox_lab_clarc:\n    api:\n        serializer:\n            class: \\ArtoxLab\\Bundle\\ClarcBundle\\Core\\Interfaces\\UI\\API\\Transformers\\Serializers\\NullObjectArraySerializer\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "artox-lab/clarc-bundle:0.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

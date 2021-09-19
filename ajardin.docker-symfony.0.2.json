@@ -1,0 +1,42 @@
+{
+    "locks": {
+        "ajardin/docker-symfony": {
+            "version": "0.2",
+            "recipe": {
+                "repo": "0.2",
+                "branch": "master",
+                "version": "0.2",
+                "ref": "696b4e17945ac6db614b6d09f073ef74c1567cfd"
+            }
+        }
+    },
+    "manifests": {
+        "ajardin/docker-symfony": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "ajardin/docker-symfony",
+            "version": "0.2",
+            "manifest": {
+                "composer-scripts": {
+                    "bin/docker-upgrade": "php-script"
+                },
+                "copy-from-recipe": {
+                    "bin/": "%BIN_DIR%/"
+                },
+                "gitignore": [
+                    "/%BIN_DIR%/docker-upgrade",
+                    "/docker/"
+                ]
+            },
+            "files": {
+                "bin/docker-upgrade": {
+                    "contents": "#!/usr/bin/env php\n<?php\n\nrequire __DIR__ . '/../vendor/autoload.php';\n\nuse Symfony\\Component\\Filesystem\\Filesystem;\n\nconst SOURCE_DIRECTORY = 'vendor/ajardin/docker-symfony';\nconst TARGET_DIRECTORY = 'docker';\n\n$filesystem = new Filesystem();\n\n/**\n * Create the Docker directory at the project root\n */\nif ($filesystem->exists(TARGET_DIRECTORY) === false) {\n    $filesystem->mkdir(TARGET_DIRECTORY);\n}\n\n/**\n * Mirror the vendor directory with the directory created at the project root\n */\nif ($filesystem->exists(SOURCE_DIRECTORY) === true) {\n    $filesystem->mirror(SOURCE_DIRECTORY, TARGET_DIRECTORY, null, ['override' => true]);\n}\n\n/**\n * Define the default environment variables\n */\nif ($filesystem->exists(TARGET_DIRECTORY . '/.env') === false) {\n    $filesystem->copy(\n        TARGET_DIRECTORY . '/.env.dist',\n        TARGET_DIRECTORY . '/.env'\n    );\n}\n\n/**\n * Define the default Nginx configuration\n */\nif ($filesystem->exists(TARGET_DIRECTORY . '/nginx/conf.d/custom.conf') === false) {\n    $filesystem->copy(\n        TARGET_DIRECTORY . '/nginx/conf.d/symfony.conf.dist',\n        TARGET_DIRECTORY . '/nginx/conf.d/custom.conf'\n    );\n}\n\n/**\n * Copy the default Makefile at the project root\n */\nif ($filesystem->exists('Makefile') === false) {\n    $filesystem->copy(\n        TARGET_DIRECTORY . '/Makefile.sample',\n        'Makefile'\n    );\n}\n",
+                    "executable": true,
+                    "encoding": ""
+                }
+            },
+            "origin": "ajardin/docker-symfony:0.2@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

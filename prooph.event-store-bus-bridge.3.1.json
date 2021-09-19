@@ -1,0 +1,35 @@
+{
+    "locks": {
+        "prooph/event-store-bus-bridge": {
+            "version": "3.1",
+            "recipe": {
+                "repo": "3.1",
+                "branch": "master",
+                "version": "3.1",
+                "ref": "10441066e3792c8590cedad7ab968fad6ee9cdb6"
+            }
+        }
+    },
+    "manifests": {
+        "prooph/event-store-bus-bridge": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "prooph/event-store-bus-bridge",
+            "version": "3.1",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/prooph_event_store_bus_bridge.yaml": {
+                    "contents": "services:\n    _defaults:\n        public: false\n\n    Prooph\\EventStoreBusBridge\\EventPublisher:\n        arguments:\n            - '@prooph_service_bus.default_event_bus'\n        tags:\n            - { name: 'prooph_event_store.default.plugin' }\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "prooph/event-store-bus-bridge:3.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

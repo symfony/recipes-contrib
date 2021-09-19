@@ -1,0 +1,35 @@
+{
+    "locks": {
+        "sroze/openwhisk-bundle": {
+            "version": "0.2",
+            "recipe": {
+                "repo": "0.2",
+                "branch": "master",
+                "version": "0.2",
+                "ref": "30da6911ebba1b9222291e9a72e5b1d453c09ad4"
+            }
+        }
+    },
+    "manifests": {
+        "sroze/openwhisk-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "sroze/openwhisk-bundle",
+            "version": "0.2",
+            "manifest": {
+                "copy-from-recipe": {
+                    "index.php": "index.php"
+                }
+            },
+            "files": {
+                "index.php": {
+                    "contents": "<?php\n\n// This file is the entry point for your Openwhisk function (also called action)\n\nuse App\\Kernel;\nuse Sam\\Openwhisk\\Bridge\\Symfony\\RequestFactory;\nuse Sam\\Openwhisk\\Bridge\\Symfony\\ResponseFactory;\nuse Symfony\\Component\\Debug\\Debug;\nuse Symfony\\Component\\Dotenv\\Dotenv;\nuse Symfony\\Component\\HttpFoundation\\Request;\nuse Symfony\\Component\\HttpFoundation\\Response;\n\nfunction handle_request(Request $request) : Response\n{\n    if (!isset($_SERVER['APP_ENV'])) {\n        (new Dotenv())->load(__DIR__.'/.env');\n    }\n\n    if ($_SERVER['APP_DEBUG'] ?? false) {\n        umask(0000);\n\n        Debug::enable();\n    }\n\n    $kernel = new Kernel($_SERVER['APP_ENV'] ?? 'dev', $_SERVER['APP_DEBUG'] ?? false);\n    $response = $kernel->handle($request);\n\n    $kernel->terminate($request, $response);\n\n    return $response;\n}\n\nfunction main(array $args) : array\n{\n    try {\n        $request = RequestFactory::fromArgs($args);\n        $response = handle_request($request);\n\n        return ResponseFactory::fromHttpFoundationResponse($response);\n    } catch (\\Throwable $e) {\n        return ResponseFactory::fromException($e);\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "sroze/openwhisk-bundle:0.2@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

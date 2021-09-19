@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "antishov/doctrine-extensions-bundle": {
+            "version": "1.4",
+            "recipe": {
+                "repo": "1.4",
+                "branch": "master",
+                "version": "1.4",
+                "ref": "6c1ceb662f8997085f739cd089bfbef67f245983"
+            }
+        }
+    },
+    "manifests": {
+        "antishov/doctrine-extensions-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "antishov/doctrine-extensions-bundle",
+            "version": "1.4",
+            "manifest": {
+                "bundles": {
+                    "Stof\\DoctrineExtensionsBundle\\StofDoctrineExtensionsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/stof_doctrine_extensions.yaml": {
+                    "contents": "# Read the documentation: https://symfony.com/doc/current/bundles/StofDoctrineExtensionsBundle/index.html\n# See the official DoctrineExtensions documentation for more details: https://github.com/Atlantic18/DoctrineExtensions/tree/master/doc/\nstof_doctrine_extensions:\n    default_locale: en_US\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "antishov/doctrine-extensions-bundle:1.4@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

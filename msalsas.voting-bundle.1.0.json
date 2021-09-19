@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "msalsas/voting-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "c347ea89d380c403deadd722ca78008c30408dc6"
+            }
+        }
+    },
+    "manifests": {
+        "msalsas/voting-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "msalsas/voting-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Msalsas\\VotingBundle\\MsalsasVotingBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/msalsas_voting.yaml": {
+                    "contents": "positive_vote:\n    path: /vote-positive/{_locale}/{id}\n    controller: Msalsas\\VotingBundle\\Controller\\VoteController:votePositive\n    methods: POST\nnegative_vote:\n    path: /vote-negative/{_locale}/{id}\n    controller: Msalsas\\VotingBundle\\Controller\\VoteController:voteNegative\n    methods: POST\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/msalsas_voting.yaml": {
+                    "contents": "msalsas_voting:\n    user_provider: \\App\\Entity\\User\n    negative_reasons:\n        - msalsas_voting.negative_reasons.irrelevant\n        - msalsas_voting.negative_reasons.old\n        - msalsas_voting.negative_reasons.tiredness\n        - msalsas_voting.negative_reasons.sensationalist\n        - msalsas_voting.negative_reasons.spam\n        - msalsas_voting.negative_reasons.duplicated\n        - msalsas_voting.negative_reasons.microblogging\n        - msalsas_voting.negative_reasons.erroneous\n        - msalsas_voting.negative_reasons.plagiarism\n    anonymous_percent_allowed: 50\n    anonymous_min_allowed: 2\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "msalsas/voting-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

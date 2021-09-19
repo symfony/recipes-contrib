@@ -1,0 +1,49 @@
+{
+    "locks": {
+        "vincentchalamon/nav-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "92fc2eb188beaea20b31f2c3bf8e0a07914d5018"
+            }
+        }
+    },
+    "manifests": {
+        "vincentchalamon/nav-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "vincentchalamon/nav-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "NavBundle\\NavBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "env": {
+                    "NAV_URL": "http://user:password@host/WS/Page/"
+                }
+            },
+            "files": {
+                "src/Entity/.gitignore": {
+                    "contents": "",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/nav.yaml": {
+                    "contents": "# Read the documentation: https://github.com/vincentchalamon/nav-bundle\nnav:\n    enable_profiler: '%kernel.debug%'\n    url: '%env(NAV_URL)%' # i.e.: https://user:pass@www.example.com/NAV_WS/\n    paths:\n        App:\n            path: '%kernel.project_dir%/src/Entity'\n            namespace: 'App/Entity'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "vincentchalamon/nav-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

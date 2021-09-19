@@ -1,0 +1,35 @@
+{
+    "locks": {
+        "oskarstark/symfony-http-responder": {
+            "version": "0.1",
+            "recipe": {
+                "repo": "0.1",
+                "branch": "master",
+                "version": "0.1",
+                "ref": "e21c52cec9a4645bfb7bce755e7ad05f77449947"
+            }
+        }
+    },
+    "manifests": {
+        "oskarstark/symfony-http-responder": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "oskarstark/symfony-http-responder",
+            "version": "0.1",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/oskarstark_symfony_http_responder.yaml": {
+                    "contents": "services:\n    _defaults:\n        autowire: true\n\n    OskarStark\\Symfony\\Http\\Responder: null\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "oskarstark/symfony-http-responder:0.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

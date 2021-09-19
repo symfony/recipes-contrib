@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "exercise/htmlpurifier-bundle": {
+            "version": "0.2",
+            "recipe": {
+                "repo": "0.2",
+                "branch": "master",
+                "version": "0.2",
+                "ref": "0b76657841c2ba52647bb1b4a5595a0e3b9f485c"
+            }
+        }
+    },
+    "manifests": {
+        "exercise/htmlpurifier-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "exercise/htmlpurifier-bundle",
+            "version": "0.2",
+            "manifest": {
+                "bundles": {
+                    "Exercise\\HTMLPurifierBundle\\ExerciseHTMLPurifierBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/exercise_html_purifier.yaml": {
+                    "contents": "exercise_html_purifier:\n    # full configuration reference: http://htmlpurifier.org/live/configdoc/plain.html\n    default:\n        # the charset used by the original contents\n        Core.Encoding: 'UTF-8'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "exercise/htmlpurifier-bundle:0.2@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

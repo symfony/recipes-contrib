@@ -1,0 +1,36 @@
+{
+    "locks": {
+        "mukadi/wallet-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "70ccca0d3588edf6bc7de66f2c2b0d7ee3ea1433"
+            }
+        }
+    },
+    "manifests": {
+        "mukadi/wallet-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "mukadi/wallet-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Mukadi\\WalletBundle\\MukadiWalletBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-package": {
+                    "res/config/": "%CONFIG_DIR%/",
+                    "res/Entity/": "%SRC_DIR%/Entity/",
+                    "res/Repository/": "%SRC_DIR%/Repository/"
+                }
+            },
+            "files": [],
+            "origin": "mukadi/wallet-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

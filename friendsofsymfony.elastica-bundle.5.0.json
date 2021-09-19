@@ -1,0 +1,43 @@
+{
+    "locks": {
+        "friendsofsymfony/elastica-bundle": {
+            "version": "5.0",
+            "recipe": {
+                "repo": "5.0",
+                "branch": "master",
+                "version": "5.0",
+                "ref": "46c9cd2c1e07f0fcfd97e96f12b03b2e0845c4cd"
+            }
+        }
+    },
+    "manifests": {
+        "friendsofsymfony/elastica-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "friendsofsymfony/elastica-bundle",
+            "version": "5.0",
+            "manifest": {
+                "bundles": {
+                    "FOS\\ElasticaBundle\\FOSElasticaBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "ELASTICSEARCH_URL": "http://localhost:9200/"
+                }
+            },
+            "files": {
+                "config/packages/fos_elastica.yaml": {
+                    "contents": "# Read the documentation: https://github.com/FriendsOfSymfony/FOSElasticaBundle/blob/master/doc/setup.md\nfos_elastica:\n    clients:\n        default: { url: '%env(ELASTICSEARCH_URL)%' }\n    indexes:\n        app: null\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "friendsofsymfony/elastica-bundle:5.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

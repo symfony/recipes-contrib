@@ -1,0 +1,35 @@
+{
+    "locks": {
+        "ravenflux/php-functions": {
+            "version": "3.0",
+            "recipe": {
+                "repo": "3.0",
+                "branch": "master",
+                "version": "3.0",
+                "ref": "d61d276d2ada16fe5eae449f0b0995851acb47cd"
+            }
+        }
+    },
+    "manifests": {
+        "ravenflux/php-functions": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "ravenflux/php-functions",
+            "version": "3.0",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ravenflux_php_functions.yaml": {
+                    "contents": "services:\n    ravenflux.twig.extension.php_functions:\n        class: RavenFlux\\Twig\\PhpFunctionsExtension\n        arguments:\n            - #first argument are functions\n                - 'count'\n            - #second argument are filters\n                - 'nl2br'\n        tags:\n            -\n                name: twig.extension\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "ravenflux/php-functions:3.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

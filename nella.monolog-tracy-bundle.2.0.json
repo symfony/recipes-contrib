@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "nella/monolog-tracy-bundle": {
+            "version": "2.0",
+            "recipe": {
+                "repo": "2.0",
+                "branch": "master",
+                "version": "2.0",
+                "ref": "793d1a59edb3aeb182c91c8e1129d59eef38742d"
+            }
+        }
+    },
+    "manifests": {
+        "nella/monolog-tracy-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "nella/monolog-tracy-bundle",
+            "version": "2.0",
+            "manifest": {
+                "bundles": {
+                    "Nella\\MonologTracyBundle\\MonologTracyBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/nella_monolog_tracy.yaml": {
+                    "contents": "monolog:\n    handlers:\n        blueScreen:\n            type: tracyBlueScreen\n\nmonolog_tracy:\n    log_directory: '%kernel.logs_dir%/tracy'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "nella/monolog-tracy-bundle:2.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

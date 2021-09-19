@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "gpslab/domain-event-bundle": {
+            "version": "2.2",
+            "recipe": {
+                "repo": "2.2",
+                "branch": "master",
+                "version": "2.2",
+                "ref": "2879c608e67333b9c03479097f7ca79f8899b3b3"
+            }
+        }
+    },
+    "manifests": {
+        "gpslab/domain-event-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "gpslab/domain-event-bundle",
+            "version": "2.2",
+            "manifest": {
+                "bundles": {
+                    "GpsLab\\Bundle\\DomainEvent\\GpsLabDomainEventBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/gpslab_domain_event.yaml": {
+                    "contents": "# see https://github.com/gpslab/domain-event-bundle/blob/master/README.md#configuration\n\ngpslab_domain_event:\n    # Publish domain events post a Doctrine flush event\n    publish_on_flush: true\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "gpslab/domain-event-bundle:2.2@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "locks": {
+        "bitbag/shipping-export-plugin": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "4095c0f7a2cc51e0f40e806ad7d3256ef5f42ae2"
+            }
+        }
+    },
+    "manifests": {
+        "bitbag/shipping-export-plugin": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "bitbag/shipping-export-plugin",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "BitBag\\SyliusShippingExportPlugin\\BitBagSyliusShippingExportPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "gitignore": [
+                    "/shipping_labels/"
+                ]
+            },
+            "files": {
+                "config/routes/bitbag_shipping_export_plugin.yaml": {
+                    "contents": "bitbag_shipping_export_plugin:\n    resource: \"@BitBagSyliusShippingExportPlugin/Resources/config/routing.yml\"\n    prefix: /admin\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/bitbag_shipping_export_plugin.yaml": {
+                    "contents": "imports:\n    - { resource: \"@BitBagSyliusShippingExportPlugin/Resources/config/config.yml\" }\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "bitbag/shipping-export-plugin:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

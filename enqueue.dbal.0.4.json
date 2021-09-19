@@ -1,0 +1,25 @@
+{
+    "locks": {
+        "enqueue/dbal": {
+            "version": "0.4",
+            "recipe": {
+                "repo": "0.4",
+                "branch": "master",
+                "version": "0.4",
+                "ref": "4dd47013ecec8a158d186f63ec4b51f1defff897"
+            }
+        }
+    },
+    "manifests": {
+        "enqueue/dbal": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "enqueue/dbal",
+            "version": "0.4",
+            "manifest": [],
+            "files": [],
+            "origin": "enqueue/dbal:0.4@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

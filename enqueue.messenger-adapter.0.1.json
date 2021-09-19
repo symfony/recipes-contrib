@@ -1,0 +1,31 @@
+{
+    "locks": {
+        "enqueue/messenger-adapter": {
+            "version": "0.1",
+            "recipe": {
+                "repo": "0.1",
+                "branch": "master",
+                "version": "0.1",
+                "ref": "9a7119f609b576a30dbf03e4fe44212388e96ea1"
+            }
+        }
+    },
+    "manifests": {
+        "enqueue/messenger-adapter": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "enqueue/messenger-adapter",
+            "version": "0.1",
+            "manifest": {
+                "bundles": {
+                    "Enqueue\\MessengerAdapter\\Bundle\\EnqueueAdapterBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "origin": "enqueue/messenger-adapter:0.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

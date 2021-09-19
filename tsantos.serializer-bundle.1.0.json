@@ -1,0 +1,50 @@
+{
+    "locks": {
+        "tsantos/serializer-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "0e77ebcee14268963daa83bbf7dbda672876ef07"
+            }
+        }
+    },
+    "manifests": {
+        "tsantos/serializer-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "tsantos/serializer-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "TSantos\\SerializerBundle\\TSantosSerializerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/tsantos_serializer.yaml": {
+                    "contents": "# Read the official documentation page of this bundle for further information about all possible configurations.\n# http://tsantos-serializer-bundle.readthedocs.io/\ntsantos_serializer:\n    generation_strategy: file_not_exists\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/prod/tsantos_serializer.yaml": {
+                    "contents": "tsantos_serializer:\n    generation_strategy: never\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/test/tsantos_serializer.yaml": {
+                    "contents": "tsantos_serializer:\n    generation_strategy: always\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "tsantos/serializer-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

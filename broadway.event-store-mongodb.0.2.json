@@ -1,0 +1,43 @@
+{
+    "locks": {
+        "broadway/event-store-mongodb": {
+            "version": "0.2",
+            "recipe": {
+                "repo": "0.2",
+                "branch": "master",
+                "version": "0.2",
+                "ref": "0c47913c3bd0ddb01d6a9fcebf336ecfea076d92"
+            }
+        }
+    },
+    "manifests": {
+        "broadway/event-store-mongodb": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "broadway/event-store-mongodb",
+            "version": "0.2",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "container": {
+                    "mongodb_uri": "%env(BROADWAY_EVENT_STORE_MONGODB_URI)%",
+                    "mongodb_database": "%env(BROADWAY_EVENT_STORE_MONGODB_DATABASE)%"
+                },
+                "env": {
+                    "BROADWAY_EVENT_STORE_MONGODB_URI": "mongodb://127.0.0.1/",
+                    "BROADWAY_EVENT_STORE_MONGODB_DATABASE": "default"
+                }
+            },
+            "files": {
+                "config/packages/broadway_event_store_mongodb.yaml": {
+                    "contents": "broadway:\n    event_store: broadway.event_store.mongodb\n\nservices:\n    broadway.event_store.mongodb_client:\n        class: MongoDB\\Client\n        arguments: ['%mongodb_uri%']\n\n    broadway.event_store.mongodb_collection:\n        class: MongoDB\\Collection\n        factory: ['@broadway.event_store.mongodb_client', selectCollection]\n        arguments: ['%mongodb_database%', 'events']\n\n    broadway.event_store.mongodb:\n        class: Broadway\\EventStore\\MongoDB\\MongoDBEventStore\n        arguments: ['@broadway.event_store.mongodb_collection', '@broadway.serializer.payload', '@broadway.serializer.metadata']\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "broadway/event-store-mongodb:0.2@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

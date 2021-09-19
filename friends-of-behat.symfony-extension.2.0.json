@@ -1,0 +1,61 @@
+{
+    "locks": {
+        "friends-of-behat/symfony-extension": {
+            "version": "2.0",
+            "recipe": {
+                "repo": "2.0",
+                "branch": "master",
+                "version": "2.0",
+                "ref": "1e012e04f573524ca83795cd19df9ea690adb604"
+            }
+        }
+    },
+    "manifests": {
+        "friends-of-behat/symfony-extension": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "friends-of-behat/symfony-extension",
+            "version": "2.0",
+            "manifest": {
+                "bundles": {
+                    "FriendsOfBehat\\SymfonyExtension\\Bundle\\FriendsOfBehatSymfonyExtensionBundle": [
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "behat.yml.dist": "behat.yml.dist",
+                    "config/": "%CONFIG_DIR%/",
+                    "features/": "features/",
+                    "tests/": "tests/"
+                },
+                "gitignore": [
+                    "/behat.yml"
+                ]
+            },
+            "files": {
+                "features/demo.feature": {
+                    "contents": "# This file contains a user story for demonstration only.\n# Learn how to get started with Behat and BDD on Behat's website:\n# http://behat.org/en/latest/quick_start.html\n\nFeature:\n    In order to prove that the Behat Symfony extension is correctly installed\n    As a user\n    I want to have a demo scenario\n\n    Scenario: It receives a response from Symfony's kernel\n        When a demo scenario sends a request to \"/\"\n        Then the response should be received\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/services_test.yaml": {
+                    "contents": "services:\n    _defaults:\n        autowire: true\n        autoconfigure: true\n\n    App\\Tests\\Behat\\:\n        resource: '../tests/Behat/*'\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "behat.yml.dist": {
+                    "contents": "default:\n    suites:\n        default:\n            contexts:\n                - App\\Tests\\Behat\\DemoContext\n\n    extensions:\n        FriendsOfBehat\\SymfonyExtension: null\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "tests/Behat/DemoContext.php": {
+                    "contents": "<?php\n\ndeclare(strict_types=1);\n\nnamespace App\\Tests\\Behat;\n\nuse Behat\\Behat\\Context\\Context;\nuse Symfony\\Component\\HttpFoundation\\Request;\nuse Symfony\\Component\\HttpFoundation\\Response;\nuse Symfony\\Component\\HttpKernel\\KernelInterface;\n\n/**\n * This context class contains the definitions of the steps used by the demo\n * feature file. Learn how to get started with Behat and BDD on Behat's website.\n *\n * @see http://behat.org/en/latest/quick_start.html\n */\nfinal class DemoContext implements Context\n{\n    /** @var KernelInterface */\n    private $kernel;\n\n    /** @var Response|null */\n    private $response;\n\n    public function __construct(KernelInterface $kernel)\n    {\n        $this->kernel = $kernel;\n    }\n\n    /**\n     * @When a demo scenario sends a request to :path\n     */\n    public function aDemoScenarioSendsARequestTo(string $path): void\n    {\n        $this->response = $this->kernel->handle(Request::create($path, 'GET'));\n    }\n\n    /**\n     * @Then the response should be received\n     */\n    public function theResponseShouldBeReceived(): void\n    {\n        if ($this->response === null) {\n            throw new \\RuntimeException('No response received');\n        }\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "friends-of-behat/symfony-extension:2.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "mp3000mp/tos-bundle": {
+            "version": "0.1",
+            "recipe": {
+                "repo": "0.1",
+                "branch": "master",
+                "version": "0.1",
+                "ref": "0eb6bbd53e689b7822c93d4ee8a40d5bb0dc753a"
+            }
+        }
+    },
+    "manifests": {
+        "mp3000mp/tos-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "mp3000mp/tos-bundle",
+            "version": "0.1",
+            "manifest": {
+                "bundles": {
+                    "Mp3000mp\\TOSBundle\\Mp3000mpTOSBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/mp3000mp_tos.yaml": {
+                    "contents": "mp3000mp_tos:\n    resource: \"@Mp3000mpTOSBundle/Resources/config/routes.yaml\"\n    prefix: /tos\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/mp3000mp_tos.yaml": {
+                    "contents": "mp3000mp_tos:\n    kernel_event:\n        authenticators:\n            - main\n        priority: -20\n    user_provider: App\\Entity\\User\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "mp3000mp/tos-bundle:0.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

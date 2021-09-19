@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "nedac/sylius-order-now-plugin": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "950df3382b76e66dce37d759cea6211e35415891"
+            }
+        }
+    },
+    "manifests": {
+        "nedac/sylius-order-now-plugin": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "nedac/sylius-order-now-plugin",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Nedac\\SyliusOrderNowPlugin\\NedacSyliusOrderNowPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "copy-from-package": {
+                    "src/Resources/views/bundles/": "templates/bundles/",
+                    "src/Resources/views/form/": "templates/form/",
+                    "src/Resources/views/Product/": "templates/Product/"
+                }
+            },
+            "files": {
+                "config/routes/nedac_sylius_order_now_plugin.yaml": {
+                    "contents": "nedac_sylius_order_now_plugin:\n    resource: '@NedacSyliusOrderNowPlugin/Resources/config/shop_routing.yml'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "nedac/sylius-order-now-plugin:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

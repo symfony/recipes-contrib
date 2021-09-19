@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "damienharper/doctrine-audit-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "ab8b371ee4206c79a144f3617d8eef3d6e7b87be"
+            }
+        }
+    },
+    "manifests": {
+        "damienharper/doctrine-audit-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "damienharper/doctrine-audit-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "DH\\DoctrineAuditBundle\\DHDoctrineAuditBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/dh_doctrine_audit.yaml": {
+                    "contents": "dh_doctrine_audit:\n    # Configuration reference available at:\n    # https://github.com/DamienHarper/DoctrineAuditBundle#configuration\n\n    entities:\n#        MyBundle\\Entity\\MyAuditedEntity1: null   # all MyAuditedEntity1 properties are audited\n#        MyBundle\\Entity\\MyAuditedEntity2:\n#            ignored_columns:                  # MyAuditedEntity2 properties to be ignored by the audit process\n#                - createdAt\n#                - updatedAt\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "damienharper/doctrine-audit-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

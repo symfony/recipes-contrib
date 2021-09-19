@@ -1,0 +1,46 @@
+{
+    "locks": {
+        "beelab/tag-bundle": {
+            "version": "1.3",
+            "recipe": {
+                "repo": "1.3",
+                "branch": "master",
+                "version": "1.3",
+                "ref": "9bd5cf1ad8576a8ad13e317cf8d7b854883cab9e"
+            }
+        }
+    },
+    "manifests": {
+        "beelab/tag-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "beelab/tag-bundle",
+            "version": "1.3",
+            "manifest": {
+                "bundles": {
+                    "Beelab\\TagBundle\\BeelabTagBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "src/Entity/Tag.php": {
+                    "contents": "<?php\n\nnamespace App\\Entity;\n\nuse Beelab\\TagBundle\\Tag\\TagInterface;\nuse Doctrine\\ORM\\Mapping as ORM;\n\n/**\n * @ORM\\Table()\n * @ORM\\Entity()\n */\nclass Tag implements TagInterface\n{\n    /**\n     * @var int\n     *\n     * @ORM\\Column(type=\"integer\")\n     * @ORM\\Id\n     * @ORM\\GeneratedValue(strategy=\"AUTO\")\n     */\n    protected $id;\n\n    /**\n     * @var string|null\n     *\n     * @ORM\\Column()\n     */\n    protected $name;\n\n    public function __toString(): string\n    {\n        return $this->name;\n    }\n\n    public function getId(): int\n    {\n        return $this->id;\n    }\n\n    public function setName(?string $name): void\n    {\n        $this->name = $name;\n    }\n\n    public function getName(): ?string\n    {\n        return $this->name;\n    }\n}\n\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/beelab_tag.yaml": {
+                    "contents": "beelab_tag:\n    tag_class: App\\Entity\\Tag\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "beelab/tag-bundle:1.3@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

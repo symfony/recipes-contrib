@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "knojector/steam-authentication-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "e52348a77b9b3e6f068cf51422289a52f331b5d0"
+            }
+        }
+    },
+    "manifests": {
+        "knojector/steam-authentication-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "knojector/steam-authentication-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Knojector\\SteamAuthenticationBundle\\KnojectorSteamAuthenticationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/knojector_steam_authentication.yaml": {
+                    "contents": "# https://github.com/knojector/SteamAuthenticationBundle for configuration documentation\nknojector_steam_authentication:\n    login_success_redirect: ''\n    login_failure_redirect: ''\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "knojector/steam-authentication-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

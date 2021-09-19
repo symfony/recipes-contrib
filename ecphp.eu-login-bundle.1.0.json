@@ -1,0 +1,34 @@
+{
+    "locks": {
+        "ecphp/eu-login-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "68744820723f68c1bea916847b56e7f63cf20de3"
+            }
+        }
+    },
+    "manifests": {
+        "ecphp/eu-login-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "ecphp/eu-login-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "EcPhp\\EuLoginBundle\\EuLoginBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-package": {
+                    "Resources/config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": [],
+            "origin": "ecphp/eu-login-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

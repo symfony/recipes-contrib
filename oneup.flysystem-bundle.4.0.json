@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "oneup/flysystem-bundle": {
+            "version": "4.0",
+            "recipe": {
+                "repo": "4.0",
+                "branch": "master",
+                "version": "4.0",
+                "ref": "3ae1b83985e89138f5443bbc2d9b8c074b497d49"
+            }
+        }
+    },
+    "manifests": {
+        "oneup/flysystem-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "oneup/flysystem-bundle",
+            "version": "4.0",
+            "manifest": {
+                "bundles": {
+                    "Oneup\\FlysystemBundle\\OneupFlysystemBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/oneup_flysystem.yaml": {
+                    "contents": "# Read the documentation: https://github.com/1up-lab/OneupFlysystemBundle\noneup_flysystem:\n    adapters:\n        default_adapter:\n            local:\n                location: '%kernel.cache_dir%/flysystem'\n    filesystems:\n        default_filesystem:\n            adapter: default_adapter\n            alias: League\\Flysystem\\Filesystem\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "oneup/flysystem-bundle:4.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

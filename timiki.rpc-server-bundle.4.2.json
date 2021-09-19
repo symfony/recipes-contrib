@@ -1,0 +1,51 @@
+{
+    "locks": {
+        "timiki/rpc-server-bundle": {
+            "version": "4.2",
+            "recipe": {
+                "repo": "4.2",
+                "branch": "master",
+                "version": "4.2",
+                "ref": "55f99c8a9901bcb5cbd75ab722c923dae9bfb4ef"
+            }
+        }
+    },
+    "manifests": {
+        "timiki/rpc-server-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "timiki/rpc-server-bundle",
+            "version": "4.2",
+            "manifest": {
+                "bundles": {
+                    "Timiki\\Bundle\\RpcServerBundle\\RpcServerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "src/Method/.gitignore": {
+                    "contents": "",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/routes/rpc_server.yaml": {
+                    "contents": "rpc:\n    path:     /rpc\n    defaults: { _controller: RpcServerBundle:Rpc:handler }\n    methods:  [POST]\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/rpc_server.yaml": {
+                    "contents": "# Read the documentation: https://github.com/timiki/rpc-server-bundle\n\nrpc_server:\n\n    mapping: '%kernel.project_dir%/src/Method'\n\n    # id cache service, must be instance of Doctrine\\Common\\Cache\\CacheProvider\n    # by default use file cache\n\n    cache: null\n\n    # id serializer service, must be instance of Timiki\\Bundle\\RpcServerBundle\\Serializer\\SerializerInterface\n    # by default use 'rpc.server.serializer.base' service\n\n    serializer: 'rpc.server.serializer.base'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "timiki/rpc-server-bundle:4.2@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "locks": {
+        "enqueue/amqp-ext": {
+            "version": "0.7",
+            "recipe": {
+                "repo": "0.7",
+                "branch": "master",
+                "version": "0.7",
+                "ref": "3c5175ca17ff2dc08715e460214e9ce77aa46580"
+            }
+        }
+    },
+    "manifests": {
+        "enqueue/amqp-ext": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "enqueue/amqp-ext",
+            "version": "0.7",
+            "manifest": [],
+            "files": [],
+            "origin": "enqueue/amqp-ext:0.7@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

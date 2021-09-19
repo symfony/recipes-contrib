@@ -1,0 +1,44 @@
+{
+    "locks": {
+        "mailjet/mailjet-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "48a7f92015372654b5056855da5e94d54bd8d948"
+            }
+        }
+    },
+    "manifests": {
+        "mailjet/mailjet-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "mailjet/mailjet-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Mailjet\\MailjetBundle\\MailjetBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MAILJET_APIKEY_PUBLIC": "your-api_key",
+                    "MAILJET_APIKEY_PRIVATE": "@@your-secret_key"
+                }
+            },
+            "files": {
+                "config/packages/mailjet.yaml": {
+                    "contents": "mailjet:\n    api_key:    \"%env(MAILJET_APIKEY_PUBLIC)%\"\n    secret_key: \"%env(MAILJET_APIKEY_PRIVATE)%\"\n\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "mailjet/mailjet-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

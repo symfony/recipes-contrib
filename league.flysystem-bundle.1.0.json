@@ -1,0 +1,46 @@
+{
+    "locks": {
+        "league/flysystem-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "913dc3d7a5a1af0d2b044c5ac3a16e2f851d7380"
+            }
+        }
+    },
+    "manifests": {
+        "league/flysystem-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "league/flysystem-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "League\\FlysystemBundle\\FlysystemBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "var/": "%VAR_DIR%/"
+                }
+            },
+            "files": {
+                "var/storage/.gitignore": {
+                    "contents": "",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/flysystem.yaml": {
+                    "contents": "# Read the documentation at https://github.com/thephpleague/flysystem-bundle/blob/master/docs/1-getting-started.md\nflysystem:\n    storages:\n        default.storage:\n            adapter: 'local'\n            options:\n                directory: '%kernel.project_dir%/%VAR_DIR%/storage/default'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "league/flysystem-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

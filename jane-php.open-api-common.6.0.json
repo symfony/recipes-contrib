@@ -1,0 +1,49 @@
+{
+    "locks": {
+        "jane-php/open-api-common": {
+            "version": "6.0",
+            "recipe": {
+                "repo": "6.0",
+                "branch": "master",
+                "version": "6.0",
+                "ref": "1628ebe907a0d28e3caa22199c6e711d14c8e680"
+            }
+        }
+    },
+    "manifests": {
+        "jane-php/open-api-common": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "jane-php/open-api-common",
+            "version": "6.0",
+            "manifest": {
+                "copy-from-recipe": {
+                    "bin/": "%BIN_DIR%/",
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "conflict": {
+                    "symfony/symfony": "<5.0"
+                }
+            },
+            "files": {
+                "config/jane/open_api.php": {
+                    "contents": "<?php\n\nreturn [\n    'openapi-file' => __DIR__ . '/open-api.yaml',\n    'namespace' => 'MyApp\\Library\\Generated',\n    'directory' => __DIR__ . '/../../generated',\n];\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/jane.yaml": {
+                    "contents": "services:\n    _defaults:\n        autowire: true\n        autoconfigure: true\n\n#    MyApp\\Library\\Generated\\Normalizer\\JaneObjectNormalizer: null\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "bin/jane-open-api-generate": {
+                    "contents": "#!/usr/bin/env php\n<?php\n\nrequire __DIR__ . '/../vendor/autoload.php';\n\nuse Jane\\OpenApiCommon\\Console\\Command\\GenerateCommand;\nuse Symfony\\Component\\Console\\Input\\ArrayInput;\nuse Symfony\\Component\\Console\\Output\\NullOutput;\nuse Jane\\OpenApiCommon\\Console\\Loader\\ConfigLoader;\nuse Jane\\OpenApiCommon\\Console\\Loader\\OpenApiMatcher;\nuse Jane\\OpenApiCommon\\Console\\Loader\\SchemaLoader;\n\n$command = new GenerateCommand(new ConfigLoader(), new SchemaLoader(), new OpenApiMatcher());\n$inputArray = new ArrayInput(['--config-file' => __DIR__ . '/../config/jane/open_api.php'], $command->getDefinition());\n\n$command->execute($inputArray, new NullOutput());\n",
+                    "executable": true,
+                    "encoding": ""
+                }
+            },
+            "origin": "jane-php/open-api-common:6.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

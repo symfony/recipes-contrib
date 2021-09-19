@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "timiki/rpc-client-bundle": {
+            "version": "4.0",
+            "recipe": {
+                "repo": "4.0",
+                "branch": "master",
+                "version": "4.0",
+                "ref": "fd232956391a42232fe857432136c9387c8ec0d1"
+            }
+        }
+    },
+    "manifests": {
+        "timiki/rpc-client-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "timiki/rpc-client-bundle",
+            "version": "4.0",
+            "manifest": {
+                "bundles": {
+                    "Timiki\\Bundle\\RpcClientBundle\\RpcClientBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/rpc_client.yaml": {
+                    "contents": "# Read the documentation: https://github.com/timiki/rpc-client-bundle\n\nrpc_client:\n\n    # connection:\n    #   name_1: RPC_SERVER_URL_1\n    #   name_2: RPC_SERVER_URL_2\n\n    connection: null\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "timiki/rpc-client-bundle:4.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

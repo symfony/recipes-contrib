@@ -1,0 +1,35 @@
+{
+    "locks": {
+        "knplabs/packagist-api": {
+            "version": "1.6",
+            "recipe": {
+                "repo": "1.6",
+                "branch": "master",
+                "version": "1.6",
+                "ref": "6db69661915a16528535b90973e02593cc3b84e3"
+            }
+        }
+    },
+    "manifests": {
+        "knplabs/packagist-api": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "knplabs/packagist-api",
+            "version": "1.6",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/knp_packagist_api.yaml": {
+                    "contents": "services:\n    Packagist\\Api\\Client: null\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "knplabs/packagist-api:1.6@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

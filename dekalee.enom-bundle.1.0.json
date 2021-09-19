@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "dekalee/enom-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "f5d48d7f8a5a1f9661446151006f242771168d00"
+            }
+        }
+    },
+    "manifests": {
+        "dekalee/enom-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "dekalee/enom-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Dekalee\\EnomBundle\\DekaleeEnomBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#ENOM_UID": "your-enom-uid",
+                    "#ENOM_PASSWORD": "your-enom-password",
+                    "#ENOM_BASE_URL": "your-enom-api-base-url"
+                }
+            },
+            "files": {
+                "config/packages/dekalee_enom.yaml": {
+                    "contents": "dekalee_enom:\n    uid: '%env(ENOM_UID)%'\n    password: '%env(ENOM_PASSWORD)%'\n    base_url: '%env(ENOM_BASE_URL)%'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "dekalee/enom-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "locks": {
+        "kriswallsmith/buzz": {
+            "version": "0.17",
+            "recipe": {
+                "repo": "0.17",
+                "branch": "master",
+                "version": "0.17",
+                "ref": "89a8c10882c422723d1c7f80a41f7008b17f608c"
+            }
+        }
+    },
+    "manifests": {
+        "kriswallsmith/buzz": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "kriswallsmith/buzz",
+            "version": "0.17",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/buzz.yaml": {
+                    "contents": "# Read more about client options at: https://github.com/kriswallsmith/Buzz/blob/master/doc/client.md\nservices:\n    _defaults:\n        public: false\n\n    # Tell the auto wire system to use \"FileGetContents\" client as default client.\n    # Set this to any of the other clients below (e.g. Curl or MultiCurl) to use a different default client.\n    Buzz\\Client\\BuzzClientInterface: '@buzz.file_get_contents_client'\n\n    # Clients\n    buzz.file_get_contents_client:\n        class: Buzz\\Client\\FileGetContents\n        arguments:\n            - timeout: 10\n\n    buzz.curl_client:\n        class: Buzz\\Client\\Curl\n        arguments:\n            - timeout: 10\n\n    buzz.multi_curl_client:\n        class: Buzz\\Client\\MultiCurl\n        arguments:\n            - timeout: 10\n\n    # Browser\n    Buzz\\Browser:\n        arguments: ['@Buzz\\Client\\BuzzClientInterface']\n        calls:\n            - ['addMiddleware', ['@buzz.middleware.content_length']]\n            - ['addMiddleware', ['@buzz.middleware.logger']]\n\n    # Middlewares\n    buzz.middleware.content_length:\n        class: Buzz\\Middleware\\ContentLengthMiddleware\n\n    buzz.middleware.logger:\n        class: Buzz\\Middleware\\LoggerMiddleware\n        arguments: ['@?logger']\n        tags:\n            - { name: monolog.logger, channel: buzz }\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "kriswallsmith/buzz:0.17@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "locks": {
+        "sonata-project/media-orm-pack": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "5961ad63ce003f2735f17026d612f7a87954f5c8"
+            }
+        }
+    },
+    "manifests": {
+        "sonata-project/media-orm-pack": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "sonata-project/media-orm-pack",
+            "version": "1.0",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "src/Entity/SonataMediaGallery.php": {
+                    "contents": "<?php\n\ndeclare(strict_types=1);\n\nnamespace App\\Entity;\n\nuse Doctrine\\ORM\\Mapping as ORM;\nuse JMS\\Serializer\\Annotation as Serializer;\nuse Sonata\\MediaBundle\\Entity\\BaseGallery;\n\n/**\n * @ORM\\Entity\n * @ORM\\Table(name=\"media__gallery\")\n * @ORM\\HasLifecycleCallbacks\n */\nclass SonataMediaGallery extends BaseGallery\n{\n    /**\n     * @ORM\\Id\n     * @ORM\\Column(type=\"integer\")\n     * @ORM\\GeneratedValue(strategy=\"AUTO\")\n     * @Serializer\\Groups(groups={\"sonata_api_read\", \"sonata_api_write\", \"sonata_search\"})\n     *\n     * @var int\n     */\n    protected $id;\n\n    /**\n     * @ORM\\OneToMany(\n     *     targetEntity=\"App\\Entity\\SonataMediaGalleryHasMedia\",\n     *     mappedBy=\"gallery\", cascade={\"persist\"}, orphanRemoval=true\n     * )\n     * @ORM\\OrderBy({\"position\"=\"ASC\"})\n     *\n     * @var SonataMediaGalleryHasMedia[]\n     */\n    protected $galleryHasMedias;\n\n    public function getId()\n    {\n        return $this->id;\n    }\n\n    /**\n     * @ORM\\PrePersist\n     */\n    public function prePersist(): void\n    {\n        parent::prePersist();\n    }\n\n    /**\n     * @ORM\\PreUpdate\n     */\n    public function preUpdate(): void\n    {\n        parent::preUpdate();\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "src/Entity/SonataMediaMedia.php": {
+                    "contents": "<?php\n\ndeclare(strict_types=1);\n\nnamespace App\\Entity;\n\nuse Doctrine\\ORM\\Mapping as ORM;\nuse JMS\\Serializer\\Annotation as Serializer;\nuse Sonata\\MediaBundle\\Entity\\BaseMedia;\n\n/**\n * @ORM\\Entity\n * @ORM\\Table(name=\"media__media\")\n * @ORM\\HasLifecycleCallbacks\n */\nclass SonataMediaMedia extends BaseMedia\n{\n    /**\n     * @ORM\\Id\n     * @ORM\\Column(type=\"integer\")\n     * @ORM\\GeneratedValue(strategy=\"AUTO\")\n     * @Serializer\\Groups(groups={\"sonata_api_read\", \"sonata_api_write\", \"sonata_search\"})\n     *\n     * @var int\n     */\n    protected $id;\n\n    /**\n     * @ORM\\OneToMany(\n     *     targetEntity=\"App\\Entity\\SonataMediaGalleryHasMedia\",\n     *     mappedBy=\"media\", cascade={\"persist\"}, orphanRemoval=false\n     * )\n     *\n     * @var SonataMediaGalleryHasMedia[]\n     */\n    protected $galleryHasMedias;\n\n    /**\n     * Fix annotations if you use classification-bundle.\n     *\n     * // ORM\\ManyToOne(\n     *     targetEntity=\"App\\Entity\\SonataClassificationCategory\",\n     *     cascade={\"persist\"}\n     * )\n     * // ORM\\JoinColumn(name=\"category_id\", referencedColumnName=\"id\", onDelete=\"SET NULL\")\n     *\n     * @var SonataClassificationCategory\n     */\n    protected $category;\n\n    public function getId()\n    {\n        return $this->id;\n    }\n\n    /**\n     * @ORM\\PrePersist\n     */\n    public function prePersist(): void\n    {\n        parent::prePersist();\n    }\n\n    /**\n     * @ORM\\PreUpdate\n     */\n    public function preUpdate(): void\n    {\n        parent::preUpdate();\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "src/Entity/SonataMediaGalleryHasMedia.php": {
+                    "contents": "<?php\n\ndeclare(strict_types=1);\n\nnamespace App\\Entity;\n\nuse Doctrine\\ORM\\Mapping as ORM;\nuse JMS\\Serializer\\Annotation as Serializer;\nuse Sonata\\MediaBundle\\Entity\\BaseGalleryHasMedia;\n\n/**\n * @ORM\\Entity\n * @ORM\\Table(name=\"media__gallery_media\")\n * @ORM\\HasLifecycleCallbacks\n */\nclass SonataMediaGalleryHasMedia extends BaseGalleryHasMedia\n{\n    /**\n     * @ORM\\Id\n     * @ORM\\Column(type=\"integer\")\n     * @ORM\\GeneratedValue(strategy=\"AUTO\")\n     * @Serializer\\Groups(groups={\"sonata_api_read\", \"sonata_api_write\", \"sonata_search\"})\n     *\n     * @var int\n     */\n    protected $id;\n\n    /**\n     * @ORM\\ManyToOne(\n     *     targetEntity=\"App\\Entity\\SonataMediaMedia\",\n     *     inversedBy=\"galleryHasMedias\", cascade={\"persist\"}\n     * )\n     * @ORM\\JoinColumn(name=\"media_id\", referencedColumnName=\"id\", onDelete=\"CASCADE\")\n     *\n     * @var SonataMediaMedia\n     */\n    protected $media;\n\n    /**\n     * @ORM\\ManyToOne(\n     *     targetEntity=\"App\\Entity\\SonataMediaGallery\",\n     *     inversedBy=\"galleryHasMedias\", cascade={\"persist\"}\n     * )\n     * @ORM\\JoinColumn(name=\"gallery_id\", referencedColumnName=\"id\", onDelete=\"CASCADE\")\n     *\n     * @var SonataMediaGallery\n     */\n    protected $gallery;\n\n    public function getId()\n    {\n        return $this->id;\n    }\n\n    /**\n     * @ORM\\PrePersist\n     */\n    public function prePersist(): void\n    {\n        parent::prePersist();\n    }\n\n    /**\n     * @ORM\\PreUpdate\n     */\n    public function preUpdate(): void\n    {\n        parent::preUpdate();\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/sonata_media_orm.yaml": {
+                    "contents": "sonata_media:\n    class:\n        media: App\\Entity\\SonataMediaMedia\n        gallery: App\\Entity\\SonataMediaGallery\n        gallery_has_media: App\\Entity\\SonataMediaGalleryHasMedia\n        category: App\\Entity\\SonataClassificationCategory\n    db_driver: doctrine_orm\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "sonata-project/media-orm-pack:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

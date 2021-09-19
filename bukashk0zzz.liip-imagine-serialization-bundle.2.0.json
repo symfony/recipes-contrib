@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "bukashk0zzz/liip-imagine-serialization-bundle": {
+            "version": "2.0",
+            "recipe": {
+                "repo": "2.0",
+                "branch": "master",
+                "version": "2.0",
+                "ref": "2e99dff254583c4fec409c7b98a267501fd4e27c"
+            }
+        }
+    },
+    "manifests": {
+        "bukashk0zzz/liip-imagine-serialization-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "bukashk0zzz/liip-imagine-serialization-bundle",
+            "version": "2.0",
+            "manifest": {
+                "bundles": {
+                    "Bukashk0zzz\\LiipImagineSerializationBundle\\Bukashk0zzzLiipImagineSerializationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/bukashk0zzz_liip_imagine_serialization.yaml": {
+                    "contents": "bukashk0zzz_liip_imagine_serialization:\n    # Set true for generating url for vichUploader fields\n    vichUploaderSerialize: false\n\n    # Set true for adding original field value to object\n    includeOriginal: false\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "bukashk0zzz/liip-imagine-serialization-bundle:2.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "locks": {
+        "nicohaase/twig-isbn-formatter": {
+            "version": "0.1",
+            "recipe": {
+                "repo": "0.1",
+                "branch": "master",
+                "version": "0.1",
+                "ref": "1d9d480242b38506243f591224fc2e386d1cd90c"
+            }
+        }
+    },
+    "manifests": {
+        "nicohaase/twig-isbn-formatter": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "nicohaase/twig-isbn-formatter",
+            "version": "0.1",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/twig_isbn_formatter.yaml": {
+                    "contents": "services:\n    _defaults:\n        public: false\n        autowire: true\n        autoconfigure: true\n\n    NicoHaase\\TwigIsbnFormatter\\IsbnFormatterExtension: null\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "nicohaase/twig-isbn-formatter:0.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

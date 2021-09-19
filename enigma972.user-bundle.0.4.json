@@ -1,0 +1,56 @@
+{
+    "locks": {
+        "enigma972/user-bundle": {
+            "version": "0.4",
+            "recipe": {
+                "repo": "0.4",
+                "branch": "master",
+                "version": "0.4",
+                "ref": "498f1288950a5304338e73ce282df934828c8cf4"
+            }
+        }
+    },
+    "manifests": {
+        "enigma972/user-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "enigma972/user-bundle",
+            "version": "0.4",
+            "manifest": {
+                "bundles": {
+                    "Enigma972\\UserBundle\\Enigma972UserBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "src/Repository/UserRepository.php": {
+                    "contents": "<?php\n\nnamespace App\\Repository;\n\nuse App\\Entity\\User;\nuse Symfony\\Component\\Security\\Core\\User\\UserInterface;\nuse Enigma972\\UserBundle\\Repository\\UserRepository as Users;\n\n/**\n * @method User|null find($id, $lockMode = null, $lockVersion = null)\n * @method User|null findOneBy(array $criteria, array $orderBy = null)\n * @method User[]    findAll()\n * @method User[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)\n */\nclass UserRepository extends Users\n{\n    // /**\n    //  * @return User[] Returns an array of User objects\n    //  */\n    /*\n    public function findByExampleField($value)\n    {\n        return $this->createQueryBuilder('u')\n            ->andWhere('u.exampleField = :val')\n            ->setParameter('val', $value)\n            ->orderBy('u.id', 'ASC')\n            ->setMaxResults(10)\n            ->getQuery()\n            ->getResult()\n        ;\n    }\n    */\n\n    /*\n    public function findOneBySomeField($value): ?User\n    {\n        return $this->createQueryBuilder('u')\n            ->andWhere('u.exampleField = :val')\n            ->setParameter('val', $value)\n            ->getQuery()\n            ->getOneOrNullResult()\n        ;\n    }\n    */\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "src/Entity/User.php": {
+                    "contents": "<?php\n\nnamespace App\\Entity;\n\nuse App\\Repository\\UserRepository;\nuse Doctrine\\Common\\Collections\\ArrayCollection;\nuse Doctrine\\Common\\Collections\\Collection;\nuse Doctrine\\ORM\\Mapping as ORM;\nuse Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntity;\nuse Enigma972\\UserBundle\\Entity\\User as BaseUser;\n\n/**\n * @ORM\\Entity(repositoryClass=UserRepository::class)\n * @UniqueEntity(fields={\"username\"}, message=\"There is already an account with this username\")\n */\nclass User extends BaseUser\n{\n    public function __construct()\n    {\n    \tparent::__construct();\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/routes/enigma972_user.yaml": {
+                    "contents": "enigma972_user:\n    resource:  '@Enigma972UserBundle/Controller/'\n    type: annotation\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/enigma972_user.yaml": {
+                    "contents": "enigma972_user:\n    # if this value equal true, the User should confirm theire mail\n    check_mail: false\n    # The validity duration in secondes, 4 houres by default (14,400 sec)\n    reset_password_code_validity:  14400\n    # where to redirect after login\n    target: home\n    # the no reply email for this app\n    no_reply_mail: no-reply@mail.com\n    not_send_welcome_mail: true\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "enigma972/user-bundle:0.4@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "sylius/customer-reorder-plugin": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "c05aac7dd6534c7a92da168c7e2883282466b9da"
+            }
+        }
+    },
+    "manifests": {
+        "sylius/customer-reorder-plugin": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "sylius/customer-reorder-plugin",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Sylius\\CustomerReorderPlugin\\SyliusCustomerReorderPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/sylius_customer_reorder.yaml": {
+                    "contents": "sylius_customer_reorder:\n    resource: \"@SyliusCustomerReorderPlugin/Resources/config/app/reorder_routing.yml\"\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/sylius_customer_reorder.yaml": {
+                    "contents": "imports:\n    - { resource: \"@SyliusCustomerReorderPlugin/Resources/config/config.yml\" }\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "sylius/customer-reorder-plugin:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

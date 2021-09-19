@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "coka/rest-request-validator-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "42ae8a552909a4048bd94ea39d245c0b677c97db"
+            }
+        }
+    },
+    "manifests": {
+        "coka/rest-request-validator-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "coka/rest-request-validator-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Oka\\RESTRequestValidatorBundle\\OkaRESTRequestValidatorBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/oka_rest_request_validator.yaml": {
+                    "contents": "oka_rest_request_validator:\n    exception:\n        enabled: true\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "coka/rest-request-validator-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

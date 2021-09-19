@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "helios-ag/fm-elfinder-bundle": {
+            "version": "7.0",
+            "recipe": {
+                "repo": "7.0",
+                "branch": "master",
+                "version": "7.0",
+                "ref": "fb9152ee3538f968d9e0f2c763ecbe4ab63eff26"
+            }
+        }
+    },
+    "manifests": {
+        "helios-ag/fm-elfinder-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "helios-ag/fm-elfinder-bundle",
+            "version": "7.0",
+            "manifest": {
+                "bundles": {
+                    "FM\\ElfinderBundle\\FMElfinderBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/fm_elfinder.yaml": {
+                    "contents": "fm_elfinder:\n    resource: \"@FMElfinderBundle/Resources/config/routing.yml\"\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/fm_elfinder.yaml": {
+                    "contents": "fm_elfinder:\n    instances:\n        default:\n            include_assets: true\n            relative_path: true\n            connector:\n                roots:\n                    uploads:\n                        driver: LocalFileSystem\n                        path: uploads\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "helios-ag/fm-elfinder-bundle:7.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

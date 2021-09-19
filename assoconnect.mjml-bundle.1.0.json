@@ -1,0 +1,34 @@
+{
+    "locks": {
+        "assoconnect/mjml-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "74656f4762a2cc83f03f78c50142b3c9285fb18c"
+            }
+        }
+    },
+    "manifests": {
+        "assoconnect/mjml-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "assoconnect/mjml-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Assoconnect\\MJMLBundle\\AssoconnectMJMLBundle": [
+                        "all"
+                    ]
+                },
+                "gitignore": [
+                    "/templates/mjml/*.html.twig"
+                ]
+            },
+            "files": [],
+            "origin": "assoconnect/mjml-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

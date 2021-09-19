@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "friendsofsymfony/jsrouting-bundle": {
+            "version": "2.0",
+            "recipe": {
+                "repo": "2.0",
+                "branch": "master",
+                "version": "2.0",
+                "ref": "370bcf99b04c0dfd0b545745aad622d757af5e1b"
+            }
+        }
+    },
+    "manifests": {
+        "friendsofsymfony/jsrouting-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "friendsofsymfony/jsrouting-bundle",
+            "version": "2.0",
+            "manifest": {
+                "bundles": {
+                    "FOS\\JsRoutingBundle\\FOSJsRoutingBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/fos_js_routing.yaml": {
+                    "contents": "fos_js_routing:\n    resource: \"@FOSJsRoutingBundle/Resources/config/routing/routing.xml\"\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "friendsofsymfony/jsrouting-bundle:2.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

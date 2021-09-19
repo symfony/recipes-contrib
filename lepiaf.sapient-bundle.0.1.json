@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "lepiaf/sapient-bundle": {
+            "version": "0.1",
+            "recipe": {
+                "repo": "0.1",
+                "branch": "master",
+                "version": "0.1",
+                "ref": "37101293e516acdf806bf0684e4b9316af9c5d26"
+            }
+        }
+    },
+    "manifests": {
+        "lepiaf/sapient-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "lepiaf/sapient-bundle",
+            "version": "0.1",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "bundles": {
+                    "lepiaf\\SapientBundle\\SapientBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": {
+                "config/packages/sapient.yaml": {
+                    "contents": "sapient:\n    # By default, bundle does nothing without initial configuration.\n    # Run command sapient:configure to get initial configuration.\n    # See http://sapient-bundle.readthedocs.io/en/latest/installation.html\n    guzzle_middleware:\n        unseal: false\n        verify: false\n    sealing_public_keys: null\n    verifying_public_keys: null\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "lepiaf/sapient-bundle:0.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

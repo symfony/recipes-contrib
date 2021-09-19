@@ -1,0 +1,48 @@
+{
+    "locks": {
+        "tienvx/mbt-api-bundle": {
+            "version": "1.15",
+            "recipe": {
+                "repo": "1.15",
+                "branch": "master",
+                "version": "1.15",
+                "ref": "70ceb93d86331ab968a53500be427bf77a7afc71"
+            }
+        }
+    },
+    "manifests": {
+        "tienvx/mbt-api-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "tienvx/mbt-api-bundle",
+            "version": "1.15",
+            "manifest": {
+                "bundles": {
+                    "Tienvx\\Bundle\\MbtApiBundle\\TienvxMbtApiBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "DOT_BINARY": "dot"
+                }
+            },
+            "files": {
+                "config/routes/tienvx_mbt_api.yaml": {
+                    "contents": "tienvx_mbt_api:\n    resource: '@TienvxMbtApiBundle/Resources/config/routing.xml'\n    prefix: '/mbt-api'\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/tienvx_mbt_api.yaml": {
+                    "contents": "tienvx_mbt_api:\n    dot_binary: '%env(DOT_BINARY)%'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "tienvx/mbt-api-bundle:1.15@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

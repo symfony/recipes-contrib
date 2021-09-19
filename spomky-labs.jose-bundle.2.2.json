@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "spomky-labs/jose-bundle": {
+            "version": "2.2",
+            "recipe": {
+                "repo": "2.2",
+                "branch": "master",
+                "version": "2.2",
+                "ref": "94f7177a18c73c863de15b227ee7f2151922203e"
+            }
+        }
+    },
+    "manifests": {
+        "spomky-labs/jose-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "spomky-labs/jose-bundle",
+            "version": "2.2",
+            "manifest": {
+                "bundles": {
+                    "SpomkyLabs\\JoseBundle\\SpomkyLabsJoseBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%"
+                }
+            },
+            "files": {
+                "config/routes/spomky_labs_jose_bundle_routes.yaml": {
+                    "contents": "spomky_labs_jose_bundle_jwkset_endpoint:\n    resource: \"@SpomkyLabsJoseBundle/Resources/config/routing/jwkset_controller.yml\"\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "spomky-labs/jose-bundle:2.2@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

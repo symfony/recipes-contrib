@@ -1,0 +1,46 @@
+{
+    "locks": {
+        "ckrack/optimus-bundle": {
+            "version": "0.1",
+            "recipe": {
+                "repo": "0.1",
+                "branch": "master",
+                "version": "0.1",
+                "ref": "dc65a1523edeec7cbf073af3814a5ae0dbc954a7"
+            }
+        }
+    },
+    "manifests": {
+        "ckrack/optimus-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "ckrack/optimus-bundle",
+            "version": "0.1",
+            "manifest": {
+                "bundles": {
+                    "Ckrack\\OptimusBundle\\CkrackOptimusBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Replace these env vars with the output of `php vendor/bin/optimus spark -f env`",
+                    "OPTIMUS_PRIME": "3",
+                    "OPTIMUS_INVERSE": "715827883",
+                    "OPTIMUS_RANDOM": "1592469642"
+                }
+            },
+            "files": {
+                "config/packages/ckrack_optimus.yaml": {
+                    "contents": "ckrack_optimus:\n    # Set options, as documented at https://github.com/jenssegers/optimus#usage\n    prime: \"%env(int:OPTIMUS_PRIME)%\"\n    inverse: \"%env(int:OPTIMUS_INVERSE)%\"\n    random: \"%env(int:OPTIMUS_RANDOM)%\"\n\n    # if set to true, param converter will continue with the next available param converters\n    passthrough: true\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "ckrack/optimus-bundle:0.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

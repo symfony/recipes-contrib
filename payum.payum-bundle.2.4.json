@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "payum/payum-bundle": {
+            "version": "2.4",
+            "recipe": {
+                "repo": "2.4",
+                "branch": "master",
+                "version": "2.4",
+                "ref": "518ac22defa04a8a1d82479ed362e2921487adf0"
+            }
+        }
+    },
+    "manifests": {
+        "payum/payum-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "payum/payum-bundle",
+            "version": "2.4",
+            "manifest": {
+                "bundles": {
+                    "Payum\\Bundle\\PayumBundle\\PayumBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/payum.yaml": {
+                    "contents": "payum:\n    storages:\n        Payum\\Core\\Model\\Payment:\n            filesystem:\n                storage_dir: '%kernel.project_dir%/var/payum/payments'\n                id_property: number\n\n    security:\n        token_storage:\n            Payum\\Core\\Model\\Token:\n                filesystem:\n                    storage_dir: '%kernel.project_dir%/var/payum/gateways'\n                    id_property: hash\n\n    gateways:\n        offline:\n            factory: offline\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "payum/payum-bundle:2.4@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

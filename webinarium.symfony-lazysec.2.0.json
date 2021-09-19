@@ -1,0 +1,35 @@
+{
+    "locks": {
+        "webinarium/symfony-lazysec": {
+            "version": "2.0",
+            "recipe": {
+                "repo": "2.0",
+                "branch": "master",
+                "version": "2.0",
+                "ref": "803b262a199f69b5360dca85c2d57d8dd80f815a"
+            }
+        }
+    },
+    "manifests": {
+        "webinarium/symfony-lazysec": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "webinarium/symfony-lazysec",
+            "version": "2.0",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/lazysec.yaml": {
+                    "contents": "services:\n\n    # See https://github.com/webinarium/symfony-lazysec/wiki/User-provider\n    LazySec\\Provider\\GenericUserProvider:\n        autowire: true\n        public: false\n\n    # Uncomment the line below and update path to your repository there,\n    # if you want use the 'GenericUserProvider' service from above\n    #LazySec\\Repository\\UserRepositoryInterface: '@App\\Repository\\UserRepository'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "webinarium/symfony-lazysec:2.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "onurb/doctrine-yuml-bundle": {
+            "version": "1.1",
+            "recipe": {
+                "repo": "1.1",
+                "branch": "master",
+                "version": "1.1",
+                "ref": "81130d6607195660087a01442f30be1edad71804"
+            }
+        }
+    },
+    "manifests": {
+        "onurb/doctrine-yuml-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "onurb/doctrine-yuml-bundle",
+            "version": "1.1",
+            "manifest": {
+                "bundles": {
+                    "Onurb\\Bundle\\YumlBundle\\OnurbYumlBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/dev/yuml.yaml": {
+                    "contents": "doctrine_yuml:\n    resource: \"@OnurbYumlBundle/Resources/config/routing.yml\"\n    prefix:   /\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "onurb/doctrine-yuml-bundle:1.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

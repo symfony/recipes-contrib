@@ -1,0 +1,44 @@
+{
+    "locks": {
+        "cache/cache-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "817d06a0a3bea320ef72beb249285c7988ee9566"
+            }
+        }
+    },
+    "manifests": {
+        "cache/cache-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "cache/cache-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Cache\\CacheBundle\\CacheBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SESSION_CACHE_ENABLED": "true",
+                    "ROUTER_CACHE_ENABLED": "false"
+                }
+            },
+            "files": {
+                "config/packages/cache.yaml": {
+                    "contents": "cache:\n    session:\n        enabled: \"%env(bool:SESSION_CACHE_ENABLED)%\"\n        service_id: \"cache.provider.default\"\n        use_tagging: true\n        ttl: 7200\n    router:\n        enabled: \"%env(bool:ROUTER_CACHE_ENABLED)%\"\n        service_id: \"cache.provider.default\"\n        ttl: 86400\n    logging:\n        enabled: \"%env(bool:APP_DEBUG)%\"\n        logger: \"logger\"\n        level: \"info\"\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "cache/cache-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

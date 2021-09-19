@@ -1,0 +1,43 @@
+{
+    "locks": {
+        "inspector-apm/inspector-symfony": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "fefb11e1366fc61c05f82296d98d4fb3210aa06d"
+            }
+        }
+    },
+    "manifests": {
+        "inspector-apm/inspector-symfony": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "inspector-apm/inspector-symfony",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Inspector\\Symfony\\Bundle\\InspectorBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "INSPECTOR_INGESTION_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/inspector.yaml": {
+                    "contents": "inspector:\n    ingestion_key: '%env(INSPECTOR_INGESTION_KEY)%'\n    ignore_routes:\n        - '_wdt'\n        - '_profiler'\n        - '_profiler_home'\n        - '_profiler_search'\n        - '_profiler_search_bar'\n        - '_profiler_phpinfo'\n        - '_profiler_search_results'\n        - '_profiler_open_file'\n        - '_profiler_router'\n        - '_profiler_exception'\n        - '_profiler_exception_css'\n    ignore_commands:\n        - 'debug:autowiring'\n        - 'debug:config'\n        - 'debug:container'\n        - 'debug:event-dispatcher'\n        - 'debug:form'\n        - 'debug:router'\n        - 'debug:translation'\n        - 'debug:twig'\n        - 'debug:validator'\n        - 'make:auth'\n        - 'make:command'\n        - 'make:controller'\n        - 'make:crud'\n        - 'make:docker:database'\n        - 'make:entity'\n        - 'make:fixtures'\n        - 'make:form'\n        - 'make:functional-test'\n        - 'make:message'\n        - 'make:messenger-middleware'\n        - 'make:migration'\n        - 'make:registration-form'\n        - 'make:reset-password'\n        - 'make:serializer:encoder'\n        - 'make:serializer:normalizer'\n        - 'make:subscriber'\n        - 'make:test'\n        - 'make:twig-extension'\n        - 'make:unit-test'\n        - 'make:user'\n        - 'make:validator'\n        - 'make:voter'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "inspector-apm/inspector-symfony:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

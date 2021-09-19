@@ -1,0 +1,42 @@
+{
+    "locks": {
+        "zendesk/zendesk_api_client_php": {
+            "version": "2.2",
+            "recipe": {
+                "repo": "2.2",
+                "branch": "master",
+                "version": "2.2",
+                "ref": "2aeb1762b9485109074b2ac1e759d37fed5439c5"
+            }
+        }
+    },
+    "manifests": {
+        "zendesk/zendesk_api_client_php": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "zendesk/zendesk_api_client_php",
+            "version": "2.2",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#0": "To retrieve an API token for your Zendesk server, you can read this doc:",
+                    "#1": "https://support.zendesk.com/hc/en-us/articles/226022787-Generating-a-new-API-token-",
+                    "ZENDESK_API_SUBDOMAIN": "",
+                    "ZENDESK_API_USERNAME": "",
+                    "ZENDESK_API_TOKEN": ""
+                }
+            },
+            "files": {
+                "config/packages/zendesk_api_client.yaml": {
+                    "contents": "services:\n    Zendesk\\API\\HttpClient:\n        arguments:\n            - '%env(ZENDESK_API_SUBDOMAIN)%'\n        calls:\n            - ['setAuth', ['basic', { username: '%env(ZENDESK_API_USERNAME)%', token: '%env(ZENDESK_API_TOKEN)%' }]]\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "zendesk/zendesk_api_client_php:2.2@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

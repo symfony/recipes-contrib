@@ -1,0 +1,54 @@
+{
+    "locks": {
+        "gheb/docusign-bundle": {
+            "version": "5.0",
+            "recipe": {
+                "repo": "5.0",
+                "branch": "master",
+                "version": "5.0",
+                "ref": "fccdc373869a6dc7dece05af789bef386e69c9f0"
+            }
+        }
+    },
+    "manifests": {
+        "gheb/docusign-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "gheb/docusign-bundle",
+            "version": "5.0",
+            "manifest": {
+                "bundles": {
+                    "\\DocusignBundle\\DocusignBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "DOCUSIGN_PRIVATE_KEY_PATH": "%kernel.project_dir%/%CONFIG_DIR%/jwt/docusign.pem",
+                    "DOCUSIGN_INTEGRATION_KEY": "UUID-DOCUSIGN-INTEGRATION-KEY",
+                    "DOCUSIGN_USER_GUID": "UUID-DOCUSIGN-USER-GUID",
+                    "DOCUSIGN_ACCOUNT_ID": "1234567"
+                },
+                "gitignore": [
+                    "/%CONFIG_DIR%/jwt/*.pem"
+                ]
+            },
+            "files": {
+                "config/routes/docusign.yaml": {
+                    "contents": "docusign:\n    resource: .\n    type: docusign\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/docusign.yaml": {
+                    "contents": "docusign:\n    demo: \"%kernel.debug%\"\n    mode: embedded # Mode used to sign (remote or embedded)\n\n    # Authentication credentials to log into docusign.\n    auth_jwt:\n        private_key: \"%env(resolve:DOCUSIGN_PRIVATE_KEY_PATH)%\"\n        integration_key: \"%env(DOCUSIGN_INTEGRATION_KEY)%\"\n        user_guid: \"%env(DOCUSIGN_USER_GUID)%\"\n\n    # Your DocuSign account id\n    account_id: \"%env(int:DOCUSIGN_ACCOUNT_ID)%\"\n\n    default_signer_name: \"Gr\u00e9goire H\u00e9bert\" # Name of the person that will be notified and will sign the document if none is sent to the url.\n    default_signer_email: \"gregoire@les-tilleuls.coop\" # Mail of the person that will be notified and will sign the document if none is sent to the url.\n\n    api_uri: \"https://www.docusign.net/restapi\" # DocuSign api uri. When demo is true, the bundle replace it by `https://demo.docusign.net/restapi`\n\n    callback: \"docusign_callback\" # Your route where to redirect the user after signature\n\n    # To sign you need to generate a route to call.\n    # The route name will be formated `docusign.sign.{signaturename}` for this one it will be `docusign.sign.my_embedded_signature` and will have `my_embedded_signature` as attribute type\n    # By defining this, you have a full control over the security applied to this route. see https://symfony.com/doc/current/security/access_control.html\n    sign_path: '/my/embedded/sign/path'\n\n    # Where to position the signature\n    signatures:\n        # this is an array of positions, you can have multiple signatures locations per pages\n        -\n            page: 1 # Default\n            x_position: 200 # Top left corner in pixels\n            y_position: 400 # Top left corner in pixels\n\n    # Defines where are stored the documents\n    storage:\n        adapter: 'local'\n        options:\n            directory: '%kernel.project_dir%/var/storage/default'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "gheb/docusign-bundle:5.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

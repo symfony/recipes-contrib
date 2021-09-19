@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "xiidea/easy-audit": {
+            "version": "2.0",
+            "recipe": {
+                "repo": "2.0",
+                "branch": "master",
+                "version": "2.0",
+                "ref": "bfbd9fd29e2ee1cb0e22b2626624dd919436235d"
+            }
+        }
+    },
+    "manifests": {
+        "xiidea/easy-audit": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "xiidea/easy-audit",
+            "version": "2.0",
+            "manifest": {
+                "bundles": {
+                    "Xiidea\\EasyAuditBundle\\XiideaEasyAuditBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/xiidea_easy_audit.yaml": {
+                    "contents": "# Read the documentation: http://xiidea.github.io/EasyAuditBundle/\nxiidea_easy_audit:\n    audit_log_class: Xiidea\\EasyAuditBundle\\Model\\BaseAuditLog\n    default_logger: false\n    user_property : null # or username\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "xiidea/easy-audit:2.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

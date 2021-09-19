@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "eko/feedbundle": {
+            "version": "1.2",
+            "recipe": {
+                "repo": "1.2",
+                "branch": "master",
+                "version": "1.2",
+                "ref": "18200f71f86a12023fcd952546dad61850806c22"
+            }
+        }
+    },
+    "manifests": {
+        "eko/feedbundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "eko/feedbundle",
+            "version": "1.2",
+            "manifest": {
+                "bundles": {
+                    "Eko\\FeedBundle\\EkoFeedBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/eko_feed.yaml": {
+                    "contents": "# Full configuration: https://github.com/eko/FeedBundle\neko_feed:\n    feeds:\n        article:\n            title:       'My articles/posts'\n            description: 'Latest articles'\n            link:        'http://vincent.composieux.fr'\n            encoding:    'utf-8'\n            author:      'Vincent Composieux' # Only required for Atom feeds\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "eko/feedbundle:1.2@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

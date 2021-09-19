@@ -1,0 +1,43 @@
+{
+    "locks": {
+        "tilleuls/migration-bundle": {
+            "version": "1.1",
+            "recipe": {
+                "repo": "1.1",
+                "branch": "master",
+                "version": "1.1",
+                "ref": "d35335e4d5504163249f546b3bff7cdc17cf666f"
+            }
+        }
+    },
+    "manifests": {
+        "tilleuls/migration-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "tilleuls/migration-bundle",
+            "version": "1.1",
+            "manifest": {
+                "bundles": {
+                    "CoopTilleuls\\MigrationBundle\\CoopTilleulsMigrationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "LEGACY_DATABASE_URL": "mysql://legacy_db_user:legacy_db_password@127.0.0.1:3306/legacy_db_name"
+                }
+            },
+            "files": {
+                "config/packages/coop_tilleuls_migration.yaml": {
+                    "contents": "# Read the documentation: https://github.com/coopTilleuls/CoopTilleulsMigrationBundle/blob/master/Resources/doc/getting_started.md\ncoop_tilleuls_migration:\n    legacy_connection_name: legacy\n\ndoctrine:\n    dbal:\n        connections:\n            legacy:\n                wrapper_class: 'CoopTilleuls\\MigrationBundle\\Doctrine\\DBAL\\DisabledConnection'\n                url: \"%env(LEGACY_DATABASE_URL)%\"\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "tilleuls/migration-bundle:1.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

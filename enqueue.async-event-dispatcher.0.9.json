@@ -1,0 +1,35 @@
+{
+    "locks": {
+        "enqueue/async-event-dispatcher": {
+            "version": "0.9",
+            "recipe": {
+                "repo": "0.9",
+                "branch": "master",
+                "version": "0.9",
+                "ref": "5a6f3bb8af169c434797b6ee623a5ea3dc64b86c"
+            }
+        }
+    },
+    "manifests": {
+        "enqueue/async-event-dispatcher": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "enqueue/async-event-dispatcher",
+            "version": "0.9",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/enqueue_async_event_dispatcher.yaml": {
+                    "contents": "enqueue:\n    default:\n        async_events: true\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "enqueue/async-event-dispatcher:0.9@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

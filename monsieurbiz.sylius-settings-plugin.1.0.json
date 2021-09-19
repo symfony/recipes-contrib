@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "monsieurbiz/sylius-settings-plugin": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "fafa903dedd49e881d21be1236c3d002e45278ed"
+            }
+        }
+    },
+    "manifests": {
+        "monsieurbiz/sylius-settings-plugin": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "monsieurbiz/sylius-settings-plugin",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "MonsieurBiz\\SyliusSettingsPlugin\\MonsieurBizSyliusSettingsPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/monsieurbiz_settings_plugin.yaml": {
+                    "contents": "monsieurbiz_sylius_settings_admin:\n    resource: \"@MonsieurBizSyliusSettingsPlugin/Resources/config/routes/admin.yaml\"\n    prefix: /%sylius_admin.path_name%\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/monsieurbiz_settings_plugin.yaml": {
+                    "contents": "imports:\n    - { resource: \"@MonsieurBizSyliusSettingsPlugin/Resources/config/config.yaml\" }\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "monsieurbiz/sylius-settings-plugin:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

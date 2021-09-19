@@ -1,0 +1,59 @@
+{
+    "locks": {
+        "nucleos/user-bundle": {
+            "version": "1.1",
+            "recipe": {
+                "repo": "1.1",
+                "branch": "master",
+                "version": "1.1",
+                "ref": "88cca294afe46854e805316dbcde52696c661ce6"
+            }
+        }
+    },
+    "manifests": {
+        "nucleos/user-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "nucleos/user-bundle",
+            "version": "1.1",
+            "manifest": {
+                "bundles": {
+                    "Nucleos\\UserBundle\\NucleosUserBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "env": {
+                    "MAIL_SENDER": "no-reply@localhost"
+                }
+            },
+            "files": {
+                "src/Entity/User/Group.php": {
+                    "contents": "<?php\n\ndeclare(strict_types=1);\n\nnamespace App\\Entity\\User;\n\nuse Nucleos\\UserBundle\\Model\\Group as BaseGroup;\n\nclass Group extends BaseGroup\n{\n    public function setId(string $id): void\n    {\n        $this->id = $id;\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "src/Entity/User/User.php": {
+                    "contents": "<?php\n\ndeclare(strict_types=1);\n\nnamespace App\\Entity\\User;\n\nuse Nucleos\\UserBundle\\Model\\User as BaseUser;\n\n/**\n * @phpstan-extends User<\\Nucleos\\UserBundle\\Model\\GroupInterface>\n */\nclass User extends BaseUser\n{\n    public function setId(string $id): void\n    {\n        $this->id = $id;\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/routes/nucleos_user.yaml": {
+                    "contents": "nucleos_user:\n    resource: \"@NucleosUserBundle/Resources/config/routing/all.xml\"\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/nucleos_user.yaml": {
+                    "contents": "nucleos_user:\n    firewall_name: main\n\n    from_email: '%env(MAIL_SENDER)%'\n\n    user_class: 'App\\Entity\\User\\User'\n\n    group:\n        group_class: 'App\\Entity\\User\\Group'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "nucleos/user-bundle:1.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "kunstmaan/form-bundle": {
+            "version": "5.2",
+            "recipe": {
+                "repo": "5.2",
+                "branch": "master",
+                "version": "5.2",
+                "ref": "83a7fdab06983ea08c4c9e69db2ae12f33000525"
+            }
+        }
+    },
+    "manifests": {
+        "kunstmaan/form-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "kunstmaan/form-bundle",
+            "version": "5.2",
+            "manifest": {
+                "bundles": {
+                    "Kunstmaan\\FormBundle\\KunstmaanFormBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/kunstmaan_form.yaml": {
+                    "contents": "KunstmaanFormBundle:\n    resource: \"@KunstmaanFormBundle/Resources/config/routing.yml\"\n    # If your site is not multi language, remove the \"{_locale}/\" part of the prefix and the requirements\n    prefix:   /{_locale}/\n    requirements:\n        _locale: \"%kunstmaan_admin.required_locales%\"\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "kunstmaan/form-bundle:5.2@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

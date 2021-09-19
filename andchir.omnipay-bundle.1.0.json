@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "andchir/omnipay-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "b70bdce6cb4c9a3933dcc082c270042e630b5507"
+            }
+        }
+    },
+    "manifests": {
+        "andchir/omnipay-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "andchir/omnipay-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Andchir\\OmnipayBundle\\OmnipayBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/omnipay.yaml": {
+                    "contents": "omnipay:\n    resource: \"@OmnipayBundle/Resources/config/routing.yml\"\n    prefix: /\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/omnipay.yaml": {
+                    "contents": "omnipay:\n    success_url: '/profile/history_orders'\n    fail_url: '/'\n    return_url: '/omnipay_return'\n    notify_url: '/omnipay_notify'\n    cancel_url: '/omnipay_cancel'\n    data_keys:\n        paymentId: ['orderNumber']\n        customerEmail: ['customerNumber']\n    gateways: null\n",
+                    "executable": true,
+                    "encoding": ""
+                }
+            },
+            "origin": "andchir/omnipay-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

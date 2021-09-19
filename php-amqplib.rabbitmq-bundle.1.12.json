@@ -1,0 +1,49 @@
+{
+    "locks": {
+        "php-amqplib/rabbitmq-bundle": {
+            "version": "1.12",
+            "recipe": {
+                "repo": "1.12",
+                "branch": "master",
+                "version": "1.12",
+                "ref": "ce3ca2e4577270c4f518539aa6b9e878998fcfef"
+            }
+        }
+    },
+    "manifests": {
+        "php-amqplib/rabbitmq-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "php-amqplib/rabbitmq-bundle",
+            "version": "1.12",
+            "manifest": {
+                "bundles": {
+                    "OldSound\\RabbitMqBundle\\OldSoundRabbitMqBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "env": {
+                    "RABBITMQ_URL": "amqp://guest:guest@localhost:5672"
+                }
+            },
+            "files": {
+                "src/Consumer/.gitignore": {
+                    "contents": "",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/old_sound_rabbit_mq.yaml": {
+                    "contents": "old_sound_rabbit_mq:\n    connections:\n        default:\n            url: '%env(RABBITMQ_URL)%'\n#    producers:\n#        # use 'old_sound_rabbit_mq.task_producer' service to send data.\n#        task:\n#            connection:       default\n#            exchange_options: { name: 'task', type: direct }\n#    consumers:\n#        task:\n#            connection:       default\n#            exchange_options: { name: 'task', type: direct }\n#            queue_options:    { name: 'task'}\n#            callback:         App\\Consumer\\TaskConsumer\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "php-amqplib/rabbitmq-bundle:1.12@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

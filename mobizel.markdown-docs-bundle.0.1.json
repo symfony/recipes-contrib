@@ -1,0 +1,51 @@
+{
+    "locks": {
+        "mobizel/markdown-docs-bundle": {
+            "version": "0.1",
+            "recipe": {
+                "repo": "0.1",
+                "branch": "master",
+                "version": "0.1",
+                "ref": "49f06a1b3ba3a8e6e2a34d75fbb2572048b5d73a"
+            }
+        }
+    },
+    "manifests": {
+        "mobizel/markdown-docs-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "mobizel/markdown-docs-bundle",
+            "version": "0.1",
+            "manifest": {
+                "bundles": {
+                    "Mobizel\\Bundle\\MarkdownDocsBundle\\MobizelMarkdownDocsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "docs/": "docs/"
+                }
+            },
+            "files": {
+                "docs/index.md": {
+                    "contents": "# Documentation\n\nYour documentation is now ready and you can start working on it.\n\n[Documentation of the bundle](https://github.com/mobizel/markdown-docs-bundle/blob/master/docs/index.md)\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/routes/mobizel_markdown_docs.yaml": {
+                    "contents": "_mobizel_markdowns:\n    resource: '@MobizelMarkdownDocsBundle/Resources/config/routes.xml'\n    prefix: docs\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/mobizel_markdown_docs.yaml": {
+                    "contents": "mobizel_markdown_docs:\n    docs_dir: '%kernel.project_dir%/docs'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "mobizel/markdown-docs-bundle:0.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

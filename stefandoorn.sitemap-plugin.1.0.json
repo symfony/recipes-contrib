@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "stefandoorn/sitemap-plugin": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "1793537db1cc9b0618d53f60bb3962930cdc3bed"
+            }
+        }
+    },
+    "manifests": {
+        "stefandoorn/sitemap-plugin": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "stefandoorn/sitemap-plugin",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "SitemapPlugin\\SitemapPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/sitemap_plugin.yaml": {
+                    "contents": "sylius_sitemap:\n    resource: \"@SitemapPlugin/Resources/config/routing.yml\"\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/sitemap_plugin.yaml": {
+                    "contents": "imports:\n    - { resource: \"@SitemapPlugin/Resources/config/config.yml\" }\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "stefandoorn/sitemap-plugin:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

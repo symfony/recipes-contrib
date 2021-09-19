@@ -1,0 +1,54 @@
+{
+    "locks": {
+        "commercetools/symfony-bundle": {
+            "version": "0.4",
+            "recipe": {
+                "repo": "0.4",
+                "branch": "master",
+                "version": "0.4",
+                "ref": "6bc24cf7e057c8ff6b1631eae1404ba928b893c3"
+            }
+        }
+    },
+    "manifests": {
+        "commercetools/symfony-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "commercetools/symfony-bundle",
+            "version": "0.4",
+            "manifest": {
+                "bundles": {
+                    "Commercetools\\Symfony\\CtpBundle\\CtpBundle": [
+                        "all"
+                    ],
+                    "Commercetools\\Symfony\\SetupBundle\\SetupBundle": [
+                        "dev"
+                    ],
+                    "Commercetools\\Symfony\\StateBundle\\StateBundle": [
+                        "dev"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "CTP_CLIENT_ID": "<your-client-id>",
+                    "CTP_CLIENT_SECRET": "<your-client-secret>",
+                    "CTP_PROJECT_KEY": "<your-project-id>",
+                    "CTP_AUTH_URL": "https://auth.commercetools.com",
+                    "CTP_API_URL": "https://api.commercetools.com",
+                    "CTP_SCOPES": "<your-desired-scopes>"
+                }
+            },
+            "files": {
+                "config/packages/commercetools.yaml": {
+                    "contents": "commercetools:\n    api:\n        default_client: 'default'\n        clients:\n            default:\n                client_id: '%env(CTP_CLIENT_ID)%'\n                client_secret: '%env(CTP_CLIENT_SECRET)%'\n                project: '%env(CTP_PROJECT_KEY)%'\n                scope: '%env(CTP_SCOPES)%'\n                oauth_url: '%env(CTP_AUTH_URL)%'\n                api_url: '%env(CTP_API_URL)%'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "commercetools/symfony-bundle:0.4@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

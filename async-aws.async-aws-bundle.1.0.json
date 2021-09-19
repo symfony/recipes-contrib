@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "async-aws/async-aws-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "36bc5854429183d4ba6980c916f9e9284deb3a16"
+            }
+        }
+    },
+    "manifests": {
+        "async-aws/async-aws-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "async-aws/async-aws-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "AsyncAws\\Symfony\\Bundle\\AsyncAwsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/async_aws.yaml": {
+                    "contents": "# Read documentation at https://async-aws.com/integration/symfony-bundle.html\nasync_aws:\n    config:\n\n    # All installed clients are automatically autowired. Use this section to customize clients\n    clients:\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "async-aws/async-aws-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

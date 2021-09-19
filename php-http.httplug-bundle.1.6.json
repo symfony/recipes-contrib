@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "php-http/httplug-bundle": {
+            "version": "1.6",
+            "recipe": {
+                "repo": "1.6",
+                "branch": "master",
+                "version": "1.6",
+                "ref": "87b3d491d593d2c6e3b90bf0689ac69a188bfa5f"
+            }
+        }
+    },
+    "manifests": {
+        "php-http/httplug-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "php-http/httplug-bundle",
+            "version": "1.6",
+            "manifest": {
+                "bundles": {
+                    "Http\\HttplugBundle\\HttplugBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/httplug.yaml": {
+                    "contents": "httplug:\n    plugins:\n        retry:\n            retry: 1\n\n    discovery:\n        client: 'auto'\n\n    clients:\n        app:\n            http_methods_client: true\n            plugins:\n                - 'httplug.plugin.content_length'\n                - 'httplug.plugin.redirect'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "php-http/httplug-bundle:1.6@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

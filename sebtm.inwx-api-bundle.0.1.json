@@ -1,0 +1,38 @@
+{
+    "locks": {
+        "sebtm/inwx-api-bundle": {
+            "version": "0.1",
+            "recipe": {
+                "repo": "0.1",
+                "branch": "master",
+                "version": "0.1",
+                "ref": "ffa1cf83f2f9dfff9c771da235f9aadf0c5dcdf6"
+            }
+        }
+    },
+    "manifests": {
+        "sebtm/inwx-api-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "sebtm/inwx-api-bundle",
+            "version": "0.1",
+            "manifest": {
+                "bundles": {
+                    "SebTM\\INWX\\InwxApiBundle": [
+                        "all"
+                    ]
+                },
+                "env": {
+                    "INWX_API_ENVIRONMENT": "test",
+                    "INWX_API_USERNAME": "dummy",
+                    "INWX_API_PASSWORD": "dummy",
+                    "INWX_API_LANGUAGE": "en",
+                    "INWX_API_DEBUG": "false"
+                }
+            },
+            "files": [],
+            "origin": "sebtm/inwx-api-bundle:0.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

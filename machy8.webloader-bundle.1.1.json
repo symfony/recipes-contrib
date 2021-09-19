@@ -1,0 +1,51 @@
+{
+    "locks": {
+        "machy8/webloader-bundle": {
+            "version": "1.1",
+            "recipe": {
+                "repo": "1.1",
+                "branch": "master",
+                "version": "1.1",
+                "ref": "b112347eb64f7c47ec375c42dfe32489d2687b95"
+            }
+        }
+    },
+    "manifests": {
+        "machy8/webloader-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "machy8/webloader-bundle",
+            "version": "1.1",
+            "manifest": {
+                "bundles": {
+                    "WebLoader\\WebLoaderBundle\\WebLoaderBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "public/": "%PUBLIC_DIR%/"
+                }
+            },
+            "files": {
+                "public/webtemp/.gitignore": {
+                    "contents": "*\n!.gitignore\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/dev/web_loader.yaml": {
+                    "contents": "web_loader:\n    disableCache: true\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/web_loader.yaml": {
+                    "contents": "web_loader:\n    pathPlaceholders:\n    filesCollections:\n    filesCollectionsContainers:\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "machy8/webloader-bundle:1.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "locks": {
+        "sonata-project/admin-bundle": {
+            "version": "3.64",
+            "recipe": {
+                "repo": "3.64",
+                "branch": "master",
+                "version": "3.64",
+                "ref": "9909a0cc9b4683a1d98be519a890375d3342a480"
+            }
+        }
+    },
+    "manifests": {
+        "sonata-project/admin-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "sonata-project/admin-bundle",
+            "version": "3.64",
+            "manifest": {
+                "bundles": {
+                    "Sonata\\AdminBundle\\SonataAdminBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "src/Admin/.gitignore": {
+                    "contents": "",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/routes/sonata_admin.yaml": {
+                    "contents": "admin_area:\n    resource: \"@SonataAdminBundle/Resources/config/routing/sonata_admin.xml\"\n    prefix: /admin\n\n_sonata_admin:\n    resource: .\n    type: sonata_admin\n    prefix: /admin\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/sonata_admin.yaml": {
+                    "contents": "sonata_admin:\n    title: 'Sonata Admin'\n    dashboard:\n        blocks:\n            - { type: sonata.admin.block.admin_list, position: left }\n    options:\n        legacy_twig_text_extension: false\n\nsonata_block:\n    blocks:\n        sonata.admin.block.admin_list:\n            contexts: [admin]\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "sonata-project/admin-bundle:3.64@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

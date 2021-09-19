@@ -1,0 +1,37 @@
+{
+    "locks": {
+        "phpzlc/admin": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "71905c278a0bc9a183b72698fdba5a96cb794671"
+            }
+        }
+    },
+    "manifests": {
+        "phpzlc/admin": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "phpzlc/admin",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "PHPZlc\\Admin\\Bundle\\PHPZlcAdminBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-package": {
+                    "Bundle/phpzlc-admin.yaml": "config/packages/phpzlc-admin.yaml"
+                },
+                "env": {
+                    "ADMIN_ENV": "dev"
+                }
+            },
+            "files": [],
+            "origin": "phpzlc/admin:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

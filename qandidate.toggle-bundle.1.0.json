@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "qandidate/toggle-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "a16765c31d4d7efb88c96dda36fa2adedfb57fc9"
+            }
+        }
+    },
+    "manifests": {
+        "qandidate/toggle-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "qandidate/toggle-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Qandidate\\Bundle\\ToggleBundle\\QandidateToggleBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/qandidate_toggle.yaml": {
+                    "contents": "# see https://github.com/qandidate-labs/qandidate-toggle-bundle/blob/master/README.md#configuration\n\nqandidate_toggle:\n    persistence: config\n    toggles: null\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "qandidate/toggle-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

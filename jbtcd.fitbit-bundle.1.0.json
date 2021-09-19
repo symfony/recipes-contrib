@@ -1,0 +1,44 @@
+{
+    "locks": {
+        "jbtcd/fitbit-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "096a20f5f3114a3a90a61f2ca8755ceba162a27a"
+            }
+        }
+    },
+    "manifests": {
+        "jbtcd/fitbit-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "jbtcd/fitbit-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "FitbitBundle\\FitbitBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "FITBIT_CLIENT_ID": "not-a-real-id",
+                    "FITBIT_CLIENT_SECRET": "not-a-real-secret"
+                }
+            },
+            "files": {
+                "config/packages/fitbit.yaml": {
+                    "contents": "fitbit:\n    # Get client ID and Secret, register an app here: https://dev.fitbit.com/apps\n    clientId: '%env(FITBIT_CLIENT_ID)%'\n    clientSecret: '%env(FITBIT_CLIENT_SECRET)%'\n    # For available scopes, see here: https://dev.fitbit.com/build/reference/web-api/oauth2/#scope\n    scopes:\n        - activity\n        - heartrate\n        - location\n        - nutrition\n        - profile\n        - settings\n        - sleep\n        - social\n        - weight\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "jbtcd/fitbit-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "geosocio/http-serializer-bundle": {
+            "version": "2.0",
+            "recipe": {
+                "repo": "2.0",
+                "branch": "master",
+                "version": "2.0",
+                "ref": "05d9632be5489143e6f0d0ed07b91aae27b20445"
+            }
+        }
+    },
+    "manifests": {
+        "geosocio/http-serializer-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "geosocio/http-serializer-bundle",
+            "version": "2.0",
+            "manifest": {
+                "bundles": {
+                    "GeoSocio\\HttpSerializerBundle\\GeoSocioHttpSerializerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/geosocio_http_serializer.yaml": {
+                    "contents": "geosocio_http_serializer:\n    default_format: 'json'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "geosocio/http-serializer-bundle:2.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

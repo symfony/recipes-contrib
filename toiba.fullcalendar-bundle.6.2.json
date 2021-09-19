@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "toiba/fullcalendar-bundle": {
+            "version": "6.2",
+            "recipe": {
+                "repo": "6.2",
+                "branch": "master",
+                "version": "6.2",
+                "ref": "43c9033fa6f75f9325f9ac21787c8e8acb086934"
+            }
+        }
+    },
+    "manifests": {
+        "toiba/fullcalendar-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "toiba/fullcalendar-bundle",
+            "version": "6.2",
+            "manifest": {
+                "bundles": {
+                    "Toiba\\FullCalendarBundle\\FullCalendarBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/fullcalendar.yaml": {
+                    "contents": "toiba_fullcalendar:\n    resource: \"@FullCalendarBundle/Resources/config/routing.yaml\"\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "toiba/fullcalendar-bundle:6.2@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "locks": {
+        "elephantly/kahlan-bundle": {
+            "version": "0.9",
+            "recipe": {
+                "repo": "0.9",
+                "branch": "master",
+                "version": "0.9",
+                "ref": "5b76aed2fb42adad286af195b5b42768c6f3ff4c"
+            }
+        }
+    },
+    "manifests": {
+        "elephantly/kahlan-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "elephantly/kahlan-bundle",
+            "version": "0.9",
+            "manifest": {
+                "bundles": {
+                    "Elephantly\\KahlanBundle\\KahlanBundle": [
+                        "dev",
+                        "test"
+                    ]
+                }
+            },
+            "files": [],
+            "origin": "elephantly/kahlan-bundle:0.9@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

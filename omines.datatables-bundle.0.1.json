@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "omines/datatables-bundle": {
+            "version": "0.1",
+            "recipe": {
+                "repo": "0.1",
+                "branch": "master",
+                "version": "0.1",
+                "ref": "467488ddc00aa190c37a4357f226457d4dd6b339"
+            }
+        }
+    },
+    "manifests": {
+        "omines/datatables-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "omines/datatables-bundle",
+            "version": "0.1",
+            "manifest": {
+                "bundles": {
+                    "Omines\\DataTablesBundle\\DataTablesBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/datatables.yaml": {
+                    "contents": "# Latest documentation available at https://omines.github.io/datatables-bundle/#configuration\ndatatables:\n    # Set options, as documented at https://datatables.net/reference/option/\n    options:\n        lengthMenu : [10, 25, 50, 100, 250, 500, 1000, 2500]\n        pageLength: 50\n        dom: \"<'row' <'col-sm-12' tr>><'row' <'col-sm-6'l><'col-sm-6 text-right'pi>>\"\n\n    template_parameters:\n        # Example classes to integrate nicely with Bootstrap 3.x\n        className: 'table table-striped table-bordered table-hover data-table'\n\n    # You can for example override this to \"tables\" to keep the translation domains separated nicely\n    translation_domain: 'messages'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "omines/datatables-bundle:0.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

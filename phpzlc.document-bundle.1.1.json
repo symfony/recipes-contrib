@@ -1,0 +1,54 @@
+{
+    "locks": {
+        "phpzlc/document-bundle": {
+            "version": "1.1",
+            "recipe": {
+                "repo": "1.1",
+                "branch": "master",
+                "version": "1.1",
+                "ref": "669453aa86b676874f881655983abb8e1ac357a9"
+            }
+        }
+    },
+    "manifests": {
+        "phpzlc/document-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "phpzlc/document-bundle",
+            "version": "1.1",
+            "manifest": {
+                "bundles": {
+                    "PHPZlc\\Document\\DocumentBundle\\DocumentBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-package": {
+                    "src/DocumentBundle/phpzlc-document.yaml": "config/packages/phpzlc-document.yaml"
+                },
+                "copy-from-recipe": {
+                    "Document/": "src/Document/"
+                },
+                "env": {
+                    "DOC_HOST": "http://dome-api.com"
+                },
+                "gitignore": [
+                    "public/apidoc/"
+                ]
+            },
+            "files": {
+                "Document/DemoDocument.php": {
+                    "contents": "<?php\n\nnamespace App\\Document;\n\nuse PHPZlc\\Document\\Document;\n\nclass DemoDocument extends Document\n{\n    public function demoAction()\n    {\n        $this->add()\n            ->setTitle('\u6f14\u793a\u63a5\u53e3')\n            ->setUrl('/demo')\n            ->setReturnType('html')\n            ->setReturn('\u6f14\u793a\u63a5\u53e3')\n            ->generate();\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "Document/Config.php": {
+                    "contents": "<?php\n\nnamespace App\\Document;\n\nclass Config\n{\n    /**\n     * \u6807\u9898\n     *\n     * @return string\n     */\n    public static function getTitle()\n    {\n        return '\u6f14\u793a';\n    }\n\n    /**\n     * \u51fa\u7248\u5546\n     *\n     * @return string\n     */\n    public static function getPublishing()\n    {\n        return '';\n    }\n\n    /**\n     * \u8bf4\u660e\n     *\n     * @return string\n     */\n    public static function getExplain()\n    {\n        return '';\n    }\n\n    /**\n     * \u6ce8\u610f\n     *\n     * @return string\n     */\n    public static function getNote()\n    {\n        return '';\n    }\n\n    /**\n     * \u9644\u5f55\n     *\n     * @return string\n     */\n    public static function getAppendix()\n    {\n        return '';\n    }\n\n    /**\n     * \u4e3b\u673a\n     *\n     * @return mixed\n     */\n    public static function getHost()\n    {\n        return $_ENV['DOC_HOST'];\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "phpzlc/document-bundle:1.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

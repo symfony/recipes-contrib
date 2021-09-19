@@ -1,0 +1,48 @@
+{
+    "locks": {
+        "monsieurbiz/sylius-coliship-plugin": {
+            "version": "0.1",
+            "recipe": {
+                "repo": "0.1",
+                "branch": "master",
+                "version": "0.1",
+                "ref": "3f5b6fcae7dcf41b7d6409e74cd89a6fba326c06"
+            }
+        }
+    },
+    "manifests": {
+        "monsieurbiz/sylius-coliship-plugin": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "monsieurbiz/sylius-coliship-plugin",
+            "version": "0.1",
+            "manifest": {
+                "bundles": {
+                    "MonsieurBiz\\SyliusColishipPlugin\\MonsieurBizSyliusColishipPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "copy-from-package": {
+                    "src/Resources/templates/": "templates/"
+                }
+            },
+            "files": {
+                "config/routes/monsieurbiz_coliship_plugin.yaml": {
+                    "contents": "monsieurbiz_coliship_admin:\n    resource: \"@MonsieurBizSyliusColishipPlugin/Resources/config/routes/admin.yaml\"\n    prefix: /%sylius_admin.path_name%\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/monsieurbiz_coliship_plugin.yaml": {
+                    "contents": "imports:\n    - { resource: \"@MonsieurBizSyliusColishipPlugin/Resources/config/monsieurbiz/settings.yaml\" }\n    - { resource: \"@MonsieurBizSyliusColishipPlugin/Resources/config/sylius/grid.yaml\" }\n    - { resource: \"@MonsieurBizSyliusColishipPlugin/Resources/config/sylius/ui.yaml\" }\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "monsieurbiz/sylius-coliship-plugin:0.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

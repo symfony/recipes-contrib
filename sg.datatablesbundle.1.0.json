@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "sg/datatablesbundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "a8e5ae79a1eceec929a7393143c85ddf0ae0b4ff"
+            }
+        }
+    },
+    "manifests": {
+        "sg/datatablesbundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "sg/datatablesbundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Sg\\DatatablesBundle\\SgDatatablesBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/sg_datatables_bundle.yaml": {
+                    "contents": "sg_datatables_bundle:\n    resource: \"@SgDatatablesBundle/Controller/\"\n    type:     annotation\n    prefix:   /sg\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "sg/datatablesbundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

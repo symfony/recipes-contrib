@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "m-adamski/symfony-schedule-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "0215dfa83bf43437aab95d419d1043016a4a537a"
+            }
+        }
+    },
+    "manifests": {
+        "m-adamski/symfony-schedule-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "m-adamski/symfony-schedule-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Adamski\\Symfony\\ScheduleBundle\\ScheduleBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/schedule.yaml": {
+                    "contents": "schedule:\n    manager: Adamski\\Symfony\\ScheduleBundle\\Model\\ScheduleManager\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "m-adamski/symfony-schedule-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

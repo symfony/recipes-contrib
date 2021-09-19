@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "kevinpapst/adminlte-bundle": {
+            "version": "0.9",
+            "recipe": {
+                "repo": "0.9",
+                "branch": "master",
+                "version": "0.9",
+                "ref": "36a77f782cd6f7cd761384c6a301fedf018e37e5"
+            }
+        }
+    },
+    "manifests": {
+        "kevinpapst/adminlte-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "kevinpapst/adminlte-bundle",
+            "version": "0.9",
+            "manifest": {
+                "bundles": {
+                    "KevinPapst\\AdminLTEBundle\\AdminLTEBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/admin_lte.yaml": {
+                    "contents": "# Configuration file for the AdminLTE bundle\n#\n# For more information about the bundle settings visit:\n# https://github.com/kevinpapst/AdminLTEBundle/blob/master/Resources/docs/configurations.md\n#\n# For tabs in the control_sidebar (right screen) add the 'control_sidebar' config key:\n# https://github.com/kevinpapst/AdminLTEBundle/blob/master/Resources/docs/control_sidebar.md\n\nadmin_lte:\n    options:\n        skin: skin-blue\n        fixed_layout: false\n        boxed_layout: false\n        collapsed_sidebar: false\n        mini_sidebar: false\n\n    knp_menu:\n        enable: false\n\n    routes:\n        adminlte_welcome: home\n        adminlte_login: login\n        adminlte_profile: profile\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "kevinpapst/adminlte-bundle:0.9@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

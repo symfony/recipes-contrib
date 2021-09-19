@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "goksagun/scheduler-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "fb5eac97efd4457ac72a9fb4664d740b4e68164a"
+            }
+        }
+    },
+    "manifests": {
+        "goksagun/scheduler-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "goksagun/scheduler-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Goksagun\\SchedulerBundle\\SchedulerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/scheduler.yaml": {
+                    "contents": "# A CRON expression is a string representing the schedule for a particular command to execute.\n# The parts of a CRON schedule are as follows:\n#\n#   *    *    *    *    *\n#   -    -    -    -    -\n#   |    |    |    |    |\n#   |    |    |    |    |\n#   |    |    |    |    +----- day of week (0 - 7) (Sunday=0 or 7)\n#   |    |    |    +---------- month (1 - 12)\n#   |    |    +--------------- day of month (1 - 31)\n#   |    +-------------------- hour (0 - 23)\n#   +------------------------- min (0 - 59)\nscheduler:\n    tasks:\n        # You may define all of your scheduled tasks here.\n        # To get started, let's look at an example of scheduling a task (command).\n        #- { name: example:command arg --option, expression: \"* * * * *\" }\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "goksagun/scheduler-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

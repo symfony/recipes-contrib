@@ -1,0 +1,29 @@
+{
+    "locks": {
+        "enqueue/gps": {
+            "version": "0.7",
+            "recipe": {
+                "repo": "0.7",
+                "branch": "master",
+                "version": "0.7",
+                "ref": "aa20ad2e0e5b30d833b9723d0aee8635816ea206"
+            }
+        }
+    },
+    "manifests": {
+        "enqueue/gps": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "enqueue/gps",
+            "version": "0.7",
+            "manifest": {
+                "env": {
+                    "PUBSUB_EMULATOR_HOST": "http://localhost:8900"
+                }
+            },
+            "files": [],
+            "origin": "enqueue/gps:0.7@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

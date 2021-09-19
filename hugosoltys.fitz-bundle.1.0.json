@@ -1,0 +1,56 @@
+{
+    "locks": {
+        "hugosoltys/fitz-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "60274445d53fa5ef8e371122e4996bf61f4fc2b2"
+            }
+        }
+    },
+    "manifests": {
+        "hugosoltys/fitz-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "hugosoltys/fitz-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "HugoSoltys\\FitzBundle\\FitzBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/dev/hugosoltys_fitz.yaml": {
+                    "contents": "fitz:\n    resource: \"@FitzBundle/Resources/config/routing.xml\"\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/routes/test/hugosoltys_fitz.yaml": {
+                    "contents": "fitz:\n    resource: \"@FitzBundle/Resources/config/routing.xml\"\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/dev/hugosoltys_fitz.yaml": {
+                    "contents": "fitz:\n    composer_path: '/usr/local/bin/composer'\n    queue_file_path: '%kernel.project_dir%/vendor/hugosoltys/fitz-bundle'\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/test/hugosoltys_fitz.yaml": {
+                    "contents": "fitz:\n    composer_path: '/usr/local/bin/composer'\n    queue_file_path: '%kernel.project_dir%/vendor/hugosoltys/fitz-bundle'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "hugosoltys/fitz-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

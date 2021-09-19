@@ -1,0 +1,43 @@
+{
+    "locks": {
+        "sulu/sylius-producer-plugin": {
+            "version": "0.2",
+            "recipe": {
+                "repo": "0.2",
+                "branch": "master",
+                "version": "0.2",
+                "ref": "6baaf160837f34414c40a82d1428df84233a90e0"
+            }
+        }
+    },
+    "manifests": {
+        "sulu/sylius-producer-plugin": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "sulu/sylius-producer-plugin",
+            "version": "0.2",
+            "manifest": {
+                "bundles": {
+                    "Sulu\\Bundle\\SyliusProducerPlugin\\SuluSyliusProducerPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SULU_SYLIUS_MESSENGER_TRANSPORT_DSN": ""
+                }
+            },
+            "files": {
+                "config/packages/sulu_sylius_producer.yaml": {
+                    "contents": "imports:\n    - { resource: \"@SuluSyliusProducerPlugin/Resources/config/app/config.yaml\" }\n\nframework:\n    messenger:\n        transports:\n            sulu_sylius_transport: '%env(SULU_SYLIUS_MESSENGER_TRANSPORT_DSN)%'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "sulu/sylius-producer-plugin:0.2@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

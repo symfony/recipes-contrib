@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "tattali/calendar-bundle": {
+            "version": "1.1",
+            "recipe": {
+                "repo": "1.1",
+                "branch": "master",
+                "version": "1.1",
+                "ref": "0c643e17b5340747b35c2c75e11727fa31bfa9bb"
+            }
+        }
+    },
+    "manifests": {
+        "tattali/calendar-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "tattali/calendar-bundle",
+            "version": "1.1",
+            "manifest": {
+                "bundles": {
+                    "CalendarBundle\\CalendarBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/calendar.yaml": {
+                    "contents": "calendar:\n    resource: \"@CalendarBundle/Resources/config/routing.yaml\"\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "tattali/calendar-bundle:1.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

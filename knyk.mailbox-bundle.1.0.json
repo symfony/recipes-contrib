@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "knyk/mailbox-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "6357f5b57185fb0593792ae7f93c06ccc28265bb"
+            }
+        }
+    },
+    "manifests": {
+        "knyk/mailbox-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "knyk/mailbox-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Knyk\\MailboxBundle\\MailboxBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/knyk_mailbox.yaml": {
+                    "contents": "mailbox:\n    connections: []\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "knyk/mailbox-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

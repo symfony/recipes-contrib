@@ -1,0 +1,43 @@
+{
+    "locks": {
+        "silasjoisten/sonata-multiupload-bundle": {
+            "version": "2.1",
+            "recipe": {
+                "repo": "2.1",
+                "branch": "master",
+                "version": "2.1",
+                "ref": "4e624e746b1d630cfa6e39b64fccc5c46fc5acda"
+            }
+        }
+    },
+    "manifests": {
+        "silasjoisten/sonata-multiupload-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "silasjoisten/sonata-multiupload-bundle",
+            "version": "2.1",
+            "manifest": {
+                "container": {
+                    "sonata.media.admin.media.controller": "SilasJoisten\\Sonata\\MultiUploadBundle\\Controller\\MultiUploadController"
+                },
+                "bundles": {
+                    "SilasJoisten\\Sonata\\MultiUploadBundle\\SonataMultiUploadBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sonata_multi_upload.yaml": {
+                    "contents": "sonata_admin:\n    assets:\n        extra_stylesheets:\n            - bundles/sonatamultiupload/dist/sonata-multiupload.css\n\n        extra_javascripts:\n            - bundles/sonatamultiupload/dist/sonata-multiupload.js\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "silasjoisten/sonata-multiupload-bundle:2.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

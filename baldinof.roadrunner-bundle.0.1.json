@@ -1,0 +1,46 @@
+{
+    "locks": {
+        "baldinof/roadrunner-bundle": {
+            "version": "0.1",
+            "recipe": {
+                "repo": "0.1",
+                "branch": "master",
+                "version": "0.1",
+                "ref": "64dda95346658b92b164d8e4408e6d4d9ef293a2"
+            }
+        }
+    },
+    "manifests": {
+        "baldinof/roadrunner-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "baldinof/roadrunner-bundle",
+            "version": "0.1",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "copy-from-package": {
+                    ".rr.yaml": ".rr.yaml"
+                },
+                "bundles": {
+                    "Baldinof\\RoadRunnerBundle\\BaldinofRoadRunnerBundle": [
+                        "all"
+                    ]
+                },
+                "gitignore": [
+                    "/bin/rr"
+                ]
+            },
+            "files": {
+                "config/packages/baldinof_road_runner.yaml": {
+                    "contents": "baldinof_road_runner:\n    should_reboot_kernel: false\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "baldinof/roadrunner-bundle:0.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

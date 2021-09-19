@@ -1,0 +1,44 @@
+{
+    "locks": {
+        "coka/file-bundle": {
+            "version": "3.0",
+            "recipe": {
+                "repo": "3.0",
+                "branch": "master",
+                "version": "3.0",
+                "ref": "1059eecc938bf1db6630edc8b2355c64032f2153"
+            }
+        }
+    },
+    "manifests": {
+        "coka/file-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "coka/file-bundle",
+            "version": "3.0",
+            "manifest": {
+                "bundles": {
+                    "Oka\\FileBundle\\OkaFileBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "OKAFILE_STORAGE_ROOT_PATH": "%kernel.project_dir%/public",
+                    "OKAFILE_STORAGE_WEB_SERVER_HOST": "localhost"
+                }
+            },
+            "files": {
+                "config/packages/oka_file.yaml": {
+                    "contents": "oka_file:\n    db_driver: orm\n    storage:\n        root_path: '%env(resolve:OKAFILE_STORAGE_ROOT_PATH)%'\n        webserver:\n            host: '%env(resolve:OKAFILE_STORAGE_WEB_SERVER_HOST)%'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "coka/file-bundle:3.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

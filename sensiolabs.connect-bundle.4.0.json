@@ -1,0 +1,49 @@
+{
+    "locks": {
+        "sensiolabs/connect-bundle": {
+            "version": "4.0",
+            "recipe": {
+                "repo": "4.0",
+                "branch": "master",
+                "version": "4.0",
+                "ref": "e072eff5420ffac8713716b4580b44cc5c81feec"
+            }
+        }
+    },
+    "manifests": {
+        "sensiolabs/connect-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "sensiolabs/connect-bundle",
+            "version": "4.0",
+            "manifest": {
+                "bundles": {
+                    "SensioLabs\\Bundle\\ConnectBundle\\SensioLabsConnectBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SENSIOLABS_CONNECT_APP_ID": "",
+                    "SENSIOLABS_CONNECT_APP_SECRET": ""
+                }
+            },
+            "files": {
+                "config/routes/sensio_labs_connect.yaml": {
+                    "contents": "_sensiolabs_connect:\n    resource: \"@SensioLabsConnectBundle/Resources/config/routing.xml\"\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/sensio_labs_connect.yaml": {
+                    "contents": "sensio_labs_connect:\n    app_id:     '%env(SENSIOLABS_CONNECT_APP_ID)%'\n    app_secret: '%env(SENSIOLABS_CONNECT_APP_SECRET)%'\n    scope:      'SCOPE_PUBLIC'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "sensiolabs/connect-bundle:4.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

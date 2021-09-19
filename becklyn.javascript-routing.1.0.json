@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "becklyn/javascript-routing": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "ecb8bf9401b0b107af74b50ad521d9ea982edf96"
+            }
+        }
+    },
+    "manifests": {
+        "becklyn/javascript-routing": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "becklyn/javascript-routing",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Becklyn\\JavaScriptRouting\\BecklynJavaScriptRoutingBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/becklyn_javascript_routing.yaml": {
+                    "contents": "_import.becklyn_javascript_routing:\n    resource: '@BecklynJavaScriptRoutingBundle/Resources/config/routes.yaml'\n    prefix: /_v/routing\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "becklyn/javascript-routing:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

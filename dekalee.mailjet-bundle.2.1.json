@@ -1,0 +1,46 @@
+{
+    "locks": {
+        "dekalee/mailjet-bundle": {
+            "version": "2.1",
+            "recipe": {
+                "repo": "2.1",
+                "branch": "master",
+                "version": "2.1",
+                "ref": "e592d510ab248ebb3be32b5df1056bba5b594709"
+            }
+        }
+    },
+    "manifests": {
+        "dekalee/mailjet-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "dekalee/mailjet-bundle",
+            "version": "2.1",
+            "manifest": {
+                "bundles": {
+                    "Dekalee\\MailjetBundle\\DekaleeMailjetBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "DEKALEE_MAILJET_API_KEY": "your-api_key",
+                    "DEKALEE_MAILJET_SECRET_KEY": "@@your-secret_key",
+                    "DEKALEE_MAILJET_BASE_TEMPLATE_ID": "your_base_template_id",
+                    "DEKALEE_MAILJET_EMAIL_REPORTING": "your_reporting_email"
+                }
+            },
+            "files": {
+                "config/packages/dekalee_mailjet.yaml": {
+                    "contents": "dekalee_mailjet:\n    api_key: '%env(DEKALEE_MAILJET_API_KEY)%'\n    secret_key: '%env(DEKALEE_MAILJET_SECRET_KEY)%'\n    base_template_id: '%env(DEKALEE_MAILJET_BASE_TEMPLATE_ID)%'\n    reporting_email: '%env(DEKALEE_MAILJET_EMAIL_REPORTING)%'\n    force_deliver: false\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "dekalee/mailjet-bundle:2.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

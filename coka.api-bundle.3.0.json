@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "coka/api-bundle": {
+            "version": "3.0",
+            "recipe": {
+                "repo": "3.0",
+                "branch": "master",
+                "version": "3.0",
+                "ref": "90f3023c0dd1b2c21d537a4ab4b1384431671cfa"
+            }
+        }
+    },
+    "manifests": {
+        "coka/api-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "coka/api-bundle",
+            "version": "3.0",
+            "manifest": {
+                "bundles": {
+                    "Oka\\ApiBundle\\OkaApiBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/oka_api.yaml": {
+                    "contents": "oka_api:\n    cors:\n        default:\n            allow_credentials: true\n            expose_headers: ['Accept-Encoding']\n            max_age: 3600\n    firewalls:\n        wsse:\n            enabled: false\n    security_behaviors:\n        password_updater: false\n    response:\n        compression:\n            enabled: false\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "coka/api-bundle:3.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

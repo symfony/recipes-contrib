@@ -1,0 +1,49 @@
+{
+    "locks": {
+        "imper86/allegro-api-bundle": {
+            "version": "3.0",
+            "recipe": {
+                "repo": "3.0",
+                "branch": "master",
+                "version": "3.0",
+                "ref": "1cdfc3f653eac69a087b2888f16c3cf173967105"
+            }
+        }
+    },
+    "manifests": {
+        "imper86/allegro-api-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "imper86/allegro-api-bundle",
+            "version": "3.0",
+            "manifest": {
+                "bundles": {
+                    "Imper86\\AllegroApiBundle\\Imper86AllegroApiBundle": [
+                        "all"
+                    ]
+                },
+                "env": {
+                    "ALLEGRO_CLIENT_ID": "your_client_id",
+                    "ALLEGRO_CLIENT_SECRET": "your_client_secret"
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/imper86_allegro_api.yaml": {
+                    "contents": "imper86_allegro_api:\n    resource: '@Imper86AllegroApiBundle/Resources/config/routes.xml'\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/imper86_allegro_api.yaml": {
+                    "contents": "imper86_allegro_api:\n    sandbox: true\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "imper86/allegro-api-bundle:3.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

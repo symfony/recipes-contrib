@@ -1,0 +1,47 @@
+{
+    "locks": {
+        "baldinof/roadrunner-bundle": {
+            "version": "2.0",
+            "recipe": {
+                "repo": "2.0",
+                "branch": "master",
+                "version": "2.0",
+                "ref": "cdd398712fbc03897c0550c856df05fb9ab2b36b"
+            }
+        }
+    },
+    "manifests": {
+        "baldinof/roadrunner-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "baldinof/roadrunner-bundle",
+            "version": "2.0",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "copy-from-package": {
+                    ".rr.yaml": ".rr.yaml",
+                    ".rr.dev.yaml": ".rr.dev.yaml"
+                },
+                "bundles": {
+                    "Baldinof\\RoadRunnerBundle\\BaldinofRoadRunnerBundle": [
+                        "all"
+                    ]
+                },
+                "gitignore": [
+                    "/bin/rr"
+                ]
+            },
+            "files": {
+                "config/packages/baldinof_road_runner.yaml": {
+                    "contents": "baldinof_road_runner:\n    # When the kernel should be rebooted.\n    # See https://github.com/baldinof/roadrunner-bundle#kernel-reboots\n    kernel_reboot:\n        # if you want to use a fresh container on each request, use the `always` strategy\n        strategy: on_exception\n        # Exceptions you KNOW that do not put your app in an errored state\n        allowed_exceptions:\n            - Symfony\\Component\\HttpKernel\\Exception\\HttpExceptionInterface\n            - Symfony\\Component\\Serializer\\Exception\\ExceptionInterface\n            - Symfony\\Contracts\\HttpClient\\Exception\\ExceptionInterface\n\n    # Allow to send prometheus metrics to the main RoadRunner process,\n    # via a `Spiral\\RoadRunner\\MetricsInterface` service.\n    # See https://github.com/baldinof/roadrunner-bundle#metrics\n    metrics:\n        enabled: false\n        # collect:\n        #     my_counter:\n        #         type: counter\n        #         help: Some help\n\n\n    # You can use middlewares to manipulate Symfony requests & responses.\n    # See https://github.com/baldinof/roadrunner-bundle#middlewares\n    # middlewares:\n    #     - App\\Middleware\\YourMiddleware\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "baldinof/roadrunner-bundle:2.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

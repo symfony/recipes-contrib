@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "yamilovs/sms-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "49a4a12e41c8bfd95cae0e179e639e58350322bf"
+            }
+        }
+    },
+    "manifests": {
+        "yamilovs/sms-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "yamilovs/sms-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Yamilovs\\Bundle\\SmsBundle\\SmsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/yamilovs_sms.yaml": {
+                    "contents": "yamilovs_sms:\n    providers:\n        # You must to define at least one provider configuration\n        # See more info at https://github.com/yamilovs/SmsBundle#configuration\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "yamilovs/sms-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

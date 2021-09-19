@@ -1,0 +1,43 @@
+{
+    "locks": {
+        "ruwler/ruwler-sdk-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "ed80f0c84fede7d173fecb464b1f1d57c7ed5029"
+            }
+        }
+    },
+    "manifests": {
+        "ruwler/ruwler-sdk-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "ruwler/ruwler-sdk-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Ruwler\\SdkBundle\\RuwlerSdkBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "RUWLER_SDK_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/ruwler_sdk.yaml": {
+                    "contents": "ruwler_sdk:\r\n    api_key: '%env(RUWLER_SDK_API_KEY)%'\r\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "ruwler/ruwler-sdk-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

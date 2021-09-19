@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "ecphp/api-gw-authentication-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "f8884c5ce14c40e72d6f05e97057f2bb9e18653e"
+            }
+        }
+    },
+    "manifests": {
+        "ecphp/api-gw-authentication-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "ecphp/api-gw-authentication-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "EcPhp\\ApiGwAuthenticationBundle\\ApiGwAuthenticationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/dev/api_gw_authentication.yaml": {
+                    "contents": "api_gw_authentication_bundle:\n    resource: '@ApiGwAuthenticationBundle/Resources/config/routes/routes.php'\n    prefix: /api\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/dev/api_gw_authentication.yaml": {
+                    "contents": "api_gw_authentication:\n    defaults:\n        env: acceptance # Available values are: acceptance, intra, production, user\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "ecphp/api-gw-authentication-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "connectholland/cookie-consent-bundle": {
+            "version": "0.4",
+            "recipe": {
+                "repo": "0.4",
+                "branch": "master",
+                "version": "0.4",
+                "ref": "9725d24dc996a1041f25b9e29fc1567a861f98e4"
+            }
+        }
+    },
+    "manifests": {
+        "connectholland/cookie-consent-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "connectholland/cookie-consent-bundle",
+            "version": "0.4",
+            "manifest": {
+                "bundles": {
+                    "ConnectHolland\\CookieConsentBundle\\CHCookieConsentBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/ch_cookie_consent.yaml": {
+                    "contents": "ch_cookie_consent:\n    resource: \"@CHCookieConsentBundle/Resources/config/routing.yaml\"\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/ch_cookie_consent.yaml": {
+                    "contents": "ch_cookie_consent: \n    categories: ['analytics', 'tracking', 'social_media', 'marketing']\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "connectholland/cookie-consent-bundle:0.4@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

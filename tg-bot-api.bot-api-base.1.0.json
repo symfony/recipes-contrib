@@ -1,0 +1,38 @@
+{
+    "locks": {
+        "tg-bot-api/bot-api-base": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "320d85cf0ca6c58d58c71db7487418b6b788567c"
+            }
+        }
+    },
+    "manifests": {
+        "tg-bot-api/bot-api-base": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "tg-bot-api/bot-api-base",
+            "version": "1.0",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "TG_BOT_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/tg_bot_api.yaml": {
+                    "contents": "services:\n\n    TgBotApi\\BotApiBase\\ApiClient:\n        arguments:\n            $requestFactory: '@Psr\\Http\\Message\\RequestFactoryInterface'\n            $streamFactory: '@Psr\\Http\\Message\\StreamFactoryInterface'\n            $client: '@Psr\\Http\\Client\\ClientInterface'\n\n    TgBotApi\\BotApiBase\\BotApiNormalizer: null\n\n    TgBotApi\\BotApiBase\\ApiClientInterface: '@TgBotApi\\BotApiBase\\ApiClient'\n    TgBotApi\\BotApiBase\\NormalizerInterface: '@TgBotApi\\BotApiBase\\BotApiNormalizer'\n\n    TgBotApi\\BotApiBase\\BotApi:\n        arguments:\n            $botKey: '%env(resolve:TG_BOT_API_KEY)%'\n            $apiClient: '@TgBotApi\\BotApiBase\\ApiClientInterface'\n            $normalizer:  '@TgBotApi\\BotApiBase\\NormalizerInterface'\n\n    TgBotApi\\BotApiBase\\BotApiComplete:\n        parent: TgBotApi\\BotApiBase\\BotApi\n\n    TgBotApi\\BotApiBase\\BotApiInterface: '@TgBotApi\\BotApiBase\\BotApi'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "tg-bot-api/bot-api-base:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

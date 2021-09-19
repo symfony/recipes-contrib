@@ -1,0 +1,50 @@
+{
+    "locks": {
+        "swarrot/swarrot-bundle": {
+            "version": "1.6",
+            "recipe": {
+                "repo": "1.6",
+                "branch": "master",
+                "version": "1.6",
+                "ref": "1c77a3e26d17c85c335d5c255d736da8848069fd"
+            }
+        }
+    },
+    "manifests": {
+        "swarrot/swarrot-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "swarrot/swarrot-bundle",
+            "version": "1.6",
+            "manifest": {
+                "bundles": {
+                    "Swarrot\\SwarrotBundle\\SwarrotBundle": [
+                        "all"
+                    ]
+                },
+                "container": {
+                    "my_consumer.processor.service": "App\\Consumer\\MyConsumer"
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "env": {
+                    "RABBITMQ_HOST": "127.0.0.1",
+                    "RABBITMQ_PORT": "5672",
+                    "RABBITMQ_LOGIN": "user",
+                    "RABBITMQ_PASSWORD": "password"
+                }
+            },
+            "files": {
+                "config/packages/swarrot.yaml": {
+                    "contents": "swarrot:\n#     provider: pecl # pecl or amqp_lib (require php-amqplib/php-amqplib)\n#     default_connection: rabbitmq\n#     default_command: swarrot.command.base # Swarrot\\SwarrotBundle\\Command\\SwarrotCommand\n#     logger: logger # logger or channel logger like monolog.logger.[my_channel]\n    connections:\n        rabbitmq:\n            host: \"%env(RABBITMQ_HOST)%\"\n            port: \"%env(int:RABBITMQ_PORT)%\"\n            login: \"%env(RABBITMQ_LOGIN)%\"\n            password: \"%env(RABBITMQ_PASSWORD)%\"\n            vhost: '/'\n#     consumers:\n#         my_consumer:\n#             processor: my_consumer.processor.service # Symfony service id implementing Swarrot\\Processor\\ProcessorInterface\n#             middleware_stack: # order matters\n#                  - configurator: swarrot.processor.signal_handler\n#                    extras:\n#                        signal_handler_signals:\n#                            - SIGTERM\n#                            - SIGINT\n#                            - SIGQUIT\n#                  - configurator: swarrot.processor.insomniac\n#                  - configurator: swarrot.processor.max_messages\n#                    extras:\n#                        max_messages: 100\n#                  - configurator: swarrot.processor.max_execution_time\n#                    extras:\n#                        max_execution_time: 300\n#                  - configurator: swarrot.processor.memory_limit\n#                    extras:\n#                        memory_limit: null\n#                  - configurator: swarrot.processor.doctrine_connection\n#                    extras:\n#                        doctrine_ping: true\n#                        doctrine_close_master: true\n#                  - configurator: swarrot.processor.doctrine_object_manager\n#                  - configurator: swarrot.processor.exception_catcher\n#                  - configurator: swarrot.processor.ack\n#                    extras:\n#                        requeue_on_error: false\n#                  - configurator: swarrot.processor.retry#\n#                    extras:\n#                        retry_exchange: retry\n#                        retry_attempts: 3\n#                        retry_routing_key_pattern: 'retry_%%attempt%%'\n#                  - configurator: swarrot.processor.new_relic\n#                    extras:\n#                        new_relic_app_name: null\n#                        new_relic_license: null\n#                        new_relic_transaction_name: null\n#                  - configurator: swarrot.processor.rpc_server\n#                    extras:\n#                        # Exchange on which rpc response will be published with `reply_to` as routing_key. \n#                        # If not configured will publish on default exchange where routing_key is used to define receiving queue.\n#                        rpc_exchange: null \n#                  - configurator: swarrot.processor.rpc_client\n#                    extras:\n#                        rpc_client_correlation_id: null\n#             extras:\n#                 poll_interval: 500000\n#     messages_types:\n#         my_publisher:\n#             connection: rabbitmq # use the default connection by default\n#             exchange: my_exchange\n#             routing_key: my_routing_key\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "swarrot/swarrot-bundle:1.6@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "locks": {
+        "ecphp/eu-login-api-authentication-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "d6077549d9942bd234616476ec8b8a99a51ec136"
+            }
+        }
+    },
+    "manifests": {
+        "ecphp/eu-login-api-authentication-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "ecphp/eu-login-api-authentication-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "EcPhp\\EuLoginApiAuthenticationBundle\\EuLoginApiAuthenticationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "EULOGIN_CLIENT_ID": "",
+                    "EULOGIN_CLIENT_SECRET": "",
+                    "EULOGIN_ENV": "acceptance"
+                }
+            },
+            "files": {
+                "config/routes/dev/eu_login_api_authentication.yaml": {
+                    "contents": "eu_login_api_authentication:\n    resource: '@EuLoginApiAuthenticationBundle/Resources/config/routes/routes.php'\n    prefix: /api\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/dev/eu_login_api_authentication.yaml": {
+                    "contents": "eu_login_api_authentication:\n    client_id: \"%env(EULOGIN_CLIENT_ID)%\"\n    client_secret: \"%env(EULOGIN_CLIENT_SECRET)%\"\n    environment: \"%env(EULOGIN_ENV)%\" # Available values are: acceptance, production\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "ecphp/eu-login-api-authentication-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "teebbstudios/tuieditor-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "5630a89280647f01ae78e4f37d8f932e0e7113c3"
+            }
+        }
+    },
+    "manifests": {
+        "teebbstudios/tuieditor-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "teebbstudios/tuieditor-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Teebb\\TuiEditorBundle\\TeebbTuiEditorBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/teebb_tuieditor.yaml": {
+                    "contents": "# Read the documentation: https://github.com/teebbstudios/TeebbTuiEditorBundle/blob/master/README.md\nteebb_tui_editor:\n    default_config: basic_config\n    configs:\n        basic_config:\n            to_html: false\n            exts:\n                - scrollSync\n                - colorSyntax\n                - uml\n                - chart\n                - mark\n                - table\n\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "teebbstudios/tuieditor-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

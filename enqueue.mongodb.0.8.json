@@ -1,0 +1,25 @@
+{
+    "locks": {
+        "enqueue/mongodb": {
+            "version": "0.8",
+            "recipe": {
+                "repo": "0.8",
+                "branch": "master",
+                "version": "0.8",
+                "ref": "a5c95dc09df230a7f877d0b15d7ea38aeb40d32d"
+            }
+        }
+    },
+    "manifests": {
+        "enqueue/mongodb": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "enqueue/mongodb",
+            "version": "0.8",
+            "manifest": [],
+            "files": [],
+            "origin": "enqueue/mongodb:0.8@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

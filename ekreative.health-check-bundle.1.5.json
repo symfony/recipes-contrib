@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "ekreative/health-check-bundle": {
+            "version": "1.5",
+            "recipe": {
+                "repo": "1.5",
+                "branch": "master",
+                "version": "1.5",
+                "ref": "7d7bdbc46583debf6ffb4ebed6f827fa5b37e442"
+            }
+        }
+    },
+    "manifests": {
+        "ekreative/health-check-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "ekreative/health-check-bundle",
+            "version": "1.5",
+            "manifest": {
+                "bundles": {
+                    "Ekreative\\HealthCheckBundle\\EkreativeHealthCheckBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/ekreative_health_check.yaml": {
+                    "contents": "ekreative_health_check:\n    resource: '@EkreativeHealthCheckBundle/Resources/config/routes.xml'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "ekreative/health-check-bundle:1.5@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

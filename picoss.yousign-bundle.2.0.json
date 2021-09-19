@@ -1,0 +1,48 @@
+{
+    "locks": {
+        "picoss/yousign-bundle": {
+            "version": "2.0",
+            "recipe": {
+                "repo": "2.0",
+                "branch": "master",
+                "version": "2.0",
+                "ref": "cbc2cb3cf6b1930ee99db14ecf6e58ca04ec4990"
+            }
+        }
+    },
+    "manifests": {
+        "picoss/yousign-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "picoss/yousign-bundle",
+            "version": "2.0",
+            "manifest": {
+                "bundles": {
+                    "Picoss\\YousignBundle\\PicossYousignBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "To create a demo account, visit https://demo.yousign.fr/fr/public/api/registration",
+                    "#2": "YOUSIGN_ENV should be 'demo' or 'prod'",
+                    "YOUSIGN_ENV": "demo",
+                    "YOUSIGN_API_KEY": "api_key",
+                    "YOUSIGN_USERNAME": "username",
+                    "YOUSIGN_PASSWORD": "password"
+                }
+            },
+            "files": {
+                "config/packages/picoss_yousign.yaml": {
+                    "contents": "picoss_yousign:\n    env: '%env(YOUSIGN_ENV)%'\n    api_key: '%env(YOUSIGN_API_KEY)%'\n    username: '%env(YOUSIGN_USERNAME)%'\n    password: '%env(YOUSIGN_PASSWORD)%'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "picoss/yousign-bundle:2.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

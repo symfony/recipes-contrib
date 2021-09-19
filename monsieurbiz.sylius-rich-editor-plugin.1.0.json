@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "monsieurbiz/sylius-rich-editor-plugin": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "6658acdeb3fabab4929d25cd7209444a36a5c912"
+            }
+        }
+    },
+    "manifests": {
+        "monsieurbiz/sylius-rich-editor-plugin": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "monsieurbiz/sylius-rich-editor-plugin",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "MonsieurBiz\\SyliusRichEditorPlugin\\MonsieurBizSyliusRichEditorPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/monsieurbiz_sylius_rich_editor_plugin.yaml": {
+                    "contents": "monsieur_biz_rich_editor_plugin:\n    resource: \"@MonsieurBizSyliusRichEditorPlugin/Resources/config/routing.yaml\"\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/monsieurbiz_sylius_rich_editor_plugin.yaml": {
+                    "contents": "imports:\n    - { resource: \"@MonsieurBizSyliusRichEditorPlugin/Resources/config/config.yaml\" }\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "monsieurbiz/sylius-rich-editor-plugin:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

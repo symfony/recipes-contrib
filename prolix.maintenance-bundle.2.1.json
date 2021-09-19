@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "prolix/maintenance-bundle": {
+            "version": "2.1",
+            "recipe": {
+                "repo": "2.1",
+                "branch": "master",
+                "version": "2.1",
+                "ref": "662179a8c0bdc0f96a366ac359bbb9e766010844"
+            }
+        }
+    },
+    "manifests": {
+        "prolix/maintenance-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "prolix/maintenance-bundle",
+            "version": "2.1",
+            "manifest": {
+                "bundles": {
+                    "Lexik\\Bundle\\MaintenanceBundle\\LexikMaintenanceBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/lexik_maintenance.yaml": {
+                    "contents": "lexik_maintenance:\n    driver:\n        class: 'Lexik\\Bundle\\MaintenanceBundle\\Drivers\\FileDriver'\n        options:\n            file_path: '%kernel.cache_dir%/lock'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "prolix/maintenance-bundle:2.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

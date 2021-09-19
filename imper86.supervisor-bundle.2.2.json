@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "imper86/supervisor-bundle": {
+            "version": "2.2",
+            "recipe": {
+                "repo": "2.2",
+                "branch": "master",
+                "version": "2.2",
+                "ref": "31dc944c9673cd7ef6ad2e8944dde881b1d32767"
+            }
+        }
+    },
+    "manifests": {
+        "imper86/supervisor-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "imper86/supervisor-bundle",
+            "version": "2.2",
+            "manifest": {
+                "bundles": {
+                    "Imper86\\SupervisorBundle\\Imper86SupervisorBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/imper86_supervisor.yaml": {
+                    "contents": "imper86_supervisor:\n    instances: []\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "imper86/supervisor-bundle:2.2@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

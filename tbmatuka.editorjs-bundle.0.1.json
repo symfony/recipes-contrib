@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "tbmatuka/editorjs-bundle": {
+            "version": "0.1",
+            "recipe": {
+                "repo": "0.1",
+                "branch": "master",
+                "version": "0.1",
+                "ref": "319a3f1462e367f432ed2a70bfd59c927edb0fe8"
+            }
+        }
+    },
+    "manifests": {
+        "tbmatuka/editorjs-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "tbmatuka/editorjs-bundle",
+            "version": "0.1",
+            "manifest": {
+                "bundles": {
+                    "Tbmatuka\\EditorjsBundle\\TbmatukaEditorjsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/editorjs.yaml": {
+                    "contents": "twig:\n    form_themes:\n        - '@TbmatukaEditorjs/Form/editorjs_widget.html.twig'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "tbmatuka/editorjs-bundle:0.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

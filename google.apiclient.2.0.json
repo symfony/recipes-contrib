@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "google/apiclient": {
+            "version": "2.0",
+            "recipe": {
+                "repo": "2.0",
+                "branch": "master",
+                "version": "2.0",
+                "ref": "49c5d7a66d863d28513979bf0666dc77599100c0"
+            }
+        }
+    },
+    "manifests": {
+        "google/apiclient": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "google/apiclient",
+            "version": "2.0",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "GOOGLE_API_KEY": "",
+                    "GOOGLE_CLIENT_ID": "",
+                    "GOOGLE_CLIENT_SECRET": ""
+                }
+            },
+            "files": {
+                "config/packages/google_apiclient.yaml": {
+                    "contents": "services:\n    Google_Client:\n        class: Google_Client\n        calls:\n            - [setDeveloperKey, ['%env(GOOGLE_API_KEY)%']]\n            - [setClientId, ['%env(GOOGLE_CLIENT_ID)%']]\n            - [setClientSecret, ['%env(GOOGLE_CLIENT_SECRET)%']]\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "google/apiclient:2.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

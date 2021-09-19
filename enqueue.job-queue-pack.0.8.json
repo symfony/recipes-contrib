@@ -1,0 +1,35 @@
+{
+    "locks": {
+        "enqueue/job-queue-pack": {
+            "version": "0.8",
+            "recipe": {
+                "repo": "0.8",
+                "branch": "master",
+                "version": "0.8",
+                "ref": "a24c67e3c846bf293a8e95ca7e1b0708fef4b748"
+            }
+        }
+    },
+    "manifests": {
+        "enqueue/job-queue-pack": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "enqueue/job-queue-pack",
+            "version": "0.8",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/enqueue_job_queue.yaml": {
+                    "contents": "enqueue:\n    job: true\n\ndoctrine:\n    orm:\n        mappings:\n            EnqueueJobQueue:\n                is_bundle: false\n                type: xml\n                dir: '%kernel.project_dir%/vendor/enqueue/job-queue/Doctrine/mapping'\n                prefix: 'Enqueue\\JobQueue\\Doctrine\\Entity'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "enqueue/job-queue-pack:0.8@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

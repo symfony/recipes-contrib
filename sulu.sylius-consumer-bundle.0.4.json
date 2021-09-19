@@ -1,0 +1,44 @@
+{
+    "locks": {
+        "sulu/sylius-consumer-bundle": {
+            "version": "0.4",
+            "recipe": {
+                "repo": "0.4",
+                "branch": "master",
+                "version": "0.4",
+                "ref": "a509964c56476d2bbaf36f0addb8e1c5a2f2bf5d"
+            }
+        }
+    },
+    "manifests": {
+        "sulu/sylius-consumer-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "sulu/sylius-consumer-bundle",
+            "version": "0.4",
+            "manifest": {
+                "bundles": {
+                    "Sulu\\Bundle\\SyliusConsumerBundle\\SuluSyliusConsumerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SYLIUS_BASE_URL": "",
+                    "SULU_SYLIUS_MESSENGER_TRANSPORT_DSN": ""
+                }
+            },
+            "files": {
+                "config/packages/sulu_sylius_consumer.yaml": {
+                    "contents": "sulu_sylius_consumer:\n    sylius_base_url: '%env(SYLIUS_BASE_URL)%'\n    # taxon_category_adapter:\n    #     enabled: true\n\nframework:\n    messenger:\n        transports:\n            sulu_sylius_transport: '%env(SULU_SYLIUS_MESSENGER_TRANSPORT_DSN)%'\n        buses:\n            sulu_sylius_producer.messenger_bus:\n                middleware:\n                    - doctrine_transaction\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "sulu/sylius-consumer-bundle:0.4@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

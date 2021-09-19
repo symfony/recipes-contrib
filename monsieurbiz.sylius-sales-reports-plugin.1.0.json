@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "monsieurbiz/sylius-sales-reports-plugin": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "b775ab7f4ef27fb8a766061d4abda52682951876"
+            }
+        }
+    },
+    "manifests": {
+        "monsieurbiz/sylius-sales-reports-plugin": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "monsieurbiz/sylius-sales-reports-plugin",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "MonsieurBiz\\SyliusSalesReportsPlugin\\MonsieurBizSyliusSalesReportsPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/monsieurbiz_sylius_sales_reports_plugin.yaml": {
+                    "contents": "monsieurbiz_sales_reports_plugin:\n    resource: \"@MonsieurBizSyliusSalesReportsPlugin/Resources/config/routing.yaml\"\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/monsieurbiz_sylius_sales_reports_plugin.yaml": {
+                    "contents": "imports:\n    - { resource: \"@MonsieurBizSyliusSalesReportsPlugin/Resources/config/config.yaml\" }\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "monsieurbiz/sylius-sales-reports-plugin:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

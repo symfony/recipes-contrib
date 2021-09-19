@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "sulu/form-bundle": {
+            "version": "2.0",
+            "recipe": {
+                "repo": "2.0",
+                "branch": "master",
+                "version": "2.0",
+                "ref": "0cbf25fdd636b8f4d42e39532e1bc1030679f4f8"
+            }
+        }
+    },
+    "manifests": {
+        "sulu/form-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "sulu/form-bundle",
+            "version": "2.0",
+            "manifest": {
+                "bundles": {
+                    "Sulu\\Bundle\\FormBundle\\SuluFormBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/sulu_form_admin.yaml": {
+                    "contents": "sulu_form_api:\n    resource: \"@SuluFormBundle/Resources/config/routing_api.yml\"\n    type: rest\n    prefix: /admin/api\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/sulu_form.yaml": {
+                    "contents": "sulu_form:\n    mail:\n        from: \"%env(SULU_ADMIN_EMAIL)%\"\n        to: \"%env(SULU_ADMIN_EMAIL)%\"\n        sender: \"%env(SULU_ADMIN_EMAIL)%\"\n\nframework:\n    esi: true\n    fragments: true\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "sulu/form-bundle:2.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

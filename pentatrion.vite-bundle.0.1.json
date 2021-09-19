@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "pentatrion/vite-bundle": {
+            "version": "0.1",
+            "recipe": {
+                "repo": "0.1",
+                "branch": "master",
+                "version": "0.1",
+                "ref": "bbc1dbabe95240a0988959e1ded978725692bcfa"
+            }
+        }
+    },
+    "manifests": {
+        "pentatrion/vite-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "pentatrion/vite-bundle",
+            "version": "0.1",
+            "manifest": {
+                "bundles": {
+                    "Pentatrion\\ViteBundle\\PentatrionViteBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-package": {
+                    "install/assets/": "assets/",
+                    "install/package.json": "package.json",
+                    "install/vite.config.js": "vite.config.js"
+                },
+                "gitignore": [
+                    "/node_modules/",
+                    "/%PUBLIC_DIR%/build/"
+                ]
+            },
+            "files": [],
+            "origin": "pentatrion/vite-bundle:0.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

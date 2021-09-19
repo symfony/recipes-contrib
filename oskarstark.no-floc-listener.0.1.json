@@ -1,0 +1,35 @@
+{
+    "locks": {
+        "oskarstark/no-floc-listener": {
+            "version": "0.1",
+            "recipe": {
+                "repo": "0.1",
+                "branch": "master",
+                "version": "0.1",
+                "ref": "84795143ce2f4db46ace4e6391a6202bd7b8545a"
+            }
+        }
+    },
+    "manifests": {
+        "oskarstark/no-floc-listener": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "oskarstark/no-floc-listener",
+            "version": "0.1",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/oskarstark_symfony_no_floc_listener.yaml": {
+                    "contents": "services:\n    OskarStark\\Symfony\\EventListener\\NoFlocListener:\n        autoconfigure: true\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "oskarstark/no-floc-listener:0.1@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

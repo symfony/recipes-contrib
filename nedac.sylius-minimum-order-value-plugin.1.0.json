@@ -1,0 +1,49 @@
+{
+    "locks": {
+        "nedac/sylius-minimum-order-value-plugin": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "51c9987f3bd93cdcc1d2c8d9bf38bfbde706a63c"
+            }
+        }
+    },
+    "manifests": {
+        "nedac/sylius-minimum-order-value-plugin": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "nedac/sylius-minimum-order-value-plugin",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Nedac\\SyliusMinimumOrderValuePlugin\\NedacSyliusMinimumOrderValuePlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%"
+                },
+                "copy-from-package": {
+                    "src/Resources/views/bundles/": "templates/bundles/"
+                }
+            },
+            "files": {
+                "src/Entity/Channel/Channel.php": {
+                    "contents": "<?php\n\ndeclare(strict_types=1);\n\nnamespace App\\Entity\\Channel;\n\nuse Doctrine\\ORM\\Mapping as ORM;\nuse Nedac\\SyliusMinimumOrderValuePlugin\\Model\\ChannelInterface as NedacSyliusMinimumOrderValuePluginChannelInterface;\nuse Nedac\\SyliusMinimumOrderValuePlugin\\Model\\MinimumOrderValueTrait as\n    NedacSyliusMinimumOrderValuePluginMinimumOrderValueTrait;\nuse Sylius\\Component\\Core\\Model\\Channel as BaseChannel;\n\n/**\n * @ORM\\Entity\n * @ORM\\Table(name=\"sylius_channel\")\n */\nclass Channel extends BaseChannel implements NedacSyliusMinimumOrderValuePluginChannelInterface\n{\n    use NedacSyliusMinimumOrderValuePluginMinimumOrderValueTrait;\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/nedac_sylius_minimum_order_value_plugin.yaml": {
+                    "contents": "imports:\n    - { resource: \"@NedacSyliusMinimumOrderValuePlugin/Resources/config/config.yaml\" }\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "nedac/sylius-minimum-order-value-plugin:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

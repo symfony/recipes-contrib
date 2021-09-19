@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "damienharper/auditor-bundle": {
+            "version": "4.0",
+            "recipe": {
+                "repo": "4.0",
+                "branch": "master",
+                "version": "4.0",
+                "ref": "694b129ef686d68a4c9ca6b3cafbeb3dec0c9c2d"
+            }
+        }
+    },
+    "manifests": {
+        "damienharper/auditor-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "damienharper/auditor-bundle",
+            "version": "4.0",
+            "manifest": {
+                "bundles": {
+                    "DH\\AuditorBundle\\DHAuditorBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/dh_auditor.yaml": {
+                    "contents": "dh_auditor:\n    resource: \"@DHAuditorBundle/Controller/\"\n    type: auditor\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/dh_auditor.yaml": {
+                    "contents": "# Full configuration reference available at:\n# https://damienharper.github.io/auditor-docs/docs/auditor-bundle/configuration/reference.html\ndh_auditor:\n    enabled: true\n    providers:\n        doctrine:\n            table_prefix: null\n            table_suffix: '_audit'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "damienharper/auditor-bundle:4.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

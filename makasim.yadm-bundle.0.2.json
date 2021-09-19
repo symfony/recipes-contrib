@@ -1,0 +1,43 @@
+{
+    "locks": {
+        "makasim/yadm-bundle": {
+            "version": "0.2",
+            "recipe": {
+                "repo": "0.2",
+                "branch": "master",
+                "version": "0.2",
+                "ref": "b9beaba0be1887e3c127e660d179d9939687c984"
+            }
+        }
+    },
+    "manifests": {
+        "makasim/yadm-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "makasim/yadm-bundle",
+            "version": "0.2",
+            "manifest": {
+                "bundles": {
+                    "Makasim\\Yadm\\Bundle\\YadmBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MONGO_DSN": "mongodb://localhost:27017/db_name"
+                }
+            },
+            "files": {
+                "config/packages/yadm.yaml": {
+                    "contents": "yadm:\n    mongo_uri: '%env(MONGO_DSN)%'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "makasim/yadm-bundle:0.2@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

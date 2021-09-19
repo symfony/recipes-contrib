@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "ywh/cvss-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "406b07c38a73e8506454bf628de4461573bc8dc0"
+            }
+        }
+    },
+    "manifests": {
+        "ywh/cvss-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "ywh/cvss-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "YWH\\CvssBundle\\YWHCvssBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ywh_doctrine_encryption.yaml": {
+                    "contents": "ywh_cvss:\n    translation_domain: cvss\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "ywh/cvss-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

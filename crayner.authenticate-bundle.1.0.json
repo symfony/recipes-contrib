@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "crayner/authenticate-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "3911baf00ee1ee8e1edb5a97572fe79f1f0a8d21"
+            }
+        }
+    },
+    "manifests": {
+        "crayner/authenticate-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "crayner/authenticate-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Crayner\\Authenticate\\CraynerAuthenticateBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/crayner_authenticate.yaml": {
+                    "contents": "crayner_authenticate:\n    resource: '@CraynerAuthenticateBundle/Resources/config/routes.yaml'\n    prefix: /security\n\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "crayner/authenticate-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "insidestyles/json-rpc-bundle": {
+            "version": "2.0",
+            "recipe": {
+                "repo": "2.0",
+                "branch": "master",
+                "version": "2.0",
+                "ref": "519602df87313d1b9bf784b8a4062cbc804a92b4"
+            }
+        }
+    },
+    "manifests": {
+        "insidestyles/json-rpc-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "insidestyles/json-rpc-bundle",
+            "version": "2.0",
+            "manifest": {
+                "bundles": {
+                    "Insidestyles\\JsonRpcBundle\\JsonRpcBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/json_rpc_api_routing.yaml": {
+                    "contents": "_json_rpc_api:\n    resource: .\n    type: json_rpc_api\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/json_rpc_api.yaml": {
+                    "contents": "json_rpc_api:\n    handlers:\n        auth:\n            path: /auth\n            host: null\n            serializer: null\n            logger: null\n            annotation: null\n        main:\n            path: /api/v1\n            host: null\n            serializer: null\n            logger: null\n            annotation: null\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "insidestyles/json-rpc-bundle:2.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

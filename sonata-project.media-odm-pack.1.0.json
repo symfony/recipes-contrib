@@ -1,0 +1,51 @@
+{
+    "locks": {
+        "sonata-project/media-odm-pack": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "bd1764c3667baf85def26734108af1007bc9fed2"
+            }
+        }
+    },
+    "manifests": {
+        "sonata-project/media-odm-pack": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "sonata-project/media-odm-pack",
+            "version": "1.0",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "src/Document/SonataMediaGallery.php": {
+                    "contents": "<?php\n\ndeclare(strict_types=1);\n\nnamespace App\\Document;\n\nuse Doctrine\\ODM\\MongoDB\\Mapping\\Annotations as MongoDB;\nuse JMS\\Serializer\\Annotation as Serializer;\nuse Sonata\\MediaBundle\\Document\\BaseGallery;\n\n/**\n * @MongoDB\\Document\n * @MongoDB\\HasLifecycleCallbacks\n */\nclass SonataMediaGallery extends BaseGallery\n{\n    /**\n     * @MongoDB\\Id()\n     * @Serializer\\Groups(groups={\"sonata_api_read\", \"sonata_api_write\", \"sonata_search\"})\n     */\n    protected $id;\n\n    /**\n     * @MongoDB\\ReferenceMany(\n     *     targetDocument=\"App\\Document\\SonataMediaGalleryHasMedia\",\n     *     mappedBy=\"gallery\", cascade={\"persist\"}, orphanRemoval=false, sort={\"position\" = \"ASC\"}\n     * )\n     */\n    protected $galleryHasMedias;\n\n    public function getId()\n    {\n        return $this->id;\n    }\n\n    /**\n     * @MongoDB\\PrePersist\n     */\n    public function prePersist(): void\n    {\n        parent::prePersist();\n    }\n\n    /**\n     * @MongoDB\\PreUpdate\n     */\n    public function preUpdate(): void\n    {\n        parent::preUpdate();\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "src/Document/SonataMediaMedia.php": {
+                    "contents": "<?php\n\ndeclare(strict_types=1);\n\nnamespace App\\Document;\n\nuse Doctrine\\ODM\\MongoDB\\Mapping\\Annotations as MongoDB;\nuse JMS\\Serializer\\Annotation as Serializer;\nuse Sonata\\MediaBundle\\Document\\BaseMedia;\n\n/**\n * @MongoDB\\Document\n * @MongoDB\\HasLifecycleCallbacks\n */\nclass SonataMediaMedia extends BaseMedia\n{\n    /**\n     * @MongoDB\\Id()\n     * @Serializer\\Groups(groups={\"sonata_api_read\", \"sonata_api_write\", \"sonata_search\"})\n     */\n    protected $id;\n\n    /**\n     * @MongoDB\\ReferenceMany(\n     *     targetDocument=\"App\\Document\\SonataMediaGalleryHasMedia\",\n     *     mappedBy=\"media\", cascade={\"persist\"}, orphanRemoval=false, sort={\"position\" = \"ASC\"}\n     * )\n     */\n    protected $galleryHasMedias;\n\n    /**\n     * @MongoDB\\Field(type=\"string\", nullable=true)\n     */\n    protected $authorName;\n\n    /**\n     * @MongoDB\\Field(type=\"boolean\", nullable=true)\n     */\n    protected $cdnIsFlushable;\n\n    /**\n     * @MongoDB\\Field(type=\"string\", nullable=true)\n     */\n    protected $description;\n\n    /**\n     * @MongoDB\\Field(type=\"string\", nullable=true)\n     */\n    protected $copyright;\n\n    public function getId()\n    {\n        return $this->id;\n    }\n\n    /**\n     * @MongoDB\\PrePersist\n     */\n    public function prePersist(): void\n    {\n        parent::prePersist();\n    }\n\n    /**\n     * @MongoDB\\PreUpdate\n     */\n    public function preUpdate(): void\n    {\n        parent::preUpdate();\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "src/Document/SonataMediaGalleryHasMedia.php": {
+                    "contents": "<?php\n\ndeclare(strict_types=1);\n\nnamespace App\\Document;\n\nuse Doctrine\\ODM\\MongoDB\\Mapping\\Annotations as MongoDB;\nuse JMS\\Serializer\\Annotation as Serializer;\nuse Sonata\\MediaBundle\\Document\\BaseGalleryHasMedia;\n\n/**\n * @MongoDB\\Document\n * @MongoDB\\HasLifecycleCallbacks\n */\nclass SonataMediaGalleryHasMedia extends BaseGalleryHasMedia\n{\n    /**\n     * @MongoDB\\Id()\n     * @Serializer\\Groups(groups={\"sonata_api_read\", \"sonata_api_write\", \"sonata_search\"})\n     */\n    protected $id;\n\n    /**\n     * @MongoDB\\ReferenceOne(\n     *     targetDocument=\"App\\Document\\SonataMediaMedia\",\n     *     inversedBy=\"galleryHasMedias\", cascade={\"persist\"}\n     * )\n     */\n    protected $media;\n\n    /**\n     * @MongoDB\\ReferenceOne(\n     *     targetDocument=\"App\\Document\\SonataMediaGallery\",\n     *     inversedBy=\"galleryHasMedias\", cascade={\"persist\"}\n     * )\n     */\n    protected $gallery;\n\n    public function getId(): ?int\n    {\n        return $this->id;\n    }\n\n    /**\n     * @MongoDB\\PrePersist\n     */\n    public function prePersist(): void\n    {\n        parent::prePersist();\n    }\n\n    /**\n     * @MongoDB\\PreUpdate\n     */\n    public function preUpdate(): void\n    {\n        parent::preUpdate();\n    }\n}\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/sonata_media_odm.yaml": {
+                    "contents": "sonata_media:\n    class:\n        media: App\\Document\\SonataMediaMedia\n        gallery: App\\Document\\SonataMediaGallery\n        gallery_has_media: App\\Document\\SonataMediaGalleryHasMedia\n    db_driver: doctrine_mongodb\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "sonata-project/media-odm-pack:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

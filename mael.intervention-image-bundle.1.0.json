@@ -1,0 +1,40 @@
+{
+    "locks": {
+        "mael/intervention-image-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "92cfe8be16c732d0bacebc47b68ebdb784bcba0a"
+            }
+        }
+    },
+    "manifests": {
+        "mael/intervention-image-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "mael/intervention-image-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Mael\\InterventionImageBundle\\MaelInterventionImageBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/mael_intervention_image.yaml": {
+                    "contents": "mael_intervention_image:\n    driver: gd ##\u00a0gd or imagick - Default is gd\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "mael/intervention-image-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

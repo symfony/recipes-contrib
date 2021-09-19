@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "msalsas/gdpr-consent-banner-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "24d737cb913093cdcad9d41771e9be42e2176fa2"
+            }
+        }
+    },
+    "manifests": {
+        "msalsas/gdpr-consent-banner-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "msalsas/gdpr-consent-banner-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Msalsas\\GdprConsentBannerBundle\\MsalsasGdprConsentBannerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/msalsas_gdpr_consent_banner.yaml": {
+                    "contents": "accept_gdpr_consent_banner:\n    path: /accept-gdpr-consent-banner\n    controller: Msalsas\\GdprConsentBannerBundle\\Controller\\MsalsasGdprConsentBannerController:acceptGdprConsentBanner\n    methods: POST\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/msalsas_gdpr_consent_banner.yaml": {
+                    "contents": "# See all configuration options at https://github.com/msalsas/MsalsasGdprConsentBannerBundle/blob/master/Resources/doc/index.rst\nmsalsas_gdpr_consent_banner:\n    fade_time: 2\n    time_to_expire: 30 days\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "msalsas/gdpr-consent-banner-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

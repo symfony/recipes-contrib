@@ -1,0 +1,43 @@
+{
+    "locks": {
+        "mmucklo/queue-bundle": {
+            "version": "6.0",
+            "recipe": {
+                "repo": "6.0",
+                "branch": "master",
+                "version": "6.0",
+                "ref": "38893cdaccca06e928126468431cc2ff01fa7975"
+            }
+        }
+    },
+    "manifests": {
+        "mmucklo/queue-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "mmucklo/queue-bundle",
+            "version": "6.0",
+            "manifest": {
+                "bundles": {
+                    "Dtc\\QueueBundle\\DtcQueueBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-package": {
+                    "Resources/config/dtc_queue.yaml": "%CONFIG_DIR%/packages/dtc_queue.yaml"
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/dtc_queue.yaml": {
+                    "contents": "dtc_queue:\n    resource: '@DtcQueueBundle/Resources/config/routing.yml'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "mmucklo/queue-bundle:6.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

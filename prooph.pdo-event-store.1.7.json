@@ -1,0 +1,43 @@
+{
+    "locks": {
+        "prooph/pdo-event-store": {
+            "version": "1.7",
+            "recipe": {
+                "repo": "1.7",
+                "branch": "master",
+                "version": "1.7",
+                "ref": "f35cb6fe1edf5853c6d78d429c8ae3564bdd1bd8"
+            }
+        }
+    },
+    "manifests": {
+        "prooph/pdo-event-store": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "prooph/pdo-event-store",
+            "version": "1.7",
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "copy-from-package": {
+                    "scripts/": "%CONFIG_DIR%/scripts/"
+                },
+                "env": {
+                    "MYSQL_DSN": "mysql:host=127.0.0.1;dbname=event_streams",
+                    "MYSQL_USER": "user",
+                    "MYSQL_PASSWORD": "password"
+                }
+            },
+            "files": {
+                "config/packages/prooph_pdo_event_store.yaml": {
+                    "contents": "services:\n    _defaults:\n        public: false\n\n    Prooph\\EventStore\\EventStore: '@app.event_store.default'\n\n    app.event_store.default:\n        class: Prooph\\EventStore\\Pdo\\MySqlEventStore\n        arguments:\n            - '@prooph_event_store.message_factory'\n            - '@app.event_store.pdo_connection.mysql'\n            - '@app.event_store.mysql.persistence_strategy'\n\n    app.event_store.pdo_connection.mysql:\n        class: \\PDO\n        arguments:\n            - '%env(MYSQL_DSN)%'\n            - '%env(MYSQL_USER)%'\n            - '%env(MYSQL_PASSWORD)%'\n\n    app.event_store.mysql.persistence_strategy:\n        class: Prooph\\EventStore\\Pdo\\PersistenceStrategy\\MySqlSingleStreamStrategy\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "prooph/pdo-event-store:1.7@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

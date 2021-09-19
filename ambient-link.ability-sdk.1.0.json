@@ -1,0 +1,42 @@
+{
+    "locks": {
+        "ambient-link/ability-sdk": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "41ad248e67c065e158415f6cffd693f39f303283"
+            }
+        }
+    },
+    "manifests": {
+        "ambient-link/ability-sdk": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "ambient-link/ability-sdk",
+            "version": "1.0",
+            "manifest": {
+                "env": {
+                    "AMBIENT_LINK_HOST": "",
+                    "AMBIENT_LINK_PORT": "1883",
+                    "AMBIENT_LINK_USERNAME": "",
+                    "AMBIENT_LINK_PASSWORD": "",
+                    "AMBIENT_LINK_MONKEY_ID": ""
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ability.yaml": {
+                    "contents": "services:\n    AmbientLink\\SDK\\SmartMonkeyConnection:\n        arguments: ['@amnient.link_connection_settings', '%env(AMBIENT_LINK_USERNAME)%', '%env(AMBIENT_LINK_PASSWORD)%']\n\n    amnient.link_connection_settings:\n        class: PhpMqtt\\Client\\ConnectionSettings\n\n    PhpMqtt\\Client\\Contracts\\MQTTClient: '@PhpMqtt\\Client\\MQTTClient'\n    PhpMqtt\\Client\\MQTTClient:\n        arguments:\n            - '%env(AMBIENT_LINK_HOST)%'\n            - '%env(AMBIENT_LINK_PORT)%'\n            - '%env(AMBIENT_LINK_MONKEY_ID)%'\n\n    AmbientLink\\SDK\\Mqtt\\MqttAdapter:\n        arguments:\n            $username: '%env(AMBIENT_LINK_USERNAME)%'\n            $password: '%env(AMBIENT_LINK_PASSWORD)%'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "ambient-link/ability-sdk:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

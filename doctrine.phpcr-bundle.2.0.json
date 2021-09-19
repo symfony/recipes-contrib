@@ -1,0 +1,45 @@
+{
+    "locks": {
+        "doctrine/phpcr-bundle": {
+            "version": "2.0",
+            "recipe": {
+                "repo": "2.0",
+                "branch": "master",
+                "version": "2.0",
+                "ref": "302e7ce8f547b1143b98112d0ebc8579f767d90d"
+            }
+        }
+    },
+    "manifests": {
+        "doctrine/phpcr-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "doctrine/phpcr-bundle",
+            "version": "2.0",
+            "manifest": {
+                "bundles": {
+                    "Doctrine\\Bundle\\PHPCRBundle\\DoctrinePHPCRBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "PHPCR_USER": "admin",
+                    "PHPCR_PASSWORD": "admin",
+                    "PHPCR_WORKSPACE": "default"
+                }
+            },
+            "files": {
+                "config/packages/doctrine_phpcr.yaml": {
+                    "contents": "doctrine_phpcr:\n    session:\n        backend:\n            type: jackrabbit\n            url: 'localhost'\n            # connection: default\n            # requires DoctrineCacheBundle\n            # caches:\n            #     meta: doctrine_cache.providers.phpcr_meta\n            #     nodes: doctrine_cache.providers.phpcr_nodes\n            # enable logging\n            # logging: true\n            # enable profiling in the debug toolbar.\n            # profiling: true\n        workspace: '%env(PHPCR_WORKSPACE)%'\n        username: '%env(PHPCR_USER)%'\n        password: '%env(PHPCR_PASSWORD)%'\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "doctrine/phpcr-bundle:2.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

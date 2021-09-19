@@ -1,0 +1,43 @@
+{
+    "locks": {
+        "jurry/amqp-symfony-bundle": {
+            "version": "1.0",
+            "recipe": {
+                "repo": "1.0",
+                "branch": "master",
+                "version": "1.0",
+                "ref": "c68f5f7f202efaf793d29bbd01dce1ed465633d3"
+            }
+        }
+    },
+    "manifests": {
+        "jurry/amqp-symfony-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "jurry/amqp-symfony-bundle",
+            "version": "1.0",
+            "manifest": {
+                "bundles": {
+                    "Jurry\\RabbitMQ\\AmqpHandlerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "JURRY_RABBIT_MQ_DSN": "tcp://guest:guest@localhost:5672"
+                }
+            },
+            "files": {
+                "config/packages/jurry_rabbitmq.yaml": {
+                    "contents": "amqp_handler:\n    connection: '%env(JURRY_RABBIT_MQ_DSN)%'\n    queues_properties:\n        sync_queue:\n            name: stores_sync\n            message_ttl: 10000 # 10 seconds\n        async_queue:\n            name: stores_async\n            message_ttl: 10000 # 10 seconds\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "jurry/amqp-symfony-bundle:1.0@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}

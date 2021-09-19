@@ -1,0 +1,55 @@
+{
+    "locks": {
+        "php-translation/symfony-bundle": {
+            "version": "0.4",
+            "recipe": {
+                "repo": "0.4",
+                "branch": "master",
+                "version": "0.4",
+                "ref": "c066e57abc57851ffe788ea3af87b5ea10bf976f"
+            }
+        }
+    },
+    "manifests": {
+        "php-translation/symfony-bundle": {
+            "repository": "github.com/symfony/recipes-contrib",
+            "package": "php-translation/symfony-bundle",
+            "version": "0.4",
+            "manifest": {
+                "bundles": {
+                    "Translation\\Bundle\\TranslationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/php_translation.yaml": {
+                    "contents": "_translation_edit_in_place:\n    resource: '@TranslationBundle/Resources/config/routing_edit_in_place.yml'\n    prefix: /admin\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/routes/dev/php_translation.yaml": {
+                    "contents": "_translation_webui:\n    resource: \"@TranslationBundle/Resources/config/routing_webui.yml\"\n    prefix: /admin\n\n_translation_profiler:\n    resource: '@TranslationBundle/Resources/config/routing_symfony_profiler.yml'\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/php_translation.yaml": {
+                    "contents": "translation:\n    locales: [\"en\"]\n    edit_in_place:\n        enabled: false\n        config_name: app\n    configs:\n        app:\n            dirs: [\"%kernel.project_dir%/templates\", \"%kernel.project_dir%/src\"]\n            output_dir: \"%kernel.project_dir%/translations\"\n            excluded_names: [\"*TestCase.php\", \"*Test.php\"]\n            excluded_dirs: [cache, data, logs]\n",
+                    "executable": false,
+                    "encoding": ""
+                },
+                "config/packages/dev/php_translation.yaml": {
+                    "contents": "translation:\n    symfony_profiler:\n        enabled: true\n    webui:\n        enabled: true\n",
+                    "executable": false,
+                    "encoding": ""
+                }
+            },
+            "origin": "php-translation/symfony-bundle:0.4@github.com/symfony/recipes-contrib:master",
+            "not_installable": false,
+            "is_contrib": true
+        }
+    }
+}
