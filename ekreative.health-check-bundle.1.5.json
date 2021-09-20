@@ -24,7 +24,21 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
                 },
-                "post-install-output": "  * You can add more doctrine/redis connections to your config in <fg=green>config/packages/ekreative_health_check.yaml</>\n\n  *. Add healthcheck firewall to <fg=green>config/security.yaml</> file\n\n<comment>\nsecurity:\n    firewalls:\n        healthcheck:\n            pattern: ^/healthcheck\n            security: false\n</>\n\n  * <fg=blue>Read</> the documentation at <comment>https://github.com/ekreative/health-check-bundle</>\n"
+                "post-install-output": [
+                    "  * You can add more doctrine/redis connections to your config in <fg=green>config/packages/ekreative_health_check.yaml</>",
+                    "",
+                    "  *. Add healthcheck firewall to <fg=green>config/security.yaml</> file",
+                    "",
+                    "<comment>",
+                    "security:",
+                    "    firewalls:",
+                    "        healthcheck:",
+                    "            pattern: ^/healthcheck",
+                    "            security: false",
+                    "</>",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/ekreative/health-check-bundle</>"
+                ]
             },
             "files": {
                 "config/routes/ekreative_health_check.yaml": {

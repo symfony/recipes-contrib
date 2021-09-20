@@ -16,7 +16,13 @@
             "package": "enqueue/mongodb",
             "version": "0.8",
             "manifest": {
-                "post-install-output": "  * Configure <comment>ENQUEUE_DSN=mongodb://localhost:27017/db_name</comment>\n    in your <comment>.env</comment> file.\n\n  * For the full options, see\n    <comment>https://github.com/php-enqueue/enqueue-dev/blob/master/docs/transport/mongodb.md</comment>\n"
+                "post-install-output": [
+                    "  * Configure <comment>ENQUEUE_DSN=mongodb://localhost:27017/db_name</comment>",
+                    "    in your <comment>.env</comment> file.",
+                    "",
+                    "  * For the full options, see",
+                    "    <comment>https://github.com/php-enqueue/enqueue-dev/blob/master/docs/transport/mongodb.md</comment>"
+                ]
             },
             "files": [],
             "origin": "enqueue/mongodb:0.8@github.com/symfony/recipes-contrib:master",

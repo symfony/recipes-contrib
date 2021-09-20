@@ -20,7 +20,14 @@
                     "config/": "%CONFIG_DIR%/",
                     "src/": "%SRC_DIR%/"
                 },
-                "post-install-output": "  * <fg=blue>Run</> your application:\n    1. Configure your web server\n    2. Execute the <comment>bin/console fastcgi-daemon:run</> command;\n    3. Browse your application super quickly\n\n  * <fg=blue>Read</> the documentation at <comment>https://github.com/PHPFastCGI/FastCGIDaemon</>\n"
+                "post-install-output": [
+                    "  * <fg=blue>Run</> your application:",
+                    "    1. Configure your web server",
+                    "    2. Execute the <comment>bin/console fastcgi-daemon:run</> command;",
+                    "    3. Browse your application super quickly",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/PHPFastCGI/FastCGIDaemon</>"
+                ]
             },
             "files": {
                 "src/FastCGIKernel.php": {

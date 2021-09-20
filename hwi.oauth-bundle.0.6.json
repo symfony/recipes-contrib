@@ -28,7 +28,23 @@
                     "FB_ID": "",
                     "FB_SECRET": ""
                 },
-                "post-install-output": "  * <fg=blue>Configure</> your application:\n    1. Add firewall by adding <comment>- main:\n                                             anonymous: true\n                                             oauth:\n                                                 resource_owners:\n                                                     my_github:          \"/login/check-github\"\n                                                 login_path:        /login\n                                                 use_forward:       false\n                                                 failure_path:      /login\n\n                                                 oauth_user_provider:\n                                                     service: hwi_oauth.user.provider\n</> in your security firewalls section.\n\n  * <fg=blue>Read</> the documentation at <comment>https://github.com/hwi/HWIOAuthBundle/blob/master/Resources/doc/3-configuring_the_security_layer.md</>\n"
+                "post-install-output": [
+                    "  * <fg=blue>Configure</> your application:",
+                    "    1. Add firewall by adding <comment>- main:",
+                    "                                             anonymous: true",
+                    "                                             oauth:",
+                    "                                                 resource_owners:",
+                    "                                                     my_github:          \"/login/check-github\"",
+                    "                                                 login_path:        /login",
+                    "                                                 use_forward:       false",
+                    "                                                 failure_path:      /login",
+                    "",
+                    "                                                 oauth_user_provider:",
+                    "                                                     service: hwi_oauth.user.provider",
+                    "</> in your security firewalls section.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/hwi/HWIOAuthBundle/blob/master/Resources/doc/3-configuring_the_security_layer.md</>"
+                ]
             },
             "files": {
                 "config/routes/hwi_oauth_routing.yaml": {

@@ -24,7 +24,11 @@
                 "copy-from-package": {
                     "config-template/": "%CONFIG_DIR%/"
                 },
-                "post-install-output": "  * Edit the <fg=green>config/packages/graphqlite.yml</> file to adapt the controllers and the types namespaces to your project.\n\nDocumentation: https://graphqlite.thecodingmachine.io/docs/symfony-bundle\n"
+                "post-install-output": [
+                    "  * Edit the <fg=green>config/packages/graphqlite.yml</> file to adapt the controllers and the types namespaces to your project.",
+                    "",
+                    "Documentation: https://graphqlite.thecodingmachine.io/docs/symfony-bundle"
+                ]
             },
             "files": [],
             "origin": "thecodingmachine/graphqlite-bundle:4.0@github.com/symfony/recipes-contrib:master",

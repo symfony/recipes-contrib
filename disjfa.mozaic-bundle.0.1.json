@@ -29,7 +29,13 @@
                     "UNSPLASH_APPLICATION_ID": "",
                     "UNSPLASH_APPLICATION_SECRET": ""
                 },
-                "post-install-output": "  * Modify the UNSPLASH_APPLICATION_ID and UNSPLASH_APPLICATION_SECRET config in .env\n\n  * Don't forget to add the vue component in you javascript\n\n  * You can check the instructions on the github repo: https://github.com/disjfa/mozaic-bundle\n"
+                "post-install-output": [
+                    "  * Modify the UNSPLASH_APPLICATION_ID and UNSPLASH_APPLICATION_SECRET config in .env",
+                    "",
+                    "  * Don't forget to add the vue component in you javascript",
+                    "",
+                    "  * You can check the instructions on the github repo: https://github.com/disjfa/mozaic-bundle"
+                ]
             },
             "files": {
                 "config/routes/disjfa_mozaic.yaml": {

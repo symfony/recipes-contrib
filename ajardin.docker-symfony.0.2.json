@@ -26,7 +26,19 @@
                     "/%BIN_DIR%/docker-upgrade",
                     "/docker/"
                 ],
-                "post-install-output": "  * Edit the <fg=green>docker/.env</> file to configure your own settings.\n\n  * Edit the <fg=green>docker/nginx/conf.d/custom.conf</> file to configure your own virtual host.\n\n  * To manage the Docker environment from the project directory:\n    - If you already have a Makefile in your project, copy the content of the <fg=green>docker/Makefile.sample</> file at the top of it.\n    - If you do not already have a Makefile, the <fg=green>docker/Makefile.sample</> file will be installed in your project.\n\n  * Run <fg=green>make</> to display the list of available commands.\n\nDocumentation: https://github.com/ajardin/docker-symfony/wiki\n"
+                "post-install-output": [
+                    "  * Edit the <fg=green>docker/.env</> file to configure your own settings.",
+                    "",
+                    "  * Edit the <fg=green>docker/nginx/conf.d/custom.conf</> file to configure your own virtual host.",
+                    "",
+                    "  * To manage the Docker environment from the project directory:",
+                    "    - If you already have a Makefile in your project, copy the content of the <fg=green>docker/Makefile.sample</> file at the top of it.",
+                    "    - If you do not already have a Makefile, the <fg=green>docker/Makefile.sample</> file will be installed in your project.",
+                    "",
+                    "  * Run <fg=green>make</> to display the list of available commands.",
+                    "",
+                    "Documentation: https://github.com/ajardin/docker-symfony/wiki"
+                ]
             },
             "files": {
                 "bin/docker-upgrade": {

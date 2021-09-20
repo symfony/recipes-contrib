@@ -24,7 +24,11 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
                 },
-                "post-install-output": "  * <fg=blue>Configure</> health check and ping routes in file <fg=green>config/routes/health_check.yaml</>\n\n  * <fg=blue>Read</> the documentation at <comment>https://github.com/oat-sa/bundle-health-check</>\n"
+                "post-install-output": [
+                    "  * <fg=blue>Configure</> health check and ping routes in file <fg=green>config/routes/health_check.yaml</>",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/oat-sa/bundle-health-check</>"
+                ]
             },
             "files": {
                 "config/routes/health_check.yaml": {

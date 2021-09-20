@@ -29,7 +29,10 @@
                     "RECAPTCHA3_KEY": "my_site_key",
                     "RECAPTCHA3_SECRET": "my_secret"
                 },
-                "post-install-output": "  * <fg=blue>Make sure</> you have proper values in your .env file\n  * <fg=blue>Read</> the documentation at <comment>https://github.com/karser/KarserRecaptcha3Bundle</>\n"
+                "post-install-output": [
+                    "  * <fg=blue>Make sure</> you have proper values in your .env file",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/karser/KarserRecaptcha3Bundle</>"
+                ]
             },
             "files": {
                 "config/packages/karser_recaptcha3.yaml": {

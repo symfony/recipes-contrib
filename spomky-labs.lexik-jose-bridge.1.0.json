@@ -28,7 +28,9 @@
                     "SL_JOSE_BRIDGE_SERVER_NAME": "https://www.my-service.com/",
                     "SL_JOSE_BRIDGE_KEY_STORAGE_FOLDER": "/tmp/sl_jose/"
                 },
-                "post-install-output": "    Run <comment>make cache-warmup</> to generate keys.\n"
+                "post-install-output": [
+                    "    Run <comment>make cache-warmup</> to generate keys."
+                ]
             },
             "files": {
                 "config/packages/spomky_labs_lexik_jose_bridge_bundle.yaml": {

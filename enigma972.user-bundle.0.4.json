@@ -25,7 +25,13 @@
                     "config/": "%CONFIG_DIR%/",
                     "src/": "%SRC_DIR%/"
                 },
-                "post-install-output": "  * Create an User entity and extend Enigma972\\UserBundle\\Entity\\User class\n\n  * And add all properties and methods you needs, it is your!\n\nDocumentation: https://www.github.com/enigma972/user-bundle\n"
+                "post-install-output": [
+                    "  * Create an User entity and extend Enigma972\\UserBundle\\Entity\\User class",
+                    "",
+                    "  * And add all properties and methods you needs, it is your!",
+                    "",
+                    "Documentation: https://www.github.com/enigma972/user-bundle"
+                ]
             },
             "files": {
                 "src/Repository/UserRepository.php": {

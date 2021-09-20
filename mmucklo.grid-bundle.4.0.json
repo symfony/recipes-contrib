@@ -24,7 +24,16 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
                 },
-                "post-install-output": "Warning: make sure the twig engine is turned on in framework.yaml\n\n  - If not, add the following to config/packages/framework.yaml:\n\nframework:\n    # ...\n    templating:\n        engines: ['twig']\n"
+                "post-install-output": [
+                    "Warning: make sure the twig engine is turned on in framework.yaml",
+                    "",
+                    "  - If not, add the following to config/packages/framework.yaml:",
+                    "",
+                    "framework:",
+                    "    # ...",
+                    "    templating:",
+                    "        engines: ['twig']"
+                ]
             },
             "files": {
                 "config/routes/dtc_grid.yaml": {

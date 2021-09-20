@@ -27,7 +27,10 @@
                 "copy-from-package": {
                     "src/Migrations/": "%SRC_DIR%/Migrations/"
                 },
-                "post-install-output": "  * <fg=blue>Run</> <fg=green>doctrine:migrations:migrate</> to upgrade database\n  * <fg=blue>Add Cron</> on <fg=green>synolia:scheduler-run</> to execute scheduled commands\n"
+                "post-install-output": [
+                    "  * <fg=blue>Run</> <fg=green>doctrine:migrations:migrate</> to upgrade database",
+                    "  * <fg=blue>Add Cron</> on <fg=green>synolia:scheduler-run</> to execute scheduled commands"
+                ]
             },
             "files": {
                 "config/routes/sylius_scheduler_command.yaml": {

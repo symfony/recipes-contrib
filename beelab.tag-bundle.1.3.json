@@ -25,7 +25,10 @@
                     "config/": "%CONFIG_DIR%/",
                     "src/": "%SRC_DIR%/"
                 },
-                "post-install-output": "    * <fg=blue>Customize</> your new Tag entity\n    * <fg=blue>Read</> documentation at <comment>https://github.com/Bee-Lab/BeelabTagBundle/blob/master/Resources/docs/index.md</>\n\n"
+                "post-install-output": [
+                    "    * <fg=blue>Customize</> your new Tag entity",
+                    "    * <fg=blue>Read</> documentation at <comment>https://github.com/Bee-Lab/BeelabTagBundle/blob/master/Resources/docs/index.md</>"
+                ]
             },
             "files": {
                 "src/Entity/Tag.php": {

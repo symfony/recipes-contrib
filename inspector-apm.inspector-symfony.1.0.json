@@ -27,7 +27,10 @@
                 "env": {
                     "INSPECTOR_INGESTION_KEY": ""
                 },
-                "post-install-output": "  * <fg=blue>Read</> the full documentation to properly configure your\n    Symfony application at <comment>https://docs.inspector.dev/</>\n"
+                "post-install-output": [
+                    "  * <fg=blue>Read</> the full documentation to properly configure your",
+                    "    Symfony application at <comment>https://docs.inspector.dev/</>"
+                ]
             },
             "files": {
                 "config/packages/inspector.yaml": {

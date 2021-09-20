@@ -20,7 +20,10 @@
                     "config/": "%CONFIG_DIR%/",
                     "src/": "%SRC_DIR%/"
                 },
-                "post-install-output": "  * If you are using <info>sonata-project/classification-bundle</>, fix annotations for\n    <info>App\\Entity\\SonataMediaMedia::$category</>\n"
+                "post-install-output": [
+                    "  * If you are using <info>sonata-project/classification-bundle</>, fix annotations for",
+                    "    <info>App\\Entity\\SonataMediaMedia::$category</>"
+                ]
             },
             "files": {
                 "src/Entity/SonataMediaGallery.php": {

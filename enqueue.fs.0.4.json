@@ -16,7 +16,13 @@
             "package": "enqueue/fs",
             "version": "0.4",
             "manifest": {
-                "post-install-output": "  * Configure <comment>ENQUEUE_DSN=file://%kernel.project_dir%/var/queue</comment>\n    in your <comment>.env</comment> file.\n\n  * For the full options, see\n    <comment>https://github.com/php-enqueue/enqueue-dev/blob/master/docs/transport/filesystem.md</comment>\n"
+                "post-install-output": [
+                    "  * Configure <comment>ENQUEUE_DSN=file://%kernel.project_dir%/var/queue</comment>",
+                    "    in your <comment>.env</comment> file.",
+                    "",
+                    "  * For the full options, see",
+                    "    <comment>https://github.com/php-enqueue/enqueue-dev/blob/master/docs/transport/filesystem.md</comment>"
+                ]
             },
             "files": [],
             "origin": "enqueue/fs:0.4@github.com/symfony/recipes-contrib:master",

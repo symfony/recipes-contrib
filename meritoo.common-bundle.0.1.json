@@ -27,7 +27,10 @@
                 "env": {
                     "MERITOO_FORM_NOVALIDATE": "false"
                 },
-                "post-install-output": "  * <fg=blue>Read</> the documentation at <comment>https://github.com/meritoo/common-bundle#usage</>\n  * <fg=blue>Configure</> using options described at <comment>https://github.com/meritoo/common-bundle#configuration</>\n"
+                "post-install-output": [
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/meritoo/common-bundle#usage</>",
+                    "  * <fg=blue>Configure</> using options described at <comment>https://github.com/meritoo/common-bundle#configuration</>"
+                ]
             },
             "files": {
                 "config/packages/meritoo_common.yaml": {

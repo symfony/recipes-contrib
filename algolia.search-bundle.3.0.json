@@ -30,7 +30,16 @@
                     "ALGOLIA_APP_ID": "...",
                     "ALGOLIA_API_KEY": "..."
                 },
-                "post-install-output": "  * The Algolia/SearchBundle uses Algolia by default. Create a free\n    account on http://www.algolia.com and modify your ALGOLIA_APP_ID\n    and ALGOLIA_API_KEY config in <fg=green>.env</>\n\n  * Edit the configuration in <fg=green>config/packages/algolia_search.yaml</>\n    to start indexing your data.\n\nDocumentation: https://www.algolia.com/doc/api-client/symfony/\n"
+                "post-install-output": [
+                    "  * The Algolia/SearchBundle uses Algolia by default. Create a free",
+                    "    account on http://www.algolia.com and modify your ALGOLIA_APP_ID",
+                    "    and ALGOLIA_API_KEY config in <fg=green>.env</>",
+                    "",
+                    "  * Edit the configuration in <fg=green>config/packages/algolia_search.yaml</>",
+                    "    to start indexing your data.",
+                    "",
+                    "Documentation: https://www.algolia.com/doc/api-client/symfony/"
+                ]
             },
             "files": {
                 "config/packages/algolia_search.yaml": {

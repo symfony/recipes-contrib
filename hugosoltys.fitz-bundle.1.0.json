@@ -25,7 +25,10 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
                 },
-                "post-install-output": "  * <fg=blue>Choose your bundles</> by visiting <comment>http://localhost/fitz/install</>\n  * <fg=blue>Install</> them by running <comment>php bin/console fitz:install</>\n"
+                "post-install-output": [
+                    "  * <fg=blue>Choose your bundles</> by visiting <comment>http://localhost/fitz/install</>",
+                    "  * <fg=blue>Install</> them by running <comment>php bin/console fitz:install</>"
+                ]
             },
             "files": {
                 "config/routes/dev/hugosoltys_fitz.yaml": {

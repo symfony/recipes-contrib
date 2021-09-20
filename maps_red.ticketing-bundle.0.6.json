@@ -25,7 +25,13 @@
                     "config/": "%CONFIG_DIR%/",
                     "src/": "%SRC_DIR%/"
                 },
-                "post-install-output": "Please update config/packages/doctrine.yaml to link the entities correctly.\n  - For this please read the following documentation :\n    * https://github.com/Mapsred/TicketingBundle/blob/master/docs/2-setting_up_the_entities.md#b---fill-the-doctrine-configuration\n  - For a full list of configuration options, see:\n    * https://github.com/Mapsred/TicketingBundle/blob/master/docs/3-setting_up_the_configuration.md\n\n"
+                "post-install-output": [
+                    "Please update config/packages/doctrine.yaml to link the entities correctly.",
+                    "  - For this please read the following documentation :",
+                    "    * https://github.com/Mapsred/TicketingBundle/blob/master/docs/2-setting_up_the_entities.md#b---fill-the-doctrine-configuration",
+                    "  - For a full list of configuration options, see:",
+                    "    * https://github.com/Mapsred/TicketingBundle/blob/master/docs/3-setting_up_the_configuration.md"
+                ]
             },
             "files": {
                 "src/Repository/TicketKeywordRepository.php": {

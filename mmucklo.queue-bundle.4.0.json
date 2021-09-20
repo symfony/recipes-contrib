@@ -24,7 +24,22 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
                 },
-                "post-install-output": "Please update config/packages/dtc_queue.yaml to accurately reflect your needs.\n  (Choose between odm|orm|beanstalkd|rabbit_mq|redis, etc.)\n\n  - For a full list of configuration options, see:\n    * https://github.com/mmucklo/DtcQueueBundle/blob/master/Resources/doc/full-configuration.md\n\nFor admin, make sure the twig is installed and the twig engine is turned on in framework.yaml\n\n  - If not, install twig, then add the following to config/packages/framework.yaml:\n\nframework:\n    # ...\n    templating:\n        engines: ['twig']\n"
+                "post-install-output": [
+                    "Please update config/packages/dtc_queue.yaml to accurately reflect your needs.",
+                    "  (Choose between odm|orm|beanstalkd|rabbit_mq|redis, etc.)",
+                    "",
+                    "  - For a full list of configuration options, see:",
+                    "    * https://github.com/mmucklo/DtcQueueBundle/blob/master/Resources/doc/full-configuration.md",
+                    "",
+                    "For admin, make sure the twig is installed and the twig engine is turned on in framework.yaml",
+                    "",
+                    "  - If not, install twig, then add the following to config/packages/framework.yaml:",
+                    "",
+                    "framework:",
+                    "    # ...",
+                    "    templating:",
+                    "        engines: ['twig']"
+                ]
             },
             "files": {
                 "config/routes/dtc_queue.yaml": {

@@ -24,7 +24,20 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
                 },
-                "post-install-output": "<fg=blue;options=bold>Finish the configuration<fg=blue>:</>\n1. You <options=bold>MUST</> follow the guide to include js and / or css assets https://github.com/Troopers/AlertifyBundle/blob/master/Resources/doc/configuration.md</>.\n2. You <options=bold>MAY</> configure your favorite alert library (<comment>toastr</>, <comment>notie</>, <comment>pushjs</>... and even your <comment>own</>).\n\nWarning: make sure the twig engine is turned on in framework.yaml.\n\n  - If not, add the following to config/packages/framework.yaml:\n\nframework:\n    # ...\n    templating:\n        engines: ['twig']\n\n"
+                "post-install-output": [
+                    "<fg=blue;options=bold>Finish the configuration<fg=blue>:</>",
+                    "1. You <options=bold>MUST</> follow the guide to include js and / or css assets https://github.com/Troopers/AlertifyBundle/blob/master/Resources/doc/configuration.md</>.",
+                    "2. You <options=bold>MAY</> configure your favorite alert library (<comment>toastr</>, <comment>notie</>, <comment>pushjs</>... and even your <comment>own</>).",
+                    "",
+                    "Warning: make sure the twig engine is turned on in framework.yaml.",
+                    "",
+                    "  - If not, add the following to config/packages/framework.yaml:",
+                    "",
+                    "framework:",
+                    "    # ...",
+                    "    templating:",
+                    "        engines: ['twig']"
+                ]
             },
             "files": {
                 "config/packages/troopers_alertify.yaml": {

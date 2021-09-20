@@ -33,7 +33,11 @@
                     "/public/admin",
                     "/public/uploads"
                 ],
-                "post-install-output": "  * <fg=blue>Run</> <comment>php bin/console numbernine:docker:install</>\n\n  * <fg=blue>Read</> the documentation at <comment>https://numberninecms.github.io/</>\n"
+                "post-install-output": [
+                    "  * <fg=blue>Run</> <comment>php bin/console numbernine:docker:install</>",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://numberninecms.github.io/</>"
+                ]
             },
             "files": {
                 "config/routes/numbernine.yaml": {

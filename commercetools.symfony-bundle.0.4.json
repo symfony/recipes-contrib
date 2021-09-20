@@ -38,7 +38,14 @@
                     "CTP_API_URL": "https://api.commercetools.com",
                     "CTP_SCOPES": "<your-desired-scopes>"
                 },
-                "post-install-output": "  * Get your API client credentials from https://mc.commercetools.com or\n    https://mc.commercetools.co and configure them in your <bg=black;fg=green>.env</>\n\n  * commercetools-symfony-bundle documentation https://github.com/commercetools/commercetools-php-symfony\n\n  * commercetools API Documentation: https://docs.commercetools.com/http-api.html\n"
+                "post-install-output": [
+                    "  * Get your API client credentials from https://mc.commercetools.com or",
+                    "    https://mc.commercetools.co and configure them in your <bg=black;fg=green>.env</>",
+                    "",
+                    "  * commercetools-symfony-bundle documentation https://github.com/commercetools/commercetools-php-symfony",
+                    "",
+                    "  * commercetools API Documentation: https://docs.commercetools.com/http-api.html"
+                ]
             },
             "files": {
                 "config/packages/commercetools.yaml": {

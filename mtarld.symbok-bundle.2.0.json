@@ -24,7 +24,10 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
                 },
-                "post-install-output": "  * <fg=blue>Configure</> bundle in <comment>config/packages/symbok.yaml</>\n  * <fg=blue>Read</> the documentation at <comment>https://github.com/mtarld/symbok-bundle/blob/master/src/Resources/doc/index.md</>\n"
+                "post-install-output": [
+                    "  * <fg=blue>Configure</> bundle in <comment>config/packages/symbok.yaml</>",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/mtarld/symbok-bundle/blob/master/src/Resources/doc/index.md</>"
+                ]
             },
             "files": {
                 "config/packages/symbok.yaml": {

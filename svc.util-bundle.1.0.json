@@ -24,7 +24,9 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
                 },
-                "post-install-output": "  * Please adapt config/packages/svc-util.yaml\n"
+                "post-install-output": [
+                    "  * Please adapt config/packages/svc-util.yaml"
+                ]
             },
             "files": {
                 "config/routes/svc_util.yaml": {

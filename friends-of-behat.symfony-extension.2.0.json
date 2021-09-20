@@ -30,7 +30,9 @@
                 "gitignore": [
                     "/behat.yml"
                 ],
-                "post-install-output": "    Run <comment>vendor/bin/behat</> to run the demo tests.\n"
+                "post-install-output": [
+                    "    Run <comment>vendor/bin/behat</> to run the demo tests."
+                ]
             },
             "files": {
                 "features/demo.feature": {

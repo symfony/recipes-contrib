@@ -24,7 +24,15 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
                 },
-                "post-install-output": "  * <fg=blue>Finish</> bundle configuration:\n    1. Open <comment>config/packages/admin_lte.yaml</> and adjust to your needs\n    2. Create a layout file that uses:\n\n    {% extends '@AdminLTE/layout/default-layout.html.twig' %}\n\nDocumentation: https://github.com/kevinpapst/AdminLTEBundle/blob/master/Resources/docs/\n"
+                "post-install-output": [
+                    "  * <fg=blue>Finish</> bundle configuration:",
+                    "    1. Open <comment>config/packages/admin_lte.yaml</> and adjust to your needs",
+                    "    2. Create a layout file that uses:",
+                    "",
+                    "    {% extends '@AdminLTE/layout/default-layout.html.twig' %}",
+                    "",
+                    "Documentation: https://github.com/kevinpapst/AdminLTEBundle/blob/master/Resources/docs/"
+                ]
             },
             "files": {
                 "config/packages/admin_lte.yaml": {

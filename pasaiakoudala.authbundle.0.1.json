@@ -30,7 +30,14 @@
                     "LDAP_SEARCH_DN": "CN=LDAPUSER,CN=Users,DC=pasaia,DC=net",
                     "LDAP_PASSWD": "LDAP_PASSWD"
                 },
-                "post-install-output": "* eguneratu datu basea, erabiltzailearen taula sortzeko\nphp bin/console\n\n* moldatu security.yaml fitxategia\nrm config/package/security.yaml\nmv config/package/security.yaml.dist config/package/security.yaml\n"
+                "post-install-output": [
+                    "* eguneratu datu basea, erabiltzailearen taula sortzeko",
+                    "php bin/console",
+                    "",
+                    "* moldatu security.yaml fitxategia",
+                    "rm config/package/security.yaml",
+                    "mv config/package/security.yaml.dist config/package/security.yaml"
+                ]
             },
             "files": {
                 "config/routes/pasaiako_udala_auth.yaml": {

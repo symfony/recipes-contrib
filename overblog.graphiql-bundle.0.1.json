@@ -24,7 +24,9 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
                 },
-                "post-install-output": "    1. Browse to <comment>/graphiql</>\n"
+                "post-install-output": [
+                    "    1. Browse to <comment>/graphiql</>"
+                ]
             },
             "files": {
                 "config/routes/dev/graphiql.yaml": {

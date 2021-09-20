@@ -29,7 +29,10 @@
                     "#ENOM_PASSWORD": "your-enom-password",
                     "#ENOM_BASE_URL": "your-enom-api-base-url"
                 },
-                "post-install-output": "  * The Dekalee/EnomBundle needs your enom configuration.\n    Modify your ENOM_UID, ENOM_PASSWORD, ENOM_BASE_URL config in <fg=green>.env</>\n"
+                "post-install-output": [
+                    "  * The Dekalee/EnomBundle needs your enom configuration.",
+                    "    Modify your ENOM_UID, ENOM_PASSWORD, ENOM_BASE_URL config in <fg=green>.env</>"
+                ]
             },
             "files": {
                 "config/packages/dekalee_enom.yaml": {

@@ -27,7 +27,12 @@
                     "MYSQL_USER": "user",
                     "MYSQL_PASSWORD": "password"
                 },
-                "post-install-output": "  * Modify your MYSQL_* configuration in <fg=green>.env</>\n\n  * Create event streams and projections tables using SQL scripts\n    in <comment>%CONFIG_DIR%/scripts/*</comment>\n"
+                "post-install-output": [
+                    "  * Modify your MYSQL_* configuration in <fg=green>.env</>",
+                    "",
+                    "  * Create event streams and projections tables using SQL scripts",
+                    "    in <comment>%CONFIG_DIR%/scripts/*</comment>"
+                ]
             },
             "files": {
                 "config/packages/prooph_pdo_event_store.yaml": {

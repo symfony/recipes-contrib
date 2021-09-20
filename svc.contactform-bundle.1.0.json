@@ -25,7 +25,9 @@
                     "config/": "%CONFIG_DIR%/",
                     "assets/": "assets/"
                 },
-                "post-install-output": "  * Please adapt config/packages/svc-contactform.yaml\n"
+                "post-install-output": [
+                    "  * Please adapt config/packages/svc-contactform.yaml"
+                ]
             },
             "files": {
                 "config/routes/svc_contactform.yaml": {

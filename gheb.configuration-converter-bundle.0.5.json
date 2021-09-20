@@ -24,7 +24,13 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
                 },
-                "post-install-output": "  * Edit the <fg=green>config/packages/configuration_converter.yaml</> file to configure your own settings.\n\n  * Run <fg=green>bin/console configuration:convert</> to convert your configuration.\n\nDocumentation: https://github.com/GregoireHebert/configuration-converter-bundle\n"
+                "post-install-output": [
+                    "  * Edit the <fg=green>config/packages/configuration_converter.yaml</> file to configure your own settings.",
+                    "",
+                    "  * Run <fg=green>bin/console configuration:convert</> to convert your configuration.",
+                    "",
+                    "Documentation: https://github.com/GregoireHebert/configuration-converter-bundle"
+                ]
             },
             "files": {
                 "config/packages/configuration_converter.yaml": {

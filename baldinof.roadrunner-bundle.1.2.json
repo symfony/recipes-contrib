@@ -31,7 +31,12 @@
                 "gitignore": [
                     "/bin/rr"
                 ],
-                "post-install-output": "  * <fg=blue>Download</> RoadRunner locally: <comment>vendor/bin/rr get --location bin/</>\n  * <fg=blue>Run</> your application: <comment>bin/rr serve -c .rr.dev.yaml --debug</>\n  * <fg=blue>For production, use: <comment>bin/rr serve</>\n  * Visit http://localhost:8080\n"
+                "post-install-output": [
+                    "  * <fg=blue>Download</> RoadRunner locally: <comment>vendor/bin/rr get --location bin/</>",
+                    "  * <fg=blue>Run</> your application: <comment>bin/rr serve -c .rr.dev.yaml --debug</>",
+                    "  * <fg=blue>For production, use: <comment>bin/rr serve</>",
+                    "  * Visit http://localhost:8080"
+                ]
             },
             "files": {
                 "config/packages/baldinof_road_runner.yaml": {

@@ -25,7 +25,12 @@
                     "config/": "%CONFIG_DIR%/",
                     "var/": "%VAR_DIR%/"
                 },
-                "post-install-output": "  * <fg=blue>Configure</> your own storages in <comment>config/packages/flysystem.yaml</comment>.\n\n  * <fg=blue>Read</> the documentation at:\n    <comment>https://github.com/thephpleague/flysystem-bundle/blob/master/docs/1-getting-started.md</>\n"
+                "post-install-output": [
+                    "  * <fg=blue>Configure</> your own storages in <comment>config/packages/flysystem.yaml</comment>.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at:",
+                    "    <comment>https://github.com/thephpleague/flysystem-bundle/blob/master/docs/1-getting-started.md</>"
+                ]
             },
             "files": {
                 "var/storage/.gitignore": {

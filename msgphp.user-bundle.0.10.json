@@ -25,7 +25,12 @@
                     "config/": "%CONFIG_DIR%/",
                     "src/": "%SRC_DIR%/"
                 },
-                "post-install-output": "  * Install the Symfony Maker Bundle using <info>composer require maker --dev</>. It's required for the next step.\n\n  * Run <info>bin/console make:user:msgphp</>. It will guide you through the basic setup by asking a series of\n    questions and generates the minimal application source files needed.\n"
+                "post-install-output": [
+                    "  * Install the Symfony Maker Bundle using <info>composer require maker --dev</>. It's required for the next step.",
+                    "",
+                    "  * Run <info>bin/console make:user:msgphp</>. It will guide you through the basic setup by asking a series of",
+                    "    questions and generates the minimal application source files needed."
+                ]
             },
             "files": {
                 "src/Entity/User.php": {

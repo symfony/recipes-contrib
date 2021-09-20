@@ -52,7 +52,11 @@
                     "/public/readme.html",
                     "/public/license.txt"
                 ],
-                "post-install-output": "  * Add the WordpressBundle routing file in your `config/routes.yaml`, after your custom routes to catch all Wordpress routes.\n\n  * <fg=blue>Read</> the documentation at <comment>https://github.com/mbo2olivier/mukadi-wordpress-bundle</>\n"
+                "post-install-output": [
+                    "  * Add the WordpressBundle routing file in your `config/routes.yaml`, after your custom routes to catch all Wordpress routes.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/mbo2olivier/mukadi-wordpress-bundle</>"
+                ]
             },
             "files": {
                 "public/.htaccess": {

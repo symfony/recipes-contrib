@@ -24,7 +24,10 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
                 },
-                "post-install-output": "  * <fg=blue>Configure</> instances in <comment>imper86_supervisor.yaml</> in your <comment>config/packages</> directory\n  * <fg=blue>Create supervisor config</> with command <comment>./bin/console i86:supervisor:rebuild</>\n"
+                "post-install-output": [
+                    "  * <fg=blue>Configure</> instances in <comment>imper86_supervisor.yaml</> in your <comment>config/packages</> directory",
+                    "  * <fg=blue>Create supervisor config</> with command <comment>./bin/console i86:supervisor:rebuild</>"
+                ]
             },
             "files": {
                 "config/packages/imper86_supervisor.yaml": {

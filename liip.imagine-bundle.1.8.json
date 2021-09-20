@@ -28,7 +28,12 @@
                 "gitignore": [
                     "/%PUBLIC_DIR%/media/cache/"
                 ],
-                "post-install-output": "  <fg=blue;options=bold>Configure</> <fg=blue>your transformations:</>\n    1. You <options=bold>MUST</> verify and uncomment the configuration in <comment>%CONFIG_DIR%/packages/liip_imagine.yaml</>.\n    2. You <options=bold>MAY</> configure your image transformation library (<comment>gmagick</>, <comment>imagick</>, or <comment>gd</> [default]).\n    3. You <options=bold>MAY</> define custom transformation definitions under the <comment>filter_sets</> option.\n"
+                "post-install-output": [
+                    "  <fg=blue;options=bold>Configure</> <fg=blue>your transformations:</>",
+                    "    1. You <options=bold>MUST</> verify and uncomment the configuration in <comment>%CONFIG_DIR%/packages/liip_imagine.yaml</>.",
+                    "    2. You <options=bold>MAY</> configure your image transformation library (<comment>gmagick</>, <comment>imagick</>, or <comment>gd</> [default]).",
+                    "    3. You <options=bold>MAY</> define custom transformation definitions under the <comment>filter_sets</> option."
+                ]
             },
             "files": {
                 "config/routes/liip_imagine.yaml": {

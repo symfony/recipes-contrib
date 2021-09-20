@@ -24,7 +24,17 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
                 },
-                "post-install-output": "<bg=green;fg=white></>\n<bg=green;fg=white> Uncomment the configuration provided for doctrine\n<bg=green;fg=white> and now can use the phone bundle as described here: </>\n<bg=green;fg=white> https://github.com/odolbeau/phone-number-bundle#usage </>\n<bg=green;fg=white> The Doctrine configuration has been already done.</>\n<bg=green;fg=white> You now can use `phone_number` as an ORM-Type: </>\n\n  /** @ORM\\Column(type=\"phone_number\") */\n  private $phoneNumber;\n"
+                "post-install-output": [
+                    "<bg=green;fg=white></>",
+                    "<bg=green;fg=white> Uncomment the configuration provided for doctrine",
+                    "<bg=green;fg=white> and now can use the phone bundle as described here: </>",
+                    "<bg=green;fg=white> https://github.com/odolbeau/phone-number-bundle#usage </>",
+                    "<bg=green;fg=white> The Doctrine configuration has been already done.</>",
+                    "<bg=green;fg=white> You now can use `phone_number` as an ORM-Type: </>",
+                    "",
+                    "  /** @ORM\\Column(type=\"phone_number\") */",
+                    "  private $phoneNumber;"
+                ]
             },
             "files": {
                 "config/packages/misd_phone_number.yaml": {

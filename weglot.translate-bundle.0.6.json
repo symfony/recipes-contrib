@@ -27,7 +27,16 @@
                 "env": {
                     "WG_API_KEY": "..."
                 },
-                "post-install-output": "  * The weglot/translate-bundle uses Weglot service. Create a free\n    account on https://dashboard.weglot.com/register and modify your WG_API_KEY\n    config in <fg=green>.env</>\n\n  * Edit the configuration in <fg=green>config/packages/weglot_translate.yaml</>\n    to start translate your website.\n\nMore details: https://github.com/weglot/translate-bundle\n\n"
+                "post-install-output": [
+                    "  * The weglot/translate-bundle uses Weglot service. Create a free",
+                    "    account on https://dashboard.weglot.com/register and modify your WG_API_KEY",
+                    "    config in <fg=green>.env</>",
+                    "",
+                    "  * Edit the configuration in <fg=green>config/packages/weglot_translate.yaml</>",
+                    "    to start translate your website.",
+                    "",
+                    "More details: https://github.com/weglot/translate-bundle"
+                ]
             },
             "files": {
                 "config/packages/weglot_translate.yaml": {

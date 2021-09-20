@@ -24,7 +24,10 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
                 },
-                "post-install-output": "  * Learn how to integrate Content Browser into your CMS backend by reading\n    the documentation located at: <comment>https://docs.netgen.io/projects/cb/en/latest/</>\n"
+                "post-install-output": [
+                    "  * Learn how to integrate Content Browser into your CMS backend by reading",
+                    "    the documentation located at: <comment>https://docs.netgen.io/projects/cb/en/latest/</>"
+                ]
             },
             "files": {
                 "config/routes/netgen_content_browser.yaml": {

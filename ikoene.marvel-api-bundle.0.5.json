@@ -29,7 +29,11 @@
                     "MARVEL_PUBLIC_API_KEY": "...",
                     "MARVEL_PRIVATE_API_KEY": "..."
                 },
-                "post-install-output": "  * Create a free account on https://developers.marvel.com\n    and modify your MARVEL_PUBLIC_API_KEY and MARVEL_PRIVATE_API_KEY\n    config in <fg=green>.env</>\n"
+                "post-install-output": [
+                    "  * Create a free account on https://developers.marvel.com",
+                    "    and modify your MARVEL_PUBLIC_API_KEY and MARVEL_PRIVATE_API_KEY",
+                    "    config in <fg=green>.env</>"
+                ]
             },
             "files": {
                 "config/packages/ikoene_marvel_api.yaml": {

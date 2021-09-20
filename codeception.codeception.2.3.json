@@ -20,7 +20,22 @@
                     "codeception.yml": "codeception.yml",
                     "tests/": "tests/"
                 },
-                "post-install-output": "File codeception.yml created        <- global configuration\ntests/unit created                  <- unit tests\ntests/unit.suite.yml written        <- unit tests suite configuration\ntests/functional created            <- functional tests\ntests/functional.suite.yml written  <- functional tests suite configuration\ntests/acceptance created            <- acceptance tests\ntests/acceptance.suite.yml written  <- acceptance tests suite configuration\n<info>Codeception is installed for acceptance, functional, and unit testing</info>\n<options=bold>Next steps:</options=bold>\n1. Edit <options=bold>tests/acceptance.suite.yml</options=bold> to set the url of your application. Change PhpBrowser to WebDriver to enable browser testing.\n2. Edit <options=bold>tests/functional.suite.yml</options=bold> to enable Doctrine module if needed.\n3. Create your first acceptance test using <comment>vendor/bin/codecept g:cest acceptance First</comment>\n4. Write your first test in <options=bold>tests/acceptance/FirstCest.php</options=bold>\n5. Run tests using: <comment>vendor/bin/codecept run</comment>\n"
+                "post-install-output": [
+                    "File codeception.yml created        <- global configuration",
+                    "tests/unit created                  <- unit tests",
+                    "tests/unit.suite.yml written        <- unit tests suite configuration",
+                    "tests/functional created            <- functional tests",
+                    "tests/functional.suite.yml written  <- functional tests suite configuration",
+                    "tests/acceptance created            <- acceptance tests",
+                    "tests/acceptance.suite.yml written  <- acceptance tests suite configuration",
+                    "<info>Codeception is installed for acceptance, functional, and unit testing</info>",
+                    "<options=bold>Next steps:</options=bold>",
+                    "1. Edit <options=bold>tests/acceptance.suite.yml</options=bold> to set the url of your application. Change PhpBrowser to WebDriver to enable browser testing.",
+                    "2. Edit <options=bold>tests/functional.suite.yml</options=bold> to enable Doctrine module if needed.",
+                    "3. Create your first acceptance test using <comment>vendor/bin/codecept g:cest acceptance First</comment>",
+                    "4. Write your first test in <options=bold>tests/acceptance/FirstCest.php</options=bold>",
+                    "5. Run tests using: <comment>vendor/bin/codecept run</comment>"
+                ]
             },
             "files": {
                 "codeception.yml": {

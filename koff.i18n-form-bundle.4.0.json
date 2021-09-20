@@ -24,7 +24,15 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
                 },
-                "post-install-output": "  * <fg=blue>Finish</> bundle configuration:\n    1. Open <comment>config/packages/twig.yaml</>\n    2. Add form template to form_themes section like this:\n\n    twig:\n        form_themes:\n            - '@I18nForm/bootstrap_4_form.html.twig'\n"
+                "post-install-output": [
+                    "  * <fg=blue>Finish</> bundle configuration:",
+                    "    1. Open <comment>config/packages/twig.yaml</>",
+                    "    2. Add form template to form_themes section like this:",
+                    "",
+                    "    twig:",
+                    "        form_themes:",
+                    "            - '@I18nForm/bootstrap_4_form.html.twig'"
+                ]
             },
             "files": {
                 "config/packages/i18n_form.yaml": {

@@ -24,7 +24,9 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
                 },
-                "post-install-output": "  * <fg=blue>Read</> the documentation at <comment>https://github.com/MacPaw/sentry-monolog-adapter</>\n"
+                "post-install-output": [
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/MacPaw/sentry-monolog-adapter</>"
+                ]
             },
             "files": {
                 "config/packages/sentry_monolog_adapter.yaml": {

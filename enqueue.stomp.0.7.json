@@ -16,7 +16,13 @@
             "package": "enqueue/stomp",
             "version": "0.7",
             "manifest": {
-                "post-install-output": "  * Configure <comment>ENQUEUE_DSN=stomp://example.com:1000?login=theLogin</comment>\n    in your <comment>.env</comment> file.\n\n  * For the full options, see\n    <comment>https://github.com/php-enqueue/enqueue-dev/blob/master/docs/transport/stomp.md</comment>\n"
+                "post-install-output": [
+                    "  * Configure <comment>ENQUEUE_DSN=stomp://example.com:1000?login=theLogin</comment>",
+                    "    in your <comment>.env</comment> file.",
+                    "",
+                    "  * For the full options, see",
+                    "    <comment>https://github.com/php-enqueue/enqueue-dev/blob/master/docs/transport/stomp.md</comment>"
+                ]
             },
             "files": [],
             "origin": "enqueue/stomp:0.7@github.com/symfony/recipes-contrib:master",

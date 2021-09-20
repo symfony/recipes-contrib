@@ -24,7 +24,11 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
                 },
-                "post-install-output": "  * <fg=blue>Configure</> the bundle:\n    <comment>config/packages/api_platform_ms.yaml</>\n    <comment>https://github.com/mtarld/api-platform-ms-bundle</>\n"
+                "post-install-output": [
+                    "  * <fg=blue>Configure</> the bundle:",
+                    "    <comment>config/packages/api_platform_ms.yaml</>",
+                    "    <comment>https://github.com/mtarld/api-platform-ms-bundle</>"
+                ]
             },
             "files": {
                 "config/packages/api_platform_ms.yaml": {

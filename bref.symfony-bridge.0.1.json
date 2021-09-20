@@ -22,7 +22,12 @@
                 "gitignore": [
                     "/.serverless/"
                 ],
-                "post-install-output": "  * <fg=blue>Read</> the full documentation to properly configure your\n    Symfony application at <comment>https://bref.sh/docs/frameworks/symfony.html</>\n\n  * Bref documentation: <comment>https://bref.sh/docs/</>\n"
+                "post-install-output": [
+                    "  * <fg=blue>Read</> the full documentation to properly configure your",
+                    "    Symfony application at <comment>https://bref.sh/docs/frameworks/symfony.html</>",
+                    "",
+                    "  * Bref documentation: <comment>https://bref.sh/docs/</>"
+                ]
             },
             "files": {
                 "serverless.yaml": {

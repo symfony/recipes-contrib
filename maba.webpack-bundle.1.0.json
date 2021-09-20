@@ -34,7 +34,11 @@
                 "composer-scripts": {
                     "maba:webpack:install-node-modules": "symfony-cmd"
                 },
-                "post-install-output": "Run <info>maba:webpack:compile</info> to compile assets when deploying.\n\nAlways run <info>maba:webpack:dev-server</info> in dev environment.\n"
+                "post-install-output": [
+                    "Run <info>maba:webpack:compile</info> to compile assets when deploying.",
+                    "",
+                    "Always run <info>maba:webpack:dev-server</info> in dev environment."
+                ]
             },
             "files": {
                 "assets/.gitignore": {

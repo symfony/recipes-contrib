@@ -30,7 +30,13 @@
                     "OPTIMUS_INVERSE": "715827883",
                     "OPTIMUS_RANDOM": "1592469642"
                 },
-                "post-install-output": "  * Generate your spark numbers by running <fg=green>php vendor/bin/optimus spark -f env</>\n    and configure them in your <fg=green>.env</>\n\nOptimus Documentation: https://github.com/jenssegers/optimus\nBundle Documentation: https://github.com/ckrack/optimus-bundle\n\n"
+                "post-install-output": [
+                    "  * Generate your spark numbers by running <fg=green>php vendor/bin/optimus spark -f env</>",
+                    "    and configure them in your <fg=green>.env</>",
+                    "",
+                    "Optimus Documentation: https://github.com/jenssegers/optimus",
+                    "Bundle Documentation: https://github.com/ckrack/optimus-bundle"
+                ]
             },
             "files": {
                 "config/packages/ckrack_optimus.yaml": {

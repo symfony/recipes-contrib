@@ -24,7 +24,10 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
                 },
-                "post-install-output": "  * <fg=blue>Configure</> jobs in <comment>imper86_jobby.yaml</> in your <comment>config/packages</> directory\n  * <fg=blue>Check config details</> with command <comment>./bin/console config:dump imper86_jobby</>\n"
+                "post-install-output": [
+                    "  * <fg=blue>Configure</> jobs in <comment>imper86_jobby.yaml</> in your <comment>config/packages</> directory",
+                    "  * <fg=blue>Check config details</> with command <comment>./bin/console config:dump imper86_jobby</>"
+                ]
             },
             "files": {
                 "config/packages/imper86_jobby.yaml": {
