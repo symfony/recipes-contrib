@@ -42,7 +42,6 @@
                 }
             },
             "origin": "core23/shariff-bundle:3.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

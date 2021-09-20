@@ -23,7 +23,8 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "    Download the adapters you want to use from <comment>http://www.php-cache.com/en/latest/#cache-pool-implementations</comment>.\n"
             },
             "files": {
                 "config/packages/cache_adapter.yaml": {
@@ -33,7 +34,6 @@
                 }
             },
             "origin": "cache/adapter-bundle:1.1@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

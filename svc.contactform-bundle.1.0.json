@@ -24,7 +24,8 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/",
                     "assets/": "assets/"
-                }
+                },
+                "post-install-output": "  * Please adapt config/packages/svc-contactform.yaml\n"
             },
             "files": {
                 "config/routes/svc_contactform.yaml": {
@@ -44,7 +45,6 @@
                 }
             },
             "origin": "svc/contactform-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

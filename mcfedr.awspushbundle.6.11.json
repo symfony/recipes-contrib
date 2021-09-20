@@ -29,7 +29,8 @@
                     "AWS_ACCESS_KEY_ID": "not-a-real-key",
                     "AWS_SECRET_ACCESS_KEY": "not-a-real-secret",
                     "AWS_REGION": "us-east-1"
-                }
+                },
+                "post-install-output": "  * You can add more platforms to your config in config/packages/awspush.yaml\n\n  * You can remove the AWS credentials if they are configured in your app env or\n    via an EC2 role.\n\n  * <fg=blue>Read</> the documentation at <comment>https://github.com/mcfedr/awspushbundle/blob/master/README.md</>\n\n"
             },
             "files": {
                 "config/packages/awspush.yaml": {
@@ -39,7 +40,6 @@
                 }
             },
             "origin": "mcfedr/awspushbundle:6.11@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

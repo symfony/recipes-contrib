@@ -27,7 +27,8 @@
                 "env": {
                     "JACQUESNDL_MAILER_SENDER_NAME": "Example",
                     "JACQUESNDL_MAILER_SENDER_ADDRESS": "example@domain.tld"
-                }
+                },
+                "post-install-output": "  * The Jacquesndl/MailerBundle needs your default sender configuration.\n    Modify your JACQUESNDL_MAILER_SENDER_NAME and JACQUESNDL_MAILER_SENDER_ADDRESS config in <fg=green>.env</>\n"
             },
             "files": {
                 "config/packages/jacquesndl_mailer.yaml": {
@@ -37,7 +38,6 @@
                 }
             },
             "origin": "jacquesndl/mailer-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

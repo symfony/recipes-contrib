@@ -33,7 +33,6 @@
                 }
             },
             "origin": "elao/enum:1.7@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

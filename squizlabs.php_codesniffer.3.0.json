@@ -32,7 +32,6 @@
                 }
             },
             "origin": "squizlabs/php_codesniffer:3.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

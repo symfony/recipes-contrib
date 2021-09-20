@@ -26,7 +26,8 @@
                 },
                 "env": {
                     "UPTIMEROBOT_API_KEY": "api_key"
-                }
+                },
+                "post-install-output": "  * Your Connect Holland Uptime Robot bundle installation is almost ready:\n    1. Add your Uptime Robot Api Key to the .env file\n"
             },
             "files": {
                 "config/packages/connectholland_uptime_robot.yaml": {
@@ -36,7 +37,6 @@
                 }
             },
             "origin": "connectholland/uptime-robot-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

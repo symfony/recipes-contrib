@@ -31,7 +31,8 @@
                     "#1": "Valid values are 'homo', 'prod', 'int' and 'dev'.",
                     "#2": "e.g. 'homo' for 'Homologation', 'prod' for 'Production', 'int' for 'Integration'",
                     "PAYLINE_ENVIRONMENT": "homo"
-                }
+                },
+                "post-install-output": "  * <fg=blue>Configure</> Payline environment variables in <comment>.env</comment>;\n\n  * <fg=blue>Using Symfony 4.4/5.x: Encrypt sensitive environment variables</>\n    with <comment>bin/console secrets:set</comment> command (optional);\n\n  * Using Symfony 3.4/4.x: Ensure to correctly expose the environment variables commented in `.env` file.\n\n  * <fg=blue>Read</> the documentation at:\n    <comment>https://github.com/lolautruche/LolautruchePaylineBundle/blob/master/Resources/doc/00-index.md</>\n"
             },
             "files": {
                 "config/routes/payline.yaml": {
@@ -46,7 +47,6 @@
                 }
             },
             "origin": "lolautruche/payline-bundle:2.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

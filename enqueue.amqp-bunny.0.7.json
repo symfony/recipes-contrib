@@ -15,10 +15,11 @@
             "repository": "github.com/symfony/recipes-contrib",
             "package": "enqueue/amqp-bunny",
             "version": "0.7",
-            "manifest": [],
+            "manifest": {
+                "post-install-output": "  * Configure <comment>ENQUEUE_DSN=amqp+bunny://guest:guest@localhost:5672/%2f</comment>\n    in your <comment>.env</comment> file.\n\n  * For the full options, see\n    <comment>https://github.com/php-enqueue/enqueue-dev/blob/master/docs/transport/amqp_bunny.md</comment>\n"
+            },
             "files": [],
             "origin": "enqueue/amqp-bunny:0.7@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

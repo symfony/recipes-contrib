@@ -41,7 +41,6 @@
                 }
             },
             "origin": "pomm-project/pomm-bundle:2.3@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

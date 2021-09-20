@@ -33,7 +33,6 @@
                 }
             },
             "origin": "goetas/twital-bundle:1.3@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

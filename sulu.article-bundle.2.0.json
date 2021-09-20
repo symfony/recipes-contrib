@@ -31,7 +31,8 @@
                 "env": {
                     "ELASTICSEARCH_HOST": "127.0.0.1:9200",
                     "ELASTICSEARCH_INDEX": "su_articles"
-                }
+                },
+                "post-install-output": "  * The <fg=green>SuluArticleBundle</> is almost ready:\n    1. Configure elasticsearch host and index in the <comment>.env</> file.\n    2. Initialize PHPCR by running <info>php bin/console sulu:document:init</>.\n    3. Create the elasticsearch indices by running <info>php bin/console ongr:es:index:create</> and <comment>php bin/console ongr:es:index:create --manager live</>.\n    4. Make sure your user has all the necessary permissions for the <fg=green>SuluArticleBundle</>.\n\n  * <fg=blue>Read</> the documentation at <comment>https://github.com/sulu/SuluArticleBundle/blob/2.x/Resources/doc/README.md</>\n"
             },
             "files": {
                 "config/routes/sulu_article_admin.yaml": {
@@ -46,7 +47,6 @@
                 }
             },
             "origin": "sulu/article-bundle:2.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

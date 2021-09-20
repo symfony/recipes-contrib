@@ -19,7 +19,8 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/",
                     "src/": "%SRC_DIR%/"
-                }
+                },
+                "post-install-output": "  * If you are using <info>sonata-project/classification-bundle</>, fix annotations for\n    <info>App\\Entity\\SonataMediaMedia::$category</>\n"
             },
             "files": {
                 "src/Entity/SonataMediaGallery.php": {
@@ -44,7 +45,6 @@
                 }
             },
             "origin": "sonata-project/media-orm-pack:1.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

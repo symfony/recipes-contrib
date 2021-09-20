@@ -23,7 +23,8 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "  You <options=bold>must</> to define at least one provider configuration in <comment>%CONFIG_DIR%/packages/yamilovs_sms.yaml</>.\n\n  * <fg=blue>More info</> you can find in the documentation at <comment>https://github.com/yamilovs/SmsBundle#configuration</>\n"
             },
             "files": {
                 "config/packages/yamilovs_sms.yaml": {
@@ -33,7 +34,6 @@
                 }
             },
             "origin": "yamilovs/sms-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

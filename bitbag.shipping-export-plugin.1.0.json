@@ -26,7 +26,8 @@
                 },
                 "gitignore": [
                     "/shipping_labels/"
-                ]
+                ],
+                "post-install-output": "  * <fg=blue>Create</> directory named <comment>shipping_labels</comment> in project root or customize <comment>bitbag.shipping_labels_path</comment> parameter.\n\n  If you want to contact us, the best way is to fill the form on our website or send us an e-mail to <comment>hello@bitbag.io</comment> with your question(s).\n  We guarantee that we answer as soon as we can!\n"
             },
             "files": {
                 "config/routes/bitbag_shipping_export_plugin.yaml": {
@@ -41,7 +42,6 @@
                 }
             },
             "origin": "bitbag/shipping-export-plugin:1.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

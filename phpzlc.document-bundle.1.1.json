@@ -47,7 +47,6 @@
                 }
             },
             "origin": "phpzlc/document-bundle:1.1@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

@@ -38,7 +38,6 @@
                 }
             },
             "origin": "sylius/admin-order-creation-plugin:0.6@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

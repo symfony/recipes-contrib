@@ -28,7 +28,8 @@
                     "#1": "You can request a api key on the developer page of unsplash here: https://unsplash.com/developers",
                     "UNSPLASH_APPLICATION_ID": "",
                     "UNSPLASH_APPLICATION_SECRET": ""
-                }
+                },
+                "post-install-output": "  * Modify the UNSPLASH_APPLICATION_ID and UNSPLASH_APPLICATION_SECRET config in .env\n\n  * Don't forget to add the vue component in you javascript\n\n  * You can check the instructions on the github repo: https://github.com/disjfa/mozaic-bundle\n"
             },
             "files": {
                 "config/routes/disjfa_mozaic.yaml": {
@@ -43,7 +44,6 @@
                 }
             },
             "origin": "disjfa/mozaic-bundle:0.1@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

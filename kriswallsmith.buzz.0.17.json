@@ -28,7 +28,6 @@
                 }
             },
             "origin": "kriswallsmith/buzz:0.17@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

@@ -24,7 +24,8 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/",
                     "src/": "%SRC_DIR%/"
-                }
+                },
+                "post-install-output": "  * Create an User entity and extend Enigma972\\UserBundle\\Entity\\User class\n\n  * And add all properties and methods you needs, it is your!\n\nDocumentation: https://www.github.com/enigma972/user-bundle\n"
             },
             "files": {
                 "src/Repository/UserRepository.php": {
@@ -49,7 +50,6 @@
                 }
             },
             "origin": "enigma972/user-bundle:0.4@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

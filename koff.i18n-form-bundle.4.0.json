@@ -23,7 +23,8 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "  * <fg=blue>Finish</> bundle configuration:\n    1. Open <comment>config/packages/twig.yaml</>\n    2. Add form template to form_themes section like this:\n\n    twig:\n        form_themes:\n            - '@I18nForm/bootstrap_4_form.html.twig'\n"
             },
             "files": {
                 "config/packages/i18n_form.yaml": {
@@ -33,7 +34,6 @@
                 }
             },
             "origin": "koff/i18n-form-bundle:4.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

@@ -23,7 +23,8 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "    1. Define your schema, read documentation <comment>https://github.com/overblog/GraphQLBundle/blob/0.9/Resources/doc/definitions/index.md</> or\n    <comment>https://github.com/overblog/GraphQLBundle/blob/0.10/Resources/doc/definitions/index.md</>\n    2. Browse to <comment>/graphiql</>\n    3. Optionally dump your schema: run <comment>bin/console graphql:dump-schema</comment>\n"
             },
             "files": {
                 "config/routes/dev/graphql_graphiql.yaml": {
@@ -48,7 +49,6 @@
                 }
             },
             "origin": "overblog/graphql-bundle:0.9@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

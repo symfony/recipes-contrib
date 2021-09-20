@@ -23,7 +23,8 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "  * Navigate to config/packages/comsave_outbound_message.yaml and change the values to your desired paths.\n  * For more information you can find the read me file at https://github.com/comsave/salesforce-outbound-message-bundle\n"
             },
             "files": {
                 "config/comsave_outbound_message.yaml": {
@@ -33,7 +34,6 @@
                 }
             },
             "origin": "comsave/salesforce-outbound-message-bundle:0.3@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

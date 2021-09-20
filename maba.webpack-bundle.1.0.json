@@ -33,7 +33,8 @@
                 ],
                 "composer-scripts": {
                     "maba:webpack:install-node-modules": "symfony-cmd"
-                }
+                },
+                "post-install-output": "Run <info>maba:webpack:compile</info> to compile assets when deploying.\n\nAlways run <info>maba:webpack:dev-server</info> in dev environment.\n"
             },
             "files": {
                 "assets/.gitignore": {
@@ -43,7 +44,6 @@
                 }
             },
             "origin": "maba/webpack-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

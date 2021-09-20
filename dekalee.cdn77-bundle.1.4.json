@@ -37,7 +37,6 @@
                 }
             },
             "origin": "dekalee/cdn77-bundle:1.4@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

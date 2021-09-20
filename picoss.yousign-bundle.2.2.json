@@ -30,7 +30,8 @@
                     "YOUSIGN_API_KEY": "api_key",
                     "YOUSIGN_USERNAME": "username",
                     "YOUSIGN_PASSWORD": "password"
-                }
+                },
+                "post-install-output": "  * You now need to create a yousign account\n    1. Visit <info>https://demo.yousign.fr/fr/public/api/registration</info>\n    2. Modify your YOUSIGN_API_KEY, YOUSIGN_USERNAME and YOUSIGN_PASSWORD config in <fg=green>.env</>\n"
             },
             "files": {
                 "config/packages/picoss_yousign.yaml": {
@@ -40,7 +41,6 @@
                 }
             },
             "origin": "picoss/yousign-bundle:2.2@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

@@ -28,7 +28,8 @@
                     "#1": "Get your API key and secret from https://g.co/recaptcha/v3",
                     "RECAPTCHA3_KEY": "my_site_key",
                     "RECAPTCHA3_SECRET": "my_secret"
-                }
+                },
+                "post-install-output": "  * <fg=blue>Make sure</> you have proper values in your .env file\n  * <fg=blue>Read</> the documentation at <comment>https://github.com/karser/KarserRecaptcha3Bundle</>\n"
             },
             "files": {
                 "config/packages/karser_recaptcha3.yaml": {
@@ -38,7 +39,6 @@
                 }
             },
             "origin": "karser/karser-recaptcha3-bundle:0.1@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

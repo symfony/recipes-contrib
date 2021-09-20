@@ -28,7 +28,8 @@
                     "#1": "Get your API key from https://developer.marvel.com",
                     "MARVEL_PUBLIC_API_KEY": "...",
                     "MARVEL_PRIVATE_API_KEY": "..."
-                }
+                },
+                "post-install-output": "  * Create a free account on https://developers.marvel.com\n    and modify your MARVEL_PUBLIC_API_KEY and MARVEL_PRIVATE_API_KEY\n    config in <fg=green>.env</>\n"
             },
             "files": {
                 "config/packages/ikoene_marvel_api.yaml": {
@@ -38,7 +39,6 @@
                 }
             },
             "origin": "ikoene/marvel-api-bundle:0.5@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

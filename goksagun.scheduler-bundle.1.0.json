@@ -23,7 +23,8 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "  * <fg=blue>Configure</> bundle in <comment>config/packages/scheduler.yaml</>\n  * <fg=blue>Read</> the documentation at <comment>https://github.com/goksagun/scheduler-bundle/blob/master/README.md</>\n"
             },
             "files": {
                 "config/packages/scheduler.yaml": {
@@ -33,7 +34,6 @@
                 }
             },
             "origin": "goksagun/scheduler-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

@@ -23,7 +23,8 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "    * <fg=blue>Edit</> mael_intervention_image.yaml to configure the driver in config/packages\n    * <fg=blue>Read</> documentation at <comment>https://github.com/Mael-91/InterventionImageBundle/blob/master/README.md</>\n    \n"
             },
             "files": {
                 "config/packages/mael_intervention_image.yaml": {
@@ -33,7 +34,6 @@
                 }
             },
             "origin": "mael/intervention-image-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

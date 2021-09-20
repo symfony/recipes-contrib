@@ -27,7 +27,8 @@
                 "env": {
                     "NORDEUS_CROWD_APPLICATION_NAME": "crowd_application_name",
                     "NORDEUS_CROWD_APPLICATION_PASSWORD": "crowd_application_password"
-                }
+                },
+                "post-install-output": "  * <fg=blue>Configure parameters:</>: <comment>https://github.com/Nordeus/CrowdUserBundle#4-configure-parameters</>\n  * <fg=blue>Configure your application's security</>: <comment>https://github.com/Nordeus/CrowdUserBundle#5-configure-your-applications-security</>\n  * Your application is now ready to use!\n\nFull documentation is available at: <comment>https://github.com/Nordeus/CrowdUserBundle</>\n"
             },
             "files": {
                 "config/routes/nordeus_crowd_user.yaml": {
@@ -42,7 +43,6 @@
                 }
             },
             "origin": "nordeus/crowd-user-bundle:2.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

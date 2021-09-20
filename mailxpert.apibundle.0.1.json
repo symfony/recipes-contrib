@@ -48,7 +48,6 @@
                 }
             },
             "origin": "mailxpert/apibundle:0.1@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

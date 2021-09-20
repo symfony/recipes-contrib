@@ -23,7 +23,8 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "  * The <fg=green>SuluHeadlessBundle</> is almost ready:\n    Change the controller of your templates to <info>Sulu\\Bundle\\HeadlessBundle\\Controller\\HeadlessWebsiteController::indexAction</>.\n    Read the documentation at <comment>https://github.com/sulu/SuluHeadlessBundle/blob/0.x/README.md</> to learn how.\n"
             },
             "files": {
                 "config/routes/sulu_headless_website.yaml": {
@@ -33,7 +34,6 @@
                 }
             },
             "origin": "sulu/headless-bundle:0.1@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

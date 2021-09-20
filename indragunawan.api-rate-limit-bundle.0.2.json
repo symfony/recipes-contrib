@@ -33,7 +33,6 @@
                 }
             },
             "origin": "indragunawan/api-rate-limit-bundle:0.2@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

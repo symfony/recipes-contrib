@@ -59,7 +59,6 @@
                 }
             },
             "origin": "friendsofsymfony/oauth-server-bundle:1.6@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

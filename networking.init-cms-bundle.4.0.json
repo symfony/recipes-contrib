@@ -32,7 +32,8 @@
                 },
                 "composer-scripts": {
                     "ckeditor:install --clear=drop": "symfony-cmd"
-                }
+                },
+                "post-install-output": "  * The <fg=blue>InitCmsBundle</> imports many configuration files, such as doctrine.yaml, security.yaml etc. In order\n  to ensure your app will work please do the following:\n    1. Check that all files imported via the networking_init_cms.yaml file are not overwritten with a similar\n       configuration file in your /config/packages folder. !IMPORTANT the doctrine.yaml and security.yaml must be either\n       deleted, or update/extended with the configuration as proposed in the doctrine.yaml and security.yaml files\n       included with the CMS.\n    2. Check that the Page and User entities were copied to the correct entity folder, and are configured correctly.\n    3. Configure your languages in the networking_init_cms.yaml file, for multi-language support.\n    4. Configure the lexik translation bundles fallback_local and managed_locales parameters to support DB based translations.\n    5. Clear the cache again so that the new config files are loaded correctly.\n    6. Check your database configuration, and back up your database if you haven't done so already.\n    7. Update your database <fg=blue>bin/console doctrine:schema:update</> or using the doctrine migrate commands\n    8. Use the command networking:initcms:install to install the DB install fixtures and create a superuser admin.\n       ALTERNATIVELY you can use the networking:initcms:data-setup if you just want to install the data structure and fixtures\n    9. Enable or disable full page caching by setting networking_init_cms.cache.activate to true/false\n"
             },
             "files": {
                 "src/Entity/Page.php": {
@@ -67,7 +68,6 @@
                 }
             },
             "origin": "networking/init-cms-bundle:4.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

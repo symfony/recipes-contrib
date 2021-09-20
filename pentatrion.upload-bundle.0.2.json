@@ -23,7 +23,8 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "  <fg=blue;options=bold>Configure</> <fg=blue>your transformations:</>\n    1. Install optional dependencies <comment>composer require symfony/validator liip/imagine-bundle imagine/imagine</>.\n    2. Verify and uncomment the configuration in <comment>%CONFIG_DIR%/packages/pentatrion_upload.yaml</>.\n    3. Create directory with Apache user access on <comment>public/uploads</>.\n\n  <fg=blue>If you have installed </><fg=blue;options=bold>liip/imagine-bundle</><fg=blue>:</>\n\n    1. Complete the configuration of <comment>%CONFIG_DIR%/packages/liip_imagine.yaml</> with your filters.\n    2. Create directory with Apache user access on <comment>public/media</>.\n"
             },
             "files": {
                 "config/routes/pentatrion_upload.yaml": {
@@ -38,7 +39,6 @@
                 }
             },
             "origin": "pentatrion/upload-bundle:0.2@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

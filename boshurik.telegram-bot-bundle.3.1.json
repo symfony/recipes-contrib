@@ -29,7 +29,8 @@
                 },
                 "container": {
                     "telegram_route_secret": "%env(TELEGRAM_BOT_TOKEN)%"
-                }
+                },
+                "post-install-output": "  * <fg=blue>Set</> <comment>TELEGRAM_BOT_TOKEN</> in your environment\n  * <fg=blue>Read</> the documentation at <comment>https://github.com/BoShurik/TelegramBotBundle</>\n"
             },
             "files": {
                 "config/routes/boshurik_telegram_bot.yaml": {
@@ -44,7 +45,6 @@
                 }
             },
             "origin": "boshurik/telegram-bot-bundle:3.1@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

@@ -23,7 +23,8 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "  * <fg=blue>Read</> the documentation at <comment>https://github.com/MacPaw/sentry-monolog-adapter</>\n"
             },
             "files": {
                 "config/packages/sentry_monolog_adapter.yaml": {
@@ -33,7 +34,6 @@
                 }
             },
             "origin": "macpaw/sentry-monolog-adapter:0.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

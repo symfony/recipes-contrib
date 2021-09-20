@@ -22,7 +22,8 @@
                 },
                 "conflict": {
                     "symfony/symfony": "<5.0"
-                }
+                },
+                "post-install-output": "  * <fg=blue>Finish</> package configuration:\n    1. Configure <comment>config/jane/json_schema.php</> with your specification details\n    2. Run <comment>bin/jane-json-schema-generate</>\n    3. Add <comment>generated/</> directory to your composer autoload definition (eg. <comment>\"MyApp\\\\Library\\\\Generated\\\\\": \"generated/\"</>)\n    4. Open <comment>config/packages/jane.yaml</> and replace <comment>MyApp\\Library\\Generated\\</> namespace with your generated namespace.\n    5. Then remove line comments\n\nDocumentation: https://jane.readthedocs.io/en/latest/\n"
             },
             "files": {
                 "config/jane/json_schema.php": {
@@ -42,7 +43,6 @@
                 }
             },
             "origin": "jane-php/json-schema:6.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

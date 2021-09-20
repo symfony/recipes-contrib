@@ -33,7 +33,8 @@
                     "NETOPIA_MOBILPAY_PUBLIC_CERT": "%kernel.project_dir%/%CONFIG_DIR%/netopia_mobilpay/public.cer",
                     "NETOPIA_MOBILPAY_PRIVATE_KEY": "%kernel.project_dir%/%CONFIG_DIR%/netopia_mobilpay/private.key",
                     "NETOPIA_MOBILPAY_SIGNATURE": "XXXX-XXXX-XXXX-XXXX-XXXX"
-                }
+                },
+                "post-install-output": "  * <fg=blue>Read</> the documentation at <comment>https://github.com/birkof/netopia-mobilpay-bundle</>\n"
             },
             "files": {
                 "config/netopia_mobilpay/.gitignore": {
@@ -53,7 +54,6 @@
                 }
             },
             "origin": "birkof/netopia-mobilpay-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

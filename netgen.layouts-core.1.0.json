@@ -30,7 +30,8 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "  * For Netgen Layouts to function, you need to import the database tables\n    into your database. Currently, only MySQL is supported. To import the tables,\n    use the following command from your project root:\n\n    <fg=green>php bin/console doctrine:migrations:migrate --configuration=vendor/netgen/layouts-core/migrations/doctrine.yml</>\n\n  * Enable ESI and fragments support in the <fg=green>config/packages/framework.yaml</> file.\n\n  * Complete the installation procedure by following instructions detailed at\n    <comment>https://docs.netgen.io/projects/layouts/en/latest/getting_started/install_existing_project.html</>\n\nDocumentation: <comment>https://docs.netgen.io/projects/layouts/en/latest/</>\n"
             },
             "files": {
                 "config/routes/netgen_layouts.yaml": {
@@ -40,7 +41,6 @@
                 }
             },
             "origin": "netgen/layouts-core:1.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

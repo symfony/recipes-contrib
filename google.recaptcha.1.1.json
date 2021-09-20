@@ -27,7 +27,8 @@
                 },
                 "container": {
                     "google_recaptcha_site_key": "%env(GOOGLE_RECAPTCHA_SITE_KEY)%"
-                }
+                },
+                "post-install-output": "  * Register a site on https://www.google.com/recaptcha/admin\n\n  * Modify your GOOGLE_RECAPTCHA_SITE_KEY and GOOGLE_RECAPTCHA_SECRET config in <fg=green>.env</>\n\n  * Inject the <fg=green>ReCaptcha\\ReCaptcha</> service when you need to <fg=green>verify</> a submitted captcha\n"
             },
             "files": {
                 "config/packages/google_recaptcha.yaml": {
@@ -37,7 +38,6 @@
                 }
             },
             "origin": "google/recaptcha:1.1@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

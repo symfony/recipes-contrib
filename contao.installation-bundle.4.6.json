@@ -33,7 +33,6 @@
                 }
             },
             "origin": "contao/installation-bundle:4.6@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

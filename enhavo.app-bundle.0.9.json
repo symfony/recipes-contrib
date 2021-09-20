@@ -39,7 +39,8 @@
                     "public/build/enhavo/*",
                     "public/build/theme/*",
                     "public/js/fos_routes.js"
-                ]
+                ],
+                "post-install-output": "  * Update your <fg=green>package.json</> file\n  * Update your <fg=green>webpack.config.js</> file\n  * Update your configurations\n  * Build your assets with\n\n      <fg=green>$ yarn encore dev</>\n      <fg=green>$ yarn routes:dump</>\n\n<fg=green>  Read more details about the steps:</>\n<fg=blue>  https://docs.enhavo.com/book/app-bundle/installation.html</>\n"
             },
             "files": {
                 "public/build/.gitignore": {
@@ -84,7 +85,6 @@
                 }
             },
             "origin": "enhavo/app-bundle:0.9@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

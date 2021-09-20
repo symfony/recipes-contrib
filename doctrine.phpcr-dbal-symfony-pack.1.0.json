@@ -49,7 +49,6 @@
                 }
             },
             "origin": "doctrine/phpcr-dbal-symfony-pack:1.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

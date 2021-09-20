@@ -23,7 +23,8 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "    1. Browse to <comment>/graphiql</>\n"
             },
             "files": {
                 "config/routes/dev/graphiql.yaml": {
@@ -33,7 +34,6 @@
                 }
             },
             "origin": "overblog/graphiql-bundle:0.1@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

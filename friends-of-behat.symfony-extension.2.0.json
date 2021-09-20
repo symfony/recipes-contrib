@@ -29,7 +29,8 @@
                 },
                 "gitignore": [
                     "/behat.yml"
-                ]
+                ],
+                "post-install-output": "    Run <comment>vendor/bin/behat</> to run the demo tests.\n"
             },
             "files": {
                 "features/demo.feature": {
@@ -54,7 +55,6 @@
                 }
             },
             "origin": "friends-of-behat/symfony-extension:2.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

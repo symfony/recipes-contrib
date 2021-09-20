@@ -27,7 +27,8 @@
                 "env": {
                     "APP_RECAPTCHA_SITE_KEY": "needed",
                     "APP_RECAPTCHA_SECRET": "needed"
-                }
+                },
+                "post-install-output": "    * <fg=blue>Insert</> sensitive values in your environment values\n    * <fg=blue>Read</> documentation at <comment>https://github.com/Bee-Lab/BeelabRecaptcha2Bundle/blob/master/docs/index.md</>\n"
             },
             "files": {
                 "config/packages/beelab_recaptcha2.yaml": {
@@ -37,7 +38,6 @@
                 }
             },
             "origin": "beelab/recaptcha2-bundle:2.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

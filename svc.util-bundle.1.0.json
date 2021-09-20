@@ -23,7 +23,8 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "  * Please adapt config/packages/svc-util.yaml\n"
             },
             "files": {
                 "config/routes/svc_util.yaml": {
@@ -38,7 +39,6 @@
                 }
             },
             "origin": "svc/util-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

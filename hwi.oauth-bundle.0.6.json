@@ -27,7 +27,8 @@
                 "env": {
                     "FB_ID": "",
                     "FB_SECRET": ""
-                }
+                },
+                "post-install-output": "  * <fg=blue>Configure</> your application:\n    1. Add firewall by adding <comment>- main:\n                                             anonymous: true\n                                             oauth:\n                                                 resource_owners:\n                                                     my_github:          \"/login/check-github\"\n                                                 login_path:        /login\n                                                 use_forward:       false\n                                                 failure_path:      /login\n\n                                                 oauth_user_provider:\n                                                     service: hwi_oauth.user.provider\n</> in your security firewalls section.\n\n  * <fg=blue>Read</> the documentation at <comment>https://github.com/hwi/HWIOAuthBundle/blob/master/Resources/doc/3-configuring_the_security_layer.md</>\n"
             },
             "files": {
                 "config/routes/hwi_oauth_routing.yaml": {
@@ -42,7 +43,6 @@
                 }
             },
             "origin": "hwi/oauth-bundle:0.6@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

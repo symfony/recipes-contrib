@@ -24,7 +24,8 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/",
                     "var/": "%VAR_DIR%/"
-                }
+                },
+                "post-install-output": "  * <fg=blue>Configure</> your own storages in <comment>config/packages/flysystem.yaml</comment>.\n\n  * <fg=blue>Read</> the documentation at:\n    <comment>https://github.com/thephpleague/flysystem-bundle/blob/master/docs/1-getting-started.md</>\n"
             },
             "files": {
                 "var/storage/.gitignore": {
@@ -39,7 +40,6 @@
                 }
             },
             "origin": "league/flysystem-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

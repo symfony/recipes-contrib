@@ -36,7 +36,6 @@
                 }
             },
             "origin": "codebuds/mattermost-publication-bundle:0.3@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

@@ -38,7 +38,6 @@
                 }
             },
             "origin": "nedac/sylius-order-now-plugin:1.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

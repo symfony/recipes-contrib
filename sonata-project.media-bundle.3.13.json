@@ -44,7 +44,6 @@
                 }
             },
             "origin": "sonata-project/media-bundle:3.13@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

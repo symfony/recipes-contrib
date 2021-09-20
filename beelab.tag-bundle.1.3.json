@@ -24,7 +24,8 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/",
                     "src/": "%SRC_DIR%/"
-                }
+                },
+                "post-install-output": "    * <fg=blue>Customize</> your new Tag entity\n    * <fg=blue>Read</> documentation at <comment>https://github.com/Bee-Lab/BeelabTagBundle/blob/master/Resources/docs/index.md</>\n\n"
             },
             "files": {
                 "src/Entity/Tag.php": {
@@ -39,7 +40,6 @@
                 }
             },
             "origin": "beelab/tag-bundle:1.3@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

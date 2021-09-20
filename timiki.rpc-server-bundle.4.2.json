@@ -44,7 +44,6 @@
                 }
             },
             "origin": "timiki/rpc-server-bundle:4.2@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

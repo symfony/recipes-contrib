@@ -29,7 +29,8 @@
                     "DEKALEE_MAILJET_SECRET_KEY": "@@your-secret_key",
                     "DEKALEE_MAILJET_BASE_TEMPLATE_ID": "your_base_template_id",
                     "DEKALEE_MAILJET_EMAIL_REPORTING": "your_reporting_email"
-                }
+                },
+                "post-install-output": "  * The Dekalee/MailjetBundle needs your mailjet configuration.\n    Modify your DEKALEE_MAILJET_API_KEY, DEKALEE_MAILJET_SECRET_KEY,\n    DEKALEE_MAILJET_BASE_TEMPLATE_ID, DEKALEE_MAILJET_EMAIL_REPORTING,\n    and DEKALEE_MAILJET_FORCE_DELIVER config in <fg=green>.env</>\n"
             },
             "files": {
                 "config/packages/dekalee_mailjet.yaml": {
@@ -39,7 +40,6 @@
                 }
             },
             "origin": "dekalee/mailjet-bundle:2.1@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

@@ -18,7 +18,8 @@
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "  * Buzz is great for sending PSR-7 requests. To get started you need to install\n    a PSR-7 implementation and a PSR-17 factory. There are many to choose from.\n    To quickly get started run <info>composer require nyholm/psr7</info>\n"
             },
             "files": {
                 "config/packages/buzz.yaml": {
@@ -28,7 +29,6 @@
                 }
             },
             "origin": "kriswallsmith/buzz:1.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

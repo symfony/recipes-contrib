@@ -23,7 +23,8 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "  <options=bold>Configure</> the bundle and routes:\n    1. You <options=bold>MUST</> verify the configuration in <comment>%CONFIG_DIR%/packages/monitor.yaml</>.\n    2. You <options=bold>MAY</> configure additional your checks and reporters, see the README.md for instructions.\n    3. You <options=bold>MAY</> configure the routes as specified in the README.md if you enable the controller.\n"
             },
             "files": {
                 "config/packages/monitor.yaml": {
@@ -33,7 +34,6 @@
                 }
             },
             "origin": "liip/monitor-bundle:2.6@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

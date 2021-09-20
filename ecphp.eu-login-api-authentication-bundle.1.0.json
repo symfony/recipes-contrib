@@ -43,7 +43,6 @@
                 }
             },
             "origin": "ecphp/eu-login-api-authentication-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

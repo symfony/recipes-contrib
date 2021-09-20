@@ -21,7 +21,8 @@
                 },
                 "gitignore": [
                     "/.serverless/"
-                ]
+                ],
+                "post-install-output": "  * <fg=blue>Read</> the full documentation to properly configure your\n    Symfony application at <comment>https://bref.sh/docs/frameworks/symfony.html</>\n\n  * Bref documentation: <comment>https://bref.sh/docs/</>\n"
             },
             "files": {
                 "serverless.yaml": {
@@ -31,7 +32,6 @@
                 }
             },
             "origin": "bref/symfony-bridge:0.1@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

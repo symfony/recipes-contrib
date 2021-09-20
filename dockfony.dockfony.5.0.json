@@ -30,11 +30,11 @@
                 },
                 "gitignore": [
                     "/docker/"
-                ]
+                ],
+                "post-install-output": "  * Edit the <fg=green>.env</> file to change the database setting if you require. For instance:\n\n        <fg=green>DATABASE_URL=mysql://$DB_USERNAME:$DB_PASSWORD@mysql:3306/$DB_DATABASE</>\n\n  * If using the Nelmio CORS bundle, you will need to wrap it's environment varible in quotes (\"\"):\n        <fg=green>CORS_ALLOW_ORIGIN=\"^https?://localhost(:[0-9]+)?$\"</>\n\n  * Run <fg=green>./dockfony start</> to get started\n\n  * Run <fg=green>./dockfony --help</> to display the list of available commands.\n\nDocumentation: https://github.com/dockfony/dockfony/README.md\n"
             },
             "files": [],
             "origin": "dockfony/dockfony:5.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

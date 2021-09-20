@@ -27,7 +27,8 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/",
                     "src/": "%SRC_DIR%/"
-                }
+                },
+                "post-install-output": "  * <fg=blue>Finish the media configuration</>:\n    1. Configure the flysystem filesystems for private and public file storage\n    2. Modify your MEDIA_REDIRECT_URL config in .env, a reverse proxy or CDN is highly recommended\n"
             },
             "files": {
                 "src/Entity/Media.php": {
@@ -47,7 +48,6 @@
                 }
             },
             "origin": "mediamonks/sonata-media-bundle:2.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

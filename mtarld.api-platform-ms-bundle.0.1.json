@@ -23,7 +23,8 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "  * <fg=blue>Configure</> the bundle:\n    <comment>config/packages/api_platform_ms.yaml</>\n    <comment>https://github.com/mtarld/api-platform-ms-bundle</>\n"
             },
             "files": {
                 "config/packages/api_platform_ms.yaml": {
@@ -33,7 +34,6 @@
                 }
             },
             "origin": "mtarld/api-platform-ms-bundle:0.1@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

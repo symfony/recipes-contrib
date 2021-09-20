@@ -23,7 +23,8 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "  *. Add healthcheck firewall to <fg=green>config/security.yaml</> file\n\n<comment>\nsecurity:\n    firewalls:\n        healthcheck:\n            pattern: ^/health\n            security: false\n</>\n\n  * <fg=blue>Read</> the documentation at <comment>https://github.com/MacPaw/symfony-health-check-bundle</>\n"
             },
             "files": {
                 "config/routes/symfony_health_check.yaml": {
@@ -38,7 +39,6 @@
                 }
             },
             "origin": "macpaw/symfony-health-check-bundle:0.1@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

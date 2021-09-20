@@ -36,7 +36,6 @@
                 }
             },
             "origin": "wow-apps/symfony-slack-bot:4.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

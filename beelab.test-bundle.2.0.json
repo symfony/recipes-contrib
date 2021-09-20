@@ -24,7 +24,6 @@
             },
             "files": [],
             "origin": "beelab/test-bundle:2.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

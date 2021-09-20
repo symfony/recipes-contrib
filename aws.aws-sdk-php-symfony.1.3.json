@@ -37,7 +37,6 @@
                 }
             },
             "origin": "aws/aws-sdk-php-symfony:1.3@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

@@ -25,7 +25,8 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "  * Your ability is almost ready:\n    1. Edit <comment>src/AbilityEventSubscriber</comment> and <info>implement</info> your logic:\n\n        public static function getSubscribedEvents(): array\n        {\n            return [\n                // can be found in AmbientLink\\SDK\\Event\\\n                EnterRoomEvent::NAME => 'onEnterRoom',\n            ];\n        }\n\n        public function onEnterRoom(EnterRoomEvent $event): void\n        {\n            $roomName = $event->roomName();\n\n            $this->logger->debug(sprintf('Some person enters room \"%s\".', $roomName));\n\n            // @todo implement logic here\n        }\n\n  * You can found Events in AmbientLink\\SDK\\Event\\\n  * Using Ability Command? Try <info>php bin/console ability:debug --dummy</info>\n"
             },
             "files": {
                 "config/packages/ability.yaml": {
@@ -35,7 +36,6 @@
                 }
             },
             "origin": "ambient-link/ability-sdk:1.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

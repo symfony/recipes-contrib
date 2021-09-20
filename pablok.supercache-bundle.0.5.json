@@ -33,7 +33,6 @@
                 }
             },
             "origin": "pablok/supercache-bundle:0.5@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

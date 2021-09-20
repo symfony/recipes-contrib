@@ -23,7 +23,8 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "  * Edit the <fg=green>config/packages/configuration_converter.yaml</> file to configure your own settings.\n\n  * Run <fg=green>bin/console configuration:convert</> to convert your configuration.\n\nDocumentation: https://github.com/GregoireHebert/configuration-converter-bundle\n"
             },
             "files": {
                 "config/packages/configuration_converter.yaml": {
@@ -33,7 +34,6 @@
                 }
             },
             "origin": "gheb/configuration-converter-bundle:0.5@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

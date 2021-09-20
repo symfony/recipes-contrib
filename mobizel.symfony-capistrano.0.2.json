@@ -20,11 +20,11 @@
                     "Capfile": "Capfile",
                     "Gemfile": "Gemfile",
                     "etc/": "etc/"
-                }
+                },
+                "post-install-output": "Please update etc/capistrano/deploy.rb, etc/capistrano/deploy/staging.rb and etc/capistrano/deploy/production.rb to accurately reflect your needs.\n\n  * <fg=blue>Read</> the capistrano symfony documentation at <comment>https://github.com/capistrano/symfony</>\n"
             },
             "files": [],
             "origin": "mobizel/symfony-capistrano:0.2@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

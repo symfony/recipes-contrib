@@ -23,7 +23,8 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "  * <fg=blue>Run</> <fg=green>doctrine:migrations:migrate</> to upgrade database\n  * <fg=blue>Add Cron</> on <fg=green>synolia:scheduler-run</> to execute scheduled commands\n"
             },
             "files": {
                 "config/routes/sylius_scheduler_command.yaml": {
@@ -38,7 +39,6 @@
                 }
             },
             "origin": "synolia/sylius-scheduler-command-plugin:2.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

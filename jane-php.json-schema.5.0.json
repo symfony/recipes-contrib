@@ -19,7 +19,8 @@
                 "copy-from-recipe": {
                     "bin/": "%BIN_DIR%/",
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "  * <fg=blue>Finish</> package configuration:\n    1. Configure <comment>config/jane/config.php</> with your specification details\n    2. Run <comment>bin/jane-generate</>\n    3. Add <comment>generated/</> directory to your composer autoload definition (eg. <comment>\"MyApp\\\\Library\\\\Generated\\\\\": \"generated/\"</>)\n    4. Open <comment>config/packages/jane.yaml</> and replace <comment>MyApp\\Library\\Generated\\Normalizer\\JaneObjectNormalizer</> class with your generated normalizer.\n    5. Then remove line comments\n\nDocumentation: https://jane.readthedocs.io/en/latest/\n"
             },
             "files": {
                 "config/jane/config.php": {
@@ -39,7 +40,6 @@
                 }
             },
             "origin": "jane-php/json-schema:5.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

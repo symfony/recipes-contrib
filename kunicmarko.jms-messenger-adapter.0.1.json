@@ -33,7 +33,6 @@
                 }
             },
             "origin": "kunicmarko/jms-messenger-adapter:0.1@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

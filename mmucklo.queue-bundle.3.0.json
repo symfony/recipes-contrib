@@ -23,7 +23,8 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "Please update config/packages/dtc_queue.yaml to accurately reflect your needs (odm / orm / beanstalkd / rabbit_mq etc.)\n  - For a full list of configuration options, see:\n    * https://github.com/mmucklo/DtcQueueBundle/Resources/doc/full-configuration.md\n\nFor admin, make sure the twig engine is turned on in framework.yaml\n\n  - If not, add the following to config/packages/framework.yaml:\n\nframework:\n    # ...\n    templating:\n        engines: ['twig']\n"
             },
             "files": {
                 "config/routes/dtc_queue.yaml": {
@@ -38,7 +39,6 @@
                 }
             },
             "origin": "mmucklo/queue-bundle:3.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

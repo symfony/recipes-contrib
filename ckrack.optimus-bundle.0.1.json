@@ -29,7 +29,8 @@
                     "OPTIMUS_PRIME": "3",
                     "OPTIMUS_INVERSE": "715827883",
                     "OPTIMUS_RANDOM": "1592469642"
-                }
+                },
+                "post-install-output": "  * Generate your spark numbers by running <fg=green>php vendor/bin/optimus spark -f env</>\n    and configure them in your <fg=green>.env</>\n\nOptimus Documentation: https://github.com/jenssegers/optimus\nBundle Documentation: https://github.com/ckrack/optimus-bundle\n\n"
             },
             "files": {
                 "config/packages/ckrack_optimus.yaml": {
@@ -39,7 +40,6 @@
                 }
             },
             "origin": "ckrack/optimus-bundle:0.1@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

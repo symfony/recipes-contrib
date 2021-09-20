@@ -26,7 +26,8 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "Please update config/packages/dtc_queue.yaml:\n\n# config/packages/dtc_queue.yaml\ndtc_queue:\n    manager:\n        # This parameter is required and should typically be set to one of:\n        #   [odm|orm|beanstalkd|rabbit_mq|redis]\n        job: orm\n    # ...\n\nFor a full list of configuration options, see:\n   * https://github.com/mmucklo/DtcQueueBundle/blob/master/Resources/doc/full-configuration.md\n\nIf you use the \"orm\" job manager, you'll want to create a migration or update the schema on your database manually. For more info see:\n   * https://github.com/mmucklo/DtcQueueBundle/blob/master/Resources/doc/symfony4-5.md\n\nFor admin, make sure twig-pack or twig-bundle + twig is installed.\n\nOn older versions of Symfony, the following might be necessary:\n\n# config/packages/framework.yaml\nframework:\n    # ...\n    templating:\n        engines: ['twig']\n"
             },
             "files": {
                 "config/routes/dtc_queue.yaml": {
@@ -36,7 +37,6 @@
                 }
             },
             "origin": "mmucklo/queue-bundle:6.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

@@ -23,7 +23,8 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "  * Please adapt config/routes/svc-param.yaml and define your route\n"
             },
             "files": {
                 "config/routes/svc_param.yaml": {
@@ -33,7 +34,6 @@
                 }
             },
             "origin": "svc/param-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

@@ -24,7 +24,8 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "  * <fg=blue>Choose your bundles</> by visiting <comment>http://localhost/fitz/install</>\n  * <fg=blue>Install</> them by running <comment>php bin/console fitz:install</>\n"
             },
             "files": {
                 "config/routes/dev/hugosoltys_fitz.yaml": {
@@ -49,7 +50,6 @@
                 }
             },
             "origin": "hugosoltys/fitz-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

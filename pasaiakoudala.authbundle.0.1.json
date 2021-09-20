@@ -29,7 +29,8 @@
                     "LDAP_BASE_DN": "DC=DOMAIN,DC=net",
                     "LDAP_SEARCH_DN": "CN=LDAPUSER,CN=Users,DC=pasaia,DC=net",
                     "LDAP_PASSWD": "LDAP_PASSWD"
-                }
+                },
+                "post-install-output": "* eguneratu datu basea, erabiltzailearen taula sortzeko\nphp bin/console\n\n* moldatu security.yaml fitxategia\nrm config/package/security.yaml\nmv config/package/security.yaml.dist config/package/security.yaml\n"
             },
             "files": {
                 "config/routes/pasaiako_udala_auth.yaml": {
@@ -49,7 +50,6 @@
                 }
             },
             "origin": "pasaiakoudala/authbundle:0.1@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

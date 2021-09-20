@@ -26,7 +26,8 @@
                 },
                 "env": {
                     "#DEKALEE_PUBSUB_SWARROT_KEY_FILE_PATH": "your-pub_sub-key-file-path"
-                }
+                },
+                "post-install-output": "  * The Dekalee/PubSubSwarrotBundle needs your pubsub configuration.\n    Modify your DEKALEE_PUBSUB_SWARROT_KEY_FILE_PATH config in <fg=green>.env</>\n"
             },
             "files": {
                 "config/packages/dekalee_pub_sub_swarrot.yaml": {
@@ -36,7 +37,6 @@
                 }
             },
             "origin": "dekalee/pubsub-swarrot-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

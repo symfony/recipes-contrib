@@ -23,7 +23,8 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "  * Verify and uncomment the configuration in <comment>%CONFIG_DIR%/packages/prooph_service_bus.yaml</>\n    to register message handlers\n\n  * Dispatch commands by injecting\n    the <comment>Prooph\\ServiceBus\\CommandBus</comment> service into your controllers\n"
             },
             "files": {
                 "config/packages/prooph_service_bus.yaml": {
@@ -33,7 +34,6 @@
                 }
             },
             "origin": "prooph/service-bus-symfony-bundle:0.6@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

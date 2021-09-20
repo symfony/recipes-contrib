@@ -38,7 +38,6 @@
                 }
             },
             "origin": "ijanki/prometheus-bundle:0.9@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

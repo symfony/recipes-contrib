@@ -37,7 +37,8 @@
                     "CTP_AUTH_URL": "https://auth.commercetools.com",
                     "CTP_API_URL": "https://api.commercetools.com",
                     "CTP_SCOPES": "<your-desired-scopes>"
-                }
+                },
+                "post-install-output": "  * Get your API client credentials from https://mc.commercetools.com or\n    https://mc.commercetools.co and configure them in your <bg=black;fg=green>.env</>\n\n  * commercetools-symfony-bundle documentation https://github.com/commercetools/commercetools-php-symfony\n\n  * commercetools API Documentation: https://docs.commercetools.com/http-api.html\n"
             },
             "files": {
                 "config/packages/commercetools.yaml": {
@@ -47,7 +48,6 @@
                 }
             },
             "origin": "commercetools/symfony-bundle:0.4@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

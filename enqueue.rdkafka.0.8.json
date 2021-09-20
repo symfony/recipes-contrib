@@ -15,10 +15,11 @@
             "repository": "github.com/symfony/recipes-contrib",
             "package": "enqueue/rdkafka",
             "version": "0.8",
-            "manifest": [],
+            "manifest": {
+                "post-install-output": "  * Configure <comment>ENQUEUE_DSN=kafka://</comment>\n    in your <comment>.env</comment> file.\n\n  * For the full options, see\n    <comment>https://github.com/php-enqueue/enqueue-dev/blob/master/docs/transport/kafka.md</comment>\n"
+            },
             "files": [],
             "origin": "enqueue/rdkafka:0.8@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

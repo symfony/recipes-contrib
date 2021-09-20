@@ -42,7 +42,6 @@
                 }
             },
             "origin": "tienvx/mbt-api-bundle:1.12@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

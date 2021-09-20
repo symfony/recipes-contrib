@@ -24,7 +24,8 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/",
                     "src/": "%SRC_DIR%/"
-                }
+                },
+                "post-install-output": "  * Install the Symfony Maker Bundle using <info>composer require maker --dev</>. It's required for the next step.\n\n  * Run <info>bin/console make:user:msgphp</>. It will guide you through the basic setup by asking a series of\n    questions and generates the minimal application source files needed.\n"
             },
             "files": {
                 "src/Entity/User.php": {
@@ -39,7 +40,6 @@
                 }
             },
             "origin": "msgphp/user-bundle:0.10@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

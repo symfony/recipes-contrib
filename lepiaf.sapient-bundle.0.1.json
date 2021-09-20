@@ -23,7 +23,8 @@
                     "lepiaf\\SapientBundle\\SapientBundle": [
                         "all"
                     ]
-                }
+                },
+                "post-install-output": "  * Bundle is installed but it require a configuration.\n    Run command <fg=green>bin/console sapient:configure</>.\n    Then, copy output of command and paste it in <fg=green>config/packages/sapient.yaml</>\n\n  * <fg=blue>Read</> the documentation at <comment>http://sapient-bundle.readthedocs.io/en/latest/</>\n"
             },
             "files": {
                 "config/packages/sapient.yaml": {
@@ -33,7 +34,6 @@
                 }
             },
             "origin": "lepiaf/sapient-bundle:0.1@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

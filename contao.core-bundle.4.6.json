@@ -40,7 +40,8 @@
                     "/system/config/localconfig.php",
                     "/system/config/tcpdf.php",
                     "/system/modules/*/.skip"
-                ]
+                ],
+                "post-install-output": "  * Enable ESI in the <fg=green>config/packages/framework.yaml</> file.\n\n  * Add the Contao routes to your <fg=green>config/routing.yaml</> file and\n    make sure they are loaded at the very end.\n\n  * Edit your <fg=green>config/security.yaml</> file and include all the\n    necessary providers, firewalls and access control sections.\n\n  * Complete the installation by opening the <fg=green>/contao/install</> route\n    in your browser.\n\nDocumentation: https://github.com/contao/core-bundle\n"
             },
             "files": {
                 "config/packages/contao_core.yaml": {
@@ -50,7 +51,6 @@
                 }
             },
             "origin": "contao/core-bundle:4.6@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

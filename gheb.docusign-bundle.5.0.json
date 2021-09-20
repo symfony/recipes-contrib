@@ -32,7 +32,8 @@
                 },
                 "gitignore": [
                     "/%CONFIG_DIR%/jwt/*.pem"
-                ]
+                ],
+                "post-install-output": "  * <fg=blue>Read</> the documentation at:\n    <comment>https://github.com/GregoireHebert/docusign-bundle</>\n  * <fg=blue>Edit</> the <comment>.env</> file to adapt the authentication settings.\n  * <fg=blue>Edit</> the <comment>config/packages/docusign.yaml</> file to configure your documents signatures.\n"
             },
             "files": {
                 "config/routes/docusign.yaml": {
@@ -47,7 +48,6 @@
                 }
             },
             "origin": "gheb/docusign-bundle:5.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

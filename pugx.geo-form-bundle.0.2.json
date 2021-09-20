@@ -23,7 +23,8 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "    * <fg=blue>Insert</> sensitive values in configuration file\n    * <fg=blue>Read</> documentation at <comment>https://github.com/PUGX/PUGXGeoFormBundle/blob/master/Resources/doc/index.md</>\n"
             },
             "files": {
                 "config/packages/pugx_geo_form.yaml": {
@@ -33,7 +34,6 @@
                 }
             },
             "origin": "pugx/geo-form-bundle:0.2@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

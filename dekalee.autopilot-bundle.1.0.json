@@ -26,7 +26,8 @@
                 },
                 "env": {
                     "#DEKALEE_AUTOPILOT_APIKEY": "the-autopilot-api-key"
-                }
+                },
+                "post-install-output": "  * The Dekalee/AutopilotBundle needs your pubsub configuration.\n    Modify your DEKALEE_AUTOPILOT_APIKEY config in <fg=green>.env</>\n"
             },
             "files": {
                 "config/packages/dekalee_autopilot_swarrot.yaml": {
@@ -36,7 +37,6 @@
                 }
             },
             "origin": "dekalee/autopilot-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

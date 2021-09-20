@@ -30,7 +30,8 @@
                 },
                 "gitignore": [
                     "/bin/rr"
-                ]
+                ],
+                "post-install-output": "  * <fg=blue>Download</> RoadRunner locally: <comment>vendor/bin/rr get --location bin/</>\n  * <fg=blue>Run</> your application: <comment>bin/rr serve -c .rr.dev.yaml --debug</>\n  * <fg=blue>For production, use: <comment>bin/rr serve</>\n  * Visit http://localhost:8080\n"
             },
             "files": {
                 "config/packages/baldinof_road_runner.yaml": {
@@ -40,7 +41,6 @@
                 }
             },
             "origin": "baldinof/roadrunner-bundle:1.2@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

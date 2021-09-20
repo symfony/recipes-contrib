@@ -27,7 +27,8 @@
                 "env": {
                     "CONTENTFUL_SPACE_ID": "cfexampleapi",
                     "CONTENTFUL_ACCESS_TOKEN": "b4c0n73n7fu1"
-                }
+                },
+                "post-install-output": "  * Get your space ID and API key from https://www.contentful.com\n    and configure them in your <fg=green>.env</>\n\nDocumentation: https://www.contentful.com/developers/docs/php/\n"
             },
             "files": {
                 "config/packages/contentful.yaml": {
@@ -37,7 +38,6 @@
                 }
             },
             "origin": "contentful/contentful-bundle:4.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

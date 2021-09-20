@@ -23,7 +23,8 @@
                 },
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
-                }
+                },
+                "post-install-output": "  * <fg=blue>Configure</> instances in <comment>imper86_supervisor.yaml</> in your <comment>config/packages</> directory\n  * <fg=blue>Create supervisor config</> with command <comment>./bin/console i86:supervisor:rebuild</>\n"
             },
             "files": {
                 "config/packages/imper86_supervisor.yaml": {
@@ -33,7 +34,6 @@
                 }
             },
             "origin": "imper86/supervisor-bundle:2.2@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

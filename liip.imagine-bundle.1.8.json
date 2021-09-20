@@ -27,7 +27,8 @@
                 },
                 "gitignore": [
                     "/%PUBLIC_DIR%/media/cache/"
-                ]
+                ],
+                "post-install-output": "  <fg=blue;options=bold>Configure</> <fg=blue>your transformations:</>\n    1. You <options=bold>MUST</> verify and uncomment the configuration in <comment>%CONFIG_DIR%/packages/liip_imagine.yaml</>.\n    2. You <options=bold>MAY</> configure your image transformation library (<comment>gmagick</>, <comment>imagick</>, or <comment>gd</> [default]).\n    3. You <options=bold>MAY</> define custom transformation definitions under the <comment>filter_sets</> option.\n"
             },
             "files": {
                 "config/routes/liip_imagine.yaml": {
@@ -42,7 +43,6 @@
                 }
             },
             "origin": "liip/imagine-bundle:1.8@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }

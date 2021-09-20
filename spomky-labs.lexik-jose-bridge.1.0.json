@@ -27,7 +27,8 @@
                 "env": {
                     "SL_JOSE_BRIDGE_SERVER_NAME": "https://www.my-service.com/",
                     "SL_JOSE_BRIDGE_KEY_STORAGE_FOLDER": "/tmp/sl_jose/"
-                }
+                },
+                "post-install-output": "    Run <comment>make cache-warmup</> to generate keys.\n"
             },
             "files": {
                 "config/packages/spomky_labs_lexik_jose_bridge_bundle.yaml": {
@@ -37,7 +38,6 @@
                 }
             },
             "origin": "spomky-labs/lexik-jose-bridge:1.0@github.com/symfony/recipes-contrib:master",
-            "not_installable": false,
             "is_contrib": true
         }
     }
