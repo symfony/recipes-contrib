@@ -5,6 +5,6 @@
     },
     "copy-from-package": {
         "dist/docker-compose.yaml": "docker-compose.yaml",
-        "dist/symfony-dev-cli": "%BIN_DIR%/dev-cli"
+        "dist/symfony-dev-cli-proxy": "%BIN_DIR%/dev-cli"
     }
 }
