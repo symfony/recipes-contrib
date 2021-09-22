@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "dunglas/digital-ocean-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "26441b59cf6cb5f8254a08eb7c62a05e64b4753e"
-            }
-        }
-    },
     "manifests": {
         "dunglas/digital-ocean-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "dunglas/digital-ocean-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Dunglas\\DigitalOceanBundle\\DunglasDigitalOceanBundle": [
@@ -31,13 +17,16 @@
             },
             "files": {
                 "config/dunglas_digital_ocean.yaml": {
-                    "contents": "dunglas_digital_ocean:\n    connections:\n        default: '%env(DIGITAL_OCEAN_TOKEN)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "dunglas_digital_ocean:",
+                        "    connections:",
+                        "        default: '%env(DIGITAL_OCEAN_TOKEN)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "dunglas/digital-ocean-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "26441b59cf6cb5f8254a08eb7c62a05e64b4753e"
         }
     }
 }

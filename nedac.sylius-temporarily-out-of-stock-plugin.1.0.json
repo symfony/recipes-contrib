@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "nedac/sylius-temporarily-out-of-stock-plugin": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "ffc581aaa5fffd8050cd7f2b868018cd067fd896"
-            }
-        }
-    },
     "manifests": {
         "nedac/sylius-temporarily-out-of-stock-plugin": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "nedac/sylius-temporarily-out-of-stock-plugin",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Nedac\\SyliusTemporarilyOutOfStockPlugin\\NedacSyliusTemporarilyOutOfStockPlugin": [
@@ -30,13 +16,18 @@
             },
             "files": {
                 "config/nedac_sylius_temporarily_out_of_stock_plugin.yaml": {
-                    "contents": "doctrine:\n    orm:\n        dql:\n            string_functions:\n                FIRST: Nedac\\SyliusTemporarilyOutOfStockPlugin\\Doctrine\\Dql\\FirstFunction\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "doctrine:",
+                        "    orm:",
+                        "        dql:",
+                        "            string_functions:",
+                        "                FIRST: Nedac\\SyliusTemporarilyOutOfStockPlugin\\Doctrine\\Dql\\FirstFunction",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "nedac/sylius-temporarily-out-of-stock-plugin:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "ffc581aaa5fffd8050cd7f2b868018cd067fd896"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "nelmio/api-doc-bundle": {
-            "version": "3.0",
-            "recipe": {
-                "repo": "3.0",
-                "branch": "master",
-                "version": "3.0",
-                "ref": "c8e0c38e1a280ab9e37587a8fa32b251d5bc1c94"
-            }
-        }
-    },
     "manifests": {
         "nelmio/api-doc-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "nelmio/api-doc-bundle",
-            "version": "3.0",
             "manifest": {
                 "bundles": {
                     "Nelmio\\ApiDocBundle\\NelmioApiDocBundle": [
@@ -27,18 +13,40 @@
             },
             "files": {
                 "config/routes/nelmio_api_doc.yaml": {
-                    "contents": "# Expose your documentation as JSON swagger compliant\napp.swagger:\n    path: /api/doc.json\n    methods: GET\n    defaults: { _controller: nelmio_api_doc.controller.swagger }\n\n## Requires the Asset component and the Twig bundle\n## $ composer require twig asset\n#app.swagger_ui:\n#    path: /api/doc\n#    methods: GET\n#    defaults: { _controller: nelmio_api_doc.controller.swagger_ui }\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# Expose your documentation as JSON swagger compliant",
+                        "app.swagger:",
+                        "    path: /api/doc.json",
+                        "    methods: GET",
+                        "    defaults: { _controller: nelmio_api_doc.controller.swagger }",
+                        "",
+                        "## Requires the Asset component and the Twig bundle",
+                        "## $ composer require twig asset",
+                        "#app.swagger_ui:",
+                        "#    path: /api/doc",
+                        "#    methods: GET",
+                        "#    defaults: { _controller: nelmio_api_doc.controller.swagger_ui }",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/nelmio_api_doc.yaml": {
-                    "contents": "nelmio_api_doc:\n    documentation:\n        info:\n            title: My App\n            description: This is an awesome app!\n            version: 1.0.0\n    areas: # to filter documented areas\n        path_patterns:\n            - ^/api(?!/doc$) # Accepts routes under /api except /api/doc\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "nelmio_api_doc:",
+                        "    documentation:",
+                        "        info:",
+                        "            title: My App",
+                        "            description: This is an awesome app!",
+                        "            version: 1.0.0",
+                        "    areas: # to filter documented areas",
+                        "        path_patterns:",
+                        "            - ^/api(?!/doc$) # Accepts routes under /api except /api/doc",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "nelmio/api-doc-bundle:3.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "c8e0c38e1a280ab9e37587a8fa32b251d5bc1c94"
         }
     }
 }

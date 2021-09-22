@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "jacquesndl/mailer-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "7dd88594d9b018db7cc605e8632e11f767910876"
-            }
-        }
-    },
     "manifests": {
         "jacquesndl/mailer-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "jacquesndl/mailer-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Jacquesndl\\MailerBundle\\JacquesndlMailerBundle": [
@@ -35,13 +21,17 @@
             },
             "files": {
                 "config/packages/jacquesndl_mailer.yaml": {
-                    "contents": "jacquesndl_mailer:\n    sender:\n        name: '%env(JACQUESNDL_MAILER_SENDER_NAME)%'\n        address: '%env(JACQUESNDL_MAILER_SENDER_ADDRESS)%'\n",
-                    "executable": true,
-                    "encoding": ""
+                    "contents": [
+                        "jacquesndl_mailer:",
+                        "    sender:",
+                        "        name: '%env(JACQUESNDL_MAILER_SENDER_NAME)%'",
+                        "        address: '%env(JACQUESNDL_MAILER_SENDER_ADDRESS)%'",
+                        ""
+                    ],
+                    "executable": true
                 }
             },
-            "origin": "jacquesndl/mailer-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "7dd88594d9b018db7cc605e8632e11f767910876"
         }
     }
 }

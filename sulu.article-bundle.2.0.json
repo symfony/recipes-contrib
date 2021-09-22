@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "sulu/article-bundle": {
-            "version": "2.0",
-            "recipe": {
-                "repo": "2.0",
-                "branch": "master",
-                "version": "2.0",
-                "ref": "dca8915a957ab45b7cd29de8861bd14303cee104"
-            }
-        }
-    },
     "manifests": {
         "sulu/article-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "sulu/article-bundle",
-            "version": "2.0",
             "manifest": {
                 "bundles": {
                     "Sulu\\Bundle\\ArticleBundle\\SuluArticleBundle": [
@@ -44,18 +30,51 @@
             },
             "files": {
                 "config/routes/sulu_article_admin.yaml": {
-                    "contents": "sulu_article_api:\n    resource: '@SuluArticleBundle/Resources/config/routing_api.yml'\n    type: rest\n    prefix: /admin/api\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "sulu_article_api:",
+                        "    resource: '@SuluArticleBundle/Resources/config/routing_api.yml'",
+                        "    type: rest",
+                        "    prefix: /admin/api",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/sulu_article.yaml": {
-                    "contents": "sulu_article:\n    index_name: '%env(resolve:ELASTICSEARCH_INDEX)%'\n    hosts:\n        - '%env(resolve:ELASTICSEARCH_HOST)%'\n    types:\n        article:\n            translation_key: \"sulu_article.article\"\n\nsulu_route:\n    mappings:\n        Sulu\\Bundle\\ArticleBundle\\Document\\ArticleDocument:\n            generator: schema\n            options:\n                route_schema: '/articles/{object.getTitle()}'\n        Sulu\\Bundle\\ArticleBundle\\Document\\ArticlePageDocument:\n            generator: article_page\n            options:\n                route_schema: '{translator.trans(\"page\")}-{object.getPageNumber()}'\n                parent: '{object.getParent().getRoutePath()}'\n\nongr_elasticsearch:\n    analysis:\n        tokenizer:\n            pathTokenizer:\n                type: path_hierarchy\n        analyzer:\n            pathAnalyzer:\n                tokenizer: pathTokenizer\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "sulu_article:",
+                        "    index_name: '%env(resolve:ELASTICSEARCH_INDEX)%'",
+                        "    hosts:",
+                        "        - '%env(resolve:ELASTICSEARCH_HOST)%'",
+                        "    types:",
+                        "        article:",
+                        "            translation_key: \"sulu_article.article\"",
+                        "",
+                        "sulu_route:",
+                        "    mappings:",
+                        "        Sulu\\Bundle\\ArticleBundle\\Document\\ArticleDocument:",
+                        "            generator: schema",
+                        "            options:",
+                        "                route_schema: '/articles/{object.getTitle()}'",
+                        "        Sulu\\Bundle\\ArticleBundle\\Document\\ArticlePageDocument:",
+                        "            generator: article_page",
+                        "            options:",
+                        "                route_schema: '{translator.trans(\"page\")}-{object.getPageNumber()}'",
+                        "                parent: '{object.getParent().getRoutePath()}'",
+                        "",
+                        "ongr_elasticsearch:",
+                        "    analysis:",
+                        "        tokenizer:",
+                        "            pathTokenizer:",
+                        "                type: path_hierarchy",
+                        "        analyzer:",
+                        "            pathAnalyzer:",
+                        "                tokenizer: pathTokenizer",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "sulu/article-bundle:2.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "dca8915a957ab45b7cd29de8861bd14303cee104"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "maba/webpack-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "33b0bf2e73d774902dd21bab3d93f5b5ce459668"
-            }
-        }
-    },
     "manifests": {
         "maba/webpack-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "maba/webpack-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Maba\\Bundle\\WebpackBundle\\MabaWebpackBundle": [
@@ -42,13 +28,13 @@
             },
             "files": {
                 "assets/.gitignore": {
-                    "contents": "",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "maba/webpack-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "33b0bf2e73d774902dd21bab3d93f5b5ce459668"
         }
     }
 }

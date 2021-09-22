@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "basster/twig-base64-extension": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "0a0762c7d5acf2449f9f7f330a514c666e8d0b92"
-            }
-        }
-    },
     "manifests": {
         "basster/twig-base64-extension": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "basster/twig-base64-extension",
-            "version": "1.0",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -22,13 +8,23 @@
             },
             "files": {
                 "config/packages/basster_twig_base64.yaml": {
-                    "contents": "services:\n    _defaults:\n        public: false\n        autowire: true\n        autoconfigure: true\n\n    # registers all neccessary classes as services.\n    Basster\\TwigBase64\\Converter\\ImageToBase64Converter: null\n    Basster\\TwigBase64\\Twig\\Base64ImageExtension: null\n    Basster\\TwigBase64\\Converter\\FileConverterInterface: '@Basster\\TwigBase64\\Converter\\ImageToBase64Converter'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        public: false",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    # registers all neccessary classes as services.",
+                        "    Basster\\TwigBase64\\Converter\\ImageToBase64Converter: null",
+                        "    Basster\\TwigBase64\\Twig\\Base64ImageExtension: null",
+                        "    Basster\\TwigBase64\\Converter\\FileConverterInterface: '@Basster\\TwigBase64\\Converter\\ImageToBase64Converter'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "basster/twig-base64-extension:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "0a0762c7d5acf2449f9f7f330a514c666e8d0b92"
         }
     }
 }

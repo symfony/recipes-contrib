@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "happyr/linkedin-api-client": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "f407e3d9af98d1b391cc671d3c5790b79f1907e6"
-            }
-        }
-    },
     "manifests": {
         "happyr/linkedin-api-client": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "happyr/linkedin-api-client",
-            "version": "1.0",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -26,13 +12,17 @@
             },
             "files": {
                 "config/packages/linkedin.yaml": {
-                    "contents": "services:\n    Happyr\\LinkedIn\\LinkedIn:\n        class: Happyr\\LinkedIn\\LinkedIn\n        arguments: ['%env(LINKEDIN_API_KEY)%', '%env(LINKEDIN_API_SECRET)%']\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "services:",
+                        "    Happyr\\LinkedIn\\LinkedIn:",
+                        "        class: Happyr\\LinkedIn\\LinkedIn",
+                        "        arguments: ['%env(LINKEDIN_API_KEY)%', '%env(LINKEDIN_API_SECRET)%']",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "happyr/linkedin-api-client:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "f407e3d9af98d1b391cc671d3c5790b79f1907e6"
         }
     }
 }

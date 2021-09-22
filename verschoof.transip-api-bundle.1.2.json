@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "verschoof/transip-api-bundle": {
-            "version": "1.2",
-            "recipe": {
-                "repo": "1.2",
-                "branch": "master",
-                "version": "1.2",
-                "ref": "7a7791bcfda0ec394bd340bb2f71eb35ab5fb622"
-            }
-        }
-    },
     "manifests": {
         "verschoof/transip-api-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "verschoof/transip-api-bundle",
-            "version": "1.2",
             "manifest": {
                 "bundles": {
                     "Verschoof\\TransipApiBundle\\TransipApiBundle": [
@@ -32,13 +18,17 @@
             },
             "files": {
                 "config/packages/transip_api.yaml": {
-                    "contents": "transip_api:\n    login : '%env(VERSCHOOF_TRANSIP_API_LOGIN)%'\n    private_key : '%env(VERSCHOOF_TRANSIP_API_PRIVATE_KEY)%'\n    read_only : true\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "transip_api:",
+                        "    login : '%env(VERSCHOOF_TRANSIP_API_LOGIN)%'",
+                        "    private_key : '%env(VERSCHOOF_TRANSIP_API_PRIVATE_KEY)%'",
+                        "    read_only : true",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "verschoof/transip-api-bundle:1.2@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "7a7791bcfda0ec394bd340bb2f71eb35ab5fb622"
         }
     }
 }

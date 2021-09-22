@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "leapt/core-bundle": {
-            "version": "2.2",
-            "recipe": {
-                "repo": "2.2",
-                "branch": "master",
-                "version": "2.2",
-                "ref": "3a70ffc856464fc26a5d421983a84e2fc64a55fe"
-            }
-        }
-    },
     "manifests": {
         "leapt/core-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "leapt/core-bundle",
-            "version": "2.2",
             "manifest": {
                 "bundles": {
                     "Leapt\\CoreBundle\\LeaptCoreBundle": [
@@ -30,13 +16,16 @@
             },
             "files": {
                 "config/packages/leapt_core.yaml": {
-                    "contents": "# Read the documentation: https://core-bundle.leapt.io/configuration_reference.html\nleapt_core:\n    upload_dir: '%kernel.project_dir%/public'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# Read the documentation: https://core-bundle.leapt.io/configuration_reference.html",
+                        "leapt_core:",
+                        "    upload_dir: '%kernel.project_dir%/public'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "leapt/core-bundle:2.2@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "3a70ffc856464fc26a5d421983a84e2fc64a55fe"
         }
     }
 }

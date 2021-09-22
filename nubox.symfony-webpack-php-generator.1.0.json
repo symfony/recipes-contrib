@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "nubox/symfony-webpack-php-generator": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "910f3e2e640ac6b1dc1d9cd6e00aed34ab93491a"
-            }
-        }
-    },
     "manifests": {
         "nubox/symfony-webpack-php-generator": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "nubox/symfony-webpack-php-generator",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "NuBox\\WebPack\\Generator\\SymfonyWebpackPHPGeneratorBundle": [
@@ -29,8 +15,7 @@
                 ]
             },
             "files": [],
-            "origin": "nubox/symfony-webpack-php-generator:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "910f3e2e640ac6b1dc1d9cd6e00aed34ab93491a"
         }
     }
 }

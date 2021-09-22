@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "contao/core-bundle": {
-            "version": "4.6",
-            "recipe": {
-                "repo": "4.6",
-                "branch": "master",
-                "version": "4.6",
-                "ref": "f92ce23cb3d97f3f69d2fd448fb3dde0023a6b90"
-            }
-        }
-    },
     "manifests": {
         "contao/core-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "contao/core-bundle",
-            "version": "4.6",
             "manifest": {
                 "bundles": {
                     "Contao\\CoreBundle\\ContaoCoreBundle": [
@@ -58,13 +44,16 @@
             },
             "files": {
                 "config/packages/contao_core.yaml": {
-                    "contents": "# See https://github.com/contao/core-bundle\ncontao:\n    web_dir: \"%kernel.project_dir%/public\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# See https://github.com/contao/core-bundle",
+                        "contao:",
+                        "    web_dir: \"%kernel.project_dir%/public\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "contao/core-bundle:4.6@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "f92ce23cb3d97f3f69d2fd448fb3dde0023a6b90"
         }
     }
 }

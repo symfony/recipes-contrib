@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "comsave/salesforce-outbound-message-bundle": {
-            "version": "0.3",
-            "recipe": {
-                "repo": "0.3",
-                "branch": "master",
-                "version": "0.3",
-                "ref": "3d89607e2bafbfe4bb0ba0ea6f43f9b02aa6fa58"
-            }
-        }
-    },
     "manifests": {
         "comsave/salesforce-outbound-message-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "comsave/salesforce-outbound-message-bundle",
-            "version": "0.3",
             "manifest": {
                 "bundles": {
                     "Comsave\\SalesforceOutboundMessageBundle\\ComsaveSalesforceOutboundMessageBundle": [
@@ -31,13 +17,20 @@
             },
             "files": {
                 "config/comsave_outbound_message.yaml": {
-                    "contents": "comsave_salesforce_outbound_message:\n    wsdl_directory: 'src/Company/Resources/wsdl'\n    document_paths:\n        Account:\n            path: 'src/Company/Document/Account'\n        Product2:\n            path: 'src/Company/Document/Product2'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "comsave_salesforce_outbound_message:",
+                        "    wsdl_directory: 'src/Company/Resources/wsdl'",
+                        "    document_paths:",
+                        "        Account:",
+                        "            path: 'src/Company/Document/Account'",
+                        "        Product2:",
+                        "            path: 'src/Company/Document/Product2'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "comsave/salesforce-outbound-message-bundle:0.3@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "3d89607e2bafbfe4bb0ba0ea6f43f9b02aa6fa58"
         }
     }
 }

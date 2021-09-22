@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "beelab/recaptcha2-bundle": {
-            "version": "2.0",
-            "recipe": {
-                "repo": "2.0",
-                "branch": "master",
-                "version": "2.0",
-                "ref": "ad714d23c3c754619d9f2e1bd7b621c0d6185165"
-            }
-        }
-    },
     "manifests": {
         "beelab/recaptcha2-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "beelab/recaptcha2-bundle",
-            "version": "2.0",
             "manifest": {
                 "bundles": {
                     "Beelab\\Recaptcha2Bundle\\BeelabRecaptcha2Bundle": [
@@ -35,13 +21,16 @@
             },
             "files": {
                 "config/packages/beelab_recaptcha2.yaml": {
-                    "contents": "beelab_recaptcha2:\n    site_key: '%env(APP_RECAPTCHA_SITE_KEY)%'\n    secret: '%env(APP_RECAPTCHA_SECRET)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "beelab_recaptcha2:",
+                        "    site_key: '%env(APP_RECAPTCHA_SITE_KEY)%'",
+                        "    secret: '%env(APP_RECAPTCHA_SECRET)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "beelab/recaptcha2-bundle:2.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "ad714d23c3c754619d9f2e1bd7b621c0d6185165"
         }
     }
 }

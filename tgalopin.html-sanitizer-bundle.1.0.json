@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "tgalopin/html-sanitizer-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "95b935177db9abb65356fe19e57fe5abd908b5b8"
-            }
-        }
-    },
     "manifests": {
         "tgalopin/html-sanitizer-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "tgalopin/html-sanitizer-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "HtmlSanitizer\\Bundle\\HtmlSanitizerBundle": [
@@ -27,13 +13,31 @@
             },
             "files": {
                 "config/packages/html_sanitizer.yaml": {
-                    "contents": "html_sanitizer:\n    default_sanitizer: 'default'\n    sanitizers:\n        default:\n            # Read https://github.com/tgalopin/html-sanitizer/blob/master/docs/1-getting-started.md#extensions\n            # to learn more about which extensions you would like to enable.\n            extensions:\n                - 'basic'\n                # - 'list'\n                # - 'table'\n                # - 'image'\n                # - 'code'\n                # - 'iframe'\n                # - 'details'\n                # - 'extra'\n\n            # Read https://github.com/tgalopin/html-sanitizer/blob/master/docs/3-configuration-reference.md\n            # to discover all the available options for each extension.\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "html_sanitizer:",
+                        "    default_sanitizer: 'default'",
+                        "    sanitizers:",
+                        "        default:",
+                        "            # Read https://github.com/tgalopin/html-sanitizer/blob/master/docs/1-getting-started.md#extensions",
+                        "            # to learn more about which extensions you would like to enable.",
+                        "            extensions:",
+                        "                - 'basic'",
+                        "                # - 'list'",
+                        "                # - 'table'",
+                        "                # - 'image'",
+                        "                # - 'code'",
+                        "                # - 'iframe'",
+                        "                # - 'details'",
+                        "                # - 'extra'",
+                        "",
+                        "            # Read https://github.com/tgalopin/html-sanitizer/blob/master/docs/3-configuration-reference.md",
+                        "            # to discover all the available options for each extension.",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "tgalopin/html-sanitizer-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "95b935177db9abb65356fe19e57fe5abd908b5b8"
         }
     }
 }

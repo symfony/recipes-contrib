@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "jawira/case-converter-twig": {
-            "version": "0.0",
-            "recipe": {
-                "repo": "0.0",
-                "branch": "master",
-                "version": "0.0",
-                "ref": "aa886497cfde343cc978ea1687abc383219ebce8"
-            }
-        }
-    },
     "manifests": {
         "jawira/case-converter-twig": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "jawira/case-converter-twig",
-            "version": "0.0",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -22,13 +8,17 @@
             },
             "files": {
                 "config/packages/case_converter_twig.yaml": {
-                    "contents": "services:\n    jawira.case.converter.twig:\n        class: Jawira\\CaseConverterTwig\\CaseConverterExtension\n        tags: ['twig.extension']\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "services:",
+                        "    jawira.case.converter.twig:",
+                        "        class: Jawira\\CaseConverterTwig\\CaseConverterExtension",
+                        "        tags: ['twig.extension']",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "jawira/case-converter-twig:0.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "aa886497cfde343cc978ea1687abc383219ebce8"
         }
     }
 }

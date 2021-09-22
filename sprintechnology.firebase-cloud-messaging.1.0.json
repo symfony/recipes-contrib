@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "sprintechnology/firebase-cloud-messaging": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "d1907839db60bec20ef48d22a319c40fedc98d60"
-            }
-        }
-    },
     "manifests": {
         "sprintechnology/firebase-cloud-messaging": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "sprintechnology/firebase-cloud-messaging",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Firebase\\Bundle\\CloudMessagingBundle\\CloudMessagingBundle": [
@@ -30,13 +16,16 @@
             },
             "files": {
                 "config/packages/firebase.yaml": {
-                    "contents": "firebase:\n    cloud_messaging:\n        key: \"%env(FCM_KEY)%\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "firebase:",
+                        "    cloud_messaging:",
+                        "        key: \"%env(FCM_KEY)%\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "sprintechnology/firebase-cloud-messaging:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "d1907839db60bec20ef48d22a319c40fedc98d60"
         }
     }
 }

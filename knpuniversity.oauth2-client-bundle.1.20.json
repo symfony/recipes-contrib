@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "knpuniversity/oauth2-client-bundle": {
-            "version": "1.20",
-            "recipe": {
-                "repo": "1.20",
-                "branch": "master",
-                "version": "1.20",
-                "ref": "1ff300d8c030f55c99219cc55050b97a695af3f6"
-            }
-        }
-    },
     "manifests": {
         "knpuniversity/oauth2-client-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "knpuniversity/oauth2-client-bundle",
-            "version": "1.20",
             "manifest": {
                 "bundles": {
                     "KnpU\\OAuth2ClientBundle\\KnpUOAuth2ClientBundle": [
@@ -32,13 +18,16 @@
             },
             "files": {
                 "config/packages/knpu_oauth2_client.yaml": {
-                    "contents": "knpu_oauth2_client:\n    clients:\n        # configure your clients as described here: https://github.com/knpuniversity/oauth2-client-bundle#configuration\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "knpu_oauth2_client:",
+                        "    clients:",
+                        "        # configure your clients as described here: https://github.com/knpuniversity/oauth2-client-bundle#configuration",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "knpuniversity/oauth2-client-bundle:1.20@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "1ff300d8c030f55c99219cc55050b97a695af3f6"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "kunstmaan/seo-bundle": {
-            "version": "5.2",
-            "recipe": {
-                "repo": "5.2",
-                "branch": "master",
-                "version": "5.2",
-                "ref": "76b5d6d013b3bd87a6d19ecc72282c282c065446"
-            }
-        }
-    },
     "manifests": {
         "kunstmaan/seo-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "kunstmaan/seo-bundle",
-            "version": "5.2",
             "manifest": {
                 "bundles": {
                     "Kunstmaan\\SeoBundle\\KunstmaanSeoBundle": [
@@ -27,13 +13,24 @@
             },
             "files": {
                 "config/routes/kunstmaan_seo.yaml": {
-                    "contents": "KunstmaanSeoBundle:\n    resource: \"@KunstmaanSeoBundle/Resources/config/routing.yml\"\n    # If your site is not multi language, remove the \"{_locale}/\" part of prefix and requirements\n    prefix: /{_locale}/\n    requirements:\n        _locale: \"%kunstmaan_admin.required_locales%\"\n\n# Robots.txt\nKunstmaanSeoBundle_robots:\n    resource: \"@KunstmaanSeoBundle/Controller/RobotsController.php\"\n    type: annotation\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "KunstmaanSeoBundle:",
+                        "    resource: \"@KunstmaanSeoBundle/Resources/config/routing.yml\"",
+                        "    # If your site is not multi language, remove the \"{_locale}/\" part of prefix and requirements",
+                        "    prefix: /{_locale}/",
+                        "    requirements:",
+                        "        _locale: \"%kunstmaan_admin.required_locales%\"",
+                        "",
+                        "# Robots.txt",
+                        "KunstmaanSeoBundle_robots:",
+                        "    resource: \"@KunstmaanSeoBundle/Controller/RobotsController.php\"",
+                        "    type: annotation",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "kunstmaan/seo-bundle:5.2@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "76b5d6d013b3bd87a6d19ecc72282c282c065446"
         }
     }
 }

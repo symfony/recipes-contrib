@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "soljian/steam-authentication-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "2c0dc22b6e4acc560f08a871c5232877aaa672e4"
-            }
-        }
-    },
     "manifests": {
         "soljian/steam-authentication-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "soljian/steam-authentication-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Soljian\\SteamAuthenticationBundle\\SoljianSteamAuthenticationBundle": [
@@ -30,13 +16,18 @@
             },
             "files": {
                 "config/packages/soljian_steam_authentication.yaml": {
-                    "contents": "soljian_steam_authentication:\n    api_key: \"%env(STEAM_API_KEY)%\"\n    login_route: ''\n    login_redirect: ''\n    user_class: ''\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "soljian_steam_authentication:",
+                        "    api_key: \"%env(STEAM_API_KEY)%\"",
+                        "    login_route: ''",
+                        "    login_redirect: ''",
+                        "    user_class: ''",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "soljian/steam-authentication-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "2c0dc22b6e4acc560f08a871c5232877aaa672e4"
         }
     }
 }

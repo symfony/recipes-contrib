@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "felds/quick-mailer-bundle": {
-            "version": "5.0",
-            "recipe": {
-                "repo": "5.0",
-                "branch": "master",
-                "version": "5.0",
-                "ref": "099984e09ee6f7cbdedc05c0ef661adc52c32704"
-            }
-        }
-    },
     "manifests": {
         "felds/quick-mailer-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "felds/quick-mailer-bundle",
-            "version": "5.0",
             "manifest": {
                 "bundles": {
                     "Felds\\QuickMailerBundle\\FeldsQuickMailerBundle": [
@@ -27,13 +13,26 @@
             },
             "files": {
                 "config/packages/felds_quickmailer.yaml": {
-                    "contents": "# For the full configuration, visit:\n# https://github.com/felds/QuickMailerBundle\n\nfelds_quickmailer:\n    # Sender info (required)\n    from: { name: \"Sender Name\", email: \"sender@example.com\" }\n\n    # # Reply-to info (optional)\n    # reply_to: { name: \"Reply-to Name\", email: \"reply-to@example.com\" }\n\n    templates:\n        # This loads a template named `demo`\n        demo: path/to/template.html.twig\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# For the full configuration, visit:",
+                        "# https://github.com/felds/QuickMailerBundle",
+                        "",
+                        "felds_quickmailer:",
+                        "    # Sender info (required)",
+                        "    from: { name: \"Sender Name\", email: \"sender@example.com\" }",
+                        "",
+                        "    # # Reply-to info (optional)",
+                        "    # reply_to: { name: \"Reply-to Name\", email: \"reply-to@example.com\" }",
+                        "",
+                        "    templates:",
+                        "        # This loads a template named `demo`",
+                        "        demo: path/to/template.html.twig",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "felds/quick-mailer-bundle:5.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "099984e09ee6f7cbdedc05c0ef661adc52c32704"
         }
     }
 }

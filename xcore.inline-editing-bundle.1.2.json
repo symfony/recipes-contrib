@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "xcore/inline-editing-bundle": {
-            "version": "1.2",
-            "recipe": {
-                "repo": "1.2",
-                "branch": "master",
-                "version": "1.2",
-                "ref": "2bb753074a9c3b694a7f6759826e1c2197ced7b8"
-            }
-        }
-    },
     "manifests": {
         "xcore/inline-editing-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "xcore/inline-editing-bundle",
-            "version": "1.2",
             "manifest": {
                 "bundles": {
                     "XcoreCMS\\InlineEditingBundle\\XcoreCMSInlineEditingBundle": [
@@ -27,18 +13,27 @@
             },
             "files": {
                 "config/routes/xcore_inline.yaml": {
-                    "contents": "xcore_inline:\n    resource: \"@XcoreCMSInlineEditingBundle/Resources/config/routing.xml\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "xcore_inline:",
+                        "    resource: \"@XcoreCMSInlineEditingBundle/Resources/config/routing.xml\"",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/xcore_inline.yaml": {
-                    "contents": "#xcore_inline:\n#    fallback: false\n#    table_name: 'inline_content\n#    url_path: '/inline-editing\n#    connection: 'doctrine.dbal.default_connection'\n#    entity_manager: 'doctrine.orm.entity_manager'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "#xcore_inline:",
+                        "#    fallback: false",
+                        "#    table_name: 'inline_content",
+                        "#    url_path: '/inline-editing",
+                        "#    connection: 'doctrine.dbal.default_connection'",
+                        "#    entity_manager: 'doctrine.orm.entity_manager'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "xcore/inline-editing-bundle:1.2@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "2bb753074a9c3b694a7f6759826e1c2197ced7b8"
         }
     }
 }

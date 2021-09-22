@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "pentatrion/upload-bundle": {
-            "version": "0.2",
-            "recipe": {
-                "repo": "0.2",
-                "branch": "master",
-                "version": "0.2",
-                "ref": "8cc96a58d4d48c5e5cefc95b8dc0d1ed0e0c1a47"
-            }
-        }
-    },
     "manifests": {
         "pentatrion/upload-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "pentatrion/upload-bundle",
-            "version": "0.2",
             "manifest": {
                 "bundles": {
                     "Pentatrion\\UploadBundle\\PentatrionUploadBundle": [
@@ -38,18 +24,28 @@
             },
             "files": {
                 "config/routes/pentatrion_upload.yaml": {
-                    "contents": "_pentatrion_upload:\n    prefix: /media-manager\n    resource: \"@PentatrionUploadBundle/Resources/config/routing.yaml\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "_pentatrion_upload:",
+                        "    prefix: /media-manager",
+                        "    resource: \"@PentatrionUploadBundle/Resources/config/routing.yaml\"",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/pentatrion_upload.yaml": {
-                    "contents": "# All available configuration can be found here:\n# https://github.com/lhapaipai/upload-bundle#advanced-configuration\n\npentatrion_upload:\n    # update to [\"small\"] if you have installed liip/imagine-bundle\n    liip_filters: []\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# All available configuration can be found here:",
+                        "# https://github.com/lhapaipai/upload-bundle#advanced-configuration",
+                        "",
+                        "pentatrion_upload:",
+                        "    # update to [\"small\"] if you have installed liip/imagine-bundle",
+                        "    liip_filters: []",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "pentatrion/upload-bundle:0.2@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "8cc96a58d4d48c5e5cefc95b8dc0d1ed0e0c1a47"
         }
     }
 }

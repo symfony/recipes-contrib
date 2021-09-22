@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "birkof/netopia-mobilpay-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "3753f6a7183e53932a7d28dd77d885db10d1e32c"
-            }
-        }
-    },
     "manifests": {
         "birkof/netopia-mobilpay-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "birkof/netopia-mobilpay-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "birkof\\NetopiaMobilPay\\NetopiaMobilPayBundle": [
@@ -40,23 +26,47 @@
             },
             "files": {
                 "config/netopia_mobilpay/.gitignore": {
-                    "contents": "",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/routes/netopia_mobilpay.yaml": {
-                    "contents": "netopia_mobilpay_return_url:\n    path: /netopia-mobilpay/thank-you\n    methods: GET\n    defaults:\n        _controller: FrameworkBundle:Redirect:redirect\n        route: default\n        permanent: true\n\nnetopia_mobilpay_confirm_url:\n    path: /netopia-mobilpay/confirm\n    methods: POST\n    defaults:\n        _controller: FrameworkBundle:Redirect:redirect\n        route: default\n        permanent: true\n\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "netopia_mobilpay_return_url:",
+                        "    path: /netopia-mobilpay/thank-you",
+                        "    methods: GET",
+                        "    defaults:",
+                        "        _controller: FrameworkBundle:Redirect:redirect",
+                        "        route: default",
+                        "        permanent: true",
+                        "",
+                        "netopia_mobilpay_confirm_url:",
+                        "    path: /netopia-mobilpay/confirm",
+                        "    methods: POST",
+                        "    defaults:",
+                        "        _controller: FrameworkBundle:Redirect:redirect",
+                        "        route: default",
+                        "        permanent: true",
+                        "",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/netopia_mobilpay.yaml": {
-                    "contents": "netopia_mobilpay:\n    payment_url:        '%env(NETOPIA_MOBILPAY_PAYMENT_URL)%'\n    public_cert:        '%env(NETOPIA_MOBILPAY_PUBLIC_CERT)%'\n    private_key:        '%env(NETOPIA_MOBILPAY_PRIVATE_KEY)%'\n    signature:          '%env(NETOPIA_MOBILPAY_SIGNATURE)%'\n\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "netopia_mobilpay:",
+                        "    payment_url:        '%env(NETOPIA_MOBILPAY_PAYMENT_URL)%'",
+                        "    public_cert:        '%env(NETOPIA_MOBILPAY_PUBLIC_CERT)%'",
+                        "    private_key:        '%env(NETOPIA_MOBILPAY_PRIVATE_KEY)%'",
+                        "    signature:          '%env(NETOPIA_MOBILPAY_SIGNATURE)%'",
+                        "",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "birkof/netopia-mobilpay-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "3753f6a7183e53932a7d28dd77d885db10d1e32c"
         }
     }
 }

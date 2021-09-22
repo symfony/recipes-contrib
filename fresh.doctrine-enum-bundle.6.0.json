@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "fresh/doctrine-enum-bundle": {
-            "version": "6.0",
-            "recipe": {
-                "repo": "6.0",
-                "branch": "master",
-                "version": "6.0",
-                "ref": "fab86661c13bc12e4f14f706c86af09912d55bfb"
-            }
-        }
-    },
     "manifests": {
         "fresh/doctrine-enum-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "fresh/doctrine-enum-bundle",
-            "version": "6.0",
             "manifest": {
                 "bundles": {
                     "Fresh\\DoctrineEnumBundle\\FreshDoctrineEnumBundle": [
@@ -27,13 +13,13 @@
             },
             "files": {
                 "src/DBAL/Types/.gitignore": {
-                    "contents": "",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "fresh/doctrine-enum-bundle:6.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "fab86661c13bc12e4f14f706c86af09912d55bfb"
         }
     }
 }

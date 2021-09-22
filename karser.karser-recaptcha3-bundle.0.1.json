@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "karser/karser-recaptcha3-bundle": {
-            "version": "0.1",
-            "recipe": {
-                "repo": "0.1",
-                "branch": "master",
-                "version": "0.1",
-                "ref": "c51ce07c10331d506762efe25b6f5843c1a5ea17"
-            }
-        }
-    },
     "manifests": {
         "karser/karser-recaptcha3-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "karser/karser-recaptcha3-bundle",
-            "version": "0.1",
             "manifest": {
                 "bundles": {
                     "Karser\\Recaptcha3Bundle\\KarserRecaptcha3Bundle": [
@@ -36,13 +22,18 @@
             },
             "files": {
                 "config/packages/karser_recaptcha3.yaml": {
-                    "contents": "karser_recaptcha3:\n    site_key: '%env(RECAPTCHA3_KEY)%'\n    secret_key: '%env(RECAPTCHA3_SECRET)%'\n    score_threshold: 0.5\n    enabled: true\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "karser_recaptcha3:",
+                        "    site_key: '%env(RECAPTCHA3_KEY)%'",
+                        "    secret_key: '%env(RECAPTCHA3_SECRET)%'",
+                        "    score_threshold: 0.5",
+                        "    enabled: true",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "karser/karser-recaptcha3-bundle:0.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "c51ce07c10331d506762efe25b6f5843c1a5ea17"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "core23/lastfm-bundle": {
-            "version": "0.4",
-            "recipe": {
-                "repo": "0.4",
-                "branch": "master",
-                "version": "0.4",
-                "ref": "c73e219dfbfb682343c3a8c3df3ee329e6f4a8b7"
-            }
-        }
-    },
     "manifests": {
         "core23/lastfm-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "core23/lastfm-bundle",
-            "version": "0.4",
             "manifest": {
                 "bundles": {
                     "Core23\\LastFmBundle\\Core23LastFmBundle": [
@@ -31,13 +17,17 @@
             },
             "files": {
                 "config/packages/core23_lastfm.yaml": {
-                    "contents": "core23_lastfm:\n    api:\n        app_id:         '%env(LASTFM_API_ID)%'\n        shared_secret:  '%env(LASTFM_API_SECRET)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "core23_lastfm:",
+                        "    api:",
+                        "        app_id:         '%env(LASTFM_API_ID)%'",
+                        "        shared_secret:  '%env(LASTFM_API_SECRET)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "core23/lastfm-bundle:0.4@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "c73e219dfbfb682343c3a8c3df3ee329e6f4a8b7"
         }
     }
 }

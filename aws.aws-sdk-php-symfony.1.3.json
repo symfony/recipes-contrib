@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "aws/aws-sdk-php-symfony": {
-            "version": "1.3",
-            "recipe": {
-                "repo": "1.3",
-                "branch": "master",
-                "version": "1.3",
-                "ref": "d1753f9e2a669c464b2b0618af9b0123426b67b4"
-            }
-        }
-    },
     "manifests": {
         "aws/aws-sdk-php-symfony": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "aws/aws-sdk-php-symfony",
-            "version": "1.3",
             "manifest": {
                 "bundles": {
                     "Aws\\Symfony\\AwsBundle": [
@@ -31,13 +17,19 @@
             },
             "files": {
                 "config/packages/aws.yaml": {
-                    "contents": "aws:\n    version: latest\n    region: us-east-1\n    credentials:\n        key: \"%env(AWS_KEY)%\"\n        secret: \"%env(AWS_SECRET)%\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "aws:",
+                        "    version: latest",
+                        "    region: us-east-1",
+                        "    credentials:",
+                        "        key: \"%env(AWS_KEY)%\"",
+                        "        secret: \"%env(AWS_SECRET)%\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "aws/aws-sdk-php-symfony:1.3@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "d1753f9e2a669c464b2b0618af9b0123426b67b4"
         }
     }
 }

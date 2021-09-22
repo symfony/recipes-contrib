@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "wandi/mailer-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "af0080451c891c6b85a0ca6e04377b6f4209bfb6"
-            }
-        }
-    },
     "manifests": {
         "wandi/mailer-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "wandi/mailer-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Wandi\\MailerBundle\\WandiMailerBundle": [
@@ -35,13 +21,17 @@
             },
             "files": {
                 "config/packages/wandi_mailer.yaml": {
-                    "contents": "wandi_mailer:\n    sender:\n        name: '%env(WANDI_MAILER_SENDER_NAME)%'\n        address: '%env(WANDI_MAILER_SENDER_ADDRESS)%'\n",
-                    "executable": true,
-                    "encoding": ""
+                    "contents": [
+                        "wandi_mailer:",
+                        "    sender:",
+                        "        name: '%env(WANDI_MAILER_SENDER_NAME)%'",
+                        "        address: '%env(WANDI_MAILER_SENDER_ADDRESS)%'",
+                        ""
+                    ],
+                    "executable": true
                 }
             },
-            "origin": "wandi/mailer-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "af0080451c891c6b85a0ca6e04377b6f4209bfb6"
         }
     }
 }

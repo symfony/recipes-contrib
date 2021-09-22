@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "andchir/shopkeeper4-comments": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "8a05fa761a475e2e95f7b556e54d9ab33d532aa9"
-            }
-        }
-    },
     "manifests": {
         "andchir/shopkeeper4-comments": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "andchir/shopkeeper4-comments",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Andchir\\CommentsBundle\\CommentsBundle": [
@@ -27,18 +13,25 @@
             },
             "files": {
                 "config/routes/comments.yaml": {
-                    "contents": "comments:\n    resource: '@CommentsBundle'\n    type: annotation\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "comments:",
+                        "    resource: '@CommentsBundle'",
+                        "    type: annotation",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/comments.yaml": {
-                    "contents": "comments:\n    comment_class: App\\MainBundle\\Document\\Comment\n    status_default: pending\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "comments:",
+                        "    comment_class: App\\MainBundle\\Document\\Comment",
+                        "    status_default: pending",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "andchir/shopkeeper4-comments:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "8a05fa761a475e2e95f7b556e54d9ab33d532aa9"
         }
     }
 }

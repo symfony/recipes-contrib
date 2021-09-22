@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "kunstmaan/search-bundle": {
-            "version": "5.2",
-            "recipe": {
-                "repo": "5.2",
-                "branch": "master",
-                "version": "5.2",
-                "ref": "9d01a6ee0822f655ee7b696b98bd590ef3caa58d"
-            }
-        }
-    },
     "manifests": {
         "kunstmaan/search-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "kunstmaan/search-bundle",
-            "version": "5.2",
             "manifest": {
                 "bundles": {
                     "Kunstmaan\\SearchBundle\\KunstmaanSearchBundle": [
@@ -27,13 +13,19 @@
             },
             "files": {
                 "config/packages/kunstmaan_search.yaml": {
-                    "contents": "kunstmaan_search:\n    connection:\n        driver: elastic_search\n        host: localhost\n        port: 9200\n    index_prefix: myproject # Change this prefix to you liking. Maybe the name of your project\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "kunstmaan_search:",
+                        "    connection:",
+                        "        driver: elastic_search",
+                        "        host: localhost",
+                        "        port: 9200",
+                        "    index_prefix: myproject # Change this prefix to you liking. Maybe the name of your project",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "kunstmaan/search-bundle:5.2@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "9d01a6ee0822f655ee7b696b98bd590ef3caa58d"
         }
     }
 }

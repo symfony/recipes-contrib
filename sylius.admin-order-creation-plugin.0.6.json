@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "sylius/admin-order-creation-plugin": {
-            "version": "0.6",
-            "recipe": {
-                "repo": "0.6",
-                "branch": "master",
-                "version": "0.6",
-                "ref": "3ac19aedc8c846cc48cc61ee62ab5b280823efbf"
-            }
-        }
-    },
     "manifests": {
         "sylius/admin-order-creation-plugin": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "sylius/admin-order-creation-plugin",
-            "version": "0.6",
             "manifest": {
                 "bundles": {
                     "Sylius\\AdminOrderCreationPlugin\\SyliusAdminOrderCreationPlugin": [
@@ -27,18 +13,23 @@
             },
             "files": {
                 "config/routes/sylius_admin_order_creation.yaml": {
-                    "contents": "sylius_admin_order_creation:\n    resource: \"@SyliusAdminOrderCreationPlugin/Resources/config/app/routing.yml\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "sylius_admin_order_creation:",
+                        "    resource: \"@SyliusAdminOrderCreationPlugin/Resources/config/app/routing.yml\"",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/sylius_admin_order_creation.yaml": {
-                    "contents": "imports:\n    - { resource: \"@SyliusAdminOrderCreationPlugin/Resources/config/app/config.yml\" }\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SyliusAdminOrderCreationPlugin/Resources/config/app/config.yml\" }",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "sylius/admin-order-creation-plugin:0.6@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "3ac19aedc8c846cc48cc61ee62ab5b280823efbf"
         }
     }
 }

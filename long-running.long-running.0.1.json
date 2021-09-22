@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "long-running/long-running": {
-            "version": "0.1",
-            "recipe": {
-                "repo": "0.1",
-                "branch": "master",
-                "version": "0.1",
-                "ref": "b661d2358dbaee7826b470522ec4cb6b948cc80a"
-            }
-        }
-    },
     "manifests": {
         "long-running/long-running": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "long-running/long-running",
-            "version": "0.1",
             "manifest": {
                 "bundles": {
                     "LongRunning\\Bundle\\LongRunningBundle\\LongRunningBundle": [
@@ -23,8 +9,7 @@
                 }
             },
             "files": [],
-            "origin": "long-running/long-running:0.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "b661d2358dbaee7826b470522ec4cb6b948cc80a"
         }
     }
 }

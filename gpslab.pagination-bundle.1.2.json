@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "gpslab/pagination-bundle": {
-            "version": "1.2",
-            "recipe": {
-                "repo": "1.2",
-                "branch": "master",
-                "version": "1.2",
-                "ref": "19b2f6b23ba15806e2b1235cb9848f362249aa71"
-            }
-        }
-    },
     "manifests": {
         "gpslab/pagination-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "gpslab/pagination-bundle",
-            "version": "1.2",
             "manifest": {
                 "bundles": {
                     "GpsLab\\Bundle\\PaginationBundle\\GpsLabPaginationBundle": [
@@ -27,13 +13,22 @@
             },
             "files": {
                 "config/packages/gpslab_pagination.yaml": {
-                    "contents": "gpslab_pagination:\n    # Page range used in pagination control\n    max_navigate: 5\n\n    # Name of URL parameter for page number\n    parameter_name: 'page'\n\n    # Sliding pagination controls template\n    template: 'GpsLabPaginationBundle::pagination.html.twig'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "gpslab_pagination:",
+                        "    # Page range used in pagination control",
+                        "    max_navigate: 5",
+                        "",
+                        "    # Name of URL parameter for page number",
+                        "    parameter_name: 'page'",
+                        "",
+                        "    # Sliding pagination controls template",
+                        "    template: 'GpsLabPaginationBundle::pagination.html.twig'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "gpslab/pagination-bundle:1.2@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "19b2f6b23ba15806e2b1235cb9848f362249aa71"
         }
     }
 }

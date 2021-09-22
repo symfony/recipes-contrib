@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "backup-manager/symfony": {
-            "version": "2.1",
-            "recipe": {
-                "repo": "2.1",
-                "branch": "master",
-                "version": "2.1",
-                "ref": "4bb70c3f71c9bcd581e28724f50569af236df758"
-            }
-        }
-    },
     "manifests": {
         "backup-manager/symfony": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "backup-manager/symfony",
-            "version": "2.1",
             "manifest": {
                 "bundles": {
                     "BM\\BackupManagerBundle\\BMBackupManagerBundle": [
@@ -35,13 +21,22 @@
             },
             "files": {
                 "config/packages/bm_backup_manager.yaml": {
-                    "contents": "# See full config at https://github.com/backup-manager/symfony\nbm_backup_manager:\n    database:\n        development:\n            dsn: '%env(resolve:DATABASE_URL)%'\n    storage:\n        local:\n            type: Local\n            root: '%kernel.cache_dir%/db'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# See full config at https://github.com/backup-manager/symfony",
+                        "bm_backup_manager:",
+                        "    database:",
+                        "        development:",
+                        "            dsn: '%env(resolve:DATABASE_URL)%'",
+                        "    storage:",
+                        "        local:",
+                        "            type: Local",
+                        "            root: '%kernel.cache_dir%/db'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "backup-manager/symfony:2.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "4bb70c3f71c9bcd581e28724f50569af236df758"
         }
     }
 }

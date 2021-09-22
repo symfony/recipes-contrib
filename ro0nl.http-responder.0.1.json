@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "ro0nl/http-responder": {
-            "version": "0.1",
-            "recipe": {
-                "repo": "0.1",
-                "branch": "master",
-                "version": "0.1",
-                "ref": "a7aeed3f58fbf7587a6a152d3a1a4d9d52f0fa39"
-            }
-        }
-    },
     "manifests": {
         "ro0nl/http-responder": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "ro0nl/http-responder",
-            "version": "0.1",
             "manifest": {
                 "bundles": {
                     "ro0NL\\HttpResponder\\Bundle\\HttpResponderBundle": [
@@ -23,8 +9,7 @@
                 }
             },
             "files": [],
-            "origin": "ro0nl/http-responder:0.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "a7aeed3f58fbf7587a6a152d3a1a4d9d52f0fa39"
         }
     }
 }

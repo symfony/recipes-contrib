@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "core23/shariff-bundle": {
-            "version": "3.0",
-            "recipe": {
-                "repo": "3.0",
-                "branch": "master",
-                "version": "3.0",
-                "ref": "543b5fc304a0580ead9b6b65f1d01f028259d3b2"
-            }
-        }
-    },
     "manifests": {
         "core23/shariff-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "core23/shariff-bundle",
-            "version": "3.0",
             "manifest": {
                 "bundles": {
                     "Core23\\ShariffBundle\\Core23ShariffBundle": [
@@ -31,18 +17,37 @@
             },
             "files": {
                 "config/routes/core23_shariff.yaml": {
-                    "contents": "core23_shariff:\n    resource: '@Core23ShariffBundle/Resources/config/routing/backend.yml'\n    prefix: /shariff\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "core23_shariff:",
+                        "    resource: '@Core23ShariffBundle/Resources/config/routing/backend.yml'",
+                        "    prefix: /shariff",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/core23_shariff.yaml": {
-                    "contents": "core23_shariff:\n    services:\n        facebook:\n            app_id:  '%env(FACEBOOK_API_ID)%'\n            secret:  '%env(FACEBOOK_API_SECRET)%'\n\nsonata_block:\n    blocks:\n        core23_shariff.block.share:\n\ndoctrine_cache:\n    providers:\n        core23_shariff:\n            type: php_file\n            namespace: core23_shariff\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "core23_shariff:",
+                        "    services:",
+                        "        facebook:",
+                        "            app_id:  '%env(FACEBOOK_API_ID)%'",
+                        "            secret:  '%env(FACEBOOK_API_SECRET)%'",
+                        "",
+                        "sonata_block:",
+                        "    blocks:",
+                        "        core23_shariff.block.share:",
+                        "",
+                        "doctrine_cache:",
+                        "    providers:",
+                        "        core23_shariff:",
+                        "            type: php_file",
+                        "            namespace: core23_shariff",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "core23/shariff-bundle:3.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "543b5fc304a0580ead9b6b65f1d01f028259d3b2"
         }
     }
 }

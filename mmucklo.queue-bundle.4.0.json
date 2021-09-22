@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "mmucklo/queue-bundle": {
-            "version": "4.0",
-            "recipe": {
-                "repo": "4.0",
-                "branch": "master",
-                "version": "4.0",
-                "ref": "825e1d4c885d12b7b1e528356f3795a13a6e4963"
-            }
-        }
-    },
     "manifests": {
         "mmucklo/queue-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "mmucklo/queue-bundle",
-            "version": "4.0",
             "manifest": {
                 "bundles": {
                     "Dtc\\QueueBundle\\DtcQueueBundle": [
@@ -43,18 +29,48 @@
             },
             "files": {
                 "config/routes/dtc_queue.yaml": {
-                    "contents": "dtc_queue:\n    resource: '@DtcQueueBundle/Resources/config/routing.yml'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "dtc_queue:",
+                        "    resource: '@DtcQueueBundle/Resources/config/routing.yml'",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/dtc_queue.yaml": {
-                    "contents": "dtc_queue:\n    # For full configuration options see:\n    #   https://github.com/mmucklo/DtcQueueBundle/blob/master/Resources/doc/full-configuration.md\n    manager:\n        # This parameter is required and should typically be set to one of:\n        #   [odm|orm|beanstalkd|rabbit_mq|redis]\n        job: odm\n    timings:\n        # Set this to true to record job timing history in a separate table\n        #  (note: for beanstalkd|rabbit_mq|redis, job_timing or run needs to\n        #   be set to one of orm|odm under the manager section)\n        record: false\n    odm:\n        # This is only necessary if still using an \"odm\" manager.\n        #   It only needs to be modified if you want to use a different\n        #   document manager than the default one\n        #   (there is a similar parameter for entity_manager if you're\n        #   using orm)\n        #\n        # If you don't use odm at all, this can safely be ignored or deleted\n        document_manager: default\n    priority:\n        max: 255\n        direction: desc\n    admin:\n        # chartjs is used to render the job timings graph in the admin section\n        chartjs: 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "dtc_queue:",
+                        "    # For full configuration options see:",
+                        "    #   https://github.com/mmucklo/DtcQueueBundle/blob/master/Resources/doc/full-configuration.md",
+                        "    manager:",
+                        "        # This parameter is required and should typically be set to one of:",
+                        "        #   [odm|orm|beanstalkd|rabbit_mq|redis]",
+                        "        job: odm",
+                        "    timings:",
+                        "        # Set this to true to record job timing history in a separate table",
+                        "        #  (note: for beanstalkd|rabbit_mq|redis, job_timing or run needs to",
+                        "        #   be set to one of orm|odm under the manager section)",
+                        "        record: false",
+                        "    odm:",
+                        "        # This is only necessary if still using an \"odm\" manager.",
+                        "        #   It only needs to be modified if you want to use a different",
+                        "        #   document manager than the default one",
+                        "        #   (there is a similar parameter for entity_manager if you're",
+                        "        #   using orm)",
+                        "        #",
+                        "        # If you don't use odm at all, this can safely be ignored or deleted",
+                        "        document_manager: default",
+                        "    priority:",
+                        "        max: 255",
+                        "        direction: desc",
+                        "    admin:",
+                        "        # chartjs is used to render the job timings graph in the admin section",
+                        "        chartjs: 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "mmucklo/queue-bundle:4.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "825e1d4c885d12b7b1e528356f3795a13a6e4963"
         }
     }
 }

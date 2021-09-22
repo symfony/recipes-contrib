@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "oskarstark/readable-filesize-extension": {
-            "version": "0.1",
-            "recipe": {
-                "repo": "0.1",
-                "branch": "master",
-                "version": "0.1",
-                "ref": "39befdbade7c9859628534df1e18cc15a78b7b3c"
-            }
-        }
-    },
     "manifests": {
         "oskarstark/readable-filesize-extension": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "oskarstark/readable-filesize-extension",
-            "version": "0.1",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -22,13 +8,19 @@
             },
             "files": {
                 "config/packages/oskarstark_readable_filesize_extension.yaml": {
-                    "contents": "services:\n    _defaults:\n        autowire: true\n\n    OskarStark\\Twig\\ReadableFilesizeExtension:\n        tags: ['twig.extension']\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "",
+                        "    OskarStark\\Twig\\ReadableFilesizeExtension:",
+                        "        tags: ['twig.extension']",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "oskarstark/readable-filesize-extension:0.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "39befdbade7c9859628534df1e18cc15a78b7b3c"
         }
     }
 }

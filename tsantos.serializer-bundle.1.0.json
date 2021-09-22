@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "tsantos/serializer-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "0e77ebcee14268963daa83bbf7dbda672876ef07"
-            }
-        }
-    },
     "manifests": {
         "tsantos/serializer-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "tsantos/serializer-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "TSantos\\SerializerBundle\\TSantosSerializerBundle": [
@@ -27,23 +13,33 @@
             },
             "files": {
                 "config/packages/tsantos_serializer.yaml": {
-                    "contents": "# Read the official documentation page of this bundle for further information about all possible configurations.\n# http://tsantos-serializer-bundle.readthedocs.io/\ntsantos_serializer:\n    generation_strategy: file_not_exists\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# Read the official documentation page of this bundle for further information about all possible configurations.",
+                        "# http://tsantos-serializer-bundle.readthedocs.io/",
+                        "tsantos_serializer:",
+                        "    generation_strategy: file_not_exists",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/prod/tsantos_serializer.yaml": {
-                    "contents": "tsantos_serializer:\n    generation_strategy: never\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "tsantos_serializer:",
+                        "    generation_strategy: never",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/test/tsantos_serializer.yaml": {
-                    "contents": "tsantos_serializer:\n    generation_strategy: always\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "tsantos_serializer:",
+                        "    generation_strategy: always",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "tsantos/serializer-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "0e77ebcee14268963daa83bbf7dbda672876ef07"
         }
     }
 }

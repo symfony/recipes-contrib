@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "anezi/locale-extension": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "b6c7e92a317efe13229a85e3934681a4f31d8f82"
-            }
-        }
-    },
     "manifests": {
         "anezi/locale-extension": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "anezi/locale-extension",
-            "version": "1.0",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -22,13 +8,21 @@
             },
             "files": {
                 "config/packages/anezi_locale_extension.yaml": {
-                    "contents": "services:\n    anezi_twig.locale_extension:\n        class: Anezi\\Locale\\Twig\\Extension\\LocaleExtension\n        public:    false\n        arguments:\n            $locales: ['fr', 'en'] # Edit here for your needs.\n        tags:\n            - { name: twig.extension }\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "services:",
+                        "    anezi_twig.locale_extension:",
+                        "        class: Anezi\\Locale\\Twig\\Extension\\LocaleExtension",
+                        "        public:    false",
+                        "        arguments:",
+                        "            $locales: ['fr', 'en'] # Edit here for your needs.",
+                        "        tags:",
+                        "            - { name: twig.extension }",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "anezi/locale-extension:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "b6c7e92a317efe13229a85e3934681a4f31d8f82"
         }
     }
 }

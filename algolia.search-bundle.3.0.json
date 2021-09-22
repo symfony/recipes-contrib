@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "algolia/search-bundle": {
-            "version": "3.0",
-            "recipe": {
-                "repo": "3.0",
-                "branch": "master",
-                "version": "3.0",
-                "ref": "fd172e8feabf6b1c0818e18de90c2a3f82ea0a60"
-            }
-        }
-    },
     "manifests": {
         "algolia/search-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "algolia/search-bundle",
-            "version": "3.0",
             "manifest": {
                 "bundles": {
                     "Algolia\\SearchBundle\\AlgoliaSearchBundle": [
@@ -43,13 +29,17 @@
             },
             "files": {
                 "config/packages/algolia_search.yaml": {
-                    "contents": "# All available configuration can be found here:\n# https://www.algolia.com/doc/api-client/symfony/configuration/\nalgolia_search:\n    prefix: '%env(APP_ENV)%_'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# All available configuration can be found here:",
+                        "# https://www.algolia.com/doc/api-client/symfony/configuration/",
+                        "algolia_search:",
+                        "    prefix: '%env(APP_ENV)%_'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "algolia/search-bundle:3.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "fd172e8feabf6b1c0818e18de90c2a3f82ea0a60"
         }
     }
 }

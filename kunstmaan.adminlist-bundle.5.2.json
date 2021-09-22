@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "kunstmaan/adminlist-bundle": {
-            "version": "5.2",
-            "recipe": {
-                "repo": "5.2",
-                "branch": "master",
-                "version": "5.2",
-                "ref": "7614cf923bbdd5a30bd2092ac7b2d47ecb6f6a52"
-            }
-        }
-    },
     "manifests": {
         "kunstmaan/adminlist-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "kunstmaan/adminlist-bundle",
-            "version": "5.2",
             "manifest": {
                 "bundles": {
                     "Kunstmaan\\AdminListBundle\\KunstmaanAdminListBundle": [
@@ -27,13 +13,19 @@
             },
             "files": {
                 "config/routes/kunstmaan_adminlist.yaml": {
-                    "contents": "KunstmaanAdminListBundle:\n    resource: \"@KunstmaanAdminListBundle/Resources/config/routing.yml\"\n    # If your site is not multi language, remove the \"{_locale}/\" part of the prefix and the requirements\n    prefix:   /{_locale}/\n    requirements:\n        _locale: \"%kunstmaan_admin.required_locales%\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "KunstmaanAdminListBundle:",
+                        "    resource: \"@KunstmaanAdminListBundle/Resources/config/routing.yml\"",
+                        "    # If your site is not multi language, remove the \"{_locale}/\" part of the prefix and the requirements",
+                        "    prefix:   /{_locale}/",
+                        "    requirements:",
+                        "        _locale: \"%kunstmaan_admin.required_locales%\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "kunstmaan/adminlist-bundle:5.2@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "7614cf923bbdd5a30bd2092ac7b2d47ecb6f6a52"
         }
     }
 }

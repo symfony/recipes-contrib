@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "overblog/graphiql-bundle": {
-            "version": "0.1",
-            "recipe": {
-                "repo": "0.1",
-                "branch": "master",
-                "version": "0.1",
-                "ref": "96d185c63491cd15c1570f6243ec1808f4462970"
-            }
-        }
-    },
     "manifests": {
         "overblog/graphiql-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "overblog/graphiql-bundle",
-            "version": "0.1",
             "manifest": {
                 "bundles": {
                     "Overblog\\GraphiQLBundle\\OverblogGraphiQLBundle": [
@@ -30,13 +16,15 @@
             },
             "files": {
                 "config/routes/dev/graphiql.yaml": {
-                    "contents": "overblog_graphiql:\n    resource: \"@OverblogGraphiQLBundle/Resources/config/routing.xml\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "overblog_graphiql:",
+                        "    resource: \"@OverblogGraphiQLBundle/Resources/config/routing.xml\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "overblog/graphiql-bundle:0.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "96d185c63491cd15c1570f6243ec1808f4462970"
         }
     }
 }

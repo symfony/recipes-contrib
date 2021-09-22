@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "svc/contactform-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "23d0ec67c3b49a7343e874b7bc4a1bba2d5e4858"
-            }
-        }
-    },
     "manifests": {
         "svc/contactform-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "svc/contactform-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Svc\\ContactformBundle\\SvcContactformBundle": [
@@ -31,23 +17,42 @@
             },
             "files": {
                 "config/routes/svc_contactform.yaml": {
-                    "contents": "_svc_contactform:\n    resource: '@SvcContactformBundle/src/Resources/config/routes.xml'\n    prefix: /svc-contactform/{_locale}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "_svc_contactform:",
+                        "    resource: '@SvcContactformBundle/src/Resources/config/routes.xml'",
+                        "    prefix: /svc-contactform/{_locale}",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/svc_contactform.yaml": {
-                    "contents": "svc_contactform:\n    # Email adress for contact mails\n    contact_mail:         dev@sv-systems.com\n\n    # Which route should by called after amil sent\n    route_after_send:     index\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "svc_contactform:",
+                        "    # Email adress for contact mails",
+                        "    contact_mail:         dev@sv-systems.com",
+                        "",
+                        "    # Which route should by called after amil sent",
+                        "    route_after_send:     index",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "assets/styles/layout/_svc-contactform.scss": {
-                    "contents": ".svc-contactform {\n  width: 100%;\n  max-width: 700px;\n  padding: 15px;\n  margin: auto;\n  border-radius: 15px;\n\tbox-shadow: 0 5px 5px rgba(0,0,0,.4);\n}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        ".svc-contactform {",
+                        "  width: 100%;",
+                        "  max-width: 700px;",
+                        "  padding: 15px;",
+                        "  margin: auto;",
+                        "  border-radius: 15px;",
+                        "\tbox-shadow: 0 5px 5px rgba(0,0,0,.4);",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "svc/contactform-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "23d0ec67c3b49a7343e874b7bc4a1bba2d5e4858"
         }
     }
 }

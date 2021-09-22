@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "elao/enum": {
-            "version": "1.7",
-            "recipe": {
-                "repo": "1.7",
-                "branch": "master",
-                "version": "1.7",
-                "ref": "d44e1c8caa4cabcab399724df787de558459dd83"
-            }
-        }
-    },
     "manifests": {
         "elao/enum": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "elao/enum",
-            "version": "1.7",
             "manifest": {
                 "bundles": {
                     "Elao\\Enum\\Bridge\\Symfony\\Bundle\\ElaoEnumBundle": [
@@ -27,13 +13,18 @@
             },
             "files": {
                 "config/packages/elao_enum.yaml": {
-                    "contents": "elao_enum:\n    # Provide the enum classes for which you want to automatically generate & register Doctrine DBAL Types:\n    # https://github.com/Elao/PhpEnums#doctrine\n    doctrine:\n        types: {}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "elao_enum:",
+                        "    # Provide the enum classes for which you want to automatically generate & register Doctrine DBAL Types:",
+                        "    # https://github.com/Elao/PhpEnums#doctrine",
+                        "    doctrine:",
+                        "        types: {}",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "elao/enum:1.7@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "d44e1c8caa4cabcab399724df787de558459dd83"
         }
     }
 }

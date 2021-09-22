@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "expertcoder/swiftmailer-send-grid-bundle": {
-            "version": "2.0",
-            "recipe": {
-                "repo": "2.0",
-                "branch": "master",
-                "version": "2.0",
-                "ref": "43e519108f52c3e84f8215bfff19727911bd6e1d"
-            }
-        }
-    },
     "manifests": {
         "expertcoder/swiftmailer-send-grid-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "expertcoder/swiftmailer-send-grid-bundle",
-            "version": "2.0",
             "manifest": {
                 "bundles": {
                     "ExpertCoder\\Swiftmailer\\SendGridBundle\\ExpertCoderSwiftmailerSendGridBundle": [
@@ -30,13 +16,16 @@
             },
             "files": {
                 "config/packages/expert_coder_swiftmailer_send_grid.yaml": {
-                    "contents": "expert_coder_swiftmailer_send_grid:\n    api_key: '%env(SENDGRID_API_KEY)%'\n    # categories: [development, client_name]\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "expert_coder_swiftmailer_send_grid:",
+                        "    api_key: '%env(SENDGRID_API_KEY)%'",
+                        "    # categories: [development, client_name]",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "expertcoder/swiftmailer-send-grid-bundle:2.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "43e519108f52c3e84f8215bfff19727911bd6e1d"
         }
     }
 }

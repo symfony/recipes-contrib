@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "snc/redis-bundle": {
-            "version": "2.0",
-            "recipe": {
-                "repo": "2.0",
-                "branch": "master",
-                "version": "2.0",
-                "ref": "85bbdb3d2db531e20874de29bab0587f93604fa8"
-            }
-        }
-    },
     "manifests": {
         "snc/redis-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "snc/redis-bundle",
-            "version": "2.0",
             "manifest": {
                 "bundles": {
                     "Snc\\RedisBundle\\SncRedisBundle": [
@@ -31,13 +17,25 @@
             },
             "files": {
                 "config/packages/snc_redis.yaml": {
-                    "contents": "snc_redis:\n    clients:\n\n# Define your clients here. The example below connects to database 0 of the default Redis server.\n#\n# See https://github.com/snc/SncRedisBundle/blob/master/Resources/doc/index.md for instructions on\n# how to configure the bundle.\n#\n#        default:\n#            type: phpredis\n#            alias: default\n#            dsn: \"%env(REDIS_URL)%\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "snc_redis:",
+                        "    clients:",
+                        "",
+                        "# Define your clients here. The example below connects to database 0 of the default Redis server.",
+                        "#",
+                        "# See https://github.com/snc/SncRedisBundle/blob/master/Resources/doc/index.md for instructions on",
+                        "# how to configure the bundle.",
+                        "#",
+                        "#        default:",
+                        "#            type: phpredis",
+                        "#            alias: default",
+                        "#            dsn: \"%env(REDIS_URL)%\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "snc/redis-bundle:2.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "85bbdb3d2db531e20874de29bab0587f93604fa8"
         }
     }
 }

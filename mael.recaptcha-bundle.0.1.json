@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "mael/recaptcha-bundle": {
-            "version": "0.1",
-            "recipe": {
-                "repo": "0.1",
-                "branch": "master",
-                "version": "0.1",
-                "ref": "b52c27935ee0cf6b549dff2639415635614d77f5"
-            }
-        }
-    },
     "manifests": {
         "mael/recaptcha-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "mael/recaptcha-bundle",
-            "version": "0.1",
             "manifest": {
                 "bundles": {
                     "Mael\\MaelRecaptchaBundle\\MaelRecaptchaBundle": [
@@ -35,13 +21,16 @@
             },
             "files": {
                 "config/packages/mael_recaptcha.yaml": {
-                    "contents": "mael_recaptcha:\n    key: '%env(resolve:MAEL_RECAPTCHA_KEY)%'\n    secret: '%env(resolve:MAEL_RECAPTCHA_SECRET)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "mael_recaptcha:",
+                        "    key: '%env(resolve:MAEL_RECAPTCHA_KEY)%'",
+                        "    secret: '%env(resolve:MAEL_RECAPTCHA_SECRET)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "mael/recaptcha-bundle:0.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "b52c27935ee0cf6b549dff2639415635614d77f5"
         }
     }
 }

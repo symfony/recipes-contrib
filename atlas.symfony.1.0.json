@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "atlas/symfony": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "59ce1c811d6db5e8c23fd8ecc0fdfa92f00a9dbf"
-            }
-        }
-    },
     "manifests": {
         "atlas/symfony": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "atlas/symfony",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Atlas\\Symfony\\AtlasBundle": [
@@ -31,8 +17,7 @@
                 }
             },
             "files": [],
-            "origin": "atlas/symfony:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "59ce1c811d6db5e8c23fd8ecc0fdfa92f00a9dbf"
         }
     }
 }

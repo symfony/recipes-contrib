@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "leapt/im-bundle": {
-            "version": "2.0",
-            "recipe": {
-                "repo": "2.0",
-                "branch": "master",
-                "version": "2.0",
-                "ref": "feeab1653fecfa06354b38a7ba89ef30753fb7a2"
-            }
-        }
-    },
     "manifests": {
         "leapt/im-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "leapt/im-bundle",
-            "version": "2.0",
             "manifest": {
                 "bundles": {
                     "Leapt\\ImBundle\\LeaptImBundle": [
@@ -30,18 +16,28 @@
             },
             "files": {
                 "config/routes/leapt_im.yaml": {
-                    "contents": "leapt_im:\n    resource: '@LeaptImBundle/Resources/config/routing.yml'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "leapt_im:",
+                        "    resource: '@LeaptImBundle/Resources/config/routing.yml'",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/leapt_im.yaml": {
-                    "contents": "# Read the documentation: https://github.com/leapt/im-bundle/blob/master/docs/configuration.rst\nleapt_im:\n    cache_path: cache/im\n    formats:\n        # Resize to fit in 100x100, only if bigger, and remove all crap (meta-data, ...)\n        medium:\n            thumbnail: 100x100>\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# Read the documentation: https://github.com/leapt/im-bundle/blob/master/docs/configuration.rst",
+                        "leapt_im:",
+                        "    cache_path: cache/im",
+                        "    formats:",
+                        "        # Resize to fit in 100x100, only if bigger, and remove all crap (meta-data, ...)",
+                        "        medium:",
+                        "            thumbnail: 100x100>",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "leapt/im-bundle:2.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "feeab1653fecfa06354b38a7ba89ef30753fb7a2"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "squizlabs/php_codesniffer": {
-            "version": "3.0",
-            "recipe": {
-                "repo": "3.0",
-                "branch": "master",
-                "version": "3.0",
-                "ref": "0dc9cceda799fd3a08b96987e176a261028a3709"
-            }
-        }
-    },
     "manifests": {
         "squizlabs/php_codesniffer": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "squizlabs/php_codesniffer",
-            "version": "3.0",
             "manifest": {
                 "copy-from-recipe": {
                     "phpcs.xml.dist": "phpcs.xml.dist"
@@ -26,13 +12,32 @@
             },
             "files": {
                 "phpcs.xml.dist": {
-                    "contents": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\n<ruleset xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:noNamespaceSchemaLocation=\"vendor/squizlabs/php_codesniffer/phpcs.xsd\">\n\n    <arg name=\"basepath\" value=\".\"/>\n    <arg name=\"cache\" value=\".phpcs-cache\"/>\n    <arg name=\"colors\"/>\n    <arg name=\"extensions\" value=\"php\"/>\n\n    <rule ref=\"PSR2\"/>\n\n    <file>bin/</file>\n    <file>config/</file>\n    <file>public/</file>\n    <file>src/</file>\n    <file>tests/</file>\n\n</ruleset>\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+                        "",
+                        "<ruleset xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"",
+                        "         xsi:noNamespaceSchemaLocation=\"vendor/squizlabs/php_codesniffer/phpcs.xsd\">",
+                        "",
+                        "    <arg name=\"basepath\" value=\".\"/>",
+                        "    <arg name=\"cache\" value=\".phpcs-cache\"/>",
+                        "    <arg name=\"colors\"/>",
+                        "    <arg name=\"extensions\" value=\"php\"/>",
+                        "",
+                        "    <rule ref=\"PSR2\"/>",
+                        "",
+                        "    <file>bin/</file>",
+                        "    <file>config/</file>",
+                        "    <file>public/</file>",
+                        "    <file>src/</file>",
+                        "    <file>tests/</file>",
+                        "",
+                        "</ruleset>",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "squizlabs/php_codesniffer:3.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "0dc9cceda799fd3a08b96987e176a261028a3709"
         }
     }
 }

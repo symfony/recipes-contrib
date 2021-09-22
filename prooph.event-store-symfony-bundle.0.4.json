@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "prooph/event-store-symfony-bundle": {
-            "version": "0.4",
-            "recipe": {
-                "repo": "0.4",
-                "branch": "master",
-                "version": "0.4",
-                "ref": "a989875619b98a288abc2b636a2b5be36b4833d6"
-            }
-        }
-    },
     "manifests": {
         "prooph/event-store-symfony-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "prooph/event-store-symfony-bundle",
-            "version": "0.4",
             "manifest": {
                 "bundles": {
                     "Prooph\\Bundle\\EventStore\\ProophEventStoreBundle": [
@@ -28,18 +14,65 @@
             },
             "files": {
                 "src/Command/CreateEventStreamCommand.php": {
-                    "contents": "<?php\n\ndeclare(strict_types=1);\n\nnamespace App\\Command;\n\nuse Prooph\\EventStore\\EventStore;\nuse Prooph\\EventStore\\Stream;\nuse Prooph\\EventStore\\StreamName;\nuse Symfony\\Bundle\\FrameworkBundle\\Command\\ContainerAwareCommand;\nuse Symfony\\Component\\Console\\Input\\InputInterface;\nuse Symfony\\Component\\Console\\Output\\OutputInterface;\n\nfinal class CreateEventStreamCommand extends ContainerAwareCommand\n{\n    private $eventStore;\n\n    public function __construct(EventStore $eventStore)\n    {\n        $this->eventStore = $eventStore;\n    }\n\n    protected function configure()\n    {\n        $this->setName('event-store:event-stream:create')\n            ->setDescription('Create event_stream.')\n            ->setHelp('This command creates the event_stream');\n    }\n\n    protected function execute(InputInterface $input, OutputInterface $output)\n    {\n        $this->eventStore->create(new Stream(new StreamName('event_stream'), new \\ArrayIterator([])));\n\n        $output->writeln('<info>Event stream was created successfully.</info>');\n    }\n}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "namespace App\\Command;",
+                        "",
+                        "use Prooph\\EventStore\\EventStore;",
+                        "use Prooph\\EventStore\\Stream;",
+                        "use Prooph\\EventStore\\StreamName;",
+                        "use Symfony\\Bundle\\FrameworkBundle\\Command\\ContainerAwareCommand;",
+                        "use Symfony\\Component\\Console\\Input\\InputInterface;",
+                        "use Symfony\\Component\\Console\\Output\\OutputInterface;",
+                        "",
+                        "final class CreateEventStreamCommand extends ContainerAwareCommand",
+                        "{",
+                        "    private $eventStore;",
+                        "",
+                        "    public function __construct(EventStore $eventStore)",
+                        "    {",
+                        "        $this->eventStore = $eventStore;",
+                        "    }",
+                        "",
+                        "    protected function configure()",
+                        "    {",
+                        "        $this->setName('event-store:event-stream:create')",
+                        "            ->setDescription('Create event_stream.')",
+                        "            ->setHelp('This command creates the event_stream');",
+                        "    }",
+                        "",
+                        "    protected function execute(InputInterface $input, OutputInterface $output)",
+                        "    {",
+                        "        $this->eventStore->create(new Stream(new StreamName('event_stream'), new \\ArrayIterator([])));",
+                        "",
+                        "        $output->writeln('<info>Event stream was created successfully.</info>');",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/prooph_event_store.yaml": {
-                    "contents": "prooph_event_store:\n    stores:\n        default:\n            event_store: 'app.event_store.default'\n\nservices:\n    _defaults:\n        public: false\n\n    Prooph\\EventSourcing\\EventStoreIntegration\\AggregateTranslator: null\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "prooph_event_store:",
+                        "    stores:",
+                        "        default:",
+                        "            event_store: 'app.event_store.default'",
+                        "",
+                        "services:",
+                        "    _defaults:",
+                        "        public: false",
+                        "",
+                        "    Prooph\\EventSourcing\\EventStoreIntegration\\AggregateTranslator: null",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "prooph/event-store-symfony-bundle:0.4@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "a989875619b98a288abc2b636a2b5be36b4833d6"
         }
     }
 }

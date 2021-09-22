@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "lolautruche/payline-bundle": {
-            "version": "2.0",
-            "recipe": {
-                "repo": "2.0",
-                "branch": "master",
-                "version": "2.0",
-                "ref": "175b8f89ccbe1fb373b8cc3ac90abd495125eaa8"
-            }
-        }
-    },
     "manifests": {
         "lolautruche/payline-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "lolautruche/payline-bundle",
-            "version": "2.0",
             "manifest": {
                 "bundles": {
                     "Lolautruche\\PaylineBundle\\LolautruchePaylineBundle": [
@@ -46,18 +32,33 @@
             },
             "files": {
                 "config/routes/payline.yaml": {
-                    "contents": "LolautruchePaylineBundle:\n    resource: '@LolautruchePaylineBundle/Resources/config/routing.yml'\n    prefix: /\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "LolautruchePaylineBundle:",
+                        "    resource: '@LolautruchePaylineBundle/Resources/config/routing.yml'",
+                        "    prefix: /",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/payline.yaml": {
-                    "contents": "lolautruche_payline:\n    merchant_id: '%env(PAYLINE_MERCHANT_ID)%'\n    access_key: '%env(PAYLINE_ACCESS_KEY)%'\n    contract_number: '%env(PAYLINE_CONTRACT_NUMBER)%'\n    environment: '%env(PAYLINE_ENVIRONMENT)%'\n    # Can be EUR (or \u20ac), USD (or $), POUND (or \u00a3).\n    default_currency: '\u20ac'\n    # Route name for the confirmation page the user will be redirected to, once the payment has been processed.\n    default_confirmation_route: 'route_name_for_confirmation_page'\n    # Route name for the error page the user will be redirected to if there was an error with the payment.\n    default_error_route: 'route_name_for_error_page'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "lolautruche_payline:",
+                        "    merchant_id: '%env(PAYLINE_MERCHANT_ID)%'",
+                        "    access_key: '%env(PAYLINE_ACCESS_KEY)%'",
+                        "    contract_number: '%env(PAYLINE_CONTRACT_NUMBER)%'",
+                        "    environment: '%env(PAYLINE_ENVIRONMENT)%'",
+                        "    # Can be EUR (or \u20ac), USD (or $), POUND (or \u00a3).",
+                        "    default_currency: '\u20ac'",
+                        "    # Route name for the confirmation page the user will be redirected to, once the payment has been processed.",
+                        "    default_confirmation_route: 'route_name_for_confirmation_page'",
+                        "    # Route name for the error page the user will be redirected to if there was an error with the payment.",
+                        "    default_error_route: 'route_name_for_error_page'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "lolautruche/payline-bundle:2.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "175b8f89ccbe1fb373b8cc3ac90abd495125eaa8"
         }
     }
 }

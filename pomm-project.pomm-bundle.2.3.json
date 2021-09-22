@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "pomm-project/pomm-bundle": {
-            "version": "2.3",
-            "recipe": {
-                "repo": "2.3",
-                "branch": "master",
-                "version": "2.3",
-                "ref": "7f10aab539e8268582d10713e4712e59726a7b48"
-            }
-        }
-    },
     "manifests": {
         "pomm-project/pomm-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "pomm-project/pomm-bundle",
-            "version": "2.3",
             "manifest": {
                 "bundles": {
                     "PommProject\\PommBundle\\PommBundle": [
@@ -30,18 +16,26 @@
             },
             "files": {
                 "config/routes/dev/pomm.yaml": {
-                    "contents": "_pomm:\n    resource: \"@PommBundle/Resources/config/routing.yml\"\n    prefix:   /_pomm\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "_pomm:",
+                        "    resource: \"@PommBundle/Resources/config/routing.yml\"",
+                        "    prefix:   /_pomm",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/pomm.yaml": {
-                    "contents": "pomm:\n    configuration:\n        db:\n            dsn: \"%env(DATABASE_URL)%\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "pomm:",
+                        "    configuration:",
+                        "        db:",
+                        "            dsn: \"%env(DATABASE_URL)%\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "pomm-project/pomm-bundle:2.3@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "7f10aab539e8268582d10713e4712e59726a7b48"
         }
     }
 }

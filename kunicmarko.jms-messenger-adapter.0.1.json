@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "kunicmarko/jms-messenger-adapter": {
-            "version": "0.1",
-            "recipe": {
-                "repo": "0.1",
-                "branch": "master",
-                "version": "0.1",
-                "ref": "6bf8921b8c99eb4a89ae573b47125678a27d756a"
-            }
-        }
-    },
     "manifests": {
         "kunicmarko/jms-messenger-adapter": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "kunicmarko/jms-messenger-adapter",
-            "version": "0.1",
             "manifest": {
                 "bundles": {
                     "KunicMarko\\JMSMessengerAdapter\\Bridge\\Symfony\\JMSMessengerAdapterBundle": [
@@ -27,13 +13,20 @@
             },
             "files": {
                 "config/packages/jms_messenger.yaml": {
-                    "contents": "# Read the documentation: https://github.com/kunicmarko20/jms-messenger-adapter#documentation\n\nframework:\n    messenger:\n        enabled: true\n        serializer:\n            default_serializer: messenger.transport.jms_serializer\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# Read the documentation: https://github.com/kunicmarko20/jms-messenger-adapter#documentation",
+                        "",
+                        "framework:",
+                        "    messenger:",
+                        "        enabled: true",
+                        "        serializer:",
+                        "            default_serializer: messenger.transport.jms_serializer",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "kunicmarko/jms-messenger-adapter:0.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "6bf8921b8c99eb4a89ae573b47125678a27d756a"
         }
     }
 }

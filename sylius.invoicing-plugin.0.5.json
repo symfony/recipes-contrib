@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "sylius/invoicing-plugin": {
-            "version": "0.5",
-            "recipe": {
-                "repo": "0.5",
-                "branch": "master",
-                "version": "0.5",
-                "ref": "4720bdeb3db9f81932523a640184244cf75da7f0"
-            }
-        }
-    },
     "manifests": {
         "sylius/invoicing-plugin": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "sylius/invoicing-plugin",
-            "version": "0.5",
             "manifest": {
                 "bundles": {
                     "Sylius\\InvoicingPlugin\\SyliusInvoicingPlugin": [
@@ -27,18 +13,30 @@
             },
             "files": {
                 "config/routes/sylius_invoicing.yaml": {
-                    "contents": "sylius_invoicing_plugin_admin:\n    resource: \"@SyliusInvoicingPlugin/Resources/config/app/routing/admin_invoicing.yml\"\n    prefix: /admin\n\nsylius_invoicing_plugin_shop:\n    resource: \"@SyliusInvoicingPlugin/Resources/config/app/routing/shop_invoicing.yml\"\n    prefix: /{_locale}\n    requirements:\n        _locale: ^[a-z]{2}(?:_[A-Z]{2})?$\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "sylius_invoicing_plugin_admin:",
+                        "    resource: \"@SyliusInvoicingPlugin/Resources/config/app/routing/admin_invoicing.yml\"",
+                        "    prefix: /admin",
+                        "",
+                        "sylius_invoicing_plugin_shop:",
+                        "    resource: \"@SyliusInvoicingPlugin/Resources/config/app/routing/shop_invoicing.yml\"",
+                        "    prefix: /{_locale}",
+                        "    requirements:",
+                        "        _locale: ^[a-z]{2}(?:_[A-Z]{2})?$",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/sylius_invoicing.yaml": {
-                    "contents": "imports:\n    - { resource: \"@SyliusInvoicingPlugin/Resources/config/config.yml\" }\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SyliusInvoicingPlugin/Resources/config/config.yml\" }",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "sylius/invoicing-plugin:0.5@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "4720bdeb3db9f81932523a640184244cf75da7f0"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "friendsofsymfony/rest-bundle": {
-            "version": "2.2",
-            "recipe": {
-                "repo": "2.2",
-                "branch": "master",
-                "version": "2.2",
-                "ref": "fa845143b7e0a4c70aedd1a88c549e6d977e9ae5"
-            }
-        }
-    },
     "manifests": {
         "friendsofsymfony/rest-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "friendsofsymfony/rest-bundle",
-            "version": "2.2",
             "manifest": {
                 "bundles": {
                     "FOS\\RestBundle\\FOSRestBundle": [
@@ -27,13 +13,28 @@
             },
             "files": {
                 "config/packages/fos_rest.yaml": {
-                    "contents": "# Read the documentation: https://symfony.com/doc/master/bundles/FOSRestBundle/index.html\n#fos_rest:\n#    param_fetcher_listener:  true\n#    allowed_methods_listener:  true\n#    routing_loader: true\n#    view:\n#        view_response_listener:  true\n#    exception:\n#        codes:\n#            App\\Exception\\MyException: 403\n#        messages:\n#            App\\Exception\\MyException: Forbidden area.\n#    format_listener:\n#        rules:\n#            - { path: ^/api, prefer_extension: true, fallback_format: json, priorities: [ json, html ] }\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# Read the documentation: https://symfony.com/doc/master/bundles/FOSRestBundle/index.html",
+                        "#fos_rest:",
+                        "#    param_fetcher_listener:  true",
+                        "#    allowed_methods_listener:  true",
+                        "#    routing_loader: true",
+                        "#    view:",
+                        "#        view_response_listener:  true",
+                        "#    exception:",
+                        "#        codes:",
+                        "#            App\\Exception\\MyException: 403",
+                        "#        messages:",
+                        "#            App\\Exception\\MyException: Forbidden area.",
+                        "#    format_listener:",
+                        "#        rules:",
+                        "#            - { path: ^/api, prefer_extension: true, fallback_format: json, priorities: [ json, html ] }",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "friendsofsymfony/rest-bundle:2.2@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "fa845143b7e0a4c70aedd1a88c549e6d977e9ae5"
         }
     }
 }

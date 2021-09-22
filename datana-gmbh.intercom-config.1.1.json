@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "datana-gmbh/intercom-config": {
-            "version": "1.1",
-            "recipe": {
-                "repo": "1.1",
-                "branch": "master",
-                "version": "1.1",
-                "ref": "5c2f35fd8dfee432d17ac4d5a5d393a61e0794b9"
-            }
-        }
-    },
     "manifests": {
         "datana-gmbh/intercom-config": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "datana-gmbh/intercom-config",
-            "version": "1.1",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -26,13 +12,18 @@
             },
             "files": {
                 "config/packages/datana_intercom_config.yaml": {
-                    "contents": "services:\n    Datana\\Intercom\\Config\\Config:\n        arguments:\n            - '%env(INTERCOM_WORKSPACE_APP_ID)%'\n            - '%env(INTERCOM_IDENTITY_VERIFICATION_SECRET)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "services:",
+                        "    Datana\\Intercom\\Config\\Config:",
+                        "        arguments:",
+                        "            - '%env(INTERCOM_WORKSPACE_APP_ID)%'",
+                        "            - '%env(INTERCOM_IDENTITY_VERIFICATION_SECRET)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "datana-gmbh/intercom-config:1.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "5c2f35fd8dfee432d17ac4d5a5d393a61e0794b9"
         }
     }
 }

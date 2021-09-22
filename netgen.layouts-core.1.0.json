@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "netgen/layouts-core": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "04428c25df562ffad615d338704213bbabdc3d2e"
-            }
-        }
-    },
     "manifests": {
         "netgen/layouts-core": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "netgen/layouts-core",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Netgen\\Bundle\\LayoutsBundle\\NetgenLayoutsBundle": [
@@ -48,13 +34,16 @@
             },
             "files": {
                 "config/routes/netgen_layouts.yaml": {
-                    "contents": "netgen_layouts:\n    resource: \"@NetgenLayoutsBundle/Resources/config/routing.yml\"\n    prefix: \"%netgen_layouts.route_prefix%\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "netgen_layouts:",
+                        "    resource: \"@NetgenLayoutsBundle/Resources/config/routing.yml\"",
+                        "    prefix: \"%netgen_layouts.route_prefix%\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "netgen/layouts-core:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "04428c25df562ffad615d338704213bbabdc3d2e"
         }
     }
 }

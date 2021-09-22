@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "spomky-labs/lexik-jose-bridge": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "2f4d15bb78275360a38da2897d8736fc2cd8df1b"
-            }
-        }
-    },
     "manifests": {
         "spomky-labs/lexik-jose-bridge": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "spomky-labs/lexik-jose-bridge",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "SpomkyLabs\\LexikJoseBundle\\SpomkyLabsLexikJoseBundle": [
@@ -34,13 +20,28 @@
             },
             "files": {
                 "config/packages/spomky_labs_lexik_jose_bridge_bundle.yaml": {
-                    "contents": "lexik_jose:\n    ttl: 1000\n    server_name: '%env(SL_JOSE_BRIDGE_SERVER_NAME)%'\n    key_storage_folder: '%env(SL_JOSE_BRIDGE_KEY_STORAGE_FOLDER)%/'\n    signature_algorithm: 'RS512'\n    signature_key_configuration:\n        kty: 'RSA'\n        size: 4096\n    encryption:\n        enabled: true\n        encryption_key_configuration:\n            kty: 'oct'\n            size: 256\n        key_encryption_algorithm: 'A256KW'\n        content_encryption_algorithm: 'A256CBC-HS512'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "lexik_jose:",
+                        "    ttl: 1000",
+                        "    server_name: '%env(SL_JOSE_BRIDGE_SERVER_NAME)%'",
+                        "    key_storage_folder: '%env(SL_JOSE_BRIDGE_KEY_STORAGE_FOLDER)%/'",
+                        "    signature_algorithm: 'RS512'",
+                        "    signature_key_configuration:",
+                        "        kty: 'RSA'",
+                        "        size: 4096",
+                        "    encryption:",
+                        "        enabled: true",
+                        "        encryption_key_configuration:",
+                        "            kty: 'oct'",
+                        "            size: 256",
+                        "        key_encryption_algorithm: 'A256KW'",
+                        "        content_encryption_algorithm: 'A256CBC-HS512'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "spomky-labs/lexik-jose-bridge:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "2f4d15bb78275360a38da2897d8736fc2cd8df1b"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "nucleos/dompdf-bundle": {
-            "version": "3.1",
-            "recipe": {
-                "repo": "3.1",
-                "branch": "master",
-                "version": "3.1",
-                "ref": "1021b8850e3d41716cd324c73160384e70a9857e"
-            }
-        }
-    },
     "manifests": {
         "nucleos/dompdf-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "nucleos/dompdf-bundle",
-            "version": "3.1",
             "manifest": {
                 "bundles": {
                     "Nucleos\\DompdfBundle\\NucleosDompdfBundle": [
@@ -27,13 +13,16 @@
             },
             "files": {
                 "config/packages/nucleos_dompdf.yaml": {
-                    "contents": "nucleos_dompdf:\n    defaults:\n        chroot: '%kernel.project_dir%/public/assets' # See https://github.com/dompdf/dompdf/wiki/Usage#security-restrictions-for-local-files\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "nucleos_dompdf:",
+                        "    defaults:",
+                        "        chroot: '%kernel.project_dir%/public/assets' # See https://github.com/dompdf/dompdf/wiki/Usage#security-restrictions-for-local-files",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "nucleos/dompdf-bundle:3.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "1021b8850e3d41716cd324c73160384e70a9857e"
         }
     }
 }

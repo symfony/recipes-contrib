@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "mediamonks/sonata-media-bundle": {
-            "version": "2.0",
-            "recipe": {
-                "repo": "2.0",
-                "branch": "master",
-                "version": "2.0",
-                "ref": "4b7d6c885c1ee9912186a9c65f3e439114135add"
-            }
-        }
-    },
     "manifests": {
         "mediamonks/sonata-media-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "mediamonks/sonata-media-bundle",
-            "version": "2.0",
             "manifest": {
                 "bundles": {
                     "MediaMonks\\SonataMediaBundle\\MediaMonksSonataMediaBundle": [
@@ -36,23 +22,49 @@
             },
             "files": {
                 "src/Entity/Media.php": {
-                    "contents": "<?php\n\nnamespace App\\Entity;\n\nuse Doctrine\\ORM\\Mapping as ORM;\nuse MediaMonks\\SonataMediaBundle\\Entity\\Media as BaseMedia;\n\n/**\n * @ORM\\Entity(repositoryClass=\"MediaMonks\\SonataMediaBundle\\Repository\\MediaRepository\")\n * @ORM\\Table\n */\nclass Media extends BaseMedia\n{\n}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "use MediaMonks\\SonataMediaBundle\\Entity\\Media as BaseMedia;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity(repositoryClass=\"MediaMonks\\SonataMediaBundle\\Repository\\MediaRepository\")",
+                        " * @ORM\\Table",
+                        " */",
+                        "class Media extends BaseMedia",
+                        "{",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/routes/mediamonks_sonata_media.yaml": {
-                    "contents": "mediamonks_sonata_media_admin:\n    resource: \"@MediaMonksSonataMediaBundle/Resources/config/routing_admin.yml\"\n\nmediamonks_sonata_media:\n    resource: \"@MediaMonksSonataMediaBundle/Resources/config/routing.yml\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "mediamonks_sonata_media_admin:",
+                        "    resource: \"@MediaMonksSonataMediaBundle/Resources/config/routing_admin.yml\"",
+                        "",
+                        "mediamonks_sonata_media:",
+                        "    resource: \"@MediaMonksSonataMediaBundle/Resources/config/routing.yml\"",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/mediamonks_sonata_media.yaml": {
-                    "contents": "mediamonks_sonata_media:\n    filesystem_private: 'oneup_flysystem.default_filesystem_filesystem'\n    filesystem_public: 'oneup_flysystem.default_filesystem_filesystem'\n    redirect_url: '%env(MEDIA_REDIRECT_URL)%'\n    model_class: App\\Entity\\Media\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "mediamonks_sonata_media:",
+                        "    filesystem_private: 'oneup_flysystem.default_filesystem_filesystem'",
+                        "    filesystem_public: 'oneup_flysystem.default_filesystem_filesystem'",
+                        "    redirect_url: '%env(MEDIA_REDIRECT_URL)%'",
+                        "    model_class: App\\Entity\\Media",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "mediamonks/sonata-media-bundle:2.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "4b7d6c885c1ee9912186a9c65f3e439114135add"
         }
     }
 }

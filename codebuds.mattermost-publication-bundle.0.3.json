@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "codebuds/mattermost-publication-bundle": {
-            "version": "0.3",
-            "recipe": {
-                "repo": "0.3",
-                "branch": "master",
-                "version": "0.3",
-                "ref": "58f0ed3809bec1377c9300348997777fcc4f6d94"
-            }
-        }
-    },
     "manifests": {
         "codebuds/mattermost-publication-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "codebuds/mattermost-publication-bundle",
-            "version": "0.3",
             "manifest": {
                 "bundles": {
                     "CodeBuds\\MattermostPublicationBundle\\MattermostPublicationBundle": [
@@ -30,13 +16,18 @@
             },
             "files": {
                 "config/packages/mattermost_publication.yaml": {
-                    "contents": "mattermost_publication:\n    webhook_url: '%env(MATTERMOST_WEBHOOK_URL)%'\n    # You can also set the default channel, username and icon_url\n    # for more information you can checkout the bundle documentation\n    # https://github.com/codebuds33/mattermost-publication-bundle/blob/master/README.md\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "mattermost_publication:",
+                        "    webhook_url: '%env(MATTERMOST_WEBHOOK_URL)%'",
+                        "    # You can also set the default channel, username and icon_url",
+                        "    # for more information you can checkout the bundle documentation",
+                        "    # https://github.com/codebuds33/mattermost-publication-bundle/blob/master/README.md",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "codebuds/mattermost-publication-bundle:0.3@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "58f0ed3809bec1377c9300348997777fcc4f6d94"
         }
     }
 }

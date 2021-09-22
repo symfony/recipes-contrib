@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "pusher/pusher-php-server": {
-            "version": "3.0",
-            "recipe": {
-                "repo": "3.0",
-                "branch": "master",
-                "version": "3.0",
-                "ref": "8dd3ea817217453e14ab596317177465211e01d2"
-            }
-        }
-    },
     "manifests": {
         "pusher/pusher-php-server": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "pusher/pusher-php-server",
-            "version": "3.0",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -27,13 +13,20 @@
             },
             "files": {
                 "config/packages/pusher_php_server.yaml": {
-                    "contents": "services:\n    Pusher\\Pusher:\n        public: true\n        arguments:\n            - '%env(PUSHER_KEY)%'\n            - '%env(PUSHER_SECRET)%'\n            - '%env(PUSHER_APP_ID)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "services:",
+                        "    Pusher\\Pusher:",
+                        "        public: true",
+                        "        arguments:",
+                        "            - '%env(PUSHER_KEY)%'",
+                        "            - '%env(PUSHER_SECRET)%'",
+                        "            - '%env(PUSHER_APP_ID)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "pusher/pusher-php-server:3.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "8dd3ea817217453e14ab596317177465211e01d2"
         }
     }
 }

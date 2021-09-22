@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "siganushka/region-bundle": {
-            "version": "0.1",
-            "recipe": {
-                "repo": "0.1",
-                "branch": "master",
-                "version": "0.1",
-                "ref": "88f0230d4585463796874152c1a30fcd137a1e7c"
-            }
-        }
-    },
     "manifests": {
         "siganushka/region-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "siganushka/region-bundle",
-            "version": "0.1",
             "manifest": {
                 "bundles": {
                     "Siganushka\\RegionBundle\\SiganushkaRegionBundle": [
@@ -27,13 +13,15 @@
             },
             "files": {
                 "config/routes/siganushka_region.yaml": {
-                    "contents": "siganushka_region:\n    resource: \"@SiganushkaRegionBundle/Resources/config/routing/routes.xml\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "siganushka_region:",
+                        "    resource: \"@SiganushkaRegionBundle/Resources/config/routing/routes.xml\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "siganushka/region-bundle:0.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "88f0230d4585463796874152c1a30fcd137a1e7c"
         }
     }
 }

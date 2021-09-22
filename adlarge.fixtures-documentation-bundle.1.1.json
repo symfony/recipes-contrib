@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "adlarge/fixtures-documentation-bundle": {
-            "version": "1.1",
-            "recipe": {
-                "repo": "1.1",
-                "branch": "master",
-                "version": "1.1",
-                "ref": "5660aa4a719721e3b0fb9709f17872488ce4ff7e"
-            }
-        }
-    },
     "manifests": {
         "adlarge/fixtures-documentation-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "adlarge/fixtures-documentation-bundle",
-            "version": "1.1",
             "manifest": {
                 "bundles": {
                     "Adlarge\\FixturesDocumentationBundle\\AdlargeFixturesDocumentationBundle": [
@@ -27,18 +13,25 @@
             },
             "files": {
                 "config/routes/dev/adlarge_fixtures_documentation.yaml": {
-                    "contents": "AdlargeFixturesDocumentation:\n    resource: '@AdlargeFixturesDocumentationBundle/Resources/config/routing.yml'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "AdlargeFixturesDocumentation:",
+                        "    resource: '@AdlargeFixturesDocumentationBundle/Resources/config/routing.yml'",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/dev/adlarge_fixtures_documentation.yaml": {
-                    "contents": "adlarge_fixtures_documentation:\n    title: 'Fixtures documentation'\n    reloadCommands:\n        - php bin/console doctrine:fixtures:load\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "adlarge_fixtures_documentation:",
+                        "    title: 'Fixtures documentation'",
+                        "    reloadCommands:",
+                        "        - php bin/console doctrine:fixtures:load",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "adlarge/fixtures-documentation-bundle:1.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "5660aa4a719721e3b0fb9709f17872488ce4ff7e"
         }
     }
 }

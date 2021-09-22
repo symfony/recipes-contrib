@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "liuggio/statsd-client-bundle": {
-            "version": "1.6",
-            "recipe": {
-                "repo": "1.6",
-                "branch": "master",
-                "version": "1.6",
-                "ref": "4cd9b2466b6064c057d63b2075e210bbae4d460f"
-            }
-        }
-    },
     "manifests": {
         "liuggio/statsd-client-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "liuggio/statsd-client-bundle",
-            "version": "1.6",
             "manifest": {
                 "bundles": {
                     "Liuggio\\StatsDClientBundle\\LiuggioStatsDClientBundle": [
@@ -32,13 +18,18 @@
             },
             "files": {
                 "config/packages/liuggio_stats_d_client.yaml": {
-                    "contents": "liuggio_stats_d_client:\n    connection:\n        host: '%env(STATS_D_HOST)%'\n        port: '%env(STATS_D_PORT)%'\n        protocol: '%env(STATS_D_PROTOCOL)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "liuggio_stats_d_client:",
+                        "    connection:",
+                        "        host: '%env(STATS_D_HOST)%'",
+                        "        port: '%env(STATS_D_PORT)%'",
+                        "        protocol: '%env(STATS_D_PROTOCOL)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "liuggio/statsd-client-bundle:1.6@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "4cd9b2466b6064c057d63b2075e210bbae4d460f"
         }
     }
 }

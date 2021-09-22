@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "liip/imagine-bundle": {
-            "version": "1.8",
-            "recipe": {
-                "repo": "1.8",
-                "branch": "master",
-                "version": "1.8",
-                "ref": "ffbb72e74598f04cc7f79f9fc736c77eeb98f569"
-            }
-        }
-    },
     "manifests": {
         "liip/imagine-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "liip/imagine-bundle",
-            "version": "1.8",
             "manifest": {
                 "bundles": {
                     "Liip\\ImagineBundle\\LiipImagineBundle": [
@@ -37,18 +23,25 @@
             },
             "files": {
                 "config/routes/liip_imagine.yaml": {
-                    "contents": "_liip_imagine:\n    resource: \"@LiipImagineBundle/Resources/config/routing.yaml\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "_liip_imagine:",
+                        "    resource: \"@LiipImagineBundle/Resources/config/routing.yaml\"",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/liip_imagine.yaml": {
-                    "contents": "# See dos how to configure the bundle: https://symfony.com/doc/current/bundles/LiipImagineBundle/basic-usage.html\nliip_imagine:\n    # valid drivers options include \"gd\" or \"gmagick\" or \"imagick\"\n    driver: \"gd\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# See dos how to configure the bundle: https://symfony.com/doc/current/bundles/LiipImagineBundle/basic-usage.html",
+                        "liip_imagine:",
+                        "    # valid drivers options include \"gd\" or \"gmagick\" or \"imagick\"",
+                        "    driver: \"gd\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "liip/imagine-bundle:1.8@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "ffbb72e74598f04cc7f79f9fc736c77eeb98f569"
         }
     }
 }

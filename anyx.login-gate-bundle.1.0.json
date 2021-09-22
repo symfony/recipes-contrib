@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "anyx/login-gate-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "49f0e34d3f1059f8985e8e56e4b5e2b08e5fc79b"
-            }
-        }
-    },
     "manifests": {
         "anyx/login-gate-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "anyx/login-gate-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Anyx\\LoginGateBundle\\LoginGateBundle": [
@@ -27,13 +13,20 @@
             },
             "files": {
                 "config/packages/login_gate.yaml": {
-                    "contents": "login_gate:\n    storages: ['session']       # Attempts storage engine. Available engines: ['orm', 'session', 'mongodb']\n    options:\n        max_count_attempts: 3\n        timeout: 600          # Ban period (in seconds ... 600 = 10 minutes)\n        watch_period: 3600\n\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "login_gate:",
+                        "    storages: ['session']       # Attempts storage engine. Available engines: ['orm', 'session', 'mongodb']",
+                        "    options:",
+                        "        max_count_attempts: 3",
+                        "        timeout: 600          # Ban period (in seconds ... 600 = 10 minutes)",
+                        "        watch_period: 3600",
+                        "",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "anyx/login-gate-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "49f0e34d3f1059f8985e8e56e4b5e2b08e5fc79b"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "octopouce-mu/admin-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "32e9b062877ffba387de9192e190f349bc874573"
-            }
-        }
-    },
     "manifests": {
         "octopouce-mu/admin-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "octopouce-mu/admin-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Octopouce\\AdminBundle\\OctopouceAdminBundle": [
@@ -27,18 +13,24 @@
             },
             "files": {
                 "config/routes/octopouce.yaml": {
-                    "contents": "_octopouce_admin:\n    resource: \"@OctopouceAdminBundle/Resources/config/routing/routing.yaml\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "_octopouce_admin:",
+                        "    resource: \"@OctopouceAdminBundle/Resources/config/routing/routing.yaml\"",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/octopouce.yaml": {
-                    "contents": "octopouce_admin:\n    dashboard:\n        enabled: true\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "octopouce_admin:",
+                        "    dashboard:",
+                        "        enabled: true",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "octopouce-mu/admin-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "32e9b062877ffba387de9192e190f349bc874573"
         }
     }
 }

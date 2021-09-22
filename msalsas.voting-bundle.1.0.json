@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "msalsas/voting-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "c347ea89d380c403deadd722ca78008c30408dc6"
-            }
-        }
-    },
     "manifests": {
         "msalsas/voting-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "msalsas/voting-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Msalsas\\VotingBundle\\MsalsasVotingBundle": [
@@ -27,18 +13,41 @@
             },
             "files": {
                 "config/routes/msalsas_voting.yaml": {
-                    "contents": "positive_vote:\n    path: /vote-positive/{_locale}/{id}\n    controller: Msalsas\\VotingBundle\\Controller\\VoteController:votePositive\n    methods: POST\nnegative_vote:\n    path: /vote-negative/{_locale}/{id}\n    controller: Msalsas\\VotingBundle\\Controller\\VoteController:voteNegative\n    methods: POST\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "positive_vote:",
+                        "    path: /vote-positive/{_locale}/{id}",
+                        "    controller: Msalsas\\VotingBundle\\Controller\\VoteController:votePositive",
+                        "    methods: POST",
+                        "negative_vote:",
+                        "    path: /vote-negative/{_locale}/{id}",
+                        "    controller: Msalsas\\VotingBundle\\Controller\\VoteController:voteNegative",
+                        "    methods: POST",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/msalsas_voting.yaml": {
-                    "contents": "msalsas_voting:\n    user_provider: \\App\\Entity\\User\n    negative_reasons:\n        - msalsas_voting.negative_reasons.irrelevant\n        - msalsas_voting.negative_reasons.old\n        - msalsas_voting.negative_reasons.tiredness\n        - msalsas_voting.negative_reasons.sensationalist\n        - msalsas_voting.negative_reasons.spam\n        - msalsas_voting.negative_reasons.duplicated\n        - msalsas_voting.negative_reasons.microblogging\n        - msalsas_voting.negative_reasons.erroneous\n        - msalsas_voting.negative_reasons.plagiarism\n    anonymous_percent_allowed: 50\n    anonymous_min_allowed: 2\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "msalsas_voting:",
+                        "    user_provider: \\App\\Entity\\User",
+                        "    negative_reasons:",
+                        "        - msalsas_voting.negative_reasons.irrelevant",
+                        "        - msalsas_voting.negative_reasons.old",
+                        "        - msalsas_voting.negative_reasons.tiredness",
+                        "        - msalsas_voting.negative_reasons.sensationalist",
+                        "        - msalsas_voting.negative_reasons.spam",
+                        "        - msalsas_voting.negative_reasons.duplicated",
+                        "        - msalsas_voting.negative_reasons.microblogging",
+                        "        - msalsas_voting.negative_reasons.erroneous",
+                        "        - msalsas_voting.negative_reasons.plagiarism",
+                        "    anonymous_percent_allowed: 50",
+                        "    anonymous_min_allowed: 2",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "msalsas/voting-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "c347ea89d380c403deadd722ca78008c30408dc6"
         }
     }
 }

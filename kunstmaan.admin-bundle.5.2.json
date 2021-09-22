@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "kunstmaan/admin-bundle": {
-            "version": "5.2",
-            "recipe": {
-                "repo": "5.2",
-                "branch": "master",
-                "version": "5.2",
-                "ref": "a68fc81d9f62aec9d8795c10eb4938d0d4515c03"
-            }
-        }
-    },
     "manifests": {
         "kunstmaan/admin-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "kunstmaan/admin-bundle",
-            "version": "5.2",
             "manifest": {
                 "bundles": {
                     "Kunstmaan\\AdminBundle\\KunstmaanAdminBundle": [
@@ -27,18 +13,31 @@
             },
             "files": {
                 "config/routes/kunstmaan_admin.yaml": {
-                    "contents": "KunstmaanAdminBundle:\n    resource: \"@KunstmaanAdminBundle/Resources/config/routing.yml\"\n    # If your site is not multi language, remove the \"{_locale}/\" part of prefix and requirements\n    prefix:   /{_locale}/\n    requirements:\n        _locale: \"%kunstmaan_admin.required_locales%\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "KunstmaanAdminBundle:",
+                        "    resource: \"@KunstmaanAdminBundle/Resources/config/routing.yml\"",
+                        "    # If your site is not multi language, remove the \"{_locale}/\" part of prefix and requirements",
+                        "    prefix:   /{_locale}/",
+                        "    requirements:",
+                        "        _locale: \"%kunstmaan_admin.required_locales%\"",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/kunstmaan_admin.yaml": {
-                    "contents": "kunstmaan_admin:\n    multi_language: true\n    required_locales: nl|fr|en\n    default_locale: en\n    admin_locales: ['en']\n    website_title: 'MyProject' #Rename this to your website name\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "kunstmaan_admin:",
+                        "    multi_language: true",
+                        "    required_locales: nl|fr|en",
+                        "    default_locale: en",
+                        "    admin_locales: ['en']",
+                        "    website_title: 'MyProject' #Rename this to your website name",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "kunstmaan/admin-bundle:5.2@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "a68fc81d9f62aec9d8795c10eb4938d0d4515c03"
         }
     }
 }

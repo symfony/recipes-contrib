@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "doctrine/phpcr-dbal-symfony-pack": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "9552c77e0f09e036cab0135ef0821d5c91fd1d42"
-            }
-        }
-    },
     "manifests": {
         "doctrine/phpcr-dbal-symfony-pack": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "doctrine/phpcr-dbal-symfony-pack",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Doctrine\\Bundle\\PHPCRBundle\\DoctrinePHPCRBundle": [
@@ -33,23 +19,90 @@
             },
             "files": {
                 "src/Document/.gitignore": {
-                    "contents": "",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/prod/doctrine_phpcr_dbal.yaml": {
-                    "contents": "doctrine_phpcr:\n    odm:\n        auto_generate_proxy_classes: false\n        metadata_cache_driver:\n            type: service\n            id: doctrine_phpcr.system_cache_provider\n    session:\n        backend:\n            caches:\n                meta: doctrine_phpcr.meta_cache_provider\n                nodes: doctrine_phpcr.nodes_cache_provider\n\nservices:\n    doctrine_phpcr.meta_cache_provider:\n        class: Symfony\\Component\\Cache\\DoctrineProvider\n        public: false\n        arguments:\n            - '@doctrine_phpcr.meta_cache_pool'\n    doctrine_phpcr.nodes_cache_provider:\n        class: Symfony\\Component\\Cache\\DoctrineProvider\n        public: false\n        arguments:\n            - '@doctrine_phpcr.nodes_cache_pool'\n    doctrine_phpcr.system_cache_provider:\n        class: Symfony\\Component\\Cache\\DoctrineProvider\n        public: false\n        arguments:\n            - '@doctrine_phpcr.system_cache_pool'\n\nframework:\n    cache:\n        pools:\n            doctrine_phpcr.meta_cache_pool:\n                adapter: cache.app\n            doctrine_phpcr.nodes_cache_pool:\n                adapter: cache.app\n            doctrine_phpcr.system_cache_pool:\n                adapter: cache.system\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "doctrine_phpcr:",
+                        "    odm:",
+                        "        auto_generate_proxy_classes: false",
+                        "        metadata_cache_driver:",
+                        "            type: service",
+                        "            id: doctrine_phpcr.system_cache_provider",
+                        "    session:",
+                        "        backend:",
+                        "            caches:",
+                        "                meta: doctrine_phpcr.meta_cache_provider",
+                        "                nodes: doctrine_phpcr.nodes_cache_provider",
+                        "",
+                        "services:",
+                        "    doctrine_phpcr.meta_cache_provider:",
+                        "        class: Symfony\\Component\\Cache\\DoctrineProvider",
+                        "        public: false",
+                        "        arguments:",
+                        "            - '@doctrine_phpcr.meta_cache_pool'",
+                        "    doctrine_phpcr.nodes_cache_provider:",
+                        "        class: Symfony\\Component\\Cache\\DoctrineProvider",
+                        "        public: false",
+                        "        arguments:",
+                        "            - '@doctrine_phpcr.nodes_cache_pool'",
+                        "    doctrine_phpcr.system_cache_provider:",
+                        "        class: Symfony\\Component\\Cache\\DoctrineProvider",
+                        "        public: false",
+                        "        arguments:",
+                        "            - '@doctrine_phpcr.system_cache_pool'",
+                        "",
+                        "framework:",
+                        "    cache:",
+                        "        pools:",
+                        "            doctrine_phpcr.meta_cache_pool:",
+                        "                adapter: cache.app",
+                        "            doctrine_phpcr.nodes_cache_pool:",
+                        "                adapter: cache.app",
+                        "            doctrine_phpcr.system_cache_pool:",
+                        "                adapter: cache.system",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/doctrine_phpcr_dbal.yaml": {
-                    "contents": "doctrine_phpcr:\n    # configure the PHPCR session\n    session:\n        backend:\n            type: doctrinedbal\n            connection: default\n            parameters:\n                jackalope.check_login_on_server: false\n        workspace: '%env(PHPCR_WORKSPACE)%'\n        username: '%env(PHPCR_USER)%'\n        password: '%env(PHPCR_PASSWORD)%'\n        #logging: '%kernel.debug%'\n        #profiling: '%kernel.debug%'\n    # enable the ODM layer\n    odm:\n        auto_mapping: true\n        auto_generate_proxy_classes: true\n        mappings:\n            # offer default resolution of \"App\\Document\\\". For more details, see: https://symfony.com/doc/current/cmf/bundles/phpcr_odm/introduction.html#doctrine-phpcr-odm-configuration\n            App:\n                mapping: true\n                type: annotation\n                dir: '%kernel.root_dir%/Document'\n                alias: App\n                prefix: App\\Document\\\n                is_bundle: false\n        # add your locale configuration here as described in: https://symfony.com/doc/current/cmf/bundles/phpcr_odm/multilang.html#translation-configuration\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "doctrine_phpcr:",
+                        "    # configure the PHPCR session",
+                        "    session:",
+                        "        backend:",
+                        "            type: doctrinedbal",
+                        "            connection: default",
+                        "            parameters:",
+                        "                jackalope.check_login_on_server: false",
+                        "        workspace: '%env(PHPCR_WORKSPACE)%'",
+                        "        username: '%env(PHPCR_USER)%'",
+                        "        password: '%env(PHPCR_PASSWORD)%'",
+                        "        #logging: '%kernel.debug%'",
+                        "        #profiling: '%kernel.debug%'",
+                        "    # enable the ODM layer",
+                        "    odm:",
+                        "        auto_mapping: true",
+                        "        auto_generate_proxy_classes: true",
+                        "        mappings:",
+                        "            # offer default resolution of \"App\\Document\\\". For more details, see: https://symfony.com/doc/current/cmf/bundles/phpcr_odm/introduction.html#doctrine-phpcr-odm-configuration",
+                        "            App:",
+                        "                mapping: true",
+                        "                type: annotation",
+                        "                dir: '%kernel.root_dir%/Document'",
+                        "                alias: App",
+                        "                prefix: App\\Document\\",
+                        "                is_bundle: false",
+                        "        # add your locale configuration here as described in: https://symfony.com/doc/current/cmf/bundles/phpcr_odm/multilang.html#translation-configuration",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "doctrine/phpcr-dbal-symfony-pack:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "9552c77e0f09e036cab0135ef0821d5c91fd1d42"
         }
     }
 }

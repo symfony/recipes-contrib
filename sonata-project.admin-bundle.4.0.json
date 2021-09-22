@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "sonata-project/admin-bundle": {
-            "version": "4.0",
-            "recipe": {
-                "repo": "4.0",
-                "branch": "master",
-                "version": "4.0",
-                "ref": "0e5931df1732e3dccfba42a20853049e5e9db6ae"
-            }
-        }
-    },
     "manifests": {
         "sonata-project/admin-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "sonata-project/admin-bundle",
-            "version": "4.0",
             "manifest": {
                 "bundles": {
                     "Sonata\\AdminBundle\\SonataAdminBundle": [
@@ -28,23 +14,43 @@
             },
             "files": {
                 "src/Admin/.gitignore": {
-                    "contents": "",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/routes/sonata_admin.yaml": {
-                    "contents": "admin_area:\n    resource: \"@SonataAdminBundle/Resources/config/routing/sonata_admin.xml\"\n    prefix: /admin\n\n_sonata_admin:\n    resource: .\n    type: sonata_admin\n    prefix: /admin\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "admin_area:",
+                        "    resource: \"@SonataAdminBundle/Resources/config/routing/sonata_admin.xml\"",
+                        "    prefix: /admin",
+                        "",
+                        "_sonata_admin:",
+                        "    resource: .",
+                        "    type: sonata_admin",
+                        "    prefix: /admin",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/sonata_admin.yaml": {
-                    "contents": "sonata_admin:\n    title: 'Sonata Admin'\n    dashboard:\n        blocks:\n            - { type: sonata.admin.block.admin_list, position: left }\n\nsonata_block:\n    blocks:\n        sonata.admin.block.admin_list:\n            contexts: [admin]\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "sonata_admin:",
+                        "    title: 'Sonata Admin'",
+                        "    dashboard:",
+                        "        blocks:",
+                        "            - { type: sonata.admin.block.admin_list, position: left }",
+                        "",
+                        "sonata_block:",
+                        "    blocks:",
+                        "        sonata.admin.block.admin_list:",
+                        "            contexts: [admin]",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "sonata-project/admin-bundle:4.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "0e5931df1732e3dccfba42a20853049e5e9db6ae"
         }
     }
 }

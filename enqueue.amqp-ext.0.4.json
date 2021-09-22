@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "enqueue/amqp-ext": {
-            "version": "0.4",
-            "recipe": {
-                "repo": "0.4",
-                "branch": "master",
-                "version": "0.4",
-                "ref": "e1028252228d9f5d7c25bc314e6c39e611622d5d"
-            }
-        }
-    },
     "manifests": {
         "enqueue/amqp-ext": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "enqueue/amqp-ext",
-            "version": "0.4",
             "manifest": {
                 "post-install-output": [
                     "  * Configure <comment>ENQUEUE_DSN=amqp://user:pass@example.com:10000/%2f</comment>",
@@ -25,8 +11,7 @@
                 ]
             },
             "files": [],
-            "origin": "enqueue/amqp-ext:0.4@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "e1028252228d9f5d7c25bc314e6c39e611622d5d"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "indragunawan/api-rate-limit-bundle": {
-            "version": "0.2",
-            "recipe": {
-                "repo": "0.2",
-                "branch": "master",
-                "version": "0.2",
-                "ref": "34979e3bdd275203d0831a200aa9462150449e17"
-            }
-        }
-    },
     "manifests": {
         "indragunawan/api-rate-limit-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "indragunawan/api-rate-limit-bundle",
-            "version": "0.2",
             "manifest": {
                 "bundles": {
                     "Indragunawan\\ApiRateLimitBundle\\IndragunawanApiRateLimitBundle": [
@@ -27,13 +13,22 @@
             },
             "files": {
                 "config/packages/prod/indragunawan_rate_limit.yaml": {
-                    "contents": "# Read the documentation: https://github.com/IndraGunawan/api-rate-limit-bundle/blob/master/Resources/doc/usage.md\nindragunawan_api_rate_limit:\n    enabled: true\n    # cache: cache.api_rate_limit\n    # throttle:\n    #     default:\n    #         limit: 60 # max attempts per period\n    #         period: 60 # in seconds\n    #     sort: 'rate-limit-desc'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# Read the documentation: https://github.com/IndraGunawan/api-rate-limit-bundle/blob/master/Resources/doc/usage.md",
+                        "indragunawan_api_rate_limit:",
+                        "    enabled: true",
+                        "    # cache: cache.api_rate_limit",
+                        "    # throttle:",
+                        "    #     default:",
+                        "    #         limit: 60 # max attempts per period",
+                        "    #         period: 60 # in seconds",
+                        "    #     sort: 'rate-limit-desc'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "indragunawan/api-rate-limit-bundle:0.2@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "34979e3bdd275203d0831a200aa9462150449e17"
         }
     }
 }

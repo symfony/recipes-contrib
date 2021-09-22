@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "piou-piou/ribs-cron-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "e68472b35d03fafc6821f73559dbd353d11fdfaf"
-            }
-        }
-    },
     "manifests": {
         "piou-piou/ribs-cron-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "piou-piou/ribs-cron-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "PiouPiou\\RibsCronBundle\\RibsCronBundle": [
@@ -31,13 +17,19 @@
             },
             "files": {
                 "config/ribs_cron.yaml": {
-                    "contents": "parameters:\n    data_directory: '%kernel.project_dir%/data/'\n    ribs_cron_ip_external: '%env(IP_CRON_EXTERNAL)%'\n    ribs_cron_ip_internal: '%env(IP_CRON_INTERNAL)%'\n    ribs_cron:\n#       testCronCall: '* * * * *'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "parameters:",
+                        "    data_directory: '%kernel.project_dir%/data/'",
+                        "    ribs_cron_ip_external: '%env(IP_CRON_EXTERNAL)%'",
+                        "    ribs_cron_ip_internal: '%env(IP_CRON_INTERNAL)%'",
+                        "    ribs_cron:",
+                        "#       testCronCall: '* * * * *'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "piou-piou/ribs-cron-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "e68472b35d03fafc6821f73559dbd353d11fdfaf"
         }
     }
 }

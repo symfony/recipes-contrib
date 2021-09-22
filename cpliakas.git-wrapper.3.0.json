@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "cpliakas/git-wrapper": {
-            "version": "3.0",
-            "recipe": {
-                "repo": "3.0",
-                "branch": "master",
-                "version": "3.0",
-                "ref": "e66e45db95fc7d7702ee76c592965c204c9739ff"
-            }
-        }
-    },
     "manifests": {
         "cpliakas/git-wrapper": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "cpliakas/git-wrapper",
-            "version": "3.0",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -22,13 +8,28 @@
             },
             "files": {
                 "config/packages/cpliakas_git_wrapper.yaml": {
-                    "contents": "services:\n    GitWrapper\\GitWrapper: null\n\n\n# To add logging capabilities use monolog and this configuration:\n#monolog:\n#    channels:\n#        - 'git'\n\n#services:\n#    GitWrapper\\EventSubscriber\\GitLoggerEventSubscriber:\n#        $logger: '@monolog.logger.git'\n#    GitWrapper\\GitWrapper:\n#        calls:\n#            - addLoggerEventSubscriber: ['@GitWrapper\\EventSubscriber\\GitLoggerEventSubscriber']\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "services:",
+                        "    GitWrapper\\GitWrapper: null",
+                        "",
+                        "",
+                        "# To add logging capabilities use monolog and this configuration:",
+                        "#monolog:",
+                        "#    channels:",
+                        "#        - 'git'",
+                        "",
+                        "#services:",
+                        "#    GitWrapper\\EventSubscriber\\GitLoggerEventSubscriber:",
+                        "#        $logger: '@monolog.logger.git'",
+                        "#    GitWrapper\\GitWrapper:",
+                        "#        calls:",
+                        "#            - addLoggerEventSubscriber: ['@GitWrapper\\EventSubscriber\\GitLoggerEventSubscriber']",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "cpliakas/git-wrapper:3.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "e66e45db95fc7d7702ee76c592965c204c9739ff"
         }
     }
 }

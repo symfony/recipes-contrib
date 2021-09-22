@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "coka/cors-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "d95bf28f73dae46873449853b463d9261401b091"
-            }
-        }
-    },
     "manifests": {
         "coka/cors-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "coka/cors-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Oka\\CORSBundle\\OkaCORSBundle": [
@@ -27,13 +13,17 @@
             },
             "files": {
                 "config/packages/oka_cors.yaml": {
-                    "contents": "oka_cors:\n    default:\n        expose_headers: ['Accept-Encoding']\n        max_age: 3600\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "oka_cors:",
+                        "    default:",
+                        "        expose_headers: ['Accept-Encoding']",
+                        "        max_age: 3600",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "coka/cors-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "d95bf28f73dae46873449853b463d9261401b091"
         }
     }
 }

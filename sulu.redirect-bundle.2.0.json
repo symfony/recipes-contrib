@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "sulu/redirect-bundle": {
-            "version": "2.0",
-            "recipe": {
-                "repo": "2.0",
-                "branch": "master",
-                "version": "2.0",
-                "ref": "166e0df09e1903b610e2d6de48357afd52fb79b3"
-            }
-        }
-    },
     "manifests": {
         "sulu/redirect-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "sulu/redirect-bundle",
-            "version": "2.0",
             "manifest": {
                 "bundles": {
                     "Sulu\\Bundle\\RedirectBundle\\SuluRedirectBundle": [
@@ -35,13 +21,21 @@
             },
             "files": {
                 "config/routes/sulu_redirect_admin.yaml": {
-                    "contents": "sulu_redirect_api:\n    type: rest\n    resource: \"@SuluRedirectBundle/Resources/config/routing_api.yml\"\n    prefix: /admin/api\n\nsulu_redirect:\n    resource: \"@SuluRedirectBundle/Resources/config/routing.yml\"\n    prefix: /admin/redirects\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "sulu_redirect_api:",
+                        "    type: rest",
+                        "    resource: \"@SuluRedirectBundle/Resources/config/routing_api.yml\"",
+                        "    prefix: /admin/api",
+                        "",
+                        "sulu_redirect:",
+                        "    resource: \"@SuluRedirectBundle/Resources/config/routing.yml\"",
+                        "    prefix: /admin/redirects",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "sulu/redirect-bundle:2.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "166e0df09e1903b610e2d6de48357afd52fb79b3"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "mmucklo/queue-bundle": {
-            "version": "3.0",
-            "recipe": {
-                "repo": "3.0",
-                "branch": "master",
-                "version": "3.0",
-                "ref": "bbdbf104ef6ddb6f7ffcbe79b95d3345bf7643a5"
-            }
-        }
-    },
     "manifests": {
         "mmucklo/queue-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "mmucklo/queue-bundle",
-            "version": "3.0",
             "manifest": {
                 "bundles": {
                     "Dtc\\QueueBundle\\DtcQueueBundle": [
@@ -41,18 +27,30 @@
             },
             "files": {
                 "config/routes/dtc_queue.yaml": {
-                    "contents": "dtc_queue:\n    resource: '@DtcQueueBundle/Resources/config/routing.yml'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "dtc_queue:",
+                        "    resource: '@DtcQueueBundle/Resources/config/routing.yml'",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/dtc_queue.yaml": {
-                    "contents": "dtc_queue:\n    default_manager: odm\n    record_timings: false\n    document_manager: default\n    entity_manager: default\n    priority_max: 255\n    priority_direction: desc\n    admin:\n        chartjs: 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "dtc_queue:",
+                        "    default_manager: odm",
+                        "    record_timings: false",
+                        "    document_manager: default",
+                        "    entity_manager: default",
+                        "    priority_max: 255",
+                        "    priority_direction: desc",
+                        "    admin:",
+                        "        chartjs: 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "mmucklo/queue-bundle:3.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "bbdbf104ef6ddb6f7ffcbe79b95d3345bf7643a5"
         }
     }
 }

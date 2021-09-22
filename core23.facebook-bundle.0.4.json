@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "core23/facebook-bundle": {
-            "version": "0.4",
-            "recipe": {
-                "repo": "0.4",
-                "branch": "master",
-                "version": "0.4",
-                "ref": "0e959d3befb5588bb8c2053b94c7affbff5c75c4"
-            }
-        }
-    },
     "manifests": {
         "core23/facebook-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "core23/facebook-bundle",
-            "version": "0.4",
             "manifest": {
                 "bundles": {
                     "Core23\\FacebookBundle\\Core23FacebookBundle": [
@@ -31,13 +17,17 @@
             },
             "files": {
                 "config/packages/core23_facebook.yaml": {
-                    "contents": "core23_facebook:\n    api:\n        app_id:      '%env(FACEBOOK_API_ID)%'\n        app_secret:  '%env(FACEBOOK_API_SECRET)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "core23_facebook:",
+                        "    api:",
+                        "        app_id:      '%env(FACEBOOK_API_ID)%'",
+                        "        app_secret:  '%env(FACEBOOK_API_SECRET)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "core23/facebook-bundle:0.4@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "0e959d3befb5588bb8c2053b94c7affbff5c75c4"
         }
     }
 }

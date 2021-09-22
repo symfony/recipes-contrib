@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "synolia/sylius-mail-tester-plugin": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "74377dee51195fdd0b9aff3c7cc365b482738cfe"
-            }
-        }
-    },
     "manifests": {
         "synolia/sylius-mail-tester-plugin": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "synolia/sylius-mail-tester-plugin",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Synolia\\SyliusMailTesterPlugin\\SynoliaSyliusMailTesterPlugin": [
@@ -27,13 +13,16 @@
             },
             "files": {
                 "config/routes/sylius_mail_tester.yaml": {
-                    "contents": "synolia_mail_tester:\n    resource: \"@SynoliaSyliusMailTesterPlugin/Resources/config/admin_routing.yaml\"\n    prefix: /admin\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "synolia_mail_tester:",
+                        "    resource: \"@SynoliaSyliusMailTesterPlugin/Resources/config/admin_routing.yaml\"",
+                        "    prefix: /admin",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "synolia/sylius-mail-tester-plugin:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "74377dee51195fdd0b9aff3c7cc365b482738cfe"
         }
     }
 }

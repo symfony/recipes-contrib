@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "codeception/codeception": {
-            "version": "2.3",
-            "recipe": {
-                "repo": "2.3",
-                "branch": "master",
-                "version": "2.3",
-                "ref": "30798e46831f4fc641fca83c0423918518901cd7"
-            }
-        }
-    },
     "manifests": {
         "codeception/codeception": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "codeception/codeception",
-            "version": "2.3",
             "manifest": {
                 "copy-from-recipe": {
                     "codeception.yml": "codeception.yml",
@@ -39,88 +25,266 @@
             },
             "files": {
                 "codeception.yml": {
-                    "contents": "namespace: App\\Tests\npaths:\n    tests: tests\n    output: tests/_output\n    data: tests/_data\n    support: tests/_support\n    envs: tests/_envs\nactor_suffix: Tester\nextensions:\n    enabled:\n        - Codeception\\Extension\\RunFailed\nparams:\n    - .env\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "namespace: App\\Tests",
+                        "paths:",
+                        "    tests: tests",
+                        "    output: tests/_output",
+                        "    data: tests/_data",
+                        "    support: tests/_support",
+                        "    envs: tests/_envs",
+                        "actor_suffix: Tester",
+                        "extensions:",
+                        "    enabled:",
+                        "        - Codeception\\Extension\\RunFailed",
+                        "params:",
+                        "    - .env",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "tests/unit/.gitignore": {
-                    "contents": "",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
                 },
                 "tests/_output/.gitignore": {
-                    "contents": "*\n!.gitignore\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "*",
+                        "!.gitignore",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "tests/_data/.gitignore": {
-                    "contents": "",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
                 },
                 "tests/unit.suite.yml": {
-                    "contents": "# Codeception Test Suite Configuration\n#\n# Suite for unit or integration tests.\n\nactor: UnitTester\nmodules:\n    enabled:\n        - Asserts\n        - \\App\\Tests\\Helper\\Unit\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# Codeception Test Suite Configuration",
+                        "#",
+                        "# Suite for unit or integration tests.",
+                        "",
+                        "actor: UnitTester",
+                        "modules:",
+                        "    enabled:",
+                        "        - Asserts",
+                        "        - \\App\\Tests\\Helper\\Unit",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "tests/functional/.gitignore": {
-                    "contents": "",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
                 },
                 "tests/functional.suite.yml": {
-                    "contents": "# Codeception Test Suite Configuration\n#\n# Suite for functional tests\n# Emulate web requests and make application process them\n# Include one of framework modules (Symfony2, Yii2, Laravel5) to use it\n# Remove this suite if you don't use frameworks\n\nactor: FunctionalTester\nmodules:\n    enabled:\n        - Symfony:\n            app_path: 'src'\n            environment: 'test'\n#        - Doctrine2:\n#            depends: Symfony\n#            cleanup: true\n        - \\App\\Tests\\Helper\\Functional\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# Codeception Test Suite Configuration",
+                        "#",
+                        "# Suite for functional tests",
+                        "# Emulate web requests and make application process them",
+                        "# Include one of framework modules (Symfony2, Yii2, Laravel5) to use it",
+                        "# Remove this suite if you don't use frameworks",
+                        "",
+                        "actor: FunctionalTester",
+                        "modules:",
+                        "    enabled:",
+                        "        - Symfony:",
+                        "            app_path: 'src'",
+                        "            environment: 'test'",
+                        "#        - Doctrine2:",
+                        "#            depends: Symfony",
+                        "#            cleanup: true",
+                        "        - \\App\\Tests\\Helper\\Functional",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "tests/acceptance.suite.yml": {
-                    "contents": "# Codeception Test Suite Configuration\n#\n# Suite for acceptance tests.\n# Perform tests in browser using the WebDriver or PhpBrowser.\n# If you need both WebDriver and PHPBrowser tests - create a separate suite.\n\nactor: AcceptanceTester\nmodules:\n    enabled:\n        - PhpBrowser:\n            url: http://localhost:8000\n        - \\App\\Tests\\Helper\\Acceptance\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# Codeception Test Suite Configuration",
+                        "#",
+                        "# Suite for acceptance tests.",
+                        "# Perform tests in browser using the WebDriver or PhpBrowser.",
+                        "# If you need both WebDriver and PHPBrowser tests - create a separate suite.",
+                        "",
+                        "actor: AcceptanceTester",
+                        "modules:",
+                        "    enabled:",
+                        "        - PhpBrowser:",
+                        "            url: http://localhost:8000",
+                        "        - \\App\\Tests\\Helper\\Acceptance",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "tests/acceptance/.gitignore": {
-                    "contents": "",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
                 },
                 "tests/_support/_generated/.gitignore": {
-                    "contents": "*\n!.gitignore\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "*",
+                        "!.gitignore",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "tests/_support/AcceptanceTester.php": {
-                    "contents": "<?php\nnamespace App\\Tests;\n\n/**\n * Inherited Methods\n * @method void wantToTest($text)\n * @method void wantTo($text)\n * @method void execute($callable)\n * @method void expectTo($prediction)\n * @method void expect($prediction)\n * @method void amGoingTo($argumentation)\n * @method void am($role)\n * @method void lookForwardTo($achieveValue)\n * @method void comment($description)\n * @method \\Codeception\\Lib\\Friend haveFriend($name, $actorClass = NULL)\n *\n * @SuppressWarnings(PHPMD)\n*/\nclass AcceptanceTester extends \\Codeception\\Actor\n{\n    use _generated\\AcceptanceTesterActions;\n\n   /**\n    * Define custom actions here\n    */\n}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "namespace App\\Tests;",
+                        "",
+                        "/**",
+                        " * Inherited Methods",
+                        " * @method void wantToTest($text)",
+                        " * @method void wantTo($text)",
+                        " * @method void execute($callable)",
+                        " * @method void expectTo($prediction)",
+                        " * @method void expect($prediction)",
+                        " * @method void amGoingTo($argumentation)",
+                        " * @method void am($role)",
+                        " * @method void lookForwardTo($achieveValue)",
+                        " * @method void comment($description)",
+                        " * @method \\Codeception\\Lib\\Friend haveFriend($name, $actorClass = NULL)",
+                        " *",
+                        " * @SuppressWarnings(PHPMD)",
+                        "*/",
+                        "class AcceptanceTester extends \\Codeception\\Actor",
+                        "{",
+                        "    use _generated\\AcceptanceTesterActions;",
+                        "",
+                        "   /**",
+                        "    * Define custom actions here",
+                        "    */",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "tests/_support/FunctionalTester.php": {
-                    "contents": "<?php\nnamespace App\\Tests;\n\n/**\n * Inherited Methods\n * @method void wantToTest($text)\n * @method void wantTo($text)\n * @method void execute($callable)\n * @method void expectTo($prediction)\n * @method void expect($prediction)\n * @method void amGoingTo($argumentation)\n * @method void am($role)\n * @method void lookForwardTo($achieveValue)\n * @method void comment($description)\n * @method \\Codeception\\Lib\\Friend haveFriend($name, $actorClass = NULL)\n *\n * @SuppressWarnings(PHPMD)\n*/\nclass FunctionalTester extends \\Codeception\\Actor\n{\n    use _generated\\FunctionalTesterActions;\n\n   /**\n    * Define custom actions here\n    */\n}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "namespace App\\Tests;",
+                        "",
+                        "/**",
+                        " * Inherited Methods",
+                        " * @method void wantToTest($text)",
+                        " * @method void wantTo($text)",
+                        " * @method void execute($callable)",
+                        " * @method void expectTo($prediction)",
+                        " * @method void expect($prediction)",
+                        " * @method void amGoingTo($argumentation)",
+                        " * @method void am($role)",
+                        " * @method void lookForwardTo($achieveValue)",
+                        " * @method void comment($description)",
+                        " * @method \\Codeception\\Lib\\Friend haveFriend($name, $actorClass = NULL)",
+                        " *",
+                        " * @SuppressWarnings(PHPMD)",
+                        "*/",
+                        "class FunctionalTester extends \\Codeception\\Actor",
+                        "{",
+                        "    use _generated\\FunctionalTesterActions;",
+                        "",
+                        "   /**",
+                        "    * Define custom actions here",
+                        "    */",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "tests/_support/UnitTester.php": {
-                    "contents": "<?php\nnamespace App\\Tests;\n\n/**\n * Inherited Methods\n * @method void wantToTest($text)\n * @method void wantTo($text)\n * @method void execute($callable)\n * @method void expectTo($prediction)\n * @method void expect($prediction)\n * @method void amGoingTo($argumentation)\n * @method void am($role)\n * @method void lookForwardTo($achieveValue)\n * @method void comment($description)\n * @method \\Codeception\\Lib\\Friend haveFriend($name, $actorClass = NULL)\n *\n * @SuppressWarnings(PHPMD)\n*/\nclass UnitTester extends \\Codeception\\Actor\n{\n    use _generated\\UnitTesterActions;\n\n   /**\n    * Define custom actions here\n    */\n}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "namespace App\\Tests;",
+                        "",
+                        "/**",
+                        " * Inherited Methods",
+                        " * @method void wantToTest($text)",
+                        " * @method void wantTo($text)",
+                        " * @method void execute($callable)",
+                        " * @method void expectTo($prediction)",
+                        " * @method void expect($prediction)",
+                        " * @method void amGoingTo($argumentation)",
+                        " * @method void am($role)",
+                        " * @method void lookForwardTo($achieveValue)",
+                        " * @method void comment($description)",
+                        " * @method \\Codeception\\Lib\\Friend haveFriend($name, $actorClass = NULL)",
+                        " *",
+                        " * @SuppressWarnings(PHPMD)",
+                        "*/",
+                        "class UnitTester extends \\Codeception\\Actor",
+                        "{",
+                        "    use _generated\\UnitTesterActions;",
+                        "",
+                        "   /**",
+                        "    * Define custom actions here",
+                        "    */",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "tests/_support/Helper/Functional.php": {
-                    "contents": "<?php\nnamespace App\\Tests\\Helper;\n\n// here you can define custom actions\n// all public methods declared in helper class will be available in $I\n\nclass Functional extends \\Codeception\\Module\n{\n\n}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "namespace App\\Tests\\Helper;",
+                        "",
+                        "// here you can define custom actions",
+                        "// all public methods declared in helper class will be available in $I",
+                        "",
+                        "class Functional extends \\Codeception\\Module",
+                        "{",
+                        "",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "tests/_support/Helper/Acceptance.php": {
-                    "contents": "<?php\nnamespace App\\Tests\\Helper;\n\n// here you can define custom actions\n// all public methods declared in helper class will be available in $I\n\nclass Acceptance extends \\Codeception\\Module\n{\n\n}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "namespace App\\Tests\\Helper;",
+                        "",
+                        "// here you can define custom actions",
+                        "// all public methods declared in helper class will be available in $I",
+                        "",
+                        "class Acceptance extends \\Codeception\\Module",
+                        "{",
+                        "",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "tests/_support/Helper/Unit.php": {
-                    "contents": "<?php\nnamespace App\\Tests\\Helper;\n\n// here you can define custom actions\n// all public methods declared in helper class will be available in $I\n\nclass Unit extends \\Codeception\\Module\n{\n\n}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "namespace App\\Tests\\Helper;",
+                        "",
+                        "// here you can define custom actions",
+                        "// all public methods declared in helper class will be available in $I",
+                        "",
+                        "class Unit extends \\Codeception\\Module",
+                        "{",
+                        "",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "codeception/codeception:2.3@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "30798e46831f4fc641fca83c0423918518901cd7"
         }
     }
 }

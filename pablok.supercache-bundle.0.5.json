@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "pablok/supercache-bundle": {
-            "version": "0.5",
-            "recipe": {
-                "repo": "0.5",
-                "branch": "master",
-                "version": "0.5",
-                "ref": "5b17bac71b92c1035fad1720d4bc0f5e9fe17498"
-            }
-        }
-    },
     "manifests": {
         "pablok/supercache-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "pablok/supercache-bundle",
-            "version": "0.5",
             "manifest": {
                 "bundles": {
                     "PabloK\\SupercacheBundle\\SupercacheBundle": [
@@ -27,13 +13,17 @@
             },
             "files": {
                 "config/packages/prod/supercache.yaml": {
-                    "contents": "supercache:\n    enabled: true\n    cache_dir: '%kernel.project_dir%/public/webcache'\n    cache_status_header: false\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "supercache:",
+                        "    enabled: true",
+                        "    cache_dir: '%kernel.project_dir%/public/webcache'",
+                        "    cache_status_header: false",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "pablok/supercache-bundle:0.5@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "5b17bac71b92c1035fad1720d4bc0f5e9fe17498"
         }
     }
 }

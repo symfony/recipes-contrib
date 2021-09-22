@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "connectholland/timechimp-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "84527816cc62efb58453131d350a5aee146f9f7e"
-            }
-        }
-    },
     "manifests": {
         "connectholland/timechimp-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "connectholland/timechimp-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "ConnectHolland\\TimechimpBundle\\ConnecthollandTimechimpBundle": [
@@ -34,13 +20,15 @@
             },
             "files": {
                 "config/packages/connectholland_timechimp.yaml": {
-                    "contents": "connectholland_timechimp:\n    api_key: '%env(string:TIMECHIMP_ACCESS_TOKEN)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "connectholland_timechimp:",
+                        "    api_key: '%env(string:TIMECHIMP_ACCESS_TOKEN)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "connectholland/timechimp-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "84527816cc62efb58453131d350a5aee146f9f7e"
         }
     }
 }

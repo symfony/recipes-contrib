@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "holadev/amp-toolbox-bundle": {
-            "version": "0.1",
-            "recipe": {
-                "repo": "0.1",
-                "branch": "master",
-                "version": "0.1",
-                "ref": "d0a5e08201ef1249c60b9cf5f9a9393c3ed68fcb"
-            }
-        }
-    },
     "manifests": {
         "holadev/amp-toolbox-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "holadev/amp-toolbox-bundle",
-            "version": "0.1",
             "manifest": {
                 "bundles": {
                     "Hola\\AmpToolboxBundle\\HolaAmpToolboxBundle": [
@@ -27,13 +13,15 @@
             },
             "files": {
                 "config/packages/amp_toolbox.yaml": {
-                    "contents": "amp_toolbox:\n    transform_enabled: true\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "amp_toolbox:",
+                        "    transform_enabled: true",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "holadev/amp-toolbox-bundle:0.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "d0a5e08201ef1249c60b9cf5f9a9393c3ed68fcb"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "klaviyo/php-sdk": {
-            "version": "2.0",
-            "recipe": {
-                "repo": "2.0",
-                "branch": "master",
-                "version": "2.0",
-                "ref": "6f3d5e0e102bf03f28144b8a42f6341a8f15f5d6"
-            }
-        }
-    },
     "manifests": {
         "klaviyo/php-sdk": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "klaviyo/php-sdk",
-            "version": "2.0",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -26,13 +12,18 @@
             },
             "files": {
                 "config/packages/klaviyo.yaml": {
-                    "contents": "services:\n    Klaviyo\\Klaviyo:\n        arguments:\n            $private_key: '%env(KLAVIYO_PRIVATE_KEY)%'\n            $public_key: '%env(KLAVIYO_PUBLIC_KEY)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "services:",
+                        "    Klaviyo\\Klaviyo:",
+                        "        arguments:",
+                        "            $private_key: '%env(KLAVIYO_PRIVATE_KEY)%'",
+                        "            $public_key: '%env(KLAVIYO_PUBLIC_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "klaviyo/php-sdk:2.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "6f3d5e0e102bf03f28144b8a42f6341a8f15f5d6"
         }
     }
 }

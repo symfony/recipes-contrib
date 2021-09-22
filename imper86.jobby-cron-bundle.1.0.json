@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "imper86/jobby-cron-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "410da723a3134bd927200dd469a030ddbf6f35fd"
-            }
-        }
-    },
     "manifests": {
         "imper86/jobby-cron-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "imper86/jobby-cron-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Imper86\\JobbyBundle\\Imper86JobbyBundle": [
@@ -31,13 +17,15 @@
             },
             "files": {
                 "config/packages/imper86_jobby.yaml": {
-                    "contents": "imper86_jobby:\n    jobs: []\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "imper86_jobby:",
+                        "    jobs: []",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "imper86/jobby-cron-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "410da723a3134bd927200dd469a030ddbf6f35fd"
         }
     }
 }

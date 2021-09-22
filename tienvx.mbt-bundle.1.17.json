@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "tienvx/mbt-bundle": {
-            "version": "1.17",
-            "recipe": {
-                "repo": "1.17",
-                "branch": "master",
-                "version": "1.17",
-                "ref": "78464b7d1373d35994cfe408fc2b21ce42a808ba"
-            }
-        }
-    },
     "manifests": {
         "tienvx/mbt-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "tienvx/mbt-bundle",
-            "version": "1.17",
             "manifest": {
                 "bundles": {
                     "Tienvx\\Bundle\\MbtBundle\\TienvxMbtBundle": [
@@ -31,13 +17,16 @@
             },
             "files": {
                 "config/packages/tienvx_mbt.yaml": {
-                    "contents": "tienvx_mbt:\n    email_from: '%env(EMAIL_FROM)%'\n    admin_url: '%env(ADMIN_URL)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "tienvx_mbt:",
+                        "    email_from: '%env(EMAIL_FROM)%'",
+                        "    admin_url: '%env(ADMIN_URL)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "tienvx/mbt-bundle:1.17@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "78464b7d1373d35994cfe408fc2b21ce42a808ba"
         }
     }
 }

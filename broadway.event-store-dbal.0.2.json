@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "broadway/event-store-dbal": {
-            "version": "0.2",
-            "recipe": {
-                "repo": "0.2",
-                "branch": "master",
-                "version": "0.2",
-                "ref": "a8e44b60058a2798f65be93037aa1562f4de60eb"
-            }
-        }
-    },
     "manifests": {
         "broadway/event-store-dbal": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "broadway/event-store-dbal",
-            "version": "0.2",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -22,13 +8,26 @@
             },
             "files": {
                 "config/packages/broadway_event_store_dbal.yaml": {
-                    "contents": "broadway:\n    event_store: broadway.event_store.dbal\n\nservices:\n    broadway.event_store.dbal:\n        class: Broadway\\EventStore\\Dbal\\DBALEventStore\n        arguments:\n            - \"@doctrine.dbal.default_connection\"\n            - \"@broadway.serializer.payload\"\n            - \"@broadway.serializer.metadata\"\n            - \"events\"\n            - false\n            - \"@broadway.uuid.converter\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "broadway:",
+                        "    event_store: broadway.event_store.dbal",
+                        "",
+                        "services:",
+                        "    broadway.event_store.dbal:",
+                        "        class: Broadway\\EventStore\\Dbal\\DBALEventStore",
+                        "        arguments:",
+                        "            - \"@doctrine.dbal.default_connection\"",
+                        "            - \"@broadway.serializer.payload\"",
+                        "            - \"@broadway.serializer.metadata\"",
+                        "            - \"events\"",
+                        "            - false",
+                        "            - \"@broadway.uuid.converter\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "broadway/event-store-dbal:0.2@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "a8e44b60058a2798f65be93037aa1562f4de60eb"
         }
     }
 }

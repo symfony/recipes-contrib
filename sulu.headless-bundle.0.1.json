@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "sulu/headless-bundle": {
-            "version": "0.1",
-            "recipe": {
-                "repo": "0.1",
-                "branch": "master",
-                "version": "0.1",
-                "ref": "92d32212649ac3d97c1e4035c3abdce4e112a296"
-            }
-        }
-    },
     "manifests": {
         "sulu/headless-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "sulu/headless-bundle",
-            "version": "0.1",
             "manifest": {
                 "bundles": {
                     "Sulu\\Bundle\\HeadlessBundle\\SuluHeadlessBundle": [
@@ -32,13 +18,16 @@
             },
             "files": {
                 "config/routes/sulu_headless_website.yaml": {
-                    "contents": "sulu_headless:\n    type: portal\n    resource: \"@SuluHeadlessBundle/Resources/config/routing_website.yml\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "sulu_headless:",
+                        "    type: portal",
+                        "    resource: \"@SuluHeadlessBundle/Resources/config/routing_website.yml\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "sulu/headless-bundle:0.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "92d32212649ac3d97c1e4035c3abdce4e112a296"
         }
     }
 }

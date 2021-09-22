@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "m-adamski/symfony-mailer-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "fcdd70fac7c2bdf08ce9ea0ab6e465965c3f0d31"
-            }
-        }
-    },
     "manifests": {
         "m-adamski/symfony-mailer-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "m-adamski/symfony-mailer-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Adamski\\Symfony\\MailerBundle\\MailerBundle": [
@@ -27,13 +13,16 @@
             },
             "files": {
                 "config/packages/mailer.yaml": {
-                    "contents": "mailer:\n    sender_address: noreply@example.com\n    sender_name: noreply\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "mailer:",
+                        "    sender_address: noreply@example.com",
+                        "    sender_name: noreply",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "m-adamski/symfony-mailer-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "fcdd70fac7c2bdf08ce9ea0ab6e465965c3f0d31"
         }
     }
 }

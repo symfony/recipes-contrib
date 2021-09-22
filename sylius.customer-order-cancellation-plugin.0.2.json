@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "sylius/customer-order-cancellation-plugin": {
-            "version": "0.2",
-            "recipe": {
-                "repo": "0.2",
-                "branch": "master",
-                "version": "0.2",
-                "ref": "0df1d0d6f01546907877e0d832edb15d00406613"
-            }
-        }
-    },
     "manifests": {
         "sylius/customer-order-cancellation-plugin": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "sylius/customer-order-cancellation-plugin",
-            "version": "0.2",
             "manifest": {
                 "bundles": {
                     "Sylius\\CustomerOrderCancellationPlugin\\SyliusCustomerOrderCancellationPlugin": [
@@ -27,13 +13,18 @@
             },
             "files": {
                 "config/routes/sylius_customer_order_cancellation.yaml": {
-                    "contents": "sylius_customer_order_cancellation_plugin:\n    resource: \"@SyliusCustomerOrderCancellationPlugin/Resources/config/routing.yml\"\n    prefix: /{_locale}\n    requirements:\n        _locale: ^[a-z]{2}(?:_[A-Z]{2})?$\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "sylius_customer_order_cancellation_plugin:",
+                        "    resource: \"@SyliusCustomerOrderCancellationPlugin/Resources/config/routing.yml\"",
+                        "    prefix: /{_locale}",
+                        "    requirements:",
+                        "        _locale: ^[a-z]{2}(?:_[A-Z]{2})?$",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "sylius/customer-order-cancellation-plugin:0.2@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "0df1d0d6f01546907877e0d832edb15d00406613"
         }
     }
 }

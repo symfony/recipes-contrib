@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "broadway/read-model-mongodb": {
-            "version": "0.2",
-            "recipe": {
-                "repo": "0.2",
-                "branch": "master",
-                "version": "0.2",
-                "ref": "41d08827ba6eae0d103bccdef8267612fc7b78e1"
-            }
-        }
-    },
     "manifests": {
         "broadway/read-model-mongodb": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "broadway/read-model-mongodb",
-            "version": "0.2",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -30,13 +16,31 @@
             },
             "files": {
                 "config/packages/broadway_read_model_mongodb.yaml": {
-                    "contents": "broadway:\n    read_model: broadway.read_model.mongodb.repository_factory\n\nservices:\n    broadway.read_model.mongodb_client:\n        class: MongoDB\\Client\n        arguments: ['%mongodb_uri%']\n\n    broadway.read_model.mongodb_collection:\n        class: MongoDB\\Collection\n        factory: ['@broadway.read_model.mongodb_client', selectCollection]\n        arguments: ['%mongodb_database%', 'read_models']\n\n    broadway.read_model.mongodb.repository_factory:\n        class: Broadway\\ReadModel\\MongoDB\\MongoDBRepositoryFactory\n        arguments:\n            - \"@broadway.read_model.mongodb_collection\"\n            - \"@broadway.serializer.readmodel\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "broadway:",
+                        "    read_model: broadway.read_model.mongodb.repository_factory",
+                        "",
+                        "services:",
+                        "    broadway.read_model.mongodb_client:",
+                        "        class: MongoDB\\Client",
+                        "        arguments: ['%mongodb_uri%']",
+                        "",
+                        "    broadway.read_model.mongodb_collection:",
+                        "        class: MongoDB\\Collection",
+                        "        factory: ['@broadway.read_model.mongodb_client', selectCollection]",
+                        "        arguments: ['%mongodb_database%', 'read_models']",
+                        "",
+                        "    broadway.read_model.mongodb.repository_factory:",
+                        "        class: Broadway\\ReadModel\\MongoDB\\MongoDBRepositoryFactory",
+                        "        arguments:",
+                        "            - \"@broadway.read_model.mongodb_collection\"",
+                        "            - \"@broadway.serializer.readmodel\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "broadway/read-model-mongodb:0.2@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "41d08827ba6eae0d103bccdef8267612fc7b78e1"
         }
     }
 }

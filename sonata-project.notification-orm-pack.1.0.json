@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "sonata-project/notification-orm-pack": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "c4c7db6d4949a6cc819270c4c2f0f00eeffe09f8"
-            }
-        }
-    },
     "manifests": {
         "sonata-project/notification-orm-pack": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "sonata-project/notification-orm-pack",
-            "version": "1.0",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/",
@@ -23,18 +9,56 @@
             },
             "files": {
                 "src/Entity/SonataNotificationMessage.php": {
-                    "contents": "<?php\n\ndeclare(strict_types=1);\n\nnamespace App\\Entity;\n\nuse Doctrine\\ORM\\Mapping as ORM;\nuse JMS\\Serializer\\Annotation as Serializer;\nuse Sonata\\NotificationBundle\\Entity\\BaseMessage;\n\n/**\n * @ORM\\Entity\n * @ORM\\Table(name=\"notification__message\")\n */\nclass SonataNotificationMessage extends BaseMessage\n{\n    /**\n     * @ORM\\Id\n     * @ORM\\Column(type=\"integer\")\n     * @ORM\\GeneratedValue(strategy=\"AUTO\")\n     * // Serializer\\Groups(groups={\"sonata_api_read\",\"sonata_api_write\",\"sonata_search\"})\n     *\n     * @var int\n     */\n    protected $id;\n\n    public function getId()\n    {\n        return $this->id;\n    }\n}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "use JMS\\Serializer\\Annotation as Serializer;",
+                        "use Sonata\\NotificationBundle\\Entity\\BaseMessage;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity",
+                        " * @ORM\\Table(name=\"notification__message\")",
+                        " */",
+                        "class SonataNotificationMessage extends BaseMessage",
+                        "{",
+                        "    /**",
+                        "     * @ORM\\Id",
+                        "     * @ORM\\Column(type=\"integer\")",
+                        "     * @ORM\\GeneratedValue(strategy=\"AUTO\")",
+                        "     * // Serializer\\Groups(groups={\"sonata_api_read\",\"sonata_api_write\",\"sonata_search\"})",
+                        "     *",
+                        "     * @var int",
+                        "     */",
+                        "    protected $id;",
+                        "",
+                        "    public function getId()",
+                        "    {",
+                        "        return $this->id;",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/sonata_notification_orm.yaml": {
-                    "contents": "sonata_notification:\n    backend: sonata.notification.backend.doctrine\n    backends:\n        doctrine: null\n    class:\n        message: App\\Entity\\SonataNotificationMessage\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "sonata_notification:",
+                        "    backend: sonata.notification.backend.doctrine",
+                        "    backends:",
+                        "        doctrine: null",
+                        "    class:",
+                        "        message: App\\Entity\\SonataNotificationMessage",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "sonata-project/notification-orm-pack:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "c4c7db6d4949a6cc819270c4c2f0f00eeffe09f8"
         }
     }
 }

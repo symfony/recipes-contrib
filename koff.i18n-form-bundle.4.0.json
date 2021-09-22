@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "koff/i18n-form-bundle": {
-            "version": "4.0",
-            "recipe": {
-                "repo": "4.0",
-                "branch": "master",
-                "version": "4.0",
-                "ref": "8fb73591e5bfeb6899517623472e42fbaef00815"
-            }
-        }
-    },
     "manifests": {
         "koff/i18n-form-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "koff/i18n-form-bundle",
-            "version": "4.0",
             "manifest": {
                 "bundles": {
                     "Koff\\Bundle\\I18nFormBundle\\I18nFormBundle": [
@@ -36,13 +22,17 @@
             },
             "files": {
                 "config/packages/i18n_form.yaml": {
-                    "contents": "i18n_form:\n    locales: 'en' # array or string separated with \"|\" or \",\"\n#    required_locales: 'en'\n#    excluded_fields: 'id|locale|translatable'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "i18n_form:",
+                        "    locales: 'en' # array or string separated with \"|\" or \",\"",
+                        "#    required_locales: 'en'",
+                        "#    excluded_fields: 'id|locale|translatable'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "koff/i18n-form-bundle:4.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "8fb73591e5bfeb6899517623472e42fbaef00815"
         }
     }
 }

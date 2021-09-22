@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "svc/util-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "a3760c4c2587ada930940e20a6f68fad252815af"
-            }
-        }
-    },
     "manifests": {
         "svc/util-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "svc/util-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Svc\\UtilBundle\\SvcUtilBundle": [
@@ -30,18 +16,29 @@
             },
             "files": {
                 "config/routes/svc_util.yaml": {
-                    "contents": "_svc_util:\n    resource: '@SvcUtilBundle/src/Resources/config/routes.xml'\n    prefix: /svc-util/{_locale}\n",
-                    "executable": true,
-                    "encoding": ""
+                    "contents": [
+                        "_svc_util:",
+                        "    resource: '@SvcUtilBundle/src/Resources/config/routes.xml'",
+                        "    prefix: /svc-util/{_locale}",
+                        ""
+                    ],
+                    "executable": true
                 },
                 "config/packages/svc_util.yaml": {
-                    "contents": "# Default configuration for \"SvcUtilBundle\"\nsvc_util:\n    mailer:\n        # Default sender mail address\n        mail_address:         dev@sv-systems.com\n        # Default sender name\n        mail_name:            'Test User'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# Default configuration for \"SvcUtilBundle\"",
+                        "svc_util:",
+                        "    mailer:",
+                        "        # Default sender mail address",
+                        "        mail_address:         dev@sv-systems.com",
+                        "        # Default sender name",
+                        "        mail_name:            'Test User'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "svc/util-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "a3760c4c2587ada930940e20a6f68fad252815af"
         }
     }
 }

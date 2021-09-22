@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "artox-lab/sms-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "bd9cb03c4458d7f089586938e06dadcd1f481ba8"
-            }
-        }
-    },
     "manifests": {
         "artox-lab/sms-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "artox-lab/sms-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "ArtoxLab\\Bundle\\SmsBundle\\ArtoxLabSmsBundle": [
@@ -32,13 +18,17 @@
             },
             "files": {
                 "config/packages/artox_lab_sms.yaml": {
-                    "contents": "artox_lab_sms:\n    providers:\n        # You must to define at least one provider configuration\n        # See more info at https://github.com/artox-lab/sms-bundle\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "artox_lab_sms:",
+                        "    providers:",
+                        "        # You must to define at least one provider configuration",
+                        "        # See more info at https://github.com/artox-lab/sms-bundle",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "artox-lab/sms-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "bd9cb03c4458d7f089586938e06dadcd1f481ba8"
         }
     }
 }

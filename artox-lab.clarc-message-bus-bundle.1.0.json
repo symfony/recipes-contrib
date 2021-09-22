@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "artox-lab/clarc-message-bus-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "f12b61a5d1456c0db63d38a4638e366b385b8316"
-            }
-        }
-    },
     "manifests": {
         "artox-lab/clarc-message-bus-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "artox-lab/clarc-message-bus-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "ArtoxLab\\Bundle\\ClarcMessageBusBundle\\ArtoxLabClarcMessageBusBundle": [
@@ -27,13 +13,18 @@
             },
             "files": {
                 "config/packages/artox_lab_clarc_message_bus.yaml": {
-                    "contents": "artox_lab_clarc_message_bus:\n    bus:\n        middleware:\n            add_redelivery_stamp_middleware:\n                retry_count: 10\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "artox_lab_clarc_message_bus:",
+                        "    bus:",
+                        "        middleware:",
+                        "            add_redelivery_stamp_middleware:",
+                        "                retry_count: 10",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "artox-lab/clarc-message-bus-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "f12b61a5d1456c0db63d38a4638e366b385b8316"
         }
     }
 }

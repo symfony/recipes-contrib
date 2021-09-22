@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "armin/scssphp-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "dfcd909f037c7f1e2535bec00c1eba240d7aa513"
-            }
-        }
-    },
     "manifests": {
         "armin/scssphp-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "armin/scssphp-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Armin\\ScssphpBundle\\ScssphpBundle": [
@@ -27,18 +13,25 @@
             },
             "files": {
                 "config/packages/prod/scssphp.yaml": {
-                    "contents": "scssphp:\n    enabled: true\n    autoUpdate: false\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "scssphp:",
+                        "    enabled: true",
+                        "    autoUpdate: false",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/scssphp.yaml": {
-                    "contents": "scssphp:\n    enabled: true\n    autoUpdate: true\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "scssphp:",
+                        "    enabled: true",
+                        "    autoUpdate: true",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "armin/scssphp-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "dfcd909f037c7f1e2535bec00c1eba240d7aa513"
         }
     }
 }

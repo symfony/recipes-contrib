@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "enqueue/async-command": {
-            "version": "0.9",
-            "recipe": {
-                "repo": "0.9",
-                "branch": "master",
-                "version": "0.9",
-                "ref": "33ae5f9fb18cf9a966974c8cced466cc05eac799"
-            }
-        }
-    },
     "manifests": {
         "enqueue/async-command": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "enqueue/async-command",
-            "version": "0.9",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -22,13 +8,16 @@
             },
             "files": {
                 "config/packages/enqueue_async_command.yaml": {
-                    "contents": "enqueue:\n    default:\n        async_commands: true\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "enqueue:",
+                        "    default:",
+                        "        async_commands: true",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "enqueue/async-command:0.9@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "33ae5f9fb18cf9a966974c8cced466cc05eac799"
         }
     }
 }

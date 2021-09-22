@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "notfloran/mjml-bundle": {
-            "version": "3.0",
-            "recipe": {
-                "repo": "3.0",
-                "branch": "master",
-                "version": "3.0",
-                "ref": "158f3cc144a0ccf89b40c1a6290407ba84dcf5e2"
-            }
-        }
-    },
     "manifests": {
         "notfloran/mjml-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "notfloran/mjml-bundle",
-            "version": "3.0",
             "manifest": {
                 "bundles": {
                     "NotFloran\\MjmlBundle\\MjmlBundle": [
@@ -30,18 +16,28 @@
             },
             "files": {
                 "config/packages/prod/mjml.yaml": {
-                    "contents": "mjml:\n    options:\n        minify: true\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "mjml:",
+                        "    options:",
+                        "        minify: true",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/mjml.yaml": {
-                    "contents": "# see https://github.com/notFloran/mjml-bundle#binary\nmjml:\n    renderer: 'binary'\n    options:\n        binary: '%kernel.project_dir%/node_modules/.bin/mjml'\n        minify: false\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# see https://github.com/notFloran/mjml-bundle#binary",
+                        "mjml:",
+                        "    renderer: 'binary'",
+                        "    options:",
+                        "        binary: '%kernel.project_dir%/node_modules/.bin/mjml'",
+                        "        minify: false",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "notfloran/mjml-bundle:3.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "158f3cc144a0ccf89b40c1a6290407ba84dcf5e2"
         }
     }
 }

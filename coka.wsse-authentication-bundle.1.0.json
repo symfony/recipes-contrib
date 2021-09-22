@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "coka/wsse-authentication-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "5c503cdc83831927c4ac04564fc1b37dcae78713"
-            }
-        }
-    },
     "manifests": {
         "coka/wsse-authentication-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "coka/wsse-authentication-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Oka\\WSSEAuthenticationBundle\\OkaWSSEAuthenticationBundle": [
@@ -27,13 +13,17 @@
             },
             "files": {
                 "config/packages/oka_wsse_authentication.yaml": {
-                    "contents": "oka_wsse_authentication:\n    db_driver: orm\n    nonce:\n        save_path: '%kernel.cache_dir%/oka_wsse/nonces'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "oka_wsse_authentication:",
+                        "    db_driver: orm",
+                        "    nonce:",
+                        "        save_path: '%kernel.cache_dir%/oka_wsse/nonces'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "coka/wsse-authentication-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "5c503cdc83831927c4ac04564fc1b37dcae78713"
         }
     }
 }

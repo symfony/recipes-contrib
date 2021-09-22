@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "dukecity/command-scheduler-bundle": {
-            "version": "3.0",
-            "recipe": {
-                "repo": "3.0",
-                "branch": "master",
-                "version": "3.0",
-                "ref": "41654b9384665fbf3069a21c9a46bbc05b32198a"
-            }
-        }
-    },
     "manifests": {
         "dukecity/command-scheduler-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "dukecity/command-scheduler-bundle",
-            "version": "3.0",
             "manifest": {
                 "bundles": {
                     "Dukecity\\CommandSchedulerBundle\\DukecityCommandSchedulerBundle": [
@@ -38,18 +24,41 @@
             },
             "files": {
                 "config/routes/scheduler.yaml": {
-                    "contents": "dukecity_command_scheduler:\n    resource: \"@DukecityCommandSchedulerBundle/Resources/config/routing.php\"\n    prefix:   /\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "dukecity_command_scheduler:",
+                        "    resource: \"@DukecityCommandSchedulerBundle/Resources/config/routing.php\"",
+                        "    prefix:   /",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/scheduler.yaml": {
-                    "contents": "# See full configuration at\n#  https://github.com/Dukecity/CommandSchedulerBundle/wiki/Configuration\ndukecity_command_scheduler:\n\n    # Scheduler will write output files here. set false to disable it.\n    log_path: \"%kernel.logs_dir%\"\n\n    # Add namespace you don't want to see its Command in the scheduler.\n    excluded_command_namespaces:\n        - _global\n        - scheduler\n        - server\n        - container\n        - config\n        - generate\n        - init\n        - router\n        - doctrine\n        - debug\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# See full configuration at",
+                        "#  https://github.com/Dukecity/CommandSchedulerBundle/wiki/Configuration",
+                        "dukecity_command_scheduler:",
+                        "",
+                        "    # Scheduler will write output files here. set false to disable it.",
+                        "    log_path: \"%kernel.logs_dir%\"",
+                        "",
+                        "    # Add namespace you don't want to see its Command in the scheduler.",
+                        "    excluded_command_namespaces:",
+                        "        - _global",
+                        "        - scheduler",
+                        "        - server",
+                        "        - container",
+                        "        - config",
+                        "        - generate",
+                        "        - init",
+                        "        - router",
+                        "        - doctrine",
+                        "        - debug",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "dukecity/command-scheduler-bundle:3.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "41654b9384665fbf3069a21c9a46bbc05b32198a"
         }
     }
 }

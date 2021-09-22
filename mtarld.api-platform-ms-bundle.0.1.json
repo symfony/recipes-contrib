@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "mtarld/api-platform-ms-bundle": {
-            "version": "0.1",
-            "recipe": {
-                "repo": "0.1",
-                "branch": "master",
-                "version": "0.1",
-                "ref": "f486d838d15925251cfd85e4ec56669cd02672cd"
-            }
-        }
-    },
     "manifests": {
         "mtarld/api-platform-ms-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "mtarld/api-platform-ms-bundle",
-            "version": "0.1",
             "manifest": {
                 "bundles": {
                     "Mtarld\\ApiPlatformMsBundle\\ApiPlatformMsBundle": [
@@ -32,13 +18,23 @@
             },
             "files": {
                 "config/packages/api_platform_ms.yaml": {
-                    "contents": "api_platform_ms:\n    # Name of the current microservice\n    name: app\n\n    # List of related microservices\n    #microservices:\n    #    product:\n    #       base_uri: https://product.api\n    #       api_path: /api\n    #       format: jsonld\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "api_platform_ms:",
+                        "    # Name of the current microservice",
+                        "    name: app",
+                        "",
+                        "    # List of related microservices",
+                        "    #microservices:",
+                        "    #    product:",
+                        "    #       base_uri: https://product.api",
+                        "    #       api_path: /api",
+                        "    #       format: jsonld",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "mtarld/api-platform-ms-bundle:0.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "f486d838d15925251cfd85e4ec56669cd02672cd"
         }
     }
 }

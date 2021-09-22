@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "tienvx/mbt-api-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "b3af5ae7e308e4849d234079e162db4412377a1b"
-            }
-        }
-    },
     "manifests": {
         "tienvx/mbt-api-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "tienvx/mbt-api-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Tienvx\\Bundle\\MbtApiBundle\\TienvxMbtApiBundle": [
@@ -32,18 +18,26 @@
             },
             "files": {
                 "config/routes/tienvx_mbt_api.yaml": {
-                    "contents": "tienvx_mbt_api:\n    resource: '@TienvxMbtApiBundle/Resources/config/routing.xml'\n    prefix: '/mbt-api'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "tienvx_mbt_api:",
+                        "    resource: '@TienvxMbtApiBundle/Resources/config/routing.xml'",
+                        "    prefix: '/mbt-api'",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/tienvx_mbt_api.yaml": {
-                    "contents": "tienvx_mbt_api:\n    java_binary: '%env(JAVA_BINARY)%'\n    plantuml_binary: '%env(PLANTUML_BINARY)%'\n    console_binary: '%env(CONSOLE_BINARY)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "tienvx_mbt_api:",
+                        "    java_binary: '%env(JAVA_BINARY)%'",
+                        "    plantuml_binary: '%env(PLANTUML_BINARY)%'",
+                        "    console_binary: '%env(CONSOLE_BINARY)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "tienvx/mbt-api-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "b3af5ae7e308e4849d234079e162db4412377a1b"
         }
     }
 }

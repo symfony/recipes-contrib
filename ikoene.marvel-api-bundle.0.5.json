@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "ikoene/marvel-api-bundle": {
-            "version": "0.5",
-            "recipe": {
-                "repo": "0.5",
-                "branch": "master",
-                "version": "0.5",
-                "ref": "3b1ea83cacf7c06ff27a42ff806063280a7da07d"
-            }
-        }
-    },
     "manifests": {
         "ikoene/marvel-api-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "ikoene/marvel-api-bundle",
-            "version": "0.5",
             "manifest": {
                 "bundles": {
                     "Ikoene\\MarvelApiBundle\\IkoeneMarvelApiBundle": [
@@ -37,13 +23,16 @@
             },
             "files": {
                 "config/packages/ikoene_marvel_api.yaml": {
-                    "contents": "ikoene_marvel_api:\n    public_api_key: \"%env(MARVEL_PUBLIC_API_KEY)%\"\n    private_api_key: \"%env(MARVEL_PRIVATE_API_KEY)%\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "ikoene_marvel_api:",
+                        "    public_api_key: \"%env(MARVEL_PUBLIC_API_KEY)%\"",
+                        "    private_api_key: \"%env(MARVEL_PRIVATE_API_KEY)%\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "ikoene/marvel-api-bundle:0.5@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "3b1ea83cacf7c06ff27a42ff806063280a7da07d"
         }
     }
 }

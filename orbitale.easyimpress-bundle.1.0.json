@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "orbitale/easyimpress-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "d13df16ea1990be70160d21ea4e9a3bcbd974edd"
-            }
-        }
-    },
     "manifests": {
         "orbitale/easyimpress-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "orbitale/easyimpress-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Orbitale\\Bundle\\EasyImpressBundle\\EasyImpressBundle": [
@@ -27,23 +13,45 @@
             },
             "files": {
                 "config/routes/orbitale_easy_impress.yaml": {
-                    "contents": "easy_impress:\n    resource: '@EasyImpressBundle/Resources/config/routing.yml'\n    prefix: /presentations\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "easy_impress:",
+                        "    resource: '@EasyImpressBundle/Resources/config/routing.yml'",
+                        "    prefix: /presentations",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/presentations/home.yaml": {
-                    "contents": "# Read the documentation https://github.com/Orbitale/EasyImpressBundle#yml-reference for more details about yaml options\ndata:\n    # In seconds\n    transition-duration: 1000\n\nslides:\n    -\n        content: 'Hello world!'\n        data:\n            x: 0\n            y: 0\n            z: 1000\n            rotate-x: 0\n            rotate-y: 0\n            rotate-z: 0\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# Read the documentation https://github.com/Orbitale/EasyImpressBundle#yml-reference for more details about yaml options",
+                        "data:",
+                        "    # In seconds",
+                        "    transition-duration: 1000",
+                        "",
+                        "slides:",
+                        "    -",
+                        "        content: 'Hello world!'",
+                        "        data:",
+                        "            x: 0",
+                        "            y: 0",
+                        "            z: 1000",
+                        "            rotate-x: 0",
+                        "            rotate-y: 0",
+                        "            rotate-z: 0",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/orbitale_easy_impress.yaml": {
-                    "contents": "easy_impress:\n    presentations_dir: '%kernel.project_dir%/config/presentations'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "easy_impress:",
+                        "    presentations_dir: '%kernel.project_dir%/config/presentations'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "orbitale/easyimpress-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "d13df16ea1990be70160d21ea4e9a3bcbd974edd"
         }
     }
 }

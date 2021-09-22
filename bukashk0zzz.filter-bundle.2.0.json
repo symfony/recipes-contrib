@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "bukashk0zzz/filter-bundle": {
-            "version": "2.0",
-            "recipe": {
-                "repo": "2.0",
-                "branch": "master",
-                "version": "2.0",
-                "ref": "0f1035a5f7174f09663157a87f9a0849e85ed369"
-            }
-        }
-    },
     "manifests": {
         "bukashk0zzz/filter-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "bukashk0zzz/filter-bundle",
-            "version": "2.0",
             "manifest": {
                 "bundles": {
                     "Bukashk0zzz\\FilterBundle\\Bukashk0zzzFilterBundle": [
@@ -27,13 +13,16 @@
             },
             "files": {
                 "config/packages/bukashk0zzz_filter.yaml": {
-                    "contents": "bukashk0zzz_filter:\n    # Enable if you need auto filtering form data before constraint(Validation) check\n    auto_filter_forms: false\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "bukashk0zzz_filter:",
+                        "    # Enable if you need auto filtering form data before constraint(Validation) check",
+                        "    auto_filter_forms: false",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "bukashk0zzz/filter-bundle:2.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "0f1035a5f7174f09663157a87f9a0849e85ed369"
         }
     }
 }

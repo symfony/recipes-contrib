@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "sonata-project/form-extensions": {
-            "version": "1.4",
-            "recipe": {
-                "repo": "1.4",
-                "branch": "master",
-                "version": "1.4",
-                "ref": "9c8a1e8ce2b1f215015ed16652c4ed18eb5867fd"
-            }
-        }
-    },
     "manifests": {
         "sonata-project/form-extensions": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "sonata-project/form-extensions",
-            "version": "1.4",
             "manifest": {
                 "bundles": {
                     "Sonata\\Form\\Bridge\\Symfony\\SonataFormBundle": [
@@ -27,13 +13,15 @@
             },
             "files": {
                 "config/packages/sonata_form.yaml": {
-                    "contents": "sonata_form:\n    form_type: standard\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "sonata_form:",
+                        "    form_type: standard",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "sonata-project/form-extensions:1.4@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "9c8a1e8ce2b1f215015ed16652c4ed18eb5867fd"
         }
     }
 }

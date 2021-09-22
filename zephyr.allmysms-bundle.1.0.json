@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "zephyr/allmysms-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "52dd698eea44404192e615079eef2dd05660eeb0"
-            }
-        }
-    },
     "manifests": {
         "zephyr/allmysms-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "zephyr/allmysms-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "ZephyrHQ\\AllMySMSBundle\\ZephyrHQAllMySMSBundle": [
@@ -32,13 +18,18 @@
             },
             "files": {
                 "config/zephyrhq_allmysms.yaml": {
-                    "contents": "zephyrhq_allmysms:\n    api_login: '%env(ALLMYSMS_LOGIN)%'\n    api_key: '%env(ALLMYSMS_KEY)%'\n    simulate: '%env(ALLMYSMS_SIMULATE)%'\n    simple_sms: false\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "zephyrhq_allmysms:",
+                        "    api_login: '%env(ALLMYSMS_LOGIN)%'",
+                        "    api_key: '%env(ALLMYSMS_KEY)%'",
+                        "    simulate: '%env(ALLMYSMS_SIMULATE)%'",
+                        "    simple_sms: false",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "zephyr/allmysms-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "52dd698eea44404192e615079eef2dd05660eeb0"
         }
     }
 }

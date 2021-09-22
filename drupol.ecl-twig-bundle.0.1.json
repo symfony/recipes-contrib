@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "drupol/ecl-twig-bundle": {
-            "version": "0.1",
-            "recipe": {
-                "repo": "0.1",
-                "branch": "master",
-                "version": "0.1",
-                "ref": "a7bf4baa5f5ac2f27c61d88fee1e43ce22f5c9b2"
-            }
-        }
-    },
     "manifests": {
         "drupol/ecl-twig-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "drupol/ecl-twig-bundle",
-            "version": "0.1",
             "manifest": {
                 "bundles": {
                     "drupol\\EclTwigBundle\\EclTwigBundle": [
@@ -26,8 +12,7 @@
                 }
             },
             "files": [],
-            "origin": "drupol/ecl-twig-bundle:0.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "a7bf4baa5f5ac2f27c61d88fee1e43ce22f5c9b2"
         }
     }
 }

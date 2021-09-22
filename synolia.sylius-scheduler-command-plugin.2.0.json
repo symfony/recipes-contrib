@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "synolia/sylius-scheduler-command-plugin": {
-            "version": "2.0",
-            "recipe": {
-                "repo": "2.0",
-                "branch": "master",
-                "version": "2.0",
-                "ref": "ebbd15bf86ba55d7c6d29271ccfa9ff73f7ab063"
-            }
-        }
-    },
     "manifests": {
         "synolia/sylius-scheduler-command-plugin": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "synolia/sylius-scheduler-command-plugin",
-            "version": "2.0",
             "manifest": {
                 "bundles": {
                     "Synolia\\SyliusSchedulerCommandPlugin\\SynoliaSyliusSchedulerCommandPlugin": [
@@ -31,18 +17,24 @@
             },
             "files": {
                 "config/routes/sylius_scheduler_command.yaml": {
-                    "contents": "synolia_scheduled_command:\n    resource: \"@SynoliaSyliusSchedulerCommandPlugin/Resources/config/admin_routing.yaml\"\n    prefix: '/%sylius_admin.path_name%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "synolia_scheduled_command:",
+                        "    resource: \"@SynoliaSyliusSchedulerCommandPlugin/Resources/config/admin_routing.yaml\"",
+                        "    prefix: '/%sylius_admin.path_name%'",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/sylius_scheduler_command.yaml": {
-                    "contents": "imports:\n    - { resource: \"@SynoliaSyliusSchedulerCommandPlugin/Resources/config/config.yaml\" }\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SynoliaSyliusSchedulerCommandPlugin/Resources/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "synolia/sylius-scheduler-command-plugin:2.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "ebbd15bf86ba55d7c6d29271ccfa9ff73f7ab063"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "stof/doctrine-extensions-bundle": {
-            "version": "1.2",
-            "recipe": {
-                "repo": "1.2",
-                "branch": "master",
-                "version": "1.2",
-                "ref": "6c1ceb662f8997085f739cd089bfbef67f245983"
-            }
-        }
-    },
     "manifests": {
         "stof/doctrine-extensions-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "stof/doctrine-extensions-bundle",
-            "version": "1.2",
             "manifest": {
                 "bundles": {
                     "Stof\\DoctrineExtensionsBundle\\StofDoctrineExtensionsBundle": [
@@ -27,13 +13,17 @@
             },
             "files": {
                 "config/packages/stof_doctrine_extensions.yaml": {
-                    "contents": "# Read the documentation: https://symfony.com/doc/current/bundles/StofDoctrineExtensionsBundle/index.html\n# See the official DoctrineExtensions documentation for more details: https://github.com/Atlantic18/DoctrineExtensions/tree/master/doc/\nstof_doctrine_extensions:\n    default_locale: en_US\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# Read the documentation: https://symfony.com/doc/current/bundles/StofDoctrineExtensionsBundle/index.html",
+                        "# See the official DoctrineExtensions documentation for more details: https://github.com/Atlantic18/DoctrineExtensions/tree/master/doc/",
+                        "stof_doctrine_extensions:",
+                        "    default_locale: en_US",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "stof/doctrine-extensions-bundle:1.2@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "6c1ceb662f8997085f739cd089bfbef67f245983"
         }
     }
 }

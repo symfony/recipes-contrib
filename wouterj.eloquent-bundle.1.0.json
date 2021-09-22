@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "wouterj/eloquent-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "b39da4df8d90e09040061dbfd450ac02e1df29d2"
-            }
-        }
-    },
     "manifests": {
         "wouterj/eloquent-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "wouterj/eloquent-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "WouterJ\\EloquentBundle\\WouterJEloquentBundle": [
@@ -36,18 +22,28 @@
             },
             "files": {
                 "src/Model/.gitignore": {
-                    "contents": "",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/eloquent.yaml": {
-                    "contents": "wouterj_eloquent:\n    driver:   '%env(DB_CONNECTION)%'\n    host:     '%env(DB_HOST)%'\n    port:     '%env(DB_PORT)%'\n    database: '%env(DB_DATABASE)%'\n    username: '%env(DB_USERNAME)%'\n    password: '%env(DB_PASSWORD)%'\n    # Uncomment the following line to enable the Eloquent ORM\n    #eloquent: null\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "wouterj_eloquent:",
+                        "    driver:   '%env(DB_CONNECTION)%'",
+                        "    host:     '%env(DB_HOST)%'",
+                        "    port:     '%env(DB_PORT)%'",
+                        "    database: '%env(DB_DATABASE)%'",
+                        "    username: '%env(DB_USERNAME)%'",
+                        "    password: '%env(DB_PASSWORD)%'",
+                        "    # Uncomment the following line to enable the Eloquent ORM",
+                        "    #eloquent: null",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "wouterj/eloquent-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "b39da4df8d90e09040061dbfd450ac02e1df29d2"
         }
     }
 }

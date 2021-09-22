@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "dunglas/doctrine-json-odm": {
-            "version": "0.1",
-            "recipe": {
-                "repo": "0.1",
-                "branch": "master",
-                "version": "0.1",
-                "ref": "c2ab78f625df0c89af5908d50a28602ff8c4919f"
-            }
-        }
-    },
     "manifests": {
         "dunglas/doctrine-json-odm": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "dunglas/doctrine-json-odm",
-            "version": "0.1",
             "manifest": {
                 "bundles": {
                     "Dunglas\\DoctrineJsonOdm\\Bundle\\DunglasDoctrineJsonOdmBundle": [
@@ -23,8 +9,7 @@
                 }
             },
             "files": [],
-            "origin": "dunglas/doctrine-json-odm:0.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "c2ab78f625df0c89af5908d50a28602ff8c4919f"
         }
     }
 }

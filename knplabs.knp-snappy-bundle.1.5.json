@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "knplabs/knp-snappy-bundle": {
-            "version": "1.5",
-            "recipe": {
-                "repo": "1.5",
-                "branch": "master",
-                "version": "1.5",
-                "ref": "c81bdcf4a9d4e7b1959071457f9608631865d381"
-            }
-        }
-    },
     "manifests": {
         "knplabs/knp-snappy-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "knplabs/knp-snappy-bundle",
-            "version": "1.5",
             "manifest": {
                 "bundles": {
                     "Knp\\Bundle\\SnappyBundle\\KnpSnappyBundle": [
@@ -31,13 +17,22 @@
             },
             "files": {
                 "config/packages/knp_snappy.yaml": {
-                    "contents": "knp_snappy:\n    pdf:\n        enabled:    true\n        binary:     '%env(WKHTMLTOPDF_PATH)%'\n        options:    []\n    image:\n        enabled:    true\n        binary:     '%env(WKHTMLTOIMAGE_PATH)%'\n        options:    []\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "knp_snappy:",
+                        "    pdf:",
+                        "        enabled:    true",
+                        "        binary:     '%env(WKHTMLTOPDF_PATH)%'",
+                        "        options:    []",
+                        "    image:",
+                        "        enabled:    true",
+                        "        binary:     '%env(WKHTMLTOIMAGE_PATH)%'",
+                        "        options:    []",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "knplabs/knp-snappy-bundle:1.5@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "c81bdcf4a9d4e7b1959071457f9608631865d381"
         }
     }
 }

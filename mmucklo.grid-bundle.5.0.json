@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "mmucklo/grid-bundle": {
-            "version": "5.0",
-            "recipe": {
-                "repo": "5.0",
-                "branch": "master",
-                "version": "5.0",
-                "ref": "03253aa3c0d5c4b42d58e5484becf4ee5934c5dc"
-            }
-        }
-    },
     "manifests": {
         "mmucklo/grid-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "mmucklo/grid-bundle",
-            "version": "5.0",
             "manifest": {
                 "bundles": {
                     "Dtc\\GridBundle\\DtcGridBundle": [
@@ -30,13 +16,15 @@
             },
             "files": {
                 "config/routes/dtc_grid.yaml": {
-                    "contents": "dtc_grid:\n    resource: '@DtcGridBundle/Resources/config/routing.yml'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "dtc_grid:",
+                        "    resource: '@DtcGridBundle/Resources/config/routing.yml'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "mmucklo/grid-bundle:5.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "03253aa3c0d5c4b42d58e5484becf4ee5934c5dc"
         }
     }
 }

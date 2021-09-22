@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "lag/adminbundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "d1967ac7b058210ed958b5a7cca70a89ce7749af"
-            }
-        }
-    },
     "manifests": {
         "lag/adminbundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "lag/adminbundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "LAG\\AdminBundle\\LAGAdminBundle": [
@@ -27,18 +13,22 @@
             },
             "files": {
                 "config/packages/lag_admin.yaml": {
-                    "contents": "lag_admin:\n    application:\n        resources_path: '%kernel.project_dir%/config/admin/resources'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "lag_admin:",
+                        "    application:",
+                        "        resources_path: '%kernel.project_dir%/config/admin/resources'",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/admin/resources/.gitignore": {
-                    "contents": "",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "lag/adminbundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "d1967ac7b058210ed958b5a7cca70a89ce7749af"
         }
     }
 }

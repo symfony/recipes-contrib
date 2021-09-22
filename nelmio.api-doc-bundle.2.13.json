@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "nelmio/api-doc-bundle": {
-            "version": "2.13",
-            "recipe": {
-                "repo": "2.13",
-                "branch": "master",
-                "version": "2.13",
-                "ref": "d13bb99357ebcd2ffb6fe808a64961f5bc1c7546"
-            }
-        }
-    },
     "manifests": {
         "nelmio/api-doc-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "nelmio/api-doc-bundle",
-            "version": "2.13",
             "manifest": {
                 "bundles": {
                     "Nelmio\\ApiDocBundle\\NelmioApiDocBundle": [
@@ -27,18 +13,44 @@
             },
             "files": {
                 "config/routes/nelmio_api_doc.yaml": {
-                    "contents": "NelmioApiDocBundle:\n    resource: \"@NelmioApiDocBundle/Resources/config/routing.yml\"\n    prefix:   /api/doc\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "NelmioApiDocBundle:",
+                        "    resource: \"@NelmioApiDocBundle/Resources/config/routing.yml\"",
+                        "    prefix:   /api/doc",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/nelmio_api_doc.yaml": {
-                    "contents": "#nelmio_api_doc:\n#    exclude_sections:     []\n#    default_sections_opened:  true\n#    motd:\n#        template:             'NelmioApiDocBundle::Components/motd.html.twig'\n#    request_listener:\n#        enabled:              true\n#        parameter:            _doc\n#    swagger:\n#        api_base_path:        /api\n#        swagger_version:      '1.2'\n#        api_version:          '0.1'\n#        info:\n#            title:                Symfony2\n#            description:          'My awesome Symfony2 app!'\n#            TermsOfServiceUrl:    null\n#            contact:              null\n#            license:              null\n#            licenseUrl:           null\n#    cache:\n#        enabled:              false\n#        file:                 '%kernel.cache_dir%/api-doc.cache'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "#nelmio_api_doc:",
+                        "#    exclude_sections:     []",
+                        "#    default_sections_opened:  true",
+                        "#    motd:",
+                        "#        template:             'NelmioApiDocBundle::Components/motd.html.twig'",
+                        "#    request_listener:",
+                        "#        enabled:              true",
+                        "#        parameter:            _doc",
+                        "#    swagger:",
+                        "#        api_base_path:        /api",
+                        "#        swagger_version:      '1.2'",
+                        "#        api_version:          '0.1'",
+                        "#        info:",
+                        "#            title:                Symfony2",
+                        "#            description:          'My awesome Symfony2 app!'",
+                        "#            TermsOfServiceUrl:    null",
+                        "#            contact:              null",
+                        "#            license:              null",
+                        "#            licenseUrl:           null",
+                        "#    cache:",
+                        "#        enabled:              false",
+                        "#        file:                 '%kernel.cache_dir%/api-doc.cache'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "nelmio/api-doc-bundle:2.13@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "d13bb99357ebcd2ffb6fe808a64961f5bc1c7546"
         }
     }
 }

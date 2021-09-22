@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "artprima/prometheus-metrics-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "a07f1cab0b63419f2153b744a254d9d6c3d732e9"
-            }
-        }
-    },
     "manifests": {
         "artprima/prometheus-metrics-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "artprima/prometheus-metrics-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Artprima\\PrometheusMetricsBundle\\ArtprimaPrometheusMetricsBundle": [
@@ -27,23 +13,35 @@
             },
             "files": {
                 "config/routes/metrics.yaml": {
-                    "contents": "app_metrics:\n    resource: '@ArtprimaPrometheusMetricsBundle/Resources/config/routing.xml'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "app_metrics:",
+                        "    resource: '@ArtprimaPrometheusMetricsBundle/Resources/config/routing.xml'",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/test/prometheus_metrics.yaml": {
-                    "contents": "artprima_prometheus_metrics:\n    type: in_memory\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "artprima_prometheus_metrics:",
+                        "    type: in_memory",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/prometheus_metrics.yaml": {
-                    "contents": "artprima_prometheus_metrics:\n    namespace: myapp\n    type: apcu\n    ignored_routes:\n    - prometheus_bundle_prometheus\n    - _wdt\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "artprima_prometheus_metrics:",
+                        "    namespace: myapp",
+                        "    type: apcu",
+                        "    ignored_routes:",
+                        "    - prometheus_bundle_prometheus",
+                        "    - _wdt",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "artprima/prometheus-metrics-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "a07f1cab0b63419f2153b744a254d9d6c3d732e9"
         }
     }
 }

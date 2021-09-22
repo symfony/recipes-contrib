@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "nucleos/user-bundle": {
-            "version": "1.1",
-            "recipe": {
-                "repo": "1.1",
-                "branch": "master",
-                "version": "1.1",
-                "ref": "88cca294afe46854e805316dbcde52696c661ce6"
-            }
-        }
-    },
     "manifests": {
         "nucleos/user-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "nucleos/user-bundle",
-            "version": "1.1",
             "manifest": {
                 "bundles": {
                     "Nucleos\\UserBundle\\NucleosUserBundle": [
@@ -31,28 +17,75 @@
             },
             "files": {
                 "src/Entity/User/Group.php": {
-                    "contents": "<?php\n\ndeclare(strict_types=1);\n\nnamespace App\\Entity\\User;\n\nuse Nucleos\\UserBundle\\Model\\Group as BaseGroup;\n\nclass Group extends BaseGroup\n{\n    public function setId(string $id): void\n    {\n        $this->id = $id;\n    }\n}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "namespace App\\Entity\\User;",
+                        "",
+                        "use Nucleos\\UserBundle\\Model\\Group as BaseGroup;",
+                        "",
+                        "class Group extends BaseGroup",
+                        "{",
+                        "    public function setId(string $id): void",
+                        "    {",
+                        "        $this->id = $id;",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "src/Entity/User/User.php": {
-                    "contents": "<?php\n\ndeclare(strict_types=1);\n\nnamespace App\\Entity\\User;\n\nuse Nucleos\\UserBundle\\Model\\User as BaseUser;\n\n/**\n * @phpstan-extends User<\\Nucleos\\UserBundle\\Model\\GroupInterface>\n */\nclass User extends BaseUser\n{\n    public function setId(string $id): void\n    {\n        $this->id = $id;\n    }\n}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "namespace App\\Entity\\User;",
+                        "",
+                        "use Nucleos\\UserBundle\\Model\\User as BaseUser;",
+                        "",
+                        "/**",
+                        " * @phpstan-extends User<\\Nucleos\\UserBundle\\Model\\GroupInterface>",
+                        " */",
+                        "class User extends BaseUser",
+                        "{",
+                        "    public function setId(string $id): void",
+                        "    {",
+                        "        $this->id = $id;",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/routes/nucleos_user.yaml": {
-                    "contents": "nucleos_user:\n    resource: \"@NucleosUserBundle/Resources/config/routing/all.xml\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "nucleos_user:",
+                        "    resource: \"@NucleosUserBundle/Resources/config/routing/all.xml\"",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/nucleos_user.yaml": {
-                    "contents": "nucleos_user:\n    firewall_name: main\n\n    from_email: '%env(MAIL_SENDER)%'\n\n    user_class: 'App\\Entity\\User\\User'\n\n    group:\n        group_class: 'App\\Entity\\User\\Group'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "nucleos_user:",
+                        "    firewall_name: main",
+                        "",
+                        "    from_email: '%env(MAIL_SENDER)%'",
+                        "",
+                        "    user_class: 'App\\Entity\\User\\User'",
+                        "",
+                        "    group:",
+                        "        group_class: 'App\\Entity\\User\\Group'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "nucleos/user-bundle:1.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "88cca294afe46854e805316dbcde52696c661ce6"
         }
     }
 }

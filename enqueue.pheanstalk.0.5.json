@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "enqueue/pheanstalk": {
-            "version": "0.5",
-            "recipe": {
-                "repo": "0.5",
-                "branch": "master",
-                "version": "0.5",
-                "ref": "27c30e240fc87e8f8f71a3139ca5099860426d61"
-            }
-        }
-    },
     "manifests": {
         "enqueue/pheanstalk": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "enqueue/pheanstalk",
-            "version": "0.5",
             "manifest": {
                 "post-install-output": [
                     "  * Configure <comment>ENQUEUE_DSN=beanstalk://example:5555</comment>",
@@ -25,8 +11,7 @@
                 ]
             },
             "files": [],
-            "origin": "enqueue/pheanstalk:0.5@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "27c30e240fc87e8f8f71a3139ca5099860426d61"
         }
     }
 }

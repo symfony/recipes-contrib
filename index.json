@@ -1545,8 +1545,11 @@
         ]
     },
     "versions": [],
-    "git_url": "https://github.com/symfony/recipes-contrib.git",
-    "tree_template": "https://github.com/symfony/recipes-contrib/tree/{tree}/{package}/{version}",
-    "recipe_template": "https://api.github.com/repos/symfony/recipes-contrib/contents/{package_dotted}.{version}.json?ref=flex/main",
-    "is_contrib": true
+    "branch": "master",
+    "is_contrib": true,
+    "_links": {
+        "repository": "github.com/symfony/recipes-contrib",
+        "origin_template": "{package}:{$version}@github.com/symfony/recipes-contrib:master",
+        "recipe_template": "https://api.github.com/repos/symfony/recipes-contrib/contents/{package_dotted}.{version}.json?ref=flex/main"
+    }
 }

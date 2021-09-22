@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "adback/adback-sdk-php-symfony": {
-            "version": "2.4",
-            "recipe": {
-                "repo": "2.4",
-                "branch": "master",
-                "version": "2.4",
-                "ref": "e654c55d2ccb2061d42e6c31c6a7799ca4526fd1"
-            }
-        }
-    },
     "manifests": {
         "adback/adback-sdk-php-symfony": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "adback/adback-sdk-php-symfony",
-            "version": "2.4",
             "manifest": {
                 "bundles": {
                     "Adback\\ApiClientBundle\\AdbackApiClientBundle": [
@@ -30,13 +16,15 @@
             },
             "files": {
                 "config/packages/adback_sdk_php.yaml": {
-                    "contents": "adback_api_client:\n    access_token: \"%env(ADBACK_API_CLIENT_ACCESS_TOKEN)%\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "adback_api_client:",
+                        "    access_token: \"%env(ADBACK_API_CLIENT_ACCESS_TOKEN)%\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "adback/adback-sdk-php-symfony:2.4@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "e654c55d2ccb2061d42e6c31c6a7799ca4526fd1"
         }
     }
 }

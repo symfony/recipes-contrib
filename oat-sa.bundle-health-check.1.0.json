@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "oat-sa/bundle-health-check": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "003ae282d7649c68a650298f21f410067f131d08"
-            }
-        }
-    },
     "manifests": {
         "oat-sa/bundle-health-check": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "oat-sa/bundle-health-check",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "OAT\\Bundle\\HealthCheckBundle\\HealthCheckBundle": [
@@ -32,13 +18,18 @@
             },
             "files": {
                 "config/routes/health_check.yaml": {
-                    "contents": "health_check_check:\n    resource: '@HealthCheckBundle/Resources/config/routing/health_check_check.yaml'\n\nhealth_check_ping:\n    resource: '@HealthCheckBundle/Resources/config/routing/health_check_ping.yaml'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "health_check_check:",
+                        "    resource: '@HealthCheckBundle/Resources/config/routing/health_check_check.yaml'",
+                        "",
+                        "health_check_ping:",
+                        "    resource: '@HealthCheckBundle/Resources/config/routing/health_check_ping.yaml'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "oat-sa/bundle-health-check:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "003ae282d7649c68a650298f21f410067f131d08"
         }
     }
 }

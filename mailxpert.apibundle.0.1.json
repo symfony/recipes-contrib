@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "mailxpert/apibundle": {
-            "version": "0.1",
-            "recipe": {
-                "repo": "0.1",
-                "branch": "master",
-                "version": "0.1",
-                "ref": "c5ebe490e51efb3c4397ab64207845a36cf209b0"
-            }
-        }
-    },
     "manifests": {
         "mailxpert/apibundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "mailxpert/apibundle",
-            "version": "0.1",
             "manifest": {
                 "bundles": {
                     "Mailxpert\\APIBundle\\MailxpertAPIBundle": [
@@ -32,23 +18,54 @@
             },
             "files": {
                 "src/Entity/AccessToken.php": {
-                    "contents": "<?php\n\nnamespace App\\Entity;\n\nuse Mailxpert\\APIBundle\\Entity\\AccessToken as BaseAccessToken;\nuse Doctrine\\ORM\\Mapping as ORM;\n\n/**\n * @ORM\\Entity\n * @ORM\\Table(name=\"mx_access_token\")\n */\nclass AccessToken extends BaseAccessToken\n{\n    /**\n     * @ORM\\Id\n     * @ORM\\Column(type=\"integer\")\n     * @ORM\\GeneratedValue(strategy=\"AUTO\")\n     */\n    protected $id;\n}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Mailxpert\\APIBundle\\Entity\\AccessToken as BaseAccessToken;",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity",
+                        " * @ORM\\Table(name=\"mx_access_token\")",
+                        " */",
+                        "class AccessToken extends BaseAccessToken",
+                        "{",
+                        "    /**",
+                        "     * @ORM\\Id",
+                        "     * @ORM\\Column(type=\"integer\")",
+                        "     * @ORM\\GeneratedValue(strategy=\"AUTO\")",
+                        "     */",
+                        "    protected $id;",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/routes/mailxpert_apibundle.yaml": {
-                    "contents": "mx_api:\n    resource: '@MailxpertAPIBundle/Resources/config/routing.xml'\n    type: xml\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "mx_api:",
+                        "    resource: '@MailxpertAPIBundle/Resources/config/routing.xml'",
+                        "    type: xml",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/mailxpert_apibundle.yaml": {
-                    "contents": "mailxpert_api:\n    access_token_class: App\\Entity\\AccessToken\n    oauth:\n        client_id: '%env(MAILXPERT_CLIENT_ID)%'\n        client_secret: '%env(MAILXPERT_CLIENT_SECRET)%'\n        redirect_url: 'http://example.com/mx/oauth/code'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "mailxpert_api:",
+                        "    access_token_class: App\\Entity\\AccessToken",
+                        "    oauth:",
+                        "        client_id: '%env(MAILXPERT_CLIENT_ID)%'",
+                        "        client_secret: '%env(MAILXPERT_CLIENT_SECRET)%'",
+                        "        redirect_url: 'http://example.com/mx/oauth/code'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "mailxpert/apibundle:0.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "c5ebe490e51efb3c4397ab64207845a36cf209b0"
         }
     }
 }

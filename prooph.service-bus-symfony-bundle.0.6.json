@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "prooph/service-bus-symfony-bundle": {
-            "version": "0.6",
-            "recipe": {
-                "repo": "0.6",
-                "branch": "master",
-                "version": "0.6",
-                "ref": "713463411dc8e247b2827ddee092be300716e055"
-            }
-        }
-    },
     "manifests": {
         "prooph/service-bus-symfony-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "prooph/service-bus-symfony-bundle",
-            "version": "0.6",
             "manifest": {
                 "bundles": {
                     "Prooph\\Bundle\\ServiceBus\\ProophServiceBusBundle": [
@@ -34,13 +20,26 @@
             },
             "files": {
                 "config/packages/prooph_service_bus.yaml": {
-                    "contents": "prooph_service_bus:\n    command_buses:\n        default_command_bus: null\n    event_buses:\n        default_event_bus: null\n    query_buses:\n        default_query_bus: null\n\nservices:\n    _defaults:\n        public: false\n\n    Prooph\\ServiceBus\\CommandBus: '@prooph_service_bus.default_command_bus'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "prooph_service_bus:",
+                        "    command_buses:",
+                        "        default_command_bus: null",
+                        "    event_buses:",
+                        "        default_event_bus: null",
+                        "    query_buses:",
+                        "        default_query_bus: null",
+                        "",
+                        "services:",
+                        "    _defaults:",
+                        "        public: false",
+                        "",
+                        "    Prooph\\ServiceBus\\CommandBus: '@prooph_service_bus.default_command_bus'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "prooph/service-bus-symfony-bundle:0.6@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "713463411dc8e247b2827ddee092be300716e055"
         }
     }
 }

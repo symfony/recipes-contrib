@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "botjaeger/nexmo-bundle": {
-            "version": "0.5",
-            "recipe": {
-                "repo": "0.5",
-                "branch": "master",
-                "version": "0.5",
-                "ref": "4e4625779b88a951a05b32f0bc243869f84d8b84"
-            }
-        }
-    },
     "manifests": {
         "botjaeger/nexmo-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "botjaeger/nexmo-bundle",
-            "version": "0.5",
             "manifest": {
                 "bundles": {
                     "Botjaeger\\NexmoBundle\\BotjaegerNexmoBundle": [
@@ -32,13 +18,17 @@
             },
             "files": {
                 "config/packages/botjaeger_nexmo.yaml": {
-                    "contents": "botjaeger_nexmo:\n    api_key: \"%env(BOTJAEGER_NEXMO_API_KEY)%\"\n    api_secret: \"%env(BOTJAEGER_NEXMO_API_SECRET)%\"\n    api_brand: \"%env(BOTJAEGER_NEXMO_API_BRAND)%\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "botjaeger_nexmo:",
+                        "    api_key: \"%env(BOTJAEGER_NEXMO_API_KEY)%\"",
+                        "    api_secret: \"%env(BOTJAEGER_NEXMO_API_SECRET)%\"",
+                        "    api_brand: \"%env(BOTJAEGER_NEXMO_API_BRAND)%\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "botjaeger/nexmo-bundle:0.5@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "4e4625779b88a951a05b32f0bc243869f84d8b84"
         }
     }
 }

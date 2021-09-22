@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "doctrine/mongodb-odm-bundle": {
-            "version": "3.3",
-            "recipe": {
-                "repo": "3.3",
-                "branch": "master",
-                "version": "3.3",
-                "ref": "1fd8598bf42227a1c8905edd32f640e4c5d15eff"
-            }
-        }
-    },
     "manifests": {
         "doctrine/mongodb-odm-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "doctrine/mongodb-odm-bundle",
-            "version": "3.3",
             "manifest": {
                 "bundles": {
                     "Doctrine\\Bundle\\MongoDBBundle\\DoctrineMongoDBBundle": [
@@ -36,23 +22,64 @@
             },
             "files": {
                 "src/Document/.gitignore": {
-                    "contents": "",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/doctrine_mongodb.yaml": {
-                    "contents": "doctrine_mongodb:\n    auto_generate_proxy_classes: true\n    auto_generate_hydrator_classes: true\n    connections:\n        default:\n            server: '%env(resolve:MONGODB_URL)%'\n            options: {}\n    default_database: '%env(resolve:MONGODB_DB)%'\n    document_managers:\n        default:\n            auto_mapping: true\n            mappings:\n                App:\n                    is_bundle: false\n                    type: annotation\n                    dir: '%kernel.project_dir%/src/Document'\n                    prefix: 'App\\Document'\n                    alias: App\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "doctrine_mongodb:",
+                        "    auto_generate_proxy_classes: true",
+                        "    auto_generate_hydrator_classes: true",
+                        "    connections:",
+                        "        default:",
+                        "            server: '%env(resolve:MONGODB_URL)%'",
+                        "            options: {}",
+                        "    default_database: '%env(resolve:MONGODB_DB)%'",
+                        "    document_managers:",
+                        "        default:",
+                        "            auto_mapping: true",
+                        "            mappings:",
+                        "                App:",
+                        "                    is_bundle: false",
+                        "                    type: annotation",
+                        "                    dir: '%kernel.project_dir%/src/Document'",
+                        "                    prefix: 'App\\Document'",
+                        "                    alias: App",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/prod/doctrine_mongodb.yaml": {
-                    "contents": "doctrine_mongodb:\n    auto_generate_proxy_classes: false\n    auto_generate_hydrator_classes: false\n    document_managers:\n        default:\n            metadata_cache_driver:\n                type: service\n                id: doctrine_mongodb.system_cache_provider\n\nservices:\n    doctrine_mongodb.system_cache_provider:\n        class: Symfony\\Component\\Cache\\DoctrineProvider\n        public: false\n        arguments:\n            - '@doctrine_mongodb.system_cache_pool'\n\nframework:\n    cache:\n        pools:\n            doctrine_mongodb.system_cache_pool:\n                adapter: cache.system\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "doctrine_mongodb:",
+                        "    auto_generate_proxy_classes: false",
+                        "    auto_generate_hydrator_classes: false",
+                        "    document_managers:",
+                        "        default:",
+                        "            metadata_cache_driver:",
+                        "                type: service",
+                        "                id: doctrine_mongodb.system_cache_provider",
+                        "",
+                        "services:",
+                        "    doctrine_mongodb.system_cache_provider:",
+                        "        class: Symfony\\Component\\Cache\\DoctrineProvider",
+                        "        public: false",
+                        "        arguments:",
+                        "            - '@doctrine_mongodb.system_cache_pool'",
+                        "",
+                        "framework:",
+                        "    cache:",
+                        "        pools:",
+                        "            doctrine_mongodb.system_cache_pool:",
+                        "                adapter: cache.system",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "doctrine/mongodb-odm-bundle:3.3@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "1fd8598bf42227a1c8905edd32f640e4c5d15eff"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "kunstmaan/translator-bundle": {
-            "version": "5.2",
-            "recipe": {
-                "repo": "5.2",
-                "branch": "master",
-                "version": "5.2",
-                "ref": "91568addc2273da9b3675848b3e1b62e4cf64af8"
-            }
-        }
-    },
     "manifests": {
         "kunstmaan/translator-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "kunstmaan/translator-bundle",
-            "version": "5.2",
             "manifest": {
                 "bundles": {
                     "Kunstmaan\\TranslatorBundle\\KunstmaanTranslatorBundle": [
@@ -27,18 +13,29 @@
             },
             "files": {
                 "config/routes/kunstmaan_translator.yaml": {
-                    "contents": "KunstmaanTranslatorBundle:\n    resource: \"@KunstmaanTranslatorBundle/Resources/config/routing.yml\"\n    # If your site is not multi language, remove the \"{_locale}/\" part of prefix and requirements\n    prefix:   /{_locale}/\n    requirements:\n        _locale: \"%kunstmaan_admin.required_locales%\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "KunstmaanTranslatorBundle:",
+                        "    resource: \"@KunstmaanTranslatorBundle/Resources/config/routing.yml\"",
+                        "    # If your site is not multi language, remove the \"{_locale}/\" part of prefix and requirements",
+                        "    prefix:   /{_locale}/",
+                        "    requirements:",
+                        "        _locale: \"%kunstmaan_admin.required_locales%\"",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/kunstmaan_translator.yaml": {
-                    "contents": "kunstmaan_translator:\n    enabled: true\n    # Add your preferred locales here\n    managed_locales: ['nl', 'en', 'de', 'fr']\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "kunstmaan_translator:",
+                        "    enabled: true",
+                        "    # Add your preferred locales here",
+                        "    managed_locales: ['nl', 'en', 'de', 'fr']",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "kunstmaan/translator-bundle:5.2@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "91568addc2273da9b3675848b3e1b62e4cf64af8"
         }
     }
 }

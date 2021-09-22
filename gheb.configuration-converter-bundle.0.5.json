@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "gheb/configuration-converter-bundle": {
-            "version": "0.5",
-            "recipe": {
-                "repo": "0.5",
-                "branch": "master",
-                "version": "0.5",
-                "ref": "08c8225aa65d8adce67867b2cbe20e941feeca77"
-            }
-        }
-    },
     "manifests": {
         "gheb/configuration-converter-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "gheb/configuration-converter-bundle",
-            "version": "0.5",
             "manifest": {
                 "bundles": {
                     "ConfigurationConverter\\ConfigurationConverterBundle": [
@@ -34,13 +20,15 @@
             },
             "files": {
                 "config/packages/configuration_converter.yaml": {
-                    "contents": "configuration_converter:\n    api_platform_default_export_dir: '%kernel.project_dir%/config/packages/api-platform/' #(default)\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "configuration_converter:",
+                        "    api_platform_default_export_dir: '%kernel.project_dir%/config/packages/api-platform/' #(default)",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "gheb/configuration-converter-bundle:0.5@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "08c8225aa65d8adce67867b2cbe20e941feeca77"
         }
     }
 }

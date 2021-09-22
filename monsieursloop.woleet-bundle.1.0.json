@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "monsieursloop/woleet-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "888c311564e370f4f61c445cfa73b836a28b4776"
-            }
-        }
-    },
     "manifests": {
         "monsieursloop/woleet-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "monsieursloop/woleet-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "MonsieurSloop\\Bundle\\WoleetBundle\\MonsieurSloopWoleetBundle": [
@@ -27,13 +13,19 @@
             },
             "files": {
                 "config/packages/monsieur_sloop_woleet.yaml": {
-                    "contents": "monsieur_sloop_woleet:\n    #API KEY\n    api_key: \"YOUR_API_KEY\"\n    #API CALLBACK KEY\n    api_callback_key: \"YOUR_API_CALLBACK_KEY\"\n\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "monsieur_sloop_woleet:",
+                        "    #API KEY",
+                        "    api_key: \"YOUR_API_KEY\"",
+                        "    #API CALLBACK KEY",
+                        "    api_callback_key: \"YOUR_API_CALLBACK_KEY\"",
+                        "",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "monsieursloop/woleet-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "888c311564e370f4f61c445cfa73b836a28b4776"
         }
     }
 }

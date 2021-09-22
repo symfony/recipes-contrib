@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "ywh/doctrine-encryption-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "3c129c9082068df1aa207304589e504152afaea4"
-            }
-        }
-    },
     "manifests": {
         "ywh/doctrine-encryption-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "ywh/doctrine-encryption-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "YWH\\DoctrineEncryptionBundle\\YWHDoctrineEncryptionBundle": [
@@ -33,13 +19,16 @@
             },
             "files": {
                 "config/packages/ywh_doctrine_encryption.yaml": {
-                    "contents": "ywh_doctrine_encryption:\n    password: '%env(ENCRYPTION_PASSWORD)%'\n    key: '%env(ENCRYPTION_KEY)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "ywh_doctrine_encryption:",
+                        "    password: '%env(ENCRYPTION_PASSWORD)%'",
+                        "    key: '%env(ENCRYPTION_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "ywh/doctrine-encryption-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "3c129c9082068df1aa207304589e504152afaea4"
         }
     }
 }

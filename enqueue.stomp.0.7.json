@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "enqueue/stomp": {
-            "version": "0.7",
-            "recipe": {
-                "repo": "0.7",
-                "branch": "master",
-                "version": "0.7",
-                "ref": "508c75437a4e05f140d3b51df0a7869451e8ef76"
-            }
-        }
-    },
     "manifests": {
         "enqueue/stomp": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "enqueue/stomp",
-            "version": "0.7",
             "manifest": {
                 "post-install-output": [
                     "  * Configure <comment>ENQUEUE_DSN=stomp://example.com:1000?login=theLogin</comment>",
@@ -25,8 +11,7 @@
                 ]
             },
             "files": [],
-            "origin": "enqueue/stomp:0.7@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "508c75437a4e05f140d3b51df0a7869451e8ef76"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "maksze/telemetry-bundle": {
-            "version": "0.4",
-            "recipe": {
-                "repo": "0.4",
-                "branch": "master",
-                "version": "0.4",
-                "ref": "2f5d98fd0e0ef44b7dd1f71d1681bfe6624894e0"
-            }
-        }
-    },
     "manifests": {
         "maksze/telemetry-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "maksze/telemetry-bundle",
-            "version": "0.4",
             "manifest": {
                 "bundles": {
                     "MaksZe\\TelemetryBundle\\MaksZeTelemetryBundle": [
@@ -33,18 +19,36 @@
             },
             "files": {
                 "config/routes/maksze_telemetry.yaml": {
-                    "contents": "_maksze_telemetry:\n    resource: '@MaksZeTelemetryBundle/Resources/config/routes.xml'\n    prefix: /\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "_maksze_telemetry:",
+                        "    resource: '@MaksZeTelemetryBundle/Resources/config/routes.xml'",
+                        "    prefix: /",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/maksze_telemetry.yaml": {
-                    "contents": "# Configuration file for the MaksZeTelemetry bundle\n#\n# For more information about the bundle settings visit:\n# https://github.com/maksze/MaksZeTelemetryBundle/blob/master/README.md\n\nmaksze_telemetry:\n    yandex_metrika:\n        #- {id: '%env(YANDEX_METRIKA_ID)%'}\n    yandex_webmaster:\n        #- {id: '%env(YANDEX_WEBMASTER_ID)%'}\n    google_search_console:\n        #- {id: '%env(GOOGLE_SEARCH_CONSOLE_ID)%'}\n    google_analytics:\n        #- {id: '%env(GOOGLE_ANALYTICS_ID)%'}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# Configuration file for the MaksZeTelemetry bundle",
+                        "#",
+                        "# For more information about the bundle settings visit:",
+                        "# https://github.com/maksze/MaksZeTelemetryBundle/blob/master/README.md",
+                        "",
+                        "maksze_telemetry:",
+                        "    yandex_metrika:",
+                        "        #- {id: '%env(YANDEX_METRIKA_ID)%'}",
+                        "    yandex_webmaster:",
+                        "        #- {id: '%env(YANDEX_WEBMASTER_ID)%'}",
+                        "    google_search_console:",
+                        "        #- {id: '%env(GOOGLE_SEARCH_CONSOLE_ID)%'}",
+                        "    google_analytics:",
+                        "        #- {id: '%env(GOOGLE_ANALYTICS_ID)%'}",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "maksze/telemetry-bundle:0.4@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "2f5d98fd0e0ef44b7dd1f71d1681bfe6624894e0"
         }
     }
 }

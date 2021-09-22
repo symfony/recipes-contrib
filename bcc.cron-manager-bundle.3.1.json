@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "bcc/cron-manager-bundle": {
-            "version": "3.1",
-            "recipe": {
-                "repo": "3.1",
-                "branch": "master",
-                "version": "3.1",
-                "ref": "500a1a7b5da7d1a322335f80169b71dcfcd09e27"
-            }
-        }
-    },
     "manifests": {
         "bcc/cron-manager-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "bcc/cron-manager-bundle",
-            "version": "3.1",
             "manifest": {
                 "bundles": {
                     "BCC\\CronManagerBundle\\BCCCronManagerBundle": [
@@ -34,13 +20,16 @@
             },
             "files": {
                 "config/routes/bcc_cron_manager_bundle.yaml": {
-                    "contents": "BCCCronManagerBundle:\n    resource: \"@BCCCronManagerBundle/Resources/config/routing.xml\"\n    prefix:   admin/cron-manager\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "BCCCronManagerBundle:",
+                        "    resource: \"@BCCCronManagerBundle/Resources/config/routing.xml\"",
+                        "    prefix:   admin/cron-manager",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "bcc/cron-manager-bundle:3.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "500a1a7b5da7d1a322335f80169b71dcfcd09e27"
         }
     }
 }

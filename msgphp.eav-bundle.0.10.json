@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "msgphp/eav-bundle": {
-            "version": "0.10",
-            "recipe": {
-                "repo": "0.10",
-                "branch": "master",
-                "version": "0.10",
-                "ref": "71d362982856b2f7ddaf76d82e032e6746aab2ac"
-            }
-        }
-    },
     "manifests": {
         "msgphp/eav-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "msgphp/eav-bundle",
-            "version": "0.10",
             "manifest": {
                 "bundles": {
                     "MsgPhp\\EavBundle\\MsgPhpEavBundle": [
@@ -28,23 +14,83 @@
             },
             "files": {
                 "src/Entity/AttributeValue.php": {
-                    "contents": "<?php\n\nnamespace App\\Entity;\n\nuse Doctrine\\ORM\\Mapping as ORM;\nuse MsgPhp\\Eav\\AttributeValue as BaseAttributeValue;\nuse MsgPhp\\Eav\\AttributeValueId;\n\n/**\n * @ORM\\Entity()\n */\nclass AttributeValue extends BaseAttributeValue\n{\n    /** @ORM\\Id() @ORM\\GeneratedValue() @ORM\\Column(type=\"msgphp_attribute_value_id\", length=191) */\n    private $id;\n\n    public function __construct(AttributeValueId $id, Attribute $attribute, $value)\n    {\n        parent::__construct($attribute, $value);\n\n        $this->id = $id;\n    }\n\n    public function getId(): AttributeValueId\n    {\n        return $this->id;\n    }\n}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "use MsgPhp\\Eav\\AttributeValue as BaseAttributeValue;",
+                        "use MsgPhp\\Eav\\AttributeValueId;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity()",
+                        " */",
+                        "class AttributeValue extends BaseAttributeValue",
+                        "{",
+                        "    /** @ORM\\Id() @ORM\\GeneratedValue() @ORM\\Column(type=\"msgphp_attribute_value_id\", length=191) */",
+                        "    private $id;",
+                        "",
+                        "    public function __construct(AttributeValueId $id, Attribute $attribute, $value)",
+                        "    {",
+                        "        parent::__construct($attribute, $value);",
+                        "",
+                        "        $this->id = $id;",
+                        "    }",
+                        "",
+                        "    public function getId(): AttributeValueId",
+                        "    {",
+                        "        return $this->id;",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "src/Entity/Attribute.php": {
-                    "contents": "<?php\n\nnamespace App\\Entity;\n\nuse Doctrine\\ORM\\Mapping as ORM;\nuse MsgPhp\\Eav\\Attribute as BaseAttribute;\nuse MsgPhp\\Eav\\AttributeId;\n\n/**\n * @ORM\\Entity()\n */\nclass Attribute extends BaseAttribute\n{\n    /** @ORM\\Id() @ORM\\GeneratedValue() @ORM\\Column(type=\"msgphp_attribute_id\", length=191) */\n    private $id;\n\n    public function __construct(AttributeId $id)\n    {\n        $this->id = $id;\n    }\n\n    public function getId(): AttributeId\n    {\n        return $this->id;\n    }\n}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "use MsgPhp\\Eav\\Attribute as BaseAttribute;",
+                        "use MsgPhp\\Eav\\AttributeId;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity()",
+                        " */",
+                        "class Attribute extends BaseAttribute",
+                        "{",
+                        "    /** @ORM\\Id() @ORM\\GeneratedValue() @ORM\\Column(type=\"msgphp_attribute_id\", length=191) */",
+                        "    private $id;",
+                        "",
+                        "    public function __construct(AttributeId $id)",
+                        "    {",
+                        "        $this->id = $id;",
+                        "    }",
+                        "",
+                        "    public function getId(): AttributeId",
+                        "    {",
+                        "        return $this->id;",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/msgphp_eav.yaml": {
-                    "contents": "msgphp_eav:\n    class_mapping:\n        MsgPhp\\Eav\\Attribute: App\\Entity\\Attribute\n        MsgPhp\\Eav\\AttributeValue: App\\Entity\\AttributeValue\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "msgphp_eav:",
+                        "    class_mapping:",
+                        "        MsgPhp\\Eav\\Attribute: App\\Entity\\Attribute",
+                        "        MsgPhp\\Eav\\AttributeValue: App\\Entity\\AttributeValue",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "msgphp/eav-bundle:0.10@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "71d362982856b2f7ddaf76d82e032e6746aab2ac"
         }
     }
 }

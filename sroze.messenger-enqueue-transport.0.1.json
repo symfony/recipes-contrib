@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "sroze/messenger-enqueue-transport": {
-            "version": "0.1",
-            "recipe": {
-                "repo": "0.1",
-                "branch": "master",
-                "version": "0.1",
-                "ref": "9a7119f609b576a30dbf03e4fe44212388e96ea1"
-            }
-        }
-    },
     "manifests": {
         "sroze/messenger-enqueue-transport": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "sroze/messenger-enqueue-transport",
-            "version": "0.1",
             "manifest": {
                 "bundles": {
                     "Enqueue\\MessengerAdapter\\Bundle\\EnqueueAdapterBundle": [
@@ -23,8 +9,7 @@
                 }
             },
             "files": [],
-            "origin": "sroze/messenger-enqueue-transport:0.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "9a7119f609b576a30dbf03e4fe44212388e96ea1"
         }
     }
 }

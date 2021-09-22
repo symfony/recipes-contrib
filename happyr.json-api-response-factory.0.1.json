@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "happyr/json-api-response-factory": {
-            "version": "0.1",
-            "recipe": {
-                "repo": "0.1",
-                "branch": "master",
-                "version": "0.1",
-                "ref": "161c8ce1d569658a9c720b55ada18de46561b29f"
-            }
-        }
-    },
     "manifests": {
         "happyr/json-api-response-factory": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "happyr/json-api-response-factory",
-            "version": "0.1",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -22,13 +8,24 @@
             },
             "files": {
                 "config/packages/happyr_json_api_response_factory.yaml": {
-                    "contents": "services:\n    Happyr\\JsonApiResponseFactory\\ResponseFactory:\n        arguments: ['@happyr.fractal.manager']\n\n    happyr.fractal.manager:\n        class: League\\Fractal\\Manager\n        calls:\n            - [setSerializer, ['@happyr.fractal.json_api_serializer']]\n\n    happyr.fractal.json_api_serializer:\n        class: League\\Fractal\\Serializer\\JsonApiSerializer\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "services:",
+                        "    Happyr\\JsonApiResponseFactory\\ResponseFactory:",
+                        "        arguments: ['@happyr.fractal.manager']",
+                        "",
+                        "    happyr.fractal.manager:",
+                        "        class: League\\Fractal\\Manager",
+                        "        calls:",
+                        "            - [setSerializer, ['@happyr.fractal.json_api_serializer']]",
+                        "",
+                        "    happyr.fractal.json_api_serializer:",
+                        "        class: League\\Fractal\\Serializer\\JsonApiSerializer",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "happyr/json-api-response-factory:0.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "161c8ce1d569658a9c720b55ada18de46561b29f"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "disjfa/mozaic-bundle": {
-            "version": "0.1",
-            "recipe": {
-                "repo": "0.1",
-                "branch": "master",
-                "version": "0.1",
-                "ref": "189106e738b9e6da8d44e845559e2415bdea06e4"
-            }
-        }
-    },
     "manifests": {
         "disjfa/mozaic-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "disjfa/mozaic-bundle",
-            "version": "0.1",
             "manifest": {
                 "bundles": {
                     "Disjfa\\MozaicBundle\\DisjfaMozaicBundle": [
@@ -39,18 +25,26 @@
             },
             "files": {
                 "config/routes/disjfa_mozaic.yaml": {
-                    "contents": "disjfa_mozaic:\n    resource: '@DisjfaMozaicBundle/Controller/'\n    type:     annotation\n",
-                    "executable": true,
-                    "encoding": ""
+                    "contents": [
+                        "disjfa_mozaic:",
+                        "    resource: '@DisjfaMozaicBundle/Controller/'",
+                        "    type:     annotation",
+                        ""
+                    ],
+                    "executable": true
                 },
                 "config/packages/disjfa_mozaic.yaml": {
-                    "contents": "disjfa_mozaic:\n    unsplash:\n        application_id: '%env(resolve:UNSPLASH_APPLICATION_ID)%'\n        secret: '%env(resolve:UNSPLASH_APPLICATION_SECRET)%'\n",
-                    "executable": true,
-                    "encoding": ""
+                    "contents": [
+                        "disjfa_mozaic:",
+                        "    unsplash:",
+                        "        application_id: '%env(resolve:UNSPLASH_APPLICATION_ID)%'",
+                        "        secret: '%env(resolve:UNSPLASH_APPLICATION_SECRET)%'",
+                        ""
+                    ],
+                    "executable": true
                 }
             },
-            "origin": "disjfa/mozaic-bundle:0.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "189106e738b9e6da8d44e845559e2415bdea06e4"
         }
     }
 }

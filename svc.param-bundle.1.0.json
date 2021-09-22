@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "svc/param-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "0e04715ced3d8fe1a816e49f1b043728dac36af0"
-            }
-        }
-    },
     "manifests": {
         "svc/param-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "svc/param-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Svc\\ParamBundle\\SvcParamBundle": [
@@ -30,13 +16,16 @@
             },
             "files": {
                 "config/routes/svc_param.yaml": {
-                    "contents": "_svc_param:\n    resource: '@SvcParamBundle/src/Resources/config/routes.xml'\n    prefix: /svc-param/{_locale}\n",
-                    "executable": true,
-                    "encoding": ""
+                    "contents": [
+                        "_svc_param:",
+                        "    resource: '@SvcParamBundle/src/Resources/config/routes.xml'",
+                        "    prefix: /svc-param/{_locale}",
+                        ""
+                    ],
+                    "executable": true
                 }
             },
-            "origin": "svc/param-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "0e04715ced3d8fe1a816e49f1b043728dac36af0"
         }
     }
 }

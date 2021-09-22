@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "broadway/event-store-dbal": {
-            "version": "0.1",
-            "recipe": {
-                "repo": "0.1",
-                "branch": "master",
-                "version": "0.1",
-                "ref": "59b36f95fafbf4327a57c2493e02fc57d8c8e6ad"
-            }
-        }
-    },
     "manifests": {
         "broadway/event-store-dbal": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "broadway/event-store-dbal",
-            "version": "0.1",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -22,13 +8,20 @@
             },
             "files": {
                 "config/packages/broadway_event_store_dbal.yaml": {
-                    "contents": "broadway:\n    event_store:\n        dbal:\n            enabled: true\n            connection: 'default'\n            table: 'events'\n            use_binary: true\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "broadway:",
+                        "    event_store:",
+                        "        dbal:",
+                        "            enabled: true",
+                        "            connection: 'default'",
+                        "            table: 'events'",
+                        "            use_binary: true",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "broadway/event-store-dbal:0.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "59b36f95fafbf4327a57c2493e02fc57d8c8e6ad"
         }
     }
 }

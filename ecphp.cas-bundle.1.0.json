@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "ecphp/cas-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "11ab180a0614a2cf2c76a732f719a04484f2ad74"
-            }
-        }
-    },
     "manifests": {
         "ecphp/cas-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "ecphp/cas-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "EcPhp\\CasBundle\\CasBundle": [
@@ -26,8 +12,7 @@
                 }
             },
             "files": [],
-            "origin": "ecphp/cas-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "11ab180a0614a2cf2c76a732f719a04484f2ad74"
         }
     }
 }

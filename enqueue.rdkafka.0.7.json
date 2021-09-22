@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "enqueue/rdkafka": {
-            "version": "0.7",
-            "recipe": {
-                "repo": "0.7",
-                "branch": "master",
-                "version": "0.7",
-                "ref": "b3fb412d2190f6b50bc00e4c4835e9e07eb8f75f"
-            }
-        }
-    },
     "manifests": {
         "enqueue/rdkafka": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "enqueue/rdkafka",
-            "version": "0.7",
             "manifest": {
                 "post-install-output": [
                     "  * Configure <comment>ENQUEUE_DSN=rdkafka://</comment>",
@@ -25,8 +11,7 @@
                 ]
             },
             "files": [],
-            "origin": "enqueue/rdkafka:0.7@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "b3fb412d2190f6b50bc00e4c4835e9e07eb8f75f"
         }
     }
 }

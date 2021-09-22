@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "ravenflux/sort-functions": {
-            "version": "3.0",
-            "recipe": {
-                "repo": "3.0",
-                "branch": "master",
-                "version": "3.0",
-                "ref": "f9f2364faad231fc2150b9f69c2f696c371ed19e"
-            }
-        }
-    },
     "manifests": {
         "ravenflux/sort-functions": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "ravenflux/sort-functions",
-            "version": "3.0",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -22,13 +8,19 @@
             },
             "files": {
                 "config/packages/ravenflux_sort_functions.yaml": {
-                    "contents": "services:\n    ravenflux.twig.extension.sort_functions:\n        class: RavenFlux\\Twig\\SortExtension\n        tags:\n            -\n                name: twig.extension\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "services:",
+                        "    ravenflux.twig.extension.sort_functions:",
+                        "        class: RavenFlux\\Twig\\SortExtension",
+                        "        tags:",
+                        "            -",
+                        "                name: twig.extension",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "ravenflux/sort-functions:3.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "f9f2364faad231fc2150b9f69c2f696c371ed19e"
         }
     }
 }

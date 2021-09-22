@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "qossmic/deptrac-shim": {
-            "version": "0.7",
-            "recipe": {
-                "repo": "0.7",
-                "branch": "master",
-                "version": "0.7",
-                "ref": "2d7d934257e33fd83c72f5da5b5b1393efa7e0c6"
-            }
-        }
-    },
     "manifests": {
         "qossmic/deptrac-shim": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "qossmic/deptrac-shim",
-            "version": "0.7",
             "manifest": {
                 "copy-from-recipe": {
                     "depfile.yaml": "depfile.yaml"
@@ -25,13 +11,42 @@
             },
             "files": {
                 "depfile.yaml": {
-                    "contents": "paths:\n    - ./src\nexclude_files:\n    - '#.*test.*#'\nlayers:\n    -\n        name: Controller\n        collectors:\n            -\n                type: className\n                regex: .*Controller.*\n    -\n        name: Repository\n        collectors:\n            -\n                type: className\n                regex: .*Repository.*\n    -\n        name: Service\n        collectors:\n            -\n                type: className\n                regex: .*Service.*\nruleset:\n    Controller:\n        - Service\n    Service:\n        - Repository\n    Repository:\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "paths:",
+                        "    - ./src",
+                        "exclude_files:",
+                        "    - '#.*test.*#'",
+                        "layers:",
+                        "    -",
+                        "        name: Controller",
+                        "        collectors:",
+                        "            -",
+                        "                type: className",
+                        "                regex: .*Controller.*",
+                        "    -",
+                        "        name: Repository",
+                        "        collectors:",
+                        "            -",
+                        "                type: className",
+                        "                regex: .*Repository.*",
+                        "    -",
+                        "        name: Service",
+                        "        collectors:",
+                        "            -",
+                        "                type: className",
+                        "                regex: .*Service.*",
+                        "ruleset:",
+                        "    Controller:",
+                        "        - Service",
+                        "    Service:",
+                        "        - Repository",
+                        "    Repository:",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "qossmic/deptrac-shim:0.7@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "2d7d934257e33fd83c72f5da5b5b1393efa7e0c6"
         }
     }
 }

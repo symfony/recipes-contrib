@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "akondas/symfony-consul-bundle": {
-            "version": "0.1",
-            "recipe": {
-                "repo": "0.1",
-                "branch": "master",
-                "version": "0.1",
-                "ref": "f70a218d2bb5225160db926d47b148c142312b31"
-            }
-        }
-    },
     "manifests": {
         "akondas/symfony-consul-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "akondas/symfony-consul-bundle",
-            "version": "0.1",
             "manifest": {
                 "bundles": {
                     "Akondas\\ConsulBundle\\ConsulBundle": [
@@ -33,18 +19,28 @@
             },
             "files": {
                 "config/routes/consul.yaml": {
-                    "contents": "consul_bundle:\n    resource: \"@ConsulBundle/Resources/config/routing.yml\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "consul_bundle:",
+                        "    resource: \"@ConsulBundle/Resources/config/routing.yml\"",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/consul.yaml": {
-                    "contents": "consul:\n    service:\n        name: '%env(resolve:CONSUL_SERVICE_NAME)%'\n        host: '%env(resolve:CONSUL_SERVICE_HOST)%'\n        port: '%env(resolve:CONSUL_SERVICE_PORT)%'\n    client:\n        base_uri: '%env(resolve:CONSUL_CLIENT_BASE_URI)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "consul:",
+                        "    service:",
+                        "        name: '%env(resolve:CONSUL_SERVICE_NAME)%'",
+                        "        host: '%env(resolve:CONSUL_SERVICE_HOST)%'",
+                        "        port: '%env(resolve:CONSUL_SERVICE_PORT)%'",
+                        "    client:",
+                        "        base_uri: '%env(resolve:CONSUL_CLIENT_BASE_URI)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "akondas/symfony-consul-bundle:0.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "f70a218d2bb5225160db926d47b148c142312b31"
         }
     }
 }

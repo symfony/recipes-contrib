@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "redjanym/fcm-bundle": {
-            "version": "1.1",
-            "recipe": {
-                "repo": "1.1",
-                "branch": "master",
-                "version": "1.1",
-                "ref": "459fa76d53b57a5feb20ac8f9153f54bff9866b6"
-            }
-        }
-    },
     "manifests": {
         "redjanym/fcm-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "redjanym/fcm-bundle",
-            "version": "1.1",
             "manifest": {
                 "bundles": {
                     "RedjanYm\\FCMBundle\\RedjanYmFCMBundle": [
@@ -30,13 +16,15 @@
             },
             "files": {
                 "config/packages/redjan_ym_fcm.yaml": {
-                    "contents": "redjan_ym_fcm:\n    firebase_api_key: '%env(resolve:FCM_SERVER_KEY)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "redjan_ym_fcm:",
+                        "    firebase_api_key: '%env(resolve:FCM_SERVER_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "redjanym/fcm-bundle:1.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "459fa76d53b57a5feb20ac8f9153f54bff9866b6"
         }
     }
 }

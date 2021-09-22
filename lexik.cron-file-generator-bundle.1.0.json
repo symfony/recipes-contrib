@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "lexik/cron-file-generator-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "d3668cda50ed5c60ccc771c14fea75c1ab057d78"
-            }
-        }
-    },
     "manifests": {
         "lexik/cron-file-generator-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "lexik/cron-file-generator-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Lexik\\Bundle\\CronFileGeneratorBundle\\LexikCronFileGeneratorBundle": [
@@ -27,13 +13,26 @@
             },
             "files": {
                 "config/packages/lexik_cron_file_generator.yaml": {
-                    "contents": "# see https://github.com/lexik/LexikCronFileGeneratorBundle/blob/master/Resources/doc/index.md\nlexik_cron_file_generator:\n    env_available:                 # declare your env availables\n        - staging                    # example: staging, prod\n    user:\n        staging: 'project_staging'     # user for execute the cron\n    php_version: 'php7.2'\n    absolute_path:\n        staging: 'project_dir/bin/console'\n    output_path: '%kernel.cache_dir%/cron_test'  # filename will be cron_test\n    # crons configuration is optional but you need at least one for execute the command\n    # crons:\n    #    - { name: 'Send email', command: 'app:test', env: { staging: '* * * * *', prod: '* 5 * * *' } }\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# see https://github.com/lexik/LexikCronFileGeneratorBundle/blob/master/Resources/doc/index.md",
+                        "lexik_cron_file_generator:",
+                        "    env_available:                 # declare your env availables",
+                        "        - staging                    # example: staging, prod",
+                        "    user:",
+                        "        staging: 'project_staging'     # user for execute the cron",
+                        "    php_version: 'php7.2'",
+                        "    absolute_path:",
+                        "        staging: 'project_dir/bin/console'",
+                        "    output_path: '%kernel.cache_dir%/cron_test'  # filename will be cron_test",
+                        "    # crons configuration is optional but you need at least one for execute the command",
+                        "    # crons:",
+                        "    #    - { name: 'Send email', command: 'app:test', env: { staging: '* * * * *', prod: '* 5 * * *' } }",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "lexik/cron-file-generator-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "d3668cda50ed5c60ccc771c14fea75c1ab057d78"
         }
     }
 }

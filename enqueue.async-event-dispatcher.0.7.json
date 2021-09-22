@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "enqueue/async-event-dispatcher": {
-            "version": "0.7",
-            "recipe": {
-                "repo": "0.7",
-                "branch": "master",
-                "version": "0.7",
-                "ref": "9e937ccb79e08b978f91fb816d4e6d645813113a"
-            }
-        }
-    },
     "manifests": {
         "enqueue/async-event-dispatcher": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "enqueue/async-event-dispatcher",
-            "version": "0.7",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -22,13 +8,18 @@
             },
             "files": {
                 "config/packages/enqueue_async_event_dispatcher.yaml": {
-                    "contents": "enqueue:\n    async_events:\n        enabled: true\n        # if you'd like to send send messages onTerminate use spool_producer (it makes response time even lesser):\n        # spool_producer: true\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "enqueue:",
+                        "    async_events:",
+                        "        enabled: true",
+                        "        # if you'd like to send send messages onTerminate use spool_producer (it makes response time even lesser):",
+                        "        # spool_producer: true",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "enqueue/async-event-dispatcher:0.7@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "9e937ccb79e08b978f91fb816d4e6d645813113a"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "thecodingmachine/graphqlite-bundle": {
-            "version": "3.0",
-            "recipe": {
-                "repo": "3.0",
-                "branch": "master",
-                "version": "3.0",
-                "ref": "96ae19d02363f9b640bcad4291d7972e44aa64e4"
-            }
-        }
-    },
     "manifests": {
         "thecodingmachine/graphqlite-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "thecodingmachine/graphqlite-bundle",
-            "version": "3.0",
             "manifest": {
                 "bundles": {
                     "TheCodingMachine\\Graphqlite\\Bundle\\GraphqliteBundle": [
@@ -27,13 +13,19 @@
             },
             "files": {
                 "config/packages/graphqlite.yaml": {
-                    "contents": "# Read more about GraphQLite available options at: https://graphqlite.thecodingmachine.io/docs/symfony-bundle\ngraphqlite:\n    namespace:\n        controllers: App\\Controller\\\n        types:\n            - App\\\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# Read more about GraphQLite available options at: https://graphqlite.thecodingmachine.io/docs/symfony-bundle",
+                        "graphqlite:",
+                        "    namespace:",
+                        "        controllers: App\\Controller\\",
+                        "        types:",
+                        "            - App\\",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "thecodingmachine/graphqlite-bundle:3.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "96ae19d02363f9b640bcad4291d7972e44aa64e4"
         }
     }
 }

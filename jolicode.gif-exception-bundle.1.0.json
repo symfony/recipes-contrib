@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "jolicode/gif-exception-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "b3348dadb52ed0390e71ae1323caff9e86bbe7f1"
-            }
-        }
-    },
     "manifests": {
         "jolicode/gif-exception-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "jolicode/gif-exception-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Joli\\GifExceptionBundle\\GifExceptionBundle": [
@@ -24,8 +10,7 @@
                 }
             },
             "files": [],
-            "origin": "jolicode/gif-exception-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "b3348dadb52ed0390e71ae1323caff9e86bbe7f1"
         }
     }
 }

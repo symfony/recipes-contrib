@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "mediamonks/rest-api-bundle": {
-            "version": "3.0",
-            "recipe": {
-                "repo": "3.0",
-                "branch": "master",
-                "version": "3.0",
-                "ref": "794dac5ae364209f19ca7ac82e318b203b14ea70"
-            }
-        }
-    },
     "manifests": {
         "mediamonks/rest-api-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "mediamonks/rest-api-bundle",
-            "version": "3.0",
             "manifest": {
                 "bundles": {
                     "MediaMonks\\RestApiBundle\\MediaMonksRestApiBundle": [
@@ -27,13 +13,16 @@
             },
             "files": {
                 "config/packages/mediamonks_rest_api.yaml": {
-                    "contents": "mediamonks_rest_api:\n    request_matcher:\n        path: /api\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "mediamonks_rest_api:",
+                        "    request_matcher:",
+                        "        path: /api",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "mediamonks/rest-api-bundle:3.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "794dac5ae364209f19ca7ac82e318b203b14ea70"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "thecodingmachine/graphqlite-bundle": {
-            "version": "4.0",
-            "recipe": {
-                "repo": "4.0",
-                "branch": "master",
-                "version": "4.0",
-                "ref": "8aae303ca95671f95ef356b7034a2144ea4060ad"
-            }
-        }
-    },
     "manifests": {
         "thecodingmachine/graphqlite-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "thecodingmachine/graphqlite-bundle",
-            "version": "4.0",
             "manifest": {
                 "bundles": {
                     "TheCodingMachine\\Graphqlite\\Bundle\\GraphqliteBundle": [
@@ -31,8 +17,7 @@
                 ]
             },
             "files": [],
-            "origin": "thecodingmachine/graphqlite-bundle:4.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "8aae303ca95671f95ef356b7034a2144ea4060ad"
         }
     }
 }

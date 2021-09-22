@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "helios-ag/fm-elfinder-bundle": {
-            "version": "10.0",
-            "recipe": {
-                "repo": "10.0",
-                "branch": "master",
-                "version": "10.0",
-                "ref": "addd79a9903ee92664f4cff61eb6cdd1b95945e7"
-            }
-        }
-    },
     "manifests": {
         "helios-ag/fm-elfinder-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "helios-ag/fm-elfinder-bundle",
-            "version": "10.0",
             "manifest": {
                 "bundles": {
                     "FM\\ElfinderBundle\\FMElfinderBundle": [
@@ -30,18 +16,29 @@
             },
             "files": {
                 "config/routes/fm_elfinder.yaml": {
-                    "contents": "fm_elfinder:\n    resource: \"@FMElfinderBundle/Resources/config/routing.yaml\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "fm_elfinder:",
+                        "    resource: \"@FMElfinderBundle/Resources/config/routing.yaml\"",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/fm_elfinder.yaml": {
-                    "contents": "fm_elfinder:\n    instances:\n        default:\n            connector:\n                roots:\n                    uploads:\n                        driver: LocalFileSystem\n                        path: uploads\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "fm_elfinder:",
+                        "    instances:",
+                        "        default:",
+                        "            connector:",
+                        "                roots:",
+                        "                    uploads:",
+                        "                        driver: LocalFileSystem",
+                        "                        path: uploads",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "helios-ag/fm-elfinder-bundle:10.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "addd79a9903ee92664f4cff61eb6cdd1b95945e7"
         }
     }
 }

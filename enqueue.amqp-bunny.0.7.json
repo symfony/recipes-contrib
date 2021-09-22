@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "enqueue/amqp-bunny": {
-            "version": "0.7",
-            "recipe": {
-                "repo": "0.7",
-                "branch": "master",
-                "version": "0.7",
-                "ref": "fa1a9a0c5ad7a58ced6401f2b9d66d6078679715"
-            }
-        }
-    },
     "manifests": {
         "enqueue/amqp-bunny": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "enqueue/amqp-bunny",
-            "version": "0.7",
             "manifest": {
                 "post-install-output": [
                     "  * Configure <comment>ENQUEUE_DSN=amqp+bunny://guest:guest@localhost:5672/%2f</comment>",
@@ -25,8 +11,7 @@
                 ]
             },
             "files": [],
-            "origin": "enqueue/amqp-bunny:0.7@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "fa1a9a0c5ad7a58ced6401f2b9d66d6078679715"
         }
     }
 }

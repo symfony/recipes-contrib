@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "phpfastcache/phpfastcache-bundle": {
-            "version": "3.0",
-            "recipe": {
-                "repo": "3.0",
-                "branch": "master",
-                "version": "3.0",
-                "ref": "02e96b4f3739af1dbfdf799e493bcc8e9bd04025"
-            }
-        }
-    },
     "manifests": {
         "phpfastcache/phpfastcache-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "phpfastcache/phpfastcache-bundle",
-            "version": "3.0",
             "manifest": {
                 "bundles": {
                     "Phpfastcache\\Bundle\\PhpfastcacheBundle": [
@@ -31,13 +17,26 @@
             },
             "files": {
                 "config/packages/phpfastcache.yaml": {
-                    "contents": "phpfastcache:\n    twig_driver: \"filecache\" # This option must be a valid declared driver, in our example: \"filecache\"\n    twig_block_debug: false # This option will wrap CACHE/ENDCACHE blocks with block debug as HTML comment\n    drivers:\n        filecache:\n            type: Files\n            parameters:\n                path: \"%env(PHPFASTCACHE_FILECACHE_PATH)%\"\n\n# Define your drivers here. The example below connects to database 0 of the default Redis server.\n#\n# See https://github.com/PHPSocialNetwork/phpfastcache-bundle/wiki for instructions on\n# how to configure the bundle.\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "phpfastcache:",
+                        "    twig_driver: \"filecache\" # This option must be a valid declared driver, in our example: \"filecache\"",
+                        "    twig_block_debug: false # This option will wrap CACHE/ENDCACHE blocks with block debug as HTML comment",
+                        "    drivers:",
+                        "        filecache:",
+                        "            type: Files",
+                        "            parameters:",
+                        "                path: \"%env(PHPFASTCACHE_FILECACHE_PATH)%\"",
+                        "",
+                        "# Define your drivers here. The example below connects to database 0 of the default Redis server.",
+                        "#",
+                        "# See https://github.com/PHPSocialNetwork/phpfastcache-bundle/wiki for instructions on",
+                        "# how to configure the bundle.",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "phpfastcache/phpfastcache-bundle:3.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "02e96b4f3739af1dbfdf799e493bcc8e9bd04025"
         }
     }
 }

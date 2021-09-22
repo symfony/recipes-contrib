@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "emag-tech-labs/rabbitmq-bundle": {
-            "version": "2.0",
-            "recipe": {
-                "repo": "2.0",
-                "branch": "master",
-                "version": "2.0",
-                "ref": "8da2926d2864c2f4bb099e94ad259f2c0ecfe6df"
-            }
-        }
-    },
     "manifests": {
         "emag-tech-labs/rabbitmq-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "emag-tech-labs/rabbitmq-bundle",
-            "version": "2.0",
             "manifest": {
                 "bundles": {
                     "OldSound\\RabbitMqBundle\\OldSoundRabbitMqBundle": [
@@ -31,13 +17,30 @@
             },
             "files": {
                 "config/packages/old_sound_rabbit_mq.yaml": {
-                    "contents": "old_sound_rabbit_mq:\n    connections:\n        default:\n            url: '%env(RABBITMQ_URL)%'\n            vhost: '%env(RABBITMQ_VHOST)%'\n            lazy:     true\n            connection_timeout: 3\n            read_write_timeout: 3\n\n            # requires php-amqplib v2.4.1+ and PHP5.4+\n            keepalive: false\n\n            # requires php-amqplib v2.4.1+\n            heartbeat: 0\n\n            #requires php_sockets.dll\n            use_socket: false # default false\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "old_sound_rabbit_mq:",
+                        "    connections:",
+                        "        default:",
+                        "            url: '%env(RABBITMQ_URL)%'",
+                        "            vhost: '%env(RABBITMQ_VHOST)%'",
+                        "            lazy:     true",
+                        "            connection_timeout: 3",
+                        "            read_write_timeout: 3",
+                        "",
+                        "            # requires php-amqplib v2.4.1+ and PHP5.4+",
+                        "            keepalive: false",
+                        "",
+                        "            # requires php-amqplib v2.4.1+",
+                        "            heartbeat: 0",
+                        "",
+                        "            #requires php_sockets.dll",
+                        "            use_socket: false # default false",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "emag-tech-labs/rabbitmq-bundle:2.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "8da2926d2864c2f4bb099e94ad259f2c0ecfe6df"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "pasaiakoudala/authbundle": {
-            "version": "0.1",
-            "recipe": {
-                "repo": "0.1",
-                "branch": "master",
-                "version": "0.1",
-                "ref": "103b22429f7b0236fc553d48db3072fa4c305efe"
-            }
-        }
-    },
     "manifests": {
         "pasaiakoudala/authbundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "pasaiakoudala/authbundle",
-            "version": "0.1",
             "manifest": {
                 "bundles": {
                     "PasaiakoUdala\\AuthBundle\\PasaiakoUdalaAuthBundle": [
@@ -41,23 +27,60 @@
             },
             "files": {
                 "config/routes/pasaiako_udala_auth.yaml": {
-                    "contents": "pasaiako_udala_auth:\n    resource: '@PasaiakoUdalaAuthBundle/Resources/config/routes.xml'\n    prefix: /\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "pasaiako_udala_auth:",
+                        "    resource: '@PasaiakoUdalaAuthBundle/Resources/config/routes.xml'",
+                        "    prefix: /",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/security.yaml.dist": {
-                    "contents": "security:\n  enable_authenticator_manager: true\n  password_hashers:\n    PasaiakoUdala\\AuthBundle\\Entity\\User:\n      algorithm: auto\n\n  providers:\n    database_users:\n      entity: { class: PasaiakoUdala\\AuthBundle\\Entity\\User, property: username }\n\n  firewalls:\n    dev:\n      pattern: ^/(_(profiler|wdt)|css|images|js)/\n      security: false\n    main:\n      #            pattern: ^/\n      lazy: true\n      provider: database_users\n      custom_authenticator: paud.form.auth\n      logout:\n        path: pasaiakoudala_auth_logout\n  #                target: default\n\n\n  access_control:\n    #        - { path: ^/login, roles: PUBLIC_ACCESS }\n    - { path: ^/admin, roles: ROLE_ADMIN }\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "security:",
+                        "  enable_authenticator_manager: true",
+                        "  password_hashers:",
+                        "    PasaiakoUdala\\AuthBundle\\Entity\\User:",
+                        "      algorithm: auto",
+                        "",
+                        "  providers:",
+                        "    database_users:",
+                        "      entity: { class: PasaiakoUdala\\AuthBundle\\Entity\\User, property: username }",
+                        "",
+                        "  firewalls:",
+                        "    dev:",
+                        "      pattern: ^/(_(profiler|wdt)|css|images|js)/",
+                        "      security: false",
+                        "    main:",
+                        "      #            pattern: ^/",
+                        "      lazy: true",
+                        "      provider: database_users",
+                        "      custom_authenticator: paud.form.auth",
+                        "      logout:",
+                        "        path: pasaiakoudala_auth_logout",
+                        "  #                target: default",
+                        "",
+                        "",
+                        "  access_control:",
+                        "    #        - { path: ^/login, roles: PUBLIC_ACCESS }",
+                        "    - { path: ^/admin, roles: ROLE_ADMIN }",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/pasaiako_udala_auth.yaml": {
-                    "contents": "pasaiako_udala_auth:\n    route_after_successfull_login: \"default\"\n    LDAP_ADMIN_TALDEAK: \"Rol-taldea1, Rol-taldea2\"\n    LDAP_KUDEATU_TALDEAK: \"Rol-taldea1, Rol-taldea2\"\n    LDAP_USER_TALDEA: \"Rol-taldea1, Rol-taldea2\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "pasaiako_udala_auth:",
+                        "    route_after_successfull_login: \"default\"",
+                        "    LDAP_ADMIN_TALDEAK: \"Rol-taldea1, Rol-taldea2\"",
+                        "    LDAP_KUDEATU_TALDEAK: \"Rol-taldea1, Rol-taldea2\"",
+                        "    LDAP_USER_TALDEA: \"Rol-taldea1, Rol-taldea2\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "pasaiakoudala/authbundle:0.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "103b22429f7b0236fc553d48db3072fa4c305efe"
         }
     }
 }

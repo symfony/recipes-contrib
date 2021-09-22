@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfonycorp/connect-bundle": {
-            "version": "5.0",
-            "recipe": {
-                "repo": "5.0",
-                "branch": "master",
-                "version": "5.0",
-                "ref": "42c7cfa21e1bdf4645135cac649ca1d35292f78c"
-            }
-        }
-    },
     "manifests": {
         "symfonycorp/connect-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "symfonycorp/connect-bundle",
-            "version": "5.0",
             "manifest": {
                 "bundles": {
                     "SymfonyCorp\\Bundle\\ConnectBundle\\SymfonyConnectBundle": [
@@ -31,18 +17,30 @@
             },
             "files": {
                 "config/routes/symfony_connect.yaml": {
-                    "contents": "symfony_connect_callback:\n    path: /connect/callback\n\nsymfony_connect_login:\n    path: /connect/login\n    methods: [GET]\n    controller: SymfonyCorp\\Bundle\\ConnectBundle\\Controller\\OAuthController::newSessionAction\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "symfony_connect_callback:",
+                        "    path: /connect/callback",
+                        "",
+                        "symfony_connect_login:",
+                        "    path: /connect/login",
+                        "    methods: [GET]",
+                        "    controller: SymfonyCorp\\Bundle\\ConnectBundle\\Controller\\OAuthController::newSessionAction",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/symfony_connect.yaml": {
-                    "contents": "symfony_connect:\n    app_id: '%env(SYMFONY_CONNECT_APP_ID)%'\n    app_secret: '%env(SYMFONY_CONNECT_APP_SECRET)%'\n    scope: 'SCOPE_PUBLIC'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "symfony_connect:",
+                        "    app_id: '%env(SYMFONY_CONNECT_APP_ID)%'",
+                        "    app_secret: '%env(SYMFONY_CONNECT_APP_SECRET)%'",
+                        "    scope: 'SCOPE_PUBLIC'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "symfonycorp/connect-bundle:5.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "42c7cfa21e1bdf4645135cac649ca1d35292f78c"
         }
     }
 }

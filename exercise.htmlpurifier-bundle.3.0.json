@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "exercise/htmlpurifier-bundle": {
-            "version": "3.0",
-            "recipe": {
-                "repo": "3.0",
-                "branch": "master",
-                "version": "3.0",
-                "ref": "99590c5352b58fadacd5535337589aba7e44f5a7"
-            }
-        }
-    },
     "manifests": {
         "exercise/htmlpurifier-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "exercise/htmlpurifier-bundle",
-            "version": "3.0",
             "manifest": {
                 "bundles": {
                     "Exercise\\HTMLPurifierBundle\\ExerciseHTMLPurifierBundle": [
@@ -27,13 +13,34 @@
             },
             "files": {
                 "config/packages/exercise_html_purifier.yaml": {
-                    "contents": "exercise_html_purifier:\n    default_cache_serializer_path: '%kernel.cache_dir%/htmlpurifier'\n\n    html_profiles:\n        default:\n            config:\n                # the charset used by the original contents\n                Core.Encoding: 'UTF-8'\n                # full configuration reference: http://htmlpurifier.org/live/configdoc/plain.html\n\n# Read the https://github.com/Exercise/HTMLPurifierBundle/blob/master/README.md file\n# to know how to whitelist elements\n\n#            # whitelist attributes by tag\n#            attributes: []\n\n#            # whitelist elements by name\n#            elements: []\n\n#            # list of elements that cannot have attributes\n#            blank_elements: []\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "exercise_html_purifier:",
+                        "    default_cache_serializer_path: '%kernel.cache_dir%/htmlpurifier'",
+                        "",
+                        "    html_profiles:",
+                        "        default:",
+                        "            config:",
+                        "                # the charset used by the original contents",
+                        "                Core.Encoding: 'UTF-8'",
+                        "                # full configuration reference: http://htmlpurifier.org/live/configdoc/plain.html",
+                        "",
+                        "# Read the https://github.com/Exercise/HTMLPurifierBundle/blob/master/README.md file",
+                        "# to know how to whitelist elements",
+                        "",
+                        "#            # whitelist attributes by tag",
+                        "#            attributes: []",
+                        "",
+                        "#            # whitelist elements by name",
+                        "#            elements: []",
+                        "",
+                        "#            # list of elements that cannot have attributes",
+                        "#            blank_elements: []",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "exercise/htmlpurifier-bundle:3.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "99590c5352b58fadacd5535337589aba7e44f5a7"
         }
     }
 }

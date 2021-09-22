@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "wisembly/amqp-bundle": {
-            "version": "1.4",
-            "recipe": {
-                "repo": "1.4",
-                "branch": "master",
-                "version": "1.4",
-                "ref": "b77e4eb1593eea044c571c5742d1ac6bb707d904"
-            }
-        }
-    },
     "manifests": {
         "wisembly/amqp-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "wisembly/amqp-bundle",
-            "version": "1.4",
             "manifest": {
                 "bundles": {
                     "Wisembly\\AmqpBundle\\WisemblyAmqpBundle": [
@@ -30,13 +16,29 @@
             },
             "files": {
                 "config/packages/wisembly_amqp.yaml": {
-                    "contents": "wisembly_amqp:\n    console_path: '%kernel.project_dir%/bin/console'\n    broker: 'Wisembly\\AmqpBundle\\Broker\\PhpAmqpLibBroker'\n    connections:\n        default: '%env(AMQP_URL)%'\n    gates:\n        # here you should declare all your \"gates\", which are the cornerstone\n        # of this amqp bundle.\n        #\n        # For each gates declares which queue and which exchange it should\n        # communicate with, if these should be auto_declared, which connection\n        # it should use, ... and so on.\n        acme:\n            auto_declare: true\n            queue: acme_queue\n            exchange: acme_exchange\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "wisembly_amqp:",
+                        "    console_path: '%kernel.project_dir%/bin/console'",
+                        "    broker: 'Wisembly\\AmqpBundle\\Broker\\PhpAmqpLibBroker'",
+                        "    connections:",
+                        "        default: '%env(AMQP_URL)%'",
+                        "    gates:",
+                        "        # here you should declare all your \"gates\", which are the cornerstone",
+                        "        # of this amqp bundle.",
+                        "        #",
+                        "        # For each gates declares which queue and which exchange it should",
+                        "        # communicate with, if these should be auto_declared, which connection",
+                        "        # it should use, ... and so on.",
+                        "        acme:",
+                        "            auto_declare: true",
+                        "            queue: acme_queue",
+                        "            exchange: acme_exchange",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "wisembly/amqp-bundle:1.4@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "b77e4eb1593eea044c571c5742d1ac6bb707d904"
         }
     }
 }

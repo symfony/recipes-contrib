@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "enqueue/sqs": {
-            "version": "0.7",
-            "recipe": {
-                "repo": "0.7",
-                "branch": "master",
-                "version": "0.7",
-                "ref": "1249577668563ae1e8c62a3dfce2112a05ed903c"
-            }
-        }
-    },
     "manifests": {
         "enqueue/sqs": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "enqueue/sqs",
-            "version": "0.7",
             "manifest": {
                 "post-install-output": [
                     "  * Configure <comment>ENQUEUE_DSN=sqs:?key=aKey&secret=aSecret&region=aRegion</comment>",
@@ -25,8 +11,7 @@
                 ]
             },
             "files": [],
-            "origin": "enqueue/sqs:0.7@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "1249577668563ae1e8c62a3dfce2112a05ed903c"
         }
     }
 }

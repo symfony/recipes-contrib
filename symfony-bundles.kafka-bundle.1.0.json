@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfony-bundles/kafka-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "eeaaf8a43bb7b6553e8e12775aee933843e1f51b"
-            }
-        }
-    },
     "manifests": {
         "symfony-bundles/kafka-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "symfony-bundles/kafka-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "SymfonyBundles\\KafkaBundle\\SymfonyBundlesKafkaBundle": [
@@ -30,13 +16,26 @@
             },
             "files": {
                 "config/packages/sb_kafka.yaml": {
-                    "contents": "sb_kafka:\n    producers:\n        configuration:\n            group.id: 'main_group'\n            log.connection.close: 'false'\n            metadata.broker.list: '%env(resolve:KAFKA_BROKERS)%'\n            queue.buffering.max.messages: 10000000\n\n    consumers:\n        configuration:\n            group.id: 'main_group'\n            log.connection.close: 'false'\n            metadata.broker.list: '%env(resolve:KAFKA_BROKERS)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "sb_kafka:",
+                        "    producers:",
+                        "        configuration:",
+                        "            group.id: 'main_group'",
+                        "            log.connection.close: 'false'",
+                        "            metadata.broker.list: '%env(resolve:KAFKA_BROKERS)%'",
+                        "            queue.buffering.max.messages: 10000000",
+                        "",
+                        "    consumers:",
+                        "        configuration:",
+                        "            group.id: 'main_group'",
+                        "            log.connection.close: 'false'",
+                        "            metadata.broker.list: '%env(resolve:KAFKA_BROKERS)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "symfony-bundles/kafka-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "eeaaf8a43bb7b6553e8e12775aee933843e1f51b"
         }
     }
 }

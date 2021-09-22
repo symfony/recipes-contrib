@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "meteo-concept/hcaptcha-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "e94efaa6cd60c87dc9cc6de56b333a1754187d1e"
-            }
-        }
-    },
     "manifests": {
         "meteo-concept/hcaptcha-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "meteo-concept/hcaptcha-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "MeteoConcept\\HCaptchaBundle\\MeteoConceptHCaptchaBundle": [
@@ -30,13 +16,17 @@
             },
             "files": {
                 "config/packages/meteo_concept_h_captcha.yaml": {
-                    "contents": "meteo_concept_h_captcha:\n    hcaptcha:\n        site_key: 10000000-ffff-ffff-ffff-000000000001\n        secret: '%env(resolve:HCAPTCHA_SECRET)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "meteo_concept_h_captcha:",
+                        "    hcaptcha:",
+                        "        site_key: 10000000-ffff-ffff-ffff-000000000001",
+                        "        secret: '%env(resolve:HCAPTCHA_SECRET)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "meteo-concept/hcaptcha-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "e94efaa6cd60c87dc9cc6de56b333a1754187d1e"
         }
     }
 }

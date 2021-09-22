@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "becklyn/gluggi-bundle": {
-            "version": "3.1",
-            "recipe": {
-                "repo": "3.1",
-                "branch": "master",
-                "version": "3.1",
-                "ref": "3b26a87dab369e3136baaa870ce1d9c32e2191cc"
-            }
-        }
-    },
     "manifests": {
         "becklyn/gluggi-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "becklyn/gluggi-bundle",
-            "version": "3.1",
             "manifest": {
                 "bundles": {
                     "Becklyn\\GluggiBundle\\GluggiBundle": [
@@ -27,13 +13,16 @@
             },
             "files": {
                 "config/routes/dev/gluggi.yaml": {
-                    "contents": "_import.gluggi:\n    resource: \"@GluggiBundle/Resources/config/routes.yaml\"\n    prefix: /_layout/\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "_import.gluggi:",
+                        "    resource: \"@GluggiBundle/Resources/config/routes.yaml\"",
+                        "    prefix: /_layout/",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "becklyn/gluggi-bundle:3.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "3b26a87dab369e3136baaa870ce1d9c32e2191cc"
         }
     }
 }

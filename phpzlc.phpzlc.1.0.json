@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "phpzlc/phpzlc": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "77c40d8d72a5061ff48830fde339c2e15a5b21ec"
-            }
-        }
-    },
     "manifests": {
         "phpzlc/phpzlc": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "phpzlc/phpzlc",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "PHPZlc\\PHPZlc\\Bundle\\PHPZlcBundle": [
@@ -35,13 +21,13 @@
             },
             "files": {
                 "Business/.gitignore": {
-                    "contents": "",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "phpzlc/phpzlc:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "77c40d8d72a5061ff48830fde339c2e15a5b21ec"
         }
     }
 }

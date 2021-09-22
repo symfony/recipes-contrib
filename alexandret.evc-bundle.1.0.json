@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "alexandret/evc-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "32f4cc1f12a640985710762638f18dfdbb68d7df"
-            }
-        }
-    },
     "manifests": {
         "alexandret/evc-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "alexandret/evc-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Alexandre\\EvcBundle\\AlexandreEvcBundle": [
@@ -32,13 +18,17 @@
             },
             "files": {
                 "config/packages/alexandre_evc.yaml": {
-                    "contents": "alexandre_evc:\n    api_id: '%env(EVC_API)%'\n    username: '%env(EVC_USERNAME)%'\n    password: '%env(EVC_PASSWORD)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "alexandre_evc:",
+                        "    api_id: '%env(EVC_API)%'",
+                        "    username: '%env(EVC_USERNAME)%'",
+                        "    password: '%env(EVC_PASSWORD)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "alexandret/evc-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "32f4cc1f12a640985710762638f18dfdbb68d7df"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "excelwebzone/recaptcha-bundle": {
-            "version": "1.5",
-            "recipe": {
-                "repo": "1.5",
-                "branch": "master",
-                "version": "1.5",
-                "ref": "fd4da7bc71749db65bc83abf5d164bfa9c839cf4"
-            }
-        }
-    },
     "manifests": {
         "excelwebzone/recaptcha-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "excelwebzone/recaptcha-bundle",
-            "version": "1.5",
             "manifest": {
                 "bundles": {
                     "EWZ\\Bundle\\RecaptchaBundle\\EWZRecaptchaBundle": [
@@ -31,18 +17,25 @@
             },
             "files": {
                 "config/packages/dev/ewz_recaptcha.yaml": {
-                    "contents": "ewz_recaptcha:\n    enabled: false\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "ewz_recaptcha:",
+                        "    enabled: false",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/ewz_recaptcha.yaml": {
-                    "contents": "# See https://github.com/excelwebzone/EWZRecaptchaBundle for full configuration\newz_recaptcha:\n    public_key:  '%env(EWZ_RECAPTCHA_SITE_KEY)%'\n    private_key: '%env(EWZ_RECAPTCHA_SECRET)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# See https://github.com/excelwebzone/EWZRecaptchaBundle for full configuration",
+                        "ewz_recaptcha:",
+                        "    public_key:  '%env(EWZ_RECAPTCHA_SITE_KEY)%'",
+                        "    private_key: '%env(EWZ_RECAPTCHA_SECRET)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "excelwebzone/recaptcha-bundle:1.5@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "fd4da7bc71749db65bc83abf5d164bfa9c839cf4"
         }
     }
 }

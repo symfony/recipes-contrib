@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "player259/graphql-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "777682b208eb5d6c64e4bc75a3ced1e11b8542a9"
-            }
-        }
-    },
     "manifests": {
         "player259/graphql-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "player259/graphql-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Player259\\GraphQLBundle\\Player259GraphQLBundle": [
@@ -27,13 +13,18 @@
             },
             "files": {
                 "config/routes/player259_graphql.yaml": {
-                    "contents": "# Read the documentation: https://github.com/player259/graphql-bundle/blob/master/Resources/doc/index.rst#installation\n# Resource file contains single /graphql action\nplayer259_graphql:\n    resource: '@Player259GraphQLBundle/Resources/config/routing.xml'\n    prefix: /\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# Read the documentation: https://github.com/player259/graphql-bundle/blob/master/Resources/doc/index.rst#installation",
+                        "# Resource file contains single /graphql action",
+                        "player259_graphql:",
+                        "    resource: '@Player259GraphQLBundle/Resources/config/routing.xml'",
+                        "    prefix: /",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "player259/graphql-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "777682b208eb5d6c64e4bc75a3ced1e11b8542a9"
         }
     }
 }

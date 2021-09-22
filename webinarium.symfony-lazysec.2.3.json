@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "webinarium/symfony-lazysec": {
-            "version": "2.3",
-            "recipe": {
-                "repo": "2.3",
-                "branch": "master",
-                "version": "2.3",
-                "ref": "4e7f5931d032db5a1b2a4317bb53a53d20205706"
-            }
-        }
-    },
     "manifests": {
         "webinarium/symfony-lazysec": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "webinarium/symfony-lazysec",
-            "version": "2.3",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -22,13 +8,18 @@
             },
             "files": {
                 "config/packages/lazysec.yaml": {
-                    "contents": "services:\n\n    # See https://github.com/webinarium/symfony-lazysec/wiki/User-checker\n    LazySec\\Checker\\GenericUserChecker:\n        autowire: true\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "services:",
+                        "",
+                        "    # See https://github.com/webinarium/symfony-lazysec/wiki/User-checker",
+                        "    LazySec\\Checker\\GenericUserChecker:",
+                        "        autowire: true",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "webinarium/symfony-lazysec:2.3@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "4e7f5931d032db5a1b2a4317bb53a53d20205706"
         }
     }
 }

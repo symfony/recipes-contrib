@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "routmoute/routmoute-discord-bundle": {
-            "version": "1.1",
-            "recipe": {
-                "repo": "1.1",
-                "branch": "master",
-                "version": "1.1",
-                "ref": "3b437f7cd7cdaac79a2c7b107d0bef8770722de9"
-            }
-        }
-    },
     "manifests": {
         "routmoute/routmoute-discord-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "routmoute/routmoute-discord-bundle",
-            "version": "1.1",
             "manifest": {
                 "bundles": {
                     "Routmoute\\Bundle\\RoutmouteDiscordBundle\\RoutmouteDiscordBundle": [
@@ -32,13 +18,22 @@
             },
             "files": {
                 "config/packages/routmoute_discord.yaml": {
-                    "contents": "routmoute_discord:\n    oauth:\n        client_id: '%env(ROUTMOUTE_DISCORD_CLIENT_ID)%'\n        client_secret: '%env(ROUTMOUTE_DISCORD_CLIENT_SECRET)%'\n        scope:\n            - identify\n            - email\n    api:\n        bot_token: '%env(ROUTMOUTE_DISCORD_BOT_TOKEN)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "routmoute_discord:",
+                        "    oauth:",
+                        "        client_id: '%env(ROUTMOUTE_DISCORD_CLIENT_ID)%'",
+                        "        client_secret: '%env(ROUTMOUTE_DISCORD_CLIENT_SECRET)%'",
+                        "        scope:",
+                        "            - identify",
+                        "            - email",
+                        "    api:",
+                        "        bot_token: '%env(ROUTMOUTE_DISCORD_BOT_TOKEN)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "routmoute/routmoute-discord-bundle:1.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "3b437f7cd7cdaac79a2c7b107d0bef8770722de9"
         }
     }
 }

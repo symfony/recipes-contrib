@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "timiki/rpc-server-bundle": {
-            "version": "4.0",
-            "recipe": {
-                "repo": "4.0",
-                "branch": "master",
-                "version": "4.0",
-                "ref": "ec7efbddd11341ae51ed0b132dbae54659667ca5"
-            }
-        }
-    },
     "manifests": {
         "timiki/rpc-server-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "timiki/rpc-server-bundle",
-            "version": "4.0",
             "manifest": {
                 "bundles": {
                     "Timiki\\Bundle\\RpcServerBundle\\RpcServerBundle": [
@@ -28,23 +14,44 @@
             },
             "files": {
                 "src/Method/.gitignore": {
-                    "contents": "",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/routes/rpc_server.yaml": {
-                    "contents": "rpc:\n    path:     /rpc\n    defaults: { _controller: RpcServerBundle:Rpc:handler }\n    methods:  [POST]\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "rpc:",
+                        "    path:     /rpc",
+                        "    defaults: { _controller: RpcServerBundle:Rpc:handler }",
+                        "    methods:  [POST]",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/rpc_server.yaml": {
-                    "contents": "# Read the documentation: https://github.com/timiki/rpc-server-bundle\n\nrpc_server:\n\n    mapping: '%kernel.root_dir%/Method'\n\n    # id cache service, must be instance of Doctrine\\Common\\Cache\\CacheProvider\n    # by default use file cache\n\n    cache: null\n\n    # id serializer service, must be instance of Timiki\\Bundle\\RpcServerBundle\\Serializer\\SerializerInterface\n    # by default use 'rpc.server.serializer.base' service\n\n    serializer: 'rpc.server.serializer.base'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# Read the documentation: https://github.com/timiki/rpc-server-bundle",
+                        "",
+                        "rpc_server:",
+                        "",
+                        "    mapping: '%kernel.root_dir%/Method'",
+                        "",
+                        "    # id cache service, must be instance of Doctrine\\Common\\Cache\\CacheProvider",
+                        "    # by default use file cache",
+                        "",
+                        "    cache: null",
+                        "",
+                        "    # id serializer service, must be instance of Timiki\\Bundle\\RpcServerBundle\\Serializer\\SerializerInterface",
+                        "    # by default use 'rpc.server.serializer.base' service",
+                        "",
+                        "    serializer: 'rpc.server.serializer.base'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "timiki/rpc-server-bundle:4.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "ec7efbddd11341ae51ed0b132dbae54659667ca5"
         }
     }
 }

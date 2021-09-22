@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "pugx/geo-form-bundle": {
-            "version": "0.2",
-            "recipe": {
-                "repo": "0.2",
-                "branch": "master",
-                "version": "0.2",
-                "ref": "42039f7248b57a673d541988db6af59904d0db5c"
-            }
-        }
-    },
     "manifests": {
         "pugx/geo-form-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "pugx/geo-form-bundle",
-            "version": "0.2",
             "manifest": {
                 "bundles": {
                     "PUGX\\GeoFormBundle\\PUGXGeoFormBundle": [
@@ -31,13 +17,17 @@
             },
             "files": {
                 "config/packages/pugx_geo_form.yaml": {
-                    "contents": "pugx_geo_form:\n    # see https://developers.google.com/maps/documentation/javascript/geocoding#GeocodingRequests for possible values for \"region\"\n    region: EU\n    useSsl: true\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "pugx_geo_form:",
+                        "    # see https://developers.google.com/maps/documentation/javascript/geocoding#GeocodingRequests for possible values for \"region\"",
+                        "    region: EU",
+                        "    useSsl: true",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "pugx/geo-form-bundle:0.2@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "42039f7248b57a673d541988db6af59904d0db5c"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "idci/keycloak-security-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "1bb004a8f8ea8683635814a2d3b29a44602a76df"
-            }
-        }
-    },
     "manifests": {
         "idci/keycloak-security-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "idci/keycloak-security-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "IDCI\\Bundle\\KeycloakSecurityBundle\\IDCIKeycloakSecurityBundle": [
@@ -35,18 +21,31 @@
             },
             "files": {
                 "config/routes/idci_keycloak_security.yaml": {
-                    "contents": "IDCIKeycloakSecurityBundle:\n    resource: \"@IDCIKeycloakSecurityBundle/Resources/config/routing.yaml\"\n    prefix: /\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "IDCIKeycloakSecurityBundle:",
+                        "    resource: \"@IDCIKeycloakSecurityBundle/Resources/config/routing.yaml\"",
+                        "    prefix: /",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/idci_keycloak_security.yaml": {
-                    "contents": "idci_keycloak_security:\n    server_url: '%env(resolve:KEYCLOAK_SERVER_BASE_URL)%/auth'\n    server_public_url: '%env(resolve:KEYCLOAK_SERVER_PUBLIC_BASE_URL)%/auth'\n    server_private_url: '%env(resolve:KEYCLOAK_SERVER_PRIVATE_BASE_URL)%/auth'\n    realm: '%env(resolve:KEYCLOAK_REALM)%'\n    client_id: '%env(resolve:KEYCLOAK_CLIENT_ID)%'\n    client_secret: '%env(resolve:KEYCLOAK_CLIENT_SECRET)%'\n    default_target_path: 'app_home'\n    ssl_verification: true\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "idci_keycloak_security:",
+                        "    server_url: '%env(resolve:KEYCLOAK_SERVER_BASE_URL)%/auth'",
+                        "    server_public_url: '%env(resolve:KEYCLOAK_SERVER_PUBLIC_BASE_URL)%/auth'",
+                        "    server_private_url: '%env(resolve:KEYCLOAK_SERVER_PRIVATE_BASE_URL)%/auth'",
+                        "    realm: '%env(resolve:KEYCLOAK_REALM)%'",
+                        "    client_id: '%env(resolve:KEYCLOAK_CLIENT_ID)%'",
+                        "    client_secret: '%env(resolve:KEYCLOAK_CLIENT_SECRET)%'",
+                        "    default_target_path: 'app_home'",
+                        "    ssl_verification: true",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "idci/keycloak-security-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "1bb004a8f8ea8683635814a2d3b29a44602a76df"
         }
     }
 }

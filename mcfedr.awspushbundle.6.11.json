@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "mcfedr/awspushbundle": {
-            "version": "6.11",
-            "recipe": {
-                "repo": "6.11",
-                "branch": "master",
-                "version": "6.11",
-                "ref": "4d56bc728b4e6e784fe0401f062084cd7eb6c18f"
-            }
-        }
-    },
     "manifests": {
         "mcfedr/awspushbundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "mcfedr/awspushbundle",
-            "version": "6.11",
             "manifest": {
                 "bundles": {
                     "Mcfedr\\AwsPushBundle\\McfedrAwsPushBundle": [
@@ -41,13 +27,21 @@
             },
             "files": {
                 "config/packages/awspush.yaml": {
-                    "contents": "mcfedr_aws_push:\n    platforms:\n        default: \"%env(AWS_PUSH_DEFAULT_PLATFORM_ARN)%\"\n    aws:\n        credentials:\n            key: \"%env(AWS_ACCESS_KEY_ID)%\"\n            secret: \"%env(AWS_SECRET_ACCESS_KEY)%\"\n        region: \"%env(AWS_REGION)%\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "mcfedr_aws_push:",
+                        "    platforms:",
+                        "        default: \"%env(AWS_PUSH_DEFAULT_PLATFORM_ARN)%\"",
+                        "    aws:",
+                        "        credentials:",
+                        "            key: \"%env(AWS_ACCESS_KEY_ID)%\"",
+                        "            secret: \"%env(AWS_SECRET_ACCESS_KEY)%\"",
+                        "        region: \"%env(AWS_REGION)%\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "mcfedr/awspushbundle:6.11@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "4d56bc728b4e6e784fe0401f062084cd7eb6c18f"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "emanuilnikolov/igdb-api-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "7fd07255f1618b72766f7eaa4e35bab2712f5b4e"
-            }
-        }
-    },
     "manifests": {
         "emanuilnikolov/igdb-api-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "emanuilnikolov/igdb-api-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "EN\\IgdbApiBundle\\ENIgdbApiBundle": [
@@ -31,13 +17,17 @@
             },
             "files": {
                 "config/packages/en_igdb_api.yaml": {
-                    "contents": "# Get your credentials by signing up here: https://api.igdb.com/admin and put them in your .env file\nen_igdb_api:\n    base_url: '%env(YOUR_BASE_URL)%'\n    api_key: '%env(YOUR_API_KEY)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# Get your credentials by signing up here: https://api.igdb.com/admin and put them in your .env file",
+                        "en_igdb_api:",
+                        "    base_url: '%env(YOUR_BASE_URL)%'",
+                        "    api_key: '%env(YOUR_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "emanuilnikolov/igdb-api-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "7fd07255f1618b72766f7eaa4e35bab2712f5b4e"
         }
     }
 }

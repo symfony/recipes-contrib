@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "sylius/refund-plugin": {
-            "version": "0.4",
-            "recipe": {
-                "repo": "0.4",
-                "branch": "master",
-                "version": "0.4",
-                "ref": "a3f813f608c6f04bd7d0b4cefd73a96bf378c390"
-            }
-        }
-    },
     "manifests": {
         "sylius/refund-plugin": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "sylius/refund-plugin",
-            "version": "0.4",
             "manifest": {
                 "bundles": {
                     "Sylius\\RefundPlugin\\SyliusRefundPlugin": [
@@ -27,18 +13,23 @@
             },
             "files": {
                 "config/routes/sylius_refund.yaml": {
-                    "contents": "sylius_refund:\n    resource: \"@SyliusRefundPlugin/Resources/config/routing.yml\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "sylius_refund:",
+                        "    resource: \"@SyliusRefundPlugin/Resources/config/routing.yml\"",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/sylius_refund.yaml": {
-                    "contents": "imports:\n    - { resource: \"@SyliusRefundPlugin/Resources/config/app/config.yml\" }\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SyliusRefundPlugin/Resources/config/app/config.yml\" }",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "sylius/refund-plugin:0.4@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "a3f813f608c6f04bd7d0b4cefd73a96bf378c390"
         }
     }
 }

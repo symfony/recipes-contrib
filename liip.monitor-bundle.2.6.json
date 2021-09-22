@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "liip/monitor-bundle": {
-            "version": "2.6",
-            "recipe": {
-                "repo": "2.6",
-                "branch": "master",
-                "version": "2.6",
-                "ref": "02c7cd93304dead890f9042fc2670dd9b0e0c091"
-            }
-        }
-    },
     "manifests": {
         "liip/monitor-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "liip/monitor-bundle",
-            "version": "2.6",
             "manifest": {
                 "bundles": {
                     "Liip\\MonitorBundle\\LiipMonitorBundle": [
@@ -33,13 +19,16 @@
             },
             "files": {
                 "config/packages/monitor.yaml": {
-                    "contents": "liip_monitor:\n    # enabling the controller requires that `assets` are enabled in the framework bundle\n    enable_controller: false\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "liip_monitor:",
+                        "    # enabling the controller requires that `assets` are enabled in the framework bundle",
+                        "    enable_controller: false",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "liip/monitor-bundle:2.6@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "02c7cd93304dead890f9042fc2670dd9b0e0c091"
         }
     }
 }

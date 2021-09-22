@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "rundum/event-base": {
-            "version": "0.0",
-            "recipe": {
-                "repo": "0.0",
-                "branch": "master",
-                "version": "0.0",
-                "ref": "3bc0ca63f69fddce56c1cfb6a92557b0996bb1c1"
-            }
-        }
-    },
     "manifests": {
         "rundum/event-base": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "rundum/event-base",
-            "version": "0.0",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -22,13 +8,21 @@
             },
             "files": {
                 "config/packages/rundum_event_base.yaml": {
-                    "contents": "services:\n    _defaults:\n        autowire: true\n        autoconfigure: true\n        public: false\n\n    rundum.event.entity.subscriber:\n        class: Rundum\\EventSubscriber\\EntityEventSubscriber\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "        public: false",
+                        "",
+                        "    rundum.event.entity.subscriber:",
+                        "        class: Rundum\\EventSubscriber\\EntityEventSubscriber",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "rundum/event-base:0.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "3bc0ca63f69fddce56c1cfb6a92557b0996bb1c1"
         }
     }
 }

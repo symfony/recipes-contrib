@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "php-translation/symfony-bundle": {
-            "version": "0.10",
-            "recipe": {
-                "repo": "0.10",
-                "branch": "master",
-                "version": "0.10",
-                "ref": "5c712c2758c3cccb964713f0061493b8ce2dd430"
-            }
-        }
-    },
     "manifests": {
         "php-translation/symfony-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "php-translation/symfony-bundle",
-            "version": "0.10",
             "manifest": {
                 "bundles": {
                     "Translation\\Bundle\\TranslationBundle": [
@@ -27,28 +13,56 @@
             },
             "files": {
                 "config/routes/php_translation.yaml": {
-                    "contents": "_translation_edit_in_place:\n    resource: '@TranslationBundle/Resources/config/routing_edit_in_place.yaml'\n    prefix: /admin\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "_translation_edit_in_place:",
+                        "    resource: '@TranslationBundle/Resources/config/routing_edit_in_place.yaml'",
+                        "    prefix: /admin",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/routes/dev/php_translation.yaml": {
-                    "contents": "_translation_webui:\n    resource: \"@TranslationBundle/Resources/config/routing_webui.yaml\"\n    prefix: /admin\n\n_translation_profiler:\n    resource: '@TranslationBundle/Resources/config/routing_symfony_profiler.yaml'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "_translation_webui:",
+                        "    resource: \"@TranslationBundle/Resources/config/routing_webui.yaml\"",
+                        "    prefix: /admin",
+                        "",
+                        "_translation_profiler:",
+                        "    resource: '@TranslationBundle/Resources/config/routing_symfony_profiler.yaml'",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/php_translation.yaml": {
-                    "contents": "translation:\n    locales: [\"en\"]\n    edit_in_place:\n        enabled: false\n        config_name: app\n    configs:\n        app:\n            dirs: [\"%kernel.project_dir%/templates\", \"%kernel.project_dir%/src\"]\n            output_dir: \"%kernel.project_dir%/translations\"\n            excluded_names: [\"*TestCase.php\", \"*Test.php\"]\n            excluded_dirs: [cache, data, logs]\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "translation:",
+                        "    locales: [\"en\"]",
+                        "    edit_in_place:",
+                        "        enabled: false",
+                        "        config_name: app",
+                        "    configs:",
+                        "        app:",
+                        "            dirs: [\"%kernel.project_dir%/templates\", \"%kernel.project_dir%/src\"]",
+                        "            output_dir: \"%kernel.project_dir%/translations\"",
+                        "            excluded_names: [\"*TestCase.php\", \"*Test.php\"]",
+                        "            excluded_dirs: [cache, data, logs]",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/dev/php_translation.yaml": {
-                    "contents": "translation:\n    symfony_profiler:\n        enabled: true\n    webui:\n        enabled: true\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "translation:",
+                        "    symfony_profiler:",
+                        "        enabled: true",
+                        "    webui:",
+                        "        enabled: true",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "php-translation/symfony-bundle:0.10@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "5c712c2758c3cccb964713f0061493b8ce2dd430"
         }
     }
 }

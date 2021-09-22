@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "tilleuls/sylius-quick-import-plugin": {
-            "version": "0.1",
-            "recipe": {
-                "repo": "0.1",
-                "branch": "master",
-                "version": "0.1",
-                "ref": "180193aa5e5b7afc96d69821ae9579695cfdc9c7"
-            }
-        }
-    },
     "manifests": {
         "tilleuls/sylius-quick-import-plugin": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "tilleuls/sylius-quick-import-plugin",
-            "version": "0.1",
             "manifest": {
                 "bundles": {
                     "CoopTilleuls\\SyliusQuickImportPlugin\\CoopTilleulsSyliusQuickImportPlugin": [
@@ -27,13 +13,16 @@
             },
             "files": {
                 "config/routes/sylius_quick_import.yaml": {
-                    "contents": "coop_tilleuls_sylius_quick_import_admin:\n    resource: \"@CoopTilleulsSyliusQuickImportPlugin/Resources/config/admin_routing.yml\"\n    prefix: /admin\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "coop_tilleuls_sylius_quick_import_admin:",
+                        "    resource: \"@CoopTilleulsSyliusQuickImportPlugin/Resources/config/admin_routing.yml\"",
+                        "    prefix: /admin",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "tilleuls/sylius-quick-import-plugin:0.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "180193aa5e5b7afc96d69821ae9579695cfdc9c7"
         }
     }
 }

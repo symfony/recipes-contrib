@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "mobizel/markdown-docs-bundle": {
-            "version": "0.9",
-            "recipe": {
-                "repo": "0.9",
-                "branch": "master",
-                "version": "0.9",
-                "ref": "41fcd3258e073d749c6366d86d662eeb2e03b184"
-            }
-        }
-    },
     "manifests": {
         "mobizel/markdown-docs-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "mobizel/markdown-docs-bundle",
-            "version": "0.9",
             "manifest": {
                 "bundles": {
                     "Mobizel\\Bundle\\MarkdownDocsBundle\\MobizelMarkdownDocsBundle": [
@@ -28,23 +14,43 @@
             },
             "files": {
                 "docs/index.md": {
-                    "contents": "# Documentation\n\nYour documentation is now ready and you can start working on it.\n\n[Documentation of the bundle](https://github.com/mobizel/markdown-docs-bundle/blob/master/docs/index.md)\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# Documentation",
+                        "",
+                        "Your documentation is now ready and you can start working on it.",
+                        "",
+                        "[Documentation of the bundle](https://github.com/mobizel/markdown-docs-bundle/blob/master/docs/index.md)",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/routes/mobizel_markdown_docs.yaml": {
-                    "contents": "_mobizel_markdowns:\n    resource: 'mobizel_markdown_docs.routing.context_loader'\n    type: service\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "_mobizel_markdowns:",
+                        "    resource: 'mobizel_markdown_docs.routing.context_loader'",
+                        "    type: service",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/mobizel_markdown_docs.yaml": {
-                    "contents": "mobizel_markdown_docs:\n    contexts:\n        main:\n            path: /docs\n            docs_dir: '%kernel.project_dir%/docs'\n            metadata:\n                #title: 'Your documentation title'\n\n        # You can add as many contexts as you need\n        # See https://github.com/mobizel/markdown-docs-bundle/blob/master/docs/how-to-add-docs-contexts.md\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "mobizel_markdown_docs:",
+                        "    contexts:",
+                        "        main:",
+                        "            path: /docs",
+                        "            docs_dir: '%kernel.project_dir%/docs'",
+                        "            metadata:",
+                        "                #title: 'Your documentation title'",
+                        "",
+                        "        # You can add as many contexts as you need",
+                        "        # See https://github.com/mobizel/markdown-docs-bundle/blob/master/docs/how-to-add-docs-contexts.md",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "mobizel/markdown-docs-bundle:0.9@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "41fcd3258e073d749c6366d86d662eeb2e03b184"
         }
     }
 }

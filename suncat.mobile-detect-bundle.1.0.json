@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "suncat/mobile-detect-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "d503392fa26af3e3a343d4890ca3a3b74faef75a"
-            }
-        }
-    },
     "manifests": {
         "suncat/mobile-detect-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "suncat/mobile-detect-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "SunCat\\MobileDetectBundle\\MobileDetectBundle": [
@@ -27,13 +13,25 @@
             },
             "files": {
                 "config/packages/mobile_detect.yaml": {
-                    "contents": "# Read the documentation: https://github.com/suncat2000/MobileDetectBundle/blob/v1.0.5/Resources/doc/index.md\n#mobile_detect:\n#    redirect:\n#        full:\n#            is_enabled: true\n#            host: http://site.com\n#            action: redirect\n#        mobile:\n#            is_enabled: true\n#            host: http://m.site.com\n#            action: redirect\n#        detect_tablet_as_mobile: true\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# Read the documentation: https://github.com/suncat2000/MobileDetectBundle/blob/v1.0.5/Resources/doc/index.md",
+                        "#mobile_detect:",
+                        "#    redirect:",
+                        "#        full:",
+                        "#            is_enabled: true",
+                        "#            host: http://site.com",
+                        "#            action: redirect",
+                        "#        mobile:",
+                        "#            is_enabled: true",
+                        "#            host: http://m.site.com",
+                        "#            action: redirect",
+                        "#        detect_tablet_as_mobile: true",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "suncat/mobile-detect-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "d503392fa26af3e3a343d4890ca3a3b74faef75a"
         }
     }
 }

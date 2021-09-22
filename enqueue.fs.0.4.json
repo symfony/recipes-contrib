@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "enqueue/fs": {
-            "version": "0.4",
-            "recipe": {
-                "repo": "0.4",
-                "branch": "master",
-                "version": "0.4",
-                "ref": "822505a7de797bd869c5757bb9bae85f647d870d"
-            }
-        }
-    },
     "manifests": {
         "enqueue/fs": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "enqueue/fs",
-            "version": "0.4",
             "manifest": {
                 "post-install-output": [
                     "  * Configure <comment>ENQUEUE_DSN=file://%kernel.project_dir%/var/queue</comment>",
@@ -25,8 +11,7 @@
                 ]
             },
             "files": [],
-            "origin": "enqueue/fs:0.4@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "822505a7de797bd869c5757bb9bae85f647d870d"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "flux-se/sylius-payum-stripe-plugin": {
-            "version": "2.0",
-            "recipe": {
-                "repo": "2.0",
-                "branch": "master",
-                "version": "2.0",
-                "ref": "04fbe1af8361502462ab7f8c1fd3152508f93f57"
-            }
-        }
-    },
     "manifests": {
         "flux-se/sylius-payum-stripe-plugin": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "flux-se/sylius-payum-stripe-plugin",
-            "version": "2.0",
             "manifest": {
                 "bundles": {
                     "FluxSE\\SyliusPayumStripePlugin\\FluxSESyliusPayumStripePlugin": [
@@ -27,13 +13,24 @@
             },
             "files": {
                 "config/packages/flux_se_sylius_payum_stripe.yaml": {
-                    "contents": "imports:\n    - { resource: \"@FluxSESyliusPayumStripePlugin/Resources/config/config.yaml\" }\n\nflux_se_sylius_payum_stripe:\n    line_item_image:\n        # This is the imagine filter use to get the image displayed on Stripe Checkout Session\n        # (default: the filter uses into `@ShopBundle/Product/Show/_images.html.twig`)\n        imagine_filter: 'sylius_shop_product_original'\n        # Fallback image used when no image is set on a product and also when you test this plugin\n        # from a private web server (ex: from localhost)\n        fallback_image: 'https://placehold.it/400x300'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@FluxSESyliusPayumStripePlugin/Resources/config/config.yaml\" }",
+                        "",
+                        "flux_se_sylius_payum_stripe:",
+                        "    line_item_image:",
+                        "        # This is the imagine filter use to get the image displayed on Stripe Checkout Session",
+                        "        # (default: the filter uses into `@ShopBundle/Product/Show/_images.html.twig`)",
+                        "        imagine_filter: 'sylius_shop_product_original'",
+                        "        # Fallback image used when no image is set on a product and also when you test this plugin",
+                        "        # from a private web server (ex: from localhost)",
+                        "        fallback_image: 'https://placehold.it/400x300'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "flux-se/sylius-payum-stripe-plugin:2.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "04fbe1af8361502462ab7f8c1fd3152508f93f57"
         }
     }
 }

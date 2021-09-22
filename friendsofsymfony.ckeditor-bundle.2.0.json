@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "friendsofsymfony/ckeditor-bundle": {
-            "version": "2.0",
-            "recipe": {
-                "repo": "2.0",
-                "branch": "master",
-                "version": "2.0",
-                "ref": "f5ad42002183a6881962683e6d84bbb25cdfce5d"
-            }
-        }
-    },
     "manifests": {
         "friendsofsymfony/ckeditor-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "friendsofsymfony/ckeditor-bundle",
-            "version": "2.0",
             "manifest": {
                 "bundles": {
                     "FOS\\CKEditorBundle\\FOSCKEditorBundle": [
@@ -30,13 +16,18 @@
             },
             "files": {
                 "config/packages/fos_ckeditor.yaml": {
-                    "contents": "# Read the documentation: https://symfony.com/doc/current/bundles/FOSCKEditorBundle/index.html\n\ntwig:\n    form_themes:\n        - '@FOSCKEditor/Form/ckeditor_widget.html.twig'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# Read the documentation: https://symfony.com/doc/current/bundles/FOSCKEditorBundle/index.html",
+                        "",
+                        "twig:",
+                        "    form_themes:",
+                        "        - '@FOSCKEditor/Form/ckeditor_widget.html.twig'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "friendsofsymfony/ckeditor-bundle:2.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "f5ad42002183a6881962683e6d84bbb25cdfce5d"
         }
     }
 }

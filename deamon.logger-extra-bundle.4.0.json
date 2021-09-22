@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "deamon/logger-extra-bundle": {
-            "version": "4.0",
-            "recipe": {
-                "repo": "4.0",
-                "branch": "master",
-                "version": "4.0",
-                "ref": "0c64a27be5cc083dd16bebfe1ca16104d8649fa9"
-            }
-        }
-    },
     "manifests": {
         "deamon/logger-extra-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "deamon/logger-extra-bundle",
-            "version": "4.0",
             "manifest": {
                 "bundles": {
                     "Deamon\\LoggerExtraBundle\\DeamonLoggerExtraBundle": [
@@ -27,13 +13,21 @@
             },
             "files": {
                 "config/packages/deamon_logger_extra.yaml": {
-                    "contents": "# see https://github.com/FrDeamon/logger-extra-bundle/blob/master/README.md#config-reference\ndeamon_logger_extra:\n    # the application name\n    application: null\n    # the handler to update\n    handlers: 'main'\n    # configuration for all optional fields\n    config: null\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# see https://github.com/FrDeamon/logger-extra-bundle/blob/master/README.md#config-reference",
+                        "deamon_logger_extra:",
+                        "    # the application name",
+                        "    application: null",
+                        "    # the handler to update",
+                        "    handlers: 'main'",
+                        "    # configuration for all optional fields",
+                        "    config: null",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "deamon/logger-extra-bundle:4.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "0c64a27be5cc083dd16bebfe1ca16104d8649fa9"
         }
     }
 }

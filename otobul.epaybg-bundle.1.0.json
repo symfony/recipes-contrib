@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "otobul/epaybg-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "d1f0d9124921836288cb9d1b1147fde4d918ec58"
-            }
-        }
-    },
     "manifests": {
         "otobul/epaybg-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "otobul/epaybg-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Otobul\\EpaybgBundle\\OtobulEpaybgBundle": [
@@ -32,18 +18,31 @@
             },
             "files": {
                 "config/routes/otobul_epaybg.yaml": {
-                    "contents": "otobul_epaybg:\n    resource: '@OtobulEpaybgBundle/Resources/config/routes.xml'\n    prefix: /webhook/epaybg\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "otobul_epaybg:",
+                        "    resource: '@OtobulEpaybgBundle/Resources/config/routes.xml'",
+                        "    prefix: /webhook/epaybg",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/otobul_epaybg.yaml": {
-                    "contents": "otobul_epaybg:\n    # Identification number of the merchant\n    min: '%env(OTOBUL_EPAYBG_MIN)%'\n\n    # The secret word of the merchant\n    secret: '%env(OTOBUL_EPAYBG_SECRET)%'\n\n    # If true all requests will be sent to ePay.bg\u2019s Demo System\n    isDemo: '%env(bool:OTOBUL_EPAYBG_IS_DEMO)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "otobul_epaybg:",
+                        "    # Identification number of the merchant",
+                        "    min: '%env(OTOBUL_EPAYBG_MIN)%'",
+                        "",
+                        "    # The secret word of the merchant",
+                        "    secret: '%env(OTOBUL_EPAYBG_SECRET)%'",
+                        "",
+                        "    # If true all requests will be sent to ePay.bg\u2019s Demo System",
+                        "    isDemo: '%env(bool:OTOBUL_EPAYBG_IS_DEMO)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "otobul/epaybg-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "d1f0d9124921836288cb9d1b1147fde4d918ec58"
         }
     }
 }

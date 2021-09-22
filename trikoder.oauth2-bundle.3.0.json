@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "trikoder/oauth2-bundle": {
-            "version": "3.0",
-            "recipe": {
-                "repo": "3.0",
-                "branch": "master",
-                "version": "3.0",
-                "ref": "43774de114904e86d18de0cea92f368d8e3c7499"
-            }
-        }
-    },
     "manifests": {
         "trikoder/oauth2-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "trikoder/oauth2-bundle",
-            "version": "3.0",
             "manifest": {
                 "bundles": {
                     "Trikoder\\Bundle\\OAuth2Bundle\\TrikoderOAuth2Bundle": [
@@ -52,18 +38,34 @@
             },
             "files": {
                 "config/routes/trikoder_oauth2.yaml": {
-                    "contents": "oauth2:\n    resource: '@TrikoderOAuth2Bundle/Resources/config/routes.xml'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "oauth2:",
+                        "    resource: '@TrikoderOAuth2Bundle/Resources/config/routes.xml'",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/trikoder_oauth2.yaml": {
-                    "contents": "trikoder_oauth2:\n\n    authorization_server:\n        private_key: /var/oauth/private.key                     # Change this\n        private_key_passphrase: null                            # Passphrase of the private key, if any\n\n        encryption_key: '%env(string:OAUTH2_ENCRYPTION_KEY)%'   # (Optional) Change this\n\n    resource_server:\n        public_key: /var/oauth/public.key                       # Change this\n\n    persistence:\n        doctrine: null\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "trikoder_oauth2:",
+                        "",
+                        "    authorization_server:",
+                        "        private_key: /var/oauth/private.key                     # Change this",
+                        "        private_key_passphrase: null                            # Passphrase of the private key, if any",
+                        "",
+                        "        encryption_key: '%env(string:OAUTH2_ENCRYPTION_KEY)%'   # (Optional) Change this",
+                        "",
+                        "    resource_server:",
+                        "        public_key: /var/oauth/public.key                       # Change this",
+                        "",
+                        "    persistence:",
+                        "        doctrine: null",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "trikoder/oauth2-bundle:3.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "43774de114904e86d18de0cea92f368d8e3c7499"
         }
     }
 }

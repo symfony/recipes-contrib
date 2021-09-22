@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "knplabs/github-api": {
-            "version": "2.6",
-            "recipe": {
-                "repo": "2.6",
-                "branch": "master",
-                "version": "2.6",
-                "ref": "a7d5781e4a8e84f1c238c43e4c9bb806f01d8a3f"
-            }
-        }
-    },
     "manifests": {
         "knplabs/github-api": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "knplabs/github-api",
-            "version": "2.6",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -27,13 +13,26 @@
             },
             "files": {
                 "config/packages/github_api.yaml": {
-                    "contents": "services:\n    Github\\Client:\n        arguments:\n            - '@Github\\HttpClient\\Builder'\n        # Uncomment to enable authentication\n        #calls:\n        #    - ['authenticate', ['%env(GITHUB_USERNAME)%', '%env(GITHUB_SECRET)%', '%env(GITHUB_AUTH_METHOD)%']]\n\n    Github\\HttpClient\\Builder:\n        arguments:\n            - '@?Http\\Client\\HttpClient'\n            - '@?Http\\Message\\RequestFactory'\n            - '@?Http\\Message\\StreamFactory'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "services:",
+                        "    Github\\Client:",
+                        "        arguments:",
+                        "            - '@Github\\HttpClient\\Builder'",
+                        "        # Uncomment to enable authentication",
+                        "        #calls:",
+                        "        #    - ['authenticate', ['%env(GITHUB_USERNAME)%', '%env(GITHUB_SECRET)%', '%env(GITHUB_AUTH_METHOD)%']]",
+                        "",
+                        "    Github\\HttpClient\\Builder:",
+                        "        arguments:",
+                        "            - '@?Http\\Client\\HttpClient'",
+                        "            - '@?Http\\Message\\RequestFactory'",
+                        "            - '@?Http\\Message\\StreamFactory'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "knplabs/github-api:2.6@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "a7d5781e4a8e84f1c238c43e4c9bb806f01d8a3f"
         }
     }
 }

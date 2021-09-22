@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "dockfony/dockfony": {
-            "version": "5.0",
-            "recipe": {
-                "repo": "5.0",
-                "branch": "master",
-                "version": "5.0",
-                "ref": "601185a79b3e63b56dd8c5ad7fdedf0c1e05d069"
-            }
-        }
-    },
     "manifests": {
         "dockfony/dockfony": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "dockfony/dockfony",
-            "version": "5.0",
             "manifest": {
                 "copy-from-package": {
                     "docker-files/docker/": "%SRC_DIR%/../docker/",
@@ -47,8 +33,7 @@
                 ]
             },
             "files": [],
-            "origin": "dockfony/dockfony:5.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "601185a79b3e63b56dd8c5ad7fdedf0c1e05d069"
         }
     }
 }

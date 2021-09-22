@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "loophp/psr17": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "3eba84e2a18dbc40cc5b3516863fe5808c5aa10d"
-            }
-        }
-    },
     "manifests": {
         "loophp/psr17": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "loophp/psr17",
-            "version": "1.0",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -22,13 +8,21 @@
             },
             "files": {
                 "config/packages/loophp_psr17.yaml": {
-                    "contents": "services:\n    # Register loophp/psr17/Psr17 class and autowire/autoconfigure it.\n    loophp\\psr17\\Psr17:\n        autowire: true\n        autoconfigure: true\n\n    # Alias the service to the Psr17 interface.\n    loophp\\psr17\\Psr17Interface: '@loophp\\psr17\\Psr17'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "services:",
+                        "    # Register loophp/psr17/Psr17 class and autowire/autoconfigure it.",
+                        "    loophp\\psr17\\Psr17:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    # Alias the service to the Psr17 interface.",
+                        "    loophp\\psr17\\Psr17Interface: '@loophp\\psr17\\Psr17'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "loophp/psr17:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "3eba84e2a18dbc40cc5b3516863fe5808c5aa10d"
         }
     }
 }

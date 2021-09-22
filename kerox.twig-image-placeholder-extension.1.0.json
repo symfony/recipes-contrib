@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "kerox/twig-image-placeholder-extension": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "3a02dea52ca648963f89b0a614d3f12c71369bce"
-            }
-        }
-    },
     "manifests": {
         "kerox/twig-image-placeholder-extension": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "kerox/twig-image-placeholder-extension",
-            "version": "1.0",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -22,13 +8,18 @@
             },
             "files": {
                 "config/packages/kerox_twig_image_placeholder.yaml": {
-                    "contents": "services:\n    Kerox\\TwigImagePlaceholder\\SvgPlaceholderExtension:\n        autowire: true\n        autoconfigure: true\n\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "services:",
+                        "    Kerox\\TwigImagePlaceholder\\SvgPlaceholderExtension:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "kerox/twig-image-placeholder-extension:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "3a02dea52ca648963f89b0a614d3f12c71369bce"
         }
     }
 }

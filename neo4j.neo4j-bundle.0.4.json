@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "neo4j/neo4j-bundle": {
-            "version": "0.4",
-            "recipe": {
-                "repo": "0.4",
-                "branch": "master",
-                "version": "0.4",
-                "ref": "6495062c1b893aefa55d2b11c7151abd936da1fa"
-            }
-        }
-    },
     "manifests": {
         "neo4j/neo4j-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "neo4j/neo4j-bundle",
-            "version": "0.4",
             "manifest": {
                 "bundles": {
                     "Neo4j\\Neo4jBundle\\Neo4jBundle": [
@@ -30,13 +16,17 @@
             },
             "files": {
                 "config/packages/neo4j.yaml": {
-                    "contents": "neo4j:\n    connections:\n        default:\n            dsn: '%env(resolve:NEO4J_DEFAULT_CONNECTION_DSN)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "neo4j:",
+                        "    connections:",
+                        "        default:",
+                        "            dsn: '%env(resolve:NEO4J_DEFAULT_CONNECTION_DSN)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "neo4j/neo4j-bundle:0.4@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "6495062c1b893aefa55d2b11c7151abd936da1fa"
         }
     }
 }

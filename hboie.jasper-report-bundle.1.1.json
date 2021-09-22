@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "hboie/jasper-report-bundle": {
-            "version": "1.1",
-            "recipe": {
-                "repo": "1.1",
-                "branch": "master",
-                "version": "1.1",
-                "ref": "d0a06c635f493cb3084c2a042eeb925cd96c6aa5"
-            }
-        }
-    },
     "manifests": {
         "hboie/jasper-report-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "hboie/jasper-report-bundle",
-            "version": "1.1",
             "manifest": {
                 "bundles": {
                     "Hboie\\JasperReportBundle\\HboieJasperReportBundle": [
@@ -32,13 +18,18 @@
             },
             "files": {
                 "config/packages/jasper_report.yaml": {
-                    "contents": "hboie_jasper_report:\n    host:      'http://localhost:8080/jasperserver'\n    username:  '%env(HBOIE_JASPER_REPORT_USERNAME)%'\n    password:  '%env(HBOIE_JASPER_REPORT_PASSWORD)%'\n    org_id:    '%env(HBOIE_JASPER_REPORT_ORGID)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "hboie_jasper_report:",
+                        "    host:      'http://localhost:8080/jasperserver'",
+                        "    username:  '%env(HBOIE_JASPER_REPORT_USERNAME)%'",
+                        "    password:  '%env(HBOIE_JASPER_REPORT_PASSWORD)%'",
+                        "    org_id:    '%env(HBOIE_JASPER_REPORT_ORGID)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "hboie/jasper-report-bundle:1.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "d0a06c635f493cb3084c2a042eeb925cd96c6aa5"
         }
     }
 }

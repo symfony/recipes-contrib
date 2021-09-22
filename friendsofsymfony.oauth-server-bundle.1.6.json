@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "friendsofsymfony/oauth-server-bundle": {
-            "version": "1.6",
-            "recipe": {
-                "repo": "1.6",
-                "branch": "master",
-                "version": "1.6",
-                "ref": "7300db1277b1ba025cdc2791171d9bf3e7adcc42"
-            }
-        }
-    },
     "manifests": {
         "friendsofsymfony/oauth-server-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "friendsofsymfony/oauth-server-bundle",
-            "version": "1.6",
             "manifest": {
                 "bundles": {
                     "FOS\\OAuthServerBundle\\FOSOAuthServerBundle": [
@@ -28,38 +14,168 @@
             },
             "files": {
                 "src/Entity/Client.php": {
-                    "contents": "<?php\n\nnamespace App\\Entity;\n\nuse Doctrine\\ORM\\Mapping as ORM;\nuse FOS\\OAuthServerBundle\\Entity\\Client as BaseClient;\n\n/**\n * @ORM\\Entity\n */\nclass Client extends BaseClient\n{\n    /**\n     * @ORM\\Id\n     * @ORM\\GeneratedValue\n     * @ORM\\Column(type=\"integer\")\n     */\n    protected $id;\n}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "use FOS\\OAuthServerBundle\\Entity\\Client as BaseClient;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity",
+                        " */",
+                        "class Client extends BaseClient",
+                        "{",
+                        "    /**",
+                        "     * @ORM\\Id",
+                        "     * @ORM\\GeneratedValue",
+                        "     * @ORM\\Column(type=\"integer\")",
+                        "     */",
+                        "    protected $id;",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "src/Entity/AccessToken.php": {
-                    "contents": "<?php\n\nnamespace App\\Entity;\n\nuse Doctrine\\ORM\\Mapping as ORM;\nuse FOS\\OAuthServerBundle\\Entity\\AccessToken as BaseAccessToken;\n\n/**\n * @ORM\\Entity\n */\nclass AccessToken extends BaseAccessToken\n{\n    /**\n     * @ORM\\Id\n     * @ORM\\GeneratedValue\n     * @ORM\\Column(type=\"integer\")\n     */\n    protected $id;\n\n    /**\n     * @ORM\\ManyToOne(targetEntity=\"App\\Entity\\Client\")\n     * @ORM\\JoinColumn(nullable=false)\n     */\n    protected $client;\n\n    /**\n     * @ORM\\ManyToOne(targetEntity=\"App\\Entity\\User\")\n     * @ORM\\JoinColumn(onDelete=\"CASCADE\")\n     */\n    protected $user;\n}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "use FOS\\OAuthServerBundle\\Entity\\AccessToken as BaseAccessToken;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity",
+                        " */",
+                        "class AccessToken extends BaseAccessToken",
+                        "{",
+                        "    /**",
+                        "     * @ORM\\Id",
+                        "     * @ORM\\GeneratedValue",
+                        "     * @ORM\\Column(type=\"integer\")",
+                        "     */",
+                        "    protected $id;",
+                        "",
+                        "    /**",
+                        "     * @ORM\\ManyToOne(targetEntity=\"App\\Entity\\Client\")",
+                        "     * @ORM\\JoinColumn(nullable=false)",
+                        "     */",
+                        "    protected $client;",
+                        "",
+                        "    /**",
+                        "     * @ORM\\ManyToOne(targetEntity=\"App\\Entity\\User\")",
+                        "     * @ORM\\JoinColumn(onDelete=\"CASCADE\")",
+                        "     */",
+                        "    protected $user;",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "src/Entity/RefreshToken.php": {
-                    "contents": "<?php\n\nnamespace App\\Entity;\n\nuse Doctrine\\ORM\\Mapping as ORM;\nuse FOS\\OAuthServerBundle\\Entity\\RefreshToken as BaseRefreshToken;\n\n/**\n * @ORM\\Entity\n */\nclass RefreshToken extends BaseRefreshToken\n{\n    /**\n     * @ORM\\Id\n     * @ORM\\GeneratedValue\n     * @ORM\\Column(type=\"integer\")\n     */\n    protected $id;\n\n    /**\n     * @ORM\\ManyToOne(targetEntity=\"App\\Entity\\Client\")\n     * @ORM\\JoinColumn(nullable=false)\n     */\n    protected $client;\n\n    /**\n     * @ORM\\ManyToOne(targetEntity=\"App\\Entity\\User\")\n     * @ORM\\JoinColumn(onDelete=\"CASCADE\")\n     */\n    protected $user;\n}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "use FOS\\OAuthServerBundle\\Entity\\RefreshToken as BaseRefreshToken;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity",
+                        " */",
+                        "class RefreshToken extends BaseRefreshToken",
+                        "{",
+                        "    /**",
+                        "     * @ORM\\Id",
+                        "     * @ORM\\GeneratedValue",
+                        "     * @ORM\\Column(type=\"integer\")",
+                        "     */",
+                        "    protected $id;",
+                        "",
+                        "    /**",
+                        "     * @ORM\\ManyToOne(targetEntity=\"App\\Entity\\Client\")",
+                        "     * @ORM\\JoinColumn(nullable=false)",
+                        "     */",
+                        "    protected $client;",
+                        "",
+                        "    /**",
+                        "     * @ORM\\ManyToOne(targetEntity=\"App\\Entity\\User\")",
+                        "     * @ORM\\JoinColumn(onDelete=\"CASCADE\")",
+                        "     */",
+                        "    protected $user;",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "src/Entity/AuthCode.php": {
-                    "contents": "<?php\n\nnamespace App\\Entity;\n\nuse Doctrine\\ORM\\Mapping as ORM;\nuse FOS\\OAuthServerBundle\\Entity\\AuthCode as BaseAuthCode;\n\n/**\n * @ORM\\Entity\n */\nclass AuthCode extends BaseAuthCode\n{\n    /**\n     * @ORM\\Id\n     * @ORM\\GeneratedValue\n     * @ORM\\Column(type=\"integer\")\n     */\n    protected $id;\n\n    /**\n     * @ORM\\ManyToOne(targetEntity=\"App\\Entity\\Client\")\n     * @ORM\\JoinColumn(nullable=false)\n     */\n    protected $client;\n\n    /**\n     * @ORM\\ManyToOne(targetEntity=\"App\\Entity\\User\")\n     * @ORM\\JoinColumn(onDelete=\"CASCADE\")\n     */\n    protected $user;\n}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "use FOS\\OAuthServerBundle\\Entity\\AuthCode as BaseAuthCode;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity",
+                        " */",
+                        "class AuthCode extends BaseAuthCode",
+                        "{",
+                        "    /**",
+                        "     * @ORM\\Id",
+                        "     * @ORM\\GeneratedValue",
+                        "     * @ORM\\Column(type=\"integer\")",
+                        "     */",
+                        "    protected $id;",
+                        "",
+                        "    /**",
+                        "     * @ORM\\ManyToOne(targetEntity=\"App\\Entity\\Client\")",
+                        "     * @ORM\\JoinColumn(nullable=false)",
+                        "     */",
+                        "    protected $client;",
+                        "",
+                        "    /**",
+                        "     * @ORM\\ManyToOne(targetEntity=\"App\\Entity\\User\")",
+                        "     * @ORM\\JoinColumn(onDelete=\"CASCADE\")",
+                        "     */",
+                        "    protected $user;",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/routes/fos_oauth_server.yaml": {
-                    "contents": "fos_oauth_server_token:\n    resource: \"@FOSOAuthServerBundle/Resources/config/routing/token.xml\"\n\nfos_oauth_server_authorize:\n    resource: \"@FOSOAuthServerBundle/Resources/config/routing/authorize.xml\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "fos_oauth_server_token:",
+                        "    resource: \"@FOSOAuthServerBundle/Resources/config/routing/token.xml\"",
+                        "",
+                        "fos_oauth_server_authorize:",
+                        "    resource: \"@FOSOAuthServerBundle/Resources/config/routing/authorize.xml\"",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/fos_oauth_server.yaml": {
-                    "contents": "# Read the documentation: https://github.com/FriendsOfSymfony/FOSOAuthServerBundle/blob/master/Resources/doc/index.md#step-5-configure-fosoauthserverbundle\nfos_oauth_server:\n    db_driver: orm\n\n    client_class: App\\Entity\\Client\n    access_token_class: App\\Entity\\AccessToken\n    refresh_token_class: App\\Entity\\RefreshToken\n    auth_code_class: App\\Entity\\AuthCode\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# Read the documentation: https://github.com/FriendsOfSymfony/FOSOAuthServerBundle/blob/master/Resources/doc/index.md#step-5-configure-fosoauthserverbundle",
+                        "fos_oauth_server:",
+                        "    db_driver: orm",
+                        "",
+                        "    client_class: App\\Entity\\Client",
+                        "    access_token_class: App\\Entity\\AccessToken",
+                        "    refresh_token_class: App\\Entity\\RefreshToken",
+                        "    auth_code_class: App\\Entity\\AuthCode",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "friendsofsymfony/oauth-server-bundle:1.6@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "7300db1277b1ba025cdc2791171d9bf3e7adcc42"
         }
     }
 }

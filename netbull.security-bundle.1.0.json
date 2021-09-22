@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "netbull/security-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "574d4e24a60fa82fb6a937c5ac1a1e757463944e"
-            }
-        }
-    },
     "manifests": {
         "netbull/security-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "netbull/security-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "NetBull\\SecurityBundle\\NetBullSecurityBundle": [
@@ -27,8 +13,7 @@
                 }
             },
             "files": [],
-            "origin": "netbull/security-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "574d4e24a60fa82fb6a937c5ac1a1e757463944e"
         }
     }
 }

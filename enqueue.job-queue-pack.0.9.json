@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "enqueue/job-queue-pack": {
-            "version": "0.9",
-            "recipe": {
-                "repo": "0.9",
-                "branch": "master",
-                "version": "0.9",
-                "ref": "7d2f96e5f54e85198e4e1c1d611fba7e2726c012"
-            }
-        }
-    },
     "manifests": {
         "enqueue/job-queue-pack": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "enqueue/job-queue-pack",
-            "version": "0.9",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -22,13 +8,25 @@
             },
             "files": {
                 "config/packages/enqueue_job_queue.yaml": {
-                    "contents": "enqueue:\n    default:\n        job: true\n\ndoctrine:\n    orm:\n        mappings:\n            EnqueueJobQueue:\n                is_bundle: false\n                type: xml\n                dir: '%kernel.project_dir%/vendor/enqueue/job-queue/Doctrine/mapping'\n                prefix: 'Enqueue\\JobQueue\\Doctrine\\Entity'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "enqueue:",
+                        "    default:",
+                        "        job: true",
+                        "",
+                        "doctrine:",
+                        "    orm:",
+                        "        mappings:",
+                        "            EnqueueJobQueue:",
+                        "                is_bundle: false",
+                        "                type: xml",
+                        "                dir: '%kernel.project_dir%/vendor/enqueue/job-queue/Doctrine/mapping'",
+                        "                prefix: 'Enqueue\\JobQueue\\Doctrine\\Entity'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "enqueue/job-queue-pack:0.9@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "7d2f96e5f54e85198e4e1c1d611fba7e2726c012"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "phpzlc/platform-business": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "a5fc699d27ec689aa03bd0c0294824a12b633a2e"
-            }
-        }
-    },
     "manifests": {
         "phpzlc/platform-business": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "phpzlc/platform-business",
-            "version": "1.0",
             "manifest": {
                 "copy-from-package": {
                     "Business/": "src/Business/",
@@ -22,8 +8,7 @@
                 }
             },
             "files": [],
-            "origin": "phpzlc/platform-business:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "a5fc699d27ec689aa03bd0c0294824a12b633a2e"
         }
     }
 }

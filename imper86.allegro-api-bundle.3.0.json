@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "imper86/allegro-api-bundle": {
-            "version": "3.0",
-            "recipe": {
-                "repo": "3.0",
-                "branch": "master",
-                "version": "3.0",
-                "ref": "1cdfc3f653eac69a087b2888f16c3cf173967105"
-            }
-        }
-    },
     "manifests": {
         "imper86/allegro-api-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "imper86/allegro-api-bundle",
-            "version": "3.0",
             "manifest": {
                 "bundles": {
                     "Imper86\\AllegroApiBundle\\Imper86AllegroApiBundle": [
@@ -38,18 +24,23 @@
             },
             "files": {
                 "config/routes/imper86_allegro_api.yaml": {
-                    "contents": "imper86_allegro_api:\n    resource: '@Imper86AllegroApiBundle/Resources/config/routes.xml'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "imper86_allegro_api:",
+                        "    resource: '@Imper86AllegroApiBundle/Resources/config/routes.xml'",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/imper86_allegro_api.yaml": {
-                    "contents": "imper86_allegro_api:\n    sandbox: true\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "imper86_allegro_api:",
+                        "    sandbox: true",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "imper86/allegro-api-bundle:3.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "1cdfc3f653eac69a087b2888f16c3cf173967105"
         }
     }
 }

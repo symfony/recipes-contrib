@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "hans-peter-ording/nflfastr-symfony-bundle": {
-            "version": "0.9",
-            "recipe": {
-                "repo": "0.9",
-                "branch": "master",
-                "version": "0.9",
-                "ref": "860088e810cf49f16d52720bc4a0ae50ba6177c9"
-            }
-        }
-    },
     "manifests": {
         "hans-peter-ording/nflfastr-symfony-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "hans-peter-ording/nflfastr-symfony-bundle",
-            "version": "0.9",
             "manifest": {
                 "bundles": {
                     "HansPeterOrding\\NflFastrSymfonyBundle\\NflFastrSymfonyBundle": [
@@ -27,13 +13,22 @@
             },
             "files": {
                 "config/packages/nfl_fastr_symfony.yaml": {
-                    "contents": "nfl_fastr_symfony:\n    timezone: Europe/Berlin\n    sources:\n        playByPlay:\n            baseUrl: https://github.com/guga31bb/nflfastR-data\n            path: tree/master/data\n        roster:\n            baseUrl: https://github.com/mrcaseb/nflfastR-roster\n            path: tree/master/data/seasons\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "nfl_fastr_symfony:",
+                        "    timezone: Europe/Berlin",
+                        "    sources:",
+                        "        playByPlay:",
+                        "            baseUrl: https://github.com/guga31bb/nflfastR-data",
+                        "            path: tree/master/data",
+                        "        roster:",
+                        "            baseUrl: https://github.com/mrcaseb/nflfastR-roster",
+                        "            path: tree/master/data/seasons",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "hans-peter-ording/nflfastr-symfony-bundle:0.9@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "860088e810cf49f16d52720bc4a0ae50ba6177c9"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "php-translation/loco-adapter": {
-            "version": "0.8",
-            "recipe": {
-                "repo": "0.8",
-                "branch": "master",
-                "version": "0.8",
-                "ref": "c97545d1c229338606d881294eceeb4cdc993777"
-            }
-        }
-    },
     "manifests": {
         "php-translation/loco-adapter": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "php-translation/loco-adapter",
-            "version": "0.8",
             "manifest": {
                 "bundles": {
                     "Translation\\PlatformAdapter\\Loco\\Bridge\\Symfony\\TranslationAdapterLocoBundle": [
@@ -30,13 +16,19 @@
             },
             "files": {
                 "config/packages/php_translation_loco_adapter.yaml": {
-                    "contents": "translation_adapter_loco:\n    index_parameter: 'id' # 'text' or 'name'. Leave blank for \"auto\"  See https://localise.biz/api/docs/export/exportlocale\n    projects:\n        my_project:\n            api_key: '%env(LOCO_PROJECT_API_KEY)%'\n            domains: ['messages']\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "translation_adapter_loco:",
+                        "    index_parameter: 'id' # 'text' or 'name'. Leave blank for \"auto\"  See https://localise.biz/api/docs/export/exportlocale",
+                        "    projects:",
+                        "        my_project:",
+                        "            api_key: '%env(LOCO_PROJECT_API_KEY)%'",
+                        "            domains: ['messages']",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "php-translation/loco-adapter:0.8@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "c97545d1c229338606d881294eceeb4cdc993777"
         }
     }
 }

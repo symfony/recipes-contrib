@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "facile-it/mongodb-bundle": {
-            "version": "0.6",
-            "recipe": {
-                "repo": "0.6",
-                "branch": "master",
-                "version": "0.6",
-                "ref": "694215679ed64311cea9177b0de851a1fa0c7e74"
-            }
-        }
-    },
     "manifests": {
         "facile-it/mongodb-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "facile-it/mongodb-bundle",
-            "version": "0.6",
             "manifest": {
                 "bundles": {
                     "Facile\\MongoDbBundle\\FacileMongoDbBundle": [
@@ -34,13 +20,30 @@
             },
             "files": {
                 "config/packages/facile_it_mongodb.yaml": {
-                    "contents": "mongo_db_bundle:\n    data_collection: '%kernel.debug%'\n    clients:\n        default:\n            hosts:\n                - { host: '%env(MONGODB_HOST)%', port: '%env(int:MONGODB_PORT)%' }\n            username:         '%env(MONGODB_USER)%'\n            password:         '%env(MONGODB_PASSWORD)%'\n            replicaSet:       '' # default null (no replica)\n            ssl:              false\n            connectTimeoutMS: 3000\n            readPreference:   primaryPreferred # see https://docs.mongodb.com/manual/reference/read-preference/#primary for info\n\n    connections:\n        default:\n            client_name:    default\n            database_name:  '%env(MONGODB_DB)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "mongo_db_bundle:",
+                        "    data_collection: '%kernel.debug%'",
+                        "    clients:",
+                        "        default:",
+                        "            hosts:",
+                        "                - { host: '%env(MONGODB_HOST)%', port: '%env(int:MONGODB_PORT)%' }",
+                        "            username:         '%env(MONGODB_USER)%'",
+                        "            password:         '%env(MONGODB_PASSWORD)%'",
+                        "            replicaSet:       '' # default null (no replica)",
+                        "            ssl:              false",
+                        "            connectTimeoutMS: 3000",
+                        "            readPreference:   primaryPreferred # see https://docs.mongodb.com/manual/reference/read-preference/#primary for info",
+                        "",
+                        "    connections:",
+                        "        default:",
+                        "            client_name:    default",
+                        "            database_name:  '%env(MONGODB_DB)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "facile-it/mongodb-bundle:0.6@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "694215679ed64311cea9177b0de851a1fa0c7e74"
         }
     }
 }

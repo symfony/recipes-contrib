@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "troopers/mangopay-bundle": {
-            "version": "3.0",
-            "recipe": {
-                "repo": "3.0",
-                "branch": "master",
-                "version": "3.0",
-                "ref": "3d20e33c913b0a2dae803858c918c6ef9267074a"
-            }
-        }
-    },
     "manifests": {
         "troopers/mangopay-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "troopers/mangopay-bundle",
-            "version": "3.0",
             "manifest": {
                 "bundles": {
                     "Troopers\\MangopayBundle\\TroopersMangopayBundle": [
@@ -32,13 +18,17 @@
             },
             "files": {
                 "config/packages/troopers_mangopay.yaml": {
-                    "contents": "troopers_mangopay:\n    client_id: \"%env(TROOPERS_MANGOPAY_CLIENT_ID)%\"\n    client_password: \"%env(TROOPERS_MANGOPAY_CLIENT_PASSWORD)%\"\n    base_url: \"%env(TROOPERS_MANGOPAY_BASE_URL)%\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "troopers_mangopay:",
+                        "    client_id: \"%env(TROOPERS_MANGOPAY_CLIENT_ID)%\"",
+                        "    client_password: \"%env(TROOPERS_MANGOPAY_CLIENT_PASSWORD)%\"",
+                        "    base_url: \"%env(TROOPERS_MANGOPAY_BASE_URL)%\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "troopers/mangopay-bundle:3.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "3d20e33c913b0a2dae803858c918c6ef9267074a"
         }
     }
 }

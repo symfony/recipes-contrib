@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "odiseoteam/sylius-vendor-plugin": {
-            "version": "1.2",
-            "recipe": {
-                "repo": "1.2",
-                "branch": "master",
-                "version": "1.2",
-                "ref": "001463bcdb5c8ab5b61ca1a6ab98381359614d14"
-            }
-        }
-    },
     "manifests": {
         "odiseoteam/sylius-vendor-plugin": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "odiseoteam/sylius-vendor-plugin",
-            "version": "1.2",
             "manifest": {
                 "bundles": {
                     "Odiseo\\SyliusVendorPlugin\\OdiseoSyliusVendorPlugin": [
@@ -27,18 +13,34 @@
             },
             "files": {
                 "config/routes/odiseo_sylius_vendor_plugin.yaml": {
-                    "contents": "odiseo_sylius_vendor_plugin_admin:\n    resource: \"@OdiseoSyliusVendorPlugin/Resources/config/routing/admin.yaml\"\n    prefix: /admin\n\nodiseo_sylius_vendor_plugin_shop:\n    resource: \"@OdiseoSyliusVendorPlugin/Resources/config/routing/shop.yaml\"\n    prefix: /{_locale}/vendors\n    requirements:\n        _locale: ^[a-z]{2}(?:_[A-Z]{2})?$\n\nodiseo_sylius_vendor_plugin_api:\n    resource: \"@OdiseoSyliusVendorPlugin/Resources/config/routing/api.yaml\"\n    prefix: /api\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "odiseo_sylius_vendor_plugin_admin:",
+                        "    resource: \"@OdiseoSyliusVendorPlugin/Resources/config/routing/admin.yaml\"",
+                        "    prefix: /admin",
+                        "",
+                        "odiseo_sylius_vendor_plugin_shop:",
+                        "    resource: \"@OdiseoSyliusVendorPlugin/Resources/config/routing/shop.yaml\"",
+                        "    prefix: /{_locale}/vendors",
+                        "    requirements:",
+                        "        _locale: ^[a-z]{2}(?:_[A-Z]{2})?$",
+                        "",
+                        "odiseo_sylius_vendor_plugin_api:",
+                        "    resource: \"@OdiseoSyliusVendorPlugin/Resources/config/routing/api.yaml\"",
+                        "    prefix: /api",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/odiseo_sylius_vendor_plugin.yaml": {
-                    "contents": "imports:\n    - { resource: \"@OdiseoSyliusVendorPlugin/Resources/config/config.yaml\" }\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@OdiseoSyliusVendorPlugin/Resources/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "odiseoteam/sylius-vendor-plugin:1.2@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "001463bcdb5c8ab5b61ca1a6ab98381359614d14"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "willdurand/geocoder-bundle": {
-            "version": "4.1",
-            "recipe": {
-                "repo": "4.1",
-                "branch": "master",
-                "version": "4.1",
-                "ref": "858d8e1ec0c07fbdc57526e338264ac945b3ffe1"
-            }
-        }
-    },
     "manifests": {
         "willdurand/geocoder-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "willdurand/geocoder-bundle",
-            "version": "4.1",
             "manifest": {
                 "bundles": {
                     "Bazinga\\Bundle\\GeocoderBundle\\BazingaGeocoderBundle": [
@@ -27,13 +13,17 @@
             },
             "files": {
                 "config/packages/dev/bazinga_geocoder.yaml": {
-                    "contents": "bazinga_geocoder:\n    # the IP used as the REMOTE_ADDR for all HTTP requests in \"dev\" environment\n    # see https://github.com/geocoder-php/BazingaGeocoderBundle/blob/master/Resources/doc/index.md\n    fake_ip: 123.123.123.123\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "bazinga_geocoder:",
+                        "    # the IP used as the REMOTE_ADDR for all HTTP requests in \"dev\" environment",
+                        "    # see https://github.com/geocoder-php/BazingaGeocoderBundle/blob/master/Resources/doc/index.md",
+                        "    fake_ip: 123.123.123.123",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "willdurand/geocoder-bundle:4.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "858d8e1ec0c07fbdc57526e338264ac945b3ffe1"
         }
     }
 }

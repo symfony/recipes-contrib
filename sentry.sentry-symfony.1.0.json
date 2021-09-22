@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "sentry/sentry-symfony": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "fa1a2dfc020798cd7076b5419596e72dca07047a"
-            }
-        }
-    },
     "manifests": {
         "sentry/sentry-symfony": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "sentry/sentry-symfony",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Sentry\\SentryBundle\\SentryBundle": [
@@ -30,18 +16,29 @@
             },
             "files": {
                 "config/packages/sentry.yaml": {
-                    "contents": "sentry:\n    options:\n        curl_method: async\n\n#    skip_capture:  # To skip certain exceptions, specify a list below\n#      - 'Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException'\n#      - 'Symfony\\Component\\HttpKernel\\Exception\\BadRequestHttpException'\n#      - 'Symfony\\Component\\HttpKernel\\Exception\\AccessDeniedHttpException'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "sentry:",
+                        "    options:",
+                        "        curl_method: async",
+                        "",
+                        "#    skip_capture:  # To skip certain exceptions, specify a list below",
+                        "#      - 'Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException'",
+                        "#      - 'Symfony\\Component\\HttpKernel\\Exception\\BadRequestHttpException'",
+                        "#      - 'Symfony\\Component\\HttpKernel\\Exception\\AccessDeniedHttpException'",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/prod/sentry.yaml": {
-                    "contents": "sentry:\n    dsn: '%env(SENTRY_DSN)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "sentry:",
+                        "    dsn: '%env(SENTRY_DSN)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "sentry/sentry-symfony:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "fa1a2dfc020798cd7076b5419596e72dca07047a"
         }
     }
 }

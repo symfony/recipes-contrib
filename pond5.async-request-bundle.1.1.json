@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "pond5/async-request-bundle": {
-            "version": "1.1",
-            "recipe": {
-                "repo": "1.1",
-                "branch": "master",
-                "version": "1.1",
-                "ref": "285e2319413af89dc842505b81f936b7d027a07d"
-            }
-        }
-    },
     "manifests": {
         "pond5/async-request-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "pond5/async-request-bundle",
-            "version": "1.1",
             "manifest": {
                 "bundles": {
                     "Pond5\\AsyncRequestBundle\\Pond5AsyncRequestBundle": [
@@ -27,13 +13,23 @@
             },
             "files": {
                 "config/packages/pond5_async_request.yaml": {
-                    "contents": "pond5_async_request:\n    #header: X-Request-Async # user defined header name to indicate asynchronous request - X-Request-Async used by default\n    #methods: [DELETE, PATCH, POST, PUT] # HTTP methods that should support async requests\n    transport: async-request # messenger transport name, ignored if messenger routing for Pond5\\AsyncRequestBundle\\Message\\AsyncRequestNotification is configured manually\n\n# can be omitted when using transport configured in another file (e.g. messenger.yaml)\nframework:\n    messenger:\n        transports:\n            async-request: '%env(MESSENGER_TRANSPORT_DSN)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "pond5_async_request:",
+                        "    #header: X-Request-Async # user defined header name to indicate asynchronous request - X-Request-Async used by default",
+                        "    #methods: [DELETE, PATCH, POST, PUT] # HTTP methods that should support async requests",
+                        "    transport: async-request # messenger transport name, ignored if messenger routing for Pond5\\AsyncRequestBundle\\Message\\AsyncRequestNotification is configured manually",
+                        "",
+                        "# can be omitted when using transport configured in another file (e.g. messenger.yaml)",
+                        "framework:",
+                        "    messenger:",
+                        "        transports:",
+                        "            async-request: '%env(MESSENGER_TRANSPORT_DSN)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "pond5/async-request-bundle:1.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "285e2319413af89dc842505b81f936b7d027a07d"
         }
     }
 }

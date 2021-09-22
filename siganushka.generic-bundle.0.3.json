@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "siganushka/generic-bundle": {
-            "version": "0.3",
-            "recipe": {
-                "repo": "0.3",
-                "branch": "master",
-                "version": "0.3",
-                "ref": "74fe9f1ba467f52335bc050e8812ecf8dd442ebb"
-            }
-        }
-    },
     "manifests": {
         "siganushka/generic-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "siganushka/generic-bundle",
-            "version": "0.3",
             "manifest": {
                 "bundles": {
                     "Siganushka\\GenericBundle\\SiganushkaGenericBundle": [
@@ -26,8 +12,7 @@
                 }
             },
             "files": [],
-            "origin": "siganushka/generic-bundle:0.3@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "74fe9f1ba467f52335bc050e8812ecf8dd442ebb"
         }
     }
 }

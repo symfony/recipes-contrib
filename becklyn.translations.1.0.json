@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "becklyn/translations": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "b827e87157a4937728b199c68fddcc0b63632c2f"
-            }
-        }
-    },
     "manifests": {
         "becklyn/translations": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "becklyn/translations",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Becklyn\\Translations\\BecklynTranslationsBundle": [
@@ -27,13 +13,16 @@
             },
             "files": {
                 "config/routes/becklyn_translations.yaml": {
-                    "contents": "_import.becklyn_translations:\n    resource: '@BecklynTranslationsBundle/Resources/config/routes.yaml'\n    prefix: /_v/translations/\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "_import.becklyn_translations:",
+                        "    resource: '@BecklynTranslationsBundle/Resources/config/routes.yaml'",
+                        "    prefix: /_v/translations/",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "becklyn/translations:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "b827e87157a4937728b199c68fddcc0b63632c2f"
         }
     }
 }

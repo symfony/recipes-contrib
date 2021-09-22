@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "webinarium/symfony-lazysec": {
-            "version": "2.1",
-            "recipe": {
-                "repo": "2.1",
-                "branch": "master",
-                "version": "2.1",
-                "ref": "2ca4d2ee744f5dc7d166ebc4cca2a5719242f084"
-            }
-        }
-    },
     "manifests": {
         "webinarium/symfony-lazysec": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "webinarium/symfony-lazysec",
-            "version": "2.1",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -22,13 +8,28 @@
             },
             "files": {
                 "config/packages/lazysec.yaml": {
-                    "contents": "services:\n\n    # See https://github.com/webinarium/symfony-lazysec/wiki/User-checker\n    LazySec\\Checker\\GenericUserChecker:\n        autowire: true\n        public: false\n\n    # See https://github.com/webinarium/symfony-lazysec/wiki/User-provider\n    LazySec\\Provider\\GenericUserProvider:\n        autowire: true\n        public: false\n\n    # Uncomment the line below and update path to your repository there,\n    # if you want use the 'GenericUserProvider' service from above\n    #LazySec\\Repository\\UserRepositoryInterface: '@App\\Repository\\UserRepository'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "services:",
+                        "",
+                        "    # See https://github.com/webinarium/symfony-lazysec/wiki/User-checker",
+                        "    LazySec\\Checker\\GenericUserChecker:",
+                        "        autowire: true",
+                        "        public: false",
+                        "",
+                        "    # See https://github.com/webinarium/symfony-lazysec/wiki/User-provider",
+                        "    LazySec\\Provider\\GenericUserProvider:",
+                        "        autowire: true",
+                        "        public: false",
+                        "",
+                        "    # Uncomment the line below and update path to your repository there,",
+                        "    # if you want use the 'GenericUserProvider' service from above",
+                        "    #LazySec\\Repository\\UserRepositoryInterface: '@App\\Repository\\UserRepository'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "webinarium/symfony-lazysec:2.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "2ca4d2ee744f5dc7d166ebc4cca2a5719242f084"
         }
     }
 }

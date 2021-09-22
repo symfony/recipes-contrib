@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "ns3777k/prometheus-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "3dc7f388737fcffbe0343eee25eddbb2634f27e3"
-            }
-        }
-    },
     "manifests": {
         "ns3777k/prometheus-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "ns3777k/prometheus-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Ns3777k\\PrometheusBundle\\Ns3777kPrometheusBundle": [
@@ -27,23 +13,35 @@
             },
             "files": {
                 "config/routes/ns3777k_prometheus_metrics.yaml": {
-                    "contents": "metrics:\n    resource: '@Ns3777kPrometheusBundle/Resources/config/routing.xml'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "metrics:",
+                        "    resource: '@Ns3777kPrometheusBundle/Resources/config/routing.xml'",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/test/ns3777k_prometheus.yaml": {
-                    "contents": "ns3777k_prometheus:\n    adapter: in_memory\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "ns3777k_prometheus:",
+                        "    adapter: in_memory",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/ns3777k_prometheus.yaml": {
-                    "contents": "ns3777k_prometheus:\n    namespace: app\n    adapter: apcu\n\n    listener:\n        ignored_routes: [metrics, _wdt]\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "ns3777k_prometheus:",
+                        "    namespace: app",
+                        "    adapter: apcu",
+                        "",
+                        "    listener:",
+                        "        ignored_routes: [metrics, _wdt]",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "ns3777k/prometheus-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "3dc7f388737fcffbe0343eee25eddbb2634f27e3"
         }
     }
 }

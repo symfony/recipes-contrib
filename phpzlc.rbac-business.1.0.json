@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "phpzlc/rbac-business": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "a3c48cf8fbde0884b00fe4b5182d8b8041adf704"
-            }
-        }
-    },
     "manifests": {
         "phpzlc/rbac-business": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "phpzlc/rbac-business",
-            "version": "1.0",
             "manifest": {
                 "copy-from-package": {
                     "Business/": "src/Business/",
@@ -24,8 +10,7 @@
                 }
             },
             "files": [],
-            "origin": "phpzlc/rbac-business:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "a3c48cf8fbde0884b00fe4b5182d8b8041adf704"
         }
     }
 }

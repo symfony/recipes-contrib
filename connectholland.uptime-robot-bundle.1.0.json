@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "connectholland/uptime-robot-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "cce5373677f7543c76cb8613e0fe529de4b3a5c8"
-            }
-        }
-    },
     "manifests": {
         "connectholland/uptime-robot-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "connectholland/uptime-robot-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "ConnectHolland\\UptimeRobotBundle\\ConnecthollandUptimeRobotBundle": [
@@ -34,13 +20,15 @@
             },
             "files": {
                 "config/packages/connectholland_uptime_robot.yaml": {
-                    "contents": "connectholland_uptime_robot:\n    api_key: '%env(string:UPTIMEROBOT_API_KEY)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "connectholland_uptime_robot:",
+                        "    api_key: '%env(string:UPTIMEROBOT_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "connectholland/uptime-robot-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "cce5373677f7543c76cb8613e0fe529de4b3a5c8"
         }
     }
 }

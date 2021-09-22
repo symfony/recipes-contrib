@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "tilleuls/url-signer-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "20cec2e3050fe3d40d514b8c46ac934ab1f0580e"
-            }
-        }
-    },
     "manifests": {
         "tilleuls/url-signer-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "tilleuls/url-signer-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "CoopTilleuls\\UrlSignerBundle\\CoopTilleulsUrlSignerBundle": [
@@ -30,13 +16,15 @@
             },
             "files": {
                 "config/packages/url_signer.yaml": {
-                    "contents": "coop_tilleuls_url_signer:\n    signature_key: '%env(string:SIGNATURE_KEY)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "coop_tilleuls_url_signer:",
+                        "    signature_key: '%env(string:SIGNATURE_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "tilleuls/url-signer-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "20cec2e3050fe3d40d514b8c46ac934ab1f0580e"
         }
     }
 }

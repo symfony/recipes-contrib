@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "mobizel/symfony-capistrano": {
-            "version": "0.2",
-            "recipe": {
-                "repo": "0.2",
-                "branch": "master",
-                "version": "0.2",
-                "ref": "a0e63c8b2e9e7489fcbdbe9fd03ee953f8ec3f29"
-            }
-        }
-    },
     "manifests": {
         "mobizel/symfony-capistrano": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "mobizel/symfony-capistrano",
-            "version": "0.2",
             "manifest": {
                 "copy-from-package": {
                     "Capfile": "Capfile",
@@ -28,8 +14,7 @@
                 ]
             },
             "files": [],
-            "origin": "mobizel/symfony-capistrano:0.2@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "a0e63c8b2e9e7489fcbdbe9fd03ee953f8ec3f29"
         }
     }
 }

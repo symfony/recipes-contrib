@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "wow-apps/symfony-slack-bot": {
-            "version": "3.2",
-            "recipe": {
-                "repo": "3.2",
-                "branch": "master",
-                "version": "3.2",
-                "ref": "13f0faeb4edc98b33972b7f99e80b91e34050874"
-            }
-        }
-    },
     "manifests": {
         "wow-apps/symfony-slack-bot": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "wow-apps/symfony-slack-bot",
-            "version": "3.2",
             "manifest": {
                 "bundles": {
                     "WowApps\\SlackBundle\\WowAppsSlackBundle": [
@@ -30,13 +16,17 @@
             },
             "files": {
                 "config/packages/wow_apps_slack.yaml": {
-                    "contents": "# SlackBot Configuration\n# Documentation https://github.com/wow-apps/symfony-slack-bot/wiki\nwow_apps_slack:\n    api_url: '%env(WOW_APPS_SLACK_BOT_API_URL)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# SlackBot Configuration",
+                        "# Documentation https://github.com/wow-apps/symfony-slack-bot/wiki",
+                        "wow_apps_slack:",
+                        "    api_url: '%env(WOW_APPS_SLACK_BOT_API_URL)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "wow-apps/symfony-slack-bot:3.2@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "13f0faeb4edc98b33972b7f99e80b91e34050874"
         }
     }
 }

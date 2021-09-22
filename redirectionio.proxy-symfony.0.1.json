@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "redirectionio/proxy-symfony": {
-            "version": "0.1",
-            "recipe": {
-                "repo": "0.1",
-                "branch": "master",
-                "version": "0.1",
-                "ref": "0ef8d362981775b536f37c36892d53c2866fdfc4"
-            }
-        }
-    },
     "manifests": {
         "redirectionio/proxy-symfony": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "redirectionio/proxy-symfony",
-            "version": "0.1",
             "manifest": {
                 "bundles": {
                     "RedirectionIO\\Client\\ProxySymfony\\RedirectionIOBundle": [
@@ -27,13 +13,18 @@
             },
             "files": {
                 "config/packages/redirectionio.yaml": {
-                    "contents": "# Documentation: https://github.com/redirectionio/proxy-symfony\nredirection_io:\n    connections:\n        my_agent: tcp://127.0.0.1:10301\n        # another_agent: unix:///var/run/redirectionio.sock\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# Documentation: https://github.com/redirectionio/proxy-symfony",
+                        "redirection_io:",
+                        "    connections:",
+                        "        my_agent: tcp://127.0.0.1:10301",
+                        "        # another_agent: unix:///var/run/redirectionio.sock",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "redirectionio/proxy-symfony:0.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "0ef8d362981775b536f37c36892d53c2866fdfc4"
         }
     }
 }

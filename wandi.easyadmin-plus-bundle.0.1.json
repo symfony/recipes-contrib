@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "wandi/easyadmin-plus-bundle": {
-            "version": "0.1",
-            "recipe": {
-                "repo": "0.1",
-                "branch": "master",
-                "version": "0.1",
-                "ref": "07210dd45f3fab4e4eade6486af6310c42456b7f"
-            }
-        }
-    },
     "manifests": {
         "wandi/easyadmin-plus-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "wandi/easyadmin-plus-bundle",
-            "version": "0.1",
             "manifest": {
                 "bundles": {
                     "Wandi\\EasyAdminPlusBundle\\WandiEasyAdminPlusBundle": [
@@ -27,13 +13,16 @@
             },
             "files": {
                 "config/routes/wandi_easy_admin_plus.yaml": {
-                    "contents": "wandi_easy_admin_plus:\n    resource: '@WandiEasyAdminPlusBundle/Resources/config/routing.yml'\n    prefix: /admin\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "wandi_easy_admin_plus:",
+                        "    resource: '@WandiEasyAdminPlusBundle/Resources/config/routing.yml'",
+                        "    prefix: /admin",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "wandi/easyadmin-plus-bundle:0.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "07210dd45f3fab4e4eade6486af6310c42456b7f"
         }
     }
 }

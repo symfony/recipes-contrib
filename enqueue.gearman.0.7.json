@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "enqueue/gearman": {
-            "version": "0.7",
-            "recipe": {
-                "repo": "0.7",
-                "branch": "master",
-                "version": "0.7",
-                "ref": "102e2c2aabba082d3760567c66a000ea5526e964"
-            }
-        }
-    },
     "manifests": {
         "enqueue/gearman": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "enqueue/gearman",
-            "version": "0.7",
             "manifest": {
                 "post-install-output": [
                     "  * Configure <comment>ENQUEUE_DSN=gearman://example:5555</comment>",
@@ -25,8 +11,7 @@
                 ]
             },
             "files": [],
-            "origin": "enqueue/gearman:0.7@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "102e2c2aabba082d3760567c66a000ea5526e964"
         }
     }
 }

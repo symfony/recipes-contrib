@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "reconnect/s3bundle": {
-            "version": "0.1",
-            "recipe": {
-                "repo": "0.1",
-                "branch": "master",
-                "version": "0.1",
-                "ref": "de320eec87a12822faca2d881e0aae50e6c9830f"
-            }
-        }
-    },
     "manifests": {
         "reconnect/s3bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "reconnect/s3bundle",
-            "version": "0.1",
             "manifest": {
                 "bundles": {
                     "Reconnect\\S3Bundle\\S3Bundle": [
@@ -33,13 +19,18 @@
             },
             "files": {
                 "config/packages/reconnect_s3_bundle.yaml": {
-                    "contents": "reconnect_s3_bundle:\n    bucketHost: '%env(BUCKET_HOST)%'\n    bucketName: '%env(BUCKET_NAME)%'\n    bucketKey: '%env(BUCKET_KEY)%'\n    bucketSecret: '%env(BUCKET_SECRET)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "reconnect_s3_bundle:",
+                        "    bucketHost: '%env(BUCKET_HOST)%'",
+                        "    bucketName: '%env(BUCKET_NAME)%'",
+                        "    bucketKey: '%env(BUCKET_KEY)%'",
+                        "    bucketSecret: '%env(BUCKET_SECRET)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "reconnect/s3bundle:0.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "de320eec87a12822faca2d881e0aae50e6c9830f"
         }
     }
 }

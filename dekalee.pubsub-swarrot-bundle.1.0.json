@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "dekalee/pubsub-swarrot-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "1bd103acb5e43904306e17f1cd586286f6fe75d8"
-            }
-        }
-    },
     "manifests": {
         "dekalee/pubsub-swarrot-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "dekalee/pubsub-swarrot-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Dekalee\\PubSubSwarrotBundle\\DekaleePubSubSwarrotBundle": [
@@ -34,13 +20,15 @@
             },
             "files": {
                 "config/packages/dekalee_pub_sub_swarrot.yaml": {
-                    "contents": "dekalee_pub_sub_swarrot:\n    key_file_path: '%env(DEKALEE_PUBSUB_SWARROT_KEY_FILE_PATH)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "dekalee_pub_sub_swarrot:",
+                        "    key_file_path: '%env(DEKALEE_PUBSUB_SWARROT_KEY_FILE_PATH)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "dekalee/pubsub-swarrot-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "1bd103acb5e43904306e17f1cd586286f6fe75d8"
         }
     }
 }

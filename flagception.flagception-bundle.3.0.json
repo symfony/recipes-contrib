@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "flagception/flagception-bundle": {
-            "version": "3.0",
-            "recipe": {
-                "repo": "3.0",
-                "branch": "master",
-                "version": "3.0",
-                "ref": "9f045b9e854039c20e9ecf54aa8d9868c1b841cd"
-            }
-        }
-    },
     "manifests": {
         "flagception/flagception-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "flagception/flagception-bundle",
-            "version": "3.0",
             "manifest": {
                 "bundles": {
                     "Flagception\\Bundle\\FlagceptionBundle\\FlagceptionBundle": [
@@ -27,13 +13,18 @@
             },
             "files": {
                 "config/packages/flagception.yaml": {
-                    "contents": "# See full configuration at https://github.com/bestit/flagception-bundle\nflagception:\n    features:\n        demo_123:\n            default: true\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# See full configuration at https://github.com/bestit/flagception-bundle",
+                        "flagception:",
+                        "    features:",
+                        "        demo_123:",
+                        "            default: true",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "flagception/flagception-bundle:3.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "9f045b9e854039c20e9ecf54aa8d9868c1b841cd"
         }
     }
 }

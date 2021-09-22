@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "phpzlc/admin-business": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "0c1ec358b8ddd45c2bef97720dbd185631975d22"
-            }
-        }
-    },
     "manifests": {
         "phpzlc/admin-business": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "phpzlc/admin-business",
-            "version": "1.0",
             "manifest": {
                 "copy-from-package": {
                     "routing/": "config/routing/",
@@ -27,8 +13,7 @@
                 }
             },
             "files": [],
-            "origin": "phpzlc/admin-business:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "0c1ec358b8ddd45c2bef97720dbd185631975d22"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "monsieurbiz/sylius-admin-better-login-plugin": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "a6c23a07571c20357e222f06735fdf7a20571895"
-            }
-        }
-    },
     "manifests": {
         "monsieurbiz/sylius-admin-better-login-plugin": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "monsieurbiz/sylius-admin-better-login-plugin",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "MonsieurBiz\\SyliusAdminBetterLoginPlugin\\MonsieurBizSyliusAdminBetterLoginPlugin": [
@@ -26,8 +12,7 @@
                 }
             },
             "files": [],
-            "origin": "monsieurbiz/sylius-admin-better-login-plugin:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "a6c23a07571c20357e222f06735fdf7a20571895"
         }
     }
 }

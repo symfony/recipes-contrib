@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "netgen/content-browser": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "24cb1c72a375ac7d62a4d18961cf06a9879a442c"
-            }
-        }
-    },
     "manifests": {
         "netgen/content-browser": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "netgen/content-browser",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Netgen\\Bundle\\ContentBrowserBundle\\NetgenContentBrowserBundle": [
@@ -31,13 +17,16 @@
             },
             "files": {
                 "config/routes/netgen_content_browser.yaml": {
-                    "contents": "netgen_content_browser:\n    resource: \"@NetgenContentBrowserBundle/Resources/config/routing.yml\"\n    prefix: \"%netgen_content_browser.route_prefix%\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "netgen_content_browser:",
+                        "    resource: \"@NetgenContentBrowserBundle/Resources/config/routing.yml\"",
+                        "    prefix: \"%netgen_content_browser.route_prefix%\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "netgen/content-browser:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "24cb1c72a375ac7d62a4d18961cf06a9879a442c"
         }
     }
 }

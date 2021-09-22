@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "jane-php/json-schema": {
-            "version": "5.0",
-            "recipe": {
-                "repo": "5.0",
-                "branch": "master",
-                "version": "5.0",
-                "ref": "3767579880e8b47f87deb6256339291e25a90378"
-            }
-        }
-    },
     "manifests": {
         "jane-php/json-schema": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "jane-php/json-schema",
-            "version": "5.0",
             "manifest": {
                 "copy-from-recipe": {
                     "bin/": "%BIN_DIR%/",
@@ -33,23 +19,71 @@
             },
             "files": {
                 "config/jane/config.php": {
-                    "contents": "<?php\n\nreturn [\n    'json-schema-file' => __DIR__ . '/json-schema.json',\n    'root-class' => 'MyModel',\n    'namespace' => 'MyApp\\Library\\Generated',\n    'directory' => __DIR__ . '/../../generated',\n];\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "",
+                        "return [",
+                        "    'json-schema-file' => __DIR__ . '/json-schema.json',",
+                        "    'root-class' => 'MyModel',",
+                        "    'namespace' => 'MyApp\\Library\\Generated',",
+                        "    'directory' => __DIR__ . '/../../generated',",
+                        "];",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/jane.yaml": {
-                    "contents": "services:\n    jane.serializer.json_encode:\n        class: Symfony\\Component\\Serializer\\Encoder\\JsonEncode\n        arguments:\n            - { json_encode_options: 64 } # \\JSON_UNESCAPED_SLASHES\n\n    jane.serializer.json_decode:\n        class: Symfony\\Component\\Serializer\\Encoder\\JsonDecode\n        arguments:\n            - { json_decode_associative: false }\n\n    jane.serializer.json_encoder:\n        class: Symfony\\Component\\Serializer\\Encoder\\JsonEncoder\n        arguments:\n            - '@jane.serializer.json_encode'\n            - '@jane.serializer.json_decode'\n\n#    jane.serializer.object:\n#        class: MyApp\\Library\\Generated\\Normalizer\\JaneObjectNormalizer\n#\n#    jane.serializer:\n#        class: Symfony\\Component\\Serializer\\Serializer\n#        arguments:\n#            - ['@serializer.denormalizer.array', '@jane.serializer.object']\n#            - ['@jane.serializer.json_encoder']\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "services:",
+                        "    jane.serializer.json_encode:",
+                        "        class: Symfony\\Component\\Serializer\\Encoder\\JsonEncode",
+                        "        arguments:",
+                        "            - { json_encode_options: 64 } # \\JSON_UNESCAPED_SLASHES",
+                        "",
+                        "    jane.serializer.json_decode:",
+                        "        class: Symfony\\Component\\Serializer\\Encoder\\JsonDecode",
+                        "        arguments:",
+                        "            - { json_decode_associative: false }",
+                        "",
+                        "    jane.serializer.json_encoder:",
+                        "        class: Symfony\\Component\\Serializer\\Encoder\\JsonEncoder",
+                        "        arguments:",
+                        "            - '@jane.serializer.json_encode'",
+                        "            - '@jane.serializer.json_decode'",
+                        "",
+                        "#    jane.serializer.object:",
+                        "#        class: MyApp\\Library\\Generated\\Normalizer\\JaneObjectNormalizer",
+                        "#",
+                        "#    jane.serializer:",
+                        "#        class: Symfony\\Component\\Serializer\\Serializer",
+                        "#        arguments:",
+                        "#            - ['@serializer.denormalizer.array', '@jane.serializer.object']",
+                        "#            - ['@jane.serializer.json_encoder']",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "bin/jane-generate": {
-                    "contents": "#!/usr/bin/env php\n<?php\n\nrequire __DIR__ . '/../vendor/autoload.php';\n\nuse Jane\\JsonSchema\\Command\\GenerateCommand;\nuse Symfony\\Component\\Console\\Input\\ArrayInput;\nuse Symfony\\Component\\Console\\Output\\NullOutput;\n\n$command = new GenerateCommand();\n$inputArray = new ArrayInput(['--config-file' => __DIR__ . '/../config/jane/config.php'], $command->getDefinition());\n\n$command->execute($inputArray, new NullOutput());\n",
-                    "executable": true,
-                    "encoding": ""
+                    "contents": [
+                        "#!/usr/bin/env php",
+                        "<?php",
+                        "",
+                        "require __DIR__ . '/../vendor/autoload.php';",
+                        "",
+                        "use Jane\\JsonSchema\\Command\\GenerateCommand;",
+                        "use Symfony\\Component\\Console\\Input\\ArrayInput;",
+                        "use Symfony\\Component\\Console\\Output\\NullOutput;",
+                        "",
+                        "$command = new GenerateCommand();",
+                        "$inputArray = new ArrayInput(['--config-file' => __DIR__ . '/../config/jane/config.php'], $command->getDefinition());",
+                        "",
+                        "$command->execute($inputArray, new NullOutput());",
+                        ""
+                    ],
+                    "executable": true
                 }
             },
-            "origin": "jane-php/json-schema:5.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "3767579880e8b47f87deb6256339291e25a90378"
         }
     }
 }

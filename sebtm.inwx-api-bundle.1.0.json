@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "sebtm/inwx-api-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "d65136736700f58b7ec37f4273476458d7a8927d"
-            }
-        }
-    },
     "manifests": {
         "sebtm/inwx-api-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "sebtm/inwx-api-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "SebTM\\INWX\\InwxApiBundle": [
@@ -31,13 +17,21 @@
             },
             "files": {
                 "config/packages/inwx_api.yaml": {
-                    "contents": "# Read the documentation: https://github.com/SebTM/inwx-api-bundle\ninwx_api:\n    debug: '%kernel.debug%'\n    environment: development\n    json: true\n    language: en\n    username: '%env(resolve:INWX_USERNAME)%'\n    password: '%env(resolve:INWX_PASSWORD)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# Read the documentation: https://github.com/SebTM/inwx-api-bundle",
+                        "inwx_api:",
+                        "    debug: '%kernel.debug%'",
+                        "    environment: development",
+                        "    json: true",
+                        "    language: en",
+                        "    username: '%env(resolve:INWX_USERNAME)%'",
+                        "    password: '%env(resolve:INWX_PASSWORD)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "sebtm/inwx-api-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "d65136736700f58b7ec37f4273476458d7a8927d"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "monsieurbiz/sylius-coliship-plugin": {
-            "version": "0.1",
-            "recipe": {
-                "repo": "0.1",
-                "branch": "master",
-                "version": "0.1",
-                "ref": "3f5b6fcae7dcf41b7d6409e74cd89a6fba326c06"
-            }
-        }
-    },
     "manifests": {
         "monsieurbiz/sylius-coliship-plugin": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "monsieurbiz/sylius-coliship-plugin",
-            "version": "0.1",
             "manifest": {
                 "bundles": {
                     "MonsieurBiz\\SyliusColishipPlugin\\MonsieurBizSyliusColishipPlugin": [
@@ -30,18 +16,26 @@
             },
             "files": {
                 "config/routes/monsieurbiz_coliship_plugin.yaml": {
-                    "contents": "monsieurbiz_coliship_admin:\n    resource: \"@MonsieurBizSyliusColishipPlugin/Resources/config/routes/admin.yaml\"\n    prefix: /%sylius_admin.path_name%\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "monsieurbiz_coliship_admin:",
+                        "    resource: \"@MonsieurBizSyliusColishipPlugin/Resources/config/routes/admin.yaml\"",
+                        "    prefix: /%sylius_admin.path_name%",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/monsieurbiz_coliship_plugin.yaml": {
-                    "contents": "imports:\n    - { resource: \"@MonsieurBizSyliusColishipPlugin/Resources/config/monsieurbiz/settings.yaml\" }\n    - { resource: \"@MonsieurBizSyliusColishipPlugin/Resources/config/sylius/grid.yaml\" }\n    - { resource: \"@MonsieurBizSyliusColishipPlugin/Resources/config/sylius/ui.yaml\" }\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@MonsieurBizSyliusColishipPlugin/Resources/config/monsieurbiz/settings.yaml\" }",
+                        "    - { resource: \"@MonsieurBizSyliusColishipPlugin/Resources/config/sylius/grid.yaml\" }",
+                        "    - { resource: \"@MonsieurBizSyliusColishipPlugin/Resources/config/sylius/ui.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "monsieurbiz/sylius-coliship-plugin:0.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "3f5b6fcae7dcf41b7d6409e74cd89a6fba326c06"
         }
     }
 }

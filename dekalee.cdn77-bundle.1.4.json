@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "dekalee/cdn77-bundle": {
-            "version": "1.4",
-            "recipe": {
-                "repo": "1.4",
-                "branch": "master",
-                "version": "1.4",
-                "ref": "3fc03324acddea649ef00675e18a0fb95679b983"
-            }
-        }
-    },
     "manifests": {
         "dekalee/cdn77-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "dekalee/cdn77-bundle",
-            "version": "1.4",
             "manifest": {
                 "bundles": {
                     "Dekalee\\Cdn77Bundle\\DekaleeCdn77Bundle": [
@@ -31,13 +17,16 @@
             },
             "files": {
                 "config/packages/dekalee_cdn77.yaml": {
-                    "contents": "dekalee_cdn77:\n    login: \"%env(DEKALEE_CDN77_LOGIN)%\"\n    password: \"%env(DEKALEE_CDN77_PASSWORD)%\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "dekalee_cdn77:",
+                        "    login: \"%env(DEKALEE_CDN77_LOGIN)%\"",
+                        "    password: \"%env(DEKALEE_CDN77_PASSWORD)%\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "dekalee/cdn77-bundle:1.4@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "3fc03324acddea649ef00675e18a0fb95679b983"
         }
     }
 }

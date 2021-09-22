@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "enqueue/wamp": {
-            "version": "0.9",
-            "recipe": {
-                "repo": "0.9",
-                "branch": "master",
-                "version": "0.9",
-                "ref": "a0e598c30a4613f9a6dab939bd1ddfa6dae9afae"
-            }
-        }
-    },
     "manifests": {
         "enqueue/wamp": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "enqueue/wamp",
-            "version": "0.9",
             "manifest": {
                 "post-install-output": [
                     "  * Configure <comment>ENQUEUE_DSN=wamp://127.0.0.1:9090</comment>",
@@ -25,8 +11,7 @@
                 ]
             },
             "files": [],
-            "origin": "enqueue/wamp:0.9@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "a0e598c30a4613f9a6dab939bd1ddfa6dae9afae"
         }
     }
 }

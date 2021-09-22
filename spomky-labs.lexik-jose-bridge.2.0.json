@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "spomky-labs/lexik-jose-bridge": {
-            "version": "2.0",
-            "recipe": {
-                "repo": "2.0",
-                "branch": "master",
-                "version": "2.0",
-                "ref": "db8bcdca64743ea7413cf9f40cd9c29786401136"
-            }
-        }
-    },
     "manifests": {
         "spomky-labs/lexik-jose-bridge": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "spomky-labs/lexik-jose-bridge",
-            "version": "2.0",
             "manifest": {
                 "bundles": {
                     "SpomkyLabs\\LexikJoseBundle\\SpomkyLabsLexikJoseBundle": [
@@ -32,13 +18,25 @@
             },
             "files": {
                 "config/packages/spomky_labs_lexik_jose_bridge_bundle.yaml": {
-                    "contents": "lexik_jose:\n    ttl: 1000\n    server_name: '%env(SL_JOSE_BRIDGE_SERVER_NAME)%'\n    key_set: '%env(SL_JOSE_BRIDGE_SIGNATURE_KEYSET)%'\n    key_index: '93wgUTMbJm8ZN7MUTQx7xYRpifPiY7GAaAZKTZ9Y3MI'\n    signature_algorithm: 'HS512'\n    encryption:\n        enabled: true\n        key_set: '%env(SL_JOSE_BRIDGE_ENCRYPTION_KEYSET)%'\n        key_index: 'zCPR8Cv8jbWW1wBckl5LoZt-_bX5vzBJpr1esJbk2aU'\n        key_encryption_algorithm: 'A256GCMKW'\n        content_encryption_algorithm: 'A256GCM'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "lexik_jose:",
+                        "    ttl: 1000",
+                        "    server_name: '%env(SL_JOSE_BRIDGE_SERVER_NAME)%'",
+                        "    key_set: '%env(SL_JOSE_BRIDGE_SIGNATURE_KEYSET)%'",
+                        "    key_index: '93wgUTMbJm8ZN7MUTQx7xYRpifPiY7GAaAZKTZ9Y3MI'",
+                        "    signature_algorithm: 'HS512'",
+                        "    encryption:",
+                        "        enabled: true",
+                        "        key_set: '%env(SL_JOSE_BRIDGE_ENCRYPTION_KEYSET)%'",
+                        "        key_index: 'zCPR8Cv8jbWW1wBckl5LoZt-_bX5vzBJpr1esJbk2aU'",
+                        "        key_encryption_algorithm: 'A256GCMKW'",
+                        "        content_encryption_algorithm: 'A256GCM'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "spomky-labs/lexik-jose-bridge:2.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "db8bcdca64743ea7413cf9f40cd9c29786401136"
         }
     }
 }

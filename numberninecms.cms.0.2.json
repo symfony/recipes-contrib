@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "numberninecms/cms": {
-            "version": "0.2",
-            "recipe": {
-                "repo": "0.2",
-                "branch": "master",
-                "version": "0.2",
-                "ref": "05febb5d67411bb2646db60ba5a4a12813609c27"
-            }
-        }
-    },
     "manifests": {
         "numberninecms/cms": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "numberninecms/cms",
-            "version": "0.2",
             "manifest": {
                 "bundles": {
                     "NumberNine\\Bundle\\NumberNineBundle": [
@@ -41,13 +27,15 @@
             },
             "files": {
                 "config/routes/numbernine.yaml": {
-                    "contents": "numbernine:\n    resource: '@NumberNineBundle/Resources/config/routing.yaml'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "numbernine:",
+                        "    resource: '@NumberNineBundle/Resources/config/routing.yaml'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "numberninecms/cms:0.2@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "05febb5d67411bb2646db60ba5a4a12813609c27"
         }
     }
 }

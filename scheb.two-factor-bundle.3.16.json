@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "scheb/two-factor-bundle": {
-            "version": "3.16",
-            "recipe": {
-                "repo": "3.16",
-                "branch": "master",
-                "version": "3.16",
-                "ref": "b5789cd9710e2ee555bf361079b991068a0f640b"
-            }
-        }
-    },
     "manifests": {
         "scheb/two-factor-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "scheb/two-factor-bundle",
-            "version": "3.16",
             "manifest": {
                 "bundles": {
                     "Scheb\\TwoFactorBundle\\SchebTwoFactorBundle": [
@@ -27,18 +13,32 @@
             },
             "files": {
                 "config/routes/scheb_two_factor.yaml": {
-                    "contents": "2fa_login:\n    path: /2fa\n    defaults:\n        _controller: \"scheb_two_factor.form_controller:form\"\n\n2fa_login_check:\n    path: /2fa_check\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "2fa_login:",
+                        "    path: /2fa",
+                        "    defaults:",
+                        "        _controller: \"scheb_two_factor.form_controller:form\"",
+                        "",
+                        "2fa_login_check:",
+                        "    path: /2fa_check",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/scheb_two_factor.yaml": {
-                    "contents": "# See the configuration reference at https://github.com/scheb/two-factor-bundle/blob/master/Resources/doc/configuration.md\nscheb_two_factor:\n    security_tokens:\n        - Symfony\\Component\\Security\\Core\\Authentication\\Token\\UsernamePasswordToken\n        # If you're using guard-based authentication, you have to use this one:\n        # - Symfony\\Component\\Security\\Guard\\Token\\PostAuthenticationGuardToken\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# See the configuration reference at https://github.com/scheb/two-factor-bundle/blob/master/Resources/doc/configuration.md",
+                        "scheb_two_factor:",
+                        "    security_tokens:",
+                        "        - Symfony\\Component\\Security\\Core\\Authentication\\Token\\UsernamePasswordToken",
+                        "        # If you're using guard-based authentication, you have to use this one:",
+                        "        # - Symfony\\Component\\Security\\Guard\\Token\\PostAuthenticationGuardToken",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "scheb/two-factor-bundle:3.16@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "b5789cd9710e2ee555bf361079b991068a0f640b"
         }
     }
 }

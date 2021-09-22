@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "systemsdk/easy-log-bundle": {
-            "version": "1.10",
-            "recipe": {
-                "repo": "1.10",
-                "branch": "master",
-                "version": "1.10",
-                "ref": "7543c149e6af01d8e3d702d579631699712ac221"
-            }
-        }
-    },
     "manifests": {
         "systemsdk/easy-log-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "systemsdk/easy-log-bundle",
-            "version": "1.10",
             "manifest": {
                 "bundles": {
                     "Systemsdk\\Bundle\\EasyLogBundle\\EasyLogBundle": [
@@ -28,18 +14,25 @@
             },
             "files": {
                 "config/packages/dev/systemsdk_easy_log.yaml": {
-                    "contents": "easy_log:\n    log_path: '%kernel.logs_dir%/%kernel.environment%-readable.log'\n    ignored_routes: ['_wdt', '_profiler']\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "easy_log:",
+                        "    log_path: '%kernel.logs_dir%/%kernel.environment%-readable.log'",
+                        "    ignored_routes: ['_wdt', '_profiler']",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/test/systemsdk_easy_log.yaml": {
-                    "contents": "easy_log:\n    log_path: '%kernel.logs_dir%/%kernel.environment%-readable.log'\n    ignored_routes: ['_wdt', '_profiler']\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "easy_log:",
+                        "    log_path: '%kernel.logs_dir%/%kernel.environment%-readable.log'",
+                        "    ignored_routes: ['_wdt', '_profiler']",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "systemsdk/easy-log-bundle:1.10@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "7543c149e6af01d8e3d702d579631699712ac221"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "overblog/graphql-bundle": {
-            "version": "0.12",
-            "recipe": {
-                "repo": "0.12",
-                "branch": "master",
-                "version": "0.12",
-                "ref": "b122f3bfcfc0706c617a74afa8510af4799810f6"
-            }
-        }
-    },
     "manifests": {
         "overblog/graphql-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "overblog/graphql-bundle",
-            "version": "0.12",
             "manifest": {
                 "bundles": {
                     "Overblog\\GraphQLBundle\\OverblogGraphQLBundle": [
@@ -32,23 +18,37 @@
             },
             "files": {
                 "config/routes/graphql.yaml": {
-                    "contents": "overblog_graphql_endpoint:\n    resource: \"@OverblogGraphQLBundle/Resources/config/routing/graphql.yml\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "overblog_graphql_endpoint:",
+                        "    resource: \"@OverblogGraphQLBundle/Resources/config/routing/graphql.yml\"",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/graphql/types/.gitignore": {
-                    "contents": "",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/graphql.yaml": {
-                    "contents": "overblog_graphql:\n    definitions:\n        schema:\n            query: Query\n        mappings:\n            types:\n                -\n                    type: yaml\n                    dir: \"%kernel.project_dir%/config/graphql/types\"\n                    suffix: null\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "overblog_graphql:",
+                        "    definitions:",
+                        "        schema:",
+                        "            query: Query",
+                        "        mappings:",
+                        "            types:",
+                        "                -",
+                        "                    type: yaml",
+                        "                    dir: \"%kernel.project_dir%/config/graphql/types\"",
+                        "                    suffix: null",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "overblog/graphql-bundle:0.12@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "b122f3bfcfc0706c617a74afa8510af4799810f6"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "ad3n/ratchet-bundle": {
-            "version": "0.4",
-            "recipe": {
-                "repo": "0.4",
-                "branch": "master",
-                "version": "0.4",
-                "ref": "a7ed05d9e24b90c4c8bb3c1cde358b9b24c5fbb0"
-            }
-        }
-    },
     "manifests": {
         "ad3n/ratchet-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "ad3n/ratchet-bundle",
-            "version": "0.4",
             "manifest": {
                 "bundles": {
                     "Ihsan\\RatchetBundle\\IhsanRatchetBundle": [
@@ -30,13 +16,15 @@
             },
             "files": {
                 "config/packages/ihsan_ratchet_bundle.yaml": {
-                    "contents": "ihsan_ratchet:\n    web_socket_port: \"%env(WEB_SOCKET_PORT)%\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "ihsan_ratchet:",
+                        "    web_socket_port: \"%env(WEB_SOCKET_PORT)%\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "ad3n/ratchet-bundle:0.4@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "a7ed05d9e24b90c4c8bb3c1cde358b9b24c5fbb0"
         }
     }
 }

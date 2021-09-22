@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "sentry/sentry-symfony": {
-            "version": "3.0",
-            "recipe": {
-                "repo": "3.0",
-                "branch": "master",
-                "version": "3.0",
-                "ref": "9746f0823302d7980e5273ef7a69ef3f5ac80914"
-            }
-        }
-    },
     "manifests": {
         "sentry/sentry-symfony": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "sentry/sentry-symfony",
-            "version": "3.0",
             "manifest": {
                 "bundles": {
                     "Sentry\\SentryBundle\\SentryBundle": [
@@ -30,13 +16,15 @@
             },
             "files": {
                 "config/packages/sentry.yaml": {
-                    "contents": "sentry:\n    dsn: '%env(SENTRY_DSN)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "sentry:",
+                        "    dsn: '%env(SENTRY_DSN)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "sentry/sentry-symfony:3.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "9746f0823302d7980e5273ef7a69ef3f5ac80914"
         }
     }
 }

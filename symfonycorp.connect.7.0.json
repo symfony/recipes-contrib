@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "symfonycorp/connect": {
-            "version": "7.0",
-            "recipe": {
-                "repo": "7.0",
-                "branch": "master",
-                "version": "7.0",
-                "ref": "882c945750a86da9e87b297509c3068bf1479c2b"
-            }
-        }
-    },
     "manifests": {
         "symfonycorp/connect": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "symfonycorp/connect",
-            "version": "7.0",
             "manifest": {
                 "bundles": {
                     "SymfonyCorp\\Connect\\SymfonyConnectBundle": [
@@ -31,18 +17,28 @@
             },
             "files": {
                 "config/routes/symfony_connect.yaml": {
-                    "contents": "symfony_connect:\n    prefix: /connect\n    resource: '@SymfonyConnectBundle/Resources/config/routing/connect.xml'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "symfony_connect:",
+                        "    prefix: /connect",
+                        "    resource: '@SymfonyConnectBundle/Resources/config/routing/connect.xml'",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/symfony_connect.yaml": {
-                    "contents": "symfony_connect:\n    app_id: '%env(SYMFONY_CONNECT_APP_ID)%'\n    app_secret: '%env(SYMFONY_CONNECT_APP_SECRET)%'\n    scope: 'SCOPE_PUBLIC'\n    # start_template: null\n    # failure_template: null\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "symfony_connect:",
+                        "    app_id: '%env(SYMFONY_CONNECT_APP_ID)%'",
+                        "    app_secret: '%env(SYMFONY_CONNECT_APP_SECRET)%'",
+                        "    scope: 'SCOPE_PUBLIC'",
+                        "    # start_template: null",
+                        "    # failure_template: null",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "symfonycorp/connect:7.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "882c945750a86da9e87b297509c3068bf1479c2b"
         }
     }
 }

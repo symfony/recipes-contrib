@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "mukadi/wordpress-bundle": {
-            "version": "2.0",
-            "recipe": {
-                "repo": "2.0",
-                "branch": "master",
-                "version": "2.0",
-                "ref": "f77e08be7b66762338d69afdf6cab4cebdd356b4"
-            }
-        }
-    },
     "manifests": {
         "mukadi/wordpress-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "mukadi/wordpress-bundle",
-            "version": "2.0",
             "manifest": {
                 "bundles": {
                     "Mukadi\\WordpressBundle\\MukadiWordpressBundle": [
@@ -58,8 +44,7 @@
                 ]
             },
             "files": [],
-            "origin": "mukadi/wordpress-bundle:2.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "f77e08be7b66762338d69afdf6cab4cebdd356b4"
         }
     }
 }

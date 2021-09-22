@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "willdurand/hateoas-bundle": {
-            "version": "2.0",
-            "recipe": {
-                "repo": "2.0",
-                "branch": "master",
-                "version": "2.0",
-                "ref": "34df072c6edaa61ae19afb2f3a239f272fecab87"
-            }
-        }
-    },
     "manifests": {
         "willdurand/hateoas-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "willdurand/hateoas-bundle",
-            "version": "2.0",
             "manifest": {
                 "bundles": {
                     "Bazinga\\Bundle\\HateoasBundle\\BazingaHateoasBundle": [
@@ -27,13 +13,17 @@
             },
             "files": {
                 "config/packages/bazinga_hateoas.yaml": {
-                    "contents": "# For full configuration see https://github.com/willdurand/BazingaHateoasBundle/blob/master/Resources/doc/index.md#reference-configuration\nbazinga_hateoas:\n    twig_extension:\n        enabled: true\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# For full configuration see https://github.com/willdurand/BazingaHateoasBundle/blob/master/Resources/doc/index.md#reference-configuration",
+                        "bazinga_hateoas:",
+                        "    twig_extension:",
+                        "        enabled: true",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "willdurand/hateoas-bundle:2.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "34df072c6edaa61ae19afb2f3a239f272fecab87"
         }
     }
 }

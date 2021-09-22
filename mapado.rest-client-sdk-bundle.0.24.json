@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "mapado/rest-client-sdk-bundle": {
-            "version": "0.24",
-            "recipe": {
-                "repo": "0.24",
-                "branch": "master",
-                "version": "0.24",
-                "ref": "78a3b4f36cb126099ac4bcd08b5276313d4c3ed1"
-            }
-        }
-    },
     "manifests": {
         "mapado/rest-client-sdk-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "mapado/rest-client-sdk-bundle",
-            "version": "0.24",
             "manifest": {
                 "bundles": {
                     "Mapado\\RestClientSdkBundle\\MapadoRestClientSdkBundle": [
@@ -31,18 +17,26 @@
             },
             "files": {
                 "src/Entity/.gitignore": {
-                    "contents": "\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/mapado_rest_client_sdk.yaml": {
-                    "contents": "mapado_rest_client_sdk:\n    entity_managers:\n        foo:\n            server_url: '%env(MAPADO_REST_CLIENT_SDK_SERVER_URL)%'\n            mappings:\n                dir: '%kernel.project_dir%/src/Entity/'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "mapado_rest_client_sdk:",
+                        "    entity_managers:",
+                        "        foo:",
+                        "            server_url: '%env(MAPADO_REST_CLIENT_SDK_SERVER_URL)%'",
+                        "            mappings:",
+                        "                dir: '%kernel.project_dir%/src/Entity/'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "mapado/rest-client-sdk-bundle:0.24@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "78a3b4f36cb126099ac4bcd08b5276313d4c3ed1"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "helppc/supervisor-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "21b8bccdadf4cfd3d7927f5d0d9ac2fe87d1f03b"
-            }
-        }
-    },
     "manifests": {
         "helppc/supervisor-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "helppc/supervisor-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "HelpPC\\Bundle\\SupervisorBundle\\SupervisorBundle": [
@@ -27,18 +13,30 @@
             },
             "files": {
                 "config/routes/helppc_supervisor.yaml": {
-                    "contents": "supervisor:\n    resource: '@SupervisorBundle/Resources/config/routing.xml'\n    prefix:   /supervisor\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "supervisor:",
+                        "    resource: '@SupervisorBundle/Resources/config/routing.xml'",
+                        "    prefix:   /supervisor",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/helppc_supervisor.yaml": {
-                    "contents": "supervisor:\n    default_environment: all\n    servers:\n        all:\n            localhost:\n                scheme: http\n                host: 127.0.0.1\n                port: 9001\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "supervisor:",
+                        "    default_environment: all",
+                        "    servers:",
+                        "        all:",
+                        "            localhost:",
+                        "                scheme: http",
+                        "                host: 127.0.0.1",
+                        "                port: 9001",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "helppc/supervisor-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "21b8bccdadf4cfd3d7927f5d0d9ac2fe87d1f03b"
         }
     }
 }

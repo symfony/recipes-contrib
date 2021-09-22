@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "meritoo/common-bundle": {
-            "version": "0.1",
-            "recipe": {
-                "repo": "0.1",
-                "branch": "master",
-                "version": "0.1",
-                "ref": "ca8964b10433ecc52f0500d4b58264eca5bbdba5"
-            }
-        }
-    },
     "manifests": {
         "meritoo/common-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "meritoo/common-bundle",
-            "version": "0.1",
             "manifest": {
                 "bundles": {
                     "Meritoo\\CommonBundle\\MeritooCommonBundle": [
@@ -34,13 +20,20 @@
             },
             "files": {
                 "config/packages/meritoo_common.yaml": {
-                    "contents": "#\n# All configuration options are described here:\n# https://github.com/meritoo/common-bundle/blob/master/docs/Configuration.md\n#\nmeritoo_common:\n    form:\n        novalidate: \"%env(bool:MERITOO_FORM_NOVALIDATE)%\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "#",
+                        "# All configuration options are described here:",
+                        "# https://github.com/meritoo/common-bundle/blob/master/docs/Configuration.md",
+                        "#",
+                        "meritoo_common:",
+                        "    form:",
+                        "        novalidate: \"%env(bool:MERITOO_FORM_NOVALIDATE)%\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "meritoo/common-bundle:0.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "ca8964b10433ecc52f0500d4b58264eca5bbdba5"
         }
     }
 }

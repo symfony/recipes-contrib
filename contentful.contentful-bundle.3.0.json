@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "contentful/contentful-bundle": {
-            "version": "3.0",
-            "recipe": {
-                "repo": "3.0",
-                "branch": "master",
-                "version": "3.0",
-                "ref": "39078448bb72c791a935ecf270942b7f26e3139f"
-            }
-        }
-    },
     "manifests": {
         "contentful/contentful-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "contentful/contentful-bundle",
-            "version": "3.0",
             "manifest": {
                 "bundles": {
                     "Contentful\\ContentfulBundle\\ContentfulBundle": [
@@ -37,13 +23,19 @@
             },
             "files": {
                 "config/packages/contentful.yaml": {
-                    "contents": "# For the complete configuration, please visit\n# https://www.contentful.com/developers/docs/php/tutorials/getting-started-with-contentful-and-symfony/\ncontentful:\n    delivery:\n        space: \"%env(CONTENTFUL_SPACE_ID)%\"\n        token: \"%env(CONTENTFUL_ACCESS_TOKEN)%\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# For the complete configuration, please visit",
+                        "# https://www.contentful.com/developers/docs/php/tutorials/getting-started-with-contentful-and-symfony/",
+                        "contentful:",
+                        "    delivery:",
+                        "        space: \"%env(CONTENTFUL_SPACE_ID)%\"",
+                        "        token: \"%env(CONTENTFUL_ACCESS_TOKEN)%\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "contentful/contentful-bundle:3.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "39078448bb72c791a935ecf270942b7f26e3139f"
         }
     }
 }

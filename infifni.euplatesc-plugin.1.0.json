@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "infifni/euplatesc-plugin": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "7efa478433d7ae131559c76ccb1f8167de565df5"
-            }
-        }
-    },
     "manifests": {
         "infifni/euplatesc-plugin": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "infifni/euplatesc-plugin",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Infifni\\SyliusEuPlatescPlugin\\InfifniSyliusEuPlatescPlugin": [
@@ -27,13 +13,15 @@
             },
             "files": {
                 "config/routes/infifni_sylius_euplatesc_plugin.yaml": {
-                    "contents": "infifni_sylius_euplatesc_plugin:\n    resource: \"@InfifniSyliusEuPlatescPlugin/Resources/config/routing.yml\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "infifni_sylius_euplatesc_plugin:",
+                        "    resource: \"@InfifniSyliusEuPlatescPlugin/Resources/config/routing.yml\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "infifni/euplatesc-plugin:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "7efa478433d7ae131559c76ccb1f8167de565df5"
         }
     }
 }

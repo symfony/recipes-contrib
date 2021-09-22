@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "kibatic/timezone-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "abc7b048190a7082523f9bf1af533d7c41f51c2a"
-            }
-        }
-    },
     "manifests": {
         "kibatic/timezone-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "kibatic/timezone-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Kibatic\\TimezoneBundle\\KibaticTimezoneBundle": [
@@ -27,13 +13,16 @@
             },
             "files": {
                 "config/packages/kibatic_timezone.yaml": {
-                    "contents": "kibatic_timezone:\n    default_display_timezone: 'Europe/Paris'\n    timezone_provider: 'kibatic_timezone.default_provider'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "kibatic_timezone:",
+                        "    default_display_timezone: 'Europe/Paris'",
+                        "    timezone_provider: 'kibatic_timezone.default_provider'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "kibatic/timezone-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "abc7b048190a7082523f9bf1af533d7c41f51c2a"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "tienvx/mbt-bundle": {
-            "version": "1.7",
-            "recipe": {
-                "repo": "1.7",
-                "branch": "master",
-                "version": "1.7",
-                "ref": "9115d708d793208b5129daa8aa17d17f470aaa2e"
-            }
-        }
-    },
     "manifests": {
         "tienvx/mbt-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "tienvx/mbt-bundle",
-            "version": "1.7",
             "manifest": {
                 "bundles": {
                     "Tienvx\\Bundle\\MbtBundle\\TienvxMbtBundle": [
@@ -37,18 +23,34 @@
             },
             "files": {
                 "var/storage/screenshots/.gitignore": {
-                    "contents": "",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/tienvx_mbt.yaml": {
-                    "contents": "tienvx_mbt:\n    slack_hook_url: '%env(SLACK_HOOK_URL)%'\n    slack_from: '%env(SLACK_FROM)%'\n    slack_to: '%env(SLACK_TO)%'\n    slack_message: '%env(SLACK_MESSAGE)%'\n    email_from: '%env(EMAIL_FROM)%'\n    email_to: '%env(EMAIL_TO)%'\n    email_subject: '%env(EMAIL_SUBJECT)%'\n\nflysystem:\n    storages:\n        mbt.storage:\n            adapter: 'local'\n            options:\n                directory: \"%kernel.project_dir%/var/storage/screenshots\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "tienvx_mbt:",
+                        "    slack_hook_url: '%env(SLACK_HOOK_URL)%'",
+                        "    slack_from: '%env(SLACK_FROM)%'",
+                        "    slack_to: '%env(SLACK_TO)%'",
+                        "    slack_message: '%env(SLACK_MESSAGE)%'",
+                        "    email_from: '%env(EMAIL_FROM)%'",
+                        "    email_to: '%env(EMAIL_TO)%'",
+                        "    email_subject: '%env(EMAIL_SUBJECT)%'",
+                        "",
+                        "flysystem:",
+                        "    storages:",
+                        "        mbt.storage:",
+                        "            adapter: 'local'",
+                        "            options:",
+                        "                directory: \"%kernel.project_dir%/var/storage/screenshots\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "tienvx/mbt-bundle:1.7@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "9115d708d793208b5129daa8aa17d17f470aaa2e"
         }
     }
 }

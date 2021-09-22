@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "oat-sa/bundle-lti1p3": {
-            "version": "3.0",
-            "recipe": {
-                "repo": "3.0",
-                "branch": "master",
-                "version": "3.0",
-                "ref": "2ab374bc274fde3da5cff38d840f620178f56a6b"
-            }
-        }
-    },
     "manifests": {
         "oat-sa/bundle-lti1p3": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "oat-sa/bundle-lti1p3",
-            "version": "3.0",
             "manifest": {
                 "bundles": {
                     "OAT\\Bundle\\Lti1p3Bundle\\Lti1p3Bundle": [
@@ -39,18 +25,66 @@
             },
             "files": {
                 "config/routes/lti1p3.yaml": {
-                    "contents": "lti1p3_jwks:\n    resource: '@Lti1p3Bundle/Resources/config/routing/jwks.yaml'\n\nlti1p3_message_platform:\n    resource: '@Lti1p3Bundle/Resources/config/routing/message/platform.yaml'\n\nlti1p3_message_tool:\n    resource: '@Lti1p3Bundle/Resources/config/routing/message/tool.yaml'\n\nlti1p3_service_platform:\n    resource: '@Lti1p3Bundle/Resources/config/routing/service/platform.yaml'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "lti1p3_jwks:",
+                        "    resource: '@Lti1p3Bundle/Resources/config/routing/jwks.yaml'",
+                        "",
+                        "lti1p3_message_platform:",
+                        "    resource: '@Lti1p3Bundle/Resources/config/routing/message/platform.yaml'",
+                        "",
+                        "lti1p3_message_tool:",
+                        "    resource: '@Lti1p3Bundle/Resources/config/routing/message/tool.yaml'",
+                        "",
+                        "lti1p3_service_platform:",
+                        "    resource: '@Lti1p3Bundle/Resources/config/routing/service/platform.yaml'",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "config/packages/lti1p3.yaml": {
-                    "contents": "lti1p3:\n    key_chains:\n        platformKey:\n            key_set_name: \"platformSet\"\n            public_key: \"file://%kernel.project_dir%/config/secrets/dev/public.key\"\n            private_key: \"file://%kernel.project_dir%/config/secrets/dev/private.key\"\n            private_key_passphrase: null\n        toolKey:\n            key_set_name: \"toolSet\"\n            public_key: \"file://%kernel.project_dir%/config/secrets/dev/public.key\"\n            private_key: \"file://%kernel.project_dir%/config/secrets/dev/private.key\"\n            private_key_passphrase: null\n    platforms:\n        localPlatform:\n            name: \"Local platform\"\n            audience: \"http://localhost/platform\"\n            oidc_authentication_url: \"http://localhost/lti1p3/oidc/authentication\"\n            oauth2_access_token_url: \"http://localhost/lti1p3/auth/platformKey/token\"\n    tools:\n        localTool:\n            name: \"Local tool\"\n            audience: \"http://localhost/tool\"\n            oidc_initiation_url: \"http://localhost/lti1p3/oidc/initiation\"\n            launch_url: null\n            deep_linking_url: null\n    registrations:\n        local:\n            client_id: \"client_id\"\n            platform: \"localPlatform\"\n            tool: \"localTool\"\n            deployment_ids:\n                - \"deploymentId1\"\n            platform_key_chain: \"platformKey\"\n            tool_key_chain: \"toolKey\"\n            platform_jwks_url: null\n            tool_jwks_url: null\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "lti1p3:",
+                        "    key_chains:",
+                        "        platformKey:",
+                        "            key_set_name: \"platformSet\"",
+                        "            public_key: \"file://%kernel.project_dir%/config/secrets/dev/public.key\"",
+                        "            private_key: \"file://%kernel.project_dir%/config/secrets/dev/private.key\"",
+                        "            private_key_passphrase: null",
+                        "        toolKey:",
+                        "            key_set_name: \"toolSet\"",
+                        "            public_key: \"file://%kernel.project_dir%/config/secrets/dev/public.key\"",
+                        "            private_key: \"file://%kernel.project_dir%/config/secrets/dev/private.key\"",
+                        "            private_key_passphrase: null",
+                        "    platforms:",
+                        "        localPlatform:",
+                        "            name: \"Local platform\"",
+                        "            audience: \"http://localhost/platform\"",
+                        "            oidc_authentication_url: \"http://localhost/lti1p3/oidc/authentication\"",
+                        "            oauth2_access_token_url: \"http://localhost/lti1p3/auth/platformKey/token\"",
+                        "    tools:",
+                        "        localTool:",
+                        "            name: \"Local tool\"",
+                        "            audience: \"http://localhost/tool\"",
+                        "            oidc_initiation_url: \"http://localhost/lti1p3/oidc/initiation\"",
+                        "            launch_url: null",
+                        "            deep_linking_url: null",
+                        "    registrations:",
+                        "        local:",
+                        "            client_id: \"client_id\"",
+                        "            platform: \"localPlatform\"",
+                        "            tool: \"localTool\"",
+                        "            deployment_ids:",
+                        "                - \"deploymentId1\"",
+                        "            platform_key_chain: \"platformKey\"",
+                        "            tool_key_chain: \"toolKey\"",
+                        "            platform_jwks_url: null",
+                        "            tool_jwks_url: null",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "oat-sa/bundle-lti1p3:3.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "2ab374bc274fde3da5cff38d840f620178f56a6b"
         }
     }
 }

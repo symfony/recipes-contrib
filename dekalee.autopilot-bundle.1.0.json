@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "dekalee/autopilot-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "7d8d3dafe6ac802b38f6147a4732b7958adc8052"
-            }
-        }
-    },
     "manifests": {
         "dekalee/autopilot-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "dekalee/autopilot-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Dekalee\\AutopilotBundle\\DekaleeAutopilotBundle": [
@@ -34,13 +20,15 @@
             },
             "files": {
                 "config/packages/dekalee_autopilot_swarrot.yaml": {
-                    "contents": "dekalee_autopilot:\n    api_key: '%env(DEKALEE_AUTOPILOT_APIKEY)%'\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "dekalee_autopilot:",
+                        "    api_key: '%env(DEKALEE_AUTOPILOT_APIKEY)%'",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "dekalee/autopilot-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "7d8d3dafe6ac802b38f6147a4732b7958adc8052"
         }
     }
 }

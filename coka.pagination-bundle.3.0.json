@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "coka/pagination-bundle": {
-            "version": "3.0",
-            "recipe": {
-                "repo": "3.0",
-                "branch": "master",
-                "version": "3.0",
-                "ref": "9341636f08baec071f5c9f03fe5819446cae325b"
-            }
-        }
-    },
     "manifests": {
         "coka/pagination-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "coka/pagination-bundle",
-            "version": "3.0",
             "manifest": {
                 "bundles": {
                     "Oka\\PaginationBundle\\OkaPaginationBundle": [
@@ -27,13 +13,17 @@
             },
             "files": {
                 "config/packages/oka_pagination.yaml": {
-                    "contents": "oka_pagination:\n    db_driver: orm\n    twig:\n        enable_extension: false\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "oka_pagination:",
+                        "    db_driver: orm",
+                        "    twig:",
+                        "        enable_extension: false",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "coka/pagination-bundle:3.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "9341636f08baec071f5c9f03fe5819446cae325b"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "mbarbey/u2f-security-bundle": {
-            "version": "1.0",
-            "recipe": {
-                "repo": "1.0",
-                "branch": "master",
-                "version": "1.0",
-                "ref": "607a7a93e3dbb43d066396962bee60acdf3973f0"
-            }
-        }
-    },
     "manifests": {
         "mbarbey/u2f-security-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "mbarbey/u2f-security-bundle",
-            "version": "1.0",
             "manifest": {
                 "bundles": {
                     "Mbarbey\\U2fSecurityBundle\\MbarbeyU2fSecurityBundle": [
@@ -27,13 +13,18 @@
             },
             "files": {
                 "config/packages/mbarbey_u2f_security.yaml": {
-                    "contents": "mbarbey_u2f_security:\n    authentication_route: my_u2f_authentication_route\n    whitelist_routes:\n        - login\n        - logout\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "mbarbey_u2f_security:",
+                        "    authentication_route: my_u2f_authentication_route",
+                        "    whitelist_routes:",
+                        "        - login",
+                        "        - logout",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "mbarbey/u2f-security-bundle:1.0@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "607a7a93e3dbb43d066396962bee60acdf3973f0"
         }
     }
 }

@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "payplug/sylius-payplug-plugin": {
-            "version": "0.2",
-            "recipe": {
-                "repo": "0.2",
-                "branch": "master",
-                "version": "0.2",
-                "ref": "b6347329505744f57300bdd89b1c0066df6dd37a"
-            }
-        }
-    },
     "manifests": {
         "payplug/sylius-payplug-plugin": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "payplug/sylius-payplug-plugin",
-            "version": "0.2",
             "manifest": {
                 "bundles": {
                     "PayPlug\\SyliusPayPlugPlugin\\PayPlugSyliusPayPlugPlugin": [
@@ -27,13 +13,16 @@
             },
             "files": {
                 "config/packages/sylius_payplug.yaml": {
-                    "contents": "imports:\n    - { resource: \"@PayPlugSyliusPayPlugPlugin/Resources/config/config.yml\" }\n    - { resource: \"@PayPlugSyliusPayPlugPlugin/Resources/config/services.xml\" }\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@PayPlugSyliusPayPlugPlugin/Resources/config/config.yml\" }",
+                        "    - { resource: \"@PayPlugSyliusPayPlugPlugin/Resources/config/services.xml\" }",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "payplug/sylius-payplug-plugin:0.2@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "b6347329505744f57300bdd89b1c0066df6dd37a"
         }
     }
 }

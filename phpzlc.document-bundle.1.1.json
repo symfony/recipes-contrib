@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "phpzlc/document-bundle": {
-            "version": "1.1",
-            "recipe": {
-                "repo": "1.1",
-                "branch": "master",
-                "version": "1.1",
-                "ref": "669453aa86b676874f881655983abb8e1ac357a9"
-            }
-        }
-    },
     "manifests": {
         "phpzlc/document-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "phpzlc/document-bundle",
-            "version": "1.1",
             "manifest": {
                 "bundles": {
                     "PHPZlc\\Document\\DocumentBundle\\DocumentBundle": [
@@ -36,18 +22,103 @@
             },
             "files": {
                 "Document/DemoDocument.php": {
-                    "contents": "<?php\n\nnamespace App\\Document;\n\nuse PHPZlc\\Document\\Document;\n\nclass DemoDocument extends Document\n{\n    public function demoAction()\n    {\n        $this->add()\n            ->setTitle('\u6f14\u793a\u63a5\u53e3')\n            ->setUrl('/demo')\n            ->setReturnType('html')\n            ->setReturn('\u6f14\u793a\u63a5\u53e3')\n            ->generate();\n    }\n}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Document;",
+                        "",
+                        "use PHPZlc\\Document\\Document;",
+                        "",
+                        "class DemoDocument extends Document",
+                        "{",
+                        "    public function demoAction()",
+                        "    {",
+                        "        $this->add()",
+                        "            ->setTitle('\u6f14\u793a\u63a5\u53e3')",
+                        "            ->setUrl('/demo')",
+                        "            ->setReturnType('html')",
+                        "            ->setReturn('\u6f14\u793a\u63a5\u53e3')",
+                        "            ->generate();",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
                 },
                 "Document/Config.php": {
-                    "contents": "<?php\n\nnamespace App\\Document;\n\nclass Config\n{\n    /**\n     * \u6807\u9898\n     *\n     * @return string\n     */\n    public static function getTitle()\n    {\n        return '\u6f14\u793a';\n    }\n\n    /**\n     * \u51fa\u7248\u5546\n     *\n     * @return string\n     */\n    public static function getPublishing()\n    {\n        return '';\n    }\n\n    /**\n     * \u8bf4\u660e\n     *\n     * @return string\n     */\n    public static function getExplain()\n    {\n        return '';\n    }\n\n    /**\n     * \u6ce8\u610f\n     *\n     * @return string\n     */\n    public static function getNote()\n    {\n        return '';\n    }\n\n    /**\n     * \u9644\u5f55\n     *\n     * @return string\n     */\n    public static function getAppendix()\n    {\n        return '';\n    }\n\n    /**\n     * \u4e3b\u673a\n     *\n     * @return mixed\n     */\n    public static function getHost()\n    {\n        return $_ENV['DOC_HOST'];\n    }\n}\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Document;",
+                        "",
+                        "class Config",
+                        "{",
+                        "    /**",
+                        "     * \u6807\u9898",
+                        "     *",
+                        "     * @return string",
+                        "     */",
+                        "    public static function getTitle()",
+                        "    {",
+                        "        return '\u6f14\u793a';",
+                        "    }",
+                        "",
+                        "    /**",
+                        "     * \u51fa\u7248\u5546",
+                        "     *",
+                        "     * @return string",
+                        "     */",
+                        "    public static function getPublishing()",
+                        "    {",
+                        "        return '';",
+                        "    }",
+                        "",
+                        "    /**",
+                        "     * \u8bf4\u660e",
+                        "     *",
+                        "     * @return string",
+                        "     */",
+                        "    public static function getExplain()",
+                        "    {",
+                        "        return '';",
+                        "    }",
+                        "",
+                        "    /**",
+                        "     * \u6ce8\u610f",
+                        "     *",
+                        "     * @return string",
+                        "     */",
+                        "    public static function getNote()",
+                        "    {",
+                        "        return '';",
+                        "    }",
+                        "",
+                        "    /**",
+                        "     * \u9644\u5f55",
+                        "     *",
+                        "     * @return string",
+                        "     */",
+                        "    public static function getAppendix()",
+                        "    {",
+                        "        return '';",
+                        "    }",
+                        "",
+                        "    /**",
+                        "     * \u4e3b\u673a",
+                        "     *",
+                        "     * @return mixed",
+                        "     */",
+                        "    public static function getHost()",
+                        "    {",
+                        "        return $_ENV['DOC_HOST'];",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "phpzlc/document-bundle:1.1@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "669453aa86b676874f881655983abb8e1ac357a9"
         }
     }
 }

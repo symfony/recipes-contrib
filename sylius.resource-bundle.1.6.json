@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "sylius/resource-bundle": {
-            "version": "1.6",
-            "recipe": {
-                "repo": "1.6",
-                "branch": "master",
-                "version": "1.6",
-                "ref": "bfd4306c8e26b4aed0790ebde89a2c949e1398a2"
-            }
-        }
-    },
     "manifests": {
         "sylius/resource-bundle": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "sylius/resource-bundle",
-            "version": "1.6",
             "manifest": {
                 "container": {
                     "locale": "en"
@@ -30,13 +16,23 @@
             },
             "files": {
                 "config/packages/sylius_resource.yaml": {
-                    "contents": "# @see https://github.com/Sylius/SyliusResourceBundle/blob/master/docs/index.md\nsylius_resource:\n    # Override default settings\n    #settings:\n\n    # Configure your resources\n    resources:\n        #app.book:\n            #classes:\n                #model: App\\Entity\\Book\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "# @see https://github.com/Sylius/SyliusResourceBundle/blob/master/docs/index.md",
+                        "sylius_resource:",
+                        "    # Override default settings",
+                        "    #settings:",
+                        "",
+                        "    # Configure your resources",
+                        "    resources:",
+                        "        #app.book:",
+                        "            #classes:",
+                        "                #model: App\\Entity\\Book",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "sylius/resource-bundle:1.6@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "bfd4306c8e26b4aed0790ebde89a2c949e1398a2"
         }
     }
 }

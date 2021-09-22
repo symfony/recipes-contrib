@@ -1,20 +1,6 @@
 {
-    "locks": {
-        "broadway/read-model-elasticsearch": {
-            "version": "0.3",
-            "recipe": {
-                "repo": "0.3",
-                "branch": "master",
-                "version": "0.3",
-                "ref": "9afaea6bf879d010ff3d10395e2e21e02388462c"
-            }
-        }
-    },
     "manifests": {
         "broadway/read-model-elasticsearch": {
-            "repository": "github.com/symfony/recipes-contrib",
-            "package": "broadway/read-model-elasticsearch",
-            "version": "0.3",
             "manifest": {
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
@@ -25,13 +11,31 @@
             },
             "files": {
                 "config/packages/broadway_read_model_elasticsearch.yaml": {
-                    "contents": "broadway:\n    read_model: broadway.read_model.elasticsearch.repository_factory\n\nservices:\n    broadway.elasticsearch.client_factory:\n        class: Broadway\\ReadModel\\ElasticSearch\\ElasticSearchClientFactory\n\n    broadway.read_model.elasticsearch.repository_factory:\n        class: Broadway\\ReadModel\\ElasticSearch\\ElasticSearchRepositoryFactory\n        arguments:\n            - \"@broadway.elasticsearch.client\"\n            - \"@broadway.serializer.readmodel\"\n\n    broadway.elasticsearch.client:\n        class: Elasticsearch\\Client\n        factory: ['@broadway.elasticsearch.client_factory', create]\n        arguments:\n            - \"%elasticsearch%\"\n",
-                    "executable": false,
-                    "encoding": ""
+                    "contents": [
+                        "broadway:",
+                        "    read_model: broadway.read_model.elasticsearch.repository_factory",
+                        "",
+                        "services:",
+                        "    broadway.elasticsearch.client_factory:",
+                        "        class: Broadway\\ReadModel\\ElasticSearch\\ElasticSearchClientFactory",
+                        "",
+                        "    broadway.read_model.elasticsearch.repository_factory:",
+                        "        class: Broadway\\ReadModel\\ElasticSearch\\ElasticSearchRepositoryFactory",
+                        "        arguments:",
+                        "            - \"@broadway.elasticsearch.client\"",
+                        "            - \"@broadway.serializer.readmodel\"",
+                        "",
+                        "    broadway.elasticsearch.client:",
+                        "        class: Elasticsearch\\Client",
+                        "        factory: ['@broadway.elasticsearch.client_factory', create]",
+                        "        arguments:",
+                        "            - \"%elasticsearch%\"",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
-            "origin": "broadway/read-model-elasticsearch:0.3@github.com/symfony/recipes-contrib:master",
-            "is_contrib": true
+            "ref": "9afaea6bf879d010ff3d10395e2e21e02388462c"
         }
     }
 }
