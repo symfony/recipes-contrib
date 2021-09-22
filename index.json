@@ -1549,7 +1549,7 @@
     "is_contrib": true,
     "_links": {
         "repository": "github.com/symfony/recipes-contrib",
-        "origin_template": "{package}:{$version}@github.com/symfony/recipes-contrib:master",
+        "origin_template": "{package}:{version}@github.com/symfony/recipes-contrib:master",
         "recipe_template": "https://api.github.com/repos/symfony/recipes-contrib/contents/{package_dotted}.{version}.json?ref=flex/main"
     }
 }
