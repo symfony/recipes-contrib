@@ -1,0 +1,3 @@
+fd_hsl:
+    paginator:
+        default_limit: 30
