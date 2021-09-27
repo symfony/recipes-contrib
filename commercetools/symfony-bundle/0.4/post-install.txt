@@ -1,7 +1,3 @@
-<bg=blue;fg=white>                                       </>
-<bg=blue;fg=white> Next: commercetools API Configuration </>
-<bg=blue;fg=white>                                       </>
-
   * Get your API client credentials from https://mc.commercetools.com or
     https://mc.commercetools.co and configure them in your <bg=black;fg=green>.env</>
 

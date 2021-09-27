@@ -1,0 +1,8 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "MAILER_DSN": "sendgrid+template://KEY@default"
+    }
+}

@@ -1,7 +1,3 @@
-<bg=blue;fg=white>                                               </>
-<bg=blue;fg=white> What's next for DukecityCommandSchedulerBundle ? </>
-<bg=blue;fg=white>                                               </>
-
   * <fg=blue>Update your DB schema</>
     1. php bin/console make:migration
     2. php bin/console doctrine:migrations:migrate

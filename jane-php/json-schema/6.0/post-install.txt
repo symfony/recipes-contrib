@@ -1,7 +1,3 @@
-<bg=blue;fg=white>                       </>
-<bg=blue;fg=white> JanePHP - JSON Schema </>
-<bg=blue;fg=white>                       </>
-
   * <fg=blue>Finish</> package configuration:
     1. Configure <comment>config/jane/json_schema.php</> with your specification details
     2. Run <comment>bin/jane-json-schema-generate</>

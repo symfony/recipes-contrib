@@ -1,7 +1,3 @@
-<bg=blue;fg=white>                              </>
-<bg=blue;fg=white> Eta orain zer? </>
-<bg=blue;fg=white>                              </>
-
 * eguneratu datu basea, erabiltzailearen taula sortzeko
 php bin/console
 

@@ -1,7 +1,3 @@
-<bg=blue;fg=white>                         </>
-<bg=blue;fg=white> Configuration Converter </>
-<bg=blue;fg=white>                         </>
-
   * Edit the <fg=green>config/packages/configuration_converter.yaml</> file to configure your own settings.
 
   * Run <fg=green>bin/console configuration:convert</> to convert your configuration.

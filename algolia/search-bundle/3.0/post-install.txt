@@ -1,7 +1,3 @@
-<bg=blue;fg=white>                                  </>
-<bg=blue;fg=white> Next: SearchBundle Configuration </>
-<bg=blue;fg=white>                                  </>
-
   * The Algolia/SearchBundle uses Algolia by default. Create a free
     account on http://www.algolia.com and modify your ALGOLIA_APP_ID
     and ALGOLIA_API_KEY config in <fg=green>.env</>

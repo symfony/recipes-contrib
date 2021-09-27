@@ -1,0 +1,3 @@
+  * <fg=blue>Run</> <comment>php bin/console numbernine:docker:install</>
+
+  * <fg=blue>Read</> the documentation at <comment>https://numberninecms.github.io/</>

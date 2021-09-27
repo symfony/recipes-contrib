@@ -1,7 +1,3 @@
-<bg=yellow;fg=black>                        </>
-<bg=yellow;fg=black> Using Redis in Enqueue </>
-<bg=yellow;fg=black>                        </>
-
   * Configure <comment>ENQUEUE_DSN=redis://example.com:1000</comment>
     in your <comment>.env</comment> file.
 

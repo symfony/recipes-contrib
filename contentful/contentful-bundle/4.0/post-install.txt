@@ -1,7 +1,3 @@
-<bg=blue;fg=white>                                      </>
-<bg=blue;fg=white> Next: ContentfulBundle Configuration </>
-<bg=blue;fg=white>                                      </>
-
   * Get your space ID and API key from https://www.contentful.com
     and configure them in your <fg=green>.env</>
 
