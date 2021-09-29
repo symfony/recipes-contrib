@@ -240,9 +240,8 @@ jobs:
                     cd v4
                     composer config extra.symfony.allow-contrib true
                     composer config minimum-stability dev
-                    composer require --ansi "symfony/flex:^1.16"
                     export SYMFONY_ENDPOINT=https://api.github.com/repos/${{ github.repository }}/contents/index.json?ref=flex/pull-${{ github.event.number }}
-                    composer require --ansi --ignore-platform-reqs $PACKAGES
+                    composer require -W --ansi --ignore-platform-reqs $PACKAGES
                     EXIT_CODE=$?
 
                     if [[ EXIT_CODE -eq 2 ]]; then
@@ -260,6 +259,5 @@ jobs:
                     cd v5
                     composer config extra.symfony.allow-contrib true
                     composer config minimum-stability dev
-                    composer require --ansi "symfony/flex:^1.16"
                     export SYMFONY_ENDPOINT=https://api.github.com/repos/${{ github.repository }}/contents/index.json?ref=flex/pull-${{ github.event.number }}
-                    composer require --ansi --ignore-platform-reqs $PACKAGES
+                    composer require -W --ansi --ignore-platform-reqs $PACKAGES
