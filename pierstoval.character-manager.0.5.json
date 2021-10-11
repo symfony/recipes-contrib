@@ -13,6 +13,27 @@
                 }
             },
             "files": {
+                "config/routes/pierstoval_character_manager.yaml": {
+                    "contents": [
+                        "generator_steps:",
+                        "    resource: \"@PierstovalCharacterManagerBundle/Controller/StepController.php\"",
+                        "    type:     annotation",
+                        "    prefix:   /character_generator/",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/pierstoval_character_manager.yaml": {
+                    "contents": [
+                        "pierstoval_character_manager:",
+                        "    character_class: App\\Entity\\Character",
+                        "    steps:",
+                        "        step_01:",
+                        "            action: App\\CharacterGenerator\\Step01",
+                        ""
+                    ],
+                    "executable": false
+                },
                 "src/CharacterGenerator/Step01.php": {
                     "contents": [
                         "<?php",
@@ -61,27 +82,6 @@
                         "        return $this->id;",
                         "    }",
                         "}",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/routes/pierstoval_character_manager.yaml": {
-                    "contents": [
-                        "generator_steps:",
-                        "    resource: \"@PierstovalCharacterManagerBundle/Controller/StepController.php\"",
-                        "    type:     annotation",
-                        "    prefix:   /character_generator/",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/pierstoval_character_manager.yaml": {
-                    "contents": [
-                        "pierstoval_character_manager:",
-                        "    character_class: App\\Entity\\Character",
-                        "    steps:",
-                        "        step_01:",
-                        "            action: App\\CharacterGenerator\\Step01",
                         ""
                     ],
                     "executable": false

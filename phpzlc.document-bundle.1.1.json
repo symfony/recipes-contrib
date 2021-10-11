@@ -21,30 +21,6 @@
                 ]
             },
             "files": {
-                "Document/DemoDocument.php": {
-                    "contents": [
-                        "<?php",
-                        "",
-                        "namespace App\\Document;",
-                        "",
-                        "use PHPZlc\\Document\\Document;",
-                        "",
-                        "class DemoDocument extends Document",
-                        "{",
-                        "    public function demoAction()",
-                        "    {",
-                        "        $this->add()",
-                        "            ->setTitle('\u6f14\u793a\u63a5\u53e3')",
-                        "            ->setUrl('/demo')",
-                        "            ->setReturnType('html')",
-                        "            ->setReturn('\u6f14\u793a\u63a5\u53e3')",
-                        "            ->generate();",
-                        "    }",
-                        "}",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "Document/Config.php": {
                     "contents": [
                         "<?php",
@@ -111,6 +87,30 @@
                         "    public static function getHost()",
                         "    {",
                         "        return $_ENV['DOC_HOST'];",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "Document/DemoDocument.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Document;",
+                        "",
+                        "use PHPZlc\\Document\\Document;",
+                        "",
+                        "class DemoDocument extends Document",
+                        "{",
+                        "    public function demoAction()",
+                        "    {",
+                        "        $this->add()",
+                        "            ->setTitle('\u6f14\u793a\u63a5\u53e3')",
+                        "            ->setUrl('/demo')",
+                        "            ->setReturnType('html')",
+                        "            ->setReturn('\u6f14\u793a\u63a5\u53e3')",
+                        "            ->generate();",
                         "    }",
                         "}",
                         ""

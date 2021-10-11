@@ -21,20 +21,20 @@
                     ],
                     "executable": false
                 },
-                "config/packages/dev/web_loader.yaml": {
-                    "contents": [
-                        "web_loader:",
-                        "    disableCache: true",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/web_loader.yaml": {
                     "contents": [
                         "web_loader:",
                         "    pathPlaceholders:",
                         "    filesCollections:",
                         "    filesCollectionsContainers:",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/dev/web_loader.yaml": {
+                    "contents": [
+                        "web_loader:",
+                        "    disableCache: true",
                         ""
                     ],
                     "executable": false

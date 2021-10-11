@@ -13,6 +13,31 @@
                 }
             },
             "files": {
+                "config/routes/fos_oauth_server.yaml": {
+                    "contents": [
+                        "fos_oauth_server_token:",
+                        "    resource: \"@FOSOAuthServerBundle/Resources/config/routing/token.xml\"",
+                        "",
+                        "fos_oauth_server_authorize:",
+                        "    resource: \"@FOSOAuthServerBundle/Resources/config/routing/authorize.xml\"",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/fos_oauth_server.yaml": {
+                    "contents": [
+                        "# Read the documentation: https://github.com/FriendsOfSymfony/FOSOAuthServerBundle/blob/master/Resources/doc/index.md#step-5-configure-fosoauthserverbundle",
+                        "fos_oauth_server:",
+                        "    db_driver: orm",
+                        "",
+                        "    client_class: App\\Entity\\Client",
+                        "    access_token_class: App\\Entity\\AccessToken",
+                        "    refresh_token_class: App\\Entity\\RefreshToken",
+                        "    auth_code_class: App\\Entity\\AuthCode",
+                        ""
+                    ],
+                    "executable": false
+                },
                 "src/Entity/Client.php": {
                     "contents": [
                         "<?php",
@@ -38,19 +63,19 @@
                     ],
                     "executable": false
                 },
-                "src/Entity/AccessToken.php": {
+                "src/Entity/RefreshToken.php": {
                     "contents": [
                         "<?php",
                         "",
                         "namespace App\\Entity;",
                         "",
                         "use Doctrine\\ORM\\Mapping as ORM;",
-                        "use FOS\\OAuthServerBundle\\Entity\\AccessToken as BaseAccessToken;",
+                        "use FOS\\OAuthServerBundle\\Entity\\RefreshToken as BaseRefreshToken;",
                         "",
                         "/**",
                         " * @ORM\\Entity",
                         " */",
-                        "class AccessToken extends BaseAccessToken",
+                        "class RefreshToken extends BaseRefreshToken",
                         "{",
                         "    /**",
                         "     * @ORM\\Id",
@@ -75,19 +100,19 @@
                     ],
                     "executable": false
                 },
-                "src/Entity/RefreshToken.php": {
+                "src/Entity/AccessToken.php": {
                     "contents": [
                         "<?php",
                         "",
                         "namespace App\\Entity;",
                         "",
                         "use Doctrine\\ORM\\Mapping as ORM;",
-                        "use FOS\\OAuthServerBundle\\Entity\\RefreshToken as BaseRefreshToken;",
+                        "use FOS\\OAuthServerBundle\\Entity\\AccessToken as BaseAccessToken;",
                         "",
                         "/**",
                         " * @ORM\\Entity",
                         " */",
-                        "class RefreshToken extends BaseRefreshToken",
+                        "class AccessToken extends BaseAccessToken",
                         "{",
                         "    /**",
                         "     * @ORM\\Id",
@@ -145,31 +170,6 @@
                         "     */",
                         "    protected $user;",
                         "}",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/routes/fos_oauth_server.yaml": {
-                    "contents": [
-                        "fos_oauth_server_token:",
-                        "    resource: \"@FOSOAuthServerBundle/Resources/config/routing/token.xml\"",
-                        "",
-                        "fos_oauth_server_authorize:",
-                        "    resource: \"@FOSOAuthServerBundle/Resources/config/routing/authorize.xml\"",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/fos_oauth_server.yaml": {
-                    "contents": [
-                        "# Read the documentation: https://github.com/FriendsOfSymfony/FOSOAuthServerBundle/blob/master/Resources/doc/index.md#step-5-configure-fosoauthserverbundle",
-                        "fos_oauth_server:",
-                        "    db_driver: orm",
-                        "",
-                        "    client_class: App\\Entity\\Client",
-                        "    access_token_class: App\\Entity\\AccessToken",
-                        "    refresh_token_class: App\\Entity\\RefreshToken",
-                        "    auth_code_class: App\\Entity\\AuthCode",
                         ""
                     ],
                     "executable": false

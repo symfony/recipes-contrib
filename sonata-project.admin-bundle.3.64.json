@@ -13,12 +13,6 @@
                 }
             },
             "files": {
-                "src/Admin/.gitignore": {
-                    "contents": [
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/routes/sonata_admin.yaml": {
                     "contents": [
                         "admin_area:",
@@ -47,6 +41,12 @@
                         "    blocks:",
                         "        sonata.admin.block.admin_list:",
                         "            contexts: [admin]",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Admin/.gitignore": {
+                    "contents": [
                         ""
                     ],
                     "executable": false

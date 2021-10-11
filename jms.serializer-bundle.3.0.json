@@ -12,6 +12,18 @@
                 }
             },
             "files": {
+                "config/packages/prod/jms_serializer.yaml": {
+                    "contents": [
+                        "jms_serializer:",
+                        "    visitors:",
+                        "        json_serialization:",
+                        "            options:",
+                        "                - JSON_UNESCAPED_SLASHES",
+                        "                - JSON_PRESERVE_ZERO_FRACTION",
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/packages/dev/jms_serializer.yaml": {
                     "contents": [
                         "jms_serializer:",
@@ -19,18 +31,6 @@
                         "        json_serialization:",
                         "            options:",
                         "                - JSON_PRETTY_PRINT",
-                        "                - JSON_UNESCAPED_SLASHES",
-                        "                - JSON_PRESERVE_ZERO_FRACTION",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/prod/jms_serializer.yaml": {
-                    "contents": [
-                        "jms_serializer:",
-                        "    visitors:",
-                        "        json_serialization:",
-                        "            options:",
                         "                - JSON_UNESCAPED_SLASHES",
                         "                - JSON_PRESERVE_ZERO_FRACTION",
                         ""

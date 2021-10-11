@@ -21,6 +21,14 @@
                     ],
                     "executable": false
                 },
+                "config/packages/orbitale_easy_impress.yaml": {
+                    "contents": [
+                        "easy_impress:",
+                        "    presentations_dir: '%kernel.project_dir%/config/presentations'",
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/presentations/home.yaml": {
                     "contents": [
                         "# Read the documentation https://github.com/Orbitale/EasyImpressBundle#yml-reference for more details about yaml options",
@@ -38,14 +46,6 @@
                         "            rotate-x: 0",
                         "            rotate-y: 0",
                         "            rotate-z: 0",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/orbitale_easy_impress.yaml": {
-                    "contents": [
-                        "easy_impress:",
-                        "    presentations_dir: '%kernel.project_dir%/config/presentations'",
                         ""
                     ],
                     "executable": false

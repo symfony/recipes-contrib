@@ -12,12 +12,10 @@
                 }
             },
             "files": {
-                "config/packages/tsantos_serializer.yaml": {
+                "config/packages/test/tsantos_serializer.yaml": {
                     "contents": [
-                        "# Read the official documentation page of this bundle for further information about all possible configurations.",
-                        "# http://tsantos-serializer-bundle.readthedocs.io/",
                         "tsantos_serializer:",
-                        "    generation_strategy: file_not_exists",
+                        "    generation_strategy: always",
                         ""
                     ],
                     "executable": false
@@ -30,10 +28,12 @@
                     ],
                     "executable": false
                 },
-                "config/packages/test/tsantos_serializer.yaml": {
+                "config/packages/tsantos_serializer.yaml": {
                     "contents": [
+                        "# Read the official documentation page of this bundle for further information about all possible configurations.",
+                        "# http://tsantos-serializer-bundle.readthedocs.io/",
                         "tsantos_serializer:",
-                        "    generation_strategy: always",
+                        "    generation_strategy: file_not_exists",
                         ""
                     ],
                     "executable": false

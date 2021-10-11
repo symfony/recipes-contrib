@@ -40,6 +40,28 @@
                 ]
             },
             "files": {
+                "tsconfig.json": {
+                    "contents": [
+                        "{",
+                        "    \"compilerOptions\": {",
+                        "        \"lib\": [ \"es2015\", \"dom\" ],",
+                        "        \"module\": \"amd\",",
+                        "        \"target\": \"es5\",",
+                        "        \"allowJs\": true,",
+                        "        \"noImplicitAny\": true,",
+                        "        \"suppressImplicitAnyIndexErrors\": true,",
+                        "        \"moduleResolution\": \"node\",",
+                        "        \"sourceMap\": true,",
+                        "        \"experimentalDecorators\": true",
+                        "    },",
+                        "    \"include\": [",
+                        "        \"./assets/**/*\"",
+                        "    ]",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
                 "public/build/.gitignore": {
                     "contents": [
                         ""
@@ -93,28 +115,6 @@
                 },
                 "assets/theme/styles/base.scss": {
                     "contents": [
-                        ""
-                    ],
-                    "executable": false
-                },
-                "tsconfig.json": {
-                    "contents": [
-                        "{",
-                        "    \"compilerOptions\": {",
-                        "        \"lib\": [ \"es2015\", \"dom\" ],",
-                        "        \"module\": \"amd\",",
-                        "        \"target\": \"es5\",",
-                        "        \"allowJs\": true,",
-                        "        \"noImplicitAny\": true,",
-                        "        \"suppressImplicitAnyIndexErrors\": true,",
-                        "        \"moduleResolution\": \"node\",",
-                        "        \"sourceMap\": true,",
-                        "        \"experimentalDecorators\": true",
-                        "    },",
-                        "    \"include\": [",
-                        "        \"./assets/**/*\"",
-                        "    ]",
-                        "}",
                         ""
                     ],
                     "executable": false

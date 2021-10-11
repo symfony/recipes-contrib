@@ -21,6 +21,19 @@
                 ]
             },
             "files": {
+                "config/services_test.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    App\\Tests\\Behat\\:",
+                        "        resource: '../tests/Behat/*'",
+                        ""
+                    ],
+                    "executable": false
+                },
                 "features/demo.feature": {
                     "contents": [
                         "# This file contains a user story for demonstration only.",
@@ -35,19 +48,6 @@
                         "    Scenario: It receives a response from Symfony's kernel",
                         "        When a demo scenario sends a request to \"/\"",
                         "        Then the response should be received",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/services_test.yaml": {
-                    "contents": [
-                        "services:",
-                        "    _defaults:",
-                        "        autowire: true",
-                        "        autoconfigure: true",
-                        "",
-                        "    App\\Tests\\Behat\\:",
-                        "        resource: '../tests/Behat/*'",
                         ""
                     ],
                     "executable": false

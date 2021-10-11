@@ -19,6 +19,15 @@
                 ]
             },
             "files": {
+                "config/packages/msgphp_user.yaml": {
+                    "contents": [
+                        "msgphp_user:",
+                        "    class_mapping:",
+                        "        MsgPhp\\User\\User: App\\Entity\\User",
+                        ""
+                    ],
+                    "executable": false
+                },
                 "src/Entity/User.php": {
                     "contents": [
                         "<?php",
@@ -47,15 +56,6 @@
                         "        return $this->id;",
                         "    }",
                         "}",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/msgphp_user.yaml": {
-                    "contents": [
-                        "msgphp_user:",
-                        "    class_mapping:",
-                        "        MsgPhp\\User\\User: App\\Entity\\User",
                         ""
                     ],
                     "executable": false

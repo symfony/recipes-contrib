@@ -13,12 +13,6 @@
                 }
             },
             "files": {
-                "src/Method/.gitignore": {
-                    "contents": [
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/routes/rpc_server.yaml": {
                     "contents": [
                         "rpc:",
@@ -46,6 +40,12 @@
                         "    # by default use 'rpc.server.serializer.base' service",
                         "",
                         "    serializer: 'rpc.server.serializer.base'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Method/.gitignore": {
+                    "contents": [
                         ""
                     ],
                     "executable": false

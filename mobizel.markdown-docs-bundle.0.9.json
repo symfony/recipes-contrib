@@ -13,17 +13,6 @@
                 }
             },
             "files": {
-                "docs/index.md": {
-                    "contents": [
-                        "# Documentation",
-                        "",
-                        "Your documentation is now ready and you can start working on it.",
-                        "",
-                        "[Documentation of the bundle](https://github.com/mobizel/markdown-docs-bundle/blob/master/docs/index.md)",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/routes/mobizel_markdown_docs.yaml": {
                     "contents": [
                         "_mobizel_markdowns:",
@@ -45,6 +34,17 @@
                         "",
                         "        # You can add as many contexts as you need",
                         "        # See https://github.com/mobizel/markdown-docs-bundle/blob/master/docs/how-to-add-docs-contexts.md",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "docs/index.md": {
+                    "contents": [
+                        "# Documentation",
+                        "",
+                        "Your documentation is now ready and you can start working on it.",
+                        "",
+                        "[Documentation of the bundle](https://github.com/mobizel/markdown-docs-bundle/blob/master/docs/index.md)",
                         ""
                     ],
                     "executable": false

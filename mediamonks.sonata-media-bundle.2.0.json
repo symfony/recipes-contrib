@@ -21,26 +21,6 @@
                 ]
             },
             "files": {
-                "src/Entity/Media.php": {
-                    "contents": [
-                        "<?php",
-                        "",
-                        "namespace App\\Entity;",
-                        "",
-                        "use Doctrine\\ORM\\Mapping as ORM;",
-                        "use MediaMonks\\SonataMediaBundle\\Entity\\Media as BaseMedia;",
-                        "",
-                        "/**",
-                        " * @ORM\\Entity(repositoryClass=\"MediaMonks\\SonataMediaBundle\\Repository\\MediaRepository\")",
-                        " * @ORM\\Table",
-                        " */",
-                        "class Media extends BaseMedia",
-                        "{",
-                        "}",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/routes/mediamonks_sonata_media.yaml": {
                     "contents": [
                         "mediamonks_sonata_media_admin:",
@@ -59,6 +39,26 @@
                         "    filesystem_public: 'oneup_flysystem.default_filesystem_filesystem'",
                         "    redirect_url: '%env(MEDIA_REDIRECT_URL)%'",
                         "    model_class: App\\Entity\\Media",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/Media.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "use MediaMonks\\SonataMediaBundle\\Entity\\Media as BaseMedia;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity(repositoryClass=\"MediaMonks\\SonataMediaBundle\\Repository\\MediaRepository\")",
+                        " * @ORM\\Table",
+                        " */",
+                        "class Media extends BaseMedia",
+                        "{",
+                        "}",
                         ""
                     ],
                     "executable": false

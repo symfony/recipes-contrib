@@ -15,16 +15,6 @@
                 }
             },
             "files": {
-                "config/packages/enqueue.yaml": {
-                    "contents": [
-                        "enqueue:",
-                        "    transport:",
-                        "        default: '%env(resolve:ENQUEUE_DSN)%'",
-                        "    client: null",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/test/enqueue.yaml": {
                     "contents": [
                         "enqueue:",
@@ -32,6 +22,16 @@
                         "        default: 'null://'",
                         "    client:",
                         "        traceable_producer: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/enqueue.yaml": {
+                    "contents": [
+                        "enqueue:",
+                        "    transport:",
+                        "        default: '%env(resolve:ENQUEUE_DSN)%'",
+                        "    client: null",
                         ""
                     ],
                     "executable": false
