@@ -1505,6 +1505,9 @@
         "wemakecustom/doctrine-naming-strategy-bundle": [
             "1.0"
         ],
+        "wiet-at/symfony-dev": [
+            "1.0"
+        ],
         "willdurand/geocoder-bundle": [
             "4.1",
             "5.0"
