@@ -8,17 +8,17 @@ services:
             - '%env(DATAPOOL_API_USERNAME)%'
             - '%env(DATAPOOL_API_PASSWORD)%'
 
-    Datana\Datapool\Api\AktenApi: ~
+    Datana\Datapool\Api\AktenApi: null
     Datana\Datapool\Api\AktenApiInterface: '@Datana\Datapool\Api\AktenApi'
 
-    Datana\Datapool\Api\AktenEventLogApi: ~
-    Datana\Datapool\Api\NullAktenEventLogApi: ~
+    Datana\Datapool\Api\AktenEventLogApi: null
+    Datana\Datapool\Api\NullAktenEventLogApi: null
 
-    Datana\Datapool\Api\AktenzeichenApi: ~
-    Datana\Datapool\Api\FakeAktenzeichenApi: ~
-    
-    Datana\Datapool\Api\ChatProtocolApi: ~
-    Datana\Datapool\Api\NullChatProtocol: ~    
+    Datana\Datapool\Api\AktenzeichenApi: null
+    Datana\Datapool\Api\FakeAktenzeichenApi: null
+
+    Datana\Datapool\Api\ChatProtocolApi: null
+    Datana\Datapool\Api\NullChatProtocol: null  
 
 when@prod:
     services:
