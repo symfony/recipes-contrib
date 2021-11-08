@@ -16,18 +16,24 @@ services:
 
     Datana\Datapool\Api\AktenzeichenApi: ~
     Datana\Datapool\Api\FakeAktenzeichenApi: ~
+    
+    Datana\Datapool\Api\ChatProtocolApi: ~
+    Datana\Datapool\Api\NullChatProtocol: ~    
 
 when@prod:
     services:
         Datana\Datapool\Api\AktenEventLogApiInterface: '@Datana\Datapool\Api\AktenEventLogApi'
         Datana\Datapool\Api\AktenzeichenApiInterface: '@Datana\Datapool\Api\AktenzeichenApi'
+        Datana\Datapool\Api\ChatProtocolApiInterface: '@Datana\Datapool\Api\ChatProtocolApi'
 
 when@dev:
     services:
         Datana\Datapool\Api\AktenEventLogApiInterface: '@Datana\Datapool\Api\NullAktenEventLogApi'
         Datana\Datapool\Api\AktenzeichenApiInterface: '@Datana\Datapool\Api\FakeAktenzeichenApi'
+        Datana\Datapool\Api\ChatProtocolApiInterface: '@Datana\Datapool\Api\NullChatProtocolApi'
 
 when@test:
     services:
         Datana\Datapool\Api\AktenEventLogApiInterface: '@Datana\Datapool\Api\NullAktenEventLogApi'
         Datana\Datapool\Api\AktenzeichenApiInterface: '@Datana\Datapool\Api\FakeAktenzeichenApi'
+        Datana\Datapool\Api\ChatProtocolApiInterface: '@Datana\Datapool\Api\NullChatProtocolApi'
