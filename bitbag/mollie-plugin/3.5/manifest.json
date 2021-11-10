@@ -1,0 +1,18 @@
+{
+    "bundles": {
+        "BitBag\\SyliusMolliePlugin\\BitBagSyliusMolliePlugin": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "copy-from-package": {
+        "tests/Application/templates/bundles/SyliusAdminBundle/PaymentMethod/_api_live_key.html.twig": "templates/bundles/SyliusAdminBundle/PaymentMethod/_api_live_key.html.twig",
+        "tests/Application/templates/bundles/SyliusAdminBundle/PaymentMethod/_api_test_key.html.twig": "templates/bundles/SyliusAdminBundle/PaymentMethod/_api_test_key.html.twig",
+        "tests/Application/templates/bundles/SyliusAdminBundle/PaymentMethod/_mollieMessage.html.twig": "templates/bundles/SyliusAdminBundle/PaymentMethod/_mollieMessage.html.twig",
+        "tests/Application/templates/bundles/SyliusAdminBundle/PaymentMethod/_mollieMethodsForm.html.twig": "templates/bundles/SyliusAdminBundle/PaymentMethod/_mollieMethodsForm.html.twig",
+        "tests/Application/templates/bundles/SyliusAdminBundle/PaymentMethod/_versionNotification.html.twig": "templates/bundles/SyliusAdminBundle/PaymentMethod/_versionNotification.html.twig"
+    },
+    "container": {
+        "images_dir": "/media/image/"
+    }
+}
