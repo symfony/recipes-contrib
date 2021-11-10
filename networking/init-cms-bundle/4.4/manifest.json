@@ -1,0 +1,17 @@
+{
+    "bundles": {
+        "Networking\\InitCmsBundle\\NetworkingInitCmsBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "serializer/": "%CONFIG_DIR%/serializer/",
+        "src/": "%SRC_DIR%/"
+    },
+    "env": {
+        "LOCALE": "en",
+        "DATABASE_DRIVER": "mysql"
+    },
+    "composer-scripts": {
+        "ckeditor:install --clear=drop": "symfony-cmd"
+    }
+}
