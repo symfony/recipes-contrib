@@ -5,9 +5,7 @@
   * Start using your fresh plugin:
     1. Include the newsletter in your template:
         <comment>{% include '@BitBagSyliusMailChimpPlugin/_subscribe.html.twig' %}</>
-    2. Install the assets
-        <comment>$ bin/console assets:install --symlink</>
-    3. Add these javascripts to the layout template that includes your subscription form imported in the previous steps
+    2. Add these javascripts to the layout template that includes your subscription form imported in the previous steps
        <comment><script src="{{ asset('path/to/jquery.js') }}"></script>
                 <script src="{{ asset('bundles/bitbagsyliusmailchimpplugin/bitbag-mailchimp-plugin-newsletter.js') }}"></script>
                 <script>
