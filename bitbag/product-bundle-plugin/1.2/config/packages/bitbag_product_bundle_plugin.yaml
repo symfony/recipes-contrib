@@ -1,0 +1,3 @@
+imports:
+    - { resource: "@BitBagSyliusProductBundlePlugin/Resources/config/config.yml" }
+
