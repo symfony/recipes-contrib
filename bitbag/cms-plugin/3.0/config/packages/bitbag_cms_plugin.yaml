@@ -1,0 +1,7 @@
+imports:
+    - { resource: "@BitBagSyliusShippingExportPlugin/Resources/config/config.yml" }
+
+twig:
+    form_themes:
+        - '@FOSCKEditor/Form/ckeditor_widget.html.twig'
+        - '@BitBagSyliusCmsPlugin/Form/ckeditor_widget.html.twig'
