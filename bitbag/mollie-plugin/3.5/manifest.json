@@ -6,11 +6,28 @@
         "config/": "%CONFIG_DIR%/"
     },
     "copy-from-package": {
+        "tests/Application/templates/bundles/SyliusAdminBundle/Order/Show/Summary/_item.html.twig": "templates/bundles/SyliusAdminBundle/Order/Show/Summary/_item.html.twig",
+        "tests/Application/templates/bundles/SyliusAdminBundle/Order/Show/Summary/_totalsPromotions.html.twig": "templates/bundles/SyliusAdminBundle/Order/Show/Summary/_totalsPromotions.html.twig",
+        "tests/Application/templates/bundles/SyliusAdminBundle/Order/Show/_payment.html.twig": "templates/bundles/SyliusAdminBundle/Order/Show/_payment.html.twig",
+        "tests/Application/templates/bundles/SyliusAdminBundle/Product/Tab/_details.html.twig": "templates/bundles/SyliusAdminBundle/Product/Tab/_details.html.twig",
+        "tests/Application/templates/bundles/SyliusAdminBundle/Shipment/Partial/_ship.html.twig": "templates/bundles/SyliusAdminBundle/Shipment/Partial/_ship.html.twig",
         "tests/Application/templates/bundles/SyliusAdminBundle/PaymentMethod/_api_live_key.html.twig": "templates/bundles/SyliusAdminBundle/PaymentMethod/_api_live_key.html.twig",
         "tests/Application/templates/bundles/SyliusAdminBundle/PaymentMethod/_api_test_key.html.twig": "templates/bundles/SyliusAdminBundle/PaymentMethod/_api_test_key.html.twig",
         "tests/Application/templates/bundles/SyliusAdminBundle/PaymentMethod/_mollieMessage.html.twig": "templates/bundles/SyliusAdminBundle/PaymentMethod/_mollieMessage.html.twig",
         "tests/Application/templates/bundles/SyliusAdminBundle/PaymentMethod/_mollieMethodsForm.html.twig": "templates/bundles/SyliusAdminBundle/PaymentMethod/_mollieMethodsForm.html.twig",
-        "tests/Application/templates/bundles/SyliusAdminBundle/PaymentMethod/_versionNotification.html.twig": "templates/bundles/SyliusAdminBundle/PaymentMethod/_versionNotification.html.twig"
+        "tests/Application/templates/bundles/SyliusAdminBundle/PaymentMethod/_versionNotification.html.twig": "templates/bundles/SyliusAdminBundle/PaymentMethod/_versionNotification.html.twig",
+        "tests/Application/templates/bundles/SyliusRefundPlugin/_warningVoucherInfo.html.twig": "templates/bundles/SyliusRefundPlugin/_warningVoucherInfo.html.twig",
+        "tests/Application/templates/bundles/SyliusRefundPlugin/orderRefunds.html.twig": "templates/bundles/SyliusRefundPlugin/orderRefunds.html.twig",
+        "tests/Application/templates/bundles/SyliusShopBundle/Checkout/SelectPayment/_applePayButton.html.twig": "templates/bundles/SyliusShopBundle/Checkout/SelectPayment/_applePayButton.html.twig",
+        "tests/Application/templates/bundles/SyliusShopBundle/Checkout/SelectPayment/_choiceMollie.html.twig": "templates/bundles/SyliusShopBundle/Checkout/SelectPayment/_choiceMollie.html.twig",
+        "tests/Application/templates/bundles/SyliusShopBundle/Checkout/SelectPayment/_payment.html.twig": "templates/bundles/SyliusShopBundle/Checkout/SelectPayment/_payment.html.twig",
+        "tests/Application/templates/bundles/SyliusShopBundle/Checkout/_support.html.twig": "templates/bundles/SyliusShopBundle/Checkout/_support.html.twig",
+        "tests/Application/templates/bundles/SyliusShopBundle/Common/Order/Table/_totals.html.twig": "templates/bundles/SyliusShopBundle/Common/Order/Table/_totals.html.twig",
+        "tests/Application/templates/bundles/SyliusShopBundle/Common/Order/_payments.html.twig": "SyliusShopBundle/Common/Order/_payments.html.twig",
+        "tests/Application/templates/bundles/SyliusShopBundle/Common/Order/_table.html.twig": "SyliusShopBundle/Common/Order/_table.html.twig",
+        "tests/Application/templates/bundles/SyliusShopBundle/Order/_summary.html.twig": "templates/bundles/SyliusShopBundle/Order/_summary.html.twig",
+        "tests/Application/templates/bundles/SyliusUiBundle/OnboardingWizard/_logo.html.twig": "templates/bundles/SyliusUiBundle/OnboardingWizard/_logo.html.twig",
+        "tests/Application/templates/bundles/SyliusUiBundle/OnboardingWizard/_navigation.html.twig": "templates/bundles/SyliusUiBundle/OnboardingWizard/_navigation.html.twig"
     },
     "container": {
         "images_dir": "/media/image/"
