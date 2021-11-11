@@ -12,6 +12,6 @@
         "OAUTH_KEYCLOAK_CLIENT_SECRET": "..."
     },
     "conflict": {
-        "symfony/config": "<5.0"
+        "symfony/config": "^5.0"
     }
 }
