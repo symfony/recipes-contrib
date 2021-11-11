@@ -1,0 +1,33 @@
+services:
+    _defaults:
+        autowire: true
+
+    Datana\Datapool\Api\DatapoolClient:
+        arguments:
+            - '%env(DATAPOOL_API_BASE_URI)%'
+            - '%env(DATAPOOL_API_USERNAME)%'
+            - '%env(DATAPOOL_API_PASSWORD)%'
+
+    Datana\Datapool\Api\AktenApi: ~
+    Datana\Datapool\Api\AktenApiInterface: '@Datana\Datapool\Api\AktenApi'
+
+    Datana\Datapool\Api\AktenEventLogApi: ~
+    Datana\Datapool\Api\NullAktenEventLogApi: ~
+
+    Datana\Datapool\Api\AktenzeichenApi: ~
+    Datana\Datapool\Api\FakeAktenzeichenApi: ~
+
+when@prod:
+    services:
+        Datana\Datapool\Api\AktenEventLogApiInterface: '@Datana\Datapool\Api\AktenEventLogApi'
+        Datana\Datapool\Api\AktenzeichenApiInterface: '@Datana\Datapool\Api\AktenzeichenApi'
+
+when@dev:
+    services:
+        Datana\Datapool\Api\AktenEventLogApiInterface: '@Datana\Datapool\Api\NullAktenEventLogApi'
+        Datana\Datapool\Api\AktenzeichenApiInterface: '@Datana\Datapool\Api\FakeAktenzeichenApi'
+
+when@test:
+    services:
+        Datana\Datapool\Api\AktenEventLogApiInterface: '@Datana\Datapool\Api\NullAktenEventLogApi'
+        Datana\Datapool\Api\AktenzeichenApiInterface: '@Datana\Datapool\Api\FakeAktenzeichenApi'
