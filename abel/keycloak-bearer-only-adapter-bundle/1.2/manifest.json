@@ -10,5 +10,8 @@
         "OAUTH_KEYCLOAK_REALM": "...",
         "OAUTH_KEYCLOAK_CLIENT_ID": "...",
         "OAUTH_KEYCLOAK_CLIENT_SECRET": "..."
+    },
+    "conflict": {
+        "symfony/symfony": "<5.0"
     }
 }
