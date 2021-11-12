@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "ABEL\\Bundle\\keycloakBearerOnlyAdapterBundle\\ABELkeycloakBearerOnlyAdapterBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "OAUTH_KEYCLOAK_ISSUER": "...",
+        "OAUTH_KEYCLOAK_REALM": "...",
+        "OAUTH_KEYCLOAK_CLIENT_ID": "...",
+        "OAUTH_KEYCLOAK_CLIENT_SECRET": "..."
+    }
+}
