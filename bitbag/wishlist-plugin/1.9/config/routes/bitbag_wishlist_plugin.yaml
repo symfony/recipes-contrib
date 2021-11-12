@@ -1,3 +1,2 @@
-bitbag_sylius_cms_plugin:
+bitbag_sylius_wishlist_plugin:
     resource: "@BitBagSyliusWishlistPlugin/Resources/config/routing.yml"
-
