@@ -37,14 +37,6 @@
                 ]
             },
             "files": {
-                "config/routes/trikoder_oauth2.yaml": {
-                    "contents": [
-                        "oauth2:",
-                        "    resource: '@TrikoderOAuth2Bundle/Resources/config/routes.xml'",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/trikoder_oauth2.yaml": {
                     "contents": [
                         "trikoder_oauth2:",
@@ -60,6 +52,14 @@
                         "",
                         "    persistence:",
                         "        doctrine: null",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/trikoder_oauth2.yaml": {
+                    "contents": [
+                        "oauth2:",
+                        "    resource: '@TrikoderOAuth2Bundle/Resources/config/routes.xml'",
                         ""
                     ],
                     "executable": false

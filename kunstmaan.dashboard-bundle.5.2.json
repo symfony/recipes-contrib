@@ -18,18 +18,6 @@
                 }
             },
             "files": {
-                "config/routes/kunstmaan_dashboard.yaml": {
-                    "contents": [
-                        "KunstmaanDashboardBundle:",
-                        "    resource: \"@KunstmaanDashboardBundle/Resources/config/routing.yml\"",
-                        "    # If your site is not multi language, remove the \"{_locale}/\" part of the prefix and the requirements",
-                        "    prefix:   /{_locale}/",
-                        "    requirements:",
-                        "        _locale: \"%kunstmaan_admin.required_locales%\"",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/kunstmaan_dashboard.yaml": {
                     "contents": [
                         "# Configurate the dashboard bundle google api parameters to enable the google widget",
@@ -41,6 +29,18 @@
                         "            client_secret: '%env(GOOGLE_API_CLIENT_SECRET)%'",
                         "            dev_key: '%env(GOOGLE_API_DEV_KEY)%'",
                         "            app_name: '%env(GOOGLE_API_APP_NAME)%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/kunstmaan_dashboard.yaml": {
+                    "contents": [
+                        "KunstmaanDashboardBundle:",
+                        "    resource: \"@KunstmaanDashboardBundle/Resources/config/routing.yml\"",
+                        "    # If your site is not multi language, remove the \"{_locale}/\" part of the prefix and the requirements",
+                        "    prefix:   /{_locale}/",
+                        "    requirements:",
+                        "        _locale: \"%kunstmaan_admin.required_locales%\"",
                         ""
                     ],
                     "executable": false

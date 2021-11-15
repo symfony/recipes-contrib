@@ -24,21 +24,21 @@
                 ]
             },
             "files": {
-                "config/routes/disjfa_mozaic.yaml": {
-                    "contents": [
-                        "disjfa_mozaic:",
-                        "    resource: '@DisjfaMozaicBundle/Controller/'",
-                        "    type:     annotation",
-                        ""
-                    ],
-                    "executable": true
-                },
                 "config/packages/disjfa_mozaic.yaml": {
                     "contents": [
                         "disjfa_mozaic:",
                         "    unsplash:",
                         "        application_id: '%env(resolve:UNSPLASH_APPLICATION_ID)%'",
                         "        secret: '%env(resolve:UNSPLASH_APPLICATION_SECRET)%'",
+                        ""
+                    ],
+                    "executable": true
+                },
+                "config/routes/disjfa_mozaic.yaml": {
+                    "contents": [
+                        "disjfa_mozaic:",
+                        "    resource: '@DisjfaMozaicBundle/Controller/'",
+                        "    type:     annotation",
                         ""
                     ],
                     "executable": true

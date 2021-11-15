@@ -12,15 +12,6 @@
                 }
             },
             "files": {
-                "config/routes/kms_froala_editor.yaml": {
-                    "contents": [
-                        "kms_froala_editor:",
-                        "    resource: \"@KMSFroalaEditorBundle/Resources/config/routing.yml\"",
-                        "    prefix:   /froala-editor",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/kms_froala_editor.yaml": {
                     "contents": [
                         "twig:",
@@ -29,6 +20,15 @@
                         "",
                         "kms_froala_editor:",
                         "    language: en",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/kms_froala_editor.yaml": {
+                    "contents": [
+                        "kms_froala_editor:",
+                        "    resource: \"@KMSFroalaEditorBundle/Resources/config/routing.yml\"",
+                        "    prefix:   /froala-editor",
                         ""
                     ],
                     "executable": false

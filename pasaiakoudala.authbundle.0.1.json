@@ -26,11 +26,13 @@
                 ]
             },
             "files": {
-                "config/routes/pasaiako_udala_auth.yaml": {
+                "config/packages/pasaiako_udala_auth.yaml": {
                     "contents": [
                         "pasaiako_udala_auth:",
-                        "    resource: '@PasaiakoUdalaAuthBundle/Resources/config/routes.xml'",
-                        "    prefix: /",
+                        "    route_after_successfull_login: \"default\"",
+                        "    LDAP_ADMIN_TALDEAK: \"Rol-taldea1, Rol-taldea2\"",
+                        "    LDAP_KUDEATU_TALDEAK: \"Rol-taldea1, Rol-taldea2\"",
+                        "    LDAP_USER_TALDEA: \"Rol-taldea1, Rol-taldea2\"",
                         ""
                     ],
                     "executable": false
@@ -68,13 +70,11 @@
                     ],
                     "executable": false
                 },
-                "config/packages/pasaiako_udala_auth.yaml": {
+                "config/routes/pasaiako_udala_auth.yaml": {
                     "contents": [
                         "pasaiako_udala_auth:",
-                        "    route_after_successfull_login: \"default\"",
-                        "    LDAP_ADMIN_TALDEAK: \"Rol-taldea1, Rol-taldea2\"",
-                        "    LDAP_KUDEATU_TALDEAK: \"Rol-taldea1, Rol-taldea2\"",
-                        "    LDAP_USER_TALDEA: \"Rol-taldea1, Rol-taldea2\"",
+                        "    resource: '@PasaiakoUdalaAuthBundle/Resources/config/routes.xml'",
+                        "    prefix: /",
                         ""
                     ],
                     "executable": false

@@ -21,31 +21,6 @@
                 ]
             },
             "files": {
-                "config/jane/open_api.php": {
-                    "contents": [
-                        "<?php",
-                        "",
-                        "return [",
-                        "    'openapi-file' => __DIR__ . '/open-api.yaml',",
-                        "    'namespace' => 'MyApp\\Library\\Generated',",
-                        "    'directory' => __DIR__ . '/../../generated',",
-                        "];",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/jane.yaml": {
-                    "contents": [
-                        "services:",
-                        "    _defaults:",
-                        "        autowire: true",
-                        "        autoconfigure: true",
-                        "",
-                        "#    MyApp\\Library\\Generated\\Normalizer\\JaneObjectNormalizer: null",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "bin/jane-open-api-generate": {
                     "contents": [
                         "#!/usr/bin/env php",
@@ -67,6 +42,31 @@
                         ""
                     ],
                     "executable": true
+                },
+                "config/packages/jane.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "#    MyApp\\Library\\Generated\\Normalizer\\JaneObjectNormalizer: null",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/jane/open_api.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "return [",
+                        "    'openapi-file' => __DIR__ . '/open-api.yaml',",
+                        "    'namespace' => 'MyApp\\Library\\Generated',",
+                        "    'directory' => __DIR__ . '/../../generated',",
+                        "];",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
             "ref": "1628ebe907a0d28e3caa22199c6e711d14c8e680"

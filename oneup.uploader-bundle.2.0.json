@@ -12,15 +12,6 @@
                 }
             },
             "files": {
-                "config/routes/oneup_uploader.yaml": {
-                    "contents": [
-                        "oneup_uploader:",
-                        "    resource: .",
-                        "    type: uploader",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/oneup_uploader.yaml": {
                     "contents": [
                         "# Read the documentation: https://github.com/1up-lab/OneupUploaderBundle/blob/master/Resources/doc/index.md",
@@ -29,6 +20,15 @@
                         "        # This is a mapping example, remove it and create your own mappings.",
                         "        gallery:",
                         "            frontend: dropzone # or any uploader you use in the frontend",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/oneup_uploader.yaml": {
+                    "contents": [
+                        "oneup_uploader:",
+                        "    resource: .",
+                        "    type: uploader",
                         ""
                     ],
                     "executable": false

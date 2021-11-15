@@ -12,15 +12,6 @@
                 }
             },
             "files": {
-                "config/routes/wandi_easy_admin_plus.yaml": {
-                    "contents": [
-                        "wandi_easy_admin_plus:",
-                        "    resource: '@WandiEasyAdminPlusBundle/Resources/config/routing.yml'",
-                        "    prefix: /admin",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/wandi_easyadmin_plus.yaml": {
                     "contents": [
                         "#wandi_easy_admin_plus:",
@@ -35,6 +26,15 @@
                         "#        # defines a list of domains you want to exclude from admin (if not set, no excluded domain)",
                         "#        excluded_domains:",
                         "#            - validators",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/wandi_easy_admin_plus.yaml": {
+                    "contents": [
+                        "wandi_easy_admin_plus:",
+                        "    resource: '@WandiEasyAdminPlusBundle/Resources/config/routing.yml'",
+                        "    prefix: /admin",
                         ""
                     ],
                     "executable": false

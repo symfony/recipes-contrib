@@ -21,32 +21,6 @@
                 ]
             },
             "files": {
-                "config/jane/json_schema.php": {
-                    "contents": [
-                        "<?php",
-                        "",
-                        "return [",
-                        "    'json-schema-file' => __DIR__ . '/json-schema.json',",
-                        "    'root-class' => 'MyModel',",
-                        "    'namespace' => 'MyApp\\Library\\Generated',",
-                        "    'directory' => __DIR__ . '/../../generated',",
-                        "];",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/jane.yaml": {
-                    "contents": [
-                        "services:",
-                        "    _defaults:",
-                        "        autowire: true",
-                        "        autoconfigure: true",
-                        "",
-                        "#    MyApp\\Library\\Generated\\Normalizer\\JaneObjectNormalizer: null",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "bin/jane-json-schema-generate": {
                     "contents": [
                         "#!/usr/bin/env php",
@@ -67,6 +41,32 @@
                         ""
                     ],
                     "executable": true
+                },
+                "config/packages/jane.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "#    MyApp\\Library\\Generated\\Normalizer\\JaneObjectNormalizer: null",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/jane/json_schema.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "return [",
+                        "    'json-schema-file' => __DIR__ . '/json-schema.json',",
+                        "    'root-class' => 'MyModel',",
+                        "    'namespace' => 'MyApp\\Library\\Generated',",
+                        "    'directory' => __DIR__ . '/../../generated',",
+                        "];",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
             "ref": "5383305f5cc44c1f8f8d11ceeb157b761e437b4c"

@@ -12,20 +12,20 @@
                 }
             },
             "files": {
-                "config/routes/dev/adlarge_fixtures_documentation.yaml": {
-                    "contents": [
-                        "AdlargeFixturesDocumentation:",
-                        "    resource: '@AdlargeFixturesDocumentationBundle/Resources/config/routing.yml'",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/dev/adlarge_fixtures_documentation.yaml": {
                     "contents": [
                         "adlarge_fixtures_documentation:",
                         "    title: 'Fixtures documentation'",
                         "    reloadCommands:",
                         "        - php bin/console doctrine:fixtures:load",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/dev/adlarge_fixtures_documentation.yaml": {
+                    "contents": [
+                        "AdlargeFixturesDocumentation:",
+                        "    resource: '@AdlargeFixturesDocumentationBundle/Resources/config/routing.yml'",
                         ""
                     ],
                     "executable": false

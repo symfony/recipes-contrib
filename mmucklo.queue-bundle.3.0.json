@@ -26,14 +26,6 @@
                 ]
             },
             "files": {
-                "config/routes/dtc_queue.yaml": {
-                    "contents": [
-                        "dtc_queue:",
-                        "    resource: '@DtcQueueBundle/Resources/config/routing.yml'",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/dtc_queue.yaml": {
                     "contents": [
                         "dtc_queue:",
@@ -45,6 +37,14 @@
                         "    priority_direction: desc",
                         "    admin:",
                         "        chartjs: 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/dtc_queue.yaml": {
+                    "contents": [
+                        "dtc_queue:",
+                        "    resource: '@DtcQueueBundle/Resources/config/routing.yml'",
                         ""
                     ],
                     "executable": false

@@ -27,15 +27,6 @@
                 ]
             },
             "files": {
-                "config/routes/docusign.yaml": {
-                    "contents": [
-                        "docusign:",
-                        "    resource: .",
-                        "    type: docusign",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/docusign.yaml": {
                     "contents": [
                         "docusign:",
@@ -76,6 +67,15 @@
                         "        adapter: 'local'",
                         "        options:",
                         "            directory: '%kernel.project_dir%/var/storage/default'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/docusign.yaml": {
+                    "contents": [
+                        "docusign:",
+                        "    resource: .",
+                        "    type: docusign",
                         ""
                     ],
                     "executable": false

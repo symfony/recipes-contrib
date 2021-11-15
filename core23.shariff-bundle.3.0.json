@@ -16,15 +16,6 @@
                 }
             },
             "files": {
-                "config/routes/core23_shariff.yaml": {
-                    "contents": [
-                        "core23_shariff:",
-                        "    resource: '@Core23ShariffBundle/Resources/config/routing/backend.yml'",
-                        "    prefix: /shariff",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/core23_shariff.yaml": {
                     "contents": [
                         "core23_shariff:",
@@ -42,6 +33,15 @@
                         "        core23_shariff:",
                         "            type: php_file",
                         "            namespace: core23_shariff",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/core23_shariff.yaml": {
+                    "contents": [
+                        "core23_shariff:",
+                        "    resource: '@Core23ShariffBundle/Resources/config/routing/backend.yml'",
+                        "    prefix: /shariff",
                         ""
                     ],
                     "executable": false

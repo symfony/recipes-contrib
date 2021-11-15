@@ -12,18 +12,18 @@
                 }
             },
             "files": {
-                "config/routes/monsieurbiz_sylius_sales_reports_plugin.yaml": {
-                    "contents": [
-                        "monsieurbiz_sales_reports_plugin:",
-                        "    resource: \"@MonsieurBizSyliusSalesReportsPlugin/Resources/config/routing.yaml\"",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/monsieurbiz_sylius_sales_reports_plugin.yaml": {
                     "contents": [
                         "imports:",
                         "    - { resource: \"@MonsieurBizSyliusSalesReportsPlugin/Resources/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/monsieurbiz_sylius_sales_reports_plugin.yaml": {
+                    "contents": [
+                        "monsieurbiz_sales_reports_plugin:",
+                        "    resource: \"@MonsieurBizSyliusSalesReportsPlugin/Resources/config/routing.yaml\"",
                         ""
                     ],
                     "executable": false

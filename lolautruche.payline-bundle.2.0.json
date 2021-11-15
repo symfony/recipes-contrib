@@ -31,15 +31,6 @@
                 ]
             },
             "files": {
-                "config/routes/payline.yaml": {
-                    "contents": [
-                        "LolautruchePaylineBundle:",
-                        "    resource: '@LolautruchePaylineBundle/Resources/config/routing.yml'",
-                        "    prefix: /",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/payline.yaml": {
                     "contents": [
                         "lolautruche_payline:",
@@ -53,6 +44,15 @@
                         "    default_confirmation_route: 'route_name_for_confirmation_page'",
                         "    # Route name for the error page the user will be redirected to if there was an error with the payment.",
                         "    default_error_route: 'route_name_for_error_page'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/payline.yaml": {
+                    "contents": [
+                        "LolautruchePaylineBundle:",
+                        "    resource: '@LolautruchePaylineBundle/Resources/config/routing.yml'",
+                        "    prefix: /",
                         ""
                     ],
                     "executable": false

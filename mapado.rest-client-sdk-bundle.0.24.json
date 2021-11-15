@@ -16,6 +16,13 @@
                 }
             },
             "files": {
+                "src/Entity/.gitignore": {
+                    "contents": [
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/packages/mapado_rest_client_sdk.yaml": {
                     "contents": [
                         "mapado_rest_client_sdk:",
@@ -24,13 +31,6 @@
                         "            server_url: '%env(MAPADO_REST_CLIENT_SDK_SERVER_URL)%'",
                         "            mappings:",
                         "                dir: '%kernel.project_dir%/src/Entity/'",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "src/Entity/.gitignore": {
-                    "contents": [
-                        "",
                         ""
                     ],
                     "executable": false

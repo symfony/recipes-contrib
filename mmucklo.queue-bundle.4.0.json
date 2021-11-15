@@ -28,14 +28,6 @@
                 ]
             },
             "files": {
-                "config/routes/dtc_queue.yaml": {
-                    "contents": [
-                        "dtc_queue:",
-                        "    resource: '@DtcQueueBundle/Resources/config/routing.yml'",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/dtc_queue.yaml": {
                     "contents": [
                         "dtc_queue:",
@@ -65,6 +57,14 @@
                         "    admin:",
                         "        # chartjs is used to render the job timings graph in the admin section",
                         "        chartjs: 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/dtc_queue.yaml": {
+                    "contents": [
+                        "dtc_queue:",
+                        "    resource: '@DtcQueueBundle/Resources/config/routing.yml'",
                         ""
                     ],
                     "executable": false

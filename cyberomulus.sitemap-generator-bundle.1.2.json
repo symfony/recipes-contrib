@@ -12,14 +12,6 @@
                 }
             },
             "files": {
-                "config/routes/cyberomulus_site_map_generator.yaml": {
-                    "contents": [
-                        "cyberomulus_sitemapgenerator:",
-                        "    resource: '@CyberomulusSiteMapGeneratorBundle/Resources/config/routes.xml'",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/cyberomulus_site_map_generator.yaml": {
                     "contents": [
                         "cyberomulus_site_map_generator:",
@@ -28,6 +20,14 @@
                         "        url:",
                         "            # true for set a datetime at now if is null",
                         "            last_modification_now:         true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/cyberomulus_site_map_generator.yaml": {
+                    "contents": [
+                        "cyberomulus_sitemapgenerator:",
+                        "    resource: '@CyberomulusSiteMapGeneratorBundle/Resources/config/routes.xml'",
                         ""
                     ],
                     "executable": false

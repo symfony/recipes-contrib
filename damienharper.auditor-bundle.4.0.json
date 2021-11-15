@@ -12,15 +12,6 @@
                 }
             },
             "files": {
-                "config/routes/dh_auditor.yaml": {
-                    "contents": [
-                        "dh_auditor:",
-                        "    resource: \"@DHAuditorBundle/Controller/\"",
-                        "    type: auditor",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/dh_auditor.yaml": {
                     "contents": [
                         "# Full configuration reference available at:",
@@ -31,6 +22,15 @@
                         "        doctrine:",
                         "            table_prefix: null",
                         "            table_suffix: '_audit'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/dh_auditor.yaml": {
+                    "contents": [
+                        "dh_auditor:",
+                        "    resource: \"@DHAuditorBundle/Controller/\"",
+                        "    type: auditor",
                         ""
                     ],
                     "executable": false

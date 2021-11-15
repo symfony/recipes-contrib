@@ -13,31 +13,6 @@
                 }
             },
             "files": {
-                "config/routes/orbitale_cms.yaml": {
-                    "contents": [
-                        "orbitale_cms_category:",
-                        "    resource: \"@OrbitaleCmsBundle/Resources/config/routing/categories.yaml\"",
-                        "    prefix:   /category/",
-                        "",
-                        "orbitale_cms_page:",
-                        "    resource: \"@OrbitaleCmsBundle/Resources/config/routing/pages.yaml\"",
-                        "    prefix:   /page/",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/orbitale_cms.yaml": {
-                    "contents": [
-                        "orbitale_cms:",
-                        "    page_class: App\\Entity\\Page",
-                        "    category_class: App\\Entity\\Category",
-                        "# Define your layout here if you need a custom layout for your CMS",
-                        "#    layouts:",
-                        "#         main: { resource: base.html.twig }",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "src/Entity/Page.php": {
                     "contents": [
                         "<?php",
@@ -104,6 +79,31 @@
                         "        return $this->id;",
                         "    }",
                         "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/orbitale_cms.yaml": {
+                    "contents": [
+                        "orbitale_cms:",
+                        "    page_class: App\\Entity\\Page",
+                        "    category_class: App\\Entity\\Category",
+                        "# Define your layout here if you need a custom layout for your CMS",
+                        "#    layouts:",
+                        "#         main: { resource: base.html.twig }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/orbitale_cms.yaml": {
+                    "contents": [
+                        "orbitale_cms_category:",
+                        "    resource: \"@OrbitaleCmsBundle/Resources/config/routing/categories.yaml\"",
+                        "    prefix:   /category/",
+                        "",
+                        "orbitale_cms_page:",
+                        "    resource: \"@OrbitaleCmsBundle/Resources/config/routing/pages.yaml\"",
+                        "    prefix:   /page/",
                         ""
                     ],
                     "executable": false

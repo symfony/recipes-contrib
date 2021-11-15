@@ -12,20 +12,6 @@
                 }
             },
             "files": {
-                "config/routes/msalsas_voting.yaml": {
-                    "contents": [
-                        "positive_vote:",
-                        "    path: /vote-positive/{_locale}/{id}",
-                        "    controller: Msalsas\\VotingBundle\\Controller\\VoteController:votePositive",
-                        "    methods: POST",
-                        "negative_vote:",
-                        "    path: /vote-negative/{_locale}/{id}",
-                        "    controller: Msalsas\\VotingBundle\\Controller\\VoteController:voteNegative",
-                        "    methods: POST",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/msalsas_voting.yaml": {
                     "contents": [
                         "msalsas_voting:",
@@ -42,6 +28,20 @@
                         "        - msalsas_voting.negative_reasons.plagiarism",
                         "    anonymous_percent_allowed: 50",
                         "    anonymous_min_allowed: 2",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/msalsas_voting.yaml": {
+                    "contents": [
+                        "positive_vote:",
+                        "    path: /vote-positive/{_locale}/{id}",
+                        "    controller: Msalsas\\VotingBundle\\Controller\\VoteController:votePositive",
+                        "    methods: POST",
+                        "negative_vote:",
+                        "    path: /vote-negative/{_locale}/{id}",
+                        "    controller: Msalsas\\VotingBundle\\Controller\\VoteController:voteNegative",
+                        "    methods: POST",
                         ""
                     ],
                     "executable": false

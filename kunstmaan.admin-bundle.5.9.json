@@ -12,18 +12,6 @@
                 }
             },
             "files": {
-                "config/routes/kunstmaan_admin.yaml": {
-                    "contents": [
-                        "KunstmaanAdminBundle:",
-                        "    resource: \"@KunstmaanAdminBundle/Resources/config/routing.yml\"",
-                        "    # If your site is not multi language, remove the \"{_locale}/\" part of prefix and requirements",
-                        "    prefix:   /{_locale}/",
-                        "    requirements:",
-                        "        _locale: \"%kunstmaan_admin.required_locales%\"",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/kunstmaan_admin.yaml": {
                     "contents": [
                         "kunstmaan_admin:",
@@ -33,6 +21,18 @@
                         "    admin_locales: ['en']",
                         "    website_title: 'MyProject' #Rename this to your website name",
                         "    exception_logging: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/kunstmaan_admin.yaml": {
+                    "contents": [
+                        "KunstmaanAdminBundle:",
+                        "    resource: \"@KunstmaanAdminBundle/Resources/config/routing.yml\"",
+                        "    # If your site is not multi language, remove the \"{_locale}/\" part of prefix and requirements",
+                        "    prefix:   /{_locale}/",
+                        "    requirements:",
+                        "        _locale: \"%kunstmaan_admin.required_locales%\"",
                         ""
                     ],
                     "executable": false

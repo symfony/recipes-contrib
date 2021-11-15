@@ -12,18 +12,18 @@
                 }
             },
             "files": {
-                "config/routes/monsieurbiz_sylius_rich_editor_plugin.yaml": {
-                    "contents": [
-                        "monsieur_biz_rich_editor_plugin:",
-                        "    resource: \"@MonsieurBizSyliusRichEditorPlugin/Resources/config/routing.yaml\"",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/monsieurbiz_sylius_rich_editor_plugin.yaml": {
                     "contents": [
                         "imports:",
                         "    - { resource: \"@MonsieurBizSyliusRichEditorPlugin/Resources/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/monsieurbiz_sylius_rich_editor_plugin.yaml": {
+                    "contents": [
+                        "monsieur_biz_rich_editor_plugin:",
+                        "    resource: \"@MonsieurBizSyliusRichEditorPlugin/Resources/config/routing.yaml\"",
                         ""
                     ],
                     "executable": false

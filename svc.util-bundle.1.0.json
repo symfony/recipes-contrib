@@ -15,15 +15,6 @@
                 ]
             },
             "files": {
-                "config/routes/svc_util.yaml": {
-                    "contents": [
-                        "_svc_util:",
-                        "    resource: '@SvcUtilBundle/src/Resources/config/routes.xml'",
-                        "    prefix: /svc-util/{_locale}",
-                        ""
-                    ],
-                    "executable": true
-                },
                 "config/packages/svc_util.yaml": {
                     "contents": [
                         "# Default configuration for \"SvcUtilBundle\"",
@@ -36,6 +27,15 @@
                         ""
                     ],
                     "executable": false
+                },
+                "config/routes/svc_util.yaml": {
+                    "contents": [
+                        "_svc_util:",
+                        "    resource: '@SvcUtilBundle/src/Resources/config/routes.xml'",
+                        "    prefix: /svc-util/{_locale}",
+                        ""
+                    ],
+                    "executable": true
                 }
             },
             "ref": "a3760c4c2587ada930940e20a6f68fad252815af"

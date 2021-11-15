@@ -20,15 +20,6 @@
                 }
             },
             "files": {
-                "config/routes/idci_keycloak_security.yaml": {
-                    "contents": [
-                        "IDCIKeycloakSecurityBundle:",
-                        "    resource: \"@IDCIKeycloakSecurityBundle/Resources/config/routing.yaml\"",
-                        "    prefix: /",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/idci_keycloak_security.yaml": {
                     "contents": [
                         "idci_keycloak_security:",
@@ -40,6 +31,15 @@
                         "    client_secret: '%env(resolve:KEYCLOAK_CLIENT_SECRET)%'",
                         "    default_target_path: 'app_home'",
                         "    ssl_verification: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/idci_keycloak_security.yaml": {
+                    "contents": [
+                        "IDCIKeycloakSecurityBundle:",
+                        "    resource: \"@IDCIKeycloakSecurityBundle/Resources/config/routing.yaml\"",
+                        "    prefix: /",
                         ""
                     ],
                     "executable": false

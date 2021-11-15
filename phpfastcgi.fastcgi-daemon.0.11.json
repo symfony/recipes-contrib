@@ -16,21 +16,6 @@
                 ]
             },
             "files": {
-                "config/packages/fastcgi_daemon.yaml": {
-                    "contents": [
-                        "services:",
-                        "    App\\FastCGIKernel:",
-                        "        autowire: true",
-                        "",
-                        "    PHPFastCGI\\FastCGIDaemon\\Driver\\DriverContainer: null",
-                        "    PHPFastCGI\\FastCGIDaemon\\Command\\DaemonRunCommand:",
-                        "        arguments: ['@App\\FastCGIKernel', '@PHPFastCGI\\FastCGIDaemon\\Driver\\DriverContainer', 'fastcgi-daemon:run']",
-                        "        tags:",
-                        "            - { name: console.command }",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "src/FastCGIKernel.php": {
                     "contents": [
                         "<?php",
@@ -66,6 +51,21 @@
                         "    }",
                         "}",
                         "",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/fastcgi_daemon.yaml": {
+                    "contents": [
+                        "services:",
+                        "    App\\FastCGIKernel:",
+                        "        autowire: true",
+                        "",
+                        "    PHPFastCGI\\FastCGIDaemon\\Driver\\DriverContainer: null",
+                        "    PHPFastCGI\\FastCGIDaemon\\Command\\DaemonRunCommand:",
+                        "        arguments: ['@App\\FastCGIKernel', '@PHPFastCGI\\FastCGIDaemon\\Driver\\DriverContainer', 'fastcgi-daemon:run']",
+                        "        tags:",
+                        "            - { name: console.command }",
                         ""
                     ],
                     "executable": false

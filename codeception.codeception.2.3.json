@@ -24,31 +24,6 @@
                 ]
             },
             "files": {
-                "codeception.yml": {
-                    "contents": [
-                        "namespace: App\\Tests",
-                        "paths:",
-                        "    tests: tests",
-                        "    output: tests/_output",
-                        "    data: tests/_data",
-                        "    support: tests/_support",
-                        "    envs: tests/_envs",
-                        "actor_suffix: Tester",
-                        "extensions:",
-                        "    enabled:",
-                        "        - Codeception\\Extension\\RunFailed",
-                        "params:",
-                        "    - .env",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "tests/unit/.gitignore": {
-                    "contents": [
-                        ""
-                    ],
-                    "executable": false
-                },
                 "tests/_data/.gitignore": {
                     "contents": [
                         ""
@@ -61,7 +36,15 @@
                     ],
                     "executable": false
                 },
-                "tests/functional/.gitignore": {
+                "tests/_output/.gitignore": {
+                    "contents": [
+                        "*",
+                        "!.gitignore",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "tests/unit/.gitignore": {
                     "contents": [
                         ""
                     ],
@@ -85,17 +68,8 @@
                     ],
                     "executable": false
                 },
-                "tests/unit.suite.yml": {
+                "tests/functional/.gitignore": {
                     "contents": [
-                        "# Codeception Test Suite Configuration",
-                        "#",
-                        "# Suite for unit or integration tests.",
-                        "",
-                        "actor: UnitTester",
-                        "modules:",
-                        "    enabled:",
-                        "        - Asserts",
-                        "        - \\App\\Tests\\Helper\\Unit",
                         ""
                     ],
                     "executable": false
@@ -127,6 +101,94 @@
                         "   /**",
                         "    * Define custom actions here",
                         "    */",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "tests/_support/UnitTester.php": {
+                    "contents": [
+                        "<?php",
+                        "namespace App\\Tests;",
+                        "",
+                        "/**",
+                        " * Inherited Methods",
+                        " * @method void wantToTest($text)",
+                        " * @method void wantTo($text)",
+                        " * @method void execute($callable)",
+                        " * @method void expectTo($prediction)",
+                        " * @method void expect($prediction)",
+                        " * @method void amGoingTo($argumentation)",
+                        " * @method void am($role)",
+                        " * @method void lookForwardTo($achieveValue)",
+                        " * @method void comment($description)",
+                        " * @method \\Codeception\\Lib\\Friend haveFriend($name, $actorClass = NULL)",
+                        " *",
+                        " * @SuppressWarnings(PHPMD)",
+                        "*/",
+                        "class UnitTester extends \\Codeception\\Actor",
+                        "{",
+                        "    use _generated\\UnitTesterActions;",
+                        "",
+                        "   /**",
+                        "    * Define custom actions here",
+                        "    */",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "tests/_support/_generated/.gitignore": {
+                    "contents": [
+                        "*",
+                        "!.gitignore",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "tests/_support/Helper/Acceptance.php": {
+                    "contents": [
+                        "<?php",
+                        "namespace App\\Tests\\Helper;",
+                        "",
+                        "// here you can define custom actions",
+                        "// all public methods declared in helper class will be available in $I",
+                        "",
+                        "class Acceptance extends \\Codeception\\Module",
+                        "{",
+                        "",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "tests/_support/Helper/Unit.php": {
+                    "contents": [
+                        "<?php",
+                        "namespace App\\Tests\\Helper;",
+                        "",
+                        "// here you can define custom actions",
+                        "// all public methods declared in helper class will be available in $I",
+                        "",
+                        "class Unit extends \\Codeception\\Module",
+                        "{",
+                        "",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "tests/_support/Helper/Functional.php": {
+                    "contents": [
+                        "<?php",
+                        "namespace App\\Tests\\Helper;",
+                        "",
+                        "// here you can define custom actions",
+                        "// all public methods declared in helper class will be available in $I",
+                        "",
+                        "class Functional extends \\Codeception\\Module",
+                        "{",
+                        "",
                         "}",
                         ""
                     ],
@@ -164,98 +226,17 @@
                     ],
                     "executable": false
                 },
-                "tests/_support/Helper/Acceptance.php": {
+                "tests/unit.suite.yml": {
                     "contents": [
-                        "<?php",
-                        "namespace App\\Tests\\Helper;",
+                        "# Codeception Test Suite Configuration",
+                        "#",
+                        "# Suite for unit or integration tests.",
                         "",
-                        "// here you can define custom actions",
-                        "// all public methods declared in helper class will be available in $I",
-                        "",
-                        "class Acceptance extends \\Codeception\\Module",
-                        "{",
-                        "",
-                        "}",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "tests/_support/Helper/Functional.php": {
-                    "contents": [
-                        "<?php",
-                        "namespace App\\Tests\\Helper;",
-                        "",
-                        "// here you can define custom actions",
-                        "// all public methods declared in helper class will be available in $I",
-                        "",
-                        "class Functional extends \\Codeception\\Module",
-                        "{",
-                        "",
-                        "}",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "tests/_support/Helper/Unit.php": {
-                    "contents": [
-                        "<?php",
-                        "namespace App\\Tests\\Helper;",
-                        "",
-                        "// here you can define custom actions",
-                        "// all public methods declared in helper class will be available in $I",
-                        "",
-                        "class Unit extends \\Codeception\\Module",
-                        "{",
-                        "",
-                        "}",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "tests/_support/_generated/.gitignore": {
-                    "contents": [
-                        "*",
-                        "!.gitignore",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "tests/_support/UnitTester.php": {
-                    "contents": [
-                        "<?php",
-                        "namespace App\\Tests;",
-                        "",
-                        "/**",
-                        " * Inherited Methods",
-                        " * @method void wantToTest($text)",
-                        " * @method void wantTo($text)",
-                        " * @method void execute($callable)",
-                        " * @method void expectTo($prediction)",
-                        " * @method void expect($prediction)",
-                        " * @method void amGoingTo($argumentation)",
-                        " * @method void am($role)",
-                        " * @method void lookForwardTo($achieveValue)",
-                        " * @method void comment($description)",
-                        " * @method \\Codeception\\Lib\\Friend haveFriend($name, $actorClass = NULL)",
-                        " *",
-                        " * @SuppressWarnings(PHPMD)",
-                        "*/",
-                        "class UnitTester extends \\Codeception\\Actor",
-                        "{",
-                        "    use _generated\\UnitTesterActions;",
-                        "",
-                        "   /**",
-                        "    * Define custom actions here",
-                        "    */",
-                        "}",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "tests/_output/.gitignore": {
-                    "contents": [
-                        "*",
-                        "!.gitignore",
+                        "actor: UnitTester",
+                        "modules:",
+                        "    enabled:",
+                        "        - Asserts",
+                        "        - \\App\\Tests\\Helper\\Unit",
                         ""
                     ],
                     "executable": false
@@ -279,6 +260,25 @@
                         "#            depends: Symfony",
                         "#            cleanup: true",
                         "        - \\App\\Tests\\Helper\\Functional",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "codeception.yml": {
+                    "contents": [
+                        "namespace: App\\Tests",
+                        "paths:",
+                        "    tests: tests",
+                        "    output: tests/_output",
+                        "    data: tests/_data",
+                        "    support: tests/_support",
+                        "    envs: tests/_envs",
+                        "actor_suffix: Tester",
+                        "extensions:",
+                        "    enabled:",
+                        "        - Codeception\\Extension\\RunFailed",
+                        "params:",
+                        "    - .env",
                         ""
                     ],
                     "executable": false

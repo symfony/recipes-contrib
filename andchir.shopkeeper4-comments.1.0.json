@@ -12,20 +12,20 @@
                 }
             },
             "files": {
-                "config/routes/comments.yaml": {
-                    "contents": [
-                        "comments:",
-                        "    resource: '@CommentsBundle'",
-                        "    type: annotation",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/comments.yaml": {
                     "contents": [
                         "comments:",
                         "    comment_class: App\\MainBundle\\Document\\Comment",
                         "    status_default: pending",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/comments.yaml": {
+                    "contents": [
+                        "comments:",
+                        "    resource: '@CommentsBundle'",
+                        "    type: annotation",
                         ""
                     ],
                     "executable": false

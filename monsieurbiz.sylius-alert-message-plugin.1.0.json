@@ -12,19 +12,19 @@
                 }
             },
             "files": {
+                "config/packages/monsieurbiz_sylius_alert_message_plugin.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@MonsieurBizSyliusAlertMessagePlugin/Resources/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/routes/monsieurbiz_sylius_alert_message_plugin.yaml": {
                     "contents": [
                         "monsieurbiz_sylius_alert_message_admin:",
                         "    resource: \"@MonsieurBizSyliusAlertMessagePlugin/Resources/config/routing/admin.yaml\"",
                         "    prefix: /admin",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/monsieurbiz_sylius_alert_message_plugin.yaml": {
-                    "contents": [
-                        "imports:",
-                        "    - { resource: \"@MonsieurBizSyliusAlertMessagePlugin/Resources/config/config.yaml\" }",
                         ""
                     ],
                     "executable": false

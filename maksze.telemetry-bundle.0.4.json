@@ -18,15 +18,6 @@
                 }
             },
             "files": {
-                "config/routes/maksze_telemetry.yaml": {
-                    "contents": [
-                        "_maksze_telemetry:",
-                        "    resource: '@MaksZeTelemetryBundle/Resources/config/routes.xml'",
-                        "    prefix: /",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/maksze_telemetry.yaml": {
                     "contents": [
                         "# Configuration file for the MaksZeTelemetry bundle",
@@ -43,6 +34,15 @@
                         "        #- {id: '%env(GOOGLE_SEARCH_CONSOLE_ID)%'}",
                         "    google_analytics:",
                         "        #- {id: '%env(GOOGLE_ANALYTICS_ID)%'}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/maksze_telemetry.yaml": {
+                    "contents": [
+                        "_maksze_telemetry:",
+                        "    resource: '@MaksZeTelemetryBundle/Resources/config/routes.xml'",
+                        "    prefix: /",
                         ""
                     ],
                     "executable": false

@@ -29,16 +29,6 @@
                 ]
             },
             "files": {
-                "config/routes/sulu_article_admin.yaml": {
-                    "contents": [
-                        "sulu_article_api:",
-                        "    resource: '@SuluArticleBundle/Resources/config/routing_api.yml'",
-                        "    type: rest",
-                        "    prefix: /admin/api",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/sulu_article.yaml": {
                     "contents": [
                         "sulu_article:",
@@ -69,6 +59,16 @@
                         "        analyzer:",
                         "            pathAnalyzer:",
                         "                tokenizer: pathTokenizer",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sulu_article_admin.yaml": {
+                    "contents": [
+                        "sulu_article_api:",
+                        "    resource: '@SuluArticleBundle/Resources/config/routing_api.yml'",
+                        "    type: rest",
+                        "    prefix: /admin/api",
                         ""
                     ],
                     "executable": false

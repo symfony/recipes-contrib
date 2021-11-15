@@ -17,15 +17,6 @@
                 }
             },
             "files": {
-                "config/routes/otobul_epaybg.yaml": {
-                    "contents": [
-                        "otobul_epaybg:",
-                        "    resource: '@OtobulEpaybgBundle/Resources/config/routes.xml'",
-                        "    prefix: /webhook/epaybg",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/otobul_epaybg.yaml": {
                     "contents": [
                         "otobul_epaybg:",
@@ -37,6 +28,15 @@
                         "",
                         "    # If true all requests will be sent to ePay.bg\u2019s Demo System",
                         "    isDemo: '%env(bool:OTOBUL_EPAYBG_IS_DEMO)%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/otobul_epaybg.yaml": {
+                    "contents": [
+                        "otobul_epaybg:",
+                        "    resource: '@OtobulEpaybgBundle/Resources/config/routes.xml'",
+                        "    prefix: /webhook/epaybg",
                         ""
                     ],
                     "executable": false

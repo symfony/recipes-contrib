@@ -16,15 +16,6 @@
                 }
             },
             "files": {
-                "config/routes/symfony_connect.yaml": {
-                    "contents": [
-                        "symfony_connect:",
-                        "    prefix: /connect",
-                        "    resource: '@SymfonyConnectBundle/Resources/config/routing/connect.xml'",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/symfony_connect.yaml": {
                     "contents": [
                         "symfony_connect:",
@@ -33,6 +24,15 @@
                         "    scope: 'SCOPE_PUBLIC'",
                         "    # start_template: null",
                         "    # failure_template: null",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/symfony_connect.yaml": {
+                    "contents": [
+                        "symfony_connect:",
+                        "    prefix: /connect",
+                        "    resource: '@SymfonyConnectBundle/Resources/config/routing/connect.xml'",
                         ""
                     ],
                     "executable": false

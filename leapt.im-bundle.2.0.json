@@ -15,14 +15,6 @@
                 ]
             },
             "files": {
-                "config/routes/leapt_im.yaml": {
-                    "contents": [
-                        "leapt_im:",
-                        "    resource: '@LeaptImBundle/Resources/config/routing.yml'",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/leapt_im.yaml": {
                     "contents": [
                         "# Read the documentation: https://github.com/leapt/im-bundle/blob/master/docs/configuration.rst",
@@ -32,6 +24,14 @@
                         "        # Resize to fit in 100x100, only if bigger, and remove all crap (meta-data, ...)",
                         "        medium:",
                         "            thumbnail: 100x100>",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/leapt_im.yaml": {
+                    "contents": [
+                        "leapt_im:",
+                        "    resource: '@LeaptImBundle/Resources/config/routing.yml'",
                         ""
                     ],
                     "executable": false

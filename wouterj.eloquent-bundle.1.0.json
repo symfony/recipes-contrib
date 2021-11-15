@@ -21,6 +21,12 @@
                 }
             },
             "files": {
+                "src/Model/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/packages/eloquent.yaml": {
                     "contents": [
                         "wouterj_eloquent:",
@@ -32,12 +38,6 @@
                         "    password: '%env(DB_PASSWORD)%'",
                         "    # Uncomment the following line to enable the Eloquent ORM",
                         "    #eloquent: null",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "src/Model/.gitignore": {
-                    "contents": [
                         ""
                     ],
                     "executable": false

@@ -25,19 +25,19 @@
                 ]
             },
             "files": {
-                "config/routes/symfony_health_check.yaml": {
-                    "contents": [
-                        "health_check:",
-                        "    resource: '@SymfonyHealthCheckBundle/Resources/config/routes.xml'",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/symfony_health_check.yaml": {
                     "contents": [
                         "symfony_health_check:",
                         "    health_checks:",
                         "        - id: symfony_health_check.status_up_check",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/symfony_health_check.yaml": {
+                    "contents": [
+                        "health_check:",
+                        "    resource: '@SymfonyHealthCheckBundle/Resources/config/routes.xml'",
                         ""
                     ],
                     "executable": false

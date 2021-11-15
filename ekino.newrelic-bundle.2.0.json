@@ -16,14 +16,6 @@
                 }
             },
             "files": {
-                "config/packages/prod/ekino_new_relic.yaml": {
-                    "contents": [
-                        "ekino_new_relic:",
-                        "    enabled: true",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/ekino_new_relic.yaml": {
                     "contents": [
                         "ekino_new_relic:",
@@ -32,6 +24,14 @@
                         "    api_key: \"%env(NEWRELIC_API_KEY)%\"",
                         "    exceptions: true",
                         "    deprecations: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/prod/ekino_new_relic.yaml": {
+                    "contents": [
+                        "ekino_new_relic:",
+                        "    enabled: true",
                         ""
                     ],
                     "executable": false

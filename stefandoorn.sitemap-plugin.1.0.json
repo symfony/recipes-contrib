@@ -12,18 +12,18 @@
                 }
             },
             "files": {
-                "config/routes/sitemap_plugin.yaml": {
-                    "contents": [
-                        "sylius_sitemap:",
-                        "    resource: \"@SitemapPlugin/Resources/config/routing.yml\"",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/sitemap_plugin.yaml": {
                     "contents": [
                         "imports:",
                         "    - { resource: \"@SitemapPlugin/Resources/config/config.yml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sitemap_plugin.yaml": {
+                    "contents": [
+                        "sylius_sitemap:",
+                        "    resource: \"@SitemapPlugin/Resources/config/routing.yml\"",
                         ""
                     ],
                     "executable": false

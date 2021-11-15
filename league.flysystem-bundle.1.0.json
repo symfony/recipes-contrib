@@ -19,6 +19,12 @@
                 ]
             },
             "files": {
+                "var/storage/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/packages/flysystem.yaml": {
                     "contents": [
                         "# Read the documentation at https://github.com/thephpleague/flysystem-bundle/blob/master/docs/1-getting-started.md",
@@ -28,12 +34,6 @@
                         "            adapter: 'local'",
                         "            options:",
                         "                directory: '%kernel.project_dir%/%VAR_DIR%/storage/default'",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "var/storage/.gitignore": {
-                    "contents": [
                         ""
                     ],
                     "executable": false

@@ -12,6 +12,17 @@
                 }
             },
             "files": {
+                "config/packages/kunstmaan_pagepart.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: '../kunstmaancms/**/*.yml', ignore_errors: true}",
+                        "",
+                        "kunstmaan_page_part:",
+                        "    extended_pagepart_chooser: true",
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/routes/kunstmaan_pagepart.yaml": {
                     "contents": [
                         "KunstmaanPagePartBundle:",
@@ -20,17 +31,6 @@
                         "    prefix:   /{_locale}/",
                         "    requirements:",
                         "        _locale: \"%kunstmaan_admin.required_locales%\"",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/kunstmaan_pagepart.yaml": {
-                    "contents": [
-                        "imports:",
-                        "    - { resource: '../kunstmaancms/**/*.yml', ignore_errors: true}",
-                        "",
-                        "kunstmaan_page_part:",
-                        "    extended_pagepart_chooser: true",
                         ""
                     ],
                     "executable": false

@@ -13,22 +13,6 @@
                 }
             },
             "files": {
-                "config/packages/prooph_event_store.yaml": {
-                    "contents": [
-                        "prooph_event_store:",
-                        "    stores:",
-                        "        default:",
-                        "            event_store: 'app.event_store.default'",
-                        "",
-                        "services:",
-                        "    _defaults:",
-                        "        public: false",
-                        "",
-                        "    Prooph\\EventSourcing\\EventStoreIntegration\\AggregateTranslator: null",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "src/Command/CreateEventStreamCommand.php": {
                     "contents": [
                         "<?php",
@@ -67,6 +51,22 @@
                         "        $output->writeln('<info>Event stream was created successfully.</info>');",
                         "    }",
                         "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/prooph_event_store.yaml": {
+                    "contents": [
+                        "prooph_event_store:",
+                        "    stores:",
+                        "        default:",
+                        "            event_store: 'app.event_store.default'",
+                        "",
+                        "services:",
+                        "    _defaults:",
+                        "        public: false",
+                        "",
+                        "    Prooph\\EventSourcing\\EventStoreIntegration\\AggregateTranslator: null",
                         ""
                     ],
                     "executable": false

@@ -13,7 +13,7 @@
                 }
             },
             "files": {
-                "config/packages/test/systemsdk_easy_log.yaml": {
+                "config/packages/dev/systemsdk_easy_log.yaml": {
                     "contents": [
                         "easy_log:",
                         "    log_path: '%kernel.logs_dir%/%kernel.environment%-readable.log'",
@@ -22,7 +22,7 @@
                     ],
                     "executable": false
                 },
-                "config/packages/dev/systemsdk_easy_log.yaml": {
+                "config/packages/test/systemsdk_easy_log.yaml": {
                     "contents": [
                         "easy_log:",
                         "    log_path: '%kernel.logs_dir%/%kernel.environment%-readable.log'",

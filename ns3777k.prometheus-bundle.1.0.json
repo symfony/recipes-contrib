@@ -12,10 +12,14 @@
                 }
             },
             "files": {
-                "config/routes/ns3777k_prometheus_metrics.yaml": {
+                "config/packages/ns3777k_prometheus.yaml": {
                     "contents": [
-                        "metrics:",
-                        "    resource: '@Ns3777kPrometheusBundle/Resources/config/routing.xml'",
+                        "ns3777k_prometheus:",
+                        "    namespace: app",
+                        "    adapter: apcu",
+                        "",
+                        "    listener:",
+                        "        ignored_routes: [metrics, _wdt]",
                         ""
                     ],
                     "executable": false
@@ -28,14 +32,10 @@
                     ],
                     "executable": false
                 },
-                "config/packages/ns3777k_prometheus.yaml": {
+                "config/routes/ns3777k_prometheus_metrics.yaml": {
                     "contents": [
-                        "ns3777k_prometheus:",
-                        "    namespace: app",
-                        "    adapter: apcu",
-                        "",
-                        "    listener:",
-                        "        ignored_routes: [metrics, _wdt]",
+                        "metrics:",
+                        "    resource: '@Ns3777kPrometheusBundle/Resources/config/routing.xml'",
                         ""
                     ],
                     "executable": false

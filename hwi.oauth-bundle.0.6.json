@@ -33,23 +33,6 @@
                 ]
             },
             "files": {
-                "config/routes/hwi_oauth_routing.yaml": {
-                    "contents": [
-                        "hwi_oauth_redirect:",
-                        "    resource: \"@HWIOAuthBundle/Resources/config/routing/redirect.xml\"",
-                        "    prefix:   /connect",
-                        "",
-                        "hwi_oauth_connect:",
-                        "    resource: \"@HWIOAuthBundle/Resources/config/routing/connect.xml\"",
-                        "    prefix:   /connect",
-                        "",
-                        "hwi_oauth_login:",
-                        "    resource: \"@HWIOAuthBundle/Resources/config/routing/login.xml\"",
-                        "    prefix:   /login",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/hwi_oauth.yaml": {
                     "contents": [
                         "hwi_oauth:",
@@ -66,6 +49,23 @@
                         "            options:",
                         "                display: popup",
                         "                csrf: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/hwi_oauth_routing.yaml": {
+                    "contents": [
+                        "hwi_oauth_redirect:",
+                        "    resource: \"@HWIOAuthBundle/Resources/config/routing/redirect.xml\"",
+                        "    prefix:   /connect",
+                        "",
+                        "hwi_oauth_connect:",
+                        "    resource: \"@HWIOAuthBundle/Resources/config/routing/connect.xml\"",
+                        "    prefix:   /connect",
+                        "",
+                        "hwi_oauth_login:",
+                        "    resource: \"@HWIOAuthBundle/Resources/config/routing/login.xml\"",
+                        "    prefix:   /login",
                         ""
                     ],
                     "executable": false

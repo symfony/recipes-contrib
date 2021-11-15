@@ -24,23 +24,6 @@
                 ]
             },
             "files": {
-                "config/routes/lti1p3.yaml": {
-                    "contents": [
-                        "lti1p3_jwks:",
-                        "    resource: '@Lti1p3Bundle/Resources/config/routing/jwks.yaml'",
-                        "",
-                        "lti1p3_message_platform:",
-                        "    resource: '@Lti1p3Bundle/Resources/config/routing/message/platform.yaml'",
-                        "",
-                        "lti1p3_message_tool:",
-                        "    resource: '@Lti1p3Bundle/Resources/config/routing/message/tool.yaml'",
-                        "",
-                        "lti1p3_service_platform:",
-                        "    resource: '@Lti1p3Bundle/Resources/config/routing/service/platform.yaml'",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/lti1p3.yaml": {
                     "contents": [
                         "lti1p3:",
@@ -80,6 +63,23 @@
                         "            platform_jwks_url: null",
                         "            tool_jwks_url: null",
                         "",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/lti1p3.yaml": {
+                    "contents": [
+                        "lti1p3_jwks:",
+                        "    resource: '@Lti1p3Bundle/Resources/config/routing/jwks.yaml'",
+                        "",
+                        "lti1p3_message_platform:",
+                        "    resource: '@Lti1p3Bundle/Resources/config/routing/message/platform.yaml'",
+                        "",
+                        "lti1p3_message_tool:",
+                        "    resource: '@Lti1p3Bundle/Resources/config/routing/message/tool.yaml'",
+                        "",
+                        "lti1p3_service_platform:",
+                        "    resource: '@Lti1p3Bundle/Resources/config/routing/service/platform.yaml'",
                         ""
                     ],
                     "executable": false

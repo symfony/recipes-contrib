@@ -15,21 +15,21 @@
                 }
             },
             "files": {
-                "config/routes/dev/pomm.yaml": {
-                    "contents": [
-                        "_pomm:",
-                        "    resource: \"@PommBundle/Resources/config/routing.yml\"",
-                        "    prefix:   /_pomm",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/pomm.yaml": {
                     "contents": [
                         "pomm:",
                         "    configuration:",
                         "        db:",
                         "            dsn: \"%env(DATABASE_URL)%\"",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/dev/pomm.yaml": {
+                    "contents": [
+                        "_pomm:",
+                        "    resource: \"@PommBundle/Resources/config/routing.yml\"",
+                        "    prefix:   /_pomm",
                         ""
                     ],
                     "executable": false

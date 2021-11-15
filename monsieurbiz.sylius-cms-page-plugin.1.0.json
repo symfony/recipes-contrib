@@ -12,6 +12,14 @@
                 }
             },
             "files": {
+                "config/packages/monsieurbiz_sylius_cms_page_plugin.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@MonsieurBizSyliusCmsPagePlugin/Resources/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/routes/monsieurbiz_sylius_cms_page_plugin.yaml": {
                     "contents": [
                         "monsieurbiz_cms_page_admin:",
@@ -21,14 +29,6 @@
                         "monsieurbiz_cms_page_shop:",
                         "    resource: \"@MonsieurBizSyliusCmsPagePlugin/Resources/config/routing/shop.yaml\"",
                         "    prefix: /{_locale}",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/monsieurbiz_sylius_cms_page_plugin.yaml": {
-                    "contents": [
-                        "imports:",
-                        "    - { resource: \"@MonsieurBizSyliusCmsPagePlugin/Resources/config/config.yaml\" }",
                         ""
                     ],
                     "executable": false

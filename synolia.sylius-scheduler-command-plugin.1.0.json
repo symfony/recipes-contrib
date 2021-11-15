@@ -19,19 +19,19 @@
                 ]
             },
             "files": {
+                "config/packages/sylius_scheduler_command.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SynoliaSyliusSchedulerCommandPlugin/Resources/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/routes/sylius_scheduler_command.yaml": {
                     "contents": [
                         "synolia_scheduled_command:",
                         "    resource: \"@SynoliaSyliusSchedulerCommandPlugin/Resources/config/admin_routing.yaml\"",
                         "    prefix: /admin",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/sylius_scheduler_command.yaml": {
-                    "contents": [
-                        "imports:",
-                        "    - { resource: \"@SynoliaSyliusSchedulerCommandPlugin/Resources/config/config.yaml\" }",
                         ""
                     ],
                     "executable": false

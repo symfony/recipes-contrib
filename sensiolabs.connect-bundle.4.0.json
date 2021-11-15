@@ -16,20 +16,20 @@
                 }
             },
             "files": {
-                "config/routes/sensio_labs_connect.yaml": {
-                    "contents": [
-                        "_sensiolabs_connect:",
-                        "    resource: \"@SensioLabsConnectBundle/Resources/config/routing.xml\"",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/sensio_labs_connect.yaml": {
                     "contents": [
                         "sensio_labs_connect:",
                         "    app_id:     '%env(SENSIOLABS_CONNECT_APP_ID)%'",
                         "    app_secret: '%env(SENSIOLABS_CONNECT_APP_SECRET)%'",
                         "    scope:      'SCOPE_PUBLIC'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sensio_labs_connect.yaml": {
+                    "contents": [
+                        "_sensiolabs_connect:",
+                        "    resource: \"@SensioLabsConnectBundle/Resources/config/routing.xml\"",
                         ""
                     ],
                     "executable": false

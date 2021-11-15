@@ -23,15 +23,6 @@
                 ]
             },
             "files": {
-                "config/routes/scheduler.yaml": {
-                    "contents": [
-                        "dukecity_command_scheduler:",
-                        "    resource: \"@DukecityCommandSchedulerBundle/Resources/config/routing.php\"",
-                        "    prefix:   /",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/scheduler.yaml": {
                     "contents": [
                         "# See full configuration at",
@@ -53,6 +44,15 @@
                         "        - router",
                         "        - doctrine",
                         "        - debug",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/scheduler.yaml": {
+                    "contents": [
+                        "dukecity_command_scheduler:",
+                        "    resource: \"@DukecityCommandSchedulerBundle/Resources/config/routing.php\"",
+                        "    prefix:   /",
                         ""
                     ],
                     "executable": false

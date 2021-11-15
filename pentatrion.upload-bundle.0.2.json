@@ -23,15 +23,6 @@
                 ]
             },
             "files": {
-                "config/routes/pentatrion_upload.yaml": {
-                    "contents": [
-                        "_pentatrion_upload:",
-                        "    prefix: /media-manager",
-                        "    resource: \"@PentatrionUploadBundle/Resources/config/routing.yaml\"",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/pentatrion_upload.yaml": {
                     "contents": [
                         "# All available configuration can be found here:",
@@ -40,6 +31,15 @@
                         "pentatrion_upload:",
                         "    # update to [\"small\"] if you have installed liip/imagine-bundle",
                         "    liip_filters: []",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/pentatrion_upload.yaml": {
+                    "contents": [
+                        "_pentatrion_upload:",
+                        "    prefix: /media-manager",
+                        "    resource: \"@PentatrionUploadBundle/Resources/config/routing.yaml\"",
                         ""
                     ],
                     "executable": false

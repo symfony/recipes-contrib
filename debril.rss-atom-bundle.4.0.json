@@ -12,14 +12,6 @@
                 }
             },
             "files": {
-                "config/routes/rss_atom.yaml": {
-                    "contents": [
-                        "rss_atom_bundle:",
-                        "    resource: \"@DebrilRssAtomBundle/Resources/config/routing.yml\"",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/rss_atom.yaml": {
                     "contents": [
                         "debril_rss_atom:",
@@ -27,6 +19,14 @@
                         "    private: false",
                         "    # switch to true if you need to always send status 200",
                         "    force_refresh: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/rss_atom.yaml": {
+                    "contents": [
+                        "rss_atom_bundle:",
+                        "    resource: \"@DebrilRssAtomBundle/Resources/config/routing.yml\"",
                         ""
                     ],
                     "executable": false

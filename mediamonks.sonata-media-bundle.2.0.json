@@ -21,28 +21,6 @@
                 ]
             },
             "files": {
-                "config/routes/mediamonks_sonata_media.yaml": {
-                    "contents": [
-                        "mediamonks_sonata_media_admin:",
-                        "    resource: \"@MediaMonksSonataMediaBundle/Resources/config/routing_admin.yml\"",
-                        "",
-                        "mediamonks_sonata_media:",
-                        "    resource: \"@MediaMonksSonataMediaBundle/Resources/config/routing.yml\"",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/mediamonks_sonata_media.yaml": {
-                    "contents": [
-                        "mediamonks_sonata_media:",
-                        "    filesystem_private: 'oneup_flysystem.default_filesystem_filesystem'",
-                        "    filesystem_public: 'oneup_flysystem.default_filesystem_filesystem'",
-                        "    redirect_url: '%env(MEDIA_REDIRECT_URL)%'",
-                        "    model_class: App\\Entity\\Media",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "src/Entity/Media.php": {
                     "contents": [
                         "<?php",
@@ -59,6 +37,28 @@
                         "class Media extends BaseMedia",
                         "{",
                         "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/mediamonks_sonata_media.yaml": {
+                    "contents": [
+                        "mediamonks_sonata_media:",
+                        "    filesystem_private: 'oneup_flysystem.default_filesystem_filesystem'",
+                        "    filesystem_public: 'oneup_flysystem.default_filesystem_filesystem'",
+                        "    redirect_url: '%env(MEDIA_REDIRECT_URL)%'",
+                        "    model_class: App\\Entity\\Media",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/mediamonks_sonata_media.yaml": {
+                    "contents": [
+                        "mediamonks_sonata_media_admin:",
+                        "    resource: \"@MediaMonksSonataMediaBundle/Resources/config/routing_admin.yml\"",
+                        "",
+                        "mediamonks_sonata_media:",
+                        "    resource: \"@MediaMonksSonataMediaBundle/Resources/config/routing.yml\"",
                         ""
                     ],
                     "executable": false

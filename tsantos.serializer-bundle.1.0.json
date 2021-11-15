@@ -12,14 +12,6 @@
                 }
             },
             "files": {
-                "config/packages/test/tsantos_serializer.yaml": {
-                    "contents": [
-                        "tsantos_serializer:",
-                        "    generation_strategy: always",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/prod/tsantos_serializer.yaml": {
                     "contents": [
                         "tsantos_serializer:",
@@ -34,6 +26,14 @@
                         "# http://tsantos-serializer-bundle.readthedocs.io/",
                         "tsantos_serializer:",
                         "    generation_strategy: file_not_exists",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/test/tsantos_serializer.yaml": {
+                    "contents": [
+                        "tsantos_serializer:",
+                        "    generation_strategy: always",
                         ""
                     ],
                     "executable": false

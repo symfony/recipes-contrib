@@ -12,15 +12,6 @@
                 }
             },
             "files": {
-                "config/routes/nelmio_api_doc.yaml": {
-                    "contents": [
-                        "NelmioApiDocBundle:",
-                        "    resource: \"@NelmioApiDocBundle/Resources/config/routing.yml\"",
-                        "    prefix:   /api/doc",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/nelmio_api_doc.yaml": {
                     "contents": [
                         "#nelmio_api_doc:",
@@ -45,6 +36,15 @@
                         "#    cache:",
                         "#        enabled:              false",
                         "#        file:                 '%kernel.cache_dir%/api-doc.cache'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/nelmio_api_doc.yaml": {
+                    "contents": [
+                        "NelmioApiDocBundle:",
+                        "    resource: \"@NelmioApiDocBundle/Resources/config/routing.yml\"",
+                        "    prefix:   /api/doc",
                         ""
                     ],
                     "executable": false

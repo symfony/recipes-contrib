@@ -12,6 +12,15 @@
                 }
             },
             "files": {
+                "config/packages/kunstmaan_node.yaml": {
+                    "contents": [
+                        "kunstmaan_node:",
+                        "    lock:",
+                        "        enabled: true",
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/routes/kunstmaan_node.yaml": {
                     "contents": [
                         "KunstmaanNodeBundle:",
@@ -20,15 +29,6 @@
                         "    prefix:   /{_locale}/",
                         "    requirements:",
                         "        _locale: \"%kunstmaan_admin.required_locales%\"",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/kunstmaan_node.yaml": {
-                    "contents": [
-                        "kunstmaan_node:",
-                        "    lock:",
-                        "        enabled: true",
                         ""
                     ],
                     "executable": false

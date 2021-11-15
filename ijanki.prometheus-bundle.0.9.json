@@ -12,15 +12,6 @@
                 }
             },
             "files": {
-                "config/routes/ijanki_prometheus.yaml": {
-                    "contents": [
-                        "ijanki_prometheus:",
-                        "    resource: \"@IjankiPrometheusBundle/Resources/config/routing.yml\"",
-                        "    prefix: /",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/ijanki_prometheus.yaml": {
                     "contents": [
                         "ijanki_prometheus:",
@@ -44,6 +35,15 @@
                         "            gauge:",
                         "                labels: [app, section]",
                         "                help: is the data fresh",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/ijanki_prometheus.yaml": {
+                    "contents": [
+                        "ijanki_prometheus:",
+                        "    resource: \"@IjankiPrometheusBundle/Resources/config/routing.yml\"",
+                        "    prefix: /",
                         ""
                     ],
                     "executable": false

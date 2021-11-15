@@ -12,19 +12,19 @@
                 }
             },
             "files": {
+                "config/packages/monsieurbiz_settings_plugin.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@MonsieurBizSyliusSettingsPlugin/Resources/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/routes/monsieurbiz_settings_plugin.yaml": {
                     "contents": [
                         "monsieurbiz_sylius_settings_admin:",
                         "    resource: \"@MonsieurBizSyliusSettingsPlugin/Resources/config/routes/admin.yaml\"",
                         "    prefix: /%sylius_admin.path_name%",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/monsieurbiz_settings_plugin.yaml": {
-                    "contents": [
-                        "imports:",
-                        "    - { resource: \"@MonsieurBizSyliusSettingsPlugin/Resources/config/config.yaml\" }",
                         ""
                     ],
                     "executable": false

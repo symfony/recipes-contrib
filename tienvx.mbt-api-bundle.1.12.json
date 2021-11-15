@@ -16,20 +16,20 @@
                 }
             },
             "files": {
-                "config/routes/tienvx_mbt_api.yaml": {
-                    "contents": [
-                        "tienvx_mbt_api:",
-                        "    resource: '@TienvxMbtApiBundle/Resources/config/routing.xml'",
-                        "    prefix: '/mbt-api'",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/tienvx_mbt_api.yaml": {
                     "contents": [
                         "tienvx_mbt_api:",
                         "    dot_binary: '%env(DOT_BINARY)%'",
                         "    console_binary: '%env(CONSOLE_BINARY)%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/tienvx_mbt_api.yaml": {
+                    "contents": [
+                        "tienvx_mbt_api:",
+                        "    resource: '@TienvxMbtApiBundle/Resources/config/routing.xml'",
+                        "    prefix: '/mbt-api'",
                         ""
                     ],
                     "executable": false

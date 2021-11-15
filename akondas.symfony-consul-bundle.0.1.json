@@ -18,14 +18,6 @@
                 }
             },
             "files": {
-                "config/routes/consul.yaml": {
-                    "contents": [
-                        "consul_bundle:",
-                        "    resource: \"@ConsulBundle/Resources/config/routing.yml\"",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/consul.yaml": {
                     "contents": [
                         "consul:",
@@ -35,6 +27,14 @@
                         "        port: '%env(resolve:CONSUL_SERVICE_PORT)%'",
                         "    client:",
                         "        base_uri: '%env(resolve:CONSUL_CLIENT_BASE_URI)%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/consul.yaml": {
+                    "contents": [
+                        "consul_bundle:",
+                        "    resource: \"@ConsulBundle/Resources/config/routing.yml\"",
                         ""
                     ],
                     "executable": false

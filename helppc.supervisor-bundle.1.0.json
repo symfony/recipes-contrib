@@ -12,15 +12,6 @@
                 }
             },
             "files": {
-                "config/routes/helppc_supervisor.yaml": {
-                    "contents": [
-                        "supervisor:",
-                        "    resource: '@SupervisorBundle/Resources/config/routing.xml'",
-                        "    prefix:   /supervisor",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/helppc_supervisor.yaml": {
                     "contents": [
                         "supervisor:",
@@ -31,6 +22,15 @@
                         "                scheme: http",
                         "                host: 127.0.0.1",
                         "                port: 9001",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/helppc_supervisor.yaml": {
+                    "contents": [
+                        "supervisor:",
+                        "    resource: '@SupervisorBundle/Resources/config/routing.xml'",
+                        "    prefix:   /supervisor",
                         ""
                     ],
                     "executable": false

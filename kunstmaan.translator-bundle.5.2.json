@@ -12,6 +12,16 @@
                 }
             },
             "files": {
+                "config/packages/kunstmaan_translator.yaml": {
+                    "contents": [
+                        "kunstmaan_translator:",
+                        "    enabled: true",
+                        "    # Add your preferred locales here",
+                        "    managed_locales: ['nl', 'en', 'de', 'fr']",
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/routes/kunstmaan_translator.yaml": {
                     "contents": [
                         "KunstmaanTranslatorBundle:",
@@ -20,16 +30,6 @@
                         "    prefix:   /{_locale}/",
                         "    requirements:",
                         "        _locale: \"%kunstmaan_admin.required_locales%\"",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/kunstmaan_translator.yaml": {
-                    "contents": [
-                        "kunstmaan_translator:",
-                        "    enabled: true",
-                        "    # Add your preferred locales here",
-                        "    managed_locales: ['nl', 'en', 'de', 'fr']",
                         ""
                     ],
                     "executable": false

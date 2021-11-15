@@ -17,6 +17,12 @@
                 }
             },
             "files": {
+                "var/storage/screenshots/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/packages/tienvx_mbt.yaml": {
                     "contents": [
                         "tienvx_mbt:",
@@ -29,12 +35,6 @@
                         "            adapter: 'local'",
                         "            options:",
                         "                directory: \"%kernel.project_dir%/var/storage/screenshots\"",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "var/storage/screenshots/.gitignore": {
-                    "contents": [
                         ""
                     ],
                     "executable": false

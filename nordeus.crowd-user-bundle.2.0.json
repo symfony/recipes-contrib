@@ -23,14 +23,6 @@
                 ]
             },
             "files": {
-                "config/routes/nordeus_crowd_user.yaml": {
-                    "contents": [
-                        "nordeus_crowd_user:",
-                        "    resource: \"@NordeusCrowdUserBundle/Resources/config/routing.yaml\"",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/nordeus_crowd_user.yaml": {
                     "contents": [
                         "# https://github.com/Nordeus/CrowdUserBundle#4-configure-parameters",
@@ -42,6 +34,14 @@
                         "    roles_to_groups:",
                         "        ROLE_USER: [ users ]",
                         "        ROLE_ADMIN: [ admins, superadmins ]",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/nordeus_crowd_user.yaml": {
+                    "contents": [
+                        "nordeus_crowd_user:",
+                        "    resource: \"@NordeusCrowdUserBundle/Resources/config/routing.yaml\"",
                         ""
                     ],
                     "executable": false

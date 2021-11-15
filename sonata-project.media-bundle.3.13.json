@@ -21,19 +21,6 @@
                     ],
                     "executable": false
                 },
-                "config/routes/sonata_media.yaml": {
-                    "contents": [
-                        "sonata_media_gallery:",
-                        "    resource: '@SonataMediaBundle/Resources/config/routing/gallery.xml'",
-                        "    prefix: /media/gallery",
-                        "",
-                        "sonata_media:",
-                        "    resource: '@SonataMediaBundle/Resources/config/routing/media.xml'",
-                        "    prefix: /media",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/sonata_media.yaml": {
                     "contents": [
                         "sonata_media:",
@@ -60,6 +47,19 @@
                         "            # Directory for uploads should be writable",
                         "            directory: \"%kernel.project_dir%/public/upload/media\"",
                         "            create: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sonata_media.yaml": {
+                    "contents": [
+                        "sonata_media_gallery:",
+                        "    resource: '@SonataMediaBundle/Resources/config/routing/gallery.xml'",
+                        "    prefix: /media/gallery",
+                        "",
+                        "sonata_media:",
+                        "    resource: '@SonataMediaBundle/Resources/config/routing/media.xml'",
+                        "    prefix: /media",
                         ""
                     ],
                     "executable": false

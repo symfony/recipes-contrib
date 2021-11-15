@@ -12,15 +12,6 @@
                 }
             },
             "files": {
-                "config/routes/mp3000mp_tos.yaml": {
-                    "contents": [
-                        "mp3000mp_tos:",
-                        "    resource: \"@Mp3000mpTOSBundle/Resources/config/routes.yaml\"",
-                        "    prefix: /tos",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/mp3000mp_tos.yaml": {
                     "contents": [
                         "mp3000mp_tos:",
@@ -29,6 +20,15 @@
                         "            - main",
                         "        priority: -20",
                         "    user_provider: App\\Entity\\User",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/mp3000mp_tos.yaml": {
+                    "contents": [
+                        "mp3000mp_tos:",
+                        "    resource: \"@Mp3000mpTOSBundle/Resources/config/routes.yaml\"",
+                        "    prefix: /tos",
                         ""
                     ],
                     "executable": false

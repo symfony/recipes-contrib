@@ -13,16 +13,8 @@
                 }
             },
             "files": {
-                "config/routes/sonata_admin.yaml": {
+                "src/Admin/.gitignore": {
                     "contents": [
-                        "admin_area:",
-                        "    resource: \"@SonataAdminBundle/Resources/config/routing/sonata_admin.xml\"",
-                        "    prefix: /admin",
-                        "",
-                        "_sonata_admin:",
-                        "    resource: .",
-                        "    type: sonata_admin",
-                        "    prefix: /admin",
                         ""
                     ],
                     "executable": false
@@ -43,8 +35,16 @@
                     ],
                     "executable": false
                 },
-                "src/Admin/.gitignore": {
+                "config/routes/sonata_admin.yaml": {
                     "contents": [
+                        "admin_area:",
+                        "    resource: \"@SonataAdminBundle/Resources/config/routing/sonata_admin.xml\"",
+                        "    prefix: /admin",
+                        "",
+                        "_sonata_admin:",
+                        "    resource: .",
+                        "    type: sonata_admin",
+                        "    prefix: /admin",
                         ""
                     ],
                     "executable": false

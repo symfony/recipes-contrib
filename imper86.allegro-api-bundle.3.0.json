@@ -23,18 +23,18 @@
                 ]
             },
             "files": {
-                "config/routes/imper86_allegro_api.yaml": {
-                    "contents": [
-                        "imper86_allegro_api:",
-                        "    resource: '@Imper86AllegroApiBundle/Resources/config/routes.xml'",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/imper86_allegro_api.yaml": {
                     "contents": [
                         "imper86_allegro_api:",
                         "    sandbox: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/imper86_allegro_api.yaml": {
+                    "contents": [
+                        "imper86_allegro_api:",
+                        "    resource: '@Imper86AllegroApiBundle/Resources/config/routes.xml'",
                         ""
                     ],
                     "executable": false

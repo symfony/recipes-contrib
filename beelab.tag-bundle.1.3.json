@@ -17,14 +17,6 @@
                 ]
             },
             "files": {
-                "config/packages/beelab_tag.yaml": {
-                    "contents": [
-                        "beelab_tag:",
-                        "    tag_class: App\\Entity\\Tag",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "src/Entity/Tag.php": {
                     "contents": [
                         "<?php",
@@ -77,6 +69,14 @@
                         "    }",
                         "}",
                         "",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/beelab_tag.yaml": {
+                    "contents": [
+                        "beelab_tag:",
+                        "    tag_class: App\\Entity\\Tag",
                         ""
                     ],
                     "executable": false

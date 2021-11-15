@@ -8,18 +8,6 @@
                 }
             },
             "files": {
-                "config/packages/sonata_notification_orm.yaml": {
-                    "contents": [
-                        "sonata_notification:",
-                        "    backend: sonata.notification.backend.doctrine",
-                        "    backends:",
-                        "        doctrine: null",
-                        "    class:",
-                        "        message: App\\Entity\\SonataNotificationMessage",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "src/Entity/SonataNotificationMessage.php": {
                     "contents": [
                         "<?php",
@@ -53,6 +41,18 @@
                         "        return $this->id;",
                         "    }",
                         "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/sonata_notification_orm.yaml": {
+                    "contents": [
+                        "sonata_notification:",
+                        "    backend: sonata.notification.backend.doctrine",
+                        "    backends:",
+                        "        doctrine: null",
+                        "    class:",
+                        "        message: App\\Entity\\SonataNotificationMessage",
                         ""
                     ],
                     "executable": false

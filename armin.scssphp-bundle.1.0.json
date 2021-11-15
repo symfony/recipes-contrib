@@ -12,20 +12,20 @@
                 }
             },
             "files": {
-                "config/packages/prod/scssphp.yaml": {
-                    "contents": [
-                        "scssphp:",
-                        "    enabled: true",
-                        "    autoUpdate: false",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/scssphp.yaml": {
                     "contents": [
                         "scssphp:",
                         "    enabled: true",
                         "    autoUpdate: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/prod/scssphp.yaml": {
+                    "contents": [
+                        "scssphp:",
+                        "    enabled: true",
+                        "    autoUpdate: false",
                         ""
                     ],
                     "executable": false

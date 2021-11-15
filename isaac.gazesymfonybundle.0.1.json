@@ -16,21 +16,21 @@
                 }
             },
             "files": {
-                "config/routes/isaac_gaze_symfony.yaml": {
-                    "contents": [
-                        "isaac_gaze_symfony:",
-                        "    resource: '@ISAACGazeSymfonyBundle/config/routing.xml'",
-                        "    prefix: /gaze",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/isaac_gaze_symfony.yaml": {
                     "contents": [
                         "isaac_gaze_symfony:",
                         "    publisher:",
                         "        gazehub_url: '%env(GAZEHUB_URL)%'",
                         "        private_key_content: '%env(GAZE_PRIVATE_KEY_CONTENTS)%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/isaac_gaze_symfony.yaml": {
+                    "contents": [
+                        "isaac_gaze_symfony:",
+                        "    resource: '@ISAACGazeSymfonyBundle/config/routing.xml'",
+                        "    prefix: /gaze",
                         ""
                     ],
                     "executable": false

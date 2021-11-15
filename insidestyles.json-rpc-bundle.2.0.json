@@ -12,15 +12,6 @@
                 }
             },
             "files": {
-                "config/routes/json_rpc_api_routing.yaml": {
-                    "contents": [
-                        "_json_rpc_api:",
-                        "    resource: .",
-                        "    type: json_rpc_api",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/json_rpc_api.yaml": {
                     "contents": [
                         "json_rpc_api:",
@@ -37,6 +28,15 @@
                         "            serializer: null",
                         "            logger: null",
                         "            annotation: null",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/json_rpc_api_routing.yaml": {
+                    "contents": [
+                        "_json_rpc_api:",
+                        "    resource: .",
+                        "    type: json_rpc_api",
                         ""
                     ],
                     "executable": false

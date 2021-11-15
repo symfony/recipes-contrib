@@ -13,11 +13,13 @@
                 }
             },
             "files": {
-                "config/routes/mobizel_markdown_docs.yaml": {
+                "docs/index.md": {
                     "contents": [
-                        "_mobizel_markdowns:",
-                        "    resource: 'mobizel_markdown_docs.routing.context_loader'",
-                        "    type: service",
+                        "# Documentation",
+                        "",
+                        "Your documentation is now ready and you can start working on it.",
+                        "",
+                        "[Documentation of the bundle](https://github.com/mobizel/markdown-docs-bundle/blob/master/docs/index.md)",
                         ""
                     ],
                     "executable": false
@@ -38,13 +40,11 @@
                     ],
                     "executable": false
                 },
-                "docs/index.md": {
+                "config/routes/mobizel_markdown_docs.yaml": {
                     "contents": [
-                        "# Documentation",
-                        "",
-                        "Your documentation is now ready and you can start working on it.",
-                        "",
-                        "[Documentation of the bundle](https://github.com/mobizel/markdown-docs-bundle/blob/master/docs/index.md)",
+                        "_mobizel_markdowns:",
+                        "    resource: 'mobizel_markdown_docs.routing.context_loader'",
+                        "    type: service",
                         ""
                     ],
                     "executable": false

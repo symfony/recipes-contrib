@@ -12,18 +12,18 @@
                 }
             },
             "files": {
-                "config/routes/ch_cookie_consent.yaml": {
-                    "contents": [
-                        "ch_cookie_consent:",
-                        "    resource: \"@CHCookieConsentBundle/Resources/config/routing.yaml\"",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/ch_cookie_consent.yaml": {
                     "contents": [
                         "ch_cookie_consent: ",
                         "    categories: ['analytics', 'tracking', 'social_media', 'marketing']",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/ch_cookie_consent.yaml": {
+                    "contents": [
+                        "ch_cookie_consent:",
+                        "    resource: \"@CHCookieConsentBundle/Resources/config/routing.yaml\"",
                         ""
                     ],
                     "executable": false

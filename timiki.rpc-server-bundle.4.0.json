@@ -13,12 +13,8 @@
                 }
             },
             "files": {
-                "config/routes/rpc_server.yaml": {
+                "src/Method/.gitignore": {
                     "contents": [
-                        "rpc:",
-                        "    path:     /rpc",
-                        "    defaults: { _controller: RpcServerBundle:Rpc:handler }",
-                        "    methods:  [POST]",
                         ""
                     ],
                     "executable": false
@@ -44,8 +40,12 @@
                     ],
                     "executable": false
                 },
-                "src/Method/.gitignore": {
+                "config/routes/rpc_server.yaml": {
                     "contents": [
+                        "rpc:",
+                        "    path:     /rpc",
+                        "    defaults: { _controller: RpcServerBundle:Rpc:handler }",
+                        "    methods:  [POST]",
                         ""
                     ],
                     "executable": false

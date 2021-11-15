@@ -12,15 +12,6 @@
                 }
             },
             "files": {
-                "config/routes/omnipay.yaml": {
-                    "contents": [
-                        "omnipay:",
-                        "    resource: \"@OmnipayBundle/Resources/config/routing.yml\"",
-                        "    prefix: /",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/omnipay.yaml": {
                     "contents": [
                         "omnipay:",
@@ -36,6 +27,15 @@
                         ""
                     ],
                     "executable": true
+                },
+                "config/routes/omnipay.yaml": {
+                    "contents": [
+                        "omnipay:",
+                        "    resource: \"@OmnipayBundle/Resources/config/routing.yml\"",
+                        "    prefix: /",
+                        ""
+                    ],
+                    "executable": false
                 }
             },
             "ref": "b70bdce6cb4c9a3933dcc082c270042e630b5507"

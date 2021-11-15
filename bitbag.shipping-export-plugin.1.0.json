@@ -21,19 +21,19 @@
                 ]
             },
             "files": {
+                "config/packages/bitbag_shipping_export_plugin.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@BitBagSyliusShippingExportPlugin/Resources/config/config.yml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/routes/bitbag_shipping_export_plugin.yaml": {
                     "contents": [
                         "bitbag_shipping_export_plugin:",
                         "    resource: \"@BitBagSyliusShippingExportPlugin/Resources/config/routing.yml\"",
                         "    prefix: /admin",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/bitbag_shipping_export_plugin.yaml": {
-                    "contents": [
-                        "imports:",
-                        "    - { resource: \"@BitBagSyliusShippingExportPlugin/Resources/config/config.yml\" }",
                         ""
                     ],
                     "executable": false

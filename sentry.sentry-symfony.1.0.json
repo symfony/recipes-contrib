@@ -15,6 +15,14 @@
                 }
             },
             "files": {
+                "config/packages/prod/sentry.yaml": {
+                    "contents": [
+                        "sentry:",
+                        "    dsn: '%env(SENTRY_DSN)%'",
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/packages/sentry.yaml": {
                     "contents": [
                         "sentry:",
@@ -25,14 +33,6 @@
                         "#      - 'Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException'",
                         "#      - 'Symfony\\Component\\HttpKernel\\Exception\\BadRequestHttpException'",
                         "#      - 'Symfony\\Component\\HttpKernel\\Exception\\AccessDeniedHttpException'",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/prod/sentry.yaml": {
-                    "contents": [
-                        "sentry:",
-                        "    dsn: '%env(SENTRY_DSN)%'",
                         ""
                     ],
                     "executable": false

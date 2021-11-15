@@ -17,14 +17,6 @@
                 ]
             },
             "files": {
-                "config/routes/graphql.yaml": {
-                    "contents": [
-                        "overblog_graphql_endpoint:",
-                        "    resource: \"@OverblogGraphQLBundle/Resources/config/routing/graphql.yml\"",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/graphql.yaml": {
                     "contents": [
                         "overblog_graphql:",
@@ -44,6 +36,14 @@
                 },
                 "config/graphql/types/.gitignore": {
                     "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/graphql.yaml": {
+                    "contents": [
+                        "overblog_graphql_endpoint:",
+                        "    resource: \"@OverblogGraphQLBundle/Resources/config/routing/graphql.yml\"",
                         ""
                     ],
                     "executable": false

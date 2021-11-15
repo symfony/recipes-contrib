@@ -12,23 +12,13 @@
                 }
             },
             "files": {
-                "config/routes/php_translation.yaml": {
+                "config/packages/dev/php_translation.yaml": {
                     "contents": [
-                        "_translation_edit_in_place:",
-                        "    resource: '@TranslationBundle/Resources/config/routing_edit_in_place.yml'",
-                        "    prefix: /admin",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/routes/dev/php_translation.yaml": {
-                    "contents": [
-                        "_translation_webui:",
-                        "    resource: \"@TranslationBundle/Resources/config/routing_webui.yml\"",
-                        "    prefix: /admin",
-                        "",
-                        "_translation_profiler:",
-                        "    resource: '@TranslationBundle/Resources/config/routing_symfony_profiler.yml'",
+                        "translation:",
+                        "    symfony_profiler:",
+                        "        enabled: true",
+                        "    webui:",
+                        "        enabled: true",
                         ""
                     ],
                     "executable": false
@@ -50,13 +40,23 @@
                     ],
                     "executable": false
                 },
-                "config/packages/dev/php_translation.yaml": {
+                "config/routes/dev/php_translation.yaml": {
                     "contents": [
-                        "translation:",
-                        "    symfony_profiler:",
-                        "        enabled: true",
-                        "    webui:",
-                        "        enabled: true",
+                        "_translation_webui:",
+                        "    resource: \"@TranslationBundle/Resources/config/routing_webui.yml\"",
+                        "    prefix: /admin",
+                        "",
+                        "_translation_profiler:",
+                        "    resource: '@TranslationBundle/Resources/config/routing_symfony_profiler.yml'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/php_translation.yaml": {
+                    "contents": [
+                        "_translation_edit_in_place:",
+                        "    resource: '@TranslationBundle/Resources/config/routing_edit_in_place.yml'",
+                        "    prefix: /admin",
                         ""
                     ],
                     "executable": false

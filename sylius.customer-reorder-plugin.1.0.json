@@ -12,18 +12,18 @@
                 }
             },
             "files": {
-                "config/routes/sylius_customer_reorder.yaml": {
-                    "contents": [
-                        "sylius_customer_reorder:",
-                        "    resource: \"@SyliusCustomerReorderPlugin/Resources/config/app/reorder_routing.yml\"",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/sylius_customer_reorder.yaml": {
                     "contents": [
                         "imports:",
                         "    - { resource: \"@SyliusCustomerReorderPlugin/Resources/config/config.yml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sylius_customer_reorder.yaml": {
+                    "contents": [
+                        "sylius_customer_reorder:",
+                        "    resource: \"@SyliusCustomerReorderPlugin/Resources/config/app/reorder_routing.yml\"",
                         ""
                     ],
                     "executable": false

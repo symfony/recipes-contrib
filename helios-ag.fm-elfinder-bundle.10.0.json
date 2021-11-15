@@ -15,14 +15,6 @@
                 }
             },
             "files": {
-                "config/routes/fm_elfinder.yaml": {
-                    "contents": [
-                        "fm_elfinder:",
-                        "    resource: \"@FMElfinderBundle/Resources/config/routing.yaml\"",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/fm_elfinder.yaml": {
                     "contents": [
                         "fm_elfinder:",
@@ -33,6 +25,14 @@
                         "                    uploads:",
                         "                        driver: LocalFileSystem",
                         "                        path: uploads",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/fm_elfinder.yaml": {
+                    "contents": [
+                        "fm_elfinder:",
+                        "    resource: \"@FMElfinderBundle/Resources/config/routing.yaml\"",
                         ""
                     ],
                     "executable": false

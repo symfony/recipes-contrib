@@ -12,6 +12,14 @@
                 }
             },
             "files": {
+                "config/packages/sylius_invoicing.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SyliusInvoicingPlugin/Resources/config/config.yml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/routes/sylius_invoicing.yaml": {
                     "contents": [
                         "sylius_invoicing_plugin_admin:",
@@ -23,14 +31,6 @@
                         "    prefix: /{_locale}",
                         "    requirements:",
                         "        _locale: ^[a-z]{2}(?:_[A-Z]{2})?$",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/sylius_invoicing.yaml": {
-                    "contents": [
-                        "imports:",
-                        "    - { resource: \"@SyliusInvoicingPlugin/Resources/config/config.yml\" }",
                         ""
                     ],
                     "executable": false
