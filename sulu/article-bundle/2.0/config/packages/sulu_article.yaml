@@ -19,6 +19,17 @@ sulu_route:
                 parent: '{object.getParent().getRoutePath()}'
 
 ongr_elasticsearch:
+# If you expect more than 10000 articles, you need to set the `max_result_window` to an appropriate number
+#    managers:
+#        default:
+#            index:
+#                settings:
+#                    max_result_window: 20000
+#        live:
+#            index:
+#                settings:
+#                    max_result_window: 20000
+
     analysis:
         tokenizer:
             pathTokenizer:
