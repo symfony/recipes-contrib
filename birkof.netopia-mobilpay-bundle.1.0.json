@@ -25,6 +25,12 @@
                 ]
             },
             "files": {
+                "config/netopia_mobilpay/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/packages/netopia_mobilpay.yaml": {
                     "contents": [
                         "netopia_mobilpay:",
@@ -33,12 +39,6 @@
                         "    private_key:        '%env(NETOPIA_MOBILPAY_PRIVATE_KEY)%'",
                         "    signature:          '%env(NETOPIA_MOBILPAY_SIGNATURE)%'",
                         "",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/netopia_mobilpay/.gitignore": {
-                    "contents": [
                         ""
                     ],
                     "executable": false

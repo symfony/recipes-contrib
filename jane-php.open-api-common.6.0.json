@@ -43,18 +43,6 @@
                     ],
                     "executable": true
                 },
-                "config/packages/jane.yaml": {
-                    "contents": [
-                        "services:",
-                        "    _defaults:",
-                        "        autowire: true",
-                        "        autoconfigure: true",
-                        "",
-                        "#    MyApp\\Library\\Generated\\Normalizer\\JaneObjectNormalizer: null",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/jane/open_api.php": {
                     "contents": [
                         "<?php",
@@ -64,6 +52,18 @@
                         "    'namespace' => 'MyApp\\Library\\Generated',",
                         "    'directory' => __DIR__ . '/../../generated',",
                         "];",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/jane.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "#    MyApp\\Library\\Generated\\Normalizer\\JaneObjectNormalizer: null",
                         ""
                     ],
                     "executable": false

@@ -21,26 +21,6 @@
                 ]
             },
             "files": {
-                "src/Entity/Media.php": {
-                    "contents": [
-                        "<?php",
-                        "",
-                        "namespace App\\Entity;",
-                        "",
-                        "use Doctrine\\ORM\\Mapping as ORM;",
-                        "use MediaMonks\\SonataMediaBundle\\Entity\\Media as BaseMedia;",
-                        "",
-                        "/**",
-                        " * @ORM\\Entity(repositoryClass=\"MediaMonks\\SonataMediaBundle\\Repository\\MediaRepository\")",
-                        " * @ORM\\Table",
-                        " */",
-                        "class Media extends BaseMedia",
-                        "{",
-                        "}",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/mediamonks_sonata_media.yaml": {
                     "contents": [
                         "mediamonks_sonata_media:",
@@ -59,6 +39,26 @@
                         "",
                         "mediamonks_sonata_media:",
                         "    resource: \"@MediaMonksSonataMediaBundle/Resources/config/routing.yml\"",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/Media.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "use MediaMonks\\SonataMediaBundle\\Entity\\Media as BaseMedia;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity(repositoryClass=\"MediaMonks\\SonataMediaBundle\\Repository\\MediaRepository\")",
+                        " * @ORM\\Table",
+                        " */",
+                        "class Media extends BaseMedia",
+                        "{",
+                        "}",
                         ""
                     ],
                     "executable": false

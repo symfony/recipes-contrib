@@ -17,6 +17,12 @@
                 ]
             },
             "files": {
+                "config/graphql/types/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/packages/graphql.yaml": {
                     "contents": [
                         "overblog_graphql:",
@@ -30,12 +36,6 @@
                         "                    type: yaml",
                         "                    dir: \"%kernel.project_dir%/config/graphql/types\"",
                         "                    suffix: null",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/graphql/types/.gitignore": {
-                    "contents": [
                         ""
                     ],
                     "executable": false

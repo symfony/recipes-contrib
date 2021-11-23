@@ -15,15 +15,6 @@
                 ]
             },
             "files": {
-                "config/packages/prod/mjml.yaml": {
-                    "contents": [
-                        "mjml:",
-                        "    options:",
-                        "        minify: true",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/mjml.yaml": {
                     "contents": [
                         "# see https://github.com/notFloran/mjml-bundle#binary",
@@ -32,6 +23,15 @@
                         "    options:",
                         "        binary: '%kernel.project_dir%/node_modules/.bin/mjml'",
                         "        minify: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/prod/mjml.yaml": {
+                    "contents": [
+                        "mjml:",
+                        "    options:",
+                        "        minify: true",
                         ""
                     ],
                     "executable": false

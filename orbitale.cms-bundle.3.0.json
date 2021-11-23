@@ -13,37 +13,27 @@
                 }
             },
             "files": {
-                "src/Entity/Page.php": {
+                "config/packages/orbitale_cms.yaml": {
                     "contents": [
-                        "<?php",
+                        "orbitale_cms:",
+                        "    page_class: App\\Entity\\Page",
+                        "    category_class: App\\Entity\\Category",
+                        "# Define your layout here if you need a custom layout for your CMS",
+                        "#    layouts:",
+                        "#         main: { resource: base.html.twig }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/orbitale_cms.yaml": {
+                    "contents": [
+                        "orbitale_cms_category:",
+                        "    resource: \"@OrbitaleCmsBundle/Resources/config/routing/categories.yaml\"",
+                        "    prefix:   /category/",
                         "",
-                        "namespace App\\Entity;",
-                        "",
-                        "use Orbitale\\Bundle\\CmsBundle\\Entity\\Page as BasePage;",
-                        "use Doctrine\\ORM\\Mapping as ORM;",
-                        "",
-                        "/**",
-                        " * @ORM\\Entity(repositoryClass=\"Orbitale\\Bundle\\CmsBundle\\Repository\\PageRepository\")",
-                        " * @ORM\\Table(name=\"orbitale_cms_pages\")",
-                        " */",
-                        "class Page extends BasePage",
-                        "{",
-                        "    /**",
-                        "     * @var int",
-                        "     * @ORM\\Column(name=\"id\", type=\"integer\")",
-                        "     * @ORM\\Id",
-                        "     * @ORM\\GeneratedValue(strategy=\"AUTO\")",
-                        "     */",
-                        "    protected $id;",
-                        "",
-                        "    /**",
-                        "     * @return int",
-                        "     */",
-                        "    public function getId()",
-                        "    {",
-                        "        return $this->id;",
-                        "    }",
-                        "}",
+                        "orbitale_cms_page:",
+                        "    resource: \"@OrbitaleCmsBundle/Resources/config/routing/pages.yaml\"",
+                        "    prefix:   /page/",
                         ""
                     ],
                     "executable": false
@@ -83,27 +73,37 @@
                     ],
                     "executable": false
                 },
-                "config/packages/orbitale_cms.yaml": {
+                "src/Entity/Page.php": {
                     "contents": [
-                        "orbitale_cms:",
-                        "    page_class: App\\Entity\\Page",
-                        "    category_class: App\\Entity\\Category",
-                        "# Define your layout here if you need a custom layout for your CMS",
-                        "#    layouts:",
-                        "#         main: { resource: base.html.twig }",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/routes/orbitale_cms.yaml": {
-                    "contents": [
-                        "orbitale_cms_category:",
-                        "    resource: \"@OrbitaleCmsBundle/Resources/config/routing/categories.yaml\"",
-                        "    prefix:   /category/",
+                        "<?php",
                         "",
-                        "orbitale_cms_page:",
-                        "    resource: \"@OrbitaleCmsBundle/Resources/config/routing/pages.yaml\"",
-                        "    prefix:   /page/",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Orbitale\\Bundle\\CmsBundle\\Entity\\Page as BasePage;",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity(repositoryClass=\"Orbitale\\Bundle\\CmsBundle\\Repository\\PageRepository\")",
+                        " * @ORM\\Table(name=\"orbitale_cms_pages\")",
+                        " */",
+                        "class Page extends BasePage",
+                        "{",
+                        "    /**",
+                        "     * @var int",
+                        "     * @ORM\\Column(name=\"id\", type=\"integer\")",
+                        "     * @ORM\\Id",
+                        "     * @ORM\\GeneratedValue(strategy=\"AUTO\")",
+                        "     */",
+                        "    protected $id;",
+                        "",
+                        "    /**",
+                        "     * @return int",
+                        "     */",
+                        "    public function getId()",
+                        "    {",
+                        "        return $this->id;",
+                        "    }",
+                        "}",
                         ""
                     ],
                     "executable": false

@@ -12,14 +12,6 @@
                 }
             },
             "files": {
-                "config/packages/test/prometheus_metrics.yaml": {
-                    "contents": [
-                        "artprima_prometheus_metrics:",
-                        "    type: in_memory",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/prometheus_metrics.yaml": {
                     "contents": [
                         "artprima_prometheus_metrics:",
@@ -28,6 +20,14 @@
                         "    ignored_routes:",
                         "    - prometheus_bundle_prometheus",
                         "    - _wdt",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/test/prometheus_metrics.yaml": {
+                    "contents": [
+                        "artprima_prometheus_metrics:",
+                        "    type: in_memory",
                         ""
                     ],
                     "executable": false

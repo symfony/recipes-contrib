@@ -16,20 +16,20 @@
                 }
             },
             "files": {
+                "config/packages/dev/ewz_recaptcha.yaml": {
+                    "contents": [
+                        "ewz_recaptcha:",
+                        "    enabled: false",
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/packages/ewz_recaptcha.yaml": {
                     "contents": [
                         "# See https://github.com/excelwebzone/EWZRecaptchaBundle for full configuration",
                         "ewz_recaptcha:",
                         "    public_key:  '%env(EWZ_RECAPTCHA_SITE_KEY)%'",
                         "    private_key: '%env(EWZ_RECAPTCHA_SECRET)%'",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/dev/ewz_recaptcha.yaml": {
-                    "contents": [
-                        "ewz_recaptcha:",
-                        "    enabled: false",
                         ""
                     ],
                     "executable": false

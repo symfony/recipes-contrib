@@ -12,17 +12,17 @@
                 }
             },
             "files": {
+                "config/admin/resources/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/packages/lag_admin.yaml": {
                     "contents": [
                         "lag_admin:",
                         "    application:",
                         "        resources_path: '%kernel.project_dir%/config/admin/resources'",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/admin/resources/.gitignore": {
-                    "contents": [
                         ""
                     ],
                     "executable": false

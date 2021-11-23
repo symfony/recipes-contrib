@@ -13,12 +13,6 @@
                 }
             },
             "files": {
-                "src/Admin/.gitignore": {
-                    "contents": [
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/sonata_admin.yaml": {
                     "contents": [
                         "sonata_admin:",
@@ -45,6 +39,12 @@
                         "    resource: .",
                         "    type: sonata_admin",
                         "    prefix: /admin",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Admin/.gitignore": {
+                    "contents": [
                         ""
                     ],
                     "executable": false

@@ -37,6 +37,20 @@
                     ],
                     "executable": true
                 },
+                "config/jane/config.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "return [",
+                        "    'json-schema-file' => __DIR__ . '/json-schema.json',",
+                        "    'root-class' => 'MyModel',",
+                        "    'namespace' => 'MyApp\\Library\\Generated',",
+                        "    'directory' => __DIR__ . '/../../generated',",
+                        "];",
+                        ""
+                    ],
+                    "executable": false
+                },
                 "config/packages/jane.yaml": {
                     "contents": [
                         "services:",
@@ -64,20 +78,6 @@
                         "#        arguments:",
                         "#            - ['@serializer.denormalizer.array', '@jane.serializer.object']",
                         "#            - ['@jane.serializer.json_encoder']",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/jane/config.php": {
-                    "contents": [
-                        "<?php",
-                        "",
-                        "return [",
-                        "    'json-schema-file' => __DIR__ . '/json-schema.json',",
-                        "    'root-class' => 'MyModel',",
-                        "    'namespace' => 'MyApp\\Library\\Generated',",
-                        "    'directory' => __DIR__ . '/../../generated',",
-                        "];",
                         ""
                     ],
                     "executable": false

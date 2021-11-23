@@ -21,12 +21,6 @@
                 }
             },
             "files": {
-                "src/Document/.gitignore": {
-                    "contents": [
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/doctrine_mongodb.yaml": {
                     "contents": [
                         "doctrine_mongodb:",
@@ -74,6 +68,12 @@
                         "        pools:",
                         "            doctrine_mongodb.system_cache_pool:",
                         "                adapter: cache.system",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Document/.gitignore": {
+                    "contents": [
                         ""
                     ],
                     "executable": false

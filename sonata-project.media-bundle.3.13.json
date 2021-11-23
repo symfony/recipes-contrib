@@ -13,14 +13,6 @@
                 }
             },
             "files": {
-                "public/upload/media/.gitignore": {
-                    "contents": [
-                        "*",
-                        "!.gitignore",
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/sonata_media.yaml": {
                     "contents": [
                         "sonata_media:",
@@ -60,6 +52,14 @@
                         "sonata_media:",
                         "    resource: '@SonataMediaBundle/Resources/config/routing/media.xml'",
                         "    prefix: /media",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "public/upload/media/.gitignore": {
+                    "contents": [
+                        "*",
+                        "!.gitignore",
                         ""
                     ],
                     "executable": false

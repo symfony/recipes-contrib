@@ -24,13 +24,26 @@
                 ]
             },
             "files": {
-                "tests/_data/.gitignore": {
+                "codeception.yml": {
                     "contents": [
+                        "namespace: App\\Tests",
+                        "paths:",
+                        "    tests: tests",
+                        "    output: tests/_output",
+                        "    data: tests/_data",
+                        "    support: tests/_support",
+                        "    envs: tests/_envs",
+                        "actor_suffix: Tester",
+                        "extensions:",
+                        "    enabled:",
+                        "        - Codeception\\Extension\\RunFailed",
+                        "params:",
+                        "    - .env",
                         ""
                     ],
                     "executable": false
                 },
-                "tests/acceptance/.gitignore": {
+                "tests/_data/.gitignore": {
                     "contents": [
                         ""
                     ],
@@ -44,32 +57,34 @@
                     ],
                     "executable": false
                 },
-                "tests/unit/.gitignore": {
+                "tests/_support/AcceptanceTester.php": {
                     "contents": [
-                        ""
-                    ],
-                    "executable": false
-                },
-                "tests/acceptance.suite.yml": {
-                    "contents": [
-                        "# Codeception Test Suite Configuration",
-                        "#",
-                        "# Suite for acceptance tests.",
-                        "# Perform tests in browser using the WebDriver or PhpBrowser.",
-                        "# If you need both WebDriver and PHPBrowser tests - create a separate suite.",
+                        "<?php",
+                        "namespace App\\Tests;",
                         "",
-                        "actor: AcceptanceTester",
-                        "modules:",
-                        "    enabled:",
-                        "        - PhpBrowser:",
-                        "            url: http://localhost:8000",
-                        "        - \\App\\Tests\\Helper\\Acceptance",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "tests/functional/.gitignore": {
-                    "contents": [
+                        "/**",
+                        " * Inherited Methods",
+                        " * @method void wantToTest($text)",
+                        " * @method void wantTo($text)",
+                        " * @method void execute($callable)",
+                        " * @method void expectTo($prediction)",
+                        " * @method void expect($prediction)",
+                        " * @method void amGoingTo($argumentation)",
+                        " * @method void am($role)",
+                        " * @method void lookForwardTo($achieveValue)",
+                        " * @method void comment($description)",
+                        " * @method \\Codeception\\Lib\\Friend haveFriend($name, $actorClass = NULL)",
+                        " *",
+                        " * @SuppressWarnings(PHPMD)",
+                        "*/",
+                        "class AcceptanceTester extends \\Codeception\\Actor",
+                        "{",
+                        "    use _generated\\AcceptanceTesterActions;",
+                        "",
+                        "   /**",
+                        "    * Define custom actions here",
+                        "    */",
+                        "}",
                         ""
                     ],
                     "executable": false
@@ -101,6 +116,54 @@
                         "   /**",
                         "    * Define custom actions here",
                         "    */",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "tests/_support/Helper/Acceptance.php": {
+                    "contents": [
+                        "<?php",
+                        "namespace App\\Tests\\Helper;",
+                        "",
+                        "// here you can define custom actions",
+                        "// all public methods declared in helper class will be available in $I",
+                        "",
+                        "class Acceptance extends \\Codeception\\Module",
+                        "{",
+                        "",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "tests/_support/Helper/Functional.php": {
+                    "contents": [
+                        "<?php",
+                        "namespace App\\Tests\\Helper;",
+                        "",
+                        "// here you can define custom actions",
+                        "// all public methods declared in helper class will be available in $I",
+                        "",
+                        "class Functional extends \\Codeception\\Module",
+                        "{",
+                        "",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "tests/_support/Helper/Unit.php": {
+                    "contents": [
+                        "<?php",
+                        "namespace App\\Tests\\Helper;",
+                        "",
+                        "// here you can define custom actions",
+                        "// all public methods declared in helper class will be available in $I",
+                        "",
+                        "class Unit extends \\Codeception\\Module",
+                        "{",
+                        "",
                         "}",
                         ""
                     ],
@@ -146,97 +209,26 @@
                     ],
                     "executable": false
                 },
-                "tests/_support/Helper/Acceptance.php": {
-                    "contents": [
-                        "<?php",
-                        "namespace App\\Tests\\Helper;",
-                        "",
-                        "// here you can define custom actions",
-                        "// all public methods declared in helper class will be available in $I",
-                        "",
-                        "class Acceptance extends \\Codeception\\Module",
-                        "{",
-                        "",
-                        "}",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "tests/_support/Helper/Unit.php": {
-                    "contents": [
-                        "<?php",
-                        "namespace App\\Tests\\Helper;",
-                        "",
-                        "// here you can define custom actions",
-                        "// all public methods declared in helper class will be available in $I",
-                        "",
-                        "class Unit extends \\Codeception\\Module",
-                        "{",
-                        "",
-                        "}",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "tests/_support/Helper/Functional.php": {
-                    "contents": [
-                        "<?php",
-                        "namespace App\\Tests\\Helper;",
-                        "",
-                        "// here you can define custom actions",
-                        "// all public methods declared in helper class will be available in $I",
-                        "",
-                        "class Functional extends \\Codeception\\Module",
-                        "{",
-                        "",
-                        "}",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "tests/_support/AcceptanceTester.php": {
-                    "contents": [
-                        "<?php",
-                        "namespace App\\Tests;",
-                        "",
-                        "/**",
-                        " * Inherited Methods",
-                        " * @method void wantToTest($text)",
-                        " * @method void wantTo($text)",
-                        " * @method void execute($callable)",
-                        " * @method void expectTo($prediction)",
-                        " * @method void expect($prediction)",
-                        " * @method void amGoingTo($argumentation)",
-                        " * @method void am($role)",
-                        " * @method void lookForwardTo($achieveValue)",
-                        " * @method void comment($description)",
-                        " * @method \\Codeception\\Lib\\Friend haveFriend($name, $actorClass = NULL)",
-                        " *",
-                        " * @SuppressWarnings(PHPMD)",
-                        "*/",
-                        "class AcceptanceTester extends \\Codeception\\Actor",
-                        "{",
-                        "    use _generated\\AcceptanceTesterActions;",
-                        "",
-                        "   /**",
-                        "    * Define custom actions here",
-                        "    */",
-                        "}",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "tests/unit.suite.yml": {
+                "tests/acceptance.suite.yml": {
                     "contents": [
                         "# Codeception Test Suite Configuration",
                         "#",
-                        "# Suite for unit or integration tests.",
+                        "# Suite for acceptance tests.",
+                        "# Perform tests in browser using the WebDriver or PhpBrowser.",
+                        "# If you need both WebDriver and PHPBrowser tests - create a separate suite.",
                         "",
-                        "actor: UnitTester",
+                        "actor: AcceptanceTester",
                         "modules:",
                         "    enabled:",
-                        "        - Asserts",
-                        "        - \\App\\Tests\\Helper\\Unit",
+                        "        - PhpBrowser:",
+                        "            url: http://localhost:8000",
+                        "        - \\App\\Tests\\Helper\\Acceptance",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "tests/acceptance/.gitignore": {
+                    "contents": [
                         ""
                     ],
                     "executable": false
@@ -264,21 +256,29 @@
                     ],
                     "executable": false
                 },
-                "codeception.yml": {
+                "tests/functional/.gitignore": {
                     "contents": [
-                        "namespace: App\\Tests",
-                        "paths:",
-                        "    tests: tests",
-                        "    output: tests/_output",
-                        "    data: tests/_data",
-                        "    support: tests/_support",
-                        "    envs: tests/_envs",
-                        "actor_suffix: Tester",
-                        "extensions:",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "tests/unit.suite.yml": {
+                    "contents": [
+                        "# Codeception Test Suite Configuration",
+                        "#",
+                        "# Suite for unit or integration tests.",
+                        "",
+                        "actor: UnitTester",
+                        "modules:",
                         "    enabled:",
-                        "        - Codeception\\Extension\\RunFailed",
-                        "params:",
-                        "    - .env",
+                        "        - Asserts",
+                        "        - \\App\\Tests\\Helper\\Unit",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "tests/unit/.gitignore": {
+                    "contents": [
                         ""
                     ],
                     "executable": false

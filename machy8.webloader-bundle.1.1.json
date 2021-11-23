@@ -13,10 +13,10 @@
                 }
             },
             "files": {
-                "public/webtemp/.gitignore": {
+                "config/packages/dev/web_loader.yaml": {
                     "contents": [
-                        "*",
-                        "!.gitignore",
+                        "web_loader:",
+                        "    disableCache: true",
                         ""
                     ],
                     "executable": false
@@ -31,10 +31,10 @@
                     ],
                     "executable": false
                 },
-                "config/packages/dev/web_loader.yaml": {
+                "public/webtemp/.gitignore": {
                     "contents": [
-                        "web_loader:",
-                        "    disableCache: true",
+                        "*",
+                        "!.gitignore",
                         ""
                     ],
                     "executable": false

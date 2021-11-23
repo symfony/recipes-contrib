@@ -16,12 +16,6 @@
                 ]
             },
             "files": {
-                "public/uploads/.gitignore": {
-                    "contents": [
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/routes/kunstmaan_media.yaml": {
                     "contents": [
                         "KunstmaanMediaBundle:",
@@ -30,6 +24,12 @@
                         "    prefix:   /{_locale}/",
                         "    requirements:",
                         "        _locale: \"%kunstmaan_admin.required_locales%\"",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "public/uploads/.gitignore": {
+                    "contents": [
                         ""
                     ],
                     "executable": false

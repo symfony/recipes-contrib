@@ -17,6 +17,27 @@
                 }
             },
             "files": {
+                "config/packages/mailxpert_apibundle.yaml": {
+                    "contents": [
+                        "mailxpert_api:",
+                        "    access_token_class: App\\Entity\\AccessToken",
+                        "    oauth:",
+                        "        client_id: '%env(MAILXPERT_CLIENT_ID)%'",
+                        "        client_secret: '%env(MAILXPERT_CLIENT_SECRET)%'",
+                        "        redirect_url: 'http://example.com/mx/oauth/code'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/mailxpert_apibundle.yaml": {
+                    "contents": [
+                        "mx_api:",
+                        "    resource: '@MailxpertAPIBundle/Resources/config/routing.xml'",
+                        "    type: xml",
+                        ""
+                    ],
+                    "executable": false
+                },
                 "src/Entity/AccessToken.php": {
                     "contents": [
                         "<?php",
@@ -39,27 +60,6 @@
                         "     */",
                         "    protected $id;",
                         "}",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/mailxpert_apibundle.yaml": {
-                    "contents": [
-                        "mailxpert_api:",
-                        "    access_token_class: App\\Entity\\AccessToken",
-                        "    oauth:",
-                        "        client_id: '%env(MAILXPERT_CLIENT_ID)%'",
-                        "        client_secret: '%env(MAILXPERT_CLIENT_SECRET)%'",
-                        "        redirect_url: 'http://example.com/mx/oauth/code'",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/routes/mailxpert_apibundle.yaml": {
-                    "contents": [
-                        "mx_api:",
-                        "    resource: '@MailxpertAPIBundle/Resources/config/routing.xml'",
-                        "    type: xml",
                         ""
                     ],
                     "executable": false

@@ -1556,6 +1556,6 @@
     "_links": {
         "repository": "github.com/symfony/recipes-contrib",
         "origin_template": "{package}:{version}@github.com/symfony/recipes-contrib:master",
-        "recipe_template": "https://api.github.com/repos/symfony/recipes-contrib/contents/{package_dotted}.{version}.json?ref=flex/main"
+        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes-contrib/flex/main/{package_dotted}.{version}.json"
     }
 }

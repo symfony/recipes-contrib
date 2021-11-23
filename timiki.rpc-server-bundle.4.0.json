@@ -13,12 +13,6 @@
                 }
             },
             "files": {
-                "src/Method/.gitignore": {
-                    "contents": [
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/rpc_server.yaml": {
                     "contents": [
                         "# Read the documentation: https://github.com/timiki/rpc-server-bundle",
@@ -46,6 +40,12 @@
                         "    path:     /rpc",
                         "    defaults: { _controller: RpcServerBundle:Rpc:handler }",
                         "    methods:  [POST]",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Method/.gitignore": {
+                    "contents": [
                         ""
                     ],
                     "executable": false

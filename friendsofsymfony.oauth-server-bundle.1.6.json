@@ -13,6 +13,31 @@
                 }
             },
             "files": {
+                "config/packages/fos_oauth_server.yaml": {
+                    "contents": [
+                        "# Read the documentation: https://github.com/FriendsOfSymfony/FOSOAuthServerBundle/blob/master/Resources/doc/index.md#step-5-configure-fosoauthserverbundle",
+                        "fos_oauth_server:",
+                        "    db_driver: orm",
+                        "",
+                        "    client_class: App\\Entity\\Client",
+                        "    access_token_class: App\\Entity\\AccessToken",
+                        "    refresh_token_class: App\\Entity\\RefreshToken",
+                        "    auth_code_class: App\\Entity\\AuthCode",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/fos_oauth_server.yaml": {
+                    "contents": [
+                        "fos_oauth_server_token:",
+                        "    resource: \"@FOSOAuthServerBundle/Resources/config/routing/token.xml\"",
+                        "",
+                        "fos_oauth_server_authorize:",
+                        "    resource: \"@FOSOAuthServerBundle/Resources/config/routing/authorize.xml\"",
+                        ""
+                    ],
+                    "executable": false
+                },
                 "src/Entity/AccessToken.php": {
                     "contents": [
                         "<?php",
@@ -145,31 +170,6 @@
                         "     */",
                         "    protected $user;",
                         "}",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/packages/fos_oauth_server.yaml": {
-                    "contents": [
-                        "# Read the documentation: https://github.com/FriendsOfSymfony/FOSOAuthServerBundle/blob/master/Resources/doc/index.md#step-5-configure-fosoauthserverbundle",
-                        "fos_oauth_server:",
-                        "    db_driver: orm",
-                        "",
-                        "    client_class: App\\Entity\\Client",
-                        "    access_token_class: App\\Entity\\AccessToken",
-                        "    refresh_token_class: App\\Entity\\RefreshToken",
-                        "    auth_code_class: App\\Entity\\AuthCode",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/routes/fos_oauth_server.yaml": {
-                    "contents": [
-                        "fos_oauth_server_token:",
-                        "    resource: \"@FOSOAuthServerBundle/Resources/config/routing/token.xml\"",
-                        "",
-                        "fos_oauth_server_authorize:",
-                        "    resource: \"@FOSOAuthServerBundle/Resources/config/routing/authorize.xml\"",
                         ""
                     ],
                     "executable": false

@@ -16,26 +16,25 @@
                 }
             },
             "files": {
-                "src/Entity/User/User.php": {
+                "config/packages/nucleos_user.yaml": {
                     "contents": [
-                        "<?php",
+                        "nucleos_user:",
+                        "    firewall_name: main",
                         "",
-                        "declare(strict_types=1);",
+                        "    from_email: '%env(MAIL_SENDER)%'",
                         "",
-                        "namespace App\\Entity\\User;",
+                        "    user_class: 'App\\Entity\\User\\User'",
                         "",
-                        "use Nucleos\\UserBundle\\Model\\User as BaseUser;",
-                        "",
-                        "/**",
-                        " * @phpstan-extends User<\\Nucleos\\UserBundle\\Model\\GroupInterface>",
-                        " */",
-                        "class User extends BaseUser",
-                        "{",
-                        "    public function setId(string $id): void",
-                        "    {",
-                        "        $this->id = $id;",
-                        "    }",
-                        "}",
+                        "    group:",
+                        "        group_class: 'App\\Entity\\User\\Group'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/nucleos_user.yaml": {
+                    "contents": [
+                        "nucleos_user:",
+                        "    resource: \"@NucleosUserBundle/Resources/config/routing/all.xml\"",
                         ""
                     ],
                     "executable": false
@@ -61,25 +60,26 @@
                     ],
                     "executable": false
                 },
-                "config/packages/nucleos_user.yaml": {
+                "src/Entity/User/User.php": {
                     "contents": [
-                        "nucleos_user:",
-                        "    firewall_name: main",
+                        "<?php",
                         "",
-                        "    from_email: '%env(MAIL_SENDER)%'",
+                        "declare(strict_types=1);",
                         "",
-                        "    user_class: 'App\\Entity\\User\\User'",
+                        "namespace App\\Entity\\User;",
                         "",
-                        "    group:",
-                        "        group_class: 'App\\Entity\\User\\Group'",
-                        ""
-                    ],
-                    "executable": false
-                },
-                "config/routes/nucleos_user.yaml": {
-                    "contents": [
-                        "nucleos_user:",
-                        "    resource: \"@NucleosUserBundle/Resources/config/routing/all.xml\"",
+                        "use Nucleos\\UserBundle\\Model\\User as BaseUser;",
+                        "",
+                        "/**",
+                        " * @phpstan-extends User<\\Nucleos\\UserBundle\\Model\\GroupInterface>",
+                        " */",
+                        "class User extends BaseUser",
+                        "{",
+                        "    public function setId(string $id): void",
+                        "    {",
+                        "        $this->id = $id;",
+                        "    }",
+                        "}",
                         ""
                     ],
                     "executable": false

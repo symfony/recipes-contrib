@@ -16,12 +16,6 @@
                 }
             },
             "files": {
-                "src/Entity/.gitignore": {
-                    "contents": [
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/nav.yaml": {
                     "contents": [
                         "# Read the documentation: https://github.com/vincentchalamon/nav-bundle",
@@ -32,6 +26,12 @@
                         "        App:",
                         "            path: '%kernel.project_dir%/src/Entity'",
                         "            namespace: 'App/Entity'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/.gitignore": {
+                    "contents": [
                         ""
                     ],
                     "executable": false

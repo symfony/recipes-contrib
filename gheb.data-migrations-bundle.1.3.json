@@ -13,12 +13,6 @@
                 }
             },
             "files": {
-                "src/DataMigrations/.gitignore": {
-                    "contents": [
-                        ""
-                    ],
-                    "executable": false
-                },
                 "config/packages/data_migrations.yaml": {
                     "contents": [
                         "data_migrations:",
@@ -27,6 +21,12 @@
                         "    # as migrations classes should NOT be autoloaded",
                         "    namespace: DataMigrations",
                         "    name: My app migrations",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/DataMigrations/.gitignore": {
+                    "contents": [
                         ""
                     ],
                     "executable": false
