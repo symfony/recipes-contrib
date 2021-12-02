@@ -1,0 +1,8 @@
+{
+    "copy-from-package": {
+        "bin/install": "%BIN_DIR%/install",
+        "bin/start": "%BIN_DIR%/start",
+        "bin/stop": "%BIN_DIR%/stop",
+        "bin/makebackup": "%BIN_DIR%/makebackup",
+    }
+}
