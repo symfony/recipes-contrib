@@ -18,7 +18,7 @@ services:
     Datana\Datapool\Api\FakeAktenzeichenApi: null
 
     Datana\Datapool\Api\ChatProtocolApi: null
-    Datana\Datapool\Api\NullChatProtocolApi: null  
+    Datana\Datapool\Api\NullChatProtocolApi: null
 
 when@prod:
     services:
