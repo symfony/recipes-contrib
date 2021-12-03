@@ -34,7 +34,7 @@
                         "    Datana\\Datapool\\Api\\FakeAktenzeichenApi: null",
                         "",
                         "    Datana\\Datapool\\Api\\ChatProtocolApi: null",
-                        "    Datana\\Datapool\\Api\\NullChatProtocolApi: null  ",
+                        "    Datana\\Datapool\\Api\\NullChatProtocolApi: null",
                         "",
                         "when@prod:",
                         "    services:",
@@ -58,7 +58,7 @@
                     "executable": false
                 }
             },
-            "ref": "e52253476e8bda671cfffba4edf64912c416efd1"
+            "ref": "ff41ed1f9d3959c395b3ebc267d5824f99c674d8"
         }
     }
 }
