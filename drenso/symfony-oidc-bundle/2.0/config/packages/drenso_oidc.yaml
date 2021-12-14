@@ -8,7 +8,7 @@ drenso_oidc:
             client_secret: '%env(OIDC_CLIENT_SECRET)%'
 
             # Extra configuration options
-            #redirect_route: 'login_check'
+            #redirect_route: '/login_check'
             #custom_client_headers: []
 
         # Add any extra client
