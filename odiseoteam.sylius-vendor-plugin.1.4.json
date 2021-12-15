@@ -1,0 +1,46 @@
+{
+    "manifests": {
+        "odiseoteam/sylius-vendor-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Odiseo\\SyliusVendorPlugin\\OdiseoSyliusVendorPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/odiseo_sylius_vendor_plugin.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@OdiseoSyliusVendorPlugin/Resources/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/odiseo_sylius_vendor_plugin.yaml": {
+                    "contents": [
+                        "odiseo_sylius_vendor_plugin_admin:",
+                        "    resource: \"@OdiseoSyliusVendorPlugin/Resources/config/routing/admin.yaml\"",
+                        "    prefix: /admin",
+                        "",
+                        "odiseo_sylius_vendor_plugin_shop:",
+                        "    resource: \"@OdiseoSyliusVendorPlugin/Resources/config/routing/shop.yaml\"",
+                        "    prefix: /{_locale}/vendors",
+                        "    requirements:",
+                        "        _locale: ^[A-Za-z]{2,4}(_([A-Za-z]{4}|[0-9]{3}))?(_([A-Za-z]{2}|[0-9]{3}))?$",
+                        "",
+                        "odiseo_sylius_vendor_plugin_api:",
+                        "    resource: \"@OdiseoSyliusVendorPlugin/Resources/config/routing/api.yaml\"",
+                        "    prefix: /api",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a98934d34d6948fdc66c25c873d3513fe5eaa524"
+        }
+    }
+}

@@ -1013,7 +1013,9 @@
             "1.0"
         ],
         "odiseoteam/sylius-vendor-plugin": [
-            "1.2"
+            "1.2",
+            "1.4",
+            "1.6"
         ],
         "odolbeau/phone-number-bundle": [
             "3.0"
