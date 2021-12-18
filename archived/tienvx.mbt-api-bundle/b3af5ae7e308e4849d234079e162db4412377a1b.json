@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "tienvx/mbt-api-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Tienvx\\Bundle\\MbtApiBundle\\TienvxMbtApiBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "JAVA_BINARY": "java",
+                    "PLANTUML_BINARY": "plantuml.jar",
+                    "CONSOLE_BINARY": "bin/console"
+                }
+            },
+            "files": {
+                "config/packages/tienvx_mbt_api.yaml": {
+                    "contents": [
+                        "tienvx_mbt_api:",
+                        "    java_binary: '%env(JAVA_BINARY)%'",
+                        "    plantuml_binary: '%env(PLANTUML_BINARY)%'",
+                        "    console_binary: '%env(CONSOLE_BINARY)%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/tienvx_mbt_api.yaml": {
+                    "contents": [
+                        "tienvx_mbt_api:",
+                        "    resource: '@TienvxMbtApiBundle/Resources/config/routing.xml'",
+                        "    prefix: '/mbt-api'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b3af5ae7e308e4849d234079e162db4412377a1b"
+        }
+    }
+}

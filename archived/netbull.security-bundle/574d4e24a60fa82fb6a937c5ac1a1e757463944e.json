@@ -1,0 +1,19 @@
+{
+    "manifests": {
+        "netbull/security-bundle": {
+            "manifest": {
+                "bundles": {
+                    "NetBull\\SecurityBundle\\NetBullSecurityBundle": [
+                        "all"
+                    ]
+                },
+                "composer-scripts": {
+                    "vendor/bin/browscap-php browscap:fetch": "php-script",
+                    "vendor/bin/browscap-php browscap:convert": "php-script"
+                }
+            },
+            "files": [],
+            "ref": "574d4e24a60fa82fb6a937c5ac1a1e757463944e"
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "core23/facebook-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Core23\\FacebookBundle\\Core23FacebookBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "FACEBOOK_API_ID": "",
+                    "FACEBOOK_API_SECRET": ""
+                }
+            },
+            "files": {
+                "config/packages/core23_facebook.yaml": {
+                    "contents": [
+                        "core23_facebook:",
+                        "    api:",
+                        "        app_id:      '%env(FACEBOOK_API_ID)%'",
+                        "        app_secret:  '%env(FACEBOOK_API_SECRET)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0e959d3befb5588bb8c2053b94c7affbff5c75c4"
+        }
+    }
+}

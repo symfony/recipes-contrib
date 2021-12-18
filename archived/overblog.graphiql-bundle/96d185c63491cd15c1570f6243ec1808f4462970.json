@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "overblog/graphiql-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Overblog\\GraphiQLBundle\\OverblogGraphiQLBundle": [
+                        "dev"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "    1. Browse to <comment>/graphiql</>"
+                ]
+            },
+            "files": {
+                "config/routes/dev/graphiql.yaml": {
+                    "contents": [
+                        "overblog_graphiql:",
+                        "    resource: \"@OverblogGraphiQLBundle/Resources/config/routing.xml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "96d185c63491cd15c1570f6243ec1808f4462970"
+        }
+    }
+}

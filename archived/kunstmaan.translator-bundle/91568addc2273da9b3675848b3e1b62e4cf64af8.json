@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "kunstmaan/translator-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Kunstmaan\\TranslatorBundle\\KunstmaanTranslatorBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/kunstmaan_translator.yaml": {
+                    "contents": [
+                        "kunstmaan_translator:",
+                        "    enabled: true",
+                        "    # Add your preferred locales here",
+                        "    managed_locales: ['nl', 'en', 'de', 'fr']",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/kunstmaan_translator.yaml": {
+                    "contents": [
+                        "KunstmaanTranslatorBundle:",
+                        "    resource: \"@KunstmaanTranslatorBundle/Resources/config/routing.yml\"",
+                        "    # If your site is not multi language, remove the \"{_locale}/\" part of prefix and requirements",
+                        "    prefix:   /{_locale}/",
+                        "    requirements:",
+                        "        _locale: \"%kunstmaan_admin.required_locales%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "91568addc2273da9b3675848b3e1b62e4cf64af8"
+        }
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "lepiaf/sapient-bundle": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "bundles": {
+                    "lepiaf\\SapientBundle\\SapientBundle": [
+                        "all"
+                    ]
+                },
+                "post-install-output": [
+                    "  * Bundle is installed but it require a configuration.",
+                    "    Run command <fg=green>bin/console sapient:configure</>.",
+                    "    Then, copy output of command and paste it in <fg=green>config/packages/sapient.yaml</>",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>http://sapient-bundle.readthedocs.io/en/latest/</>"
+                ]
+            },
+            "files": {
+                "config/packages/sapient.yaml": {
+                    "contents": [
+                        "sapient:",
+                        "    # By default, bundle does nothing without initial configuration.",
+                        "    # Run command sapient:configure to get initial configuration.",
+                        "    # See http://sapient-bundle.readthedocs.io/en/latest/installation.html",
+                        "    guzzle_middleware:",
+                        "        unseal: false",
+                        "        verify: false",
+                        "    sealing_public_keys: null",
+                        "    verifying_public_keys: null",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "37101293e516acdf806bf0684e4b9316af9c5d26"
+        }
+    }
+}

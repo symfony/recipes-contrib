@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "ro0nl/http-responder": {
+            "manifest": {
+                "bundles": {
+                    "ro0NL\\HttpResponder\\Bundle\\HttpResponderBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "a7aeed3f58fbf7587a6a152d3a1a4d9d52f0fa39"
+        }
+    }
+}

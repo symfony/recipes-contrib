@@ -1,0 +1,76 @@
+{
+    "manifests": {
+        "liip/imagine-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Liip\\ImagineBundle\\LiipImagineBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  <bg=blue;fg=white>         Getting started using </><bg=blue;fg=white;options=bold>liip/imagine-bundle</><bg=blue;fg=white>          </>",
+                    "",
+                    "  <fg=blue;options=bold>Configure</> <fg=blue>your transformations:</>",
+                    "    1. You <options=bold>MUST</> verify and uncomment the configuration in <comment>%CONFIG_DIR%/packages/imagine.yaml</>.",
+                    "    2. You <options=bold>MAY</> configure your image transformation library (<comment>gmagick</>, <comment>imagick</>, or <comment>gd</> [default]).",
+                    "    3. You <options=bold>MAY</> define custom transformation definitions under the <comment>filter_sets</> option."
+                ]
+            },
+            "files": {
+                "config/packages/liip_imagine.yaml": {
+                    "contents": [
+                        "#liip_imagine:",
+                        "#    # valid drivers options include \"gd\" or \"gmagick\" or \"imagick\"",
+                        "#    driver: \"gd\"",
+                        "#",
+                        "#    # define your filter sets under this option",
+                        "#    filter_sets:",
+                        "#",
+                        "#        # an example thumbnail transformation definition",
+                        "#        # https://symfony.com/doc/current/bundles/LiipImagineBundle/basic-usage.html#create-thumbnails",
+                        "#        squared_thumbnail:",
+                        "#",
+                        "#            # set your image quality defaults",
+                        "#            jpeg_quality:          85",
+                        "#            png_compression_level: 8",
+                        "#",
+                        "#            # setup the filter steps to apply for this transformation",
+                        "#            filters:",
+                        "#",
+                        "#                # auto rotate the image using EXIF metadata",
+                        "#                auto_rotate: ~",
+                        "#",
+                        "#                # strip the image of all metadata",
+                        "#                strip: ~",
+                        "#",
+                        "#                # scale and square the image to the given dimensions",
+                        "#                thumbnail:",
+                        "#                    size:          [253, 253]",
+                        "#                    mode:          outbound",
+                        "#                    allow_upscale: true",
+                        "#",
+                        "#                # create border by placing image on larger black background",
+                        "#                background:",
+                        "#                    size:     [256, 256]",
+                        "#                    position: center",
+                        "#                    color:    '#fff'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/liip_imagine.yaml": {
+                    "contents": [
+                        "_liip_imagine:",
+                        "    resource: \"@LiipImagineBundle/Resources/config/routing.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7f6676627c1ceeeee204553d24a0545d5f918b7b"
+        }
+    }
+}

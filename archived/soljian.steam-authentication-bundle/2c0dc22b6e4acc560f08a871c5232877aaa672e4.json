@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "soljian/steam-authentication-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Soljian\\SteamAuthenticationBundle\\SoljianSteamAuthenticationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "STEAM_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/soljian_steam_authentication.yaml": {
+                    "contents": [
+                        "soljian_steam_authentication:",
+                        "    api_key: \"%env(STEAM_API_KEY)%\"",
+                        "    login_route: ''",
+                        "    login_redirect: ''",
+                        "    user_class: ''",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2c0dc22b6e4acc560f08a871c5232877aaa672e4"
+        }
+    }
+}

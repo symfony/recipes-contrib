@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "lireincore/imgcache-bundle": {
+            "manifest": {
+                "bundles": {
+                    "LireinCore\\ImgCacheBundle\\LireinCoreImgCacheBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/lireincore_imgcache.yaml": {
+                    "contents": [
+                        "lireincore_imgcache:",
+                        "    driver: gd",
+                        "    destdir: '%kernel.project_dir%/public/thumbs'",
+                        "    webdir: '%kernel.project_dir%/public'",
+                        ""
+                    ],
+                    "executable": true
+                }
+            },
+            "ref": "6f25f3b1a002e26a1050c4d394bdf5c3275845e4"
+        }
+    }
+}

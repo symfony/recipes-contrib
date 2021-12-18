@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "imper86/supervisor-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Imper86\\SupervisorBundle\\Imper86SupervisorBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                               </>",
+                    "<bg=blue;fg=white> Supervisor bundle - next steps</>",
+                    "<bg=blue;fg=white>                               </>",
+                    "",
+                    "  * <fg=blue>Configure</> instances in <comment>imper86_supervisor.yaml</> in your <comment>config/packages</> directory",
+                    "  * <fg=blue>Create supervisor config</> with command <comment>./bin/console i86:supervisor:rebuild</>"
+                ]
+            },
+            "files": {
+                "config/packages/imper86_supervisor.yaml": {
+                    "contents": [
+                        "imper86_supervisor:",
+                        "    instances: []",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "02ec9b2a4bb597d0ab1050fcd6ba497ae906d3bc"
+        }
+    }
+}

@@ -1,0 +1,70 @@
+{
+    "manifests": {
+        "mediamonks/sonata-media-bundle": {
+            "manifest": {
+                "bundles": {
+                    "MediaMonks\\SonataMediaBundle\\MediaMonksSonataMediaBundle": [
+                        "all"
+                    ]
+                },
+                "env": {
+                    "MEDIA_REDIRECT_URL": "https://media-redirect-url/"
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Finish the media configuration</>:",
+                    "    1. Configure the flysystem filesystems for private and public file storage",
+                    "    2. Modify your MEDIA_REDIRECT_URL config in .env, a reverse proxy or CDN is highly recommended"
+                ]
+            },
+            "files": {
+                "config/packages/mediamonks_sonata_media.yaml": {
+                    "contents": [
+                        "mediamonks_sonata_media:",
+                        "    filesystem_private: 'oneup_flysystem.default_filesystem_filesystem'",
+                        "    filesystem_public: 'oneup_flysystem.default_filesystem_filesystem'",
+                        "    redirect_url: '%env(MEDIA_REDIRECT_URL)%'",
+                        "    model_class: App\\Entity\\Media",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/mediamonks_sonata_media.yaml": {
+                    "contents": [
+                        "mediamonks_sonata_media_admin:",
+                        "    resource: \"@MediaMonksSonataMediaBundle/Resources/config/routing_admin.yml\"",
+                        "",
+                        "mediamonks_sonata_media:",
+                        "    resource: \"@MediaMonksSonataMediaBundle/Resources/config/routing.yml\"",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/Media.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "use MediaMonks\\SonataMediaBundle\\Entity\\Media as BaseMedia;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity(repositoryClass=\"MediaMonks\\SonataMediaBundle\\Repository\\MediaRepository\")",
+                        " * @ORM\\Table",
+                        " */",
+                        "class Media extends BaseMedia",
+                        "{",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "4b7d6c885c1ee9912186a9c65f3e439114135add"
+        }
+    }
+}

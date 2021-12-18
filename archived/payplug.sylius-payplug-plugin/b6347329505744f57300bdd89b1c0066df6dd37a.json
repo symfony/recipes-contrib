@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "payplug/sylius-payplug-plugin": {
+            "manifest": {
+                "bundles": {
+                    "PayPlug\\SyliusPayPlugPlugin\\PayPlugSyliusPayPlugPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sylius_payplug.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@PayPlugSyliusPayPlugPlugin/Resources/config/config.yml\" }",
+                        "    - { resource: \"@PayPlugSyliusPayPlugPlugin/Resources/config/services.xml\" }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b6347329505744f57300bdd89b1c0066df6dd37a"
+        }
+    }
+}

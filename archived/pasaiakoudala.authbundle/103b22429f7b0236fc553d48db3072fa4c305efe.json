@@ -1,0 +1,86 @@
+{
+    "manifests": {
+        "pasaiakoudala/authbundle": {
+            "manifest": {
+                "bundles": {
+                    "PasaiakoUdala\\AuthBundle\\PasaiakoUdalaAuthBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "LDAP_IP": "XXX.XXX.XXX.XXX",
+                    "LDAP_BASE_DN": "DC=DOMAIN,DC=net",
+                    "LDAP_SEARCH_DN": "CN=LDAPUSER,CN=Users,DC=pasaia,DC=net",
+                    "LDAP_PASSWD": "LDAP_PASSWD"
+                },
+                "post-install-output": [
+                    "* eguneratu datu basea, erabiltzailearen taula sortzeko",
+                    "php bin/console",
+                    "",
+                    "* moldatu security.yaml fitxategia",
+                    "rm config/package/security.yaml",
+                    "mv config/package/security.yaml.dist config/package/security.yaml"
+                ]
+            },
+            "files": {
+                "config/packages/pasaiako_udala_auth.yaml": {
+                    "contents": [
+                        "pasaiako_udala_auth:",
+                        "    route_after_successfull_login: \"default\"",
+                        "    LDAP_ADMIN_TALDEAK: \"Rol-taldea1, Rol-taldea2\"",
+                        "    LDAP_KUDEATU_TALDEAK: \"Rol-taldea1, Rol-taldea2\"",
+                        "    LDAP_USER_TALDEA: \"Rol-taldea1, Rol-taldea2\"",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/security.yaml.dist": {
+                    "contents": [
+                        "security:",
+                        "  enable_authenticator_manager: true",
+                        "  password_hashers:",
+                        "    PasaiakoUdala\\AuthBundle\\Entity\\User:",
+                        "      algorithm: auto",
+                        "",
+                        "  providers:",
+                        "    database_users:",
+                        "      entity: { class: PasaiakoUdala\\AuthBundle\\Entity\\User, property: username }",
+                        "",
+                        "  firewalls:",
+                        "    dev:",
+                        "      pattern: ^/(_(profiler|wdt)|css|images|js)/",
+                        "      security: false",
+                        "    main:",
+                        "      #            pattern: ^/",
+                        "      lazy: true",
+                        "      provider: database_users",
+                        "      custom_authenticator: paud.form.auth",
+                        "      logout:",
+                        "        path: pasaiakoudala_auth_logout",
+                        "  #                target: default",
+                        "",
+                        "",
+                        "  access_control:",
+                        "    #        - { path: ^/login, roles: PUBLIC_ACCESS }",
+                        "    - { path: ^/admin, roles: ROLE_ADMIN }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/pasaiako_udala_auth.yaml": {
+                    "contents": [
+                        "pasaiako_udala_auth:",
+                        "    resource: '@PasaiakoUdalaAuthBundle/Resources/config/routes.xml'",
+                        "    prefix: /",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "103b22429f7b0236fc553d48db3072fa4c305efe"
+        }
+    }
+}

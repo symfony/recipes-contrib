@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "sprintechnology/firebase-cloud-messaging": {
+            "manifest": {
+                "bundles": {
+                    "Firebase\\Bundle\\CloudMessagingBundle\\CloudMessagingBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%"
+                },
+                "env": {
+                    "FCM_KEY": "@@get-key-from-firebase"
+                }
+            },
+            "files": {
+                "config/packages/firebase.yaml": {
+                    "contents": [
+                        "firebase:",
+                        "    cloud_messaging:",
+                        "        key: \"%env(FCM_KEY)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d1907839db60bec20ef48d22a319c40fedc98d60"
+        }
+    }
+}

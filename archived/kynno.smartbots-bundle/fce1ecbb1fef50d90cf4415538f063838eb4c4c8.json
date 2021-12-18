@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "kynno/smartbots-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Kynno\\SmartBotsBundle\\SmartBotsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "BOT_KYNNO_SECRET": "pwd",
+                    "SMARTBOTS_API_KEY": "default_api_key"
+                }
+            },
+            "files": {
+                "config/packages/smartbots.yaml": {
+                    "contents": [
+                        "kynno_smartbots:",
+                        "    api_key: \"%env(SMARTBOTS_API_KEY)%\"",
+                        "    bots:",
+                        "        Kynno:",
+                        "            name: \"KynnoSystem Resident\"",
+                        "            botSecret: \"%env(BOT_KYNNO_SECRET)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "fce1ecbb1fef50d90cf4415538f063838eb4c4c8"
+        }
+    }
+}

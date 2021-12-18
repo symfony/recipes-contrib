@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "leapt/im-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Leapt\\ImBundle\\LeaptImBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "gitignore": [
+                    "/public/cache/"
+                ]
+            },
+            "files": {
+                "config/packages/leapt_im.yaml": {
+                    "contents": [
+                        "# Read the documentation: https://github.com/leapt/im-bundle/blob/master/docs/configuration.rst",
+                        "leapt_im:",
+                        "    cache_path: cache/im",
+                        "    formats:",
+                        "        # Resize to fit in 100x100, only if bigger, and remove all crap (meta-data, ...)",
+                        "        medium:",
+                        "            thumbnail: 100x100>",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/leapt_im.yaml": {
+                    "contents": [
+                        "leapt_im:",
+                        "    resource: '@LeaptImBundle/Resources/config/routing.yml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "feeab1653fecfa06354b38a7ba89ef30753fb7a2"
+        }
+    }
+}

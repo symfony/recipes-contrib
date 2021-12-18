@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "ywh/doctrine-encryption-bundle": {
+            "manifest": {
+                "bundles": {
+                    "YWH\\DoctrineEncryptionBundle\\YWHDoctrineEncryptionBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Generate a password. You can use the following command: openssl rand -base64 32",
+                    "#2": "Generate a key using generate-defuse-key script: vendor/bin/generate-defuse-key",
+                    "ENCRYPTION_PASSWORD": "password",
+                    "ENCRYPTION_KEY": "defuse-key"
+                }
+            },
+            "files": {
+                "config/packages/ywh_doctrine_encryption.yaml": {
+                    "contents": [
+                        "ywh_doctrine_encryption:",
+                        "    password: '%env(ENCRYPTION_PASSWORD)%'",
+                        "    key: '%env(ENCRYPTION_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3c129c9082068df1aa207304589e504152afaea4"
+        }
+    }
+}

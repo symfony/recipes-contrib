@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "coka/rest-request-validator-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Oka\\RESTRequestValidatorBundle\\OkaRESTRequestValidatorBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/oka_rest_request_validator.yaml": {
+                    "contents": [
+                        "oka_rest_request_validator:",
+                        "    exception:",
+                        "        enabled: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "42ae8a552909a4048bd94ea39d245c0b677c97db"
+        }
+    }
+}

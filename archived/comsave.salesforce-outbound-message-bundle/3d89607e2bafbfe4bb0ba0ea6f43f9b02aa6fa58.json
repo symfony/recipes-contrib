@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "comsave/salesforce-outbound-message-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Comsave\\SalesforceOutboundMessageBundle\\ComsaveSalesforceOutboundMessageBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * Navigate to config/packages/comsave_outbound_message.yaml and change the values to your desired paths.",
+                    "  * For more information you can find the read me file at https://github.com/comsave/salesforce-outbound-message-bundle"
+                ]
+            },
+            "files": {
+                "config/comsave_outbound_message.yaml": {
+                    "contents": [
+                        "comsave_salesforce_outbound_message:",
+                        "    wsdl_directory: 'src/Company/Resources/wsdl'",
+                        "    document_paths:",
+                        "        Account:",
+                        "            path: 'src/Company/Document/Account'",
+                        "        Product2:",
+                        "            path: 'src/Company/Document/Product2'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3d89607e2bafbfe4bb0ba0ea6f43f9b02aa6fa58"
+        }
+    }
+}

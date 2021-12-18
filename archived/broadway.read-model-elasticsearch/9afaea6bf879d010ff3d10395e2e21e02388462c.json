@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "broadway/read-model-elasticsearch": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "container": {
+                    "elasticsearch": "~"
+                }
+            },
+            "files": {
+                "config/packages/broadway_read_model_elasticsearch.yaml": {
+                    "contents": [
+                        "broadway:",
+                        "    read_model: broadway.read_model.elasticsearch.repository_factory",
+                        "",
+                        "services:",
+                        "    broadway.elasticsearch.client_factory:",
+                        "        class: Broadway\\ReadModel\\ElasticSearch\\ElasticSearchClientFactory",
+                        "",
+                        "    broadway.read_model.elasticsearch.repository_factory:",
+                        "        class: Broadway\\ReadModel\\ElasticSearch\\ElasticSearchRepositoryFactory",
+                        "        arguments:",
+                        "            - \"@broadway.elasticsearch.client\"",
+                        "            - \"@broadway.serializer.readmodel\"",
+                        "",
+                        "    broadway.elasticsearch.client:",
+                        "        class: Elasticsearch\\Client",
+                        "        factory: ['@broadway.elasticsearch.client_factory', create]",
+                        "        arguments:",
+                        "            - \"%elasticsearch%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9afaea6bf879d010ff3d10395e2e21e02388462c"
+        }
+    }
+}

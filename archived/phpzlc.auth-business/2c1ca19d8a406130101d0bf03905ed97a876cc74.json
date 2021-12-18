@@ -1,0 +1,16 @@
+{
+    "manifests": {
+        "phpzlc/auth-business": {
+            "manifest": {
+                "copy-from-package": {
+                    "Business/": "src/Business/",
+                    "Entity/": "src/Entity/",
+                    "Repository/": "src/Repository/",
+                    "phpzlc-auth-business.yaml": "config/packages/phpzlc-auth-business.yaml"
+                }
+            },
+            "files": [],
+            "ref": "2c1ca19d8a406130101d0bf03905ed97a876cc74"
+        }
+    }
+}

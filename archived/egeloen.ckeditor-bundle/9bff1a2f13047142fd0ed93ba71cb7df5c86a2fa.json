@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "egeloen/ckeditor-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Ivory\\CKEditorBundle\\IvoryCKEditorBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ivory_ck_editor.yaml": {
+                    "contents": [
+                        "ivory_ck_editor:",
+                        "    default_config: simple_toolbar",
+                        "    configs:",
+                        "        simple_toolbar:",
+                        "            toolbar:",
+                        "                - ['Bold', 'Italic', 'Strike', 'Link']",
+                        "                - ['BulletedList', 'NumberedList', '-', 'Outdent', 'Indent']",
+                        "                - ['Copy', 'Paste', 'PasteFromWord', '-', 'Undo', 'Redo']",
+                        "                - ['Source']",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9bff1a2f13047142fd0ed93ba71cb7df5c86a2fa"
+        }
+    }
+}

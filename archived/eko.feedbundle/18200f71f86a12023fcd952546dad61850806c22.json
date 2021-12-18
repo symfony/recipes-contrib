@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "eko/feedbundle": {
+            "manifest": {
+                "bundles": {
+                    "Eko\\FeedBundle\\EkoFeedBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/eko_feed.yaml": {
+                    "contents": [
+                        "# Full configuration: https://github.com/eko/FeedBundle",
+                        "eko_feed:",
+                        "    feeds:",
+                        "        article:",
+                        "            title:       'My articles/posts'",
+                        "            description: 'Latest articles'",
+                        "            link:        'http://vincent.composieux.fr'",
+                        "            encoding:    'utf-8'",
+                        "            author:      'Vincent Composieux' # Only required for Atom feeds",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "18200f71f86a12023fcd952546dad61850806c22"
+        }
+    }
+}

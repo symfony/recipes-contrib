@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "adback/adback-sdk-php-symfony": {
+            "manifest": {
+                "bundles": {
+                    "Adback\\ApiClientBundle\\AdbackApiClientBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "ADBACK_API_CLIENT_ACCESS_TOKEN": "adback-access-token"
+                }
+            },
+            "files": {
+                "config/packages/adback_sdk_php.yaml": {
+                    "contents": [
+                        "adback_api_client:",
+                        "    access_token: \"%env(ADBACK_API_CLIENT_ACCESS_TOKEN)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e654c55d2ccb2061d42e6c31c6a7799ca4526fd1"
+        }
+    }
+}

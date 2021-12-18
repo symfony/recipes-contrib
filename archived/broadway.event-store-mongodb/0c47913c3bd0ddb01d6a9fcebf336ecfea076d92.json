@@ -1,0 +1,44 @@
+{
+    "manifests": {
+        "broadway/event-store-mongodb": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "container": {
+                    "mongodb_uri": "%env(BROADWAY_EVENT_STORE_MONGODB_URI)%",
+                    "mongodb_database": "%env(BROADWAY_EVENT_STORE_MONGODB_DATABASE)%"
+                },
+                "env": {
+                    "BROADWAY_EVENT_STORE_MONGODB_URI": "mongodb://127.0.0.1/",
+                    "BROADWAY_EVENT_STORE_MONGODB_DATABASE": "default"
+                }
+            },
+            "files": {
+                "config/packages/broadway_event_store_mongodb.yaml": {
+                    "contents": [
+                        "broadway:",
+                        "    event_store: broadway.event_store.mongodb",
+                        "",
+                        "services:",
+                        "    broadway.event_store.mongodb_client:",
+                        "        class: MongoDB\\Client",
+                        "        arguments: ['%mongodb_uri%']",
+                        "",
+                        "    broadway.event_store.mongodb_collection:",
+                        "        class: MongoDB\\Collection",
+                        "        factory: ['@broadway.event_store.mongodb_client', selectCollection]",
+                        "        arguments: ['%mongodb_database%', 'events']",
+                        "",
+                        "    broadway.event_store.mongodb:",
+                        "        class: Broadway\\EventStore\\MongoDB\\MongoDBEventStore",
+                        "        arguments: ['@broadway.event_store.mongodb_collection', '@broadway.serializer.payload', '@broadway.serializer.metadata']",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0c47913c3bd0ddb01d6a9fcebf336ecfea076d92"
+        }
+    }
+}

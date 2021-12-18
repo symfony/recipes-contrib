@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "happyr/json-api-response-factory": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/happyr_json_api_response_factory.yaml": {
+                    "contents": [
+                        "services:",
+                        "    Happyr\\JsonApiResponseFactory\\ResponseFactory:",
+                        "        arguments: ['@happyr.fractal.manager']",
+                        "",
+                        "    happyr.fractal.manager:",
+                        "        class: League\\Fractal\\Manager",
+                        "        calls:",
+                        "            - [setSerializer, ['@happyr.fractal.json_api_serializer']]",
+                        "",
+                        "    happyr.fractal.json_api_serializer:",
+                        "        class: League\\Fractal\\Serializer\\JsonApiSerializer",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "161c8ce1d569658a9c720b55ada18de46561b29f"
+        }
+    }
+}

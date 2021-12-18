@@ -1,0 +1,40 @@
+{
+    "manifests": {
+        "monsieurbiz/sylius-cms-page-plugin": {
+            "manifest": {
+                "bundles": {
+                    "MonsieurBiz\\SyliusCmsPagePlugin\\MonsieurBizSyliusCmsPagePlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/monsieurbiz_sylius_cms_page_plugin.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@MonsieurBizSyliusCmsPagePlugin/Resources/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/monsieurbiz_sylius_cms_page_plugin.yaml": {
+                    "contents": [
+                        "monsieurbiz_cms_page_admin:",
+                        "    resource: \"@MonsieurBizSyliusCmsPagePlugin/Resources/config/routing/admin.yaml\"",
+                        "    prefix: /%sylius_admin.path_name%",
+                        "",
+                        "monsieurbiz_cms_page_shop:",
+                        "    resource: \"@MonsieurBizSyliusCmsPagePlugin/Resources/config/routing/shop.yaml\"",
+                        "    prefix: /{_locale}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e01b794cd3e5223081fb548c75114c1e77e07f34"
+        }
+    }
+}

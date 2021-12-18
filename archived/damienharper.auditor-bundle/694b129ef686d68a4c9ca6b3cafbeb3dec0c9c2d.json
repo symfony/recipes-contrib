@@ -1,0 +1,42 @@
+{
+    "manifests": {
+        "damienharper/auditor-bundle": {
+            "manifest": {
+                "bundles": {
+                    "DH\\AuditorBundle\\DHAuditorBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/dh_auditor.yaml": {
+                    "contents": [
+                        "# Full configuration reference available at:",
+                        "# https://damienharper.github.io/auditor-docs/docs/auditor-bundle/configuration/reference.html",
+                        "dh_auditor:",
+                        "    enabled: true",
+                        "    providers:",
+                        "        doctrine:",
+                        "            table_prefix: null",
+                        "            table_suffix: '_audit'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/dh_auditor.yaml": {
+                    "contents": [
+                        "dh_auditor:",
+                        "    resource: \"@DHAuditorBundle/Controller/\"",
+                        "    type: auditor",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "694b129ef686d68a4c9ca6b3cafbeb3dec0c9c2d"
+        }
+    }
+}

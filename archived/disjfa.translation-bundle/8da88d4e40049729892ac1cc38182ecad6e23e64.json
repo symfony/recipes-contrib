@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "disjfa/translation-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Disjfa\\TranslationBundle\\DisjfaTranslationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/disjfa_translation.yaml": {
+                    "contents": [
+                        "disjfa_translation:",
+                        "    resource: '@DisjfaTranslationBundle/Controller/'",
+                        "    type:     annotation",
+                        "    prefix:   /admin",
+                        ""
+                    ],
+                    "executable": true
+                }
+            },
+            "ref": "8da88d4e40049729892ac1cc38182ecad6e23e64"
+        }
+    }
+}

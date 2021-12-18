@@ -1,0 +1,16 @@
+{
+    "manifests": {
+        "phpzlc/rbac-business": {
+            "manifest": {
+                "copy-from-package": {
+                    "Business/": "src/Business/",
+                    "DataFixtures/": "src/DataFixtures/",
+                    "Entity/": "src/Entity/",
+                    "Repository/": "src/Repository/"
+                }
+            },
+            "files": [],
+            "ref": "a3c48cf8fbde0884b00fe4b5182d8b8041adf704"
+        }
+    }
+}

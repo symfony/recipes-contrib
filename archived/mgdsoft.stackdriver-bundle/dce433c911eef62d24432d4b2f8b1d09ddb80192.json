@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "mgdsoft/stackdriver-bundle": {
+            "manifest": {
+                "bundles": {
+                    "MGDSoft\\Stackdriver\\MgdsoftStackdriverBundle": [
+                        "prod"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                                       </>",
+                    "<bg=blue;fg=white> MGD Stackdriver installed in PROD ENV </>",
+                    "<bg=blue;fg=white>                                       </>"
+                ]
+            },
+            "files": {
+                "config/packages/prod/mgdsoft_stackdriver.yaml": {
+                    "contents": [
+                        "mgdsoft_stackdriver:",
+                        "    # to test in local",
+                        "    # credentials_json_file: null",
+                        "    level: info",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "dce433c911eef62d24432d4b2f8b1d09ddb80192"
+        }
+    }
+}

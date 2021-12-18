@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "machy8/webloader-bundle": {
+            "manifest": {
+                "bundles": {
+                    "WebLoader\\WebLoaderBundle\\WebLoaderBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "public/": "%PUBLIC_DIR%/"
+                }
+            },
+            "files": {
+                "config/dev/web_loader.yaml": {
+                    "contents": [
+                        "web_loader:",
+                        "    disableCache: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "public/webtemp/.gitignore": {
+                    "contents": [
+                        "*",
+                        "!.gitignore",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "4f42ca5cf53f5ddc613d4ea280ad30839c1750a6"
+        }
+    }
+}

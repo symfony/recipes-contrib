@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "routmoute/routmoute-discord-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Routmoute\\Bundle\\RoutmouteDiscordBundle\\RoutmouteDiscordBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "ROUTMOUTE_DISCORD_CLIENT_ID": "YourDiscordClientId",
+                    "ROUTMOUTE_DISCORD_CLIENT_SECRET": "YourDiscordClientSecret",
+                    "ROUTMOUTE_DISCORD_BOT_TOKEN": "YourDiscordBotToken"
+                }
+            },
+            "files": {
+                "config/packages/routmoute_discord.yaml": {
+                    "contents": [
+                        "routmoute_discord:",
+                        "    oauth:",
+                        "        client_id: '%env(ROUTMOUTE_DISCORD_CLIENT_ID)%'",
+                        "        client_secret: '%env(ROUTMOUTE_DISCORD_CLIENT_SECRET)%'",
+                        "        scope:",
+                        "            - identify",
+                        "            - email",
+                        "    api:",
+                        "        bot_token: '%env(ROUTMOUTE_DISCORD_BOT_TOKEN)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3b437f7cd7cdaac79a2c7b107d0bef8770722de9"
+        }
+    }
+}

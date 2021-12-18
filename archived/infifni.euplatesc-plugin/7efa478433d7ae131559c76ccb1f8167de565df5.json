@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "infifni/euplatesc-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Infifni\\SyliusEuPlatescPlugin\\InfifniSyliusEuPlatescPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/infifni_sylius_euplatesc_plugin.yaml": {
+                    "contents": [
+                        "infifni_sylius_euplatesc_plugin:",
+                        "    resource: \"@InfifniSyliusEuPlatescPlugin/Resources/config/routing.yml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7efa478433d7ae131559c76ccb1f8167de565df5"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "bukashk0zzz/liip-imagine-serialization-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Bukashk0zzz\\LiipImagineSerializationBundle\\Bukashk0zzzLiipImagineSerializationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/bukashk0zzz_liip_imagine_serialization.yaml": {
+                    "contents": [
+                        "bukashk0zzz_liip_imagine_serialization:",
+                        "    # Set true for generating url for vichUploader fields",
+                        "    vichUploaderSerialize: false",
+                        "",
+                        "    # Set true for adding original field value to object",
+                        "    includeOriginal: false",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2e99dff254583c4fec409c7b98a267501fd4e27c"
+        }
+    }
+}

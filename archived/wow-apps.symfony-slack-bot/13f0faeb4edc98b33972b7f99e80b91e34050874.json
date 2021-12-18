@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "wow-apps/symfony-slack-bot": {
+            "manifest": {
+                "bundles": {
+                    "WowApps\\SlackBundle\\WowAppsSlackBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "WOW_APPS_SLACK_BOT_API_URL": ""
+                }
+            },
+            "files": {
+                "config/packages/wow_apps_slack.yaml": {
+                    "contents": [
+                        "# SlackBot Configuration",
+                        "# Documentation https://github.com/wow-apps/symfony-slack-bot/wiki",
+                        "wow_apps_slack:",
+                        "    api_url: '%env(WOW_APPS_SLACK_BOT_API_URL)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "13f0faeb4edc98b33972b7f99e80b91e34050874"
+        }
+    }
+}

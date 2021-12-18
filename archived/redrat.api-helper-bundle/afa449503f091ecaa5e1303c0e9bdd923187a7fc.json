@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "redrat/api-helper-bundle": {
+            "manifest": {
+                "bundles": {
+                    "RedRat\\ApiHelperBundle\\ApiHelperBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/redrat_api_helper.yaml": {
+                    "contents": [
+                        "redrat_api_helper:",
+                        "    paths:",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "afa449503f091ecaa5e1303c0e9bdd923187a7fc"
+        }
+    }
+}

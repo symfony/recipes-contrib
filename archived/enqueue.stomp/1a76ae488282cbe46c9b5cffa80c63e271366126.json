@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "enqueue/stomp": {
+            "manifest": {
+                "env": {
+                    "ENQUEUE_DSN": "stomp:"
+                }
+            },
+            "files": [],
+            "ref": "1a76ae488282cbe46c9b5cffa80c63e271366126"
+        }
+    }
+}

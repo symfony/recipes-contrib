@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "enqueue/rdkafka": {
+            "manifest": {
+                "env": {
+                    "ENQUEUE_DSN": "kafka:"
+                }
+            },
+            "files": [],
+            "ref": "bd8104c0f393f98da53160df5b0cbc6cfa4add2f"
+        }
+    }
+}

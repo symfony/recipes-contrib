@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "oat-sa/bundle-health-check": {
+            "manifest": {
+                "bundles": {
+                    "OAT\\Bundle\\HealthCheckBundle\\HealthCheckBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                                         </>",
+                    "<bg=blue;fg=white> Next: Health check bundle configuration </>",
+                    "<bg=blue;fg=white>                                         </>",
+                    "",
+                    "  * <fg=blue>Configure</> health check and ping routes in file <fg=green>config/routes/health_check.yaml</>",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/oat-sa/bundle-health-check</>"
+                ]
+            },
+            "files": {
+                "config/routes/health_check.yaml": {
+                    "contents": [
+                        "health_check_check:",
+                        "    resource: '@HealthCheckBundle/Resources/config/routing/health_check_check.yaml'",
+                        "",
+                        "health_check_ping:",
+                        "    resource: '@HealthCheckBundle/Resources/config/routing/health_check_ping.yaml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "943305d896cdfaca7a59a6721fc609b95905fedc"
+        }
+    }
+}

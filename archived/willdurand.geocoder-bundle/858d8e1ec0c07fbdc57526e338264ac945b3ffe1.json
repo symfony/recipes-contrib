@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "willdurand/geocoder-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Bazinga\\Bundle\\GeocoderBundle\\BazingaGeocoderBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/dev/bazinga_geocoder.yaml": {
+                    "contents": [
+                        "bazinga_geocoder:",
+                        "    # the IP used as the REMOTE_ADDR for all HTTP requests in \"dev\" environment",
+                        "    # see https://github.com/geocoder-php/BazingaGeocoderBundle/blob/master/Resources/doc/index.md",
+                        "    fake_ip: 123.123.123.123",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "858d8e1ec0c07fbdc57526e338264ac945b3ffe1"
+        }
+    }
+}

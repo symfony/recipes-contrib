@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "wemakecustom/doctrine-naming-strategy-bundle": {
+            "manifest": {
+                "bundles": {
+                    "WMC\\DoctrineNamingStrategyBundle\\WMCDoctrineNamingStrategyBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/wmc_doctrine_naming_strategy.yaml": {
+                    "contents": [
+                        "doctrine:",
+                        "    orm:",
+                        "        naming_strategy: wmc.doctrine.orm.naming_strategy",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5e97222e1e95191ec4a8c6b3642674447d83d3ca"
+        }
+    }
+}

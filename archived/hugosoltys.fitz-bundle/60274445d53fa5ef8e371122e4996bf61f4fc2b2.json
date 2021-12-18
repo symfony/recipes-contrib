@@ -1,0 +1,58 @@
+{
+    "manifests": {
+        "hugosoltys/fitz-bundle": {
+            "manifest": {
+                "bundles": {
+                    "HugoSoltys\\FitzBundle\\FitzBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Choose your bundles</> by visiting <comment>http://localhost/fitz/install</>",
+                    "  * <fg=blue>Install</> them by running <comment>php bin/console fitz:install</>"
+                ]
+            },
+            "files": {
+                "config/packages/dev/hugosoltys_fitz.yaml": {
+                    "contents": [
+                        "fitz:",
+                        "    composer_path: '/usr/local/bin/composer'",
+                        "    queue_file_path: '%kernel.project_dir%/vendor/hugosoltys/fitz-bundle'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/test/hugosoltys_fitz.yaml": {
+                    "contents": [
+                        "fitz:",
+                        "    composer_path: '/usr/local/bin/composer'",
+                        "    queue_file_path: '%kernel.project_dir%/vendor/hugosoltys/fitz-bundle'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/dev/hugosoltys_fitz.yaml": {
+                    "contents": [
+                        "fitz:",
+                        "    resource: \"@FitzBundle/Resources/config/routing.xml\"",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/test/hugosoltys_fitz.yaml": {
+                    "contents": [
+                        "fitz:",
+                        "    resource: \"@FitzBundle/Resources/config/routing.xml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "60274445d53fa5ef8e371122e4996bf61f4fc2b2"
+        }
+    }
+}

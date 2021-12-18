@@ -1,0 +1,80 @@
+{
+    "manifests": {
+        "msgphp/user-bundle": {
+            "manifest": {
+                "bundles": {
+                    "MsgPhp\\UserBundle\\MsgPhpUserBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                       </>",
+                    "<bg=blue;fg=white> User management setup </>",
+                    "<bg=blue;fg=white>                       </>",
+                    "",
+                    "  * Install the Symfony Maker Bundle using <info>composer require maker --dev</>. It's required for the next step.",
+                    "",
+                    "  * Run <info>bin/console make:user</>. It will guide you through the basic setup by asking a series of questions",
+                    "    and generates the minimal application source files needed."
+                ]
+            },
+            "files": {
+                "config/packages/msgphp_user.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "use MsgPhp\\User\\Entity\\User;",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return function (ContainerConfigurator $container) {",
+                        "    $container->extension('msgphp_user', [",
+                        "        'class_mapping' => [",
+                        "            User::class => \\App\\Entity\\User\\User::class,",
+                        "        ],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/User/User.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity\\User;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "use MsgPhp\\User\\Entity\\User as BaseUser;",
+                        "use MsgPhp\\User\\UserIdInterface;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity()",
+                        " */",
+                        "class User extends BaseUser",
+                        "{",
+                        "    /** @ORM\\Id() @ORM\\GeneratedValue() @ORM\\Column(type=\"msgphp_user_id\") */",
+                        "    private $id;",
+                        "",
+                        "    public function __construct(UserIdInterface $id)",
+                        "    {",
+                        "        $this->id = $id;",
+                        "    }",
+                        "",
+                        "    public function getId(): UserIdInterface",
+                        "    {",
+                        "        return $this->id;",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c53ce5be89d7fd33877ea0c742bdeb4df427a06d"
+        }
+    }
+}

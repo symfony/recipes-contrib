@@ -1,0 +1,40 @@
+{
+    "manifests": {
+        "endroid/qrcode-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Endroid\\QrCodeBundle\\EndroidQrCodeBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/endroid_qr_code.yaml": {
+                    "contents": [
+                        "endroid_qr_code:",
+                        "    writer: 'png'",
+                        "    size: 300",
+                        "    margin: 10",
+                        "    error_correction_level: 'low'",
+                        "    validate_result: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/endroid_qr_code.yaml": {
+                    "contents": [
+                        "EndroidQrCodeBundle:",
+                        "    resource: \"@EndroidQrCodeBundle/Resources/config/routes.yaml\"",
+                        "    prefix: /qrcode",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c7d3c39bcc544e84e6ed5249969e7227e7e63b14"
+        }
+    }
+}

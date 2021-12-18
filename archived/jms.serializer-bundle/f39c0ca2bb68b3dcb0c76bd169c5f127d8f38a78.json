@@ -1,0 +1,51 @@
+{
+    "manifests": {
+        "jms/serializer-bundle": {
+            "manifest": {
+                "bundles": {
+                    "JMS\\SerializerBundle\\JMSSerializerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "etc/": "%ETC_DIR%"
+                }
+            },
+            "files": {
+                "etc/packages/dev/jms_serializer.yaml": {
+                    "contents": [
+                        "jms_serializer:",
+                        "    visitors:",
+                        "        json:",
+                        "            options: JSON_PRETTY_PRINT",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "etc/packages/jms_serializer.yaml": {
+                    "contents": [
+                        "jms_serializer:",
+                        "    enable_short_alias: false",
+                        "    handlers:",
+                        "        datetime:",
+                        "            default_format: 'Y-m-d\\TH:i:sP'",
+                        "    visitors:",
+                        "        xml:",
+                        "            format_output: '%kernel.debug%'",
+                        "#    auto_detection: false",
+                        "#    directories:",
+                        "#        any-name:",
+                        "#            namespace_prefix: \"My\\\\FooBundle\"",
+                        "#            path: \"@MyFooBundle/Resources/config/serializer\"",
+                        "#        another-name:",
+                        "#            namespace_prefix: \"My\\\\BarBundle\"",
+                        "#            path: \"@MyBarBundle/Resources/config/serializer\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f39c0ca2bb68b3dcb0c76bd169c5f127d8f38a78"
+        }
+    }
+}

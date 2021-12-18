@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "ravenflux/php-functions": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ravenflux_php_functions.yaml": {
+                    "contents": [
+                        "services:",
+                        "    ravenflux.twig.extension.php_functions:",
+                        "        class: RavenFlux\\Twig\\PhpFunctionsExtension",
+                        "        arguments:",
+                        "            - #first argument are functions",
+                        "                - 'count'",
+                        "            - #second argument are filters",
+                        "                - 'nl2br'",
+                        "        tags:",
+                        "            -",
+                        "                name: twig.extension",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d61d276d2ada16fe5eae449f0b0995851acb47cd"
+        }
+    }
+}

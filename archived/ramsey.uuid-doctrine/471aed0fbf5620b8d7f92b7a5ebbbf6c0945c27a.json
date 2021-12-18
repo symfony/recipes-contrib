@@ -1,0 +1,24 @@
+{
+    "manifests": {
+        "ramsey/uuid-doctrine": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ramsey_uuid_doctrine.yaml": {
+                    "contents": [
+                        "doctrine:",
+                        "    dbal:",
+                        "        types:",
+                        "            uuid: 'Ramsey\\Uuid\\Doctrine\\UuidType'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "471aed0fbf5620b8d7f92b7a5ebbbf6c0945c27a"
+        }
+    }
+}

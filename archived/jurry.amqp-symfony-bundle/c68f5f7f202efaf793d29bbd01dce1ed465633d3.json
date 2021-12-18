@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "jurry/amqp-symfony-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Jurry\\RabbitMQ\\AmqpHandlerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "JURRY_RABBIT_MQ_DSN": "tcp://guest:guest@localhost:5672"
+                }
+            },
+            "files": {
+                "config/packages/jurry_rabbitmq.yaml": {
+                    "contents": [
+                        "amqp_handler:",
+                        "    connection: '%env(JURRY_RABBIT_MQ_DSN)%'",
+                        "    queues_properties:",
+                        "        sync_queue:",
+                        "            name: stores_sync",
+                        "            message_ttl: 10000 # 10 seconds",
+                        "        async_queue:",
+                        "            name: stores_async",
+                        "            message_ttl: 10000 # 10 seconds",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c68f5f7f202efaf793d29bbd01dce1ed465633d3"
+        }
+    }
+}

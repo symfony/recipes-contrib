@@ -1,0 +1,57 @@
+{
+    "manifests": {
+        "nedac/sylius-minimum-order-value-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Nedac\\SyliusMinimumOrderValuePlugin\\NedacSyliusMinimumOrderValuePlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%"
+                },
+                "copy-from-package": {
+                    "src/Resources/views/bundles/": "templates/bundles/"
+                }
+            },
+            "files": {
+                "config/packages/nedac_sylius_minimum_order_value_plugin.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@NedacSyliusMinimumOrderValuePlugin/Resources/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/Channel/Channel.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "namespace App\\Entity\\Channel;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "use Nedac\\SyliusMinimumOrderValuePlugin\\Model\\ChannelInterface as NedacSyliusMinimumOrderValuePluginChannelInterface;",
+                        "use Nedac\\SyliusMinimumOrderValuePlugin\\Model\\MinimumOrderValueTrait as",
+                        "    NedacSyliusMinimumOrderValuePluginMinimumOrderValueTrait;",
+                        "use Sylius\\Component\\Core\\Model\\Channel as BaseChannel;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity",
+                        " * @ORM\\Table(name=\"sylius_channel\")",
+                        " */",
+                        "class Channel extends BaseChannel implements NedacSyliusMinimumOrderValuePluginChannelInterface",
+                        "{",
+                        "    use NedacSyliusMinimumOrderValuePluginMinimumOrderValueTrait;",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "51c9987f3bd93cdcc1d2c8d9bf38bfbde706a63c"
+        }
+    }
+}

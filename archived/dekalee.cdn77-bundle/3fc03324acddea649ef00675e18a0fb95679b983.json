@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "dekalee/cdn77-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dekalee\\Cdn77Bundle\\DekaleeCdn77Bundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "DEKALEE_CDN77_LOGIN": "your-cdn77-login",
+                    "DEKALEE_CDN77_PASSWORD": "@@your-cdn77-password"
+                }
+            },
+            "files": {
+                "config/packages/dekalee_cdn77.yaml": {
+                    "contents": [
+                        "dekalee_cdn77:",
+                        "    login: \"%env(DEKALEE_CDN77_LOGIN)%\"",
+                        "    password: \"%env(DEKALEE_CDN77_PASSWORD)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3fc03324acddea649ef00675e18a0fb95679b983"
+        }
+    }
+}

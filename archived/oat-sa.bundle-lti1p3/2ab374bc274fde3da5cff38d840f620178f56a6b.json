@@ -1,0 +1,90 @@
+{
+    "manifests": {
+        "oat-sa/bundle-lti1p3": {
+            "manifest": {
+                "bundles": {
+                    "OAT\\Bundle\\Lti1p3Bundle\\Lti1p3Bundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "LTI1P3_SERVICE_ENCRYPTION_KEY": "%generate(secret)%"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Create</> development keys as explained at <comment>https://github.com/oat-sa/bundle-lti1p3/blob/master/doc/quickstart/configuration.md#configure-a-keychain</>",
+                    "",
+                    "  * <fg=blue>Configure</> your keys, platform, tools and registrations in file <fg=green>config/packages/lti1p3.yaml</>",
+                    "",
+                    "  * <fg=blue>Configure</> the platform and tools automated routes in file <fg=green>config/routes/lti1p3.yaml</>",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/oat-sa/bundle-lti1p3</>"
+                ]
+            },
+            "files": {
+                "config/packages/lti1p3.yaml": {
+                    "contents": [
+                        "lti1p3:",
+                        "    key_chains:",
+                        "        platformKey:",
+                        "            key_set_name: \"platformSet\"",
+                        "            public_key: \"file://%kernel.project_dir%/config/secrets/dev/public.key\"",
+                        "            private_key: \"file://%kernel.project_dir%/config/secrets/dev/private.key\"",
+                        "            private_key_passphrase: null",
+                        "        toolKey:",
+                        "            key_set_name: \"toolSet\"",
+                        "            public_key: \"file://%kernel.project_dir%/config/secrets/dev/public.key\"",
+                        "            private_key: \"file://%kernel.project_dir%/config/secrets/dev/private.key\"",
+                        "            private_key_passphrase: null",
+                        "    platforms:",
+                        "        localPlatform:",
+                        "            name: \"Local platform\"",
+                        "            audience: \"http://localhost/platform\"",
+                        "            oidc_authentication_url: \"http://localhost/lti1p3/oidc/authentication\"",
+                        "            oauth2_access_token_url: \"http://localhost/lti1p3/auth/platformKey/token\"",
+                        "    tools:",
+                        "        localTool:",
+                        "            name: \"Local tool\"",
+                        "            audience: \"http://localhost/tool\"",
+                        "            oidc_initiation_url: \"http://localhost/lti1p3/oidc/initiation\"",
+                        "            launch_url: null",
+                        "            deep_linking_url: null",
+                        "    registrations:",
+                        "        local:",
+                        "            client_id: \"client_id\"",
+                        "            platform: \"localPlatform\"",
+                        "            tool: \"localTool\"",
+                        "            deployment_ids:",
+                        "                - \"deploymentId1\"",
+                        "            platform_key_chain: \"platformKey\"",
+                        "            tool_key_chain: \"toolKey\"",
+                        "            platform_jwks_url: null",
+                        "            tool_jwks_url: null",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/lti1p3.yaml": {
+                    "contents": [
+                        "lti1p3_jwks:",
+                        "    resource: '@Lti1p3Bundle/Resources/config/routing/jwks.yaml'",
+                        "",
+                        "lti1p3_message_platform:",
+                        "    resource: '@Lti1p3Bundle/Resources/config/routing/message/platform.yaml'",
+                        "",
+                        "lti1p3_message_tool:",
+                        "    resource: '@Lti1p3Bundle/Resources/config/routing/message/tool.yaml'",
+                        "",
+                        "lti1p3_service_platform:",
+                        "    resource: '@Lti1p3Bundle/Resources/config/routing/service/platform.yaml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2ab374bc274fde3da5cff38d840f620178f56a6b"
+        }
+    }
+}

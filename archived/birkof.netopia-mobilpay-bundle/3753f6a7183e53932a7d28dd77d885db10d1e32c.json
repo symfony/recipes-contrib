@@ -1,0 +1,72 @@
+{
+    "manifests": {
+        "birkof/netopia-mobilpay-bundle": {
+            "manifest": {
+                "bundles": {
+                    "birkof\\NetopiaMobilPay\\NetopiaMobilPayBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "gitignore": [
+                    "/%CONFIG_DIR%/netopia_mobilpay/*.key",
+                    "/%CONFIG_DIR%/netopia_mobilpay/*.cer"
+                ],
+                "env": {
+                    "NETOPIA_MOBILPAY_PAYMENT_URL": "http://sandboxsecure.mobilpay.ro",
+                    "NETOPIA_MOBILPAY_PUBLIC_CERT": "%kernel.project_dir%/%CONFIG_DIR%/netopia_mobilpay/public.cer",
+                    "NETOPIA_MOBILPAY_PRIVATE_KEY": "%kernel.project_dir%/%CONFIG_DIR%/netopia_mobilpay/private.key",
+                    "NETOPIA_MOBILPAY_SIGNATURE": "XXXX-XXXX-XXXX-XXXX-XXXX"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/birkof/netopia-mobilpay-bundle</>"
+                ]
+            },
+            "files": {
+                "config/netopia_mobilpay/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/netopia_mobilpay.yaml": {
+                    "contents": [
+                        "netopia_mobilpay:",
+                        "    payment_url:        '%env(NETOPIA_MOBILPAY_PAYMENT_URL)%'",
+                        "    public_cert:        '%env(NETOPIA_MOBILPAY_PUBLIC_CERT)%'",
+                        "    private_key:        '%env(NETOPIA_MOBILPAY_PRIVATE_KEY)%'",
+                        "    signature:          '%env(NETOPIA_MOBILPAY_SIGNATURE)%'",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/netopia_mobilpay.yaml": {
+                    "contents": [
+                        "netopia_mobilpay_return_url:",
+                        "    path: /netopia-mobilpay/thank-you",
+                        "    methods: GET",
+                        "    defaults:",
+                        "        _controller: FrameworkBundle:Redirect:redirect",
+                        "        route: default",
+                        "        permanent: true",
+                        "",
+                        "netopia_mobilpay_confirm_url:",
+                        "    path: /netopia-mobilpay/confirm",
+                        "    methods: POST",
+                        "    defaults:",
+                        "        _controller: FrameworkBundle:Redirect:redirect",
+                        "        route: default",
+                        "        permanent: true",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3753f6a7183e53932a7d28dd77d885db10d1e32c"
+        }
+    }
+}

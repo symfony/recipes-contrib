@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "broadway/event-store-dbal": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/broadway_event_store_dbal.yaml": {
+                    "contents": [
+                        "broadway:",
+                        "    event_store:",
+                        "        dbal:",
+                        "            enabled: true",
+                        "            connection: 'default'",
+                        "            table: 'events'",
+                        "            use_binary: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "59b36f95fafbf4327a57c2493e02fc57d8c8e6ad"
+        }
+    }
+}

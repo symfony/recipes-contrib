@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "redirectionio/proxy-symfony": {
+            "manifest": {
+                "bundles": {
+                    "RedirectionIO\\Client\\ProxySymfony\\RedirectionIOBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/redirectionio.yaml": {
+                    "contents": [
+                        "# Documentation: https://github.com/redirectionio/proxy-symfony",
+                        "redirection_io:",
+                        "    project_key: FIXME",
+                        "    connections:",
+                        "        my_agent: tcp://127.0.0.1:10301",
+                        "        # another_agent: unix:///var/run/redirectionio.sock",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9bcaef9a03d6f49a93b342cd87045688a04b7316"
+        }
+    }
+}

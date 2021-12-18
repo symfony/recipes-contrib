@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "endroid/image-placeholder": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/endroid_image_placeholder.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "        public: false",
+                        "",
+                        "    _instanceof:",
+                        "        Endroid\\ImagePlaceholder\\Provider\\ProviderInterface:",
+                        "            tags: ['endroid_image_placeholder.provider']",
+                        "",
+                        "    Endroid\\ImagePlaceholder\\Provider\\:",
+                        "        resource: '../../vendor/endroid/image-placeholder/src/Provider/*'",
+                        "",
+                        "    Endroid\\ImagePlaceholder\\ImagePlaceholder:",
+                        "        arguments: ['%kernel.debug%', 'placeholderpics', false]",
+                        "        calls:",
+                        "            - [addProviders, [!tagged endroid_image_placeholder.provider]]",
+                        "",
+                        "    Endroid\\ImagePlaceholder\\Twig\\Extension\\ImagePlaceholderExtension: ~",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2b6eaed200993ffa85c375a69f034b40d176254f"
+        }
+    }
+}

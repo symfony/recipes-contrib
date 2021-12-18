@@ -1,0 +1,14 @@
+{
+    "manifests": {
+        "ferror/phpscan": {
+            "manifest": {
+                "copy-from-package": {
+                    "bin/phpscan": "%BIN_DIR%/phpscan",
+                    "config/phpscan.yaml": "%CONFIG_DIR%/phpscan.yaml"
+                }
+            },
+            "files": [],
+            "ref": "5507bd1012c4c6bb9680b733ce0d167b27c97d73"
+        }
+    }
+}

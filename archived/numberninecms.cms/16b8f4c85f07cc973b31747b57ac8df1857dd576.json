@@ -1,0 +1,45 @@
+{
+    "manifests": {
+        "numberninecms/cms": {
+            "manifest": {
+                "bundles": {
+                    "NumberNine\\Bundle\\NumberNineBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "copy-from-package": {
+                    "install/docker-compose.yml": "docker-compose.yml",
+                    "install/docker/": "docker/",
+                    "install/public/": "%PUBLIC_DIR%/"
+                },
+                "gitignore": [
+                    "/public/admin",
+                    "/public/uploads"
+                ],
+                "post-install-output": [
+                    "<bg=blue;fg=white>                            </>",
+                    "<bg=blue;fg=white> NumberNine is almost ready </>",
+                    "<bg=blue;fg=white>                            </>",
+                    "",
+                    "  * <fg=blue>Run</> <comment>php bin/console numbernine:docker:install</>",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://numberninecms.github.io/</>"
+                ]
+            },
+            "files": {
+                "config/routes/numbernine.yaml": {
+                    "contents": [
+                        "numbernine:",
+                        "    resource: '@NumberNineBundle/Resources/config/routing.yaml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "16b8f4c85f07cc973b31747b57ac8df1857dd576"
+        }
+    }
+}

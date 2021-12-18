@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "tienvx/mbt-api-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Tienvx\\Bundle\\MbtApiBundle\\TienvxMbtApiBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "DOT_BINARY": "dot"
+                }
+            },
+            "files": {
+                "config/packages/tienvx_mbt_api.yaml": {
+                    "contents": [
+                        "tienvx_mbt_api:",
+                        "    dot_binary: '%env(DOT_BINARY)%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/tienvx_mbt_api.yaml": {
+                    "contents": [
+                        "tienvx_mbt_api:",
+                        "    resource: '@TienvxMbtApiBundle/Resources/config/routing.xml'",
+                        "    prefix: '/mbt-api'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "70ceb93d86331ab968a53500be427bf77a7afc71"
+        }
+    }
+}

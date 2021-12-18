@@ -1,0 +1,53 @@
+{
+    "manifests": {
+        "endroid/cm-sms": {
+            "manifest": {
+                "bundles": {
+                    "Endroid\\CmSms\\Bundle\\CmSmsBundle\\EndroidCmSmsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "ENDROID_CMSMS_PRODUCT_TOKEN": ""
+                }
+            },
+            "files": {
+                "config/packages/dev/endroid_cm_sms.yaml": {
+                    "contents": [
+                        "endroid_cm_sms:",
+                        "    disable_delivery: true",
+                        "    delivery_phone_numbers: []",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/endroid_cm_sms.yaml": {
+                    "contents": [
+                        "endroid_cm_sms:",
+                        "    product_token: '%env(ENDROID_CMSMS_PRODUCT_TOKEN)%'",
+                        "    defaults:",
+                        "        unicode: 'auto'",
+                        "        minimum_number_of_message_parts: 1",
+                        "        maximum_number_of_message_parts: 3",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/endroid_cm_sms.yaml": {
+                    "contents": [
+                        "EndroidCmSmsBundle:",
+                        "    resource: \"@EndroidCmSmsBundle/Controller/\"",
+                        "    type: annotation",
+                        "    prefix: /cm-sms",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c15938cd80ba9ee7a59c0a4453f1041a54df2ea5"
+        }
+    }
+}

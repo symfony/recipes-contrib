@@ -1,0 +1,71 @@
+{
+    "manifests": {
+        "mailxpert/apibundle": {
+            "manifest": {
+                "bundles": {
+                    "Mailxpert\\APIBundle\\MailxpertAPIBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "env": {
+                    "MAILXPERT_CLIENT_ID": "mailxpert_client_id_to_replace",
+                    "MAILXPERT_CLIENT_SECRET": "mailxpert_client_secret_to_replace"
+                }
+            },
+            "files": {
+                "config/packages/mailxpert_apibundle.yaml": {
+                    "contents": [
+                        "mailxpert_api:",
+                        "    access_token_class: App\\Entity\\AccessToken",
+                        "    oauth:",
+                        "        client_id: '%env(MAILXPERT_CLIENT_ID)%'",
+                        "        client_secret: '%env(MAILXPERT_CLIENT_SECRET)%'",
+                        "        redirect_url: 'http://example.com/mx/oauth/code'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/mailxpert_apibundle.yaml": {
+                    "contents": [
+                        "mx_api:",
+                        "    resource: '@MailxpertAPIBundle/Resources/config/routing.xml'",
+                        "    type: xml",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/AccessToken.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Mailxpert\\APIBundle\\Entity\\AccessToken as BaseAccessToken;",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity",
+                        " * @ORM\\Table(name=\"mx_access_token\")",
+                        " */",
+                        "class AccessToken extends BaseAccessToken",
+                        "{",
+                        "    /**",
+                        "     * @ORM\\Id",
+                        "     * @ORM\\Column(type=\"integer\")",
+                        "     * @ORM\\GeneratedValue(strategy=\"AUTO\")",
+                        "     */",
+                        "    protected $id;",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c5ebe490e51efb3c4397ab64207845a36cf209b0"
+        }
+    }
+}

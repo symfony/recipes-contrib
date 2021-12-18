@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "coka/cors-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Oka\\CORSBundle\\OkaCORSBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/oka_cors.yaml": {
+                    "contents": [
+                        "oka_cors:",
+                        "    default:",
+                        "        expose_headers: ['Accept-Encoding']",
+                        "        max_age: 3600",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d95bf28f73dae46873449853b463d9261401b091"
+        }
+    }
+}

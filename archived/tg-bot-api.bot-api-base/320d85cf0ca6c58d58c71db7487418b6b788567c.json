@@ -1,0 +1,46 @@
+{
+    "manifests": {
+        "tg-bot-api/bot-api-base": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "TG_BOT_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/tg_bot_api.yaml": {
+                    "contents": [
+                        "services:",
+                        "",
+                        "    TgBotApi\\BotApiBase\\ApiClient:",
+                        "        arguments:",
+                        "            $requestFactory: '@Psr\\Http\\Message\\RequestFactoryInterface'",
+                        "            $streamFactory: '@Psr\\Http\\Message\\StreamFactoryInterface'",
+                        "            $client: '@Psr\\Http\\Client\\ClientInterface'",
+                        "",
+                        "    TgBotApi\\BotApiBase\\BotApiNormalizer: null",
+                        "",
+                        "    TgBotApi\\BotApiBase\\ApiClientInterface: '@TgBotApi\\BotApiBase\\ApiClient'",
+                        "    TgBotApi\\BotApiBase\\NormalizerInterface: '@TgBotApi\\BotApiBase\\BotApiNormalizer'",
+                        "",
+                        "    TgBotApi\\BotApiBase\\BotApi:",
+                        "        arguments:",
+                        "            $botKey: '%env(resolve:TG_BOT_API_KEY)%'",
+                        "            $apiClient: '@TgBotApi\\BotApiBase\\ApiClientInterface'",
+                        "            $normalizer:  '@TgBotApi\\BotApiBase\\NormalizerInterface'",
+                        "",
+                        "    TgBotApi\\BotApiBase\\BotApiComplete:",
+                        "        parent: TgBotApi\\BotApiBase\\BotApi",
+                        "",
+                        "    TgBotApi\\BotApiBase\\BotApiInterface: '@TgBotApi\\BotApiBase\\BotApi'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "320d85cf0ca6c58d58c71db7487418b6b788567c"
+        }
+    }
+}

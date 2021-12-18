@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "coka/rate-limit-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Oka\\RateLimitBundle\\OkaRateLimitBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/oka_rate_limit.yaml": {
+                    "contents": [
+                        "oka_rate_limit:",
+                        "    configs:",
+                        "        - {path: ''}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "07f99f106ba54b58e53df51b634f577f4183bb60"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "enqueue/job-queue-pack": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/enqueue_job_queue.yaml": {
+                    "contents": [
+                        "enqueue:",
+                        "    job: true",
+                        "",
+                        "doctrine:",
+                        "    orm:",
+                        "        mappings:",
+                        "            EnqueueJobQueue:",
+                        "                is_bundle: false",
+                        "                type: xml",
+                        "                dir: '%kernel.project_dir%/vendor/enqueue/job-queue/Doctrine/mapping'",
+                        "                prefix: 'Enqueue\\JobQueue\\Doctrine\\Entity'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a24c67e3c846bf293a8e95ca7e1b0708fef4b748"
+        }
+    }
+}

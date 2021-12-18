@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "adlarge/fixtures-documentation-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Adlarge\\FixturesDocumentationBundle\\AdlargeFixturesDocumentationBundle": [
+                        "dev"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/dev/adlarge_fixtures_documentation.yaml": {
+                    "contents": [
+                        "adlarge_fixtures_documentation:",
+                        "    title: 'Fixtures documentation'",
+                        "    reloadCommands:",
+                        "        - php bin/console doctrine:fixtures:load",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/dev/adlarge_fixtures_documentation.yaml": {
+                    "contents": [
+                        "AdlargeFixturesDocumentation:",
+                        "    resource: '@AdlargeFixturesDocumentationBundle/Resources/config/routing.yml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5660aa4a719721e3b0fb9709f17872488ce4ff7e"
+        }
+    }
+}

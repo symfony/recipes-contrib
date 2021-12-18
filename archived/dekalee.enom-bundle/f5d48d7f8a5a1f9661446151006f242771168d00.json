@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "dekalee/enom-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dekalee\\EnomBundle\\DekaleeEnomBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#ENOM_UID": "your-enom-uid",
+                    "#ENOM_PASSWORD": "your-enom-password",
+                    "#ENOM_BASE_URL": "your-enom-api-base-url"
+                },
+                "post-install-output": [
+                    "  * The Dekalee/EnomBundle needs your enom configuration.",
+                    "    Modify your ENOM_UID, ENOM_PASSWORD, ENOM_BASE_URL config in <fg=green>.env</>"
+                ]
+            },
+            "files": {
+                "config/packages/dekalee_enom.yaml": {
+                    "contents": [
+                        "dekalee_enom:",
+                        "    uid: '%env(ENOM_UID)%'",
+                        "    password: '%env(ENOM_PASSWORD)%'",
+                        "    base_url: '%env(ENOM_BASE_URL)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f5d48d7f8a5a1f9661446151006f242771168d00"
+        }
+    }
+}

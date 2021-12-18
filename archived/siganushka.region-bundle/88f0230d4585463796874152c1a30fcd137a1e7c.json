@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "siganushka/region-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Siganushka\\RegionBundle\\SiganushkaRegionBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/siganushka_region.yaml": {
+                    "contents": [
+                        "siganushka_region:",
+                        "    resource: \"@SiganushkaRegionBundle/Resources/config/routing/routes.xml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "88f0230d4585463796874152c1a30fcd137a1e7c"
+        }
+    }
+}

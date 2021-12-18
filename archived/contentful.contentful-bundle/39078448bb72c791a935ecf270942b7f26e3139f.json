@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "contentful/contentful-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Contentful\\ContentfulBundle\\ContentfulBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "CONTENTFUL_SPACE_ID": "required",
+                    "CONTENTFUL_ACCESS_TOKEN": "required"
+                },
+                "post-install-output": [
+                    "  * Get your space ID and API key from https://www.contentful.com",
+                    "    and configure them in your <fg=green>.env</>",
+                    "",
+                    "Documentation: https://www.contentful.com/developers/docs/php/"
+                ]
+            },
+            "files": {
+                "config/packages/contentful.yaml": {
+                    "contents": [
+                        "# For the complete configuration, please visit",
+                        "# https://www.contentful.com/developers/docs/php/tutorials/getting-started-with-contentful-and-symfony/",
+                        "contentful:",
+                        "    delivery:",
+                        "        space: \"%env(CONTENTFUL_SPACE_ID)%\"",
+                        "        token: \"%env(CONTENTFUL_ACCESS_TOKEN)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "39078448bb72c791a935ecf270942b7f26e3139f"
+        }
+    }
+}

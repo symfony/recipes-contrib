@@ -1,0 +1,42 @@
+{
+    "manifests": {
+        "mapado/rest-client-sdk-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Mapado\\RestClientSdkBundle\\MapadoRestClientSdkBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "env": {
+                    "MAPADO_REST_CLIENT_SDK_SERVER_URL": "https://my-api.com:8080"
+                }
+            },
+            "files": {
+                "config/packages/mapado_rest_client_sdk.yaml": {
+                    "contents": [
+                        "mapado_rest_client_sdk:",
+                        "    entity_managers:",
+                        "        foo:",
+                        "            server_url: '%env(MAPADO_REST_CLIENT_SDK_SERVER_URL)%'",
+                        "            mappings:",
+                        "                dir: '%kernel.project_dir%/src/Entity/'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/.gitignore": {
+                    "contents": [
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "78a3b4f36cb126099ac4bcd08b5276313d4c3ed1"
+        }
+    }
+}

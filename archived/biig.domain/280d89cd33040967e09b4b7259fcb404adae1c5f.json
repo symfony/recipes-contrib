@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "biig/domain": {
+            "manifest": {
+                "bundles": {
+                    "Biig\\Component\\Domain\\Integration\\Symfony\\DomainBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/biig_domain.yaml": {
+                    "contents": [
+                        "biig_domain:",
+                        "    # Learn more about configuration in the bundle configuration reference",
+                        "    # https://github.com/biig-io/DomainComponent/blob/v1/docs/domain_event_dispatcher.md#configuration-reference",
+                        "",
+                        "    # Post persist events are *not* activated by default, you need to enable the post persist listeners",
+                        "    persist_listeners:",
+                        "        # As doctrine supports many connections, you need to enable your connections one by one",
+                        "        doctrine: ['default']",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "280d89cd33040967e09b4b7259fcb404adae1c5f"
+        }
+    }
+}

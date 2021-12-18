@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "kunstmaan/menu-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Kunstmaan\\MenuBundle\\KunstmaanMenuBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/kunstmaan_menu.yaml": {
+                    "contents": [
+                        "#kunstmaan_menu:",
+                        "#    menus:",
+                        "#        - main_navigation",
+                        "#        - footer_navigation",
+                        "#",
+                        "# This is example configuration code. You can add as many menu's as you like",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/kunstmaan_menu.yaml": {
+                    "contents": [
+                        "KunstmaanMenuBundle:",
+                        "    resource: \"@KunstmaanMenuBundle/Resources/config/routing.yml\"",
+                        "    # If your site is not multi language, remove the \"{_locale}/\" part of prefix and requirements",
+                        "    prefix:   /{_locale}/",
+                        "    requirements:",
+                        "        _locale: \"%kunstmaan_admin.required_locales%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a5427a3cbecbe3fa89656ba2b84d00e8e902ea81"
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "emanuilnikolov/igdb-api-bundle": {
+            "manifest": {
+                "bundles": {
+                    "EN\\IgdbApiBundle\\ENIgdbApiBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "YOUR_BASE_URL": "",
+                    "YOUR_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/en_igdb_api.yaml": {
+                    "contents": [
+                        "# Get your credentials by signing up here: https://api.igdb.com/admin and put them in your .env file",
+                        "en_igdb_api:",
+                        "    base_url: '%env(YOUR_BASE_URL)%'",
+                        "    api_key: '%env(YOUR_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7fd07255f1618b72766f7eaa4e35bab2712f5b4e"
+        }
+    }
+}

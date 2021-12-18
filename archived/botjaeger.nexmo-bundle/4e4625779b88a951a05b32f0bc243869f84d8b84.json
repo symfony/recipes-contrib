@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "botjaeger/nexmo-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Botjaeger\\NexmoBundle\\BotjaegerNexmoBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "BOTJAEGER_NEXMO_API_KEY": "your-api-public-key",
+                    "BOTJAEGER_NEXMO_API_SECRET": "your-api-secret-key",
+                    "BOTJAEGER_NEXMO_API_BRAND": "your-brand-name"
+                }
+            },
+            "files": {
+                "config/packages/botjaeger_nexmo.yaml": {
+                    "contents": [
+                        "botjaeger_nexmo:",
+                        "    api_key: \"%env(BOTJAEGER_NEXMO_API_KEY)%\"",
+                        "    api_secret: \"%env(BOTJAEGER_NEXMO_API_SECRET)%\"",
+                        "    api_brand: \"%env(BOTJAEGER_NEXMO_API_BRAND)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "4e4625779b88a951a05b32f0bc243869f84d8b84"
+        }
+    }
+}

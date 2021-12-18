@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "doctrine/doctrine-cache-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Doctrine\\Bundle\\DoctrineCacheBundle\\DoctrineCacheBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/doctrine_cache.yaml": {
+                    "contents": [
+                        "doctrine_cache:",
+                        "    aliases:",
+                        "        apc_cache: my_apc_cache",
+                        "",
+                        "    providers:",
+                        "        my_apc_cache:",
+                        "            type: apc",
+                        "            namespace: my_apc_cache_ns",
+                        "            aliases:",
+                        "                - apc_cache",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "356895978ae1b34fa0b46dc41b28799a26cee0f9"
+        }
+    }
+}

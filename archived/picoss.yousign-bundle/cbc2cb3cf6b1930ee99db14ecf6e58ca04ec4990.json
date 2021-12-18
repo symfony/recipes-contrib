@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "picoss/yousign-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Picoss\\YousignBundle\\PicossYousignBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "To create a demo account, visit https://demo.yousign.fr/fr/public/api/registration",
+                    "#2": "YOUSIGN_ENV should be 'demo' or 'prod'",
+                    "YOUSIGN_ENV": "demo",
+                    "YOUSIGN_API_KEY": "api_key",
+                    "YOUSIGN_USERNAME": "username",
+                    "YOUSIGN_PASSWORD": "password"
+                }
+            },
+            "files": {
+                "config/packages/picoss_yousign.yaml": {
+                    "contents": [
+                        "picoss_yousign:",
+                        "    env: '%env(YOUSIGN_ENV)%'",
+                        "    api_key: '%env(YOUSIGN_API_KEY)%'",
+                        "    username: '%env(YOUSIGN_USERNAME)%'",
+                        "    password: '%env(YOUSIGN_PASSWORD)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "cbc2cb3cf6b1930ee99db14ecf6e58ca04ec4990"
+        }
+    }
+}

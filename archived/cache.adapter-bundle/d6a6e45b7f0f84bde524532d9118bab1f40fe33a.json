@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "cache/adapter-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Cache\\AdapterBundle\\CacheAdapterBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white> Next for CacheAdapterBundle </>",
+                    "    Download the adapters you want to use from <comment>http://www.php-cache.com/en/latest/#cache-pool-implementations</comment>."
+                ]
+            },
+            "files": {
+                "config/packages/cache_adapter.yaml": {
+                    "contents": [
+                        "cache_adapter:",
+                        "    providers:",
+                        "        default:",
+                        "            factory: cache.factory.array",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d6a6e45b7f0f84bde524532d9118bab1f40fe33a"
+        }
+    }
+}

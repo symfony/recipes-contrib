@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "kunstmaan/config-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Kunstmaan\\ConfigBundle\\KunstmaanConfigBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/kunstmaan_config.yaml": {
+                    "contents": [
+                        "#kunstmaan_config:",
+                        "    # Add your custom config entities here",
+                        "#    entities:",
+                        "#        - \\App\\Entity\\CustomConfigEntity",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/kunstmaan_config.yaml": {
+                    "contents": [
+                        "KunstmaanConfigBundle:",
+                        "    resource: \"@KunstmaanConfigBundle/Resources/config/routing.yml\"",
+                        "    # If your site is not multi language, remove the \"{_locale}/\" part of prefix and requirements",
+                        "    prefix:   /{_locale}/",
+                        "    requirements:",
+                        "        _locale: \"%kunstmaan_admin.required_locales%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "363631d5188512f7df1028aba166f4d5038790c0"
+        }
+    }
+}

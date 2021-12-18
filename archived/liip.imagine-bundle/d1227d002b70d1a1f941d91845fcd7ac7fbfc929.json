@@ -1,0 +1,47 @@
+{
+    "manifests": {
+        "liip/imagine-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Liip\\ImagineBundle\\LiipImagineBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "public/": "%PUBLIC_DIR%/"
+                },
+                "gitignore": [
+                    "/%PUBLIC_DIR%/media/cache/"
+                ],
+                "post-install-output": [
+                    "  <fg=blue;options=bold>Configure</> <fg=blue>your transformations:</>",
+                    "    1. You <options=bold>MUST</> verify and uncomment the configuration in <comment>%CONFIG_DIR%/packages/liip_imagine.yaml</>.",
+                    "    2. You <options=bold>MAY</> configure your image transformation library (<comment>gmagick</>, <comment>imagick</>, or <comment>gd</> [default]).",
+                    "    3. You <options=bold>MAY</> define custom transformation definitions under the <comment>filter_sets</> option."
+                ]
+            },
+            "files": {
+                "config/packages/liip_imagine.yaml": {
+                    "contents": [
+                        "# Documentation on how to configure the bundle can be found at: https://symfony.com/doc/current/bundles/LiipImagineBundle/basic-usage.html",
+                        "liip_imagine:",
+                        "    # valid drivers options include \"gd\" or \"gmagick\" or \"imagick\"",
+                        "    driver: \"gd\"",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/liip_imagine.yaml": {
+                    "contents": [
+                        "_liip_imagine:",
+                        "    resource: \"@LiipImagineBundle/Resources/config/routing.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d1227d002b70d1a1f941d91845fcd7ac7fbfc929"
+        }
+    }
+}

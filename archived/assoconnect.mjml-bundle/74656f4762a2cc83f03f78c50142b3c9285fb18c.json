@@ -1,0 +1,18 @@
+{
+    "manifests": {
+        "assoconnect/mjml-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Assoconnect\\MJMLBundle\\AssoconnectMJMLBundle": [
+                        "all"
+                    ]
+                },
+                "gitignore": [
+                    "/templates/mjml/*.html.twig"
+                ]
+            },
+            "files": [],
+            "ref": "74656f4762a2cc83f03f78c50142b3c9285fb18c"
+        }
+    }
+}

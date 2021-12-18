@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "kunstmaan/adminlist-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Kunstmaan\\AdminListBundle\\KunstmaanAdminListBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/kunstmaan_adminlist.yaml": {
+                    "contents": [
+                        "KunstmaanAdminListBundle:",
+                        "    resource: \"@KunstmaanAdminListBundle/Resources/config/routing.yml\"",
+                        "    # If your site is not multi language, remove the \"{_locale}/\" part of the prefix and the requirements",
+                        "    prefix:   /{_locale}/",
+                        "    requirements:",
+                        "        _locale: \"%kunstmaan_admin.required_locales%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7614cf923bbdd5a30bd2092ac7b2d47ecb6f6a52"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "enqueue/gps": {
+            "manifest": {
+                "env": {
+                    "ENQUEUE_DSN": "gps:"
+                }
+            },
+            "files": [],
+            "ref": "2a4f6f4ef10c153367a0995cea6dbed9907ec708"
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "monsieurbiz/sylius-alert-message-plugin": {
+            "manifest": {
+                "bundles": {
+                    "MonsieurBiz\\SyliusAlertMessagePlugin\\MonsieurBizSyliusAlertMessagePlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/monsieurbiz_sylius_alert_message_plugin.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@MonsieurBizSyliusAlertMessagePlugin/Resources/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/monsieurbiz_sylius_alert_message_plugin.yaml": {
+                    "contents": [
+                        "monsieurbiz_sylius_alert_message_admin:",
+                        "    resource: \"@MonsieurBizSyliusAlertMessagePlugin/Resources/config/routing/admin.yaml\"",
+                        "    prefix: /admin",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9eafe2a0e8d63693fe2b3b93806d10bd8e18294a"
+        }
+    }
+}

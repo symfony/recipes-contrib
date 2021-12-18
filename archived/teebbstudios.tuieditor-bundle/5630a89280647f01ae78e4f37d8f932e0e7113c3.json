@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "teebbstudios/tuieditor-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Teebb\\TuiEditorBundle\\TeebbTuiEditorBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/teebb_tuieditor.yaml": {
+                    "contents": [
+                        "# Read the documentation: https://github.com/teebbstudios/TeebbTuiEditorBundle/blob/master/README.md",
+                        "teebb_tui_editor:",
+                        "    default_config: basic_config",
+                        "    configs:",
+                        "        basic_config:",
+                        "            to_html: false",
+                        "            exts:",
+                        "                - scrollSync",
+                        "                - colorSyntax",
+                        "                - uml",
+                        "                - chart",
+                        "                - mark",
+                        "                - table",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5630a89280647f01ae78e4f37d8f932e0e7113c3"
+        }
+    }
+}

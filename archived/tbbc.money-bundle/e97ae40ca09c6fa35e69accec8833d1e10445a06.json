@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "tbbc/money-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Tbbc\\MoneyBundle\\TbbcMoneyBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/tbbc_money.yaml": {
+                    "contents": [
+                        "tbbc_money:",
+                        "    currencies: [\"USD\", \"EUR\"]",
+                        "    reference_currency: \"EUR\"",
+                        "    decimals: 2",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e97ae40ca09c6fa35e69accec8833d1e10445a06"
+        }
+    }
+}

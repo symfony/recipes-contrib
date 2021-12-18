@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "becklyn/javascript-routing": {
+            "manifest": {
+                "bundles": {
+                    "Becklyn\\JavaScriptRouting\\BecklynJavaScriptRoutingBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/becklyn_javascript_routing.yaml": {
+                    "contents": [
+                        "_import.becklyn_javascript_routing:",
+                        "    resource: '@BecklynJavaScriptRoutingBundle/Resources/config/routes.yaml'",
+                        "    prefix: /_v/routing",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ecb8bf9401b0b107af74b50ad521d9ea982edf96"
+        }
+    }
+}

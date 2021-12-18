@@ -1,0 +1,47 @@
+{
+    "manifests": {
+        "boshurik/telegram-bot-bundle": {
+            "manifest": {
+                "bundles": {
+                    "BoShurik\\TelegramBotBundle\\BoShurikTelegramBotBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "TELEGRAM_BOT_TOKEN": "bot-token"
+                },
+                "container": {
+                    "telegram_route_secret": "%env(TELEGRAM_BOT_TOKEN)%"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Set</> <comment>TELEGRAM_BOT_TOKEN</> in your environment",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/BoShurik/TelegramBotBundle</>"
+                ]
+            },
+            "files": {
+                "config/packages/boshurik_telegram_bot.yaml": {
+                    "contents": [
+                        "boshurik_telegram_bot:",
+                        "    api:",
+                        "        token: \"%env(TELEGRAM_BOT_TOKEN)%\"",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/boshurik_telegram_bot.yaml": {
+                    "contents": [
+                        "boshurik_telegram_bot_routing:",
+                        "    resource: \"@BoShurikTelegramBotBundle/Resources/config/routing.yml\"",
+                        "    prefix: \"/_telegram/%telegram_route_secret%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0e172664f2f361f8f3932f32cea845f56650dd01"
+        }
+    }
+}

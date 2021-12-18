@@ -1,0 +1,17 @@
+{
+    "manifests": {
+        "enqueue/gearman": {
+            "manifest": {
+                "post-install-output": [
+                    "  * Configure <comment>ENQUEUE_DSN=gearman://example:5555</comment>",
+                    "    in your <comment>.env</comment> file.",
+                    "",
+                    "  * For the full options, see",
+                    "    <comment>https://github.com/php-enqueue/enqueue-dev/blob/master/docs/transport/gearman.md</comment>"
+                ]
+            },
+            "files": [],
+            "ref": "102e2c2aabba082d3760567c66a000ea5526e964"
+        }
+    }
+}

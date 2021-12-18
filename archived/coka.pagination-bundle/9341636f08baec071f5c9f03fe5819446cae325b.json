@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "coka/pagination-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Oka\\PaginationBundle\\OkaPaginationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/oka_pagination.yaml": {
+                    "contents": [
+                        "oka_pagination:",
+                        "    db_driver: orm",
+                        "    twig:",
+                        "        enable_extension: false",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9341636f08baec071f5c9f03fe5819446cae325b"
+        }
+    }
+}

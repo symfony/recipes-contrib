@@ -1,0 +1,14 @@
+{
+    "manifests": {
+        "phpzlc/platform-business": {
+            "manifest": {
+                "copy-from-package": {
+                    "Business/": "src/Business/",
+                    "phpzlc-platform-business.yaml": "config/packages/phpzlc-platform-business.yaml"
+                }
+            },
+            "files": [],
+            "ref": "a5fc699d27ec689aa03bd0c0294824a12b633a2e"
+        }
+    }
+}

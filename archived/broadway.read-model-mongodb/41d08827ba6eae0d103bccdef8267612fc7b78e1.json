@@ -1,0 +1,46 @@
+{
+    "manifests": {
+        "broadway/read-model-mongodb": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "container": {
+                    "mongodb_uri": "%env(BROADWAY_READ_MODEL_MONGODB_URI)%",
+                    "mongodb_database": "%env(BROADWAY_READ_MODEL_MONGODB_DATABASE)%"
+                },
+                "env": {
+                    "BROADWAY_READ_MODEL_MONGODB_URI": "mongodb://127.0.0.1/",
+                    "BROADWAY_READ_MODEL_MONGODB_DATABASE": "default"
+                }
+            },
+            "files": {
+                "config/packages/broadway_read_model_mongodb.yaml": {
+                    "contents": [
+                        "broadway:",
+                        "    read_model: broadway.read_model.mongodb.repository_factory",
+                        "",
+                        "services:",
+                        "    broadway.read_model.mongodb_client:",
+                        "        class: MongoDB\\Client",
+                        "        arguments: ['%mongodb_uri%']",
+                        "",
+                        "    broadway.read_model.mongodb_collection:",
+                        "        class: MongoDB\\Collection",
+                        "        factory: ['@broadway.read_model.mongodb_client', selectCollection]",
+                        "        arguments: ['%mongodb_database%', 'read_models']",
+                        "",
+                        "    broadway.read_model.mongodb.repository_factory:",
+                        "        class: Broadway\\ReadModel\\MongoDB\\MongoDBRepositoryFactory",
+                        "        arguments:",
+                        "            - \"@broadway.read_model.mongodb_collection\"",
+                        "            - \"@broadway.serializer.readmodel\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "41d08827ba6eae0d103bccdef8267612fc7b78e1"
+        }
+    }
+}

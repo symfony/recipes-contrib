@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "spiechu/symfony-commons-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Spiechu\\SymfonyCommonsBundle\\SpiechuSymfonyCommonsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%"
+                }
+            },
+            "files": {
+                "config/packages/spiechu_symfony_commons.yaml": {
+                    "contents": [
+                        "spiechu_symfony_commons:",
+                        "    # bundle configuration available at",
+                        "    # https://github.com/spiechu/symfony-commons-bundle/blob/master/README.md",
+                        "    get_method_override:",
+                        "        enabled:              false",
+                        "    response_schema_validation:",
+                        "        enabled:              false",
+                        "    api_versioning:",
+                        "        enabled:              false",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6e5883906690f78f929a02e7a23d09ffd7e72e80"
+        }
+    }
+}

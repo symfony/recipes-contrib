@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "enqueue/amqp-bunny": {
+            "manifest": {
+                "env": {
+                    "ENQUEUE_DSN": "amqp+bunny:"
+                }
+            },
+            "files": [],
+            "ref": "367ed088c05b18d7dc5aec06d6820d809486bca3"
+        }
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "insidestyles/json-rpc-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Insidestyles\\JsonRpcBundle\\JsonRpcBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/json_rpc_api.yaml": {
+                    "contents": [
+                        "json_rpc_api:",
+                        "    handlers:",
+                        "        main:",
+                        "            path: /api",
+                        "            host: ~",
+                        "            serializer: ~",
+                        "            logger: ~",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/json_rpc_api_routing.yaml": {
+                    "contents": [
+                        "_json_rpc_api:",
+                        "    resource: .",
+                        "    type: json_rpc_api",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2723975565d1df7050f228a517161752fe2f1f0e"
+        }
+    }
+}

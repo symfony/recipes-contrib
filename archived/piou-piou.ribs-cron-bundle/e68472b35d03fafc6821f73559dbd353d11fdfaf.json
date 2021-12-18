@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "piou-piou/ribs-cron-bundle": {
+            "manifest": {
+                "bundles": {
+                    "PiouPiou\\RibsCronBundle\\RibsCronBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "IP_CRON_EXTERNAL": "",
+                    "IP_CRON_INTERNAL": "127.0.0.1"
+                }
+            },
+            "files": {
+                "config/ribs_cron.yaml": {
+                    "contents": [
+                        "parameters:",
+                        "    data_directory: '%kernel.project_dir%/data/'",
+                        "    ribs_cron_ip_external: '%env(IP_CRON_EXTERNAL)%'",
+                        "    ribs_cron_ip_internal: '%env(IP_CRON_INTERNAL)%'",
+                        "    ribs_cron:",
+                        "#       testCronCall: '* * * * *'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e68472b35d03fafc6821f73559dbd353d11fdfaf"
+        }
+    }
+}

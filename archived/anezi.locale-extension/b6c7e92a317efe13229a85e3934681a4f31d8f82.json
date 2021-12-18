@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "anezi/locale-extension": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/anezi_locale_extension.yaml": {
+                    "contents": [
+                        "services:",
+                        "    anezi_twig.locale_extension:",
+                        "        class: Anezi\\Locale\\Twig\\Extension\\LocaleExtension",
+                        "        public:    false",
+                        "        arguments:",
+                        "            $locales: ['fr', 'en'] # Edit here for your needs.",
+                        "        tags:",
+                        "            - { name: twig.extension }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b6c7e92a317efe13229a85e3934681a4f31d8f82"
+        }
+    }
+}

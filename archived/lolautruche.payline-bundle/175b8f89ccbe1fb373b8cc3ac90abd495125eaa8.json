@@ -1,0 +1,64 @@
+{
+    "manifests": {
+        "lolautruche/payline-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Lolautruche\\PaylineBundle\\LolautruchePaylineBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#PAYLINE_MERCHANT_ID": "your_payline_merchant_id",
+                    "#PAYLINE_ACCESS_KEY": "your_payline_access_key",
+                    "PAYLINE_CONTRACT_NUMBER": "your_payline_contract_number",
+                    "#1": "Valid values are 'homo', 'prod', 'int' and 'dev'.",
+                    "#2": "e.g. 'homo' for 'Homologation', 'prod' for 'Production', 'int' for 'Integration'",
+                    "PAYLINE_ENVIRONMENT": "homo"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Configure</> Payline environment variables in <comment>.env</comment>;",
+                    "",
+                    "  * <fg=blue>Using Symfony 4.4/5.x: Encrypt sensitive environment variables</>",
+                    "    with <comment>bin/console secrets:set</comment> command (optional);",
+                    "",
+                    "  * Using Symfony 3.4/4.x: Ensure to correctly expose the environment variables commented in `.env` file.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at:",
+                    "    <comment>https://github.com/lolautruche/LolautruchePaylineBundle/blob/master/Resources/doc/00-index.md</>"
+                ]
+            },
+            "files": {
+                "config/packages/payline.yaml": {
+                    "contents": [
+                        "lolautruche_payline:",
+                        "    merchant_id: '%env(PAYLINE_MERCHANT_ID)%'",
+                        "    access_key: '%env(PAYLINE_ACCESS_KEY)%'",
+                        "    contract_number: '%env(PAYLINE_CONTRACT_NUMBER)%'",
+                        "    environment: '%env(PAYLINE_ENVIRONMENT)%'",
+                        "    # Can be EUR (or \u20ac), USD (or $), POUND (or \u00a3).",
+                        "    default_currency: '\u20ac'",
+                        "    # Route name for the confirmation page the user will be redirected to, once the payment has been processed.",
+                        "    default_confirmation_route: 'route_name_for_confirmation_page'",
+                        "    # Route name for the error page the user will be redirected to if there was an error with the payment.",
+                        "    default_error_route: 'route_name_for_error_page'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/payline.yaml": {
+                    "contents": [
+                        "LolautruchePaylineBundle:",
+                        "    resource: '@LolautruchePaylineBundle/Resources/config/routing.yml'",
+                        "    prefix: /",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "175b8f89ccbe1fb373b8cc3ac90abd495125eaa8"
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "seferov/aws-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Seferov\\AwsBundle\\SeferovAwsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "AWS_CREDENTIALS_KEY": "CHANGE_THIS",
+                    "AWS_CREDENTIALS_SECRET": "CHANGE_THIS"
+                }
+            },
+            "files": {
+                "config/packages/seferov_aws.yaml": {
+                    "contents": [
+                        "seferov_aws:",
+                        "    credentials:",
+                        "        key: '%env(AWS_CREDENTIALS_KEY)%'",
+                        "        secret: '%env(AWS_CREDENTIALS_SECRET)%'",
+                        "    region: 'eu-central-1'",
+                        "    # Here you can set service specific credentials and config.",
+                        "    # See https://github.com/seferov/awsBundle/blob/master/Resources/doc/configuration.md",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d18c7b465e03373d9305cbcc534dedf108e8aeca"
+        }
+    }
+}

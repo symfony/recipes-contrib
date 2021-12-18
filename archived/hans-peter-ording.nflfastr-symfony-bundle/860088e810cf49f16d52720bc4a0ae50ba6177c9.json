@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "hans-peter-ording/nflfastr-symfony-bundle": {
+            "manifest": {
+                "bundles": {
+                    "HansPeterOrding\\NflFastrSymfonyBundle\\NflFastrSymfonyBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/nfl_fastr_symfony.yaml": {
+                    "contents": [
+                        "nfl_fastr_symfony:",
+                        "    timezone: Europe/Berlin",
+                        "    sources:",
+                        "        playByPlay:",
+                        "            baseUrl: https://github.com/guga31bb/nflfastR-data",
+                        "            path: tree/master/data",
+                        "        roster:",
+                        "            baseUrl: https://github.com/mrcaseb/nflfastR-roster",
+                        "            path: tree/master/data/seasons",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "860088e810cf49f16d52720bc4a0ae50ba6177c9"
+        }
+    }
+}

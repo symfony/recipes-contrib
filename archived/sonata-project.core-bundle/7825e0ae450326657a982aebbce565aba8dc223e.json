@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "sonata-project/core-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Sonata\\CoreBundle\\SonataCoreBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sonata_project/sonata_core.yaml": {
+                    "contents": [
+                        "sonata_core:",
+                        "    flashmessage: {}",
+                        "    form:",
+                        "        mapping:",
+                        "            enabled: false",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7825e0ae450326657a982aebbce565aba8dc223e"
+        }
+    }
+}

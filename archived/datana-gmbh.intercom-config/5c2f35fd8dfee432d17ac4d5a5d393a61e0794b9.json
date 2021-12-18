@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "datana-gmbh/intercom-config": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "INTERCOM_WORKSPACE_APP_ID": "",
+                    "INTERCOM_IDENTITY_VERIFICATION_SECRET": ""
+                }
+            },
+            "files": {
+                "config/packages/datana_intercom_config.yaml": {
+                    "contents": [
+                        "services:",
+                        "    Datana\\Intercom\\Config\\Config:",
+                        "        arguments:",
+                        "            - '%env(INTERCOM_WORKSPACE_APP_ID)%'",
+                        "            - '%env(INTERCOM_IDENTITY_VERIFICATION_SECRET)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5c2f35fd8dfee432d17ac4d5a5d393a61e0794b9"
+        }
+    }
+}

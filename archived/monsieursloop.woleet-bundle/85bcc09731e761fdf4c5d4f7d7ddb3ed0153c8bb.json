@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "monsieursloop/woleet-bundle": {
+            "manifest": {
+                "bundles": {
+                    "MonsieurSloop\\Bundle\\WoleetBundle\\MonsieurSloopWoleetBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "WOLEET_API_TOKEN": "your_api_token",
+                    "WOLEET_CALLBACK_SECRET": "your_callback_secret"
+                }
+            },
+            "files": {
+                "config/packages/monsieur_sloop_woleet.yaml": {
+                    "contents": [
+                        "monsieur_sloop_woleet:",
+                        "    #API KEY",
+                        "    api_token: \"%env(WOLEET_API_TOKEN)%\"",
+                        "    #API CALLBACK KEY",
+                        "    callback_secret: \"%env(WOLEET_CALLBACK_SECRET)%\"",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "85bcc09731e761fdf4c5d4f7d7ddb3ed0153c8bb"
+        }
+    }
+}

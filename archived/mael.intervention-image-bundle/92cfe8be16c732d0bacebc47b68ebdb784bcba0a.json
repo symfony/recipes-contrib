@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "mael/intervention-image-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Mael\\InterventionImageBundle\\MaelInterventionImageBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "    * <fg=blue>Edit</> mael_intervention_image.yaml to configure the driver in config/packages",
+                    "    * <fg=blue>Read</> documentation at <comment>https://github.com/Mael-91/InterventionImageBundle/blob/master/README.md</>",
+                    "    "
+                ]
+            },
+            "files": {
+                "config/packages/mael_intervention_image.yaml": {
+                    "contents": [
+                        "mael_intervention_image:",
+                        "    driver: gd ##\u00a0gd or imagick - Default is gd",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "92cfe8be16c732d0bacebc47b68ebdb784bcba0a"
+        }
+    }
+}

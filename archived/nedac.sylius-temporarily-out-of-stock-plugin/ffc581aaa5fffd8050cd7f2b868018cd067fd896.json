@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "nedac/sylius-temporarily-out-of-stock-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Nedac\\SyliusTemporarilyOutOfStockPlugin\\NedacSyliusTemporarilyOutOfStockPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-package": {
+                    "src/Resources/views/bundles/": "templates/bundles/"
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/nedac_sylius_temporarily_out_of_stock_plugin.yaml": {
+                    "contents": [
+                        "doctrine:",
+                        "    orm:",
+                        "        dql:",
+                        "            string_functions:",
+                        "                FIRST: Nedac\\SyliusTemporarilyOutOfStockPlugin\\Doctrine\\Dql\\FirstFunction",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ffc581aaa5fffd8050cd7f2b868018cd067fd896"
+        }
+    }
+}

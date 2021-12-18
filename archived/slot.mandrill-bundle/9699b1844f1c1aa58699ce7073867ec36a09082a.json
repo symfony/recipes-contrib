@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "slot/mandrill-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Slot\\MandrillBundle\\SlotMandrillBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MANDRILL_API_KEY": "",
+                    "MANDRILL_DEFAULT_SENDER": "info@example.com"
+                }
+            },
+            "files": {
+                "config/packages/slot_mandrill.yaml": {
+                    "contents": [
+                        "slot_mandrill:",
+                        "    api_key: '%env(MANDRILL_API_KEY)%'",
+                        "    default:",
+                        "        sender: '%env(MANDRILL_DEFAULT_SENDER)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9699b1844f1c1aa58699ce7073867ec36a09082a"
+        }
+    }
+}

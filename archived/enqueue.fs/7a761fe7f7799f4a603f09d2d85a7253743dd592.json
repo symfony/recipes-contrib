@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "enqueue/fs": {
+            "manifest": {
+                "env": {
+                    "ENQUEUE_DSN": "file:///%VAR_DIR%/enqueue"
+                }
+            },
+            "files": [],
+            "ref": "7a761fe7f7799f4a603f09d2d85a7253743dd592"
+        }
+    }
+}

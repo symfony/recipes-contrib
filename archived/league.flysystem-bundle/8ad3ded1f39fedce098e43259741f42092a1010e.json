@@ -1,0 +1,57 @@
+{
+    "manifests": {
+        "league/flysystem-bundle": {
+            "manifest": {
+                "bundles": {
+                    "League\\FlysystemBundle\\FlysystemBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "var/storage/": "%VAR_DIR%/storage/"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                                             </>",
+                    "<bg=blue;fg=white> You just installed league/flysystem-bundle! </>",
+                    "<bg=blue;fg=white> What's next?                                </>",
+                    "<bg=blue;fg=white>                                             </>",
+                    "",
+                    "  * <fg=blue>Use</> the default storage immediately:",
+                    "",
+                    "      public function __construct(FilesystemInterface $defaultStorage)",
+                    "      {",
+                    "          ...",
+                    "      }",
+                    "",
+                    "  * <fg=blue>Configure</> your own storages in <comment>config/packages/flysystem.yaml</comment>.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at:",
+                    "    <comment>https://github.com/thephpleague/flysystem-bundle/blob/master/docs/1-getting-started.md</>"
+                ]
+            },
+            "files": {
+                "config/packages/flysystem.yaml": {
+                    "contents": [
+                        "# Read the documentation at https://github.com/thephpleague/flysystem-bundle/blob/master/docs/1-getting-started.md",
+                        "flysystem:",
+                        "    storages:",
+                        "        default.storage:",
+                        "            adapter: 'local'",
+                        "            options:",
+                        "                directory: '%kernel.project_dir%/%VAR_DIR%/storage/default'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "var/storage/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8ad3ded1f39fedce098e43259741f42092a1010e"
+        }
+    }
+}

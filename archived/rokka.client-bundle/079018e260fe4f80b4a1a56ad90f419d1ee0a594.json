@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "rokka/client-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Rokka\\RokkaClientBundle\\RokkaClientBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Get your API key from https://rokka.io/",
+                    "ROKKA_API_KEY": "API_KEY_replace_me",
+                    "ROKKA_ORGANIZATION": "ROKKA_ORG_replace_me"
+                }
+            },
+            "files": {
+                "config/packages/rokka.yaml": {
+                    "contents": [
+                        "rokka_client:",
+                        "    # Api-Key value given on registration of the user. Get your API key from https://rokka.io/",
+                        "    api_key:      \"%env(ROKKA_API_KEY)%\" # Required",
+                        "    # Organization value like \"my-org\" for use in calls to the API.",
+                        "    organization: \"%env(ROKKA_ORGANIZATION)%\" # Required",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "079018e260fe4f80b4a1a56ad90f419d1ee0a594"
+        }
+    }
+}

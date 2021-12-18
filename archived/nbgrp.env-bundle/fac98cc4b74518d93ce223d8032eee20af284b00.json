@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "nbgrp/env-bundle": {
+            "manifest": {
+                "bundles": {
+                    "NbGroup\\Symfony\\NbgroupEnvBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/nbgroup_env.yaml": {
+                    "contents": [
+                        "#  See https://github.com/nbgrp/env-bundle#readme for detailed configuration",
+                        "nbgroup_env:",
+                        "    array_cast: false  #  \"true\" to enable Array Cast processor",
+                        "    csv: false         #  set delimiters mapping to enable CSV processor (see below)",
+                        "",
+                        "#    csv:              #  enable CSV processor",
+                        "#        dot: '.'      #  \"csv-dot:FOO\" will parse env FOO into array with \".\" as a separator",
+                        "#        colon: ':'    #  \"csv-colon:FOO\" will parse env FOO into array with \":\" as a separator",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "fac98cc4b74518d93ce223d8032eee20af284b00"
+        }
+    }
+}

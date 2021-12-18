@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "mael/recaptcha-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Mael\\MaelRecaptchaBundle\\MaelRecaptchaBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MAEL_RECAPTCHA_KEY": "YOUR_RECAPTCHA_KEY",
+                    "MAEL_RECAPTCHA_SECRET": "YOUR_RECAPTCHA_SECRET"
+                },
+                "post-install-output": [
+                    "    * <fg=blue>Edit mael_recaptcha.yaml</> add you keys in your .env file",
+                    "    * <fg=blue>Read</>documentation at <comment>https://github.com/Mael-91/MaelRecaptchaBundle/blob/master/README.md</>"
+                ]
+            },
+            "files": {
+                "config/packages/mael_recaptcha.yaml": {
+                    "contents": [
+                        "mael_recaptcha:",
+                        "    key: '%env(resolve:MAEL_RECAPTCHA_KEY)%'",
+                        "    secret: '%env(resolve:MAEL_RECAPTCHA_SECRET)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b52c27935ee0cf6b549dff2639415635614d77f5"
+        }
+    }
+}

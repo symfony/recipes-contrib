@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "moneyphp/money-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Money\\MoneyBundle\\MoneyBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/money.yaml": {
+                    "contents": [
+                        "services:",
+                        "    Money\\Currencies:",
+                        "        alias: \"moneyphp.iso.currencies\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "20d27a8c7ab6850350a000f9b2ebbe729932dca9"
+        }
+    }
+}

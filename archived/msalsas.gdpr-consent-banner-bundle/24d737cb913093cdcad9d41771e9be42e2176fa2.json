@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "msalsas/gdpr-consent-banner-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Msalsas\\GdprConsentBannerBundle\\MsalsasGdprConsentBannerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/msalsas_gdpr_consent_banner.yaml": {
+                    "contents": [
+                        "# See all configuration options at https://github.com/msalsas/MsalsasGdprConsentBannerBundle/blob/master/Resources/doc/index.rst",
+                        "msalsas_gdpr_consent_banner:",
+                        "    fade_time: 2",
+                        "    time_to_expire: 30 days",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/msalsas_gdpr_consent_banner.yaml": {
+                    "contents": [
+                        "accept_gdpr_consent_banner:",
+                        "    path: /accept-gdpr-consent-banner",
+                        "    controller: Msalsas\\GdprConsentBannerBundle\\Controller\\MsalsasGdprConsentBannerController:acceptGdprConsentBanner",
+                        "    methods: POST",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "24d737cb913093cdcad9d41771e9be42e2176fa2"
+        }
+    }
+}

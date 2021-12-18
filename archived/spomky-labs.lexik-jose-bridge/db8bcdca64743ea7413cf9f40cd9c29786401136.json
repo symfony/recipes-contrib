@@ -1,0 +1,42 @@
+{
+    "manifests": {
+        "spomky-labs/lexik-jose-bridge": {
+            "manifest": {
+                "bundles": {
+                    "SpomkyLabs\\LexikJoseBundle\\SpomkyLabsLexikJoseBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%"
+                },
+                "env": {
+                    "SL_JOSE_BRIDGE_SERVER_NAME": "https://www.my-service.com/",
+                    "SL_JOSE_BRIDGE_SIGNATURE_KEYSET": "{\"keys\":{\"93wgUTMbJm8ZN7MUTQx7xYRpifPiY7GAaAZKTZ9Y3MI\":{\"kid\":\"93wgUTMbJm8ZN7MUTQx7xYRpifPiY7GAaAZKTZ9Y3MI\",\"use\":\"sig\",\"alg\":\"HS512\",\"kty\":\"oct\",\"k\":\"Pk6yE0J0g9qbNUlSJinturCgZMKb5YnZLAuV0MauH1E78z4mOMOwO_NeeZi-dlbIfF17mfYU4v6BAFxkthk6hwD-RYgNGRQnh9oE9NApn3o2mUuu90g1hZT6AO9xRHu2prDFcKELsdnlMPV4uEeqCrtno1alZnpEmOdqooNxI2k\"},\"-SBFeKCDHQzOxII3udEo8VWH8sFuQ-_DexHSlSaGR2U\":{\"kid\":\"-SBFeKCDHQzOxII3udEo8VWH8sFuQ-_DexHSlSaGR2U\",\"use\":\"sig\",\"alg\":\"HS512\",\"kty\":\"oct\",\"k\":\"-z6YID5-ETwxgP2ILpURx9mjSi-u9LAIbNZ-sX3zpXn0E3ZQWK79TKI5VU_6_SiO-RJ6DIcXSzE2cWgifKCKqez_xyIdzcOk2G9wrVAK6W5z9mJbkoZl8wOcQKNOdc7P66ymrqaP3yTPvUs4D2Ad7H9E3juG6g-DmpFTmhGTJpw\"}}}",
+                    "SL_JOSE_BRIDGE_ENCRYPTION_KEYSET": "{\"keys\":{\"zCPR8Cv8jbWW1wBckl5LoZt-_bX5vzBJpr1esJbk2aU\":{\"kid\":\"zCPR8Cv8jbWW1wBckl5LoZt-_bX5vzBJpr1esJbk2aU\",\"use\":\"enc\",\"alg\":\"A256GCMKW\",\"kty\":\"oct\",\"k\":\"rcXLJSc47wKU2aQFrM2BBRy_WlgPSJtleeX2dJY5mH7wa_7PEFZPrdZrZ0lyy-ShqZNYBauwSg_0q9KEmFEt4OiWb0a7S2qtT07Z_YBaPqu3fr7opO3FCfZGzYDOJSUvIM5UBZ3JFstXj344VD9WgZCzdzGrg70u9-G8-cKi8Xk\"},\"-mw9puP0eQVD_D1RGZ2P1oXs21SOq2dWjK36AdqeyTg\":{\"kid\":\"-mw9puP0eQVD_D1RGZ2P1oXs21SOq2dWjK36AdqeyTg\",\"use\":\"enc\",\"alg\":\"A256GCMKW\",\"kty\":\"oct\",\"k\":\"UOMyYU8hDDg4CznG-FlACz07lT5w7YI1CtN-t2w4oSLkG0d4gwe2fsSJvjkVPIpSCPsHDz6VbB8rXRSR6ZNouiv81LQjRvjAhoXW9hVOQgh0NMQ3EBf4h2oqJNAZi6p2ufqfJ-_NnNk4IbGePektVHaxE3OdHxqGGyz76dM55-8\"}}}"
+                }
+            },
+            "files": {
+                "config/packages/spomky_labs_lexik_jose_bridge_bundle.yaml": {
+                    "contents": [
+                        "lexik_jose:",
+                        "    ttl: 1000",
+                        "    server_name: '%env(SL_JOSE_BRIDGE_SERVER_NAME)%'",
+                        "    key_set: '%env(SL_JOSE_BRIDGE_SIGNATURE_KEYSET)%'",
+                        "    key_index: '93wgUTMbJm8ZN7MUTQx7xYRpifPiY7GAaAZKTZ9Y3MI'",
+                        "    signature_algorithm: 'HS512'",
+                        "    encryption:",
+                        "        enabled: true",
+                        "        key_set: '%env(SL_JOSE_BRIDGE_ENCRYPTION_KEYSET)%'",
+                        "        key_index: 'zCPR8Cv8jbWW1wBckl5LoZt-_bX5vzBJpr1esJbk2aU'",
+                        "        key_encryption_algorithm: 'A256GCMKW'",
+                        "        content_encryption_algorithm: 'A256GCM'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "db8bcdca64743ea7413cf9f40cd9c29786401136"
+        }
+    }
+}

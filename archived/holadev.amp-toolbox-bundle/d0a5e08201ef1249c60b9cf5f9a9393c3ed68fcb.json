@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "holadev/amp-toolbox-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Hola\\AmpToolboxBundle\\HolaAmpToolboxBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/amp_toolbox.yaml": {
+                    "contents": [
+                        "amp_toolbox:",
+                        "    transform_enabled: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d0a5e08201ef1249c60b9cf5f9a9393c3ed68fcb"
+        }
+    }
+}

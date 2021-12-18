@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "debril/rss-atom-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Debril\\RssAtomBundle\\DebrilRssAtomBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/rss_atom.yaml": {
+                    "contents": [
+                        "debril_rss_atom:",
+                        "    # switch to true if you need to set cache-control: private",
+                        "    private: false",
+                        "    # switch to true if you need to always send status 200",
+                        "    force_refresh: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/rss_atom.yaml": {
+                    "contents": [
+                        "rss_atom_bundle:",
+                        "    resource: \"@DebrilRssAtomBundle/Resources/config/routing.yml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2c23ed747eda9f4c13f5e7eb55fffa1091fdd505"
+        }
+    }
+}

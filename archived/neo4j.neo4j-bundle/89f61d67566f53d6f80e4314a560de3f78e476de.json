@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "neo4j/neo4j-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Neo4j\\Neo4jBundle\\Neo4jBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "NEO4J_DEFAULT_CONNECTION_DSN": "bolt://foo:bar@localhost:7687"
+                }
+            },
+            "files": {
+                "config/packages/neo4j.yaml": {
+                    "contents": [
+                        "neo4j:",
+                        "    connections:",
+                        "        default:",
+                        "            dsn: \"%env(NEO4J_DEFAULT_CONNECTION)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "89f61d67566f53d6f80e4314a560de3f78e476de"
+        }
+    }
+}

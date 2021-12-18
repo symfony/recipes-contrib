@@ -1,0 +1,18 @@
+{
+    "manifests": {
+        "drupol/ecl-twig-bundle": {
+            "manifest": {
+                "bundles": {
+                    "drupol\\EclTwigBundle\\EclTwigBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-package": {
+                    ".recipe/config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": [],
+            "ref": "a7bf4baa5f5ac2f27c61d88fee1e43ce22f5c9b2"
+        }
+    }
+}

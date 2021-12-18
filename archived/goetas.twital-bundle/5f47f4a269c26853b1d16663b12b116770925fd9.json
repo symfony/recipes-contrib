@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "goetas/twital-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Goetas\\TwitalBundle\\GoetasTwitalBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/twital.yaml": {
+                    "contents": [
+                        "goetas_twital:",
+                        "    full_twig_compatibility: true # see http://twitalbundle.readthedocs.io/en/latest/#full-twig-compatibility",
+                        "",
+                        "## add here your custom extension handlers, by default Twital parses *.html.twital, *.xml.twital and *.xhtml.twital files",
+                        "## more info about it on http://twitalbundle.readthedocs.io/en/latest/#source-adapters",
+                        "#    source_adapter:",
+                        "#        - { service: twital.source_adapter.html5, pattern: ['/\\.ext\\.twital$/', '/\\.ext2\\.twital$/'] }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5f47f4a269c26853b1d16663b12b116770925fd9"
+        }
+    }
+}

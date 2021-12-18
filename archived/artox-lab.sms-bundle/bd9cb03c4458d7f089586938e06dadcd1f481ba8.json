@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "artox-lab/sms-bundle": {
+            "manifest": {
+                "bundles": {
+                    "ArtoxLab\\Bundle\\SmsBundle\\ArtoxLabSmsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  You <options=bold>must</> to define at least one provider configuration in <comment>%CONFIG_DIR%/packages/artox_lab_sms.yaml</>.",
+                    "",
+                    "  * <fg=blue>More info</> you can find in the documentation at <comment>https://github.com/artox-lab/sms-bundle#step-3-configuration</>"
+                ]
+            },
+            "files": {
+                "config/packages/artox_lab_sms.yaml": {
+                    "contents": [
+                        "artox_lab_sms:",
+                        "    providers:",
+                        "        # You must to define at least one provider configuration",
+                        "        # See more info at https://github.com/artox-lab/sms-bundle",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "bd9cb03c4458d7f089586938e06dadcd1f481ba8"
+        }
+    }
+}

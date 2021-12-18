@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "imper86/jobby-cron-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Imper86\\JobbyBundle\\Imper86JobbyBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                               </>",
+                    "<bg=blue;fg=white> Jobby cron bundle - next steps</>",
+                    "<bg=blue;fg=white>                               </>",
+                    "",
+                    "  * <fg=blue>Configure</> jobs in <comment>imper86_jobby.yaml</> in your <comment>config/packages</> directory",
+                    "  * <fg=blue>Check config details</> with command <comment>./bin/console config:dump imper86_jobby</>"
+                ]
+            },
+            "files": {
+                "config/packages/imper86_jobby.yaml": {
+                    "contents": [
+                        "imper86_jobby:",
+                        "    jobs: []",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0034efc9eb285376afeeb103878218d42d643228"
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "andchir/shopkeeper4-comments": {
+            "manifest": {
+                "bundles": {
+                    "Andchir\\CommentsBundle\\CommentsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/comments.yaml": {
+                    "contents": [
+                        "comments:",
+                        "    comment_class: App\\MainBundle\\Document\\Comment",
+                        "    status_default: pending",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/comments.yaml": {
+                    "contents": [
+                        "comments:",
+                        "    resource: '@CommentsBundle'",
+                        "    type: annotation",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8a05fa761a475e2e95f7b556e54d9ab33d532aa9"
+        }
+    }
+}

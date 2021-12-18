@@ -1,0 +1,40 @@
+{
+    "manifests": {
+        "synolia/sylius-scheduler-command-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Synolia\\SyliusSchedulerCommandPlugin\\SynoliaSyliusSchedulerCommandPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Run</> <fg=green>doctrine:migrations:migrate</> to upgrade database",
+                    "  * <fg=blue>Add Cron</> on <fg=green>synolia:scheduler-run</> to execute scheduled commands"
+                ]
+            },
+            "files": {
+                "config/packages/sylius_scheduler_command.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SynoliaSyliusSchedulerCommandPlugin/Resources/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sylius_scheduler_command.yaml": {
+                    "contents": [
+                        "synolia_scheduled_command:",
+                        "    resource: \"@SynoliaSyliusSchedulerCommandPlugin/Resources/config/admin_routing.yaml\"",
+                        "    prefix: '/%sylius_admin.path_name%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ebbd15bf86ba55d7c6d29271ccfa9ff73f7ab063"
+        }
+    }
+}

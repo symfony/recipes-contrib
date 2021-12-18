@@ -1,0 +1,68 @@
+{
+    "manifests": {
+        "msgphp/user-bundle": {
+            "manifest": {
+                "bundles": {
+                    "MsgPhp\\UserBundle\\MsgPhpUserBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/msgphp_user.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "use MsgPhp\\User\\Entity\\User;",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return function (ContainerConfigurator $container) {",
+                        "    $container->extension('msgphp_user', [",
+                        "        'class_mapping' => [",
+                        "            User::class => \\App\\Entity\\User\\User::class,",
+                        "        ],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/User/User.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity\\User;",
+                        "",
+                        "use MsgPhp\\User\\Entity\\User as BaseUser;",
+                        "use MsgPhp\\User\\UserIdInterface;",
+                        "",
+                        "/**",
+                        " * @final",
+                        " */",
+                        "class User extends BaseUser",
+                        "{",
+                        "    private $id;",
+                        "",
+                        "    public function __construct(UserIdInterface $id)",
+                        "    {",
+                        "        $this->id = $id;",
+                        "    }",
+                        "",
+                        "    public function getId(): UserIdInterface",
+                        "    {",
+                        "        return $this->id;",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "467ccfceb0143c35ed852ccd8f1d03effb73afc4"
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "dunglas/digital-ocean-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dunglas\\DigitalOceanBundle\\DunglasDigitalOceanBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Go to https://cloud.digitalocean.com/account/api/tokens to create your token",
+                    "DIGITAL_OCEAN_TOKEN": "<your-access-token>"
+                }
+            },
+            "files": {
+                "config/dunglas_digital_ocean.yaml": {
+                    "contents": [
+                        "dunglas_digital_ocean:",
+                        "    connections:",
+                        "        default: '%env(DIGITAL_OCEAN_TOKEN)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "26441b59cf6cb5f8254a08eb7c62a05e64b4753e"
+        }
+    }
+}

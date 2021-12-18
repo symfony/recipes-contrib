@@ -1,0 +1,101 @@
+{
+    "manifests": {
+        "swarrot/swarrot-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Swarrot\\SwarrotBundle\\SwarrotBundle": [
+                        "all"
+                    ]
+                },
+                "container": {
+                    "my_consumer.processor.service": "App\\Consumer\\MyConsumer"
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "env": {
+                    "RABBITMQ_HOST": "127.0.0.1",
+                    "RABBITMQ_PORT": "5672",
+                    "RABBITMQ_LOGIN": "user",
+                    "RABBITMQ_PASSWORD": "password"
+                }
+            },
+            "files": {
+                "config/packages/swarrot.yaml": {
+                    "contents": [
+                        "swarrot:",
+                        "#     provider: pecl # pecl or amqp_lib (require php-amqplib/php-amqplib)",
+                        "#     default_connection: rabbitmq",
+                        "#     default_command: swarrot.command.base # Swarrot\\SwarrotBundle\\Command\\SwarrotCommand",
+                        "#     logger: logger # logger or channel logger like monolog.logger.[my_channel]",
+                        "    connections:",
+                        "        rabbitmq:",
+                        "            host: \"%env(RABBITMQ_HOST)%\"",
+                        "            port: \"%env(int:RABBITMQ_PORT)%\"",
+                        "            login: \"%env(RABBITMQ_LOGIN)%\"",
+                        "            password: \"%env(RABBITMQ_PASSWORD)%\"",
+                        "            vhost: '/'",
+                        "#     consumers:",
+                        "#         my_consumer:",
+                        "#             processor: my_consumer.processor.service # Symfony service id implementing Swarrot\\Processor\\ProcessorInterface",
+                        "#             middleware_stack: # order matters",
+                        "#                  - configurator: swarrot.processor.signal_handler",
+                        "#                    extras:",
+                        "#                        signal_handler_signals:",
+                        "#                            - SIGTERM",
+                        "#                            - SIGINT",
+                        "#                            - SIGQUIT",
+                        "#                  - configurator: swarrot.processor.insomniac",
+                        "#                  - configurator: swarrot.processor.max_messages",
+                        "#                    extras:",
+                        "#                        max_messages: 100",
+                        "#                  - configurator: swarrot.processor.max_execution_time",
+                        "#                    extras:",
+                        "#                        max_execution_time: 300",
+                        "#                  - configurator: swarrot.processor.memory_limit",
+                        "#                    extras:",
+                        "#                        memory_limit: null",
+                        "#                  - configurator: swarrot.processor.doctrine_connection",
+                        "#                    extras:",
+                        "#                        doctrine_ping: true",
+                        "#                        doctrine_close_master: true",
+                        "#                  - configurator: swarrot.processor.doctrine_object_manager",
+                        "#                  - configurator: swarrot.processor.exception_catcher",
+                        "#                  - configurator: swarrot.processor.ack",
+                        "#                    extras:",
+                        "#                        requeue_on_error: false",
+                        "#                  - configurator: swarrot.processor.retry#",
+                        "#                    extras:",
+                        "#                        retry_exchange: retry",
+                        "#                        retry_attempts: 3",
+                        "#                        retry_routing_key_pattern: 'retry_%%attempt%%'",
+                        "#                  - configurator: swarrot.processor.new_relic",
+                        "#                    extras:",
+                        "#                        new_relic_app_name: null",
+                        "#                        new_relic_license: null",
+                        "#                        new_relic_transaction_name: null",
+                        "#                  - configurator: swarrot.processor.rpc_server",
+                        "#                    extras:",
+                        "#                        # Exchange on which rpc response will be published with `reply_to` as routing_key. ",
+                        "#                        # If not configured will publish on default exchange where routing_key is used to define receiving queue.",
+                        "#                        rpc_exchange: null ",
+                        "#                  - configurator: swarrot.processor.rpc_client",
+                        "#                    extras:",
+                        "#                        rpc_client_correlation_id: null",
+                        "#             extras:",
+                        "#                 poll_interval: 500000",
+                        "#     messages_types:",
+                        "#         my_publisher:",
+                        "#             connection: rabbitmq # use the default connection by default",
+                        "#             exchange: my_exchange",
+                        "#             routing_key: my_routing_key",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "1c77a3e26d17c85c335d5c255d736da8848069fd"
+        }
+    }
+}

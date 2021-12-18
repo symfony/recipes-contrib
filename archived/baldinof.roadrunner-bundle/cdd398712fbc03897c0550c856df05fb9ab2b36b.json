@@ -1,0 +1,65 @@
+{
+    "manifests": {
+        "baldinof/roadrunner-bundle": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "copy-from-package": {
+                    ".rr.yaml": ".rr.yaml",
+                    ".rr.dev.yaml": ".rr.dev.yaml"
+                },
+                "bundles": {
+                    "Baldinof\\RoadRunnerBundle\\BaldinofRoadRunnerBundle": [
+                        "all"
+                    ]
+                },
+                "gitignore": [
+                    "/bin/rr"
+                ],
+                "post-install-output": [
+                    "  * <fg=blue>Download</> RoadRunner locally: <comment>vendor/bin/rr get --location bin/</>",
+                    "  * <fg=blue>Run</> your application: <comment>bin/rr serve -c .rr.dev.yaml --debug</>",
+                    "  * <fg=blue>For production, use: <comment>bin/rr serve</>",
+                    "  * Visit http://localhost:8080"
+                ]
+            },
+            "files": {
+                "config/packages/baldinof_road_runner.yaml": {
+                    "contents": [
+                        "baldinof_road_runner:",
+                        "    # When the kernel should be rebooted.",
+                        "    # See https://github.com/baldinof/roadrunner-bundle#kernel-reboots",
+                        "    kernel_reboot:",
+                        "        # if you want to use a fresh container on each request, use the `always` strategy",
+                        "        strategy: on_exception",
+                        "        # Exceptions you KNOW that do not put your app in an errored state",
+                        "        allowed_exceptions:",
+                        "            - Symfony\\Component\\HttpKernel\\Exception\\HttpExceptionInterface",
+                        "            - Symfony\\Component\\Serializer\\Exception\\ExceptionInterface",
+                        "            - Symfony\\Contracts\\HttpClient\\Exception\\ExceptionInterface",
+                        "",
+                        "    # Allow to send prometheus metrics to the main RoadRunner process,",
+                        "    # via a `Spiral\\RoadRunner\\MetricsInterface` service.",
+                        "    # See https://github.com/baldinof/roadrunner-bundle#metrics",
+                        "    metrics:",
+                        "        enabled: false",
+                        "        # collect:",
+                        "        #     my_counter:",
+                        "        #         type: counter",
+                        "        #         help: Some help",
+                        "",
+                        "",
+                        "    # You can use middlewares to manipulate Symfony requests & responses.",
+                        "    # See https://github.com/baldinof/roadrunner-bundle#middlewares",
+                        "    # middlewares:",
+                        "    #     - App\\Middleware\\YourMiddleware",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "cdd398712fbc03897c0550c856df05fb9ab2b36b"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "async-aws/async-aws-bundle": {
+            "manifest": {
+                "bundles": {
+                    "AsyncAws\\Symfony\\Bundle\\AsyncAwsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/async_aws.yaml": {
+                    "contents": [
+                        "# Read documentation at https://async-aws.com/integration/symfony-bundle.html",
+                        "async_aws:",
+                        "    config:",
+                        "",
+                        "    # All installed clients are automatically autowired. Use this section to customize clients",
+                        "    clients:",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "36bc5854429183d4ba6980c916f9e9284deb3a16"
+        }
+    }
+}

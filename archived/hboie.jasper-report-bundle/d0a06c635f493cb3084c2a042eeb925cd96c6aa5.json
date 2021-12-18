@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "hboie/jasper-report-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Hboie\\JasperReportBundle\\HboieJasperReportBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "HBOIE_JASPER_REPORT_USERNAME": "jasperadmin",
+                    "HBOIE_JASPER_REPORT_PASSWORD": "jasperadmin",
+                    "HBOIE_JASPER_REPORT_ORGID": ""
+                }
+            },
+            "files": {
+                "config/packages/jasper_report.yaml": {
+                    "contents": [
+                        "hboie_jasper_report:",
+                        "    host:      'http://localhost:8080/jasperserver'",
+                        "    username:  '%env(HBOIE_JASPER_REPORT_USERNAME)%'",
+                        "    password:  '%env(HBOIE_JASPER_REPORT_PASSWORD)%'",
+                        "    org_id:    '%env(HBOIE_JASPER_REPORT_ORGID)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d0a06c635f493cb3084c2a042eeb925cd96c6aa5"
+        }
+    }
+}

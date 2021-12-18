@@ -1,0 +1,50 @@
+{
+    "manifests": {
+        "bitbag/shipping-export-plugin": {
+            "manifest": {
+                "bundles": {
+                    "BitBag\\SyliusShippingExportPlugin\\BitBagSyliusShippingExportPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "gitignore": [
+                    "/shipping_labels/"
+                ],
+                "post-install-output": [
+                    "<bg=blue;fg=white>                                      </>",
+                    "<bg=blue;fg=white;options=bold> To finish the install                </>",
+                    "<bg=blue;fg=white;options=bold> BitBag Sylius Shipping Export Plugin </>",
+                    "<bg=blue;fg=white>                                      </>",
+                    "",
+                    "  * <fg=blue>Create</> directory named <comment>shipping_labels</comment> in project root or customize <comment>bitbag.shipping_labels_path</comment> parameter.",
+                    "",
+                    "  If you want to contact us, the best way is to fill the form on our website or send us an e-mail to <comment>hello@bitbag.io</comment> with your question(s).",
+                    "  We guarantee that we answer as soon as we can!"
+                ]
+            },
+            "files": {
+                "config/packages/bitbag_shipping_export_plugin.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@BitBagSyliusShippingExportPlugin/Resources/config/config.yml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/bitbag_shipping_export_plugin.yaml": {
+                    "contents": [
+                        "bitbag_shipping_export_plugin:",
+                        "    resource: \"@BitBagSyliusShippingExportPlugin/Resources/config/routing.yml\"",
+                        "    prefix: /admin",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "33f83f4e767e8a6ddecfdfc5ab65ccc81bcb2758"
+        }
+    }
+}

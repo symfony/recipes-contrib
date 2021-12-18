@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "sulu/webpack-encore": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "copy-from-package": {
+                    "assets/": "assets/"
+                },
+                "gitignore": [
+                    "node_modules/",
+                    "npm-debug.log",
+                    "yarn-error.log"
+                ]
+            },
+            "files": {
+                "config/packages/assets.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    assets:",
+                        "        packages:",
+                        "            website:",
+                        "                json_manifest_path: '%kernel.project_dir%/public/build/website/manifest.json'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "03949e142faeaaefbdd442bbc1ccd374ab8048da"
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "kunicmarko/jms-messenger-adapter": {
+            "manifest": {
+                "bundles": {
+                    "KunicMarko\\JMSMessengerAdapter\\Bridge\\Symfony\\JMSMessengerAdapterBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/jms_messenger.yaml": {
+                    "contents": [
+                        "# Read the documentation: https://github.com/kunicmarko20/jms-messenger-adapter#documentation",
+                        "",
+                        "framework:",
+                        "    messenger:",
+                        "        enabled: true",
+                        "        serializer:",
+                        "            default_serializer: messenger.transport.jms_serializer",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6bf8921b8c99eb4a89ae573b47125678a27d756a"
+        }
+    }
+}

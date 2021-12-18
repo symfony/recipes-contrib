@@ -1,0 +1,57 @@
+{
+    "manifests": {
+        "symfony-cmf/cmf-phpcr-dbal-pack": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Cmf\\Bundle\\RoutingBundle\\CmfRoutingBundle": [
+                        "all"
+                    ],
+                    "Symfony\\Cmf\\Bundle\\MenuBundle\\CmfMenuBundle": [
+                        "all"
+                    ],
+                    "Symfony\\Cmf\\Bundle\\CoreBundle\\CmfCoreBundle": [
+                        "all"
+                    ],
+                    "Symfony\\Cmf\\Bundle\\ContentBundle\\CmfContentBundle": [
+                        "all"
+                    ],
+                    "Symfony\\Cmf\\Bundle\\BlockBundle\\CmfBlockBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/cmf_phpcr_dbal.yaml": {
+                    "contents": [
+                        "# persistence is configured through propagation of core-bundle's configuration: https://symfony.com/doc/current/cmf/bundles/core/configuration.html#persistence",
+                        "# So core-bundle, menu-bundle, block-bundle and routing bundle can be configured on their own too. Have a look at:",
+                        "# menu-bundle: https://symfony.com/doc/current/cmf/bundles/menu/configuration.html",
+                        "# block-bundle: https://symfony.com/doc/current/cmf/bundles/block/configuration.html",
+                        "# content-bundle: https://symfony.com/doc/current/cmf/bundles/content/configuration.html",
+                        "# routing-bundle: https://symfony.com/doc/current/cmf/bundles/routing/configuration.html",
+                        "# for their specific configuration",
+                        "",
+                        "cmf_routing:",
+                        "    chain:",
+                        "        routers_by_id:",
+                        "            cmf_routing.dynamic_router: 200",
+                        "            router.default:             100",
+                        "",
+                        "cmf_core:",
+                        "    # content-bundle, menu-bundle, block-bundle and routing-bundle will get same persistence configduration as core",
+                        "    # read about configuration: https://symfony.com/doc/current/cmf/bundles/core/configuration.html",
+                        "    persistence:",
+                        "        phpcr: ~",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "90fb70531a537857543e630c8b819d1ded44f8f3"
+        }
+    }
+}

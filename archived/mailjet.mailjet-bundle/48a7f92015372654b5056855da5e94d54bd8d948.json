@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "mailjet/mailjet-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Mailjet\\MailjetBundle\\MailjetBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MAILJET_APIKEY_PUBLIC": "your-api_key",
+                    "MAILJET_APIKEY_PRIVATE": "@@your-secret_key"
+                }
+            },
+            "files": {
+                "config/packages/mailjet.yaml": {
+                    "contents": [
+                        "mailjet:",
+                        "    api_key:    \"%env(MAILJET_APIKEY_PUBLIC)%\"",
+                        "    secret_key: \"%env(MAILJET_APIKEY_PRIVATE)%\"",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "48a7f92015372654b5056855da5e94d54bd8d948"
+        }
+    }
+}

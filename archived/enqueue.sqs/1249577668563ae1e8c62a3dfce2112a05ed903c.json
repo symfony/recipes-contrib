@@ -1,0 +1,17 @@
+{
+    "manifests": {
+        "enqueue/sqs": {
+            "manifest": {
+                "post-install-output": [
+                    "  * Configure <comment>ENQUEUE_DSN=sqs:?key=aKey&secret=aSecret&region=aRegion</comment>",
+                    "    in your <comment>.env</comment> file.",
+                    "",
+                    "  * For the full options, see",
+                    "    <comment>https://github.com/php-enqueue/enqueue-dev/blob/master/docs/transport/sqs.md</comment>"
+                ]
+            },
+            "files": [],
+            "ref": "1249577668563ae1e8c62a3dfce2112a05ed903c"
+        }
+    }
+}

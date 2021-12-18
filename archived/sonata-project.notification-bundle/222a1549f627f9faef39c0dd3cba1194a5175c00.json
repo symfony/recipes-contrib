@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "sonata-project/notification-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Sonata\\NotificationBundle\\SonataNotificationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sonata_notification.yaml": {
+                    "contents": [
+                        "sonata_notification:",
+                        "    consumers:",
+                        "        register_default: false",
+                        "    admin:",
+                        "        enabled: false",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "222a1549f627f9faef39c0dd3cba1194a5175c00"
+        }
+    }
+}

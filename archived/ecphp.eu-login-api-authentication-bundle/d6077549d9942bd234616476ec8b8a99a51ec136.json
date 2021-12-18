@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "ecphp/eu-login-api-authentication-bundle": {
+            "manifest": {
+                "bundles": {
+                    "EcPhp\\EuLoginApiAuthenticationBundle\\EuLoginApiAuthenticationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "EULOGIN_CLIENT_ID": "",
+                    "EULOGIN_CLIENT_SECRET": "",
+                    "EULOGIN_ENV": "acceptance"
+                }
+            },
+            "files": {
+                "config/packages/dev/eu_login_api_authentication.yaml": {
+                    "contents": [
+                        "eu_login_api_authentication:",
+                        "    client_id: \"%env(EULOGIN_CLIENT_ID)%\"",
+                        "    client_secret: \"%env(EULOGIN_CLIENT_SECRET)%\"",
+                        "    environment: \"%env(EULOGIN_ENV)%\" # Available values are: acceptance, production",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/dev/eu_login_api_authentication.yaml": {
+                    "contents": [
+                        "eu_login_api_authentication:",
+                        "    resource: '@EuLoginApiAuthenticationBundle/Resources/config/routes/routes.php'",
+                        "    prefix: /api",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d6077549d9942bd234616476ec8b8a99a51ec136"
+        }
+    }
+}

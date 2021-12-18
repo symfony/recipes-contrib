@@ -1,0 +1,18 @@
+{
+    "manifests": {
+        "siganushka/generic-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Siganushka\\GenericBundle\\SiganushkaGenericBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": [],
+            "ref": "74fe9f1ba467f52335bc050e8812ecf8dd442ebb"
+        }
+    }
+}

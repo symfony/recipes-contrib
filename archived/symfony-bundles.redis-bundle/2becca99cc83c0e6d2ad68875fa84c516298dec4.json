@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "symfony-bundles/redis-bundle": {
+            "manifest": {
+                "bundles": {
+                    "SymfonyBundles\\RedisBundle\\SymfonyBundlesRedisBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "REDIS_URL": "tcp://127.0.0.1:6379?database=0"
+                }
+            },
+            "files": {
+                "config/packages/sb_redis.yaml": {
+                    "contents": [
+                        "sb_redis:",
+                        "    clients:",
+                        "        default:",
+                        "            $options:    []",
+                        "            $parameters: ['%env(REDIS_URL)%']",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2becca99cc83c0e6d2ad68875fa84c516298dec4"
+        }
+    }
+}

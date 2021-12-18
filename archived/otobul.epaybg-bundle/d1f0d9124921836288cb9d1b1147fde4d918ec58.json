@@ -1,0 +1,48 @@
+{
+    "manifests": {
+        "otobul/epaybg-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Otobul\\EpaybgBundle\\OtobulEpaybgBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "OTOBUL_EPAYBG_MIN": "YOUR_EPAYBG_MIN",
+                    "OTOBUL_EPAYBG_SECRET": "YOUR_EPAYBG_SECRET",
+                    "OTOBUL_EPAYBG_IS_DEMO": "true"
+                }
+            },
+            "files": {
+                "config/packages/otobul_epaybg.yaml": {
+                    "contents": [
+                        "otobul_epaybg:",
+                        "    # Identification number of the merchant",
+                        "    min: '%env(OTOBUL_EPAYBG_MIN)%'",
+                        "",
+                        "    # The secret word of the merchant",
+                        "    secret: '%env(OTOBUL_EPAYBG_SECRET)%'",
+                        "",
+                        "    # If true all requests will be sent to ePay.bg\u2019s Demo System",
+                        "    isDemo: '%env(bool:OTOBUL_EPAYBG_IS_DEMO)%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/otobul_epaybg.yaml": {
+                    "contents": [
+                        "otobul_epaybg:",
+                        "    resource: '@OtobulEpaybgBundle/Resources/config/routes.xml'",
+                        "    prefix: /webhook/epaybg",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d1f0d9124921836288cb9d1b1147fde4d918ec58"
+        }
+    }
+}

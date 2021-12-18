@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "enqueue/enqueue-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Enqueue\\Bundle\\EnqueueBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "ENQUEUE_DSN": "null://"
+                }
+            },
+            "files": {
+                "config/packages/enqueue.yaml": {
+                    "contents": [
+                        "enqueue:",
+                        "    default:",
+                        "        transport: '%env(resolve:ENQUEUE_DSN)%'",
+                        "        client: ~",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/test/enqueue.yaml": {
+                    "contents": [
+                        "enqueue:",
+                        "    default:",
+                        "        transport: 'null:'",
+                        "        client:",
+                        "            traceable_producer: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a025d0d707c6a7fefb8903f1c9844700dc69ee9d"
+        }
+    }
+}

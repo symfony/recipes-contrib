@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "monsieurbiz/sylius-sales-reports-plugin": {
+            "manifest": {
+                "bundles": {
+                    "MonsieurBiz\\SyliusSalesReportsPlugin\\MonsieurBizSyliusSalesReportsPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/monsieurbiz_sylius_sales_reports_plugin.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@MonsieurBizSyliusSalesReportsPlugin/Resources/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/monsieurbiz_sylius_sales_reports_plugin.yaml": {
+                    "contents": [
+                        "monsieurbiz_sales_reports_plugin:",
+                        "    resource: \"@MonsieurBizSyliusSalesReportsPlugin/Resources/config/routing.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b775ab7f4ef27fb8a766061d4abda52682951876"
+        }
+    }
+}

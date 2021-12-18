@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "gonzakpo/websocket-bundle": {
+            "manifest": {
+                "bundles": {
+                    "RollandRock\\WebsocketBundle\\RollandRockWebsocketBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "WEBSOCKET_PORT": "4242"
+                }
+            },
+            "files": {
+                "config/packages/gonzakpo_websocket.yaml": {
+                    "contents": [
+                        "rolland_rock_websocket:",
+                        "    port: '%env(WEBSOCKET_PORT)%'",
+                        "    #client: App\\Handler\\WelcomeHandler",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a75a0cfcb131e0b676291431b17fbc627d27dca9"
+        }
+    }
+}

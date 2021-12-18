@@ -1,0 +1,26 @@
+{
+    "manifests": {
+        "ravenflux/sort-functions": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ravenflux_sort_functions.yaml": {
+                    "contents": [
+                        "services:",
+                        "    ravenflux.twig.extension.sort_functions:",
+                        "        class: RavenFlux\\Twig\\SortExtension",
+                        "        tags:",
+                        "            -",
+                        "                name: twig.extension",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f9f2364faad231fc2150b9f69c2f696c371ed19e"
+        }
+    }
+}

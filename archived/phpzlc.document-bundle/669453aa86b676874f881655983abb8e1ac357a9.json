@@ -1,0 +1,124 @@
+{
+    "manifests": {
+        "phpzlc/document-bundle": {
+            "manifest": {
+                "bundles": {
+                    "PHPZlc\\Document\\DocumentBundle\\DocumentBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-package": {
+                    "src/DocumentBundle/phpzlc-document.yaml": "config/packages/phpzlc-document.yaml"
+                },
+                "copy-from-recipe": {
+                    "Document/": "src/Document/"
+                },
+                "env": {
+                    "DOC_HOST": "http://dome-api.com"
+                },
+                "gitignore": [
+                    "public/apidoc/"
+                ]
+            },
+            "files": {
+                "Document/Config.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Document;",
+                        "",
+                        "class Config",
+                        "{",
+                        "    /**",
+                        "     * \u6807\u9898",
+                        "     *",
+                        "     * @return string",
+                        "     */",
+                        "    public static function getTitle()",
+                        "    {",
+                        "        return '\u6f14\u793a';",
+                        "    }",
+                        "",
+                        "    /**",
+                        "     * \u51fa\u7248\u5546",
+                        "     *",
+                        "     * @return string",
+                        "     */",
+                        "    public static function getPublishing()",
+                        "    {",
+                        "        return '';",
+                        "    }",
+                        "",
+                        "    /**",
+                        "     * \u8bf4\u660e",
+                        "     *",
+                        "     * @return string",
+                        "     */",
+                        "    public static function getExplain()",
+                        "    {",
+                        "        return '';",
+                        "    }",
+                        "",
+                        "    /**",
+                        "     * \u6ce8\u610f",
+                        "     *",
+                        "     * @return string",
+                        "     */",
+                        "    public static function getNote()",
+                        "    {",
+                        "        return '';",
+                        "    }",
+                        "",
+                        "    /**",
+                        "     * \u9644\u5f55",
+                        "     *",
+                        "     * @return string",
+                        "     */",
+                        "    public static function getAppendix()",
+                        "    {",
+                        "        return '';",
+                        "    }",
+                        "",
+                        "    /**",
+                        "     * \u4e3b\u673a",
+                        "     *",
+                        "     * @return mixed",
+                        "     */",
+                        "    public static function getHost()",
+                        "    {",
+                        "        return $_ENV['DOC_HOST'];",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "Document/DemoDocument.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Document;",
+                        "",
+                        "use PHPZlc\\Document\\Document;",
+                        "",
+                        "class DemoDocument extends Document",
+                        "{",
+                        "    public function demoAction()",
+                        "    {",
+                        "        $this->add()",
+                        "            ->setTitle('\u6f14\u793a\u63a5\u53e3')",
+                        "            ->setUrl('/demo')",
+                        "            ->setReturnType('html')",
+                        "            ->setReturn('\u6f14\u793a\u63a5\u53e3')",
+                        "            ->generate();",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "669453aa86b676874f881655983abb8e1ac357a9"
+        }
+    }
+}

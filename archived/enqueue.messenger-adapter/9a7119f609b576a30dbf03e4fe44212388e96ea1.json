@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "enqueue/messenger-adapter": {
+            "manifest": {
+                "bundles": {
+                    "Enqueue\\MessengerAdapter\\Bundle\\EnqueueAdapterBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "9a7119f609b576a30dbf03e4fe44212388e96ea1"
+        }
+    }
+}

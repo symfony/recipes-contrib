@@ -1,0 +1,42 @@
+{
+    "manifests": {
+        "sulu/sylius-consumer-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Sulu\\Bundle\\SyliusConsumerBundle\\SuluSyliusConsumerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SYLIUS_BASE_URL": "",
+                    "SULU_SYLIUS_MESSENGER_TRANSPORT_DSN": ""
+                }
+            },
+            "files": {
+                "config/packages/sulu_sylius_consumer.yaml": {
+                    "contents": [
+                        "sulu_sylius_consumer:",
+                        "    sylius_base_url: '%env(SYLIUS_BASE_URL)%'",
+                        "    # taxon_category_adapter:",
+                        "    #     enabled: true",
+                        "",
+                        "framework:",
+                        "    messenger:",
+                        "        transports:",
+                        "            sulu_sylius_transport: '%env(SULU_SYLIUS_MESSENGER_TRANSPORT_DSN)%'",
+                        "        buses:",
+                        "            sulu_sylius_producer.messenger_bus:",
+                        "                middleware:",
+                        "                    - doctrine_transaction",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a509964c56476d2bbaf36f0addb8e1c5a2f2bf5d"
+        }
+    }
+}

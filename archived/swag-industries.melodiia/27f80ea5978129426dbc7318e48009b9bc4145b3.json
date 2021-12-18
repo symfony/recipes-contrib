@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "swag-industries/melodiia": {
+            "manifest": {
+                "bundles": {
+                    "SwagIndustries\\Melodiia\\MelodiiaBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/melodiia.yaml": {
+                    "contents": [
+                        "melodiia:",
+                        "    apis:",
+                        "        # Define as much APIs you want here",
+                        "        main:",
+                        "            # This path impacts the behavior of Melodiia. Change it if required",
+                        "            base_path: /api/v1",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "27f80ea5978129426dbc7318e48009b9bc4145b3"
+        }
+    }
+}

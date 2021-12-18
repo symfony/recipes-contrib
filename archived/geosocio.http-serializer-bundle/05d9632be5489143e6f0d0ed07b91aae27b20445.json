@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "geosocio/http-serializer-bundle": {
+            "manifest": {
+                "bundles": {
+                    "GeoSocio\\HttpSerializerBundle\\GeoSocioHttpSerializerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/geosocio_http_serializer.yaml": {
+                    "contents": [
+                        "geosocio_http_serializer:",
+                        "    default_format: 'json'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "05d9632be5489143e6f0d0ed07b91aae27b20445"
+        }
+    }
+}

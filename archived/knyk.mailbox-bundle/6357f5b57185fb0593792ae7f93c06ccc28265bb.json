@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "knyk/mailbox-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Knyk\\MailboxBundle\\MailboxBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/knyk_mailbox.yaml": {
+                    "contents": [
+                        "mailbox:",
+                        "    connections: []",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6357f5b57185fb0593792ae7f93c06ccc28265bb"
+        }
+    }
+}

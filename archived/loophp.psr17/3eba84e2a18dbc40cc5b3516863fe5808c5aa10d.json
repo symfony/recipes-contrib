@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "loophp/psr17": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/loophp_psr17.yaml": {
+                    "contents": [
+                        "services:",
+                        "    # Register loophp/psr17/Psr17 class and autowire/autoconfigure it.",
+                        "    loophp\\psr17\\Psr17:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    # Alias the service to the Psr17 interface.",
+                        "    loophp\\psr17\\Psr17Interface: '@loophp\\psr17\\Psr17'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3eba84e2a18dbc40cc5b3516863fe5808c5aa10d"
+        }
+    }
+}

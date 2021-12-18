@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "php-http/httplug-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Http\\HttplugBundle\\HttplugBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/httplug.yaml": {
+                    "contents": [
+                        "httplug:",
+                        "    plugins:",
+                        "        redirect:",
+                        "            preserve_header: true",
+                        "",
+                        "    discovery:",
+                        "        client: 'auto'",
+                        "",
+                        "    clients:",
+                        "        app:",
+                        "            http_methods_client: true",
+                        "            plugins:",
+                        "                - 'httplug.plugin.logger'",
+                        "                - 'httplug.plugin.redirect'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9751b9d6e972c6c3e3680a3bfcce74e830c9c11f"
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "tilleuls/url-signer-bundle": {
+            "manifest": {
+                "bundles": {
+                    "CoopTilleuls\\UrlSignerBundle\\CoopTilleulsUrlSignerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SIGNATURE_KEY": "change_me"
+                }
+            },
+            "files": {
+                "config/packages/url_signer.yaml": {
+                    "contents": [
+                        "coop_tilleuls_url_signer:",
+                        "    signature_key: '%env(string:SIGNATURE_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "20cec2e3050fe3d40d514b8c46ac934ab1f0580e"
+        }
+    }
+}

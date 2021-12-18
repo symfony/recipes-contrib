@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "kunstmaan/form-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Kunstmaan\\FormBundle\\KunstmaanFormBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/kunstmaan_form.yaml": {
+                    "contents": [
+                        "KunstmaanFormBundle:",
+                        "    resource: \"@KunstmaanFormBundle/Resources/config/routing.yml\"",
+                        "    # If your site is not multi language, remove the \"{_locale}/\" part of the prefix and the requirements",
+                        "    prefix:   /{_locale}/",
+                        "    requirements:",
+                        "        _locale: \"%kunstmaan_admin.required_locales%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "83a7fdab06983ea08c4c9e69db2ae12f33000525"
+        }
+    }
+}

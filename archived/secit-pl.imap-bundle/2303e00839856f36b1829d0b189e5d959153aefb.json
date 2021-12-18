@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "secit-pl/imap-bundle": {
+            "manifest": {
+                "bundles": {
+                    "SecIT\\ImapBundle\\ImapBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/imap.yaml": {
+                    "contents": [
+                        "imap:",
+                        "    connections: []",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2303e00839856f36b1829d0b189e5d959153aefb"
+        }
+    }
+}

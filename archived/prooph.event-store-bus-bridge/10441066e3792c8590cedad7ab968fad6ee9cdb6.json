@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "prooph/event-store-bus-bridge": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/prooph_event_store_bus_bridge.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        public: false",
+                        "",
+                        "    Prooph\\EventStoreBusBridge\\EventPublisher:",
+                        "        arguments:",
+                        "            - '@prooph_service_bus.default_event_bus'",
+                        "        tags:",
+                        "            - { name: 'prooph_event_store.default.plugin' }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "10441066e3792c8590cedad7ab968fad6ee9cdb6"
+        }
+    }
+}

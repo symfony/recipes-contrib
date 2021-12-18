@@ -1,0 +1,46 @@
+{
+    "manifests": {
+        "emag-tech-labs/rabbitmq-bundle": {
+            "manifest": {
+                "bundles": {
+                    "OldSound\\RabbitMqBundle\\OldSoundRabbitMqBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "RABBITMQ_URL": "amqp://guest:guest@localhost:5672",
+                    "RABBITMQ_VHOST": "/"
+                }
+            },
+            "files": {
+                "config/packages/old_sound_rabbit_mq.yaml": {
+                    "contents": [
+                        "old_sound_rabbit_mq:",
+                        "    connections:",
+                        "        default:",
+                        "            url: '%env(RABBITMQ_URL)%'",
+                        "            vhost: '%env(RABBITMQ_VHOST)%'",
+                        "            lazy:     true",
+                        "            connection_timeout: 3",
+                        "            read_write_timeout: 3",
+                        "",
+                        "            # requires php-amqplib v2.4.1+ and PHP5.4+",
+                        "            keepalive: false",
+                        "",
+                        "            # requires php-amqplib v2.4.1+",
+                        "            heartbeat: 0",
+                        "",
+                        "            #requires php_sockets.dll",
+                        "            use_socket: false # default false",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8da2926d2864c2f4bb099e94ad259f2c0ecfe6df"
+        }
+    }
+}

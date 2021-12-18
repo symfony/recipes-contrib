@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "merceslab/spreadsheet-client-bundle": {
+            "manifest": {
+                "bundles": {
+                    "MercesLab\\Bundle\\SpreadsheetClientBundle\\MercesLabSpreadsheetClientBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "GOOGLE_CREDENTIALS": ""
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/MercesLyon/spreadsheet-client-bundle</>",
+                    "  * <fg=blue>Configure</> using the <comment>GOOGLE_CREDENTIALS</> env variable and in the <comment>config/packages/merces_lab_spreadsheet_client.yaml</> configuration file"
+                ]
+            },
+            "files": {
+                "config/packages/merces_lab_spreadsheet_client.yaml": {
+                    "contents": [
+                        "merces_lab_spreadsheet_client:",
+                        "    google:",
+                        "        credentials: '%env(GOOGLE_CREDENTIALS)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5ab4169af35adc11b321284dc75f00da8d0cadf7"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "enqueue/redis": {
+            "manifest": {
+                "env": {
+                    "ENQUEUE_DSN": "redis:"
+                }
+            },
+            "files": [],
+            "ref": "2f8314cdcb8f459135aadbcb1e6545ccfdd899d9"
+        }
+    }
+}

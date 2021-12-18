@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "damienharper/doctrine-audit-bundle": {
+            "manifest": {
+                "bundles": {
+                    "DH\\DoctrineAuditBundle\\DHDoctrineAuditBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/dh_doctrine_audit.yaml": {
+                    "contents": [
+                        "dh_doctrine_audit:",
+                        "    # Configuration reference available at:",
+                        "    # https://github.com/DamienHarper/DoctrineAuditBundle#configuration",
+                        "",
+                        "    entities:",
+                        "#        MyBundle\\Entity\\MyAuditedEntity1: null   # all MyAuditedEntity1 properties are audited",
+                        "#        MyBundle\\Entity\\MyAuditedEntity2:",
+                        "#            ignored_columns:                  # MyAuditedEntity2 properties to be ignored by the audit process",
+                        "#                - createdAt",
+                        "#                - updatedAt",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ab8b371ee4206c79a144f3617d8eef3d6e7b87be"
+        }
+    }
+}

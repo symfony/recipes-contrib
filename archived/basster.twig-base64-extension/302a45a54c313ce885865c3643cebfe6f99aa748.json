@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "basster/twig-base64-extension": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/basster_twig_base64.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        public: false",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    # registers all neccessary classes as services.",
+                        "    Basster\\TwigBase64\\Converter\\ImageToBase64Converter: ~",
+                        "    Basster\\TwigBase64\\Twig\\Base64ImageExtension: ~",
+                        "    Basster\\TwigBase64\\Converter\\FileConverterInterface: '@Basster\\TwigBase64\\Converter\\ImageToBase64Converter'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "302a45a54c313ce885865c3643cebfe6f99aa748"
+        }
+    }
+}

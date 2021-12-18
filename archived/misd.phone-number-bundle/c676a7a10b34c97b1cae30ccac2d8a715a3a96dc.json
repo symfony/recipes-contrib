@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "misd/phone-number-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Misd\\PhoneNumberBundle\\MisdPhoneNumberBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=green;fg=white></>",
+                    "<bg=green;fg=white> You now can use the phone bundle as descriped here: </>",
+                    "<bg=green;fg=white> https://github.com/misd-service-development/phone-number-bundle#usage </>",
+                    "<bg=green;fg=white> The Doctrine configuration has been already done.</>",
+                    "<bg=green;fg=white> You now can use `phone_number` as a ORM-Type: </>",
+                    "",
+                    "  /** @ORM\\Column(type=\"phone_number\") */",
+                    "  private $phoneNumber;"
+                ]
+            },
+            "files": {
+                "config/packages/misd_phone_number.yaml": {
+                    "contents": [
+                        "# To persist libphonenumber\\PhoneNumber objects, add the Misd\\PhoneNumberBundle\\Doctrine\\DBAL\\Types\\PhoneNumberType mapping to your application's config.",
+                        "# This requires: doctrine/doctrine-bundle",
+                        "doctrine:",
+                        "    dbal:",
+                        "        types:",
+                        "            phone_number: Misd\\PhoneNumberBundle\\Doctrine\\DBAL\\Types\\PhoneNumberType",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c676a7a10b34c97b1cae30ccac2d8a715a3a96dc"
+        }
+    }
+}

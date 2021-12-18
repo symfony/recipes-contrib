@@ -1,0 +1,42 @@
+{
+    "manifests": {
+        "backup-manager/symfony": {
+            "manifest": {
+                "bundles": {
+                    "BM\\BackupManagerBundle\\BMBackupManagerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "DATABASE_URL": "mysql://db_user:db_password@127.0.0.1:3306/db_name"
+                },
+                "post-install-output": [
+                    "  * Configure your application:",
+                    "    1. Make sure you have proper values in your .env file.",
+                    "    2. Configure a good storage for your backups. See the documentation for all possible values. https://github.com/backup-manager/symfony"
+                ]
+            },
+            "files": {
+                "config/packages/bm_backup_manager.yaml": {
+                    "contents": [
+                        "# See full config at https://github.com/backup-manager/symfony",
+                        "bm_backup_manager:",
+                        "    database:",
+                        "        development:",
+                        "            dsn: '%env(resolve:DATABASE_URL)%'",
+                        "    storage:",
+                        "        local:",
+                        "            type: Local",
+                        "            root: '%kernel.cache_dir%/db'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "4bb70c3f71c9bcd581e28724f50569af236df758"
+        }
+    }
+}

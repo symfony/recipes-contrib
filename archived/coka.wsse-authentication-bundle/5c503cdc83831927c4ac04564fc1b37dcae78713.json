@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "coka/wsse-authentication-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Oka\\WSSEAuthenticationBundle\\OkaWSSEAuthenticationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/oka_wsse_authentication.yaml": {
+                    "contents": [
+                        "oka_wsse_authentication:",
+                        "    db_driver: orm",
+                        "    nonce:",
+                        "        save_path: '%kernel.cache_dir%/oka_wsse/nonces'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5c503cdc83831927c4ac04564fc1b37dcae78713"
+        }
+    }
+}

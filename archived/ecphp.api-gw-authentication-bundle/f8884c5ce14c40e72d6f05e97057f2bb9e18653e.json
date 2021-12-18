@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "ecphp/api-gw-authentication-bundle": {
+            "manifest": {
+                "bundles": {
+                    "EcPhp\\ApiGwAuthenticationBundle\\ApiGwAuthenticationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/dev/api_gw_authentication.yaml": {
+                    "contents": [
+                        "api_gw_authentication:",
+                        "    defaults:",
+                        "        env: acceptance # Available values are: acceptance, intra, production, user",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/dev/api_gw_authentication.yaml": {
+                    "contents": [
+                        "api_gw_authentication_bundle:",
+                        "    resource: '@ApiGwAuthenticationBundle/Resources/config/routes/routes.php'",
+                        "    prefix: /api",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f8884c5ce14c40e72d6f05e97057f2bb9e18653e"
+        }
+    }
+}

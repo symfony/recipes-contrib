@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "becklyn/translations": {
+            "manifest": {
+                "bundles": {
+                    "Becklyn\\Translations\\BecklynTranslationsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/becklyn_translations.yaml": {
+                    "contents": [
+                        "_import.becklyn_translations:",
+                        "    resource: '@BecklynTranslationsBundle/Resources/config/routes.yaml'",
+                        "    prefix: /_v/translations/",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b827e87157a4937728b199c68fddcc0b63632c2f"
+        }
+    }
+}

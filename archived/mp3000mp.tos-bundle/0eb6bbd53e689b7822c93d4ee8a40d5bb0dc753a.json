@@ -1,0 +1,40 @@
+{
+    "manifests": {
+        "mp3000mp/tos-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Mp3000mp\\TOSBundle\\Mp3000mpTOSBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/mp3000mp_tos.yaml": {
+                    "contents": [
+                        "mp3000mp_tos:",
+                        "    kernel_event:",
+                        "        authenticators:",
+                        "            - main",
+                        "        priority: -20",
+                        "    user_provider: App\\Entity\\User",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/mp3000mp_tos.yaml": {
+                    "contents": [
+                        "mp3000mp_tos:",
+                        "    resource: \"@Mp3000mpTOSBundle/Resources/config/routes.yaml\"",
+                        "    prefix: /tos",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0eb6bbd53e689b7822c93d4ee8a40d5bb0dc753a"
+        }
+    }
+}

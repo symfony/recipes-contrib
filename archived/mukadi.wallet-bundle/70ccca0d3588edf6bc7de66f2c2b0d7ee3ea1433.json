@@ -1,0 +1,20 @@
+{
+    "manifests": {
+        "mukadi/wallet-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Mukadi\\WalletBundle\\MukadiWalletBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-package": {
+                    "res/config/": "%CONFIG_DIR%/",
+                    "res/Entity/": "%SRC_DIR%/Entity/",
+                    "res/Repository/": "%SRC_DIR%/Repository/"
+                }
+            },
+            "files": [],
+            "ref": "70ccca0d3588edf6bc7de66f2c2b0d7ee3ea1433"
+        }
+    }
+}

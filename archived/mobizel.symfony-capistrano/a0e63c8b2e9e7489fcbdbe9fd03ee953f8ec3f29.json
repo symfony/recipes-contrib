@@ -1,0 +1,20 @@
+{
+    "manifests": {
+        "mobizel/symfony-capistrano": {
+            "manifest": {
+                "copy-from-package": {
+                    "Capfile": "Capfile",
+                    "Gemfile": "Gemfile",
+                    "etc/": "etc/"
+                },
+                "post-install-output": [
+                    "Please update etc/capistrano/deploy.rb, etc/capistrano/deploy/staging.rb and etc/capistrano/deploy/production.rb to accurately reflect your needs.",
+                    "",
+                    "  * <fg=blue>Read</> the capistrano symfony documentation at <comment>https://github.com/capistrano/symfony</>"
+                ]
+            },
+            "files": [],
+            "ref": "a0e63c8b2e9e7489fcbdbe9fd03ee953f8ec3f29"
+        }
+    }
+}

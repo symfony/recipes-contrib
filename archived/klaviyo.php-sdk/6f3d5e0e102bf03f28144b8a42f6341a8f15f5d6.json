@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "klaviyo/php-sdk": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "KLAVIYO_PUBLIC_KEY": "",
+                    "KLAVIYO_PRIVATE_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/klaviyo.yaml": {
+                    "contents": [
+                        "services:",
+                        "    Klaviyo\\Klaviyo:",
+                        "        arguments:",
+                        "            $private_key: '%env(KLAVIYO_PRIVATE_KEY)%'",
+                        "            $public_key: '%env(KLAVIYO_PUBLIC_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6f3d5e0e102bf03f28144b8a42f6341a8f15f5d6"
+        }
+    }
+}

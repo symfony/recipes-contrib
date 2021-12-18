@@ -1,0 +1,52 @@
+{
+    "manifests": {
+        "qossmic/deptrac-shim": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "depfile.yaml": "depfile.yaml"
+                },
+                "gitignore": [
+                    "/.deptrac.cache"
+                ]
+            },
+            "files": {
+                "depfile.yaml": {
+                    "contents": [
+                        "paths:",
+                        "    - ./src",
+                        "exclude_files:",
+                        "    - '#.*test.*#'",
+                        "layers:",
+                        "    -",
+                        "        name: Controller",
+                        "        collectors:",
+                        "            -",
+                        "                type: className",
+                        "                regex: .*Controller.*",
+                        "    -",
+                        "        name: Repository",
+                        "        collectors:",
+                        "            -",
+                        "                type: className",
+                        "                regex: .*Repository.*",
+                        "    -",
+                        "        name: Service",
+                        "        collectors:",
+                        "            -",
+                        "                type: className",
+                        "                regex: .*Service.*",
+                        "ruleset:",
+                        "    Controller:",
+                        "        - Service",
+                        "    Service:",
+                        "        - Repository",
+                        "    Repository:",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2d7d934257e33fd83c72f5da5b5b1393efa7e0c6"
+        }
+    }
+}

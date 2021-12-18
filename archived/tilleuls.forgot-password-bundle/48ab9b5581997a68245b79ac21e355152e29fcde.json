@@ -1,0 +1,45 @@
+{
+    "manifests": {
+        "tilleuls/forgot-password-bundle": {
+            "manifest": {
+                "bundles": {
+                    "CoopTilleuls\\ForgotPasswordBundle\\CoopTilleulsForgotPasswordBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/coop_tilleuls_forgot_password.yaml": {
+                    "contents": [
+                        "# Read the documentation: https://github.com/coopTilleuls/CoopTilleulsForgotPasswordBundle/blob/master/Resources/doc/getting_started.md",
+                        "coop_tilleuls_forgot_password:",
+                        "    password_token:",
+                        "        class: App\\Entity\\PasswordToken # required",
+                        "        expires_in: 1 day",
+                        "        user_field: user",
+                        "        serialization_groups: []",
+                        "    user:",
+                        "        class: App\\Entity\\User # required",
+                        "        email_field: email",
+                        "        password_field: password",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/coop_tilleuls_forgot_password.yaml": {
+                    "contents": [
+                        "coop_tilleuls_forgot_password:",
+                        "    resource: \"@CoopTilleulsForgotPasswordBundle/Resources/config/routing.xml\"",
+                        "    prefix:   /forgot_password",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "48ab9b5581997a68245b79ac21e355152e29fcde"
+        }
+    }
+}

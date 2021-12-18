@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "bukashk0zzz/filter-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Bukashk0zzz\\FilterBundle\\Bukashk0zzzFilterBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/bukashk0zzz_filter.yaml": {
+                    "contents": [
+                        "bukashk0zzz_filter:",
+                        "    # Enable if you need auto filtering form data before constraint(Validation) check",
+                        "    auto_filter_forms: false",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0f1035a5f7174f09663157a87f9a0849e85ed369"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "coka/api-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Oka\\ApiBundle\\OkaApiBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/oka_api.yaml": {
+                    "contents": [
+                        "oka_api:",
+                        "    cors:",
+                        "        default:",
+                        "            allow_credentials: true",
+                        "            expose_headers: ['Accept-Encoding']",
+                        "            max_age: 3600",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "91d4f774e70ccb7fe9c9a954a107cba0c8d0c6cc"
+        }
+    }
+}

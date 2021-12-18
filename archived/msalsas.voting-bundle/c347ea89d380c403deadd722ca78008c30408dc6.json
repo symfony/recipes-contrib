@@ -1,0 +1,53 @@
+{
+    "manifests": {
+        "msalsas/voting-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Msalsas\\VotingBundle\\MsalsasVotingBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/msalsas_voting.yaml": {
+                    "contents": [
+                        "msalsas_voting:",
+                        "    user_provider: \\App\\Entity\\User",
+                        "    negative_reasons:",
+                        "        - msalsas_voting.negative_reasons.irrelevant",
+                        "        - msalsas_voting.negative_reasons.old",
+                        "        - msalsas_voting.negative_reasons.tiredness",
+                        "        - msalsas_voting.negative_reasons.sensationalist",
+                        "        - msalsas_voting.negative_reasons.spam",
+                        "        - msalsas_voting.negative_reasons.duplicated",
+                        "        - msalsas_voting.negative_reasons.microblogging",
+                        "        - msalsas_voting.negative_reasons.erroneous",
+                        "        - msalsas_voting.negative_reasons.plagiarism",
+                        "    anonymous_percent_allowed: 50",
+                        "    anonymous_min_allowed: 2",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/msalsas_voting.yaml": {
+                    "contents": [
+                        "positive_vote:",
+                        "    path: /vote-positive/{_locale}/{id}",
+                        "    controller: Msalsas\\VotingBundle\\Controller\\VoteController:votePositive",
+                        "    methods: POST",
+                        "negative_vote:",
+                        "    path: /vote-negative/{_locale}/{id}",
+                        "    controller: Msalsas\\VotingBundle\\Controller\\VoteController:voteNegative",
+                        "    methods: POST",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c347ea89d380c403deadd722ca78008c30408dc6"
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "manifests": {
+        "oskarstark/readable-filesize-extension": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/oskarstark_readable_filesize_extension.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "",
+                        "    OskarStark\\Twig\\ReadableFilesizeExtension:",
+                        "        tags: ['twig.extension']",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "39befdbade7c9859628534df1e18cc15a78b7b3c"
+        }
+    }
+}

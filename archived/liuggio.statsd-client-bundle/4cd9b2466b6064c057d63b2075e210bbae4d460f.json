@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "liuggio/statsd-client-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Liuggio\\StatsDClientBundle\\LiuggioStatsDClientBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "STATS_D_HOST": "",
+                    "STATS_D_PORT": "",
+                    "STATS_D_PROTOCOL": "udp"
+                }
+            },
+            "files": {
+                "config/packages/liuggio_stats_d_client.yaml": {
+                    "contents": [
+                        "liuggio_stats_d_client:",
+                        "    connection:",
+                        "        host: '%env(STATS_D_HOST)%'",
+                        "        port: '%env(STATS_D_PORT)%'",
+                        "        protocol: '%env(STATS_D_PROTOCOL)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "4cd9b2466b6064c057d63b2075e210bbae4d460f"
+        }
+    }
+}

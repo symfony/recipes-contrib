@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "snc/redis-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Snc\\RedisBundle\\SncRedisBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "passwords that contain special characters (@, %, :, +) must be urlencoded",
+                    "REDIS_URL": "redis://localhost"
+                }
+            },
+            "files": {
+                "config/packages/snc_redis.yaml": {
+                    "contents": [
+                        "snc_redis:",
+                        "    clients:",
+                        "",
+                        "# Define your clients here. The example below connects to database 0 of the default Redis server.",
+                        "#",
+                        "# See https://github.com/snc/SncRedisBundle/blob/master/Resources/doc/index.md for instructions on",
+                        "# how to configure the bundle.",
+                        "#",
+                        "#        default:",
+                        "#            type: phpredis",
+                        "#            alias: default",
+                        "#            dsn: \"%env(REDIS_URL)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "85bbdb3d2db531e20874de29bab0587f93604fa8"
+        }
+    }
+}

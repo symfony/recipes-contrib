@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "knpuniversity/oauth2-client-bundle": {
+            "manifest": {
+                "bundles": {
+                    "KnpU\\OAuth2ClientBundle\\KnpUOAuth2ClientBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/knpu_oauth2_client.yaml": {
+                    "contents": [
+                        "knpu_oauth2_client:",
+                        "    clients:",
+                        "        # configure your clients as described here: https://github.com/knpuniversity/oauth2-client-bundle#configuration",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/post-install.txt": {
+                    "contents": [
+                        "<bg=blue;fg=white>                                          </>",
+                        "<bg=blue;fg=white> What's next for KnpUOAuth2ClientBundle? </>",
+                        "<bg=blue;fg=white>                                          </>",
+                        "",
+                        "  * <fg=blue>Download & configure your OAuth2 clients in </> your oauth2 clients:",
+                        "    <comment>config/packages/knpu_oauth2_client</>",
+                        "  <comment>https://github.com/knpuniversity/oauth2-client-bundle#configuring-a-client</>",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b79787c589eaf10e35882634d6d6783f745ae7e8"
+        }
+    }
+}

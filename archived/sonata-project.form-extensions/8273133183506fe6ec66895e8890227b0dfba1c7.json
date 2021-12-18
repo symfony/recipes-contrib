@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "sonata-project/form-extensions": {
+            "manifest": {
+                "bundles": {
+                    "Sonata\\Form\\Bridge\\Symfony\\Bundle\\SonataFormBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sonata_form.yaml": {
+                    "contents": [
+                        "sonata_form:",
+                        "    form_type: standard",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8273133183506fe6ec66895e8890227b0dfba1c7"
+        }
+    }
+}

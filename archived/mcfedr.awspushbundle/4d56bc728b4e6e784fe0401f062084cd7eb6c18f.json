@@ -1,0 +1,47 @@
+{
+    "manifests": {
+        "mcfedr/awspushbundle": {
+            "manifest": {
+                "bundles": {
+                    "Mcfedr\\AwsPushBundle\\McfedrAwsPushBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "AWS_PUSH_DEFAULT_PLATFORM_ARN": "arn:aws:sns:us-east-1:123456789012:app/APNS/my-app-ios",
+                    "AWS_ACCESS_KEY_ID": "not-a-real-key",
+                    "AWS_SECRET_ACCESS_KEY": "not-a-real-secret",
+                    "AWS_REGION": "us-east-1"
+                },
+                "post-install-output": [
+                    "  * You can add more platforms to your config in config/packages/awspush.yaml",
+                    "",
+                    "  * You can remove the AWS credentials if they are configured in your app env or",
+                    "    via an EC2 role.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/mcfedr/awspushbundle/blob/master/README.md</>"
+                ]
+            },
+            "files": {
+                "config/packages/awspush.yaml": {
+                    "contents": [
+                        "mcfedr_aws_push:",
+                        "    platforms:",
+                        "        default: \"%env(AWS_PUSH_DEFAULT_PLATFORM_ARN)%\"",
+                        "    aws:",
+                        "        credentials:",
+                        "            key: \"%env(AWS_ACCESS_KEY_ID)%\"",
+                        "            secret: \"%env(AWS_SECRET_ACCESS_KEY)%\"",
+                        "        region: \"%env(AWS_REGION)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "4d56bc728b4e6e784fe0401f062084cd7eb6c18f"
+        }
+    }
+}

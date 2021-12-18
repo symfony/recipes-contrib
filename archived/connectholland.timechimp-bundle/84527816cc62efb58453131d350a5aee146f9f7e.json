@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "connectholland/timechimp-bundle": {
+            "manifest": {
+                "bundles": {
+                    "ConnectHolland\\TimechimpBundle\\ConnecthollandTimechimpBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "TIMECHIMPBUNDLE_ACCESS_TOKEN": "baerer-token-value"
+                },
+                "post-install-output": [
+                    "  * Your Connect Holland Timechimp bundle installation is almost ready:",
+                    "    1. Add your Timechimp Access Token to the .env file"
+                ]
+            },
+            "files": {
+                "config/packages/connectholland_timechimp.yaml": {
+                    "contents": [
+                        "connectholland_timechimp:",
+                        "    api_key: '%env(string:TIMECHIMP_ACCESS_TOKEN)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "84527816cc62efb58453131d350a5aee146f9f7e"
+        }
+    }
+}

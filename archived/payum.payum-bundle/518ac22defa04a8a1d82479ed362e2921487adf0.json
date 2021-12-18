@@ -1,0 +1,42 @@
+{
+    "manifests": {
+        "payum/payum-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Payum\\Bundle\\PayumBundle\\PayumBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/payum.yaml": {
+                    "contents": [
+                        "payum:",
+                        "    storages:",
+                        "        Payum\\Core\\Model\\Payment:",
+                        "            filesystem:",
+                        "                storage_dir: '%kernel.project_dir%/var/payum/payments'",
+                        "                id_property: number",
+                        "",
+                        "    security:",
+                        "        token_storage:",
+                        "            Payum\\Core\\Model\\Token:",
+                        "                filesystem:",
+                        "                    storage_dir: '%kernel.project_dir%/var/payum/gateways'",
+                        "                    id_property: hash",
+                        "",
+                        "    gateways:",
+                        "        offline:",
+                        "            factory: offline",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "518ac22defa04a8a1d82479ed362e2921487adf0"
+        }
+    }
+}

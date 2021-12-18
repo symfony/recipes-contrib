@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "aws/aws-sdk-php-symfony": {
+            "manifest": {
+                "bundles": {
+                    "Aws\\Symfony\\AwsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "AWS_KEY": "not-a-real-key",
+                    "AWS_SECRET": "@@not-a-real-secret"
+                }
+            },
+            "files": {
+                "config/packages/aws.yaml": {
+                    "contents": [
+                        "aws:",
+                        "    version: latest",
+                        "    region: us-east-1",
+                        "    credentials:",
+                        "        key: \"%env(AWS_KEY)%\"",
+                        "        secret: \"%env(AWS_SECRET)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d1753f9e2a669c464b2b0618af9b0123426b67b4"
+        }
+    }
+}

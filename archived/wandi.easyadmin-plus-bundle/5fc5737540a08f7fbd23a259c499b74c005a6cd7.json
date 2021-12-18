@@ -1,0 +1,46 @@
+{
+    "manifests": {
+        "wandi/easyadmin-plus-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Wandi\\EasyAdminPlusBundle\\WandiEasyAdminPlusBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/wandi_easyadmin_plus.yaml": {
+                    "contents": [
+                        "#wandi_easy_admin_plus:",
+                        "#    translator:",
+                        "#        # defines the locales you want to manage (if not set, take the default locale)",
+                        "#        locales:",
+                        "#            - fr",
+                        "#            - en",
+                        "#        # defines the directories in which you want to extract translations files (if not set, take the default translations dir)",
+                        "#        paths:",
+                        "#            - translations",
+                        "#        # defines a list of domains you want to exclude from admin (if not set, no excluded domain)",
+                        "#        excluded_domains:",
+                        "#            - validators",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/wandi_easy_admin_plus.yaml": {
+                    "contents": [
+                        "wandi_easy_admin_plus:",
+                        "    resource: '@WandiEasyAdminPlusBundle/Resources/config/routing.yml'",
+                        "    prefix: /admin",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5fc5737540a08f7fbd23a259c499b74c005a6cd7"
+        }
+    }
+}

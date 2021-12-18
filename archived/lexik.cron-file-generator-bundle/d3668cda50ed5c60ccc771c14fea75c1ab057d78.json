@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "lexik/cron-file-generator-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Lexik\\Bundle\\CronFileGeneratorBundle\\LexikCronFileGeneratorBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/lexik_cron_file_generator.yaml": {
+                    "contents": [
+                        "# see https://github.com/lexik/LexikCronFileGeneratorBundle/blob/master/Resources/doc/index.md",
+                        "lexik_cron_file_generator:",
+                        "    env_available:                 # declare your env availables",
+                        "        - staging                    # example: staging, prod",
+                        "    user:",
+                        "        staging: 'project_staging'     # user for execute the cron",
+                        "    php_version: 'php7.2'",
+                        "    absolute_path:",
+                        "        staging: 'project_dir/bin/console'",
+                        "    output_path: '%kernel.cache_dir%/cron_test'  # filename will be cron_test",
+                        "    # crons configuration is optional but you need at least one for execute the command",
+                        "    # crons:",
+                        "    #    - { name: 'Send email', command: 'app:test', env: { staging: '* * * * *', prod: '* 5 * * *' } }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d3668cda50ed5c60ccc771c14fea75c1ab057d78"
+        }
+    }
+}

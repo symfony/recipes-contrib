@@ -1,0 +1,47 @@
+{
+    "manifests": {
+        "doctrine/phpcr-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Doctrine\\Bundle\\PHPCRBundle\\DoctrinePHPCRBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "PHPCR_USER": "admin",
+                    "PHPCR_PASSWORD": "admin",
+                    "PHPCR_WORKSPACE": "default"
+                }
+            },
+            "files": {
+                "config/packages/doctrine_phpcr.yaml": {
+                    "contents": [
+                        "doctrine_phpcr:",
+                        "    session:",
+                        "        backend:",
+                        "            type: jackrabbit",
+                        "            url: 'localhost'",
+                        "            # connection: default",
+                        "            # requires DoctrineCacheBundle",
+                        "            # caches:",
+                        "            #     meta: doctrine_cache.providers.phpcr_meta",
+                        "            #     nodes: doctrine_cache.providers.phpcr_nodes",
+                        "            # enable logging",
+                        "            # logging: true",
+                        "            # enable profiling in the debug toolbar.",
+                        "            # profiling: true",
+                        "        workspace: '%env(PHPCR_WORKSPACE)%'",
+                        "        username: '%env(PHPCR_USER)%'",
+                        "        password: '%env(PHPCR_PASSWORD)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "302e7ce8f547b1143b98112d0ebc8579f767d90d"
+        }
+    }
+}

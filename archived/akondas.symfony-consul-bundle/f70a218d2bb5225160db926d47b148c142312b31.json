@@ -1,0 +1,46 @@
+{
+    "manifests": {
+        "akondas/symfony-consul-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Akondas\\ConsulBundle\\ConsulBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "CONSUL_SERVICE_NAME": "symfony-app",
+                    "CONSUL_SERVICE_HOST": "localhost",
+                    "CONSUL_SERVICE_PORT": "8000",
+                    "CONSUL_CLIENT_BASE_URI": "http://127.0.0.1:8500"
+                }
+            },
+            "files": {
+                "config/packages/consul.yaml": {
+                    "contents": [
+                        "consul:",
+                        "    service:",
+                        "        name: '%env(resolve:CONSUL_SERVICE_NAME)%'",
+                        "        host: '%env(resolve:CONSUL_SERVICE_HOST)%'",
+                        "        port: '%env(resolve:CONSUL_SERVICE_PORT)%'",
+                        "    client:",
+                        "        base_uri: '%env(resolve:CONSUL_CLIENT_BASE_URI)%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/consul.yaml": {
+                    "contents": [
+                        "consul_bundle:",
+                        "    resource: \"@ConsulBundle/Resources/config/routing.yml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f70a218d2bb5225160db926d47b148c142312b31"
+        }
+    }
+}

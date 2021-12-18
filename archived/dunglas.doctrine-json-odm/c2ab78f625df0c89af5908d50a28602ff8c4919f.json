@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "dunglas/doctrine-json-odm": {
+            "manifest": {
+                "bundles": {
+                    "Dunglas\\DoctrineJsonOdm\\Bundle\\DunglasDoctrineJsonOdmBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "c2ab78f625df0c89af5908d50a28602ff8c4919f"
+        }
+    }
+}

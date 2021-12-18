@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "karser/karser-recaptcha3-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Karser\\Recaptcha3Bundle\\KarserRecaptcha3Bundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Get your API key and secret from https://g.co/recaptcha/v3",
+                    "RECAPTCHA3_KEY": "my_site_key",
+                    "RECAPTCHA3_SECRET": "my_secret"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Make sure</> you have proper values in your .env file",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/karser/KarserRecaptcha3Bundle</>"
+                ]
+            },
+            "files": {
+                "config/packages/karser_recaptcha3.yaml": {
+                    "contents": [
+                        "karser_recaptcha3:",
+                        "    site_key: '%env(RECAPTCHA3_KEY)%'",
+                        "    secret_key: '%env(RECAPTCHA3_SECRET)%'",
+                        "    score_threshold: 0.5",
+                        "    enabled: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c51ce07c10331d506762efe25b6f5843c1a5ea17"
+        }
+    }
+}

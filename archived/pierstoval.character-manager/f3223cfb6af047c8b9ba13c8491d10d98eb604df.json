@@ -1,0 +1,93 @@
+{
+    "manifests": {
+        "pierstoval/character-manager": {
+            "manifest": {
+                "bundles": {
+                    "Pierstoval\\Bundle\\CharacterManagerBundle\\PierstovalCharacterManagerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/pierstoval_character_manager.yaml": {
+                    "contents": [
+                        "pierstoval_character_manager:",
+                        "    character_class: App\\Entity\\Character",
+                        "    steps:",
+                        "        step_01:",
+                        "            action: App\\CharacterGenerator\\Step01",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/pierstoval_character_manager.yaml": {
+                    "contents": [
+                        "generator_steps:",
+                        "    resource: \"@PierstovalCharacterManagerBundle/Controller/StepController.php\"",
+                        "    type:     annotation",
+                        "    prefix:   /character_generator/",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/CharacterGenerator/Step01.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\CharacterGenerator;",
+                        "",
+                        "use Pierstoval\\Bundle\\CharacterManagerBundle\\Action\\StepAction;",
+                        "use Symfony\\Component\\HttpFoundation\\Response;",
+                        "",
+                        "class Step01 extends StepAction",
+                        "{",
+                        "    /**",
+                        "     * {@inheritdoc}",
+                        "     */",
+                        "    public function execute(): Response",
+                        "    {",
+                        "        // Render and/or execute the current step right here.",
+                        "        // You must return a `Response` object, like a controller would need to.",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/Character.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Pierstoval\\Bundle\\CharacterManagerBundle\\Entity\\Character as BaseCharacter;",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "",
+                        "class Character extends BaseCharacter",
+                        "{",
+                        "    /**",
+                        "     * @var int",
+                        "     * @ORM\\Column(name=\"id\", type=\"integer\")",
+                        "     * @ORM\\Id",
+                        "     * @ORM\\GeneratedValue(strategy=\"AUTO\")",
+                        "     */",
+                        "    protected $id;",
+                        "",
+                        "    public function getId(): ?int",
+                        "    {",
+                        "        return $this->id;",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f3223cfb6af047c8b9ba13c8491d10d98eb604df"
+        }
+    }
+}

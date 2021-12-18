@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "dama/doctrine-test-bundle": {
+            "manifest": {
+                "bundles": {
+                    "DAMA\\DoctrineTestBundle\\DAMADoctrineTestBundle": [
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/test/dama_doctrine_test_bundle.yaml": {
+                    "contents": [
+                        "dama_doctrine_test:",
+                        "    enable_static_connection: true",
+                        "    enable_static_meta_data_cache: true",
+                        "    enable_static_query_cache: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "56eaa387b5e48ebcc7c95a893b47dfa1ad51449c"
+        }
+    }
+}

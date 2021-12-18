@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "baldinof/roadrunner-bundle": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "copy-from-package": {
+                    ".rr.yaml": ".rr.yaml"
+                },
+                "bundles": {
+                    "Baldinof\\RoadRunnerBundle\\BaldinofRoadRunnerBundle": [
+                        "all"
+                    ]
+                },
+                "gitignore": [
+                    "/bin/rr"
+                ],
+                "post-install-output": [
+                    "  * <fg=blue>Download</> RoadRunner locally: <comment>vendor/bin/rr get --location bin/</>",
+                    "  * <fg=blue>Run</> your application: <comment>bin/rr serve --debug</>",
+                    "  * Visit http://localhost:8080"
+                ]
+            },
+            "files": {
+                "config/packages/baldinof_road_runner.yaml": {
+                    "contents": [
+                        "baldinof_road_runner:",
+                        "    should_reboot_kernel: false",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "64dda95346658b92b164d8e4408e6d4d9ef293a2"
+        }
+    }
+}

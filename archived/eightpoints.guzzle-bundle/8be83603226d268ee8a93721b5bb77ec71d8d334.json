@@ -1,0 +1,42 @@
+{
+    "manifests": {
+        "eightpoints/guzzle-bundle": {
+            "manifest": {
+                "bundles": {
+                    "EightPoints\\Bundle\\GuzzleBundle\\EightPointsGuzzleBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/eight_points_guzzle.yaml": {
+                    "contents": [
+                        "eight_points_guzzle:",
+                        "    clients:",
+                        "        my_client:",
+                        "            # Write here the host where to do requests",
+                        "            # base_url: \"http://target.url\"",
+                        "",
+                        "            options:",
+                        "                timeout: 30",
+                        "",
+                        "                # Configure headers.",
+                        "                # More info: http://docs.guzzlephp.org/en/stable/request-options.html#headers",
+                        "                headers:",
+                        "                    User-Agent: \"EightpointsGuzzleBundle/7.0\"",
+                        "",
+                        "            # Find plugins here:",
+                        "            # https://github.com/8p/EightPointsGuzzleBundle#known-and-supported-plugins",
+                        "            plugin: ~",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8be83603226d268ee8a93721b5bb77ec71d8d334"
+        }
+    }
+}

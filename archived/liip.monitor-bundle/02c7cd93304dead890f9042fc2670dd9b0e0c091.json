@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "liip/monitor-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Liip\\MonitorBundle\\LiipMonitorBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  <options=bold>Configure</> the bundle and routes:",
+                    "    1. You <options=bold>MUST</> verify the configuration in <comment>%CONFIG_DIR%/packages/monitor.yaml</>.",
+                    "    2. You <options=bold>MAY</> configure additional your checks and reporters, see the README.md for instructions.",
+                    "    3. You <options=bold>MAY</> configure the routes as specified in the README.md if you enable the controller."
+                ]
+            },
+            "files": {
+                "config/packages/monitor.yaml": {
+                    "contents": [
+                        "liip_monitor:",
+                        "    # enabling the controller requires that `assets` are enabled in the framework bundle",
+                        "    enable_controller: false",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "02c7cd93304dead890f9042fc2670dd9b0e0c091"
+        }
+    }
+}

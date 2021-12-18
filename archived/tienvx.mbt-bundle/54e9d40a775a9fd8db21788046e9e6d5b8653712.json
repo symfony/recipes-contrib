@@ -1,0 +1,64 @@
+{
+    "manifests": {
+        "tienvx/mbt-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Tienvx\\Bundle\\MbtBundle\\TienvxMbtBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "var/storage/screenshots/": "%VAR_DIR%/storage/screenshots/"
+                },
+                "env": {
+                    "EMAIL_FROM": "from@example.com",
+                    "ADMIN_URL": "http://localhost"
+                }
+            },
+            "files": {
+                "config/packages/dev/models/.gitignore": {
+                    "contents": [
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/dev/predefined-cases/.gitignore": {
+                    "contents": [
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/tienvx_mbt.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: dev/models/*.yaml }",
+                        "    - { resource: dev/predefined-cases/*.yaml }",
+                        "",
+                        "tienvx_mbt:",
+                        "    email_from: '%env(EMAIL_FROM)%'",
+                        "    admin_url: '%env(ADMIN_URL)%'",
+                        "",
+                        "flysystem:",
+                        "    storages:",
+                        "        mbt.storage:",
+                        "            adapter: 'local'",
+                        "            options:",
+                        "                directory: \"%kernel.project_dir%/var/storage/screenshots\"",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "var/storage/screenshots/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "54e9d40a775a9fd8db21788046e9e6d5b8653712"
+        }
+    }
+}

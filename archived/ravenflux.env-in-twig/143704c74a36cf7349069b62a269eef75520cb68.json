@@ -1,0 +1,26 @@
+{
+    "manifests": {
+        "ravenflux/env-in-twig": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ravenflux_env_in_twig.yaml": {
+                    "contents": [
+                        "services:",
+                        "    ravenflux.twig.extension.env_in_twig:",
+                        "        class: RavenFlux\\Twig\\EnvInTwigExtension",
+                        "        tags:",
+                        "            -",
+                        "                name: twig.extension",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "143704c74a36cf7349069b62a269eef75520cb68"
+        }
+    }
+}

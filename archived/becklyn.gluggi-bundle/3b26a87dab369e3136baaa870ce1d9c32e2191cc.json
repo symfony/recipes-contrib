@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "becklyn/gluggi-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Becklyn\\GluggiBundle\\GluggiBundle": [
+                        "dev"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/dev/gluggi.yaml": {
+                    "contents": [
+                        "_import.gluggi:",
+                        "    resource: \"@GluggiBundle/Resources/config/routes.yaml\"",
+                        "    prefix: /_layout/",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3b26a87dab369e3136baaa870ce1d9c32e2191cc"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "m-adamski/symfony-schedule-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Adamski\\Symfony\\ScheduleBundle\\ScheduleBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/schedule.yaml": {
+                    "contents": [
+                        "schedule:",
+                        "    manager: Adamski\\Symfony\\ScheduleBundle\\Model\\ScheduleManager",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0215dfa83bf43437aab95d419d1043016a4a537a"
+        }
+    }
+}

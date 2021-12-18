@@ -1,0 +1,44 @@
+{
+    "manifests": {
+        "andchir/omnipay-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Andchir\\OmnipayBundle\\OmnipayBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/omnipay.yaml": {
+                    "contents": [
+                        "omnipay:",
+                        "    success_url: '/profile/history_orders'",
+                        "    fail_url: '/'",
+                        "    return_url: '/omnipay_return'",
+                        "    notify_url: '/omnipay_notify'",
+                        "    cancel_url: '/omnipay_cancel'",
+                        "    data_keys:",
+                        "        paymentId: ['orderNumber']",
+                        "        customerEmail: ['customerNumber']",
+                        "    gateways: null",
+                        ""
+                    ],
+                    "executable": true
+                },
+                "config/routes/omnipay.yaml": {
+                    "contents": [
+                        "omnipay:",
+                        "    resource: \"@OmnipayBundle/Resources/config/routing.yml\"",
+                        "    prefix: /",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b70bdce6cb4c9a3933dcc082c270042e630b5507"
+        }
+    }
+}

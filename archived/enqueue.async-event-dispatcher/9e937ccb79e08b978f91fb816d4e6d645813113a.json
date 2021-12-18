@@ -1,0 +1,25 @@
+{
+    "manifests": {
+        "enqueue/async-event-dispatcher": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/enqueue_async_event_dispatcher.yaml": {
+                    "contents": [
+                        "enqueue:",
+                        "    async_events:",
+                        "        enabled: true",
+                        "        # if you'd like to send send messages onTerminate use spool_producer (it makes response time even lesser):",
+                        "        # spool_producer: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9e937ccb79e08b978f91fb816d4e6d645813113a"
+        }
+    }
+}

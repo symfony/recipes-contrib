@@ -1,0 +1,47 @@
+{
+    "manifests": {
+        "ns3777k/prometheus-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Ns3777k\\PrometheusBundle\\Ns3777kPrometheusBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ns3777k_prometheus.yaml": {
+                    "contents": [
+                        "ns3777k_prometheus:",
+                        "    namespace: app",
+                        "    adapter: apcu",
+                        "",
+                        "    listener:",
+                        "        ignored_routes: [metrics, _wdt]",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/test/ns3777k_prometheus.yaml": {
+                    "contents": [
+                        "ns3777k_prometheus:",
+                        "    adapter: in_memory",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/ns3777k_prometheus_metrics.yaml": {
+                    "contents": [
+                        "metrics:",
+                        "    resource: '@Ns3777kPrometheusBundle/Resources/config/routing.xml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3dc7f388737fcffbe0343eee25eddbb2634f27e3"
+        }
+    }
+}

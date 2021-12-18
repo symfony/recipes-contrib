@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "systemsdk/easy-log-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Systemsdk\\Bundle\\EasyLogBundle\\EasyLogBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/dev/systemsdk_easy_log.yaml": {
+                    "contents": [
+                        "easy_log:",
+                        "    log_path: '%kernel.logs_dir%/%kernel.environment%-readable.log'",
+                        "    ignored_routes: ['_wdt', '_profiler']",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/test/systemsdk_easy_log.yaml": {
+                    "contents": [
+                        "easy_log:",
+                        "    log_path: '%kernel.logs_dir%/%kernel.environment%-readable.log'",
+                        "    ignored_routes: ['_wdt', '_profiler']",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7543c149e6af01d8e3d702d579631699712ac221"
+        }
+    }
+}

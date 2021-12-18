@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "kunstmaan/user-management-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Kunstmaan\\UserManagementBundle\\KunstmaanUserManagementBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/kunstmaan_user_management.yaml": {
+                    "contents": [
+                        "KunstmaanUserManagementBundle:",
+                        "    resource: \"@KunstmaanUserManagementBundle/Resources/config/routing.yml\"",
+                        "    # If your site is not multi language, remove the \"{_locale}/\" part of prefix and requirements",
+                        "    prefix:   /{_locale}/",
+                        "    requirements:",
+                        "        _locale: \"%kunstmaan_admin.required_locales%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a848e62394fe7e85626f11caa198d018f791b0dd"
+        }
+    }
+}

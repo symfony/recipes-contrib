@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "exercise/htmlpurifier-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Exercise\\HTMLPurifierBundle\\ExerciseHTMLPurifierBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/exercise_html_purifier.yaml": {
+                    "contents": [
+                        "exercise_html_purifier:",
+                        "    # full configuration reference: http://htmlpurifier.org/live/configdoc/plain.html",
+                        "    default:",
+                        "        # the charset used by the original contents",
+                        "        Core.Encoding: 'UTF-8'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0b76657841c2ba52647bb1b4a5595a0e3b9f485c"
+        }
+    }
+}

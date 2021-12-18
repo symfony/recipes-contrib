@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "friendsofsymfony/ckeditor-bundle": {
+            "manifest": {
+                "bundles": {
+                    "FOS\\CKEditorBundle\\FOSCKEditorBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "composer-scripts": {
+                    "ckeditor:install": "symfony-cmd"
+                }
+            },
+            "files": {
+                "config/packages/fos_ckeditor.yaml": {
+                    "contents": [
+                        "# Read the documentation: https://symfony.com/doc/current/bundles/FOSCKEditorBundle/index.html",
+                        "",
+                        "twig:",
+                        "    form_themes:",
+                        "        - '@FOSCKEditor/Form/ckeditor_widget.html.twig'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f5ad42002183a6881962683e6d84bbb25cdfce5d"
+        }
+    }
+}

@@ -1,0 +1,75 @@
+{
+    "manifests": {
+        "jane-php/json-schema": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "bin/": "%BIN_DIR%/",
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "conflict": {
+                    "symfony/symfony": "<5.0"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Finish</> package configuration:",
+                    "    1. Configure <comment>config/jane/json_schema.php</> with your specification details",
+                    "    2. Run <comment>bin/jane-json-schema-generate</>",
+                    "    3. Add <comment>generated/</> directory to your composer autoload definition (eg. <comment>\"MyApp\\\\Library\\\\Generated\\\\\": \"generated/\"</>)",
+                    "    4. Open <comment>config/packages/jane.yaml</> and replace <comment>MyApp\\Library\\Generated\\</> namespace with your generated namespace.",
+                    "    5. Then remove line comments",
+                    "",
+                    "Documentation: https://jane.readthedocs.io/en/latest/"
+                ]
+            },
+            "files": {
+                "bin/jane-json-schema-generate": {
+                    "contents": [
+                        "#!/usr/bin/env php",
+                        "<?php",
+                        "",
+                        "require __DIR__ . '/../vendor/autoload.php';",
+                        "",
+                        "use Jane\\JsonSchema\\Console\\Command\\GenerateCommand;",
+                        "use Symfony\\Component\\Console\\Input\\ArrayInput;",
+                        "use Symfony\\Component\\Console\\Output\\NullOutput;",
+                        "use Jane\\JsonSchema\\Console\\Loader\\ConfigLoader;",
+                        "use Jane\\JsonSchema\\Console\\Loader\\SchemaLoader;",
+                        "",
+                        "$command = new GenerateCommand(new ConfigLoader(), new SchemaLoader());",
+                        "$inputArray = new ArrayInput(['--config-file' => __DIR__ . '/../config/jane/json_schema.php'], $command->getDefinition());",
+                        "",
+                        "$command->execute($inputArray, new NullOutput());",
+                        ""
+                    ],
+                    "executable": true
+                },
+                "config/jane/json_schema.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "return [",
+                        "    'json-schema-file' => __DIR__ . '/json-schema.json',",
+                        "    'root-class' => 'MyModel',",
+                        "    'namespace' => 'MyApp\\Library\\Generated',",
+                        "    'directory' => __DIR__ . '/../../generated',",
+                        "];",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/jane.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "#    MyApp\\Library\\Generated\\Normalizer\\JaneObjectNormalizer: null",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5383305f5cc44c1f8f8d11ceeb157b761e437b4c"
+        }
+    }
+}

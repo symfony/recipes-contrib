@@ -1,0 +1,45 @@
+{
+    "manifests": {
+        "algolia/search-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Algolia\\SearchBundle\\AlgoliaSearchBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Create a free account on www.algolia.com",
+                    "#2": "and get your credentials from the API Keys tab.",
+                    "ALGOLIA_APP_ID": "...",
+                    "ALGOLIA_API_KEY": "..."
+                },
+                "post-install-output": [
+                    "  * The Algolia/SearchBundle uses Algolia by default. Create a free",
+                    "    account on http://www.algolia.com and modify your ALGOLIA_APP_ID",
+                    "    and ALGOLIA_API_KEY config in <fg=green>.env</>",
+                    "",
+                    "  * Edit the configuration in <fg=green>config/packages/algolia_search.yaml</>",
+                    "    to start indexing your data.",
+                    "",
+                    "Documentation: https://www.algolia.com/doc/api-client/symfony/"
+                ]
+            },
+            "files": {
+                "config/packages/algolia_search.yaml": {
+                    "contents": [
+                        "# All available configuration can be found here:",
+                        "# https://www.algolia.com/doc/api-client/symfony/configuration/",
+                        "algolia_search:",
+                        "    prefix: '%env(APP_ENV)%_'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "fd172e8feabf6b1c0818e18de90c2a3f82ea0a60"
+        }
+    }
+}

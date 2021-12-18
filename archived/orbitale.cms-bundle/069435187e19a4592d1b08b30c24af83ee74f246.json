@@ -1,0 +1,115 @@
+{
+    "manifests": {
+        "orbitale/cms-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Orbitale\\Bundle\\CmsBundle\\OrbitaleCmsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/orbitale_cms.yaml": {
+                    "contents": [
+                        "orbitale_cms:",
+                        "    page_class: App\\Entity\\Page",
+                        "    category_class: App\\Entity\\Category",
+                        "# Define your layout here if you need a custom layout for your CMS",
+                        "#    layouts:",
+                        "#         main: { resource: base.html.twig }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/orbitale_cms.yaml": {
+                    "contents": [
+                        "orbitale_cms_category:",
+                        "    resource: \"@OrbitaleCmsBundle/Resources/config/routing/categories.yaml\"",
+                        "    prefix:   /category/",
+                        "",
+                        "orbitale_cms_page:",
+                        "    resource: \"@OrbitaleCmsBundle/Resources/config/routing/pages.yaml\"",
+                        "    prefix:   /page/",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/Category.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Orbitale\\Bundle\\CmsBundle\\Entity\\Category as BaseCategory;",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity(repositoryClass=\"Orbitale\\Bundle\\CmsBundle\\Repository\\CategoryRepository\")",
+                        " * @ORM\\Table(name=\"orbitale_cms_categories\")",
+                        " */",
+                        "class Category extends BaseCategory",
+                        "{",
+                        "    /**",
+                        "     * @var int",
+                        "     * @ORM\\Column(name=\"id\", type=\"integer\")",
+                        "     * @ORM\\Id",
+                        "     * @ORM\\GeneratedValue(strategy=\"AUTO\")",
+                        "     */",
+                        "    protected $id;",
+                        "",
+                        "    /**",
+                        "     * @return int",
+                        "     */",
+                        "    public function getId()",
+                        "    {",
+                        "        return $this->id;",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/Page.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Orbitale\\Bundle\\CmsBundle\\Entity\\Page as BasePage;",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity(repositoryClass=\"Orbitale\\Bundle\\CmsBundle\\Repository\\PageRepository\")",
+                        " * @ORM\\Table(name=\"orbitale_cms_pages\")",
+                        " */",
+                        "class Page extends BasePage",
+                        "{",
+                        "    /**",
+                        "     * @var int",
+                        "     * @ORM\\Column(name=\"id\", type=\"integer\")",
+                        "     * @ORM\\Id",
+                        "     * @ORM\\GeneratedValue(strategy=\"AUTO\")",
+                        "     */",
+                        "    protected $id;",
+                        "",
+                        "    /**",
+                        "     * @return int",
+                        "     */",
+                        "    public function getId()",
+                        "    {",
+                        "        return $this->id;",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "069435187e19a4592d1b08b30c24af83ee74f246"
+        }
+    }
+}

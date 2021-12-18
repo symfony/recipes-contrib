@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "enqueue/amqp-ext": {
+            "manifest": {
+                "env": {
+                    "ENQUEUE_DSN": "amqp+ext://"
+                }
+            },
+            "files": [],
+            "ref": "2cf4b63edc25eb05390a80fbc0d2e7a0972a885d"
+        }
+    }
+}

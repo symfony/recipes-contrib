@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "onurb/doctrine-yuml-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Onurb\\Bundle\\YumlBundle\\OnurbYumlBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/dev/yuml.yaml": {
+                    "contents": [
+                        "doctrine_yuml:",
+                        "    resource: \"@OnurbYumlBundle/Resources/config/routing.yml\"",
+                        "    prefix:   /",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "81130d6607195660087a01442f30be1edad71804"
+        }
+    }
+}

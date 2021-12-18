@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "netbull/security-bundle": {
+            "manifest": {
+                "bundles": {
+                    "NetBull\\SecurityBundle\\NetBullSecurityBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "composer-scripts": {
+                    "vendor/bin/browscap-php browscap:fetch": "php-script",
+                    "vendor/bin/browscap-php browscap:convert": "php-script"
+                }
+            },
+            "files": {
+                "config/packages/netbull_security.yaml": {
+                    "contents": [
+                        "netbull_security:",
+                        "    banned_route: CHANGE_ME_WITH_REAL__ROUTE",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c4fc5d06abc5cc9a5b53f2da646ae95c352c84f2"
+        }
+    }
+}

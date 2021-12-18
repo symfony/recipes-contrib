@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "oskarstark/no-floc-listener": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/oskarstark_symfony_no_floc_listener.yaml": {
+                    "contents": [
+                        "services:",
+                        "    OskarStark\\Symfony\\EventListener\\NoFlocListener:",
+                        "        autoconfigure: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "84795143ce2f4db46ace4e6391a6202bd7b8545a"
+        }
+    }
+}

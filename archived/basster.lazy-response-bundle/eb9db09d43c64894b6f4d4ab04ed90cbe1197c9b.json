@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "basster/lazy-response-bundle": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/basster_lazy_response.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        public: false",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    # Enable DTO handler.",
+                        "    # Comment or remove, if you don't want to use the default.",
+                        "    # See any of the default handlers for reference.",
+                        "    Basster\\LazyResponseBundle\\Response\\Handler\\RedirectResponseHandler: null",
+                        "",
+                        "    # Requires twig",
+                        "    # Basster\\LazyResponseBundle\\Response\\Handler\\TwigResponseHandler: null",
+                        "",
+                        "    # Requires symfony/serializer",
+                        "    # Basster\\LazyResponseBundle\\Response\\Handler\\JsonSerializeResponseHandler: null",
+                        "",
+                        "    # Feel free to add your own handlers:",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "eb9db09d43c64894b6f4d4ab04ed90cbe1197c9b"
+        }
+    }
+}

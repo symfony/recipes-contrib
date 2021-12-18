@@ -1,0 +1,75 @@
+{
+    "manifests": {
+        "msgphp/eav-bundle": {
+            "manifest": {
+                "bundles": {
+                    "MsgPhp\\EavBundle\\MsgPhpEavBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/msgphp_eav.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "use MsgPhp\\Eav\\Entity\\{Attribute, AttributeValue};",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return function (ContainerConfigurator $container) {",
+                        "    $container->extension('msgphp_eav', [",
+                        "        'class_mapping' => [",
+                        "            Attribute::class => \\App\\Entity\\Eav\\Attribute::class,",
+                        "            AttributeValue::class => \\App\\Entity\\Eav\\AttributeValue::class,",
+                        "        ],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/Eav/Attribute.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity\\Eav;",
+                        "",
+                        "use MsgPhp\\Eav\\Entity\\Attribute as BaseAttribute;",
+                        "",
+                        "/**",
+                        " * @final",
+                        " */",
+                        "class Attribute extends BaseAttribute",
+                        "{",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/Eav/AttributeValue.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity\\Eav;",
+                        "",
+                        "use MsgPhp\\Eav\\Entity\\AttributeValue as BaseAttributeValue;",
+                        "",
+                        "/**",
+                        " * @final",
+                        " */",
+                        "class AttributeValue extends BaseAttributeValue",
+                        "{",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6d1388ea8a520c5fd45883a4e179882884da982a"
+        }
+    }
+}

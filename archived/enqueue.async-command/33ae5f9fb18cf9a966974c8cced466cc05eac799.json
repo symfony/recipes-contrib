@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "enqueue/async-command": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/enqueue_async_command.yaml": {
+                    "contents": [
+                        "enqueue:",
+                        "    default:",
+                        "        async_commands: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "33ae5f9fb18cf9a966974c8cced466cc05eac799"
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "manifests": {
+        "drenso/symfony-shared": {
+            "manifest": {
+                "bundles": {
+                    "Drenso\\Shared\\DrensoSharedBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-package": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": [],
+            "ref": "cef2554f9f54ca6ad5c007f4e2bc6b8b0382dba5"
+        }
+    }
+}

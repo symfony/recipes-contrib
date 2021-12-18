@@ -1,0 +1,46 @@
+{
+    "manifests": {
+        "weglot/translate-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Weglot\\TranslateBundle\\WeglotTranslateBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "WG_API_KEY": "..."
+                },
+                "post-install-output": [
+                    "  * The weglot/translate-bundle uses Weglot service. Create a free",
+                    "    account on https://dashboard.weglot.com/register and modify your WG_API_KEY",
+                    "    config in <fg=green>.env</>",
+                    "",
+                    "  * Edit the configuration in <fg=green>config/packages/weglot_translate.yaml</>",
+                    "    to start translate your website.",
+                    "",
+                    "More details: https://github.com/weglot/translate-bundle"
+                ]
+            },
+            "files": {
+                "config/packages/weglot_translate.yaml": {
+                    "contents": [
+                        "weglot_translate:",
+                        "    api_key: '%env(WG_API_KEY)%'",
+                        "    original_language : 'en'",
+                        "    cache: true",
+                        "    destination_languages:",
+                        "        - 'fr'",
+                        "        - 'de'",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3cbe2d280746adbf6d41a7551fd1a8a123a17413"
+        }
+    }
+}

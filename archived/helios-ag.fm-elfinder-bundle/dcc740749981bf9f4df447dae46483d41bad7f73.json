@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "helios-ag/fm-elfinder-bundle": {
+            "manifest": {
+                "bundles": {
+                    "FM\\ElfinderBundle\\FMElfinderBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/fm_elfinder.yaml": {
+                    "contents": [
+                        "fm_elfinder:",
+                        "    instances:",
+                        "        default:",
+                        "            connector:",
+                        "                roots:",
+                        "                    uploads:",
+                        "                        driver: LocalFileSystem",
+                        "                        path: uploads",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/fm_elfinder.yaml": {
+                    "contents": [
+                        "fm_elfinder:",
+                        "    resource: \"@FMElfinderBundle/Resources/config/routing.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "dcc740749981bf9f4df447dae46483d41bad7f73"
+        }
+    }
+}

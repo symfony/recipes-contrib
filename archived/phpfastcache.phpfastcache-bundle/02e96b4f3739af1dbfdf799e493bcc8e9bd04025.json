@@ -1,0 +1,42 @@
+{
+    "manifests": {
+        "phpfastcache/phpfastcache-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Phpfastcache\\Bundle\\PhpfastcacheBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Avoid special chars in the file cache path such as: @, %, :, +, ~, etc.",
+                    "PHPFASTCACHE_FILECACHE_PATH": "%kernel.cache_dir%/phpfastcache/"
+                }
+            },
+            "files": {
+                "config/packages/phpfastcache.yaml": {
+                    "contents": [
+                        "phpfastcache:",
+                        "    twig_driver: \"filecache\" # This option must be a valid declared driver, in our example: \"filecache\"",
+                        "    twig_block_debug: false # This option will wrap CACHE/ENDCACHE blocks with block debug as HTML comment",
+                        "    drivers:",
+                        "        filecache:",
+                        "            type: Files",
+                        "            parameters:",
+                        "                path: \"%env(PHPFASTCACHE_FILECACHE_PATH)%\"",
+                        "",
+                        "# Define your drivers here. The example below connects to database 0 of the default Redis server.",
+                        "#",
+                        "# See https://github.com/PHPSocialNetwork/phpfastcache-bundle/wiki for instructions on",
+                        "# how to configure the bundle.",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "02e96b4f3739af1dbfdf799e493bcc8e9bd04025"
+        }
+    }
+}

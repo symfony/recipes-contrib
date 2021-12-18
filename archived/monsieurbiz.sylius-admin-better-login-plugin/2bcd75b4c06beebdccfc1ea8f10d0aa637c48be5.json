@@ -1,0 +1,18 @@
+{
+    "manifests": {
+        "monsieurbiz/sylius-admin-better-login-plugin": {
+            "manifest": {
+                "bundles": {
+                    "MonsieurBiz\\SyliusAdminBetterLoginPlugin\\MonsieurBizSyliusAdminBetterLoginPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-package": {
+                    "src/Resources/views/SyliusUiBundle/Security/_login.html.twig": "templates/SyliusUiBundle/Security/_login.html.twig"
+                }
+            },
+            "files": [],
+            "ref": "2bcd75b4c06beebdccfc1ea8f10d0aa637c48be5"
+        }
+    }
+}

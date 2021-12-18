@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "gpslab/geoip2": {
+            "manifest": {
+                "bundles": {
+                    "GpsLab\\Bundle\\GeoIP2Bundle\\GpsLabGeoIP2Bundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "composer-scripts": {
+                    "geoip2:update": "symfony-cmd"
+                }
+            },
+            "files": {
+                "config/packages/gpslab_geoip.yaml": {
+                    "contents": [
+                        "# Read the README file for more detailed configuration information",
+                        "# https://github.com/gpslab/geoip2",
+                        "gpslab_geoip:",
+                        "    # You should specify your personal licence key",
+                        "    license: 'YOUR-LICENSE-KEY'",
+                        "",
+                        "    # Edition ID of database you need",
+                        "    edition: 'GeoLite2-City'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "53d2ed1e0f747555711cdc3573a5a9cbc9ddcf19"
+        }
+    }
+}

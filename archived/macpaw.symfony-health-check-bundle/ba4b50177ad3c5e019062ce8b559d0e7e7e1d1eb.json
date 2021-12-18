@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "macpaw/symfony-health-check-bundle": {
+            "manifest": {
+                "bundles": {
+                    "SymfonyHealthCheckBundle\\SymfonyHealthCheckBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  *. Add healthcheck firewall to <fg=green>config/security.yaml</> file",
+                    "",
+                    "<comment>",
+                    "security:",
+                    "    firewalls:",
+                    "        healthcheck:",
+                    "            pattern: ^/health",
+                    "            security: false",
+                    "</>",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/MacPaw/symfony-health-check-bundle</>"
+                ]
+            },
+            "files": {
+                "config/packages/symfony_health_check.yaml": {
+                    "contents": [
+                        "symfony_health_check:",
+                        "    health_checks:",
+                        "        - id: symfony_health_check.status_up_check",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/symfony_health_check.yaml": {
+                    "contents": [
+                        "health_check:",
+                        "    resource: '@SymfonyHealthCheckBundle/Resources/config/routes.xml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ba4b50177ad3c5e019062ce8b559d0e7e7e1d1eb"
+        }
+    }
+}

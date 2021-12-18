@@ -1,0 +1,44 @@
+{
+    "manifests": {
+        "wisembly/amqp-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Wisembly\\AmqpBundle\\WisemblyAmqpBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "AMQP_URL": "amqp://guest:guest@localhost:5672"
+                }
+            },
+            "files": {
+                "config/packages/wisembly_amqp.yaml": {
+                    "contents": [
+                        "wisembly_amqp:",
+                        "    console_path: '%kernel.project_dir%/bin/console'",
+                        "    broker: 'oldsound'",
+                        "    connections:",
+                        "        default: '%env(AMQP_URL)%'",
+                        "    gates:",
+                        "        # here you should declare all your \"gates\", which are the cornerstone",
+                        "        # of this amqp bundle.",
+                        "        #",
+                        "        # For each gates declares which queue and which exchange it should",
+                        "        # communicate with, if these should be auto_declared, which connection",
+                        "        # it should use, ... and so on.",
+                        "        acme:",
+                        "            auto_declare: true",
+                        "            queue: acme_queue",
+                        "            exchange: acme_exchange",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2ed689d12d4d0b378c68d84be0e3eda127360f20"
+        }
+    }
+}

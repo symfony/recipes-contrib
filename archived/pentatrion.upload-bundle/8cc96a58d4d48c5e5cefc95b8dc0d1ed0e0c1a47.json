@@ -1,0 +1,51 @@
+{
+    "manifests": {
+        "pentatrion/upload-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Pentatrion\\UploadBundle\\PentatrionUploadBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  <fg=blue;options=bold>Configure</> <fg=blue>your transformations:</>",
+                    "    1. Install optional dependencies <comment>composer require symfony/validator liip/imagine-bundle imagine/imagine</>.",
+                    "    2. Verify and uncomment the configuration in <comment>%CONFIG_DIR%/packages/pentatrion_upload.yaml</>.",
+                    "    3. Create directory with Apache user access on <comment>public/uploads</>.",
+                    "",
+                    "  <fg=blue>If you have installed </><fg=blue;options=bold>liip/imagine-bundle</><fg=blue>:</>",
+                    "",
+                    "    1. Complete the configuration of <comment>%CONFIG_DIR%/packages/liip_imagine.yaml</> with your filters.",
+                    "    2. Create directory with Apache user access on <comment>public/media</>."
+                ]
+            },
+            "files": {
+                "config/packages/pentatrion_upload.yaml": {
+                    "contents": [
+                        "# All available configuration can be found here:",
+                        "# https://github.com/lhapaipai/upload-bundle#advanced-configuration",
+                        "",
+                        "pentatrion_upload:",
+                        "    # update to [\"small\"] if you have installed liip/imagine-bundle",
+                        "    liip_filters: []",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/pentatrion_upload.yaml": {
+                    "contents": [
+                        "_pentatrion_upload:",
+                        "    prefix: /media-manager",
+                        "    resource: \"@PentatrionUploadBundle/Resources/config/routing.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8cc96a58d4d48c5e5cefc95b8dc0d1ed0e0c1a47"
+        }
+    }
+}

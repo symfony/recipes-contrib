@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "endroid/guide-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Endroid\\GuideBundle\\EndroidGuideBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/endroid_guide.yaml": {
+                    "contents": [
+                        "endroid_guide:",
+                        "    shows: []",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/endroid_guide.yaml": {
+                    "contents": [
+                        "endroid_guide:",
+                        "    resource: \"@EndroidGuideBundle/Resources/config/routes.yaml\"",
+                        "    prefix: /guide",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c0f922a9a93a3e8fd51a1d7cca739eebcdfa7974"
+        }
+    }
+}

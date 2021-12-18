@@ -1,0 +1,57 @@
+{
+    "manifests": {
+        "orbitale/easyimpress-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Orbitale\\Bundle\\EasyImpressBundle\\EasyImpressBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/orbitale_easy_impress.yaml": {
+                    "contents": [
+                        "easy_impress:",
+                        "    presentations_dir: '%kernel.project_dir%/config/presentations'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/presentations/home.yaml": {
+                    "contents": [
+                        "# Read the documentation https://github.com/Orbitale/EasyImpressBundle#yml-reference for more details about yaml options",
+                        "data:",
+                        "    # In seconds",
+                        "    transition-duration: 1000",
+                        "",
+                        "slides:",
+                        "    -",
+                        "        content: 'Hello world!'",
+                        "        data:",
+                        "            x: 0",
+                        "            y: 0",
+                        "            z: 1000",
+                        "            rotate-x: 0",
+                        "            rotate-y: 0",
+                        "            rotate-z: 0",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/orbitale_easy_impress.yaml": {
+                    "contents": [
+                        "easy_impress:",
+                        "    resource: '@EasyImpressBundle/Resources/config/routing.yml'",
+                        "    prefix: /presentations",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d13df16ea1990be70160d21ea4e9a3bcbd974edd"
+        }
+    }
+}

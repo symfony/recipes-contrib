@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "koff/i18n-form-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Koff\\Bundle\\I18nFormBundle\\I18nFormBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Finish</> bundle configuration:",
+                    "    1. Open <comment>config/packages/twig.yaml</>",
+                    "    2. Add form template to form_themes section like this:",
+                    "",
+                    "    twig:",
+                    "        form_themes:",
+                    "            - '@I18nForm/bootstrap_4_form.html.twig'"
+                ]
+            },
+            "files": {
+                "config/packages/i18n_form.yaml": {
+                    "contents": [
+                        "i18n_form:",
+                        "    locales: 'en' # array or string separated with \"|\" or \",\"",
+                        "#    required_locales: 'en'",
+                        "#    excluded_fields: 'id|locale|translatable'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8fb73591e5bfeb6899517623472e42fbaef00815"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "thecodingmachine/graphqlite-bundle": {
+            "manifest": {
+                "bundles": {
+                    "TheCodingMachine\\Graphqlite\\Bundle\\GraphqliteBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/graphqlite.yaml": {
+                    "contents": [
+                        "# Read more about GraphQLite available options at: https://graphqlite.thecodingmachine.io/docs/symfony-bundle",
+                        "graphqlite:",
+                        "    namespace:",
+                        "        controllers: App\\Controller\\",
+                        "        types:",
+                        "            - App\\",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "96ae19d02363f9b640bcad4291d7972e44aa64e4"
+        }
+    }
+}

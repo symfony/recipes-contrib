@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "lexik/maintenance-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Lexik\\Bundle\\MaintenanceBundle\\LexikMaintenanceBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/lexik_maintenance.yaml": {
+                    "contents": [
+                        "lexik_maintenance:",
+                        "    driver:",
+                        "        class: '\\Lexik\\Bundle\\MaintenanceBundle\\Drivers\\FileDriver'",
+                        "        options: { file_path: '%kernel.project_dir%/var/cache/lock' }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c7b1a155b60c553d2c6e272d210e8614c89a7e5c"
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "lag/adminbundle": {
+            "manifest": {
+                "bundles": {
+                    "LAG\\AdminBundle\\LAGAdminBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/admin/resources/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/lag_admin.yaml": {
+                    "contents": [
+                        "lag_admin:",
+                        "    application:",
+                        "        resources_path: '%kernel.project_dir%/config/admin/resources'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d1967ac7b058210ed958b5a7cca70a89ce7749af"
+        }
+    }
+}

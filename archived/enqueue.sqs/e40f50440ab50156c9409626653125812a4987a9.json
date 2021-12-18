@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "enqueue/sqs": {
+            "manifest": {
+                "env": {
+                    "ENQUEUE_DSN": "sqs:"
+                }
+            },
+            "files": [],
+            "ref": "e40f50440ab50156c9409626653125812a4987a9"
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "datana-gmbh/sendgrid-dynamic-template-mailer": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MAILER_DSN": "sendgrid+template://KEY@default"
+                }
+            },
+            "files": {
+                "config/packages/datana_sendgrid_dynamic_template_mailer.yaml": {
+                    "contents": [
+                        "services:",
+                        "    Datana\\Bridge\\Symfony\\Mailer\\Sendgrid\\Transport\\SendgridDynamicTemplateTransportFactory:",
+                        "        parent: 'mailer.transport_factory.abstract'",
+                        "        tags: ['mailer.transport_factory']",
+                        "        autowire: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5b3705038a4cbbc32203ee75be06db766e840f6d"
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "dekalee/autopilot-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dekalee\\AutopilotBundle\\DekaleeAutopilotBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#DEKALEE_AUTOPILOT_APIKEY": "the-autopilot-api-key"
+                },
+                "post-install-output": [
+                    "  * The Dekalee/AutopilotBundle needs your pubsub configuration.",
+                    "    Modify your DEKALEE_AUTOPILOT_APIKEY config in <fg=green>.env</>"
+                ]
+            },
+            "files": {
+                "config/packages/dekalee_autopilot_swarrot.yaml": {
+                    "contents": [
+                        "dekalee_autopilot:",
+                        "    api_key: '%env(DEKALEE_AUTOPILOT_APIKEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7d8d3dafe6ac802b38f6147a4732b7958adc8052"
+        }
+    }
+}

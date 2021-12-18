@@ -1,0 +1,40 @@
+{
+    "manifests": {
+        "kms/froala-editor-bundle": {
+            "manifest": {
+                "bundles": {
+                    "KMS\\FroalaEditorBundle\\KMSFroalaEditorBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/kms_froala_editor.yaml": {
+                    "contents": [
+                        "twig:",
+                        "    form_themes:",
+                        "        - '@KMSFroalaEditor/Form/froala_widget.html.twig'",
+                        "",
+                        "kms_froala_editor:",
+                        "    language: en",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/kms_froala_editor.yaml": {
+                    "contents": [
+                        "kms_froala_editor:",
+                        "    resource: \"@KMSFroalaEditorBundle/Resources/config/routing.yml\"",
+                        "    prefix:   /froala-editor",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "666a78d430cecebe61a1990d7b8f638e45b2eeab"
+        }
+    }
+}

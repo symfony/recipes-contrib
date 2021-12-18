@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "hostnet/form-handler-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Hostnet\\Bundle\\FormHandlerBundle\\FormHandlerBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "4603ef9e29026626de3ab70c325eb867deb30684"
+        }
+    }
+}

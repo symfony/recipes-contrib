@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "ywh/cvss-bundle": {
+            "manifest": {
+                "bundles": {
+                    "YWH\\CvssBundle\\YWHCvssBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ywh_doctrine_encryption.yaml": {
+                    "contents": [
+                        "ywh_cvss:",
+                        "    translation_domain: cvss",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "406b07c38a73e8506454bf628de4461573bc8dc0"
+        }
+    }
+}

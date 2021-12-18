@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "leapt/core-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Leapt\\CoreBundle\\LeaptCoreBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "gitignore": [
+                    "/public/uploads/"
+                ]
+            },
+            "files": {
+                "config/packages/leapt_core.yaml": {
+                    "contents": [
+                        "# Read the documentation: https://core-bundle.leapt.io/configuration_reference.html",
+                        "leapt_core:",
+                        "    upload_dir: '%kernel.project_dir%/public'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3a70ffc856464fc26a5d421983a84e2fc64a55fe"
+        }
+    }
+}

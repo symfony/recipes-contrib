@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "makasim/yadm-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Makasim\\Yadm\\Bundle\\YadmBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MONGO_DSN": "mongodb://localhost:27017/db_name"
+                }
+            },
+            "files": {
+                "config/packages/yadm.yaml": {
+                    "contents": [
+                        "yadm:",
+                        "    mongo_uri: '%env(MONGO_DSN)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b9beaba0be1887e3c127e660d179d9939687c984"
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "silasjoisten/sonata-multiupload-bundle": {
+            "manifest": {
+                "container": {
+                    "sonata.media.admin.media.controller": "SilasJoisten\\Sonata\\MultiUploadBundle\\Controller\\MultiUploadController"
+                },
+                "bundles": {
+                    "SilasJoisten\\Sonata\\MultiUploadBundle\\SonataMultiUploadBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sonata_multi_upload.yaml": {
+                    "contents": [
+                        "sonata_admin:",
+                        "    assets:",
+                        "        extra_stylesheets:",
+                        "            - bundles/sonatamultiupload/dist/sonata-multiupload.css",
+                        "",
+                        "        extra_javascripts:",
+                        "            - bundles/sonatamultiupload/dist/sonata-multiupload.js",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "4e624e746b1d630cfa6e39b64fccc5c46fc5acda"
+        }
+    }
+}

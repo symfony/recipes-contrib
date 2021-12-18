@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "xcore/inline-editing-bundle": {
+            "manifest": {
+                "bundles": {
+                    "XcoreCMS\\InlineEditingBundle\\XcoreCMSInlineEditingBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/xcore_inline.yaml": {
+                    "contents": [
+                        "#xcore_inline:",
+                        "#    fallback: false",
+                        "#    table_name: 'inline_content",
+                        "#    url_path: '/inline-editing",
+                        "#    connection: 'doctrine.dbal.default_connection'",
+                        "#    entity_manager: 'doctrine.orm.entity_manager'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/xcore_inline.yaml": {
+                    "contents": [
+                        "xcore_inline:",
+                        "    resource: \"@XcoreCMSInlineEditingBundle/Resources/config/routing.xml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2bb753074a9c3b694a7f6759826e1c2197ced7b8"
+        }
+    }
+}

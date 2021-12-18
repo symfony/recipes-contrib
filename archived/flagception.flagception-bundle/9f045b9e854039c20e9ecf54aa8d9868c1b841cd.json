@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "flagception/flagception-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Flagception\\Bundle\\FlagceptionBundle\\FlagceptionBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/flagception.yaml": {
+                    "contents": [
+                        "# See full configuration at https://github.com/bestit/flagception-bundle",
+                        "flagception:",
+                        "    features:",
+                        "        demo_123:",
+                        "            default: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9f045b9e854039c20e9ecf54aa8d9868c1b841cd"
+        }
+    }
+}

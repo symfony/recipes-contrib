@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "yamilovs/sms-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Yamilovs\\Bundle\\SmsBundle\\SmsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  You <options=bold>must</> to define at least one provider configuration in <comment>%CONFIG_DIR%/packages/yamilovs_sms.yaml</>.",
+                    "",
+                    "  * <fg=blue>More info</> you can find in the documentation at <comment>https://github.com/yamilovs/SmsBundle#configuration</>"
+                ]
+            },
+            "files": {
+                "config/packages/yamilovs_sms.yaml": {
+                    "contents": [
+                        "yamilovs_sms:",
+                        "    providers:",
+                        "        # You must to define at least one provider configuration",
+                        "        # See more info at https://github.com/yamilovs/SmsBundle#configuration",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "49a4a12e41c8bfd95cae0e179e639e58350322bf"
+        }
+    }
+}

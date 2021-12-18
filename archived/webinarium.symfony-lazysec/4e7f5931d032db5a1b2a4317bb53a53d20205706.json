@@ -1,0 +1,25 @@
+{
+    "manifests": {
+        "webinarium/symfony-lazysec": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/lazysec.yaml": {
+                    "contents": [
+                        "services:",
+                        "",
+                        "    # See https://github.com/webinarium/symfony-lazysec/wiki/User-checker",
+                        "    LazySec\\Checker\\GenericUserChecker:",
+                        "        autowire: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "4e7f5931d032db5a1b2a4317bb53a53d20205706"
+        }
+    }
+}

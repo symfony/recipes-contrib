@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "wandi/easyadmin-plus-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Wandi\\EasyAdminPlusBundle\\WandiEasyAdminPlusBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/wandi_easy_admin_plus.yaml": {
+                    "contents": [
+                        "wandi_easy_admin_plus:",
+                        "    resource: '@WandiEasyAdminPlusBundle/Resources/config/routing.yml'",
+                        "    prefix: /admin",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "07210dd45f3fab4e4eade6486af6310c42456b7f"
+        }
+    }
+}

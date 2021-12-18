@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "pablok/supercache-bundle": {
+            "manifest": {
+                "bundles": {
+                    "PabloK\\SupercacheBundle\\SupercacheBundle": [
+                        "prod"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/prod/supercache.yaml": {
+                    "contents": [
+                        "supercache:",
+                        "    enabled: true",
+                        "    cache_dir: '%kernel.project_dir%/public/webcache'",
+                        "    cache_status_header: false",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5b17bac71b92c1035fad1720d4bc0f5e9fe17498"
+        }
+    }
+}

@@ -1,0 +1,69 @@
+{
+    "manifests": {
+        "ambient-link/ability-sdk": {
+            "manifest": {
+                "env": {
+                    "AMBIENT_LINK_HOST": "",
+                    "AMBIENT_LINK_PORT": "1883",
+                    "AMBIENT_LINK_USERNAME": "",
+                    "AMBIENT_LINK_PASSWORD": "",
+                    "AMBIENT_LINK_MONKEY_ID": ""
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * Your ability is almost ready:",
+                    "    1. Edit <comment>src/AbilityEventSubscriber</comment> and <info>implement</info> your logic:",
+                    "",
+                    "        public static function getSubscribedEvents(): array",
+                    "        {",
+                    "            return [",
+                    "                // can be found in AmbientLink\\SDK\\Event\\",
+                    "                EnterRoomEvent::NAME => 'onEnterRoom',",
+                    "            ];",
+                    "        }",
+                    "",
+                    "        public function onEnterRoom(EnterRoomEvent $event): void",
+                    "        {",
+                    "            $roomName = $event->roomName();",
+                    "",
+                    "            $this->logger->debug(sprintf('Some person enters room \"%s\".', $roomName));",
+                    "",
+                    "            // @todo implement logic here",
+                    "        }",
+                    "",
+                    "  * You can found Events in AmbientLink\\SDK\\Event\\",
+                    "  * Using Ability Command? Try <info>php bin/console ability:debug --dummy</info>"
+                ]
+            },
+            "files": {
+                "config/packages/ability.yaml": {
+                    "contents": [
+                        "services:",
+                        "    AmbientLink\\SDK\\SmartMonkeyConnection:",
+                        "        arguments: ['@amnient.link_connection_settings', '%env(AMBIENT_LINK_USERNAME)%', '%env(AMBIENT_LINK_PASSWORD)%']",
+                        "",
+                        "    amnient.link_connection_settings:",
+                        "        class: PhpMqtt\\Client\\ConnectionSettings",
+                        "",
+                        "    PhpMqtt\\Client\\Contracts\\MQTTClient: '@PhpMqtt\\Client\\MQTTClient'",
+                        "    PhpMqtt\\Client\\MQTTClient:",
+                        "        arguments:",
+                        "            - '%env(AMBIENT_LINK_HOST)%'",
+                        "            - '%env(AMBIENT_LINK_PORT)%'",
+                        "            - '%env(AMBIENT_LINK_MONKEY_ID)%'",
+                        "",
+                        "    AmbientLink\\SDK\\Mqtt\\MqttAdapter:",
+                        "        arguments:",
+                        "            $username: '%env(AMBIENT_LINK_USERNAME)%'",
+                        "            $password: '%env(AMBIENT_LINK_PASSWORD)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "41ad248e67c065e158415f6cffd693f39f303283"
+        }
+    }
+}

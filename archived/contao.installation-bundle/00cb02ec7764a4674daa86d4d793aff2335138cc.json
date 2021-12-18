@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "contao/installation-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Contao\\InstallationBundle\\ContaoInstallationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/contao_installation.yaml": {
+                    "contents": [
+                        "contao_installation:",
+                        "    resource: \"@ContaoInstallationBundle/Resources/config/routing.yml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "00cb02ec7764a4674daa86d4d793aff2335138cc"
+        }
+    }
+}

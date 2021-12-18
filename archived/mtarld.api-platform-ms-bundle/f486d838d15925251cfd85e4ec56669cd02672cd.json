@@ -1,0 +1,40 @@
+{
+    "manifests": {
+        "mtarld/api-platform-ms-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Mtarld\\ApiPlatformMsBundle\\ApiPlatformMsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Configure</> the bundle:",
+                    "    <comment>config/packages/api_platform_ms.yaml</>",
+                    "    <comment>https://github.com/mtarld/api-platform-ms-bundle</>"
+                ]
+            },
+            "files": {
+                "config/packages/api_platform_ms.yaml": {
+                    "contents": [
+                        "api_platform_ms:",
+                        "    # Name of the current microservice",
+                        "    name: app",
+                        "",
+                        "    # List of related microservices",
+                        "    #microservices:",
+                        "    #    product:",
+                        "    #       base_uri: https://product.api",
+                        "    #       api_path: /api",
+                        "    #       format: jsonld",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f486d838d15925251cfd85e4ec56669cd02672cd"
+        }
+    }
+}

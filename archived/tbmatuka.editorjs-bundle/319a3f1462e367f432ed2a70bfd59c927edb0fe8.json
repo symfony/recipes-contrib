@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "tbmatuka/editorjs-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Tbmatuka\\EditorjsBundle\\TbmatukaEditorjsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/editorjs.yaml": {
+                    "contents": [
+                        "twig:",
+                        "    form_themes:",
+                        "        - '@TbmatukaEditorjs/Form/editorjs_widget.html.twig'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "319a3f1462e367f432ed2a70bfd59c927edb0fe8"
+        }
+    }
+}

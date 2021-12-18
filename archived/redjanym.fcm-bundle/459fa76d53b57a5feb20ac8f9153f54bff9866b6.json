@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "redjanym/fcm-bundle": {
+            "manifest": {
+                "bundles": {
+                    "RedjanYm\\FCMBundle\\RedjanYmFCMBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "FCM_SERVER_KEY": "YOUR_FIREBASE_CLOUD_MESSAGING_SERVER_KEY"
+                }
+            },
+            "files": {
+                "config/packages/redjan_ym_fcm.yaml": {
+                    "contents": [
+                        "redjan_ym_fcm:",
+                        "    firebase_api_key: '%env(resolve:FCM_SERVER_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "459fa76d53b57a5feb20ac8f9153f54bff9866b6"
+        }
+    }
+}

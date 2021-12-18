@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "endroid/flusher": {
+            "manifest": {
+                "bundles": {
+                    "Endroid\\Flusher\\Bundle\\FlusherBundle\\EndroidFlusherBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/endroid_flusher.yaml": {
+                    "contents": [
+                        "endroid_flusher:",
+                        "    step_size: 1.5",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e0e3dc5f67eea9c1d6ecd2185b882a196d0fb8d7"
+        }
+    }
+}

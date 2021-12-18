@@ -1,0 +1,25 @@
+{
+    "manifests": {
+        "kerox/twig-image-placeholder-extension": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/kerox_twig_image_placeholder.yaml": {
+                    "contents": [
+                        "services:",
+                        "    Kerox\\TwigImagePlaceholder\\SvgExtension:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7d073c979405a5909a8d63b86ff69ee14bca36ab"
+        }
+    }
+}

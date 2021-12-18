@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "endroid/pdf": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/endroid_pdf.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "        public: false",
+                        "",
+                        "    Endroid\\Pdf\\Pdf: ~",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "bf31aa09b7d29ee588506141f1436688ded50254"
+        }
+    }
+}

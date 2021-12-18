@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "async-aws/async-aws-bundle": {
+            "manifest": {
+                "bundles": {
+                    "AsyncAws\\Symfony\\Bundle\\AsyncAwsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "AWS_KEY": "your-aws-key",
+                    "AWS_SECRET": "your-aws-secret"
+                }
+            },
+            "files": {
+                "config/packages/async_aws.yaml": {
+                    "contents": [
+                        "# Read documentation at https://async-aws.com/integration/symfony-bundle.html",
+                        "async_aws:",
+                        "    config:",
+                        "        region: eu-central-1",
+                        "        accessKeyId: '%env(AWS_KEY)%'",
+                        "        accessKeySecret: '%env(AWS_SECRET)%'",
+                        "",
+                        "    # All installed clients are automatically autowired. Use this section to customize clients",
+                        "    clients:",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "1c5ddc78525b87905779c67df1ab71521f664662"
+        }
+    }
+}

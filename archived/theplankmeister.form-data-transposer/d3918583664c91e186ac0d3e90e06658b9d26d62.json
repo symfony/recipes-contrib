@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "theplankmeister/form-data-transposer": {
+            "manifest": {
+                "copy-from-package": {
+                    "config/form_data_transposer.yaml": "%CONFIG_DIR%/packages/form_data_transposer.yaml"
+                }
+            },
+            "files": [],
+            "ref": "d3918583664c91e186ac0d3e90e06658b9d26d62"
+        }
+    }
+}

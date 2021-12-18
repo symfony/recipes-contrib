@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "hautelook/alice-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Hautelook\\AliceBundle\\HautelookAliceBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "fixtures/": "fixtures/"
+                }
+            },
+            "files": {
+                "config/packages/dev/hautelook_alice.yaml": {
+                    "contents": [
+                        "hautelook_alice:",
+                        "    fixtures_path: fixtures",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/test/hautelook_alice.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: ../dev/hautelook_alice.yaml }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "fixtures/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "afbceeba44de4a6dd34a39bebaae6981c4ef86b7"
+        }
+    }
+}

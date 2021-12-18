@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "misd/phone-number-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Misd\\PhoneNumberBundle\\MisdPhoneNumberBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "etc/": "%ETC_DIR%/"
+                }
+            },
+            "files": {
+                "etc/packages/libphonenumber.yaml": {
+                    "contents": [
+                        "doctrine:",
+                        "    dbal:",
+                        "        types:",
+                        "            phone_number: Misd\\PhoneNumberBundle\\Doctrine\\DBAL\\Types\\PhoneNumberType",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "71f5bcd801ac182facc3dc3991c8aa9e350fa139"
+        }
+    }
+}

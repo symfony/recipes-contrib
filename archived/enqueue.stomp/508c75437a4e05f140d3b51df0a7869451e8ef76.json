@@ -1,0 +1,17 @@
+{
+    "manifests": {
+        "enqueue/stomp": {
+            "manifest": {
+                "post-install-output": [
+                    "  * Configure <comment>ENQUEUE_DSN=stomp://example.com:1000?login=theLogin</comment>",
+                    "    in your <comment>.env</comment> file.",
+                    "",
+                    "  * For the full options, see",
+                    "    <comment>https://github.com/php-enqueue/enqueue-dev/blob/master/docs/transport/stomp.md</comment>"
+                ]
+            },
+            "files": [],
+            "ref": "508c75437a4e05f140d3b51df0a7869451e8ef76"
+        }
+    }
+}

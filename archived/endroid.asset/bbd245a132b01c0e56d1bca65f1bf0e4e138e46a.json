@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "endroid/asset": {
+            "manifest": {
+                "bundles": {
+                    "Endroid\\Asset\\Bundle\\AssetBundle\\EndroidAssetBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/endroid_asset.yaml": {
+                    "contents": [
+                        "endroid_asset:",
+                        "    public_dir: '%kernel.project_dir%/public'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "bbd245a132b01c0e56d1bca65f1bf0e4e138e46a"
+        }
+    }
+}

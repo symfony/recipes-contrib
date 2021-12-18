@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "cpliakas/git-wrapper": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/cpliakas_git_wrapper.yaml": {
+                    "contents": [
+                        "services:",
+                        "    GitWrapper\\GitWrapper: null",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c99fcfe7e2e637834e3136dfe8fd671dd5d9163a"
+        }
+    }
+}

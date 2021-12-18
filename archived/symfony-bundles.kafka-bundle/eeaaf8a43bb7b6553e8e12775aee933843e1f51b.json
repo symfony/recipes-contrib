@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "symfony-bundles/kafka-bundle": {
+            "manifest": {
+                "bundles": {
+                    "SymfonyBundles\\KafkaBundle\\SymfonyBundlesKafkaBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "KAFKA_BROKERS": "kafka.intra:9092"
+                }
+            },
+            "files": {
+                "config/packages/sb_kafka.yaml": {
+                    "contents": [
+                        "sb_kafka:",
+                        "    producers:",
+                        "        configuration:",
+                        "            group.id: 'main_group'",
+                        "            log.connection.close: 'false'",
+                        "            metadata.broker.list: '%env(resolve:KAFKA_BROKERS)%'",
+                        "            queue.buffering.max.messages: 10000000",
+                        "",
+                        "    consumers:",
+                        "        configuration:",
+                        "            group.id: 'main_group'",
+                        "            log.connection.close: 'false'",
+                        "            metadata.broker.list: '%env(resolve:KAFKA_BROKERS)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "eeaaf8a43bb7b6553e8e12775aee933843e1f51b"
+        }
+    }
+}

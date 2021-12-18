@@ -1,0 +1,42 @@
+{
+    "manifests": {
+        "helppc/supervisor-bundle": {
+            "manifest": {
+                "bundles": {
+                    "HelpPC\\Bundle\\SupervisorBundle\\SupervisorBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/helppc_supervisor.yaml": {
+                    "contents": [
+                        "supervisor:",
+                        "    default_environment: all",
+                        "    servers:",
+                        "        all:",
+                        "            localhost:",
+                        "                scheme: http",
+                        "                host: 127.0.0.1",
+                        "                port: 9001",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/helppc_supervisor.yaml": {
+                    "contents": [
+                        "supervisor:",
+                        "    resource: '@SupervisorBundle/Resources/config/routing.xml'",
+                        "    prefix:   /supervisor",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "21b8bccdadf4cfd3d7927f5d0d9ac2fe87d1f03b"
+        }
+    }
+}

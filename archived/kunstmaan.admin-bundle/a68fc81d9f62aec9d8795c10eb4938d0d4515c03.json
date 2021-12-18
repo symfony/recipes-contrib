@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "kunstmaan/admin-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Kunstmaan\\AdminBundle\\KunstmaanAdminBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/kunstmaan_admin.yaml": {
+                    "contents": [
+                        "kunstmaan_admin:",
+                        "    multi_language: true",
+                        "    required_locales: nl|fr|en",
+                        "    default_locale: en",
+                        "    admin_locales: ['en']",
+                        "    website_title: 'MyProject' #Rename this to your website name",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/kunstmaan_admin.yaml": {
+                    "contents": [
+                        "KunstmaanAdminBundle:",
+                        "    resource: \"@KunstmaanAdminBundle/Resources/config/routing.yml\"",
+                        "    # If your site is not multi language, remove the \"{_locale}/\" part of prefix and requirements",
+                        "    prefix:   /{_locale}/",
+                        "    requirements:",
+                        "        _locale: \"%kunstmaan_admin.required_locales%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a68fc81d9f62aec9d8795c10eb4938d0d4515c03"
+        }
+    }
+}

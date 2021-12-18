@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "sylius/customer-order-cancellation-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Sylius\\CustomerOrderCancellationPlugin\\SyliusCustomerOrderCancellationPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/sylius_customer_order_cancellation.yaml": {
+                    "contents": [
+                        "sylius_customer_order_cancellation_plugin:",
+                        "    resource: \"@SyliusCustomerOrderCancellationPlugin/Resources/config/routing.yml\"",
+                        "    prefix: /{_locale}",
+                        "    requirements:",
+                        "        _locale: ^[a-z]{2}(?:_[A-Z]{2})?$",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0df1d0d6f01546907877e0d832edb15d00406613"
+        }
+    }
+}

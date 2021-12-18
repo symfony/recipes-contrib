@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "svc/param-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Svc\\ParamBundle\\SvcParamBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * Please adapt config/routes/svc-param.yaml and define your route"
+                ]
+            },
+            "files": {
+                "config/routes/svc_param.yaml": {
+                    "contents": [
+                        "_svc_param:",
+                        "    resource: '@SvcParamBundle/src/Resources/config/routes.xml'",
+                        "    prefix: /svc-param/{_locale}",
+                        ""
+                    ],
+                    "executable": true
+                }
+            },
+            "ref": "0e04715ced3d8fe1a816e49f1b043728dac36af0"
+        }
+    }
+}

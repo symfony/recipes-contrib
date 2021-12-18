@@ -1,0 +1,40 @@
+{
+    "manifests": {
+        "friendsofsymfony/rest-bundle": {
+            "manifest": {
+                "bundles": {
+                    "FOS\\RestBundle\\FOSRestBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/fos_rest.yaml": {
+                    "contents": [
+                        "# Read the documentation: https://symfony.com/doc/master/bundles/FOSRestBundle/index.html",
+                        "#fos_rest:",
+                        "#    param_fetcher_listener:  true",
+                        "#    allowed_methods_listener:  true",
+                        "#    routing_loader: true",
+                        "#    view:",
+                        "#        view_response_listener:  true",
+                        "#    exception:",
+                        "#        codes:",
+                        "#            App\\Exception\\MyException: 403",
+                        "#        messages:",
+                        "#            App\\Exception\\MyException: Forbidden area.",
+                        "#    format_listener:",
+                        "#        rules:",
+                        "#            - { path: ^/api, prefer_extension: true, fallback_format: json, priorities: [ json, html ] }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "fa845143b7e0a4c70aedd1a88c549e6d977e9ae5"
+        }
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "manifests": {
+        "jms/serializer-bundle": {
+            "manifest": {
+                "bundles": {
+                    "JMS\\SerializerBundle\\JMSSerializerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "etc/": "%ETC_DIR%"
+                }
+            },
+            "files": {
+                "etc/packages/dev/jms_serializer.yaml": {
+                    "contents": [
+                        "jms_serializer:",
+                        "    visitors:",
+                        "        json:",
+                        "            options: JSON_PRETTY_PRINT",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "etc/packages/jms_serializer.yaml": {
+                    "contents": [
+                        "jms_serializer:",
+                        "    enable_short_alias: false",
+                        "    handlers:",
+                        "        datetime:",
+                        "            default_format: 'Y-m-d\\TH:i:sP'",
+                        "        array_collection:",
+                        "            initialize_excluded: false # suggested false for better performance",
+                        "    subscribers:",
+                        "        doctrine_proxy:",
+                        "            initialize_virtual_types: false # suggested false for better performance",
+                        "            initialize_excluded: false # suggested false for better performance",
+                        "    visitors:",
+                        "        xml:",
+                        "            format_output: '%kernel.debug%'",
+                        "",
+                        "#    metadata:",
+                        "#        auto_detection: false",
+                        "#        directories:",
+                        "#            any-name:",
+                        "#                namespace_prefix: \"My\\\\FooBundle\"",
+                        "#                path: \"@MyFooBundle/Resources/config/serializer\"",
+                        "#            another-name:",
+                        "#                namespace_prefix: \"My\\\\BarBundle\"",
+                        "#                path: \"@MyBarBundle/Resources/config/serializer\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ad31c0226e7a76cb5b806a28336f7b91475ad213"
+        }
+    }
+}

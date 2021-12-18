@@ -1,0 +1,25 @@
+{
+    "manifests": {
+        "oskarstark/symfony-http-responder": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/oskarstark_symfony_http_responder.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "",
+                        "    OskarStark\\Symfony\\Http\\Responder: null",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e21c52cec9a4645bfb7bce755e7ad05f77449947"
+        }
+    }
+}

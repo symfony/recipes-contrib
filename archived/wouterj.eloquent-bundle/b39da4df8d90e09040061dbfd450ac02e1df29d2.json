@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "wouterj/eloquent-bundle": {
+            "manifest": {
+                "bundles": {
+                    "WouterJ\\EloquentBundle\\WouterJEloquentBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "env": {
+                    "DB_CONNECTION": "mysql",
+                    "DB_HOST": "127.0.0.1",
+                    "DB_PORT": "3306",
+                    "DB_DATABASE": "symfony",
+                    "DB_USERNAME": "root",
+                    "DB_PASSWORD": ""
+                }
+            },
+            "files": {
+                "config/packages/eloquent.yaml": {
+                    "contents": [
+                        "wouterj_eloquent:",
+                        "    driver:   '%env(DB_CONNECTION)%'",
+                        "    host:     '%env(DB_HOST)%'",
+                        "    port:     '%env(DB_PORT)%'",
+                        "    database: '%env(DB_DATABASE)%'",
+                        "    username: '%env(DB_USERNAME)%'",
+                        "    password: '%env(DB_PASSWORD)%'",
+                        "    # Uncomment the following line to enable the Eloquent ORM",
+                        "    #eloquent: null",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Model/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b39da4df8d90e09040061dbfd450ac02e1df29d2"
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "jacquesndl/mailer-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Jacquesndl\\MailerBundle\\JacquesndlMailerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "JACQUESNDL_MAILER_SENDER_NAME": "Example",
+                    "JACQUESNDL_MAILER_SENDER_ADDRESS": "example@domain.tld"
+                },
+                "post-install-output": [
+                    "  * The Jacquesndl/MailerBundle needs your default sender configuration.",
+                    "    Modify your JACQUESNDL_MAILER_SENDER_NAME and JACQUESNDL_MAILER_SENDER_ADDRESS config in <fg=green>.env</>"
+                ]
+            },
+            "files": {
+                "config/packages/jacquesndl_mailer.yaml": {
+                    "contents": [
+                        "jacquesndl_mailer:",
+                        "    sender:",
+                        "        name: '%env(JACQUESNDL_MAILER_SENDER_NAME)%'",
+                        "        address: '%env(JACQUESNDL_MAILER_SENDER_ADDRESS)%'",
+                        ""
+                    ],
+                    "executable": true
+                }
+            },
+            "ref": "7dd88594d9b018db7cc605e8632e11f767910876"
+        }
+    }
+}

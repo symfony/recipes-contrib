@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "spomky-labs/jose-bundle": {
+            "manifest": {
+                "bundles": {
+                    "SpomkyLabs\\JoseBundle\\SpomkyLabsJoseBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/spomky_labs_jose_bundle_routes.yaml": {
+                    "contents": [
+                        "spomky_labs_jose_bundle_jwkset_endpoint:",
+                        "    resource: \"@SpomkyLabsJoseBundle/Resources/config/routing/jwkset_controller.yml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "42b3e6d95495f3968bd4419cc8716fbed80610c6"
+        }
+    }
+}

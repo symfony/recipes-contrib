@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "gheb/data-migrations-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Gheb\\DataMigrationsBundle\\DataMigrationsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/data_migrations.yaml": {
+                    "contents": [
+                        "data_migrations:",
+                        "    dir_name: '%kernel.project_dir%/src/DataMigrations'",
+                        "    # namespace is arbitrary but should be different from App\\Migrations",
+                        "    # as migrations classes should NOT be autoloaded",
+                        "    namespace: DataMigrations",
+                        "    name: My app migrations",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/DataMigrations/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "73860d9aaddd69159331184ef0bc99ccd55fa0cb"
+        }
+    }
+}

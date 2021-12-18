@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "algolia/algolia-search-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Algolia\\AlgoliaSearchBundle\\AlgoliaAlgoliaSearchBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "ALGOLIA_APP_ID": "...",
+                    "ALGOLIA_API_KEY": "..."
+                }
+            },
+            "files": {
+                "config/packages/algolia.yaml": {
+                    "contents": [
+                        "algolia:",
+                        "    application_id: \"%env(ALGOLIA_APP_ID)%\"",
+                        "    api_key: \"%env(ALGOLIA_API_KEY)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b6d98595a857947b5d05b79eb3a5fbf53b0a18d2"
+        }
+    }
+}

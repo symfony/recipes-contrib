@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "velhron/dadata-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Velhron\\DadataBundle\\VelhronDadataBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "DADATA_TOKEN": "your-token",
+                    "DADATA_SECRET": "your-secret"
+                }
+            },
+            "files": {
+                "config/packages/dadata.yaml": {
+                    "contents": [
+                        "velhron_dadata:",
+                        "    token: '%env(DADATA_TOKEN)%'",
+                        "    secret: '%env(DADATA_SECRET)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "fe286c8dfc95885d4509da0a1ae3c3aed2bab0db"
+        }
+    }
+}

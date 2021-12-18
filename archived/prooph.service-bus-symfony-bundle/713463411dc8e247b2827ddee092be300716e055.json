@@ -1,0 +1,45 @@
+{
+    "manifests": {
+        "prooph/service-bus-symfony-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Prooph\\Bundle\\ServiceBus\\ProophServiceBusBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * Verify and uncomment the configuration in <comment>%CONFIG_DIR%/packages/prooph_service_bus.yaml</>",
+                    "    to register message handlers",
+                    "",
+                    "  * Dispatch commands by injecting",
+                    "    the <comment>Prooph\\ServiceBus\\CommandBus</comment> service into your controllers"
+                ]
+            },
+            "files": {
+                "config/packages/prooph_service_bus.yaml": {
+                    "contents": [
+                        "prooph_service_bus:",
+                        "    command_buses:",
+                        "        default_command_bus: null",
+                        "    event_buses:",
+                        "        default_event_bus: null",
+                        "    query_buses:",
+                        "        default_query_bus: null",
+                        "",
+                        "services:",
+                        "    _defaults:",
+                        "        public: false",
+                        "",
+                        "    Prooph\\ServiceBus\\CommandBus: '@prooph_service_bus.default_command_bus'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "713463411dc8e247b2827ddee092be300716e055"
+        }
+    }
+}

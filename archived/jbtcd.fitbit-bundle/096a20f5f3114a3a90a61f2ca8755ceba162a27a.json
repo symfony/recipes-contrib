@@ -1,0 +1,44 @@
+{
+    "manifests": {
+        "jbtcd/fitbit-bundle": {
+            "manifest": {
+                "bundles": {
+                    "FitbitBundle\\FitbitBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "FITBIT_CLIENT_ID": "not-a-real-id",
+                    "FITBIT_CLIENT_SECRET": "not-a-real-secret"
+                }
+            },
+            "files": {
+                "config/packages/fitbit.yaml": {
+                    "contents": [
+                        "fitbit:",
+                        "    # Get client ID and Secret, register an app here: https://dev.fitbit.com/apps",
+                        "    clientId: '%env(FITBIT_CLIENT_ID)%'",
+                        "    clientSecret: '%env(FITBIT_CLIENT_SECRET)%'",
+                        "    # For available scopes, see here: https://dev.fitbit.com/build/reference/web-api/oauth2/#scope",
+                        "    scopes:",
+                        "        - activity",
+                        "        - heartrate",
+                        "        - location",
+                        "        - nutrition",
+                        "        - profile",
+                        "        - settings",
+                        "        - sleep",
+                        "        - social",
+                        "        - weight",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "096a20f5f3114a3a90a61f2ca8755ceba162a27a"
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "sylius/admin-order-creation-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Sylius\\AdminOrderCreationPlugin\\SyliusAdminOrderCreationPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sylius_admin_order_creation.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SyliusAdminOrderCreationPlugin/Resources/config/app/config.yml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sylius_admin_order_creation.yaml": {
+                    "contents": [
+                        "sylius_admin_order_creation:",
+                        "    resource: \"@SyliusAdminOrderCreationPlugin/Resources/config/app/routing.yml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3ac19aedc8c846cc48cc61ee62ab5b280823efbf"
+        }
+    }
+}

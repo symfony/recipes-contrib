@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "sulu/redirect-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Sulu\\Bundle\\RedirectBundle\\SuluRedirectBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * The <fg=green>SuluRedirectBundle</> is almost ready:",
+                    "    1. Print the sql statements required to update your database schema by running <info>php bin/console doctrine:schema:update --dump-sql</>.",
+                    "    2. If the statements look fine to you, run the same command using <info>--force</> to execute them.",
+                    "    3. Make sure your user has all the necessary permissions for the <fg=green>SuluRedirectBundle</>.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/sulu/SuluRedirectBundle/blob/2.x/Resources/doc/README.md</>"
+                ]
+            },
+            "files": {
+                "config/routes/sulu_redirect_admin.yaml": {
+                    "contents": [
+                        "sulu_redirect_api:",
+                        "    type: rest",
+                        "    resource: \"@SuluRedirectBundle/Resources/config/routing_api.yml\"",
+                        "    prefix: /admin/api",
+                        "",
+                        "sulu_redirect:",
+                        "    resource: \"@SuluRedirectBundle/Resources/config/routing.yml\"",
+                        "    prefix: /admin/redirects",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "166e0df09e1903b610e2d6de48357afd52fb79b3"
+        }
+    }
+}

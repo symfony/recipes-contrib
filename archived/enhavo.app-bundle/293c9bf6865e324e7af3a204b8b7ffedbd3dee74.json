@@ -1,0 +1,126 @@
+{
+    "manifests": {
+        "enhavo/app-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Enhavo\\Bundle\\AppBundle\\EnhavoAppBundle": [
+                        "all"
+                    ]
+                },
+                "container": {
+                    "locale": "en"
+                },
+                "env": {
+                    "MAILER_FROM": "no-reply@email.com",
+                    "MAILER_NAME": "enhavo",
+                    "MAILER_TO": "my@email.com"
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "assets/": "assets/",
+                    "public/": "%PUBLIC_DIR%/",
+                    "tsconfig.json": "tsconfig.json"
+                },
+                "gitignore": [
+                    "public/build/enhavo/*",
+                    "public/build/theme/*",
+                    "public/js/fos_routes.js"
+                ],
+                "post-install-output": [
+                    "  * Update your <fg=green>package.json</> file",
+                    "  * Update your <fg=green>webpack.config.js</> file",
+                    "  * Update your configurations",
+                    "  * Build your assets with",
+                    "",
+                    "      <fg=green>$ yarn encore dev</>",
+                    "      <fg=green>$ yarn routes:dump</>",
+                    "",
+                    "<fg=green>  Read more details about the steps:</>",
+                    "<fg=blue>  https://docs.enhavo.com/book/app-bundle/installation.html</>"
+                ]
+            },
+            "files": {
+                "assets/services/enhavo/enhavo_app.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    -",
+                        "        path: '@enhavo/app/services/*'",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "assets/theme/base.js": {
+                    "contents": [
+                        "import './styles/base.scss';",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "assets/theme/images/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "assets/theme/styles/base.scss": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/enhavo_app.yaml": {
+                    "contents": [
+                        "enhavo_app:",
+                        "    mailer:",
+                        "        defaults:",
+                        "            from: '%env(resolve:MAILER_FROM)%'",
+                        "            name: '%env(resolve:MAILER_NAME)%'",
+                        "            to: '%env(resolve:MAILER_TO)%'",
+                        "    menu:",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/enhavo_app.yaml": {
+                    "contents": [
+                        "enhavo_app_admin:",
+                        "    resource: \"@EnhavoAppBundle/Resources/config/routes/admin/*\"",
+                        "    prefix: /admin",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "public/build/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "tsconfig.json": {
+                    "contents": [
+                        "{",
+                        "    \"compilerOptions\": {",
+                        "        \"lib\": [ \"es2015\", \"dom\" ],",
+                        "        \"module\": \"amd\",",
+                        "        \"target\": \"es5\",",
+                        "        \"allowJs\": true,",
+                        "        \"noImplicitAny\": true,",
+                        "        \"suppressImplicitAnyIndexErrors\": true,",
+                        "        \"moduleResolution\": \"node\",",
+                        "        \"sourceMap\": true,",
+                        "        \"experimentalDecorators\": true",
+                        "    },",
+                        "    \"include\": [",
+                        "        \"./assets/**/*\"",
+                        "    ]",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "293c9bf6865e324e7af3a204b8b7ffedbd3dee74"
+        }
+    }
+}

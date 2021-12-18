@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "rundum/event-base": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/rundum_event_base.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "        public: false",
+                        "    ",
+                        "    rundum.event.entity.subscriber:",
+                        "        class: Rundum\\EventSubscriber\\EntityEventSubscriber",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "400e88146a4e2cb427fcb8031c40d5a0f765446d"
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "meteo-concept/hcaptcha-bundle": {
+            "manifest": {
+                "bundles": {
+                    "MeteoConcept\\HCaptchaBundle\\MeteoConceptHCaptchaBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "HCAPTCHA_SECRET": "0x0000000000000000000000000000000000000000"
+                }
+            },
+            "files": {
+                "config/packages/meteo_concept_hcaptcha.yaml": {
+                    "contents": [
+                        "meteo_concept_hcaptcha:",
+                        "    hcaptcha:",
+                        "        site_key: 10000000-ffff-ffff-ffff-000000000001",
+                        "        secret: '%env(resolve:HCAPTCHA_SECRET)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "cbe032a00a8247142cbf4d91b5930c0e43c0dfb1"
+        }
+    }
+}

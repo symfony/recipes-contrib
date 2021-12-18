@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "googlechromelabs/ise-web-security-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Ise\\WebSecurityBundle\\IseWebSecurityBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ise_web_security.yaml": {
+                    "contents": [
+                        "ise_web_security:",
+                        "    defaults:",
+                        "        coop:",
+                        "            active: true",
+                        "            policy: 'same-origin'",
+                        "        coep: ",
+                        "            active: true",
+                        "            policy: 'require-corp'",
+                        "        fetch_metadata:",
+                        "            active: true",
+                        "            allowed_endpoints: []",
+                        "        trusted_types:",
+                        "            active: false",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "936dc9b6d8f8a9a75553f8ed8b84d35eed352d84"
+        }
+    }
+}

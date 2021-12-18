@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "mbarbey/u2f-security-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Mbarbey\\U2fSecurityBundle\\MbarbeyU2fSecurityBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/mbarbey_u2f_security.yaml": {
+                    "contents": [
+                        "mbarbey_u2f_security:",
+                        "    authentication_route: my_u2f_authentication_route",
+                        "    whitelist_routes:",
+                        "        - login",
+                        "        - logout",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "607a7a93e3dbb43d066396962bee60acdf3973f0"
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "cpliakas/git-wrapper": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/cpliakas_git_wrapper.yaml": {
+                    "contents": [
+                        "services:",
+                        "    GitWrapper\\GitWrapper: null",
+                        "",
+                        "",
+                        "# To add logging capabilities use monolog and this configuration:",
+                        "#monolog:",
+                        "#    channels:",
+                        "#        - 'git'",
+                        "",
+                        "#services:",
+                        "#    GitWrapper\\EventSubscriber\\GitLoggerEventSubscriber:",
+                        "#        $logger: '@monolog.logger.git'",
+                        "#    GitWrapper\\GitWrapper:",
+                        "#        calls:",
+                        "#            - addLoggerEventSubscriber: ['@GitWrapper\\EventSubscriber\\GitLoggerEventSubscriber']",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e66e45db95fc7d7702ee76c592965c204c9739ff"
+        }
+    }
+}

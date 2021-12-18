@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "jolicode/jolitypo": {
+            "manifest": {
+                "bundles": {
+                    "JoliTypo\\Bridge\\Symfony\\JoliTypoBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/joli_typo.yaml": {
+                    "contents": [
+                        "joli_typo:",
+                        "    presets:",
+                        "        fr:",
+                        "            # Please refer to the documentation at https://github.com/jolicode/JoliTypo/blob/master/README.md",
+                        "            # to learn more about fixers and how to combine them.",
+                        "            fixers: [ Ellipsis, Dimension, Dash, SmartQuotes, FrenchNoBreakSpace, CurlyQuote, Trademark ]",
+                        "            locale: fr_FR",
+                        "        en:",
+                        "            fixers: [ Ellipsis, Dimension, Dash, SmartQuotes, CurlyQuote, Trademark ]",
+                        "            locale: en_GB",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e6b3307304d3829993635408736601e5a1d25f72"
+        }
+    }
+}

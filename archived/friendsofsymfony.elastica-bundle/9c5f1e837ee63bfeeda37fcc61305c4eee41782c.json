@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "friendsofsymfony/elastica-bundle": {
+            "manifest": {
+                "bundles": {
+                    "FOS\\ElasticaBundle\\FOSElasticaBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "etc/": "%ETC_DIR%/"
+                }
+            },
+            "files": {
+                "etc/packages/fos_elastica.yaml": {
+                    "contents": [
+                        "# Read the documentation: https://github.com/FriendsOfSymfony/FOSElasticaBundle/blob/master/Resources/doc/setup.md",
+                        "fos_elastica:",
+                        "    clients:",
+                        "        default: { host: localhost, port: 9200 }",
+                        "    indexes:",
+                        "        app: ~",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9c5f1e837ee63bfeeda37fcc61305c4eee41782c"
+        }
+    }
+}

@@ -1,0 +1,91 @@
+{
+    "manifests": {
+        "nucleos/user-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Nucleos\\UserBundle\\NucleosUserBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "env": {
+                    "MAIL_SENDER": "no-reply@localhost"
+                }
+            },
+            "files": {
+                "config/packages/nucleos_user.yaml": {
+                    "contents": [
+                        "nucleos_user:",
+                        "    firewall_name: main",
+                        "",
+                        "    from_email: '%env(MAIL_SENDER)%'",
+                        "",
+                        "    user_class: 'App\\Entity\\User\\User'",
+                        "",
+                        "    group:",
+                        "        group_class: 'App\\Entity\\User\\Group'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/nucleos_user.yaml": {
+                    "contents": [
+                        "nucleos_user:",
+                        "    resource: \"@NucleosUserBundle/Resources/config/routing/all.xml\"",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/User/Group.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "namespace App\\Entity\\User;",
+                        "",
+                        "use Nucleos\\UserBundle\\Model\\Group as BaseGroup;",
+                        "",
+                        "class Group extends BaseGroup",
+                        "{",
+                        "    public function setId(string $id): void",
+                        "    {",
+                        "        $this->id = $id;",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/User/User.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "namespace App\\Entity\\User;",
+                        "",
+                        "use Nucleos\\UserBundle\\Model\\User as BaseUser;",
+                        "",
+                        "/**",
+                        " * @phpstan-extends User<\\Nucleos\\UserBundle\\Model\\GroupInterface>",
+                        " */",
+                        "class User extends BaseUser",
+                        "{",
+                        "    public function setId(string $id): void",
+                        "    {",
+                        "        $this->id = $id;",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "88cca294afe46854e805316dbcde52696c661ce6"
+        }
+    }
+}

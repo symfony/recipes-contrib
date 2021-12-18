@@ -1,0 +1,21 @@
+{
+    "manifests": {
+        "shivas/versioning-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Shivas\\VersioningBundle\\ShivasVersioningBundle": [
+                        "all"
+                    ]
+                },
+                "composer-scripts": {
+                    "app:version:bump": "symfony-cmd"
+                },
+                "env": {
+                    "SHIVAS_APP_VERSION": "0.1.0"
+                }
+            },
+            "files": [],
+            "ref": "3c19d6c036200951beb3e31d58295d465f2fb8eb"
+        }
+    }
+}

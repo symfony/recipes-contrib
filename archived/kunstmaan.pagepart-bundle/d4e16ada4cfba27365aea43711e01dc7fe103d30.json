@@ -1,0 +1,42 @@
+{
+    "manifests": {
+        "kunstmaan/pagepart-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Kunstmaan\\PagePartBundle\\KunstmaanPagePartBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/kunstmaan_pagepart.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: '../kunstmaancms/**/*.yml', ignore_errors: true}",
+                        "",
+                        "kunstmaan_page_part:",
+                        "    extended_pagepart_chooser: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/kunstmaan_pagepart.yaml": {
+                    "contents": [
+                        "KunstmaanPagePartBundle:",
+                        "    resource: \"@KunstmaanPagePartBundle/Resources/config/routing.yml\"",
+                        "    # If your site is not multi language, remove the \"{_locale}/\" part of prefix and requirements",
+                        "    prefix:   /{_locale}/",
+                        "    requirements:",
+                        "        _locale: \"%kunstmaan_admin.required_locales%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d4e16ada4cfba27365aea43711e01dc7fe103d30"
+        }
+    }
+}

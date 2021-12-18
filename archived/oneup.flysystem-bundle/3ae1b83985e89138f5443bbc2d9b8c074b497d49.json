@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "oneup/flysystem-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Oneup\\FlysystemBundle\\OneupFlysystemBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/oneup_flysystem.yaml": {
+                    "contents": [
+                        "# Read the documentation: https://github.com/1up-lab/OneupFlysystemBundle",
+                        "oneup_flysystem:",
+                        "    adapters:",
+                        "        default_adapter:",
+                        "            local:",
+                        "                location: '%kernel.cache_dir%/flysystem'",
+                        "    filesystems:",
+                        "        default_filesystem:",
+                        "            adapter: default_adapter",
+                        "            alias: League\\Flysystem\\Filesystem",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3ae1b83985e89138f5443bbc2d9b8c074b497d49"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "enqueue/wamp": {
+            "manifest": {
+                "env": {
+                    "ENQUEUE_DSN": "wamp:"
+                }
+            },
+            "files": [],
+            "ref": "372b177a614116a4e2a26d111455ebfc4d561dde"
+        }
+    }
+}

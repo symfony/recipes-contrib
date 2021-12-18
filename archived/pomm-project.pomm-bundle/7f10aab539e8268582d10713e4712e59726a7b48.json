@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "pomm-project/pomm-bundle": {
+            "manifest": {
+                "bundles": {
+                    "PommProject\\PommBundle\\PommBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "DATABASE_URL": "pgsql://user:pass@127.0.0.1:5432/my_db_name"
+                }
+            },
+            "files": {
+                "config/packages/pomm.yaml": {
+                    "contents": [
+                        "pomm:",
+                        "    configuration:",
+                        "        db:",
+                        "            dsn: \"%env(DATABASE_URL)%\"",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/dev/pomm.yaml": {
+                    "contents": [
+                        "_pomm:",
+                        "    resource: \"@PommBundle/Resources/config/routing.yml\"",
+                        "    prefix:   /_pomm",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7f10aab539e8268582d10713e4712e59726a7b48"
+        }
+    }
+}

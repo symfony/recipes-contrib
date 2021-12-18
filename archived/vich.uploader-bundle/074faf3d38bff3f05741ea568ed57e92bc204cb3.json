@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "vich/uploader-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Vich\\UploaderBundle\\VichUploaderBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "etc/": "%ETC_DIR%/"
+                }
+            },
+            "files": {
+                "etc/packages/vich_uploader.yaml": {
+                    "contents": [
+                        "vich_uploader:",
+                        "    db_driver: orm",
+                        "",
+                        "    #mappings:",
+                        "    #    products:",
+                        "    #        uri_prefix: /images/products",
+                        "    #        upload_destination: '%kernel.project_dir%/web/images/products'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "074faf3d38bff3f05741ea568ed57e92bc204cb3"
+        }
+    }
+}

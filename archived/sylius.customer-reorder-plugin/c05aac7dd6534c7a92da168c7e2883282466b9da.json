@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "sylius/customer-reorder-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Sylius\\CustomerReorderPlugin\\SyliusCustomerReorderPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sylius_customer_reorder.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SyliusCustomerReorderPlugin/Resources/config/config.yml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sylius_customer_reorder.yaml": {
+                    "contents": [
+                        "sylius_customer_reorder:",
+                        "    resource: \"@SyliusCustomerReorderPlugin/Resources/config/app/reorder_routing.yml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c05aac7dd6534c7a92da168c7e2883282466b9da"
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "manifests": {
+        "mmoreram/gearman-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Mmoreram\\GearmanBundle\\GearmanBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/gearman.yaml": {
+                    "contents": [
+                        "doctrine_cache:",
+                        "    providers:",
+                        "        gearman_cache:",
+                        "            type: file_system",
+                        "            namespace: doctrine_cache.ns.gearman",
+                        "",
+                        "# For full configuration reference please see:",
+                        "# http://gearmanbundle.readthedocs.io/en/latest/configuration.html",
+                        "#",
+                        "# At least you need to provide `resources` or `bundles` configuration in order for your",
+                        "# worker annotations to be discoverable.",
+                        "gearman:",
+                        "    servers:",
+                        "        localhost:",
+                        "            host: 127.0.0.1",
+                        "            port: 4730",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "242d6935adbb7122787a1b24cc62cd432e0b8591"
+        }
+    }
+}

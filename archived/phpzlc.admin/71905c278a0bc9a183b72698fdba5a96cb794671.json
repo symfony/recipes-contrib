@@ -1,0 +1,21 @@
+{
+    "manifests": {
+        "phpzlc/admin": {
+            "manifest": {
+                "bundles": {
+                    "PHPZlc\\Admin\\Bundle\\PHPZlcAdminBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-package": {
+                    "Bundle/phpzlc-admin.yaml": "config/packages/phpzlc-admin.yaml"
+                },
+                "env": {
+                    "ADMIN_ENV": "dev"
+                }
+            },
+            "files": [],
+            "ref": "71905c278a0bc9a183b72698fdba5a96cb794671"
+        }
+    }
+}

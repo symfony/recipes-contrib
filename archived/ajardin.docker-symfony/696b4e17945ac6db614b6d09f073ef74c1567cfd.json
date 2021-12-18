@@ -1,0 +1,95 @@
+{
+    "manifests": {
+        "ajardin/docker-symfony": {
+            "manifest": {
+                "composer-scripts": {
+                    "bin/docker-upgrade": "php-script"
+                },
+                "copy-from-recipe": {
+                    "bin/": "%BIN_DIR%/"
+                },
+                "gitignore": [
+                    "/%BIN_DIR%/docker-upgrade",
+                    "/docker/"
+                ],
+                "post-install-output": [
+                    "  * Edit the <fg=green>docker/.env</> file to configure your own settings.",
+                    "",
+                    "  * Edit the <fg=green>docker/nginx/conf.d/custom.conf</> file to configure your own virtual host.",
+                    "",
+                    "  * To manage the Docker environment from the project directory:",
+                    "    - If you already have a Makefile in your project, copy the content of the <fg=green>docker/Makefile.sample</> file at the top of it.",
+                    "    - If you do not already have a Makefile, the <fg=green>docker/Makefile.sample</> file will be installed in your project.",
+                    "",
+                    "  * Run <fg=green>make</> to display the list of available commands.",
+                    "",
+                    "Documentation: https://github.com/ajardin/docker-symfony/wiki"
+                ]
+            },
+            "files": {
+                "bin/docker-upgrade": {
+                    "contents": [
+                        "#!/usr/bin/env php",
+                        "<?php",
+                        "",
+                        "require __DIR__ . '/../vendor/autoload.php';",
+                        "",
+                        "use Symfony\\Component\\Filesystem\\Filesystem;",
+                        "",
+                        "const SOURCE_DIRECTORY = 'vendor/ajardin/docker-symfony';",
+                        "const TARGET_DIRECTORY = 'docker';",
+                        "",
+                        "$filesystem = new Filesystem();",
+                        "",
+                        "/**",
+                        " * Create the Docker directory at the project root",
+                        " */",
+                        "if ($filesystem->exists(TARGET_DIRECTORY) === false) {",
+                        "    $filesystem->mkdir(TARGET_DIRECTORY);",
+                        "}",
+                        "",
+                        "/**",
+                        " * Mirror the vendor directory with the directory created at the project root",
+                        " */",
+                        "if ($filesystem->exists(SOURCE_DIRECTORY) === true) {",
+                        "    $filesystem->mirror(SOURCE_DIRECTORY, TARGET_DIRECTORY, null, ['override' => true]);",
+                        "}",
+                        "",
+                        "/**",
+                        " * Define the default environment variables",
+                        " */",
+                        "if ($filesystem->exists(TARGET_DIRECTORY . '/.env') === false) {",
+                        "    $filesystem->copy(",
+                        "        TARGET_DIRECTORY . '/.env.dist',",
+                        "        TARGET_DIRECTORY . '/.env'",
+                        "    );",
+                        "}",
+                        "",
+                        "/**",
+                        " * Define the default Nginx configuration",
+                        " */",
+                        "if ($filesystem->exists(TARGET_DIRECTORY . '/nginx/conf.d/custom.conf') === false) {",
+                        "    $filesystem->copy(",
+                        "        TARGET_DIRECTORY . '/nginx/conf.d/symfony.conf.dist',",
+                        "        TARGET_DIRECTORY . '/nginx/conf.d/custom.conf'",
+                        "    );",
+                        "}",
+                        "",
+                        "/**",
+                        " * Copy the default Makefile at the project root",
+                        " */",
+                        "if ($filesystem->exists('Makefile') === false) {",
+                        "    $filesystem->copy(",
+                        "        TARGET_DIRECTORY . '/Makefile.sample',",
+                        "        'Makefile'",
+                        "    );",
+                        "}",
+                        ""
+                    ],
+                    "executable": true
+                }
+            },
+            "ref": "696b4e17945ac6db614b6d09f073ef74c1567cfd"
+        }
+    }
+}

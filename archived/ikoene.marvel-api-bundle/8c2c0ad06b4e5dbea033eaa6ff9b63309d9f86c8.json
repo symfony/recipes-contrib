@@ -1,0 +1,42 @@
+{
+    "manifests": {
+        "ikoene/marvel-api-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Ikoene\\MarvelApiBundle\\IkoeneMarvelApiBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Get your API key from https://developer.marvel.com",
+                    "MARVEL_PUBLIC_API_KEY": "...",
+                    "MARVEL_PRIVATE_API_KEY": "..."
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                                     </>",
+                    "<bg=blue;fg=white> Next: MarvelApiBundle Configuration </>",
+                    "<bg=blue;fg=white>                                     </>",
+                    "",
+                    "  * Create a free account on https://developers.marvel.com",
+                    "    and modify your MARVEL_PUBLIC_API_KEY and MARVEL_PRIVATE_API_KEY",
+                    "    config in <fg=green>.env</>"
+                ]
+            },
+            "files": {
+                "config/package/ikoene_marvel_api.yaml": {
+                    "contents": [
+                        "ikoene_marvel_api:",
+                        "    public_api_key: \"%env(MARVEL_PUBLIC_API_KEY)%\"",
+                        "    private_api_key: \"%env(MARVEL_PRIVATE_API_KEY)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8c2c0ad06b4e5dbea033eaa6ff9b63309d9f86c8"
+        }
+    }
+}

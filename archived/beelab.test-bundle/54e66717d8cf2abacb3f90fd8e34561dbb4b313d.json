@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "beelab/test-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Beelab\\TestBundle\\BeelabTestBundle": [
+                        "test"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "54e66717d8cf2abacb3f90fd8e34561dbb4b313d"
+        }
+    }
+}

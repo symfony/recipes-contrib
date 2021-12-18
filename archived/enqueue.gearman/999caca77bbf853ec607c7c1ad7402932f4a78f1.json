@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "enqueue/gearman": {
+            "manifest": {
+                "env": {
+                    "ENQUEUE_DSN": "gearman://"
+                }
+            },
+            "files": [],
+            "ref": "999caca77bbf853ec607c7c1ad7402932f4a78f1"
+        }
+    }
+}

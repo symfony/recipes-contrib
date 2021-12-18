@@ -1,0 +1,80 @@
+{
+    "manifests": {
+        "sulu/article-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Sulu\\Bundle\\ArticleBundle\\SuluArticleBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "copy-from-package": {
+                    "Resources/doc/default.xml": "%CONFIG_DIR%/templates/articles/default.xml",
+                    "Resources/doc/default.html.twig": "templates/articles/default.html.twig"
+                },
+                "env": {
+                    "ELASTICSEARCH_HOST": "127.0.0.1:9200",
+                    "ELASTICSEARCH_INDEX": "su_articles"
+                },
+                "post-install-output": [
+                    "  * The <fg=green>SuluArticleBundle</> is almost ready:",
+                    "    1. Configure elasticsearch host and index in the <comment>.env</> file.",
+                    "    2. Initialize PHPCR by running <info>php bin/console sulu:document:init</>.",
+                    "    3. Create the elasticsearch indices by running <info>php bin/console ongr:es:index:create</> and <comment>php bin/console ongr:es:index:create --manager live</>.",
+                    "    4. Make sure your user has all the necessary permissions for the <fg=green>SuluArticleBundle</>.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/sulu/SuluArticleBundle/blob/2.x/Resources/doc/README.md</>"
+                ]
+            },
+            "files": {
+                "config/packages/sulu_article.yaml": {
+                    "contents": [
+                        "sulu_article:",
+                        "    index_name: '%env(resolve:ELASTICSEARCH_INDEX)%'",
+                        "    hosts:",
+                        "        - '%env(resolve:ELASTICSEARCH_HOST)%'",
+                        "    types:",
+                        "        article:",
+                        "            translation_key: \"sulu_article.article\"",
+                        "",
+                        "sulu_route:",
+                        "    mappings:",
+                        "        Sulu\\Bundle\\ArticleBundle\\Document\\ArticleDocument:",
+                        "            generator: schema",
+                        "            options:",
+                        "                route_schema: '/articles/{object.getTitle()}'",
+                        "        Sulu\\Bundle\\ArticleBundle\\Document\\ArticlePageDocument:",
+                        "            generator: article_page",
+                        "            options:",
+                        "                route_schema: '{translator.trans(\"page\")}-{object.getPageNumber()}'",
+                        "                parent: '{object.getParent().getRoutePath()}'",
+                        "",
+                        "ongr_elasticsearch:",
+                        "    analysis:",
+                        "        tokenizer:",
+                        "            pathTokenizer:",
+                        "                type: path_hierarchy",
+                        "        analyzer:",
+                        "            pathAnalyzer:",
+                        "                tokenizer: pathTokenizer",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sulu_article_admin.yaml": {
+                    "contents": [
+                        "sulu_article_api:",
+                        "    resource: '@SuluArticleBundle/Resources/config/routing_api.yml'",
+                        "    type: rest",
+                        "    prefix: /admin/api",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "dca8915a957ab45b7cd29de8861bd14303cee104"
+        }
+    }
+}

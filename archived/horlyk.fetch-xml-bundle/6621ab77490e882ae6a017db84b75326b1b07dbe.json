@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "horlyk/fetch-xml-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Horlyk\\Bundle\\FetchXmlBundle\\HorlykFetchXmlBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/horlyk_fetch_xml.yaml": {
+                    "contents": [
+                        "horlyk_fetch_xml:",
+                        "    use_pager: false",
+                        "    items_per_page: 10",
+                        "    attribute_aliases_as_names: true",
+                        "    attribute_alias_prefix: 'qb_'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6621ab77490e882ae6a017db84b75326b1b07dbe"
+        }
+    }
+}

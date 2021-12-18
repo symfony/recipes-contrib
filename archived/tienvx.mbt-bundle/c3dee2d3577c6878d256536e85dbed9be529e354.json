@@ -1,0 +1,46 @@
+{
+    "manifests": {
+        "tienvx/mbt-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Tienvx\\Bundle\\MbtBundle\\TienvxMbtBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "var/": "%VAR_DIR%/"
+                },
+                "env": {
+                    "EMAIL_FROM": "from@example.com",
+                    "ADMIN_URL": "http://localhost"
+                }
+            },
+            "files": {
+                "config/packages/tienvx_mbt.yaml": {
+                    "contents": [
+                        "tienvx_mbt:",
+                        "    email_from: '%env(EMAIL_FROM)%'",
+                        "    admin_url: '%env(ADMIN_URL)%'",
+                        "",
+                        "flysystem:",
+                        "    storages:",
+                        "        mbt.storage:",
+                        "            adapter: 'local'",
+                        "            options:",
+                        "                directory: \"%kernel.project_dir%/var/storage/screenshots\"",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "var/storage/screenshots/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c3dee2d3577c6878d256536e85dbed9be529e354"
+        }
+    }
+}

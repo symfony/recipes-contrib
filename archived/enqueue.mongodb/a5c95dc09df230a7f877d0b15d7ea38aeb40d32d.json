@@ -1,0 +1,17 @@
+{
+    "manifests": {
+        "enqueue/mongodb": {
+            "manifest": {
+                "post-install-output": [
+                    "  * Configure <comment>ENQUEUE_DSN=mongodb://localhost:27017/db_name</comment>",
+                    "    in your <comment>.env</comment> file.",
+                    "",
+                    "  * For the full options, see",
+                    "    <comment>https://github.com/php-enqueue/enqueue-dev/blob/master/docs/transport/mongodb.md</comment>"
+                ]
+            },
+            "files": [],
+            "ref": "a5c95dc09df230a7f877d0b15d7ea38aeb40d32d"
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "nedac/sylius-order-now-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Nedac\\SyliusOrderNowPlugin\\NedacSyliusOrderNowPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "copy-from-package": {
+                    "src/Resources/views/bundles/": "templates/bundles/",
+                    "src/Resources/views/form/": "templates/form/",
+                    "src/Resources/views/Product/": "templates/Product/"
+                }
+            },
+            "files": {
+                "config/routes/nedac_sylius_order_now_plugin.yaml": {
+                    "contents": [
+                        "nedac_sylius_order_now_plugin:",
+                        "    resource: '@NedacSyliusOrderNowPlugin/Resources/config/shop_routing.yml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "950df3382b76e66dce37d759cea6211e35415891"
+        }
+    }
+}

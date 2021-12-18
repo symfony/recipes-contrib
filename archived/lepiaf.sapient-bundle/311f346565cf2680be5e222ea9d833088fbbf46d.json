@@ -1,0 +1,45 @@
+{
+    "manifests": {
+        "lepiaf/sapient-bundle": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "bundles": {
+                    "lepiaf\\SapientBundle\\SapientBundle": [
+                        "all"
+                    ]
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                                   </>",
+                    "<bg=blue;fg=white> Next: SapientBundle Configuration </>",
+                    "<bg=blue;fg=white>                                   </>",
+                    "",
+                    "  * Bundle is installed but it require a configuration.",
+                    "    Run command <fg=green>bin/console sapient:configure</>.",
+                    "    Then, copy output of command and paste it in <fg=green>config/packages/sapient.yaml</>",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>http://sapient-bundle.readthedocs.io/en/latest/</>"
+                ]
+            },
+            "files": {
+                "config/packages/sapient.yaml": {
+                    "contents": [
+                        "sapient:",
+                        "    # By default, bundle does nothing without initial configuration.",
+                        "    # Run command sapient:configure to get initial configuration.",
+                        "    # See http://sapient-bundle.readthedocs.io/en/latest/installation.html",
+                        "    guzzle_middleware:",
+                        "        unseal: false",
+                        "        verify: false",
+                        "    sealing_public_keys: ~",
+                        "    verifying_public_keys: ~",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "311f346565cf2680be5e222ea9d833088fbbf46d"
+        }
+    }
+}

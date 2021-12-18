@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "ad3n/ratchet-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Ihsan\\RatchetBundle\\IhsanRatchetBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "WEB_SOCKET_PORT": "7777"
+                }
+            },
+            "files": {
+                "config/packages/ihsan_ratchet_bundle.yaml": {
+                    "contents": [
+                        "ihsan_ratchet:",
+                        "    web_socket_port: \"%env(WEB_SOCKET_PORT)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a7ed05d9e24b90c4c8bb3c1cde358b9b24c5fbb0"
+        }
+    }
+}

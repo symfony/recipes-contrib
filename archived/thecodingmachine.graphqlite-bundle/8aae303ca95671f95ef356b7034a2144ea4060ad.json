@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "thecodingmachine/graphqlite-bundle": {
+            "manifest": {
+                "bundles": {
+                    "TheCodingMachine\\Graphqlite\\Bundle\\GraphqliteBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-package": {
+                    "config-template/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * Edit the <fg=green>config/packages/graphqlite.yml</> file to adapt the controllers and the types namespaces to your project.",
+                    "",
+                    "Documentation: https://graphqlite.thecodingmachine.io/docs/symfony-bundle"
+                ]
+            },
+            "files": [],
+            "ref": "8aae303ca95671f95ef356b7034a2144ea4060ad"
+        }
+    }
+}

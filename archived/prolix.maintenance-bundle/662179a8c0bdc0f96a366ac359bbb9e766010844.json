@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "prolix/maintenance-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Lexik\\Bundle\\MaintenanceBundle\\LexikMaintenanceBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/lexik_maintenance.yaml": {
+                    "contents": [
+                        "lexik_maintenance:",
+                        "    driver:",
+                        "        class: 'Lexik\\Bundle\\MaintenanceBundle\\Drivers\\FileDriver'",
+                        "        options:",
+                        "            file_path: '%kernel.cache_dir%/lock'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "662179a8c0bdc0f96a366ac359bbb9e766010844"
+        }
+    }
+}

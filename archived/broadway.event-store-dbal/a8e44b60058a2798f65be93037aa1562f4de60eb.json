@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "broadway/event-store-dbal": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/broadway_event_store_dbal.yaml": {
+                    "contents": [
+                        "broadway:",
+                        "    event_store: broadway.event_store.dbal",
+                        "",
+                        "services:",
+                        "    broadway.event_store.dbal:",
+                        "        class: Broadway\\EventStore\\Dbal\\DBALEventStore",
+                        "        arguments:",
+                        "            - \"@doctrine.dbal.default_connection\"",
+                        "            - \"@broadway.serializer.payload\"",
+                        "            - \"@broadway.serializer.metadata\"",
+                        "            - \"events\"",
+                        "            - false",
+                        "            - \"@broadway.uuid.converter\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a8e44b60058a2798f65be93037aa1562f4de60eb"
+        }
+    }
+}

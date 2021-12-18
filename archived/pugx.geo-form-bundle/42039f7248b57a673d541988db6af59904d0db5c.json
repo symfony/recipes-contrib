@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "pugx/geo-form-bundle": {
+            "manifest": {
+                "bundles": {
+                    "PUGX\\GeoFormBundle\\PUGXGeoFormBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "    * <fg=blue>Insert</> sensitive values in configuration file",
+                    "    * <fg=blue>Read</> documentation at <comment>https://github.com/PUGX/PUGXGeoFormBundle/blob/master/Resources/doc/index.md</>"
+                ]
+            },
+            "files": {
+                "config/packages/pugx_geo_form.yaml": {
+                    "contents": [
+                        "pugx_geo_form:",
+                        "    # see https://developers.google.com/maps/documentation/javascript/geocoding#GeocodingRequests for possible values for \"region\"",
+                        "    region: EU",
+                        "    useSsl: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "42039f7248b57a673d541988db6af59904d0db5c"
+        }
+    }
+}

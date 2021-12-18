@@ -1,0 +1,25 @@
+{
+    "manifests": {
+        "enqueue/dbal": {
+            "manifest": {
+                "post-install-output": [
+                    "<bg=yellow;fg=black>                                  </>",
+                    "<bg=yellow;fg=black> Using Doctrine's dbal in Enqueue </>",
+                    "<bg=yellow;fg=black>                                  </>",
+                    "",
+                    "  * Configure <comment>ENQUEUE_DSN=mysql://user:pass@localhost:3306/mqdev</comment>",
+                    "    in your <comment>.env</comment> file.",
+                    "",
+                    "  * Or, to re-use the <comment>DATABASE_URL</comment> environment variable, edit",
+                    "    the <comment>config/packages/enqueue.yaml</comment> file and change to",
+                    "    <comment>transport: %env(resolve:DATABASE_URL)%</comment>.",
+                    "",
+                    "  * For the full options, see",
+                    "    <comment>https://github.com/php-enqueue/enqueue-dev/blob/master/docs/transport/dbal.md</comment>"
+                ]
+            },
+            "files": [],
+            "ref": "f6916d81840ec49dcebfff71a5c3edd00ce1aed1"
+        }
+    }
+}

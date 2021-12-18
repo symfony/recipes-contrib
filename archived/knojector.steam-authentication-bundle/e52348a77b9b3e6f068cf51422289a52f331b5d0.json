@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "knojector/steam-authentication-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Knojector\\SteamAuthenticationBundle\\KnojectorSteamAuthenticationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/knojector_steam_authentication.yaml": {
+                    "contents": [
+                        "# https://github.com/knojector/SteamAuthenticationBundle for configuration documentation",
+                        "knojector_steam_authentication:",
+                        "    login_success_redirect: ''",
+                        "    login_failure_redirect: ''",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e52348a77b9b3e6f068cf51422289a52f331b5d0"
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "m-adamski/symfony-mailer-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Adamski\\Symfony\\MailerBundle\\MailerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/mailer.yaml": {
+                    "contents": [
+                        "mailer:",
+                        "    sender_address: noreply@example.com",
+                        "    sender_name: noreply",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "fcdd70fac7c2bdf08ce9ea0ab6e465965c3f0d31"
+        }
+    }
+}

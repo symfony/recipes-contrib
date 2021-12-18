@@ -1,0 +1,54 @@
+{
+    "manifests": {
+        "maksze/telemetry-bundle": {
+            "manifest": {
+                "bundles": {
+                    "MaksZe\\TelemetryBundle\\MaksZeTelemetryBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "YANDEX_METRIKA_ID": "any_id",
+                    "YANDEX_WEBMASTER_ID": "any_id",
+                    "GOOGLE_SEARCH_CONSOLE_ID": "any_id",
+                    "GOOGLE_ANALYTICS_ID": "any_id"
+                }
+            },
+            "files": {
+                "config/packages/maksze_telemetry.yaml": {
+                    "contents": [
+                        "# Configuration file for the MaksZeTelemetry bundle",
+                        "#",
+                        "# For more information about the bundle settings visit:",
+                        "# https://github.com/maksze/MaksZeTelemetryBundle/blob/master/README.md",
+                        "",
+                        "maksze_telemetry:",
+                        "    yandex_metrika:",
+                        "        #- {id: '%env(YANDEX_METRIKA_ID)%'}",
+                        "    yandex_webmaster:",
+                        "        #- {id: '%env(YANDEX_WEBMASTER_ID)%'}",
+                        "    google_search_console:",
+                        "        #- {id: '%env(GOOGLE_SEARCH_CONSOLE_ID)%'}",
+                        "    google_analytics:",
+                        "        #- {id: '%env(GOOGLE_ANALYTICS_ID)%'}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/maksze_telemetry.yaml": {
+                    "contents": [
+                        "_maksze_telemetry:",
+                        "    resource: '@MaksZeTelemetryBundle/Resources/config/routes.xml'",
+                        "    prefix: /",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2f5d98fd0e0ef44b7dd1f71d1681bfe6624894e0"
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "long-running/long-running": {
+            "manifest": {
+                "bundles": {
+                    "LongRunning\\Bundle\\LongRunningBundle\\LongRunningBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "b661d2358dbaee7826b470522ec4cb6b948cc80a"
+        }
+    }
+}

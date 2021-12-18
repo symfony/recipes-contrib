@@ -1,0 +1,47 @@
+{
+    "manifests": {
+        "synolia/sylius-scheduler-command-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Synolia\\SyliusSchedulerCommandPlugin\\SynoliaSyliusSchedulerCommandPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "copy-from-package": {
+                    "src/Migrations/": "%SRC_DIR%/Migrations/"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                                      </>",
+                    "<bg=blue;fg=white> Synolia SyliusSchedulerCommandPlugin </>",
+                    "<bg=blue;fg=white>                                      </>",
+                    "",
+                    "  * <fg=blue>Run</> <fg=green>doctrine:migrations:migrate</> to upgrade database",
+                    "  * <fg=blue>Add Cron</> on <fg=green>synolia:scheduler-run</> to execute scheduled commands"
+                ]
+            },
+            "files": {
+                "config/packages/sylius_scheduler_command.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SynoliaSyliusSchedulerCommandPlugin/Resources/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sylius_scheduler_command.yaml": {
+                    "contents": [
+                        "synolia_scheduled_command:",
+                        "    resource: \"@SynoliaSyliusSchedulerCommandPlugin/Resources/config/admin_routing.yaml\"",
+                        "    prefix: /admin",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "dd5e6f0a43e0e1afcc2e2256699bfd4d16d2ff5a"
+        }
+    }
+}

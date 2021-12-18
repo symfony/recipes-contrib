@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "suncat/mobile-detect-bundle": {
+            "manifest": {
+                "bundles": {
+                    "SunCat\\MobileDetectBundle\\MobileDetectBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/mobile_detect.yaml": {
+                    "contents": [
+                        "# Read the documentation: https://github.com/suncat2000/MobileDetectBundle/blob/v1.0.5/Resources/doc/index.md",
+                        "#mobile_detect:",
+                        "#    redirect:",
+                        "#        full:",
+                        "#            is_enabled: true",
+                        "#            host: http://site.com",
+                        "#            action: redirect",
+                        "#        mobile:",
+                        "#            is_enabled: true",
+                        "#            host: http://m.site.com",
+                        "#            action: redirect",
+                        "#        detect_tablet_as_mobile: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d503392fa26af3e3a343d4890ca3a3b74faef75a"
+        }
+    }
+}

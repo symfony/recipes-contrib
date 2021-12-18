@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "tilleuls/migration-bundle": {
+            "manifest": {
+                "bundles": {
+                    "CoopTilleuls\\MigrationBundle\\CoopTilleulsMigrationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "LEGACY_DATABASE_URL": "mysql://legacy_db_user:legacy_db_password@127.0.0.1:3306/legacy_db_name"
+                }
+            },
+            "files": {
+                "config/packages/coop_tilleuls_migration.yaml": {
+                    "contents": [
+                        "# Read the documentation: https://github.com/coopTilleuls/CoopTilleulsMigrationBundle/blob/master/Resources/doc/getting_started.md",
+                        "coop_tilleuls_migration:",
+                        "    legacy_connection_name: legacy",
+                        "",
+                        "doctrine:",
+                        "    dbal:",
+                        "        connections:",
+                        "            legacy:",
+                        "                wrapper_class: 'CoopTilleuls\\MigrationBundle\\Doctrine\\DBAL\\DisabledConnection'",
+                        "                url: \"%env(LEGACY_DATABASE_URL)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d35335e4d5504163249f546b3bff7cdc17cf666f"
+        }
+    }
+}

@@ -1,0 +1,64 @@
+{
+    "manifests": {
+        "overblog/graphql-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Overblog\\GraphQLBundle\\OverblogGraphQLBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "    1. Define your schema, read documentation <comment>https://github.com/overblog/GraphQLBundle/blob/0.9/Resources/doc/definitions/index.md</> or",
+                    "    <comment>https://github.com/overblog/GraphQLBundle/blob/0.10/Resources/doc/definitions/index.md</>",
+                    "    2. Browse to <comment>/graphiql</>",
+                    "    3. Optionally dump your schema: run <comment>bin/console graphql:dump-schema</comment>"
+                ]
+            },
+            "files": {
+                "config/graphql/types/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/graphql.yaml": {
+                    "contents": [
+                        "overblog_graphql:",
+                        "    definitions:",
+                        "        schema:",
+                        "            query: Query",
+                        "        mappings:",
+                        "            auto_discover: false",
+                        "            types:",
+                        "                -",
+                        "                    type: yaml",
+                        "                    dir: \"%kernel.project_dir%/config/graphql/types\"",
+                        "                    suffix: null",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/dev/graphql_graphiql.yaml": {
+                    "contents": [
+                        "overblog_graphql_graphiql:",
+                        "    resource: \"@OverblogGraphQLBundle/Resources/config/routing/graphiql.yml\"",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/graphql.yaml": {
+                    "contents": [
+                        "overblog_graphql_endpoint:",
+                        "    resource: \"@OverblogGraphQLBundle/Resources/config/routing/graphql.yml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3d209565ed43a115454d165b69a752292997f749"
+        }
+    }
+}

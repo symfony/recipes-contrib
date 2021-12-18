@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "kunstmaan/node-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Kunstmaan\\NodeBundle\\KunstmaanNodeBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/kunstmaan_node.yaml": {
+                    "contents": [
+                        "kunstmaan_node:",
+                        "    lock:",
+                        "        enabled: true",
+                        "    enable_permissions: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/kunstmaan_node.yaml": {
+                    "contents": [
+                        "KunstmaanNodeBundle:",
+                        "    resource: \"@KunstmaanNodeBundle/Resources/config/routing.yml\"",
+                        "    # If your site is not multi language, remove the \"{_locale}/\" part of the prefix and the requirements",
+                        "    prefix:   /{_locale}/",
+                        "    requirements:",
+                        "        _locale: \"%kunstmaan_admin.required_locales%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6b2a0a0ef3f0b786dde572f95cbeff64c27cf6d0"
+        }
+    }
+}

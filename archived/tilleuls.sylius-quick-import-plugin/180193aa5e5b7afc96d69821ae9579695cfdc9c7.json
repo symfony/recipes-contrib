@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "tilleuls/sylius-quick-import-plugin": {
+            "manifest": {
+                "bundles": {
+                    "CoopTilleuls\\SyliusQuickImportPlugin\\CoopTilleulsSyliusQuickImportPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/sylius_quick_import.yaml": {
+                    "contents": [
+                        "coop_tilleuls_sylius_quick_import_admin:",
+                        "    resource: \"@CoopTilleulsSyliusQuickImportPlugin/Resources/config/admin_routing.yml\"",
+                        "    prefix: /admin",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "180193aa5e5b7afc96d69821ae9579695cfdc9c7"
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "codebuds/mattermost-publication-bundle": {
+            "manifest": {
+                "bundles": {
+                    "CodeBuds\\MattermostPublicationBundle\\MattermostPublicationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MATTERMOST_WEBHOOK_URL": "http://{your-mattermost-site}/hooks/xxx-generatedkey-xxx"
+                }
+            },
+            "files": {
+                "config/packages/mattermost_publication.yaml": {
+                    "contents": [
+                        "mattermost_publication:",
+                        "    webhook_url: '%env(MATTERMOST_WEBHOOK_URL)%'",
+                        "    # You can also set the default channel, username and icon_url",
+                        "    # for more information you can checkout the bundle documentation",
+                        "    # https://github.com/codebuds33/mattermost-publication-bundle/blob/master/README.md",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "58f0ed3809bec1377c9300348997777fcc4f6d94"
+        }
+    }
+}

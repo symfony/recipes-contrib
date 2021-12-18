@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symfony-cmf/seo-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Cmf\\Bundle\\SeoBundle\\CmfSeoBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/cmf_seo_bundle.yaml": {
+                    "contents": [
+                        "# Read the documentation: https://symfony.com/doc/master/cmf/bundles/seo/configuration.html",
+                        "cmf_seo:",
+                        "    persistence:",
+                        "        phpcr: ~",
+                        "    title: '%%content_title%% | Insert your base Title'",
+                        "    description: '%%content_description%% Insert you base description here.'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9528e0fd5dc004363e4e709df4fcee0b1b3d6d6b"
+        }
+    }
+}

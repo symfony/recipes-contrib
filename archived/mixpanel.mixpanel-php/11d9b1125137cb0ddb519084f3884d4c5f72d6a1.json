@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "mixpanel/mixpanel-php": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MIXPANEL_PROJECT_TOKEN": ""
+                }
+            },
+            "files": {
+                "config/packages/mixpanel.yaml": {
+                    "contents": [
+                        "services:",
+                        "    Mixpanel:",
+                        "        class: \\Mixpanel",
+                        "        factory: ['Mixpanel', 'getInstance']",
+                        "        arguments:",
+                        "            - '%env(MIXPANEL_PROJECT_TOKEN)%'",
+                        "# uncomment if EU resident",
+                        "#            - { 'host': 'api-eu.mixpanel.com' }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "11d9b1125137cb0ddb519084f3884d4c5f72d6a1"
+        }
+    }
+}

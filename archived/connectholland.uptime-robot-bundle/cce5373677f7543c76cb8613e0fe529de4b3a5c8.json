@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "connectholland/uptime-robot-bundle": {
+            "manifest": {
+                "bundles": {
+                    "ConnectHolland\\UptimeRobotBundle\\ConnecthollandUptimeRobotBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "UPTIMEROBOT_API_KEY": "api_key"
+                },
+                "post-install-output": [
+                    "  * Your Connect Holland Uptime Robot bundle installation is almost ready:",
+                    "    1. Add your Uptime Robot Api Key to the .env file"
+                ]
+            },
+            "files": {
+                "config/packages/connectholland_uptime_robot.yaml": {
+                    "contents": [
+                        "connectholland_uptime_robot:",
+                        "    api_key: '%env(string:UPTIMEROBOT_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "cce5373677f7543c76cb8613e0fe529de4b3a5c8"
+        }
+    }
+}

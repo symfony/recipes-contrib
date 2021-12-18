@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "mgdsoft/stackdriver-bundle": {
+            "manifest": {
+                "bundles": {
+                    "MGDSoft\\Stackdriver\\MgdsoftStackdriverBundle": [
+                        "prod"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/prod/mgdsoft_stackdriver.yaml": {
+                    "contents": [
+                        "mgdsoft_stackdriver:",
+                        "    # to test in local",
+                        "    # credentials_json_file: null",
+                        "    level: info",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "257548c8982024ee8794ca8e341cf785e99798ea"
+        }
+    }
+}

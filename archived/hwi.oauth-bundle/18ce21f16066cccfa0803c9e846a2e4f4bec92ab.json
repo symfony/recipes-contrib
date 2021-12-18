@@ -1,0 +1,77 @@
+{
+    "manifests": {
+        "hwi/oauth-bundle": {
+            "manifest": {
+                "bundles": {
+                    "HWI\\Bundle\\OAuthBundle\\HWIOAuthBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "FB_ID": "",
+                    "FB_SECRET": ""
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Configure</> your application:",
+                    "    1. Add firewall by adding <comment>- main:",
+                    "                                             anonymous: true",
+                    "                                             oauth:",
+                    "                                                 resource_owners:",
+                    "                                                     my_github:          \"/login/check-github\"",
+                    "                                                 login_path:        /login",
+                    "                                                 use_forward:       false",
+                    "                                                 failure_path:      /login",
+                    "",
+                    "                                                 oauth_user_provider:",
+                    "                                                     service: hwi_oauth.user.provider",
+                    "</> in your security firewalls section.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/hwi/HWIOAuthBundle/blob/master/Resources/doc/3-configuring_the_security_layer.md</>"
+                ]
+            },
+            "files": {
+                "config/packages/hwi_oauth.yaml": {
+                    "contents": [
+                        "hwi_oauth:",
+                        "    # list of names of the firewalls in which this bundle is active, this setting MUST be set",
+                        "    firewall_names: [main]",
+                        "",
+                        "    # https://github.com/hwi/HWIOAuthBundle/blob/master/Resources/doc/2-configuring_resource_owners.md",
+                        "    resource_owners:",
+                        "        facebook:",
+                        "            type:                facebook",
+                        "            client_id:           '%env(FB_ID)%'",
+                        "            client_secret:       '%env(FB_SECRET)%'",
+                        "            scope:               \"email\"",
+                        "            options:",
+                        "                display: popup",
+                        "                csrf: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/hwi_oauth_routing.yaml": {
+                    "contents": [
+                        "hwi_oauth_redirect:",
+                        "    resource: \"@HWIOAuthBundle/Resources/config/routing/redirect.xml\"",
+                        "    prefix:   /connect",
+                        "",
+                        "hwi_oauth_connect:",
+                        "    resource: \"@HWIOAuthBundle/Resources/config/routing/connect.xml\"",
+                        "    prefix:   /connect",
+                        "",
+                        "hwi_oauth_login:",
+                        "    resource: \"@HWIOAuthBundle/Resources/config/routing/login.xml\"",
+                        "    prefix:   /login",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "18ce21f16066cccfa0803c9e846a2e4f4bec92ab"
+        }
+    }
+}

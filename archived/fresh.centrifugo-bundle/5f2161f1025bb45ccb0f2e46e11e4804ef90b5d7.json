@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "fresh/centrifugo-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Fresh\\CentrifugoBundle\\FreshCentrifugoBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "CENTRIFUGO_API_KEY": "%generate(secret)%",
+                    "CENTRIFUGO_API_ENDPOINT": "http://localhost:8000/api",
+                    "CENTRIFUGO_SECRET": "%generate(secret)%"
+                }
+            },
+            "files": {
+                "config/packages/fresh_centrifugo.yaml": {
+                    "contents": [
+                        "fresh_centrifugo:",
+                        "    api_key: '%env(CENTRIFUGO_API_KEY)%'",
+                        "    api_endpoint: '%env(CENTRIFUGO_API_ENDPOINT)%'",
+                        "    secret: '%env(CENTRIFUGO_SECRET)%'",
+                        "    jwt:",
+                        "        ttl: 86400 # 1 day",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5f2161f1025bb45ccb0f2e46e11e4804ef90b5d7"
+        }
+    }
+}

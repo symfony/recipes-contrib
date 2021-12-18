@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "happyr/linkedin-api-client": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "LINKEDIN_API_KEY": "replace_me",
+                    "LINKEDIN_API_SECRET": "replace_me"
+                }
+            },
+            "files": {
+                "config/packages/linkedin.yaml": {
+                    "contents": [
+                        "services:",
+                        "    Happyr\\LinkedIn\\LinkedIn:",
+                        "        class: Happyr\\LinkedIn\\LinkedIn",
+                        "        arguments: ['%env(LINKEDIN_API_KEY)%', '%env(LINKEDIN_API_SECRET)%']",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f407e3d9af98d1b391cc671d3c5790b79f1907e6"
+        }
+    }
+}

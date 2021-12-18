@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "sebtm/inwx-api-bundle": {
+            "manifest": {
+                "bundles": {
+                    "SebTM\\INWX\\InwxApiBundle": [
+                        "all"
+                    ]
+                },
+                "env": {
+                    "INWX_API_ENVIRONMENT": "test",
+                    "INWX_API_USERNAME": "dummy",
+                    "INWX_API_PASSWORD": "dummy",
+                    "INWX_API_LANGUAGE": "en",
+                    "INWX_API_DEBUG": "false"
+                }
+            },
+            "files": [],
+            "ref": "ffa1cf83f2f9dfff9c771da235f9aadf0c5dcdf6"
+        }
+    }
+}

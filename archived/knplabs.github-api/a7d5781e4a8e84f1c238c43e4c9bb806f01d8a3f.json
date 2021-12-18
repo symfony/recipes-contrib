@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "knplabs/github-api": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "GITHUB_AUTH_METHOD": "http_password",
+                    "GITHUB_USERNAME": "username",
+                    "GITHUB_SECRET": "password_or_token"
+                }
+            },
+            "files": {
+                "config/packages/github_api.yaml": {
+                    "contents": [
+                        "services:",
+                        "    Github\\Client:",
+                        "        arguments:",
+                        "            - '@Github\\HttpClient\\Builder'",
+                        "        # Uncomment to enable authentication",
+                        "        #calls:",
+                        "        #    - ['authenticate', ['%env(GITHUB_USERNAME)%', '%env(GITHUB_SECRET)%', '%env(GITHUB_AUTH_METHOD)%']]",
+                        "",
+                        "    Github\\HttpClient\\Builder:",
+                        "        arguments:",
+                        "            - '@?Http\\Client\\HttpClient'",
+                        "            - '@?Http\\Message\\RequestFactory'",
+                        "            - '@?Http\\Message\\StreamFactory'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a7d5781e4a8e84f1c238c43e4c9bb806f01d8a3f"
+        }
+    }
+}

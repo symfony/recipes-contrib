@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "cyberomulus/sitemap-generator-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Cyberomulus\\SiteMapGeneratorBundle\\CyberomulusSiteMapGeneratorBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/cyberomulus_site_map_generator.yaml": {
+                    "contents": [
+                        "cyberomulus_site_map_generator:",
+                        "    defaults_values:",
+                        "        # Set the defaults values on url entries (false by default)",
+                        "        url:",
+                        "            # true for set a datetime at now if is null",
+                        "            last_modification_now:         true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/cyberomulus_site_map_generator.yaml": {
+                    "contents": [
+                        "cyberomulus_sitemapgenerator:",
+                        "    resource: '@CyberomulusSiteMapGeneratorBundle/Resources/config/routes.xml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "444f9d4165852dbf7af8a6cbaa63715531f394c6"
+        }
+    }
+}

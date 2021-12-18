@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "thecodingmachine/tdbm-bundle": {
+            "manifest": {
+                "bundles": {
+                    "TheCodingMachine\\TDBM\\Bundle\\TdbmBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/tdbm.yaml": {
+                    "contents": [
+                        "tdbm:",
+                        "    bean_namespace: App\\Beans",
+                        "    dao_namespace: App\\Daos",
+                        "",
+                        "## Uncomment the naming section if you want to customize the names of the generated classes / beans",
+                        "#    naming:",
+                        "#        bean_prefix: \"\"",
+                        "#        bean_suffix: \"\"",
+                        "#        base_bean_prefix: Abstract",
+                        "#        base_bean_suffix: \"\"",
+                        "#        dao_prefix: \"\"",
+                        "#        dao_suffix: Dao",
+                        "#        base_dao_prefix: Abstract",
+                        "#        base_dao_suffix: Dao",
+                        "## Exceptions are used to transform a table name (the key) into a bean name (the value)",
+                        "## Very useful if your database table names are not in english (as TDBM will try to turn plural table names into singular bean names)",
+                        "#        exceptions:",
+                        "#            chevaux: Cheval",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ccfd4c16ff053ab292ab7fd49ff175932a52c68d"
+        }
+    }
+}

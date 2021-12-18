@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "thecodingmachine/tdbm-bundle": {
+            "manifest": {
+                "bundles": {
+                    "TheCodingMachine\\TDBM\\Bundle\\TdbmBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/tdbm.yaml": {
+                    "contents": [
+                        "# Read more about TDBM available options at: https://thecodingmachine.github.io/tdbm/doc/install_symfony.html",
+                        "tdbm:",
+                        "    bean_namespace: App\\Beans",
+                        "    dao_namespace: App\\Daos",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "129c707eb80cb89ea94c310c4db8419dd6ae32c2"
+        }
+    }
+}

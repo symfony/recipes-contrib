@@ -1,0 +1,53 @@
+{
+    "manifests": {
+        "macpaw/symfony-health-check-bundle": {
+            "manifest": {
+                "bundles": {
+                    "SymfonyHealthCheckBundle\\SymfonyHealthCheckBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                                                </>",
+                    "<bg=blue;fg=white> Next: Symfony Health Check Bundle Configuration </>",
+                    "<bg=blue;fg=white>                                                </>",
+                    "",
+                    "  *. Add healthcheck firewall to <fg=green>config/security.yaml</> file",
+                    "",
+                    "<comment>",
+                    "security:",
+                    "    firewalls:",
+                    "        healthcheck:",
+                    "            pattern: ^/health",
+                    "            security: false",
+                    "</>",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/MacPaw/symfony-health-check-bundle</>"
+                ]
+            },
+            "files": {
+                "config/packages/symfony_health_check.yaml": {
+                    "contents": [
+                        "symfony_health_check:",
+                        "    health_checks:",
+                        "        - id: symfony_health_check.status_up_check",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/symfony_health_check.yaml": {
+                    "contents": [
+                        "health_check:",
+                        "    resource: '@SymfonyHealthCheckBundle/Resources/config/routes.xml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "20809577b09020df718d2aefadbf31ddfde82afa"
+        }
+    }
+}

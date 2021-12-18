@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "becklyn/assets-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Becklyn\\AssetsBundle\\BecklynAssetsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/becklyn_assets.yaml": {
+                    "contents": [
+                        "_import.becklyn_assets:",
+                        "    resource: .",
+                        "    type: 'becklyn-assets'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f743de2828a28ae7c30e8cb7ea730cbeb4be4f18"
+        }
+    }
+}

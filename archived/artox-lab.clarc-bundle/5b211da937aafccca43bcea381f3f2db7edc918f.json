@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "artox-lab/clarc-bundle": {
+            "manifest": {
+                "bundles": {
+                    "ArtoxLab\\Bundle\\ClarcBundle\\ArtoxLabClarcBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "copy-from-package": {
+                    "Layers/Entities/": "%SRC_DIR%/Entities/",
+                    "Layers/UseCases/": "%SRC_DIR%/UseCases/",
+                    "Layers/Interfaces/": "%SRC_DIR%/Interfaces/",
+                    "Layers/Infrastructure/": "%SRC_DIR%/Infrastructure/"
+                }
+            },
+            "files": {
+                "config/packages/artox_lab_clarc.yaml": {
+                    "contents": [
+                        "artox_lab_clarc:",
+                        "    api:",
+                        "        serializer:",
+                        "            class: \\ArtoxLab\\Bundle\\ClarcBundle\\Core\\Interfaces\\UI\\API\\Transformers\\Serializers\\NullObjectArraySerializer",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5b211da937aafccca43bcea381f3f2db7edc918f"
+        }
+    }
+}

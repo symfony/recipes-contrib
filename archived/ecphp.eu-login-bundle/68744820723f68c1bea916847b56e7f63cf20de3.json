@@ -1,0 +1,18 @@
+{
+    "manifests": {
+        "ecphp/eu-login-bundle": {
+            "manifest": {
+                "bundles": {
+                    "EcPhp\\EuLoginBundle\\EuLoginBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-package": {
+                    "Resources/config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": [],
+            "ref": "68744820723f68c1bea916847b56e7f63cf20de3"
+        }
+    }
+}

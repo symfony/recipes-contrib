@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "kunstmaan/search-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Kunstmaan\\SearchBundle\\KunstmaanSearchBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/kunstmaan_search.yaml": {
+                    "contents": [
+                        "kunstmaan_search:",
+                        "    connection:",
+                        "        driver: elastic_search",
+                        "        host: localhost",
+                        "        port: 9200",
+                        "    index_prefix: myproject # Change this prefix to you liking. Maybe the name of your project",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9d01a6ee0822f655ee7b696b98bd590ef3caa58d"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "oskarstark/env-var-extension": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/oskarstark_env_var_extension.yaml": {
+                    "contents": [
+                        "services:",
+                        "    OskarStark\\Twig\\EnvVarExtension:",
+                        "        tags: ['twig.extension']",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "18de027ec5a217ac2ff53bee5b3a1741d13d90a4"
+        }
+    }
+}

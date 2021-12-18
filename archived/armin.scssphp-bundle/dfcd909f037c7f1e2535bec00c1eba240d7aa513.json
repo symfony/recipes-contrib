@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "armin/scssphp-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Armin\\ScssphpBundle\\ScssphpBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/prod/scssphp.yaml": {
+                    "contents": [
+                        "scssphp:",
+                        "    enabled: true",
+                        "    autoUpdate: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/scssphp.yaml": {
+                    "contents": [
+                        "scssphp:",
+                        "    enabled: true",
+                        "    autoUpdate: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "dfcd909f037c7f1e2535bec00c1eba240d7aa513"
+        }
+    }
+}

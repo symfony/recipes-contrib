@@ -1,0 +1,53 @@
+{
+    "manifests": {
+        "core23/shariff-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Core23\\ShariffBundle\\Core23ShariffBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "FACEBOOK_API_ID": "",
+                    "FACEBOOK_API_SECRET": ""
+                }
+            },
+            "files": {
+                "config/packages/core23_shariff.yaml": {
+                    "contents": [
+                        "core23_shariff:",
+                        "    services:",
+                        "        facebook:",
+                        "            app_id:  '%env(FACEBOOK_API_ID)%'",
+                        "            secret:  '%env(FACEBOOK_API_SECRET)%'",
+                        "",
+                        "sonata_block:",
+                        "    blocks:",
+                        "        core23_shariff.block.share:",
+                        "",
+                        "doctrine_cache:",
+                        "    providers:",
+                        "        core23_shariff:",
+                        "            type: php_file",
+                        "            namespace: core23_shariff",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/core23_shariff.yaml": {
+                    "contents": [
+                        "core23_shariff:",
+                        "    resource: '@Core23ShariffBundle/Resources/config/routing/backend.yml'",
+                        "    prefix: /shariff",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "543b5fc304a0580ead9b6b65f1d01f028259d3b2"
+        }
+    }
+}

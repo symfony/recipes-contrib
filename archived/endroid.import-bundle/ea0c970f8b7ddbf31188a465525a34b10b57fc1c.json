@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "endroid/import-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Endroid\\ImportBundle\\EndroidImportBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/endroid_import.yaml": {
+                    "contents": [
+                        "endroid_import:",
+                        "    time_limit: 0",
+                        "    memory_limit: 4096M",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/dev/endroid_import.yaml": {
+                    "contents": [
+                        "endroid_import:",
+                        "    resource: \"@EndroidImportBundle/Controller/\"",
+                        "    type: annotation",
+                        "    prefix: /import",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ea0c970f8b7ddbf31188a465525a34b10b57fc1c"
+        }
+    }
+}

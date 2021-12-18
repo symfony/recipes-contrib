@@ -1,0 +1,50 @@
+{
+    "manifests": {
+        "php-amqplib/rabbitmq-bundle": {
+            "manifest": {
+                "bundles": {
+                    "OldSound\\RabbitMqBundle\\OldSoundRabbitMqBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "env": {
+                    "RABBITMQ_URL": "amqp://guest:guest@localhost:5672"
+                }
+            },
+            "files": {
+                "config/packages/old_sound_rabbit_mq.yaml": {
+                    "contents": [
+                        "old_sound_rabbit_mq:",
+                        "    connections:",
+                        "        default:",
+                        "            url: '%env(RABBITMQ_URL)%'",
+                        "#    producers:",
+                        "#        # use 'old_sound_rabbit_mq.task_producer' service to send data.",
+                        "#        task:",
+                        "#            connection:       default",
+                        "#            exchange_options: { name: 'task', type: direct }",
+                        "#    consumers:",
+                        "#        task:",
+                        "#            connection:       default",
+                        "#            exchange_options: { name: 'task', type: direct }",
+                        "#            queue_options:    { name: 'task'}",
+                        "#            callback:         App\\Consumer\\TaskConsumer",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Consumer/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ce3ca2e4577270c4f518539aa6b9e878998fcfef"
+        }
+    }
+}

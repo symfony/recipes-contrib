@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "xiidea/easy-audit": {
+            "manifest": {
+                "bundles": {
+                    "Xiidea\\EasyAuditBundle\\XiideaEasyAuditBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/xiidea_easy_audit.yaml": {
+                    "contents": [
+                        "# Read the documentation: http://xiidea.github.io/EasyAuditBundle/",
+                        "xiidea_easy_audit:",
+                        "    entity_class: Xiidea\\EasyAuditBundle\\Entity\\BaseAuditLog",
+                        "    default_logger: false",
+                        "    user_property : ~ # or username",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0e253fce4813fe8970bf24a2b1b97fc9de9f2615"
+        }
+    }
+}

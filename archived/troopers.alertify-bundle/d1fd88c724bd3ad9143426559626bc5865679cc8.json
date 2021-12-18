@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "troopers/alertify-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Troopers\\AlertifyBundle\\TroopersAlertifyBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<fg=blue;options=bold>Finish the configuration<fg=blue>:</>",
+                    "1. You <options=bold>MUST</> follow the guide to include js and / or css assets https://github.com/Troopers/AlertifyBundle/blob/master/Resources/doc/configuration.md</>.",
+                    "2. You <options=bold>MAY</> configure your favorite alert library (<comment>toastr</>, <comment>notie</>, <comment>pushjs</>... and even your <comment>own</>).",
+                    "",
+                    "Warning: make sure the twig engine is turned on in framework.yaml.",
+                    "",
+                    "  - If not, add the following to config/packages/framework.yaml:",
+                    "",
+                    "framework:",
+                    "    # ...",
+                    "    templating:",
+                    "        engines: ['twig']"
+                ]
+            },
+            "files": {
+                "config/packages/troopers_alertify.yaml": {
+                    "contents": [
+                        "#Please learn more about alertify contexts https://github.com/Troopers/AlertifyBundle/blob/master/Resources/doc/configuration.md",
+                        "troopers_alertify:",
+                        "    contexts:",
+                        "        front:",
+                        "            engine: \"notie\"",
+                        "            layout: \"top\"",
+                        "            translationDomain: \"messages\"",
+                        "            options:",
+                        "                alertTime: 10",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d1fd88c724bd3ad9143426559626bc5865679cc8"
+        }
+    }
+}

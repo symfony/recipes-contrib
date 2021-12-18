@@ -1,0 +1,16 @@
+{
+    "manifests": {
+        "jolicode/gif-exception-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Joli\\GifExceptionBundle\\GifExceptionBundle": [
+                        "dev",
+                        "test"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "b3348dadb52ed0390e71ae1323caff9e86bbe7f1"
+        }
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "manifests": {
+        "misd/phone-number-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Misd\\PhoneNumberBundle\\MisdPhoneNumberBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=yellow></>",
+                    "<bg=yellow> This bundle is Abandoned: use odolbeau/phone-number-bundle instead </>",
+                    "",
+                    "  composer remove misd/phone-number-bundle --no-scripts",
+                    "  composer require odolbeau/phone-number-bundle",
+                    "",
+                    "<bg=green;fg=white></>",
+                    "<bg=green;fg=white> You now can use the phone bundle as described here: </>",
+                    "<bg=green;fg=white> https://github.com/misd-service-development/phone-number-bundle#usage </>",
+                    "<bg=green;fg=white> The Doctrine configuration has been already done.</>",
+                    "<bg=green;fg=white> You now can use `phone_number` as an ORM-Type: </>",
+                    "",
+                    "  /** @ORM\\Column(type=\"phone_number\") */",
+                    "  private $phoneNumber;"
+                ]
+            },
+            "files": {
+                "config/packages/misd_phone_number.yaml": {
+                    "contents": [
+                        "# To persist libphonenumber\\PhoneNumber objects, add the Misd\\PhoneNumberBundle\\Doctrine\\DBAL\\Types\\PhoneNumberType mapping to your application's config.",
+                        "# This requires: doctrine/doctrine-bundle",
+                        "# doctrine:",
+                        "#     dbal:",
+                        "#         types:",
+                        "#             phone_number: Misd\\PhoneNumberBundle\\Doctrine\\DBAL\\Types\\PhoneNumberType",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "aba06d73c9443026f7e9e606520b026b783e24b5"
+        }
+    }
+}

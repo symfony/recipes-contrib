@@ -1,0 +1,44 @@
+{
+    "manifests": {
+        "mmucklo/grid-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dtc\\GridBundle\\DtcGridBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-package": {
+                    "Resources/config/dtc_grid.yaml": "%CONFIG_DIR%/packages/dtc_grid.yaml"
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>              </>",
+                    "<bg=blue;fg=white> What's next? </>",
+                    "<bg=blue;fg=white>              </>",
+                    "",
+                    "Warning: make sure the twig engine is turned on in framework.yaml",
+                    "",
+                    "  - If not, add the following to config/packages/framework.yaml:",
+                    "",
+                    "framework:",
+                    "    # ...",
+                    "    templating:",
+                    "        engines: ['twig']"
+                ]
+            },
+            "files": {
+                "config/routes/dtc_grid.yaml": {
+                    "contents": [
+                        "dtc_grid:",
+                        "    resource: '@DtcGridBundle/Resources/config/routing.yml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "df7c5b826e9ceca9b28e9dc0b37c31f066a165f9"
+        }
+    }
+}

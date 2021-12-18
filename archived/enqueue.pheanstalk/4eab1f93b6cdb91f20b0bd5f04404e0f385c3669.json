@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "enqueue/pheanstalk": {
+            "manifest": {
+                "env": {
+                    "ENQUEUE_DSN": "beanstalk:"
+                }
+            },
+            "files": [],
+            "ref": "4eab1f93b6cdb91f20b0bd5f04404e0f385c3669"
+        }
+    }
+}

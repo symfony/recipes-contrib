@@ -1,0 +1,18 @@
+{
+    "manifests": {
+        "ecphp/cas-bundle": {
+            "manifest": {
+                "bundles": {
+                    "EcPhp\\CasBundle\\CasBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-package": {
+                    "Resources/config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": [],
+            "ref": "11ab180a0614a2cf2c76a732f719a04484f2ad74"
+        }
+    }
+}

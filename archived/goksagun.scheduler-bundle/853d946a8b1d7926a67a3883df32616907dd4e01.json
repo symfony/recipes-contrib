@@ -1,0 +1,42 @@
+{
+    "manifests": {
+        "goksagun/scheduler-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Goksagun\\SchedulerBundle\\SchedulerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/scheduler.yaml": {
+                    "contents": [
+                        "# A CRON expression is a string representing the schedule for a particular command to execute.",
+                        "# The parts of a CRON schedule are as follows:",
+                        "#",
+                        "#   *    *    *    *    *",
+                        "#   -    -    -    -    -",
+                        "#   |    |    |    |    |",
+                        "#   |    |    |    |    |",
+                        "#   |    |    |    |    +----- day of week (0 - 7) (Sunday=0 or 7)",
+                        "#   |    |    |    +---------- month (1 - 12)",
+                        "#   |    |    +--------------- day of month (1 - 31)",
+                        "#   |    +-------------------- hour (0 - 23)",
+                        "#   +------------------------- min (0 - 59)",
+                        "scheduler:",
+                        "    tasks:",
+                        "        # You may define all of your scheduled tasks here.",
+                        "        # To get started, let's look at an example of scheduling a task (command).",
+                        "        #- { name: example:command arg --option, expression: \"* * * * *\" }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "853d946a8b1d7926a67a3883df32616907dd4e01"
+        }
+    }
+}

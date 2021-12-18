@@ -1,0 +1,47 @@
+{
+    "manifests": {
+        "artprima/prometheus-metrics-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Artprima\\PrometheusMetricsBundle\\ArtprimaPrometheusMetricsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/prometheus_metrics.yaml": {
+                    "contents": [
+                        "artprima_prometheus_metrics:",
+                        "    namespace: myapp",
+                        "    type: apcu",
+                        "    ignored_routes:",
+                        "    - prometheus_bundle_prometheus",
+                        "    - _wdt",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/test/prometheus_metrics.yaml": {
+                    "contents": [
+                        "artprima_prometheus_metrics:",
+                        "    type: in_memory",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/metrics.yaml": {
+                    "contents": [
+                        "app_metrics:",
+                        "    resource: '@ArtprimaPrometheusMetricsBundle/Resources/config/routing.xml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a07f1cab0b63419f2153b744a254d9d6c3d732e9"
+        }
+    }
+}

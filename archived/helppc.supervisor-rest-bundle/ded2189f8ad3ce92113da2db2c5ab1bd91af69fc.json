@@ -1,0 +1,42 @@
+{
+    "manifests": {
+        "helppc/supervisor-rest-bundle": {
+            "manifest": {
+                "bundles": {
+                    "HelpPC\\Bundle\\SupervisorRestBundle\\SupervisorRestBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/helppc_supervisor_rest.yaml": {
+                    "contents": [
+                        "supervisor_rest:",
+                        "    default_environment: dev",
+                        "    servers:",
+                        "        dev:",
+                        "            application:",
+                        "                scheme: http",
+                        "                host: localhost",
+                        "                port: 9006",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/helppc_supervisor_rest.yaml": {
+                    "contents": [
+                        "supervisor:",
+                        "    resource: '@SupervisorRestBundle/Resources/config/routing.xml'",
+                        "    prefix:   /api/supervisor",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ded2189f8ad3ce92113da2db2c5ab1bd91af69fc"
+        }
+    }
+}

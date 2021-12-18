@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "indragunawan/api-rate-limit-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Indragunawan\\ApiRateLimitBundle\\IndragunawanApiRateLimitBundle": [
+                        "prod"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/prod/indragunawan_rate_limit.yaml": {
+                    "contents": [
+                        "# Read the documentation: https://github.com/IndraGunawan/api-rate-limit-bundle/blob/master/Resources/doc/usage.md",
+                        "indragunawan_api_rate_limit:",
+                        "    enabled: true",
+                        "    # cache: cache.api_rate_limit",
+                        "    # throttle:",
+                        "    #     default:",
+                        "    #         limit: 60 # max attempts per period",
+                        "    #         period: 60 # in seconds",
+                        "    #     sort: 'rate-limit-desc'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "34979e3bdd275203d0831a200aa9462150449e17"
+        }
+    }
+}

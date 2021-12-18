@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "gheb/configuration-converter-bundle": {
+            "manifest": {
+                "bundles": {
+                    "ConfigurationConverter\\ConfigurationConverterBundle": [
+                        "dev"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                         </>",
+                    "<bg=blue;fg=white> Configuration Converter </>",
+                    "<bg=blue;fg=white>                         </>",
+                    "",
+                    "  * Edit the <fg=green>config/packages/configuration_converter.yaml</> file to configure your own settings.",
+                    "",
+                    "  * Run <fg=green>bin/console configuration:convert</> to convert your configuration.",
+                    "",
+                    "Documentation: https://github.com/GregoireHebert/configuration-converter-bundle"
+                ]
+            },
+            "files": {
+                "config/packages/configuration_converter.yaml": {
+                    "contents": [
+                        "configuration_converter:",
+                        "    api_platform_default_export_dir: '%kernel.project_dir%/config/packages/api-platform/' #(default)",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3932a05bbb612d3a2275beb517665dc766fa51c5"
+        }
+    }
+}

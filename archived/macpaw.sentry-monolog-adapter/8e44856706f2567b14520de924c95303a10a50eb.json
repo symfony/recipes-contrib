@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "macpaw/sentry-monolog-adapter": {
+            "manifest": {
+                "bundles": {
+                    "SentryMonologAdapter\\SentryMonologAdapterBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                                         </>",
+                    "<bg=blue;fg=white> Next: Sentry Monolog Adapter configuration </>",
+                    "<bg=blue;fg=white>                                         </>",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/MacPaw/sentry-monolog-adapter</>"
+                ]
+            },
+            "files": {
+                "config/packages/sentry_monolog_adapter.yaml": {
+                    "contents": [
+                        "sentry_monolog_adapter:",
+                        "    messenger_logging_middleware:",
+                        "        logging_strategies:",
+                        "            - id: sentry_monolog_adapter.log_all_strategy",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8e44856706f2567b14520de924c95303a10a50eb"
+        }
+    }
+}

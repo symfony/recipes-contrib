@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "deamon/logger-extra-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Deamon\\LoggerExtraBundle\\DeamonLoggerExtraBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/deamon_logger_extra.yaml": {
+                    "contents": [
+                        "# see https://github.com/FrDeamon/logger-extra-bundle/blob/master/README.md#config-reference",
+                        "deamon_logger_extra:",
+                        "    # the application name",
+                        "    application: null",
+                        "    # the handler to update",
+                        "    handlers: 'main'",
+                        "    # configuration for all optional fields",
+                        "    config: null",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0c64a27be5cc083dd16bebfe1ca16104d8649fa9"
+        }
+    }
+}

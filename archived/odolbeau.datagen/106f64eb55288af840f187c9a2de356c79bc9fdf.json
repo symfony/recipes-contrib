@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "odolbeau/datagen": {
+            "manifest": {
+                "bundles": {
+                    "Bab\\Datagen\\Bridge\\Symfony\\Bundle\\DatagenBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "src/Datagen/DBAL/Fixtures/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Datagen/DBAL/Table/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "106f64eb55288af840f187c9a2de356c79bc9fdf"
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "troopers/mangopay-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Troopers\\MangopayBundle\\TroopersMangopayBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "TROOPERS_MANGOPAY_CLIENT_ID": "%generate(secret)%",
+                    "TROOPERS_MANGOPAY_CLIENT_PASSWORD": "%generate(secret)%",
+                    "TROOPERS_MANGOPAY_BASE_URL": "https://api.sandbox.mangopay.com"
+                }
+            },
+            "files": {
+                "config/packages/troopers_mangopay.yaml": {
+                    "contents": [
+                        "troopers_mangopay:",
+                        "    client_id: \"%env(TROOPERS_MANGOPAY_CLIENT_ID)%\"",
+                        "    client_password: \"%env(TROOPERS_MANGOPAY_CLIENT_PASSWORD)%\"",
+                        "    base_url: \"%env(TROOPERS_MANGOPAY_BASE_URL)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3d20e33c913b0a2dae803858c918c6ef9267074a"
+        }
+    }
+}

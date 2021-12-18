@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "symfony-cmf/routing-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\Cmf\\Bundle\\RoutingBundle\\CmfRoutingBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/cmf_routing_bundle.yaml": {
+                    "contents": [
+                        "# Read the documentation: https://symfony.com/doc/master/cmf/bundles/routing/configuration.html",
+                        "# Install phpcr stack before using this configuration",
+                        "#cmf_routing:",
+                        "#    chain:",
+                        "#        routers_by_id:",
+                        "#            cmf_routing.dynamic_router: 200",
+                        "#            router.default:             100",
+                        "#    dynamic:",
+                        "#        persistence:",
+                        "#            phpcr:",
+                        "#                enabled: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d6774811e3ab401d483ef3b138a8066c5726b616"
+        }
+    }
+}

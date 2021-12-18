@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "enqueue/dbal": {
+            "manifest": {
+                "env": {
+                    "ENQUEUE_DSN": "mysql:"
+                }
+            },
+            "files": [],
+            "ref": "7b05df4d7e97874f719baa645ab8b6aafe203f9b"
+        }
+    }
+}

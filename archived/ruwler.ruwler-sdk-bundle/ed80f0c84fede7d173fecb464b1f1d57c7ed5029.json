@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "ruwler/ruwler-sdk-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Ruwler\\SdkBundle\\RuwlerSdkBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "RUWLER_SDK_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/ruwler_sdk.yaml": {
+                    "contents": [
+                        "ruwler_sdk:\r",
+                        "    api_key: '%env(RUWLER_SDK_API_KEY)%'\r",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ed80f0c84fede7d173fecb464b1f1d57c7ed5029"
+        }
+    }
+}

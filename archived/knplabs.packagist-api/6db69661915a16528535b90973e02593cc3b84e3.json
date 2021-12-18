@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "knplabs/packagist-api": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/knp_packagist_api.yaml": {
+                    "contents": [
+                        "services:",
+                        "    Packagist\\Api\\Client: null",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6db69661915a16528535b90973e02593cc3b84e3"
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "jsor/doctrine-postgis": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/jsor_doctrine_postgis.yaml": {
+                    "contents": [
+                        "services:",
+                        "    Jsor\\Doctrine\\PostGIS\\Event\\ORMSchemaEventSubscriber:",
+                        "        tags: [{ name: doctrine.event_subscriber, connection: default }]",
+                        "",
+                        "doctrine:",
+                        "    dbal:",
+                        "        mapping_types:",
+                        "            _text: string",
+                        "        types:",
+                        "            geometry: 'Jsor\\Doctrine\\PostGIS\\Types\\GeometryType'",
+                        "    orm:",
+                        "        dql:",
+                        "            string_functions:",
+                        "                ST_AsGeoJSON: 'Jsor\\Doctrine\\PostGIS\\Functions\\ST_AsGeoJSON'",
+                        "                ST_GeomFromGeoJSON: 'Jsor\\Doctrine\\PostGIS\\Functions\\ST_GeomFromGeoJSON'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "211979f7917bf6edb8fc5006a17b2e84e8e84d50"
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "notfloran/mjml-bundle": {
+            "manifest": {
+                "bundles": {
+                    "NotFloran\\MjmlBundle\\MjmlBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * Now install MJML into your project via Yarn or npm : yarn add mjml or npm install mjml --save"
+                ]
+            },
+            "files": {
+                "config/packages/mjml.yaml": {
+                    "contents": [
+                        "# see https://github.com/notFloran/mjml-bundle#binary",
+                        "mjml:",
+                        "    renderer: 'binary'",
+                        "    options:",
+                        "        binary: '%kernel.project_dir%/node_modules/.bin/mjml'",
+                        "        minify: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/prod/mjml.yaml": {
+                    "contents": [
+                        "mjml:",
+                        "    options:",
+                        "        minify: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "158f3cc144a0ccf89b40c1a6290407ba84dcf5e2"
+        }
+    }
+}

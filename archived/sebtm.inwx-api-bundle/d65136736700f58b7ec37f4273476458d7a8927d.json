@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "sebtm/inwx-api-bundle": {
+            "manifest": {
+                "bundles": {
+                    "SebTM\\INWX\\InwxApiBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "INWX_USERNAME": "",
+                    "INWX_PASSWORD": ""
+                }
+            },
+            "files": {
+                "config/packages/inwx_api.yaml": {
+                    "contents": [
+                        "# Read the documentation: https://github.com/SebTM/inwx-api-bundle",
+                        "inwx_api:",
+                        "    debug: '%kernel.debug%'",
+                        "    environment: development",
+                        "    json: true",
+                        "    language: en",
+                        "    username: '%env(resolve:INWX_USERNAME)%'",
+                        "    password: '%env(resolve:INWX_PASSWORD)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d65136736700f58b7ec37f4273476458d7a8927d"
+        }
+    }
+}

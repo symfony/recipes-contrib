@@ -1,0 +1,46 @@
+{
+    "manifests": {
+        "symfonycorp/connect-bundle": {
+            "manifest": {
+                "bundles": {
+                    "SymfonyCorp\\Bundle\\ConnectBundle\\SymfonyConnectBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%"
+                },
+                "env": {
+                    "SYMFONY_CONNECT_APP_ID": "",
+                    "SYMFONY_CONNECT_APP_SECRET": ""
+                }
+            },
+            "files": {
+                "config/packages/symfony_connect.yaml": {
+                    "contents": [
+                        "symfony_connect:",
+                        "    app_id: '%env(SYMFONY_CONNECT_APP_ID)%'",
+                        "    app_secret: '%env(SYMFONY_CONNECT_APP_SECRET)%'",
+                        "    scope: 'SCOPE_PUBLIC'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/symfony_connect.yaml": {
+                    "contents": [
+                        "symfony_connect_callback:",
+                        "    path: /connect/callback",
+                        "",
+                        "symfony_connect_login:",
+                        "    path: /connect/login",
+                        "    methods: [GET]",
+                        "    controller: SymfonyCorp\\Bundle\\ConnectBundle\\Controller\\OAuthController::newSessionAction",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "42c7cfa21e1bdf4645135cac649ca1d35292f78c"
+        }
+    }
+}

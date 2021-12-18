@@ -1,0 +1,60 @@
+{
+    "manifests": {
+        "jmose/command-scheduler-bundle": {
+            "manifest": {
+                "bundles": {
+                    "JMose\\CommandSchedulerBundle\\JMoseCommandSchedulerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Configure</> your application:",
+                    "    1. Secure your route by adding <comment>- { path: ^/command-scheduler, role: ROLE_ADMIN }</> in your security config.",
+                    "    2. Set the single-entry point in crontab : <comment>* * * * * php /your_app/bin/console scheduler:execute</>",
+                    "",
+                    "  * <fg=blue>Schedule</> your commands at <comment>http://your-app/command-scheduler/list</>"
+                ]
+            },
+            "files": {
+                "config/packages/scheduler.yaml": {
+                    "contents": [
+                        "# See full configuration at",
+                        "#     https://github.com/J-Mose/CommandSchedulerBundle/blob/master/Resources/doc/index.md#4---available-configuration",
+                        "jmose_command_scheduler:",
+                        "",
+                        "    # Scheduler will write output files here. set false to disable it.",
+                        "    log_path: \"%kernel.logs_dir%\"",
+                        "",
+                        "    # Add namespace you don't want to see its Command in the scheduler.",
+                        "    excluded_command_namespaces:",
+                        "        - _global",
+                        "        - scheduler",
+                        "        - server",
+                        "        - container",
+                        "        - config",
+                        "        - generate",
+                        "        - init",
+                        "        - router",
+                        "        - doctrine",
+                        "        - debug",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/scheduler.yaml": {
+                    "contents": [
+                        "jmose_command_scheduler:",
+                        "    resource: \"@JMoseCommandSchedulerBundle/Resources/config/routing.yml\"",
+                        "    prefix:   /",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a1d79fcdbfc453e4319171a2b6a3d5dd402421c7"
+        }
+    }
+}

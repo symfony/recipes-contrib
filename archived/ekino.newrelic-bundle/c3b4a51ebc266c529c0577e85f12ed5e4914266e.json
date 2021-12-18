@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "ekino/newrelic-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Ekino\\Bundle\\NewRelicBundle\\EkinoNewRelicBundle": [
+                        "prod"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Get the REST API key of your NewRelic Account on https://docs.newrelic.com/docs/apis/rest-api-v2/requirements/api-keys",
+                    "NEWRELIC_API_KEY": "FIXME"
+                }
+            },
+            "files": {
+                "config/packages/prod/ekino_new_relic.yaml": {
+                    "contents": [
+                        "ekino_new_relic:",
+                        "    enabled: true",
+                        "    api_key: \"%env(NEWRELIC_API_KEY)%\"",
+                        "    log_exceptions: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c3b4a51ebc266c529c0577e85f12ed5e4914266e"
+        }
+    }
+}

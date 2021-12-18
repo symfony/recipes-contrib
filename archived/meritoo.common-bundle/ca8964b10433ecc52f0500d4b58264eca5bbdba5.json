@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "meritoo/common-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Meritoo\\CommonBundle\\MeritooCommonBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MERITOO_FORM_NOVALIDATE": "false"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/meritoo/common-bundle#usage</>",
+                    "  * <fg=blue>Configure</> using options described at <comment>https://github.com/meritoo/common-bundle#configuration</>"
+                ]
+            },
+            "files": {
+                "config/packages/meritoo_common.yaml": {
+                    "contents": [
+                        "#",
+                        "# All configuration options are described here:",
+                        "# https://github.com/meritoo/common-bundle/blob/master/docs/Configuration.md",
+                        "#",
+                        "meritoo_common:",
+                        "    form:",
+                        "        novalidate: \"%env(bool:MERITOO_FORM_NOVALIDATE)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ca8964b10433ecc52f0500d4b58264eca5bbdba5"
+        }
+    }
+}

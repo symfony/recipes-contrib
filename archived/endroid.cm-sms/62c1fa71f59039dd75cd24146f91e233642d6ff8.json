@@ -1,0 +1,54 @@
+{
+    "manifests": {
+        "endroid/cm-sms": {
+            "manifest": {
+                "bundles": {
+                    "Endroid\\CmSms\\Bundle\\CmSmsBundle\\EndroidCmSmsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "CM_SMS_PRODUCT_TOKEN": ""
+                }
+            },
+            "files": {
+                "config/packages/dev/endroid_cm_sms.yaml": {
+                    "contents": [
+                        "endroid_cm_sms:",
+                        "    disable_delivery: true",
+                        "    delivery_phone_numbers: []",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/endroid_cm_sms.yaml": {
+                    "contents": [
+                        "endroid_cm_sms:",
+                        "    product_token: '%env(CM_SMS_PRODUCT_TOKEN)%'",
+                        "    defaults:",
+                        "        sender: 'Endroid' # Should not contain more than 11 characters",
+                        "        unicode: 'auto'",
+                        "        minimum_number_of_message_parts: 1",
+                        "        maximum_number_of_message_parts: 3",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/endroid_cm_sms.yaml": {
+                    "contents": [
+                        "EndroidCmSmsBundle:",
+                        "    resource: \"@EndroidCmSmsBundle/Controller/\"",
+                        "    type: annotation",
+                        "    prefix: /cm-sms",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "62c1fa71f59039dd75cd24146f91e233642d6ff8"
+        }
+    }
+}

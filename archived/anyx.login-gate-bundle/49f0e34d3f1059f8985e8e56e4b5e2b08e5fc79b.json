@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "anyx/login-gate-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Anyx\\LoginGateBundle\\LoginGateBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/login_gate.yaml": {
+                    "contents": [
+                        "login_gate:",
+                        "    storages: ['session']       # Attempts storage engine. Available engines: ['orm', 'session', 'mongodb']",
+                        "    options:",
+                        "        max_count_attempts: 3",
+                        "        timeout: 600          # Ban period (in seconds ... 600 = 10 minutes)",
+                        "        watch_period: 3600",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "49f0e34d3f1059f8985e8e56e4b5e2b08e5fc79b"
+        }
+    }
+}

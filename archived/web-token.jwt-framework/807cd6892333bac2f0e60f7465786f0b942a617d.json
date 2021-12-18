@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "web-token/jwt-framework": {
+            "manifest": {
+                "bundles": {
+                    "Jose\\Bundle\\JoseFramework\\JoseFrameworkBundle": [
+                        "all"
+                    ],
+                    "Jose\\Bundle\\KeyManagement\\KeyManagementBundle": [
+                        "all"
+                    ],
+                    "Jose\\Bundle\\Console\\ConsoleBundle": [
+                        "all"
+                    ],
+                    "Jose\\Bundle\\Checker\\CheckerBundle": [
+                        "all"
+                    ],
+                    "Jose\\Bundle\\Signature\\SignatureBundle": [
+                        "all"
+                    ],
+                    "Jose\\Bundle\\Encryption\\EncryptionBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "807cd6892333bac2f0e60f7465786f0b942a617d"
+        }
+    }
+}

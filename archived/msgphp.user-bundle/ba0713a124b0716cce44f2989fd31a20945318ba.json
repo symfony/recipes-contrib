@@ -1,0 +1,67 @@
+{
+    "manifests": {
+        "msgphp/user-bundle": {
+            "manifest": {
+                "bundles": {
+                    "MsgPhp\\UserBundle\\MsgPhpUserBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "post-install-output": [
+                    "  * Install the Symfony Maker Bundle using <info>composer require maker --dev</>. It's required for the next step.",
+                    "",
+                    "  * Run <info>bin/console make:user:msgphp</>. It will guide you through the basic setup by asking a series of",
+                    "    questions and generates the minimal application source files needed."
+                ]
+            },
+            "files": {
+                "config/packages/msgphp_user.yaml": {
+                    "contents": [
+                        "msgphp_user:",
+                        "    class_mapping:",
+                        "        MsgPhp\\User\\User: App\\Entity\\User",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/User.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "use MsgPhp\\User\\User as BaseUser;",
+                        "use MsgPhp\\User\\UserId;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity()",
+                        " */",
+                        "class User extends BaseUser",
+                        "{",
+                        "    /** @ORM\\Id() @ORM\\GeneratedValue() @ORM\\Column(type=\"msgphp_user_id\", length=191) */",
+                        "    private $id;",
+                        "",
+                        "    public function __construct(UserId $id)",
+                        "    {",
+                        "        $this->id = $id;",
+                        "    }",
+                        "",
+                        "    public function getId(): UserId",
+                        "    {",
+                        "        return $this->id;",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ba0713a124b0716cce44f2989fd31a20945318ba"
+        }
+    }
+}

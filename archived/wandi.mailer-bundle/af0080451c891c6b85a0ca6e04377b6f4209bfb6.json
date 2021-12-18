@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "wandi/mailer-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Wandi\\MailerBundle\\WandiMailerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "WANDI_MAILER_SENDER_NAME": "Example",
+                    "WANDI_MAILER_SENDER_ADDRESS": "example@domain.tld"
+                },
+                "post-install-output": [
+                    "  * The Wandi/MailerBundle needs your default sender configuration.",
+                    "    Modify your WANDI_MAILER_SENDER_NAME and WANDI_MAILER_SENDER_ADDRESS config in <fg=green>.env</>"
+                ]
+            },
+            "files": {
+                "config/packages/wandi_mailer.yaml": {
+                    "contents": [
+                        "wandi_mailer:",
+                        "    sender:",
+                        "        name: '%env(WANDI_MAILER_SENDER_NAME)%'",
+                        "        address: '%env(WANDI_MAILER_SENDER_ADDRESS)%'",
+                        ""
+                    ],
+                    "executable": true
+                }
+            },
+            "ref": "af0080451c891c6b85a0ca6e04377b6f4209bfb6"
+        }
+    }
+}

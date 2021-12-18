@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "core23/gdpr-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Core23\\GDPRBundle\\Core23GDPRBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/core23_gdpr.yaml": {
+                    "contents": [
+                        "sonata_block:",
+                        "    blocks:",
+                        "        core23_gdpr.block.information: ~",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "00b804e8fb8875cfb2ee16e5ce7e884caafbf50a"
+        }
+    }
+}

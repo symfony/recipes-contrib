@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "endroid/twitter": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "TWITTER_CONSUMER_KEY": "",
+                    "TWITTER_CONSUMER_SECRET": "",
+                    "TWITTER_ACCESS_TOKEN": "",
+                    "TWITTER_ACCESS_TOKEN_SECRET": ""
+                }
+            },
+            "files": {
+                "config/packages/endroid_twitter.yaml": {
+                    "contents": [
+                        "services:",
+                        "    Endroid\\Twitter\\Client: ['@Abraham\\TwitterOAuth\\TwitterOAuth']",
+                        "    Abraham\\TwitterOAuth\\TwitterOAuth:",
+                        "        arguments:",
+                        "            - '%env(TWITTER_CONSUMER_KEY)%'",
+                        "            - '%env(TWITTER_CONSUMER_SECRET)%'",
+                        "            - '%env(TWITTER_ACCESS_TOKEN)%'",
+                        "            - '%env(TWITTER_ACCESS_TOKEN_SECRET)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "72d737350a91c4e1d5d5e804dea7df5e21337a7e"
+        }
+    }
+}

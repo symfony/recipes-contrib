@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "prooph/service-bus-symfony-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Prooph\\Bundle\\ServiceBus\\ProophServiceBusBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                           </>",
+                    "<bg=blue;fg=white> Service Bus Configuration </>",
+                    "<bg=blue;fg=white>                           </>",
+                    "",
+                    "  * Verify and uncomment the configuration in <comment>%CONFIG_DIR%/packages/prooph_service_bus.yaml</>",
+                    "    to register message handlers",
+                    "",
+                    "  * Dispatch commands by injecting",
+                    "    the <comment>Prooph\\ServiceBus\\CommandBus</comment> service into your controllers"
+                ]
+            },
+            "files": {
+                "config/packages/prooph_service_bus.yaml": {
+                    "contents": [
+                        "prooph_service_bus:",
+                        "    command_buses:",
+                        "        default_command_bus: ~",
+                        "    event_buses:",
+                        "        default_event_bus: ~",
+                        "    query_buses:",
+                        "        default_query_bus: ~",
+                        "",
+                        "services:",
+                        "    _defaults:",
+                        "        public: false",
+                        "",
+                        "    Prooph\\ServiceBus\\CommandBus: '@prooph_service_bus.default_command_bus'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ba474153d2fa28a44e91cbe27fddf1c0f572988c"
+        }
+    }
+}

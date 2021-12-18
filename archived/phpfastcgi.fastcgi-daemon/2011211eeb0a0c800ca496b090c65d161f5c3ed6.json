@@ -1,0 +1,77 @@
+{
+    "manifests": {
+        "phpfastcgi/fastcgi-daemon": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Run</> your application:",
+                    "    1. Configure your web server",
+                    "    2. Execute the <comment>bin/console fastcgi-daemon:run</> command;",
+                    "    3. Browse your application super quickly",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/PHPFastCGI/FastCGIDaemon</>"
+                ]
+            },
+            "files": {
+                "config/packages/fastcgi_daemon.yaml": {
+                    "contents": [
+                        "services:",
+                        "    App\\FastCGIKernel:",
+                        "        autowire: true",
+                        "",
+                        "    PHPFastCGI\\FastCGIDaemon\\Driver\\DriverContainer: null",
+                        "    PHPFastCGI\\FastCGIDaemon\\Command\\DaemonRunCommand:",
+                        "        arguments: ['@App\\FastCGIKernel', '@PHPFastCGI\\FastCGIDaemon\\Driver\\DriverContainer', 'fastcgi-daemon:run']",
+                        "        tags:",
+                        "            - { name: console.command }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/FastCGIKernel.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App;",
+                        "",
+                        "use PHPFastCGI\\FastCGIDaemon\\Http\\RequestInterface;",
+                        "use PHPFastCGI\\FastCGIDaemon\\KernelInterface as PHPFastCGIKernel;",
+                        "use Symfony\\Component\\HttpKernel\\KernelInterface;",
+                        "use Symfony\\Component\\HttpKernel\\TerminableInterface;",
+                        "",
+                        "class FastCGIKernel implements PHPFastCGIKernel",
+                        "{",
+                        "    private $kernel;",
+                        "",
+                        "    public function __construct(KernelInterface $kernel)",
+                        "    {",
+                        "        $this->kernel = $kernel;",
+                        "    }",
+                        "",
+                        "    public function handleRequest(RequestInterface $request)",
+                        "    {",
+                        "        $this->kernel->boot(); ",
+                        "",
+                        "        $symfonyRequest = $request->getHttpFoundationRequest();",
+                        "        $symfonyResponse = $this->kernel->handle($symfonyRequest);",
+                        "",
+                        "        if ($this->kernel instanceof TerminableInterface) {",
+                        "            $this->kernel->terminate($symfonyRequest, $symfonyResponse);",
+                        "        }",
+                        "",
+                        "        return $symfonyResponse;",
+                        "    }",
+                        "}",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2011211eeb0a0c800ca496b090c65d161f5c3ed6"
+        }
+    }
+}

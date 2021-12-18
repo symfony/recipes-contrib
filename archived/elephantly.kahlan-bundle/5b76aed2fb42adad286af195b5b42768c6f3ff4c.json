@@ -1,0 +1,16 @@
+{
+    "manifests": {
+        "elephantly/kahlan-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Elephantly\\KahlanBundle\\KahlanBundle": [
+                        "dev",
+                        "test"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "5b76aed2fb42adad286af195b5b42768c6f3ff4c"
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "manifests": {
+        "league/tactician-bundle": {
+            "manifest": {
+                "bundles": {
+                    "League\\Tactician\\Bundle\\TacticianBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/league_tactician.yaml": {
+                    "contents": [
+                        "# Library documentation: http://tactician.thephpleague.com/",
+                        "# Bundle documentation: https://github.com/thephpleague/tactician-bundle/blob/v1.0/README.md",
+                        "tactician:",
+                        "    commandbus:",
+                        "        default:",
+                        "            middleware:",
+                        "# Security middleware - https://github.com/thephpleague/tactician-bundle#security-middleware-tacticianmiddlewaresecurity",
+                        "#                - tactician.middleware.security",
+                        "# Validator middleware - https://github.com/thephpleague/tactician-bundle/tree/v1.0#validator-middleware-tacticianmiddlewarevalidator",
+                        "#                - tactician.middleware.validator",
+                        "# Locking middleware - http://tactician.thephpleague.com/plugins/locking-middleware/",
+                        "#                - tactician.middleware.locking",
+                        "# Doctrine transactional middleware, requires additional package - https://github.com/thephpleague/tactician-doctrine",
+                        "#                - tactician.middleware.doctrine",
+                        "                - tactician.middleware.command_handler",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "222c3d39d38378bc6a9790a0b5baf841ba6679b9"
+        }
+    }
+}

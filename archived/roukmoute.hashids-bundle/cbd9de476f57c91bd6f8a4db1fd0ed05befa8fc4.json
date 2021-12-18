@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "roukmoute/hashids-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Roukmoute\\HashidsBundle\\RoukmouteHashidsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/roukmoute_hashids.yaml": {
+                    "contents": [
+                        "# Read the documentation: https://github.com/roukmoute/HashidsBundle/blob/master/README.md",
+                        "roukmoute_hashids:",
+                        "    salt: 'change me'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "cbd9de476f57c91bd6f8a4db1fd0ed05befa8fc4"
+        }
+    }
+}

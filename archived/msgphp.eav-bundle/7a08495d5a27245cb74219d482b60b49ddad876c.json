@@ -1,0 +1,105 @@
+{
+    "manifests": {
+        "msgphp/eav-bundle": {
+            "manifest": {
+                "bundles": {
+                    "MsgPhp\\EavBundle\\MsgPhpEavBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/msgphp_eav.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "use MsgPhp\\Eav\\Entity\\{Attribute, AttributeValue};",
+                        "use Symfony\\Component\\DependencyInjection\\Loader\\Configurator\\ContainerConfigurator;",
+                        "",
+                        "return function (ContainerConfigurator $container) {",
+                        "    $container->extension('msgphp_eav', [",
+                        "        'class_mapping' => [",
+                        "            Attribute::class => \\App\\Entity\\Eav\\Attribute::class,",
+                        "            AttributeValue::class => \\App\\Entity\\Eav\\AttributeValue::class,",
+                        "        ],",
+                        "    ]);",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/Eav/Attribute.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity\\Eav;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "use MsgPhp\\Eav\\AttributeIdInterface;",
+                        "use MsgPhp\\Eav\\Entity\\Attribute as BaseAttribute;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity()",
+                        " */",
+                        "class Attribute extends BaseAttribute",
+                        "{",
+                        "    /** @ORM\\Id() @ORM\\Column(type=\"msgphp_attribute_id\") */",
+                        "    private $id;",
+                        "",
+                        "    public function __construct(AttributeIdInterface $id)",
+                        "    {",
+                        "        $this->id = $id;",
+                        "    }",
+                        "",
+                        "    public function getId(): AttributeIdInterface",
+                        "    {",
+                        "        return $this->id;",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/Eav/AttributeValue.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity\\Eav;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "use MsgPhp\\Eav\\AttributeValueIdInterface;",
+                        "use MsgPhp\\Eav\\Entity\\AttributeValue as BaseAttributeValue;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity()",
+                        " */",
+                        "class AttributeValue extends BaseAttributeValue",
+                        "{",
+                        "    /** @ORM\\Id() @ORM\\Column(type=\"msgphp_attribute_value_id\") */",
+                        "    private $id;",
+                        "",
+                        "    public function __construct(AttributeValueIdInterface $id, Attribute $attribute, $value)",
+                        "    {",
+                        "        parent::__construct($attribute, $value);",
+                        "",
+                        "        $this->id = $id;",
+                        "    }",
+                        "",
+                        "    public function getId(): AttributeValueIdInterface",
+                        "    {",
+                        "        return $this->id;",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7a08495d5a27245cb74219d482b60b49ddad876c"
+        }
+    }
+}

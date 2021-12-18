@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "nameisis/cache": {
+            "manifest": {
+                "bundles": {
+                    "Nameisis\\Cache\\NameisisCache": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/nameisis_cache.yaml": {
+                    "contents": [
+                        "nameisis_cache:",
+                        "    enabled: false",
+                        "",
+                        "services:",
+                        "    Nameisis\\Cache\\EventListener\\CacheListener:",
+                        "        arguments:",
+                        "            - '@annotation_reader'",
+                        "            - '@service_container'",
+                        "            - null",
+                        "            - null",
+                        "        tags:",
+                        "            -   name: kernel.event_subscriber",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d1bf6b06d9cdb2b07341d8049bbe6cf4bd4ced66"
+        }
+    }
+}

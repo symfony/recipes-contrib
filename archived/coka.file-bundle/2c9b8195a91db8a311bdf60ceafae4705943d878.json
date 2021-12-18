@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "coka/file-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Oka\\FileBundle\\OkaFileBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "OKAFILE_STORAGE_ROOT_PATH": "%kernel.project_dir%/public",
+                    "OKAFILE_STORAGE_WEB_SERVER_HOST": "localhost"
+                }
+            },
+            "files": {
+                "config/packages/oka_file.yaml": {
+                    "contents": [
+                        "oka_file:",
+                        "    db_driver: orm",
+                        "    storage:",
+                        "        root_path: '%env(OKAFILE_STORAGE_ROOT_PATH)%'",
+                        "        webserver:",
+                        "            host: '%env(OKAFILE_STORAGE_WEB_SERVER_HOST)%'",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2c9b8195a91db8a311bdf60ceafae4705943d878"
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "manifests": {
+        "symfonycorp/connect": {
+            "manifest": {
+                "bundles": {
+                    "SymfonyCorp\\Connect\\SymfonyConnectBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%"
+                },
+                "env": {
+                    "SYMFONY_CONNECT_APP_ID": "",
+                    "SYMFONY_CONNECT_APP_SECRET": ""
+                }
+            },
+            "files": {
+                "config/packages/symfony_connect.yaml": {
+                    "contents": [
+                        "symfony_connect:",
+                        "    app_id: '%env(SYMFONY_CONNECT_APP_ID)%'",
+                        "    app_secret: '%env(SYMFONY_CONNECT_APP_SECRET)%'",
+                        "    scope: 'SCOPE_PUBLIC'",
+                        "    # start_template: null",
+                        "    # failure_template: null",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/symfony_connect.yaml": {
+                    "contents": [
+                        "symfony_connect:",
+                        "    prefix: /connect",
+                        "    resource: '@SymfonyConnectBundle/Resources/config/routing/connect.xml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "882c945750a86da9e87b297509c3068bf1479c2b"
+        }
+    }
+}

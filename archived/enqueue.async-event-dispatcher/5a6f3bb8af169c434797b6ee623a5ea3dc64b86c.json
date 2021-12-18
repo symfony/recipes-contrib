@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "enqueue/async-event-dispatcher": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/enqueue_async_event_dispatcher.yaml": {
+                    "contents": [
+                        "enqueue:",
+                        "    default:",
+                        "        async_events: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5a6f3bb8af169c434797b6ee623a5ea3dc64b86c"
+        }
+    }
+}

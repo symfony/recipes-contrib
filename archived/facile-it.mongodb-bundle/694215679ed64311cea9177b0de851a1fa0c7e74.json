@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "facile-it/mongodb-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Facile\\MongoDbBundle\\FacileMongoDbBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MONGODB_HOST": "localhost",
+                    "MONGODB_PORT": "27017",
+                    "MONGODB_USER": "",
+                    "MONGODB_PASSWORD": "",
+                    "MONGODB_DB": "symfony"
+                }
+            },
+            "files": {
+                "config/packages/facile_it_mongodb.yaml": {
+                    "contents": [
+                        "mongo_db_bundle:",
+                        "    data_collection: '%kernel.debug%'",
+                        "    clients:",
+                        "        default:",
+                        "            hosts:",
+                        "                - { host: '%env(MONGODB_HOST)%', port: '%env(int:MONGODB_PORT)%' }",
+                        "            username:         '%env(MONGODB_USER)%'",
+                        "            password:         '%env(MONGODB_PASSWORD)%'",
+                        "            replicaSet:       '' # default null (no replica)",
+                        "            ssl:              false",
+                        "            connectTimeoutMS: 3000",
+                        "            readPreference:   primaryPreferred # see https://docs.mongodb.com/manual/reference/read-preference/#primary for info",
+                        "",
+                        "    connections:",
+                        "        default:",
+                        "            client_name:    default",
+                        "            database_name:  '%env(MONGODB_DB)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "694215679ed64311cea9177b0de851a1fa0c7e74"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "toiba/fullcalendar-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Toiba\\FullCalendarBundle\\FullCalendarBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/fullcalendar.yaml": {
+                    "contents": [
+                        "toiba_fullcalendar:",
+                        "    resource: \"@FullCalendarBundle/Resources/config/routing.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "43c9033fa6f75f9325f9ac21787c8e8acb086934"
+        }
+    }
+}

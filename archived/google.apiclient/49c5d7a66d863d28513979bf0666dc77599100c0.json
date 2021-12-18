@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "google/apiclient": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "GOOGLE_API_KEY": "",
+                    "GOOGLE_CLIENT_ID": "",
+                    "GOOGLE_CLIENT_SECRET": ""
+                }
+            },
+            "files": {
+                "config/packages/google_apiclient.yaml": {
+                    "contents": [
+                        "services:",
+                        "    Google_Client:",
+                        "        class: Google_Client",
+                        "        calls:",
+                        "            - [setDeveloperKey, ['%env(GOOGLE_API_KEY)%']]",
+                        "            - [setClientId, ['%env(GOOGLE_CLIENT_ID)%']]",
+                        "            - [setClientSecret, ['%env(GOOGLE_CLIENT_SECRET)%']]",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "49c5d7a66d863d28513979bf0666dc77599100c0"
+        }
+    }
+}

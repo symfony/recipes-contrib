@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "zephyr/allmysms-bundle": {
+            "manifest": {
+                "bundles": {
+                    "ZephyrHQ\\AllMySMSBundle\\ZephyrHQAllMySMSBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "ALLMYSMS_LOGIN": "ALLMYSMS_LOGIN",
+                    "ALLMYSMS_KEY": "ALLMYSMS_KEY",
+                    "ALLMYSMS_SIMULATE": "ALLMYSMS_SIMULATE"
+                }
+            },
+            "files": {
+                "config/zephyrhq_allmysms.yaml": {
+                    "contents": [
+                        "zephyrhq_allmysms:",
+                        "    api_login: '%env(ALLMYSMS_LOGIN)%'",
+                        "    api_key: '%env(ALLMYSMS_KEY)%'",
+                        "    simulate: '%env(ALLMYSMS_SIMULATE)%'",
+                        "    simple_sms: false",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "52dd698eea44404192e615079eef2dd05660eeb0"
+        }
+    }
+}

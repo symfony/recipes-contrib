@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "artox-lab/clarc-message-bus-bundle": {
+            "manifest": {
+                "bundles": {
+                    "ArtoxLab\\Bundle\\ClarcMessageBusBundle\\ArtoxLabClarcMessageBusBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/artox_lab_clarc_message_bus.yaml": {
+                    "contents": [
+                        "artox_lab_clarc_message_bus:",
+                        "    bus:",
+                        "        middleware:",
+                        "            add_redelivery_stamp_middleware:",
+                        "                retry_count: 10",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a0b77dea105258256f9b5f0b8f96c65a1f64907d"
+        }
+    }
+}

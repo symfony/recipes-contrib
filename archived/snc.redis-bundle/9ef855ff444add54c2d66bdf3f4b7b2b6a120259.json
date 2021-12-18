@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "snc/redis-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Snc\\RedisBundle\\SncRedisBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "passwords that contain special characters (@, %, :, +) must be urlencoded",
+                    "REDIS_URL": "redis://localhost"
+                }
+            },
+            "files": {
+                "config/packages/snc_redis.yaml": {
+                    "contents": [
+                        "snc_redis:",
+                        "    clients:",
+                        "        default:",
+                        "            type: predis",
+                        "            alias: default",
+                        "            dsn: \"%env(REDIS_URL)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9ef855ff444add54c2d66bdf3f4b7b2b6a120259"
+        }
+    }
+}

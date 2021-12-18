@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "bcc/cron-manager-bundle": {
+            "manifest": {
+                "bundles": {
+                    "BCC\\CronManagerBundle\\BCCCronManagerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Configure</> your application:",
+                    "    1. Enable sessions by uncommenting the entire session section in <comment>config/packages/framework.yaml</>",
+                    "    2. Secure your route by adding <comment>- { path: ^/admin, role: ROLE_ADMIN }</> in your security access_control section.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/michelsalib/BCCCronManagerBundle/blob/master/README.markdown</> "
+                ]
+            },
+            "files": {
+                "config/routes/bcc_cron_manager_bundle.yaml": {
+                    "contents": [
+                        "BCCCronManagerBundle:",
+                        "    resource: \"@BCCCronManagerBundle/Resources/config/routing.xml\"",
+                        "    prefix:   admin/cron-manager",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "500a1a7b5da7d1a322335f80169b71dcfcd09e27"
+        }
+    }
+}

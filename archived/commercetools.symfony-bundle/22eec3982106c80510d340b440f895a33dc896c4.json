@@ -1,0 +1,62 @@
+{
+    "manifests": {
+        "commercetools/symfony-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Commercetools\\Symfony\\CtpBundle\\CtpBundle": [
+                        "all"
+                    ],
+                    "Commercetools\\Symfony\\SetupBundle\\SetupBundle": [
+                        "dev"
+                    ],
+                    "Commercetools\\Symfony\\StateBundle\\StateBundle": [
+                        "dev"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "CTP_CLIENT_ID": "<your-client-id>",
+                    "CTP_CLIENT_SECRET": "<your-client-secret>",
+                    "CTP_PROJECT_KEY": "<your-project-id>",
+                    "CTP_AUTH_URL": "https://auth.commercetools.com",
+                    "CTP_API_URL": "https://api.commercetools.com",
+                    "CTP_SCOPES": "<your-desired-scopes>"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                                       </>",
+                    "<bg=blue;fg=white> Next: commercetools API Configuration </>",
+                    "<bg=blue;fg=white>                                       </>",
+                    "",
+                    "  * Get your API client credentials from https://mc.commercetools.com or",
+                    "    https://mc.commercetools.co and configure them in your <bg=black;fg=green>.env</>",
+                    "",
+                    "  * commercetools-symfony-bundle documentation https://github.com/commercetools/commercetools-php-symfony",
+                    "",
+                    "  * commercetools API Documentation: https://docs.commercetools.com/http-api.html"
+                ]
+            },
+            "files": {
+                "config/packages/commercetools.yaml": {
+                    "contents": [
+                        "commercetools:",
+                        "    api:",
+                        "        default_client: 'default'",
+                        "        clients:",
+                        "            default:",
+                        "                client_id: '%env(CTP_CLIENT_ID)%'",
+                        "                client_secret: '%env(CTP_CLIENT_SECRET)%'",
+                        "                project: '%env(CTP_PROJECT_KEY)%'",
+                        "                scope: '%env(CTP_SCOPES)%'",
+                        "                oauth_url: '%env(CTP_AUTH_URL)%'",
+                        "                api_url: '%env(CTP_API_URL)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "22eec3982106c80510d340b440f895a33dc896c4"
+        }
+    }
+}

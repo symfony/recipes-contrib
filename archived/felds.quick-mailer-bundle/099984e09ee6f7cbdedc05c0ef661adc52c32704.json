@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "felds/quick-mailer-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Felds\\QuickMailerBundle\\FeldsQuickMailerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/felds_quickmailer.yaml": {
+                    "contents": [
+                        "# For the full configuration, visit:",
+                        "# https://github.com/felds/QuickMailerBundle",
+                        "",
+                        "felds_quickmailer:",
+                        "    # Sender info (required)",
+                        "    from: { name: \"Sender Name\", email: \"sender@example.com\" }",
+                        "",
+                        "    # # Reply-to info (optional)",
+                        "    # reply_to: { name: \"Reply-to Name\", email: \"reply-to@example.com\" }",
+                        "",
+                        "    templates:",
+                        "        # This loads a template named `demo`",
+                        "        demo: path/to/template.html.twig",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "099984e09ee6f7cbdedc05c0ef661adc52c32704"
+        }
+    }
+}

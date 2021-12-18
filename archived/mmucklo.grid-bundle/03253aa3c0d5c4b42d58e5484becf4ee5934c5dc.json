@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "mmucklo/grid-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dtc\\GridBundle\\DtcGridBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-package": {
+                    "Resources/config/dtc_grid.yaml": "%CONFIG_DIR%/packages/dtc_grid.yaml"
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/dtc_grid.yaml": {
+                    "contents": [
+                        "dtc_grid:",
+                        "    resource: '@DtcGridBundle/Resources/config/routing.yml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "03253aa3c0d5c4b42d58e5484becf4ee5934c5dc"
+        }
+    }
+}

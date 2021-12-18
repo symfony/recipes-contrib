@@ -1,0 +1,57 @@
+{
+    "manifests": {
+        "timiki/rpc-server-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Timiki\\Bundle\\RpcServerBundle\\RpcServerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/rpc_server.yaml": {
+                    "contents": [
+                        "# Read the documentation: https://github.com/timiki/rpc-server-bundle",
+                        "",
+                        "rpc_server:",
+                        "",
+                        "    mapping: '%kernel.root_dir%/Method'",
+                        "",
+                        "    # id cache service, must be instance of Doctrine\\Common\\Cache\\CacheProvider",
+                        "    # by default use file cache",
+                        "",
+                        "    cache: null",
+                        "",
+                        "    # id serializer service, must be instance of Timiki\\Bundle\\RpcServerBundle\\Serializer\\SerializerInterface",
+                        "    # by default use 'rpc.server.serializer.base' service",
+                        "",
+                        "    serializer: 'rpc.server.serializer.base'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/rpc_server.yaml": {
+                    "contents": [
+                        "rpc:",
+                        "    path:     /rpc",
+                        "    defaults: { _controller: RpcServerBundle:Rpc:handler }",
+                        "    methods:  [POST]",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Method/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ec7efbddd11341ae51ed0b132dbae54659667ca5"
+        }
+    }
+}

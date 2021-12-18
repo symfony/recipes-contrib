@@ -1,0 +1,46 @@
+{
+    "manifests": {
+        "ekreative/health-check-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Ekreative\\HealthCheckBundle\\EkreativeHealthCheckBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                                                </>",
+                    "<bg=blue;fg=white> Next: EkreativeHealthCheckBundle Configuration </>",
+                    "<bg=blue;fg=white>                                                </>",
+                    "",
+                    "  * You can add more doctrine/redis connections to your config in <fg=green>config/packages/ekreative_health_check.yaml</>",
+                    "",
+                    "  *. Add healthcheck firewall to <fg=green>config/security.yaml</> file",
+                    "",
+                    "<comment>",
+                    "security:",
+                    "    firewalls:",
+                    "        healthcheck:",
+                    "            pattern: ^/healthcheck",
+                    "            security: false",
+                    "</>",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/ekreative/health-check-bundle</>"
+                ]
+            },
+            "files": {
+                "config/routes/ekreative_health_check.yaml": {
+                    "contents": [
+                        "ekreative_health_check:",
+                        "    resource: '@EkreativeHealthCheckBundle/Resources/config/routes.xml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c20022e2c2ea4d733f09d57cc55304e7fbb9391c"
+        }
+    }
+}

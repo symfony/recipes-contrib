@@ -1,0 +1,53 @@
+{
+    "manifests": {
+        "nyholm/psr7": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/nyholm_psr7.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        public: false",
+                        "",
+                        "    ## Register nyholm/psr7 services for autowiring with Interop\\Http",
+                        "    #Interop\\Http\\Factory\\RequestFactoryInterface: '@nyholm.psr7.message_factory'",
+                        "    #Interop\\Http\\Factory\\ResponseFactoryInterface: '@nyholm.psr7.message_factory'",
+                        "    #Interop\\Http\\Factory\\ServerRequestFactoryInterface: '@nyholm.psr7.server_request_factory'",
+                        "    #Interop\\Http\\Factory\\StreamFactoryInterface: '@nyholm.psr7.stream_factory'",
+                        "    #Interop\\Http\\Factory\\UploadedFileFactoryInterface: '@nyholm.psr7.uploaded_file_factory'",
+                        "    #Interop\\Http\\Factory\\UriFactoryInterface: '@nyholm.psr7.uri_factory'",
+                        "",
+                        "    ## Register nyholm/psr7 services for autowiring with HTTPlug",
+                        "    #Http\\Message\\MessageFactory: '@nyholm.psr7.message_factory'",
+                        "    #Http\\Message\\RequestFactory: '@nyholm.psr7.message_factory'",
+                        "    #Http\\Message\\Responseactory: '@nyholm.psr7.message_factory'",
+                        "    #Http\\Message\\StreamFactory: '@nyholm.psr7.stream_factory'",
+                        "    #Http\\Message\\UriFactory: '@nyholm.psr7.uri_factory'",
+                        "",
+                        "    nyholm.psr7.message_factory:",
+                        "        class: Nyholm\\Psr7\\Factory\\MessageFactory",
+                        "",
+                        "    nyholm.psr7.server_request_factory:",
+                        "        class: Nyholm\\Psr7\\Factory\\ServerRequestFactory",
+                        "",
+                        "    nyholm.psr7.stream_factory:",
+                        "        class: Nyholm\\Psr7\\Factory\\StreamFactory",
+                        "",
+                        "    nyholm.psr7.uploaded_file_factory:",
+                        "        class: Nyholm\\Psr7\\Factory\\UploadedFileFactory",
+                        "",
+                        "    nyholm.psr7.uri_factory:",
+                        "        class: Nyholm\\Psr7\\Factory\\UriFactory",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "caee6dde912660fc0763cf7be689ac165cfd050f"
+        }
+    }
+}

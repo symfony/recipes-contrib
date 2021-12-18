@@ -1,0 +1,58 @@
+{
+    "manifests": {
+        "svc/contactform-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Svc\\ContactformBundle\\SvcContactformBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "assets/": "assets/"
+                },
+                "post-install-output": [
+                    "  * Please adapt config/packages/svc-contactform.yaml"
+                ]
+            },
+            "files": {
+                "assets/styles/layout/_svc-contactform.scss": {
+                    "contents": [
+                        ".svc-contactform {",
+                        "  width: 100%;",
+                        "  max-width: 700px;",
+                        "  padding: 15px;",
+                        "  margin: auto;",
+                        "  border-radius: 15px;",
+                        "\tbox-shadow: 0 5px 5px rgba(0,0,0,.4);",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/svc_contactform.yaml": {
+                    "contents": [
+                        "svc_contactform:",
+                        "    # Email adress for contact mails",
+                        "    contact_mail:         dev@sv-systems.com",
+                        "",
+                        "    # Which route should by called after amil sent",
+                        "    route_after_send:     index",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/svc_contactform.yaml": {
+                    "contents": [
+                        "_svc_contactform:",
+                        "    resource: '@SvcContactformBundle/src/Resources/config/routes.xml'",
+                        "    prefix: /svc-contactform/{_locale}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "23d0ec67c3b49a7343e874b7bc4a1bba2d5e4858"
+        }
+    }
+}

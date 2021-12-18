@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "gpslab/pagination-bundle": {
+            "manifest": {
+                "bundles": {
+                    "GpsLab\\Bundle\\PaginationBundle\\GpsLabPaginationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/gpslab_pagination.yaml": {
+                    "contents": [
+                        "gpslab_pagination:",
+                        "    # Page range used in pagination control",
+                        "    max_navigate: 5",
+                        "",
+                        "    # Name of URL parameter for page number",
+                        "    parameter_name: 'page'",
+                        "",
+                        "    # Sliding pagination controls template",
+                        "    template: 'GpsLabPaginationBundle::pagination.html.twig'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "19b2f6b23ba15806e2b1235cb9848f362249aa71"
+        }
+    }
+}

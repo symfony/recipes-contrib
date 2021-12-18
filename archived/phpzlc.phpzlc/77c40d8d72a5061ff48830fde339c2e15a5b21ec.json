@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "phpzlc/phpzlc": {
+            "manifest": {
+                "bundles": {
+                    "PHPZlc\\PHPZlc\\Bundle\\PHPZlcBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-package": {
+                    "Doctrine/ORM/Rewrite/Templates/Repository.tpl.php": "vendor/symfony/maker-bundle/src/Resources/skeleton/doctrine/Repository.tpl.php",
+                    "Doctrine/ORM/Rewrite/Hydration/ObjectHydrator.php": "vendor/doctrine/orm/lib/Doctrine/ORM/Internal/Hydration/ObjectHydrator.php",
+                    "Doctrine/ORM/Rewrite/MakeEntityRegenerate/ClassSourceManipulator.php": "vendor/symfony/maker-bundle/src/Util/ClassSourceManipulator.php",
+                    "Doctrine/ORM/Rewrite/MakeEntityRegenerate/EntityRegenerator.php": "vendor/symfony/maker-bundle/src/Doctrine/EntityRegenerator.php",
+                    "Bundle/phpzlc.yaml": "config/packages/phpzlc.yaml",
+                    "PROJECT_README.md": "README.md"
+                },
+                "copy-from-recipe": {
+                    "Business/": "src/Business/"
+                }
+            },
+            "files": {
+                "Business/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "77c40d8d72a5061ff48830fde339c2e15a5b21ec"
+        }
+    }
+}

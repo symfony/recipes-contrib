@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "insidestyles/swoole-bridge-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Insidestyles\\SwooleBridgeBundle\\SwooleBridgeBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SWOOLE_SERVER_HOST": "127.0.0.1",
+                    "SWOOLE_SERVER_PORT": "8080"
+                }
+            },
+            "files": {
+                "config/packages/swoole_bridge.yaml": {
+                    "contents": [
+                        "swoole_bridge:",
+                        "    server:",
+                        "        host: \"%env(SWOOLE_SERVER_HOST)%\"",
+                        "        port: \"%env(SWOOLE_SERVER_PORT)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "402eaa02072db0ea84ab414628e4eb47f5894029"
+        }
+    }
+}

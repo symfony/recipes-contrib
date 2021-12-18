@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "expertcoder/swiftmailer-send-grid-bundle": {
+            "manifest": {
+                "bundles": {
+                    "ExpertCoder\\Swiftmailer\\SendGridBundle\\ExpertCoderSwiftmailerSendGridBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SENDGRID_API_KEY": "PleaseEnterYourKey"
+                }
+            },
+            "files": {
+                "config/packages/expert_coder_swiftmailer_send_grid.yaml": {
+                    "contents": [
+                        "expert_coder_swiftmailer_send_grid:",
+                        "    api_key: '%env(SENDGRID_API_KEY)%'",
+                        "    # categories: [development, client_name]",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "43e519108f52c3e84f8215bfff19727911bd6e1d"
+        }
+    }
+}

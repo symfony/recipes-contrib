@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "leogout/seo-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Leogout\\Bundle\\SeoBundle\\LeogoutSeoBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/leogout_seo.yaml": {
+                    "contents": [
+                        "leogout_seo:",
+                        "    # By default, the SEO generators services are not loaded if you don't configure them. The following default configuration",
+                        "    # loads the services but they won't render anything.",
+                        "    # See https://github.com/leogout/SeoBundle#configuration-reference to configure them.",
+                        "    # See https://github.com/leogout/SeoBundle#setting-values-dynamically to use them directly in your controller.",
+                        "    general: null",
+                        "    basic: null",
+                        "    og: null",
+                        "    twitter: null",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "664d3f978cca5b6e4e4314e05e5e89b1cbf36858"
+        }
+    }
+}

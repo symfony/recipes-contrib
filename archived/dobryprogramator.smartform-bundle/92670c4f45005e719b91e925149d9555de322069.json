@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "dobryprogramator/smartform-bundle": {
+            "manifest": {
+                "bundles": {
+                    "DobryProgramator\\SmartformBundle\\DobryProgramatorSmartformBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SMARTFORM_CLIENT_ID": ""
+                }
+            },
+            "files": {
+                "config/packages/dobry_programator_smartform.yaml": {
+                    "contents": [
+                        "dobry_programator_smartform:",
+                        "    client_id: '%env(SMARTFORM_CLIENT_ID)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "92670c4f45005e719b91e925149d9555de322069"
+        }
+    }
+}

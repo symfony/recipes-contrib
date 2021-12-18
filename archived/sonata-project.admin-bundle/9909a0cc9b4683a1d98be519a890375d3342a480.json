@@ -1,0 +1,58 @@
+{
+    "manifests": {
+        "sonata-project/admin-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Sonata\\AdminBundle\\SonataAdminBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sonata_admin.yaml": {
+                    "contents": [
+                        "sonata_admin:",
+                        "    title: 'Sonata Admin'",
+                        "    dashboard:",
+                        "        blocks:",
+                        "            - { type: sonata.admin.block.admin_list, position: left }",
+                        "    options:",
+                        "        legacy_twig_text_extension: false",
+                        "",
+                        "sonata_block:",
+                        "    blocks:",
+                        "        sonata.admin.block.admin_list:",
+                        "            contexts: [admin]",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sonata_admin.yaml": {
+                    "contents": [
+                        "admin_area:",
+                        "    resource: \"@SonataAdminBundle/Resources/config/routing/sonata_admin.xml\"",
+                        "    prefix: /admin",
+                        "",
+                        "_sonata_admin:",
+                        "    resource: .",
+                        "    type: sonata_admin",
+                        "    prefix: /admin",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Admin/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9909a0cc9b4683a1d98be519a890375d3342a480"
+        }
+    }
+}

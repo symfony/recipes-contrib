@@ -1,0 +1,404 @@
+{
+    "manifests": {
+        "maps_red/ticketing-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Maps_red\\TicketingBundle\\TicketingBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "post-install-output": [
+                    "Please update config/packages/doctrine.yaml to link the entities correctly.",
+                    "  - For this please read the following documentation :",
+                    "    * https://github.com/Mapsred/TicketingBundle/blob/master/docs/2-setting_up_the_entities.md#b---fill-the-doctrine-configuration",
+                    "  - For a full list of configuration options, see:",
+                    "    * https://github.com/Mapsred/TicketingBundle/blob/master/docs/3-setting_up_the_configuration.md"
+                ]
+            },
+            "files": {
+                "config/routes/ticketing.yaml": {
+                    "contents": [
+                        "ticketing:",
+                        "    resource: '@TicketingBundle/Resources/config/routing/routes.yaml'",
+                        "    prefix: /ticket",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/Ticket.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "use Maps_red\\TicketingBundle\\Entity\\Ticket as BaseTicket;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity(repositoryClass=\"App\\Repository\\TicketRepository\")",
+                        " */",
+                        "class Ticket extends BaseTicket",
+                        "{",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/TicketCategory.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "use Maps_red\\TicketingBundle\\Entity\\TicketCategory as BaseTicketCategory;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity(repositoryClass=\"App\\Repository\\TicketCategoryRepository\")",
+                        " */",
+                        "class TicketCategory extends BaseTicketCategory",
+                        "{",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/TicketComment.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "use Maps_red\\TicketingBundle\\Entity\\TicketComment as BaseTicketComment;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity(repositoryClass=\"App\\Repository\\TicketCommentRepository\")",
+                        " */",
+                        "class TicketComment extends BaseTicketComment",
+                        "{",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/TicketHistory.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "use Maps_red\\TicketingBundle\\Entity\\TicketHistory as BaseTicketHistory;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity(repositoryClass=\"App\\Repository\\TicketHistoryRepository\")",
+                        " */",
+                        "class TicketHistory extends BaseTicketHistory",
+                        "{",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/TicketKeyword.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "use Maps_red\\TicketingBundle\\Entity\\TicketKeyword as BaseTicketKeyword;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity(repositoryClass=\"App\\Repository\\TicketKeywordRepository\")",
+                        " */",
+                        "class TicketKeyword extends BaseTicketKeyword",
+                        "{",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/TicketPriority.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "use Maps_red\\TicketingBundle\\Entity\\TicketPriority as BaseTicketPriority;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity(repositoryClass=\"App\\Repository\\TicketPriorityRepository\")",
+                        " */",
+                        "class TicketPriority extends BaseTicketPriority",
+                        "{",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/TicketStatus.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "use Maps_red\\TicketingBundle\\Entity\\TicketStatus as BaseTicketStatus;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity(repositoryClass=\"App\\Repository\\TicketStatusRepository\")",
+                        " */",
+                        "class TicketStatus extends BaseTicketStatus",
+                        "{",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/TicketStatusHistory.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "use Maps_red\\TicketingBundle\\Entity\\TicketStatusHistory as BaseTicketStatusHistory;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity(repositoryClass=\"App\\Repository\\TicketStatusHistoryRepository\")",
+                        " */",
+                        "class TicketStatusHistory extends BaseTicketStatusHistory",
+                        "{",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Repository/TicketCategoryRepository.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Repository;",
+                        "",
+                        "use App\\Entity\\TicketCategory;",
+                        "use Symfony\\Bridge\\Doctrine\\RegistryInterface;",
+                        "use Maps_red\\TicketingBundle\\Repository\\TicketCategoryRepository as BaseTicketCategoryRepository;",
+                        "",
+                        "/**",
+                        " * @method TicketCategory|null find($id, $lockMode = null, $lockVersion = null)",
+                        " * @method TicketCategory|null findOneBy(array $criteria, array $orderBy = null)",
+                        " * @method TicketCategory[]    findAll()",
+                        " * @method TicketCategory[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)",
+                        " */",
+                        "class TicketCategoryRepository extends BaseTicketCategoryRepository",
+                        "{",
+                        "    public function __construct(RegistryInterface $registry)",
+                        "    {",
+                        "        parent::__construct($registry, TicketCategory::class);",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Repository/TicketCommentRepository.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Repository;",
+                        "",
+                        "use App\\Entity\\TicketComment;",
+                        "use Symfony\\Bridge\\Doctrine\\RegistryInterface;",
+                        "use Maps_red\\TicketingBundle\\Repository\\TicketCommentRepository as BaseTicketCommentRepository;",
+                        "",
+                        "/**",
+                        " * @method TicketComment|null find($id, $lockMode = null, $lockVersion = null)",
+                        " * @method TicketComment|null findOneBy(array $criteria, array $orderBy = null)",
+                        " * @method TicketComment[]    findAll()",
+                        " * @method TicketComment[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)",
+                        " */",
+                        "class TicketCommentRepository extends BaseTicketCommentRepository",
+                        "{",
+                        "    public function __construct(RegistryInterface $registry)",
+                        "    {",
+                        "        parent::__construct($registry, TicketComment::class);",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Repository/TicketHistoryRepository.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Repository;",
+                        "",
+                        "use App\\Entity\\TicketHistory;",
+                        "use Symfony\\Bridge\\Doctrine\\RegistryInterface;",
+                        "use Maps_red\\TicketingBundle\\Repository\\TicketHistoryRepository as BaseTicketHistoryRepository;",
+                        "",
+                        "/**",
+                        " * @method TicketHistory|null find($id, $lockMode = null, $lockVersion = null)",
+                        " * @method TicketHistory|null findOneBy(array $criteria, array $orderBy = null)",
+                        " * @method TicketHistory[]    findAll()",
+                        " * @method TicketHistory[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)",
+                        " */",
+                        "class TicketHistoryRepository extends BaseTicketHistoryRepository",
+                        "{",
+                        "    public function __construct(RegistryInterface $registry)",
+                        "    {",
+                        "        parent::__construct($registry, TicketHistory::class);",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Repository/TicketKeywordRepository.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Repository;",
+                        "",
+                        "use App\\Entity\\TicketKeyword;",
+                        "use Symfony\\Bridge\\Doctrine\\RegistryInterface;",
+                        "use Maps_red\\TicketingBundle\\Repository\\TicketKeywordRepository as BaseTicketKeywordRepository;",
+                        "",
+                        "/**",
+                        " * @method TicketKeyword|null find($id, $lockMode = null, $lockVersion = null)",
+                        " * @method TicketKeyword|null findOneBy(array $criteria, array $orderBy = null)",
+                        " * @method TicketKeyword[]    findAll()",
+                        " * @method TicketKeyword[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)",
+                        " */",
+                        "class TicketKeywordRepository extends BaseTicketKeywordRepository",
+                        "{",
+                        "    public function __construct(RegistryInterface $registry)",
+                        "    {",
+                        "        parent::__construct($registry, TicketKeyword::class);",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Repository/TicketPriorityRepository.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Repository;",
+                        "",
+                        "use App\\Entity\\TicketPriority;",
+                        "use Symfony\\Bridge\\Doctrine\\RegistryInterface;",
+                        "use Maps_red\\TicketingBundle\\Repository\\TicketPriorityRepository as BaseTicketPriorityRepository;",
+                        "",
+                        "/**",
+                        " * @method TicketPriority|null find($id, $lockMode = null, $lockVersion = null)",
+                        " * @method TicketPriority|null findOneBy(array $criteria, array $orderBy = null)",
+                        " * @method TicketPriority[]    findAll()",
+                        " * @method TicketPriority[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)",
+                        " */",
+                        "class TicketPriorityRepository extends BaseTicketPriorityRepository",
+                        "{",
+                        "    public function __construct(RegistryInterface $registry)",
+                        "    {",
+                        "        parent::__construct($registry, TicketPriority::class);",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Repository/TicketRepository.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Repository;",
+                        "",
+                        "use App\\Entity\\Ticket;",
+                        "use Symfony\\Bridge\\Doctrine\\RegistryInterface;",
+                        "use Maps_red\\TicketingBundle\\Repository\\TicketRepository as BaseTicketRepository;",
+                        "",
+                        "/**",
+                        " * @method Ticket|null find($id, $lockMode = null, $lockVersion = null)",
+                        " * @method Ticket|null findOneBy(array $criteria, array $orderBy = null)",
+                        " * @method Ticket[]    findAll()",
+                        " * @method Ticket[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)",
+                        " */",
+                        "class TicketRepository extends BaseTicketRepository",
+                        "{",
+                        "    public function __construct(RegistryInterface $registry)",
+                        "    {",
+                        "        parent::__construct($registry, Ticket::class);",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Repository/TicketStatusHistoryRepository.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Repository;",
+                        "",
+                        "use App\\Entity\\TicketStatusHistory;",
+                        "use Symfony\\Bridge\\Doctrine\\RegistryInterface;",
+                        "use Maps_red\\TicketingBundle\\Repository\\TicketStatusHistoryRepository as BaseTicketStatusHistoryRepository;",
+                        "",
+                        "/**",
+                        " * @method TicketStatusHistory|null find($id, $lockMode = null, $lockVersion = null)",
+                        " * @method TicketStatusHistory|null findOneBy(array $criteria, array $orderBy = null)",
+                        " * @method TicketStatusHistory[]    findAll()",
+                        " * @method TicketStatusHistory[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)",
+                        " */",
+                        "class TicketStatusHistoryRepository extends BaseTicketStatusHistoryRepository",
+                        "{",
+                        "    public function __construct(RegistryInterface $registry)",
+                        "    {",
+                        "        parent::__construct($registry, TicketStatusHistory::class);",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Repository/TicketStatusRepository.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Repository;",
+                        "",
+                        "use App\\Entity\\TicketStatus;",
+                        "use Symfony\\Bridge\\Doctrine\\RegistryInterface;",
+                        "use Maps_red\\TicketingBundle\\Repository\\TicketStatusRepository as BaseTicketStatusRepository;",
+                        "",
+                        "/**",
+                        " * @method TicketStatus|null find($id, $lockMode = null, $lockVersion = null)",
+                        " * @method TicketStatus|null findOneBy(array $criteria, array $orderBy = null)",
+                        " * @method TicketStatus[]    findAll()",
+                        " * @method TicketStatus[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)",
+                        " */",
+                        "class TicketStatusRepository extends BaseTicketStatusRepository",
+                        "{",
+                        "    public function __construct(RegistryInterface $registry)",
+                        "    {",
+                        "        parent::__construct($registry, TicketStatus::class);",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e86ae0a8d7d8dd882bedde18183e497bf32ac717"
+        }
+    }
+}

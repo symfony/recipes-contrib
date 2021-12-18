@@ -1,0 +1,16 @@
+{
+    "manifests": {
+        "phpzlc/captcha-business": {
+            "manifest": {
+                "copy-from-package": {
+                    "Business/": "src/Business/",
+                    "Controller/": "src/Controller/",
+                    "routing/": "config/routing/",
+                    "Document/": "src/Document/"
+                }
+            },
+            "files": [],
+            "ref": "a2f09f8cfbc645246d1b156f11459a1b37365eeb"
+        }
+    }
+}

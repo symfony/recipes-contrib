@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "player259/graphql-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Player259\\GraphQLBundle\\Player259GraphQLBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/player259_graphql.yaml": {
+                    "contents": [
+                        "# Read the documentation: https://github.com/player259/graphql-bundle/blob/master/Resources/doc/index.rst#installation",
+                        "# Resource file contains single /graphql action",
+                        "player259_graphql:",
+                        "    resource: '@Player259GraphQLBundle/Resources/config/routing.xml'",
+                        "    prefix: /",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "777682b208eb5d6c64e4bc75a3ced1e11b8542a9"
+        }
+    }
+}

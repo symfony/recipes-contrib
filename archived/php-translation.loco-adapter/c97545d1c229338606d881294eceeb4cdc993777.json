@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "php-translation/loco-adapter": {
+            "manifest": {
+                "bundles": {
+                    "Translation\\PlatformAdapter\\Loco\\Bridge\\Symfony\\TranslationAdapterLocoBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "LOCO_PROJECT_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/php_translation_loco_adapter.yaml": {
+                    "contents": [
+                        "translation_adapter_loco:",
+                        "    index_parameter: 'id' # 'text' or 'name'. Leave blank for \"auto\"  See https://localise.biz/api/docs/export/exportlocale",
+                        "    projects:",
+                        "        my_project:",
+                        "            api_key: '%env(LOCO_PROJECT_API_KEY)%'",
+                        "            domains: ['messages']",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c97545d1c229338606d881294eceeb4cdc993777"
+        }
+    }
+}

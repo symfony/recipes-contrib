@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "hautelook/alice-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Hautelook\\AliceBundle\\HautelookAliceBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/dev/hautelook_alice.yaml": {
+                    "contents": [
+                        "# Read the documentation: https://github.com/hautelook/AliceBundle/blob/v1.4.1/README.md",
+                        "hautelook_alice:",
+                        "    db_drivers:",
+                        "        orm: ~",
+                        "#    locale: en_US",
+                        "#    seed: 1",
+                        "#    persist_once: false",
+                        "#    loading_limit: 5",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/DataFixtures/ORM/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3447d538661064626c782b1122a14defa48dc0b1"
+        }
+    }
+}

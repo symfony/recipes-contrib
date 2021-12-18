@@ -1,0 +1,52 @@
+{
+    "manifests": {
+        "doctrine/mongodb-odm-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Doctrine\\Bundle\\MongoDBBundle\\DoctrineMongoDBBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "etc/": "%ETC_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "env": {
+                    "MONGODB_URL": "mongodb://localhost:27017/symfony"
+                }
+            },
+            "files": {
+                "etc/packages/doctrine_mongodb.yaml": {
+                    "contents": [
+                        "doctrine_mongodb:",
+                        "    auto_generate_proxy_classes: '%kernel.debug%'",
+                        "    auto_generate_hydrator_classes: '%kernel.debug%'",
+                        "    connections:",
+                        "        default:",
+                        "            server: '%env(MONGODB_URL)%'",
+                        "            options: {}",
+                        "    document_managers:",
+                        "        default:",
+                        "            auto_mapping: true",
+                        "            mappings:",
+                        "                App:",
+                        "                    is_bundle: false",
+                        "                    type: annotation",
+                        "                    dir: '%kernel.project_dir%/src/Document'",
+                        "                    prefix: App\\Document\\",
+                        "                    alias: App",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Document/.gitkeep": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "22d29171b231a1b82187d3bdbfd03c512fd82a56"
+        }
+    }
+}

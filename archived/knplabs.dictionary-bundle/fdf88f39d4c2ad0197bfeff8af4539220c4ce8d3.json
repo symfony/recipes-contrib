@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "knplabs/dictionary-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Knp\\DictionaryBundle\\KnpDictionaryBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/knp_dictionary.yaml": {
+                    "contents": [
+                        "knp_dictionary:",
+                        "    dictionaries: []",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "fdf88f39d4c2ad0197bfeff8af4539220c4ce8d3"
+        }
+    }
+}

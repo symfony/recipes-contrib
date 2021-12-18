@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "dekalee/mailjet-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dekalee\\MailjetBundle\\DekaleeMailjetBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "DEKALEE_MAILJET_API_KEY": "your-api_key",
+                    "DEKALEE_MAILJET_SECRET_KEY": "your-secret_key",
+                    "DEKALEE_MAILJET_BASE_TEMPLATE_ID": "your_base_template_id"
+                },
+                "post-install-output": [
+                    "  * The Dekalee/MailjetBundle needs your mailjet configuration.",
+                    "    Modify your DEKALEE_MAILJET_API_KEY, DEKALEE_MAILJET_SECRET_KEY",
+                    "    and DEKALEE_MAILJET_BASE_TEMPLATE_ID config in <fg=green>.env</>"
+                ]
+            },
+            "files": {
+                "config/packages/dekalee_mailjet.yaml": {
+                    "contents": [
+                        "dekalee_mailjet:",
+                        "    api_key: '%env(DEKALEE_MAILJET_API_KEY)%'",
+                        "    secret_key: '%env(DEKALEE_MAILJET_SECRET_KEY)%'",
+                        "    base_template_id: '%env(DEKALEE_MAILJET_BASE_TEMPLATE_ID)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f3b44ec81d2162b39eec6f9366e020ce56800108"
+        }
+    }
+}

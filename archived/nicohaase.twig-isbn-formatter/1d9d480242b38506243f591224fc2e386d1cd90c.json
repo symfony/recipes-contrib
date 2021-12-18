@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "nicohaase/twig-isbn-formatter": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/twig_isbn_formatter.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        public: false",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    NicoHaase\\TwigIsbnFormatter\\IsbnFormatterExtension: null",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "1d9d480242b38506243f591224fc2e386d1cd90c"
+        }
+    }
+}

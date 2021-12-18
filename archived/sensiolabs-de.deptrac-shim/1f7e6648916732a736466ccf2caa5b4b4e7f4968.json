@@ -1,0 +1,52 @@
+{
+    "manifests": {
+        "sensiolabs-de/deptrac-shim": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "depfile.yaml": "depfile.yaml"
+                },
+                "gitignore": [
+                    "/.deptrac.cache"
+                ]
+            },
+            "files": {
+                "depfile.yaml": {
+                    "contents": [
+                        "paths:",
+                        "    - ./src",
+                        "exclude_files:",
+                        "    - .*test.*",
+                        "layers:",
+                        "    -",
+                        "        name: Controller",
+                        "        collectors:",
+                        "            -",
+                        "                type: className",
+                        "                regex: .*Controller.*",
+                        "    -",
+                        "        name: Repository",
+                        "        collectors:",
+                        "            -",
+                        "                type: className",
+                        "                regex: .*Repository.*",
+                        "    -",
+                        "        name: Service",
+                        "        collectors:",
+                        "            -",
+                        "                type: className",
+                        "                regex: .*Service.*",
+                        "ruleset:",
+                        "    Controller:",
+                        "        - Service",
+                        "    Service:",
+                        "        - Repository",
+                        "    Repository:",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "1f7e6648916732a736466ccf2caa5b4b4e7f4968"
+        }
+    }
+}

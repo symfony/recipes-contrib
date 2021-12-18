@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "octopouce-mu/admin-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Octopouce\\AdminBundle\\OctopouceAdminBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/octopouce.yaml": {
+                    "contents": [
+                        "octopouce_admin:",
+                        "    dashboard:",
+                        "        enabled: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/octopouce.yaml": {
+                    "contents": [
+                        "_octopouce_admin:",
+                        "    resource: \"@OctopouceAdminBundle/Resources/config/routing/routing.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "32e9b062877ffba387de9192e190f349bc874573"
+        }
+    }
+}

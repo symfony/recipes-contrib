@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "gpslab/domain-event-bundle": {
+            "manifest": {
+                "bundles": {
+                    "GpsLab\\Bundle\\DomainEvent\\GpsLabDomainEventBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/gpslab_domain_event.yaml": {
+                    "contents": [
+                        "# see https://github.com/gpslab/domain-event-bundle/blob/master/README.md#configuration",
+                        "",
+                        "gpslab_domain_event:",
+                        "    # Publish domain events post a Doctrine flush event",
+                        "    publish_on_flush: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2879c608e67333b9c03479097f7ca79f8899b3b3"
+        }
+    }
+}

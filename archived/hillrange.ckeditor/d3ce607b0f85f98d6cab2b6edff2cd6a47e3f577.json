@@ -1,0 +1,46 @@
+{
+    "manifests": {
+        "hillrange/ckeditor": {
+            "manifest": {
+                "bundles": {
+                    "Hillrange\\CKEditor\\HillrangeCKEditorBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "composer-scripts": {
+                    "ckeditor:install --clear=drop": "symfony-cmd"
+                }
+            },
+            "files": {
+                "config/packages/hillrange_ck_editor.yaml": {
+                    "contents": [
+                        "hillrange_ck_editor:",
+                        "    default_config: normal",
+                        "    configs:",
+                        "        normal:",
+                        "            toolbar:",
+                        "                - ['Styles','Format','Font','FontSize']",
+                        "                - '/'",
+                        "                - ['Bold','Italic','Underline','StrikeThrough','-','Undo','Redo','-','Cut','Copy','Paste','PasteText','Find','Replace','-','Outdent','Indent','-','Print','-','Maximize']",
+                        "                - '/'",
+                        "                - ['NumberedList','BulletedList','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock']",
+                        "                - ['Image','Table','-','Link','Flash','Smiley','TextColor','BGColor','Source']",
+                        "            uiColor: \"ddcccc\"",
+                        "        simple_toolbar:",
+                        "            toolbar:",
+                        "                - ['Bold', 'Italic', 'Strike', 'Link']",
+                        "                - ['BulletedList', 'NumberedList', '-', 'Outdent', 'Indent']",
+                        "                - ['Copy', 'Paste', 'PasteFromWord', '-', 'Undo', 'Redo']",
+                        "                - ['Source']",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d3ce607b0f85f98d6cab2b6edff2cd6a47e3f577"
+        }
+    }
+}

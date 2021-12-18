@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "core23/lastfm-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Core23\\LastFmBundle\\Core23LastFmBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "LASTFM_API_ID": "",
+                    "LASTFM_API_SECRET": ""
+                }
+            },
+            "files": {
+                "config/packages/core23_lastfm.yaml": {
+                    "contents": [
+                        "core23_lastfm:",
+                        "    api:",
+                        "        app_id:         '%env(LASTFM_API_ID)%'",
+                        "        shared_secret:  '%env(LASTFM_API_SECRET)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c73e219dfbfb682343c3a8c3df3ee329e6f4a8b7"
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "tienvx/mbt-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Tienvx\\Bundle\\MbtBundle\\TienvxMbtBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "EMAIL_FROM": "from@example.com",
+                    "ADMIN_URL": "http://localhost"
+                }
+            },
+            "files": {
+                "config/packages/tienvx_mbt.yaml": {
+                    "contents": [
+                        "tienvx_mbt:",
+                        "    email_from: '%env(EMAIL_FROM)%'",
+                        "    admin_url: '%env(ADMIN_URL)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "78464b7d1373d35994cfe408fc2b21ce42a808ba"
+        }
+    }
+}

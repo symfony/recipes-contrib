@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "nella/monolog-tracy-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Nella\\MonologTracyBundle\\MonologTracyBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/nella_monolog_tracy.yaml": {
+                    "contents": [
+                        "monolog:",
+                        "    handlers:",
+                        "        blueScreen:",
+                        "            type: tracyBlueScreen",
+                        "",
+                        "monolog_tracy:",
+                        "    log_directory: '%kernel.logs_dir%/tracy'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "793d1a59edb3aeb182c91c8e1129d59eef38742d"
+        }
+    }
+}

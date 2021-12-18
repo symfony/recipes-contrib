@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "qandidate/toggle-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Qandidate\\Bundle\\ToggleBundle\\QandidateToggleBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/qandidate_toggle.yaml": {
+                    "contents": [
+                        "# see https://github.com/qandidate-labs/qandidate-toggle-bundle/blob/master/README.md#configuration",
+                        "",
+                        "qandidate_toggle:",
+                        "    persistence: config",
+                        "    toggles: null",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a16765c31d4d7efb88c96dda36fa2adedfb57fc9"
+        }
+    }
+}

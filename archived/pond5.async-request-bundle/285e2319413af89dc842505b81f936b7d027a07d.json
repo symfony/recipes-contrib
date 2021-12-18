@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "pond5/async-request-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Pond5\\AsyncRequestBundle\\Pond5AsyncRequestBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/pond5_async_request.yaml": {
+                    "contents": [
+                        "pond5_async_request:",
+                        "    #header: X-Request-Async # user defined header name to indicate asynchronous request - X-Request-Async used by default",
+                        "    #methods: [DELETE, PATCH, POST, PUT] # HTTP methods that should support async requests",
+                        "    transport: async-request # messenger transport name, ignored if messenger routing for Pond5\\AsyncRequestBundle\\Message\\AsyncRequestNotification is configured manually",
+                        "",
+                        "# can be omitted when using transport configured in another file (e.g. messenger.yaml)",
+                        "framework:",
+                        "    messenger:",
+                        "        transports:",
+                        "            async-request: '%env(MESSENGER_TRANSPORT_DSN)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "285e2319413af89dc842505b81f936b7d027a07d"
+        }
+    }
+}

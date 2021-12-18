@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "verschoof/transip-api-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Verschoof\\TransipApiBundle\\TransipApiBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "privatekey is a multiline key from transip, just remove the breaks to create a one-liner",
+                    "VERSCHOOF_TRANSIP_API_LOGIN": "your-api_login",
+                    "VERSCHOOF_TRANSIP_API_PRIVATE_KEY": "your-private_key"
+                }
+            },
+            "files": {
+                "config/packages/transip_api.yaml": {
+                    "contents": [
+                        "transip_api:",
+                        "    login : '%env(VERSCHOOF_TRANSIP_API_LOGIN)%'",
+                        "    private_key : '%env(VERSCHOOF_TRANSIP_API_PRIVATE_KEY)%'",
+                        "    read_only : true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7a7791bcfda0ec394bd340bb2f71eb35ab5fb622"
+        }
+    }
+}

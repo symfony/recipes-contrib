@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "enqueue/mongodb": {
+            "manifest": {
+                "env": {
+                    "ENQUEUE_DSN": "mongodb:"
+                }
+            },
+            "files": [],
+            "ref": "493eba9c64cb575a2856398058590560d4df7608"
+        }
+    }
+}

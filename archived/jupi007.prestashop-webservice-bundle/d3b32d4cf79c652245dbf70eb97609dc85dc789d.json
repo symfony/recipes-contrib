@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "jupi007/prestashop-webservice-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Jupi007\\PrestaShopWebserviceBundle\\Jupi007PrestaShopWebserviceBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "PRESTA_WEBSERVICE_ROOT_PATH": "https://absolute-path-to-your-store.com",
+                    "PRESTA_WEBSERVICE_AUTH_KEY": "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789"
+                }
+            },
+            "files": {
+                "config/packages/jupi007_presta_shop_webservice.yaml": {
+                    "contents": [
+                        "jupi007_presta_shop_webservice:",
+                        "    connection:",
+                        "        store_root_path: '%env(PRESTA_WEBSERVICE_ROOT_PATH)%'",
+                        "        authentication_key: '%env(PRESTA_WEBSERVICE_AUTH_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d3b32d4cf79c652245dbf70eb97609dc85dc789d"
+        }
+    }
+}

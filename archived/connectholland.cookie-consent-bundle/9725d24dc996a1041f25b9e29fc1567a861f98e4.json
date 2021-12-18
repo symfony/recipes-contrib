@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "connectholland/cookie-consent-bundle": {
+            "manifest": {
+                "bundles": {
+                    "ConnectHolland\\CookieConsentBundle\\CHCookieConsentBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ch_cookie_consent.yaml": {
+                    "contents": [
+                        "ch_cookie_consent: ",
+                        "    categories: ['analytics', 'tracking', 'social_media', 'marketing']",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/ch_cookie_consent.yaml": {
+                    "contents": [
+                        "ch_cookie_consent:",
+                        "    resource: \"@CHCookieConsentBundle/Resources/config/routing.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9725d24dc996a1041f25b9e29fc1567a861f98e4"
+        }
+    }
+}

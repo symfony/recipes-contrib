@@ -1,0 +1,42 @@
+{
+    "manifests": {
+        "nelmio/solarium-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Nelmio\\SolariumBundle\\NelmioSolariumBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SOLR_HOST": "localhost",
+                    "SOLR_CORE": "example"
+                }
+            },
+            "files": {
+                "config/packages/nelmio_solarium.yaml": {
+                    "contents": [
+                        "nelmio_solarium:",
+                        "    endpoints:",
+                        "        default:",
+                        "            host: \"%env(SOLR_HOST)%\"",
+                        "            core: \"%env(SOLR_CORE)%\"",
+                        "            # The following are the default parameters for Solarium client:",
+                        "            # scheme: http",
+                        "            # port: 8983",
+                        "            # path: /solr",
+                        "            # timeout: 5",
+                        "    clients:",
+                        "        default:",
+                        "            endpoints: [default]",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "dd8a4574b91d26fb70f10efe395c6d4e655bdf71"
+        }
+    }
+}

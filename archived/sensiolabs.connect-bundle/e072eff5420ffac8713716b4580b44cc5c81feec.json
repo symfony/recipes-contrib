@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "sensiolabs/connect-bundle": {
+            "manifest": {
+                "bundles": {
+                    "SensioLabs\\Bundle\\ConnectBundle\\SensioLabsConnectBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SENSIOLABS_CONNECT_APP_ID": "",
+                    "SENSIOLABS_CONNECT_APP_SECRET": ""
+                }
+            },
+            "files": {
+                "config/packages/sensio_labs_connect.yaml": {
+                    "contents": [
+                        "sensio_labs_connect:",
+                        "    app_id:     '%env(SENSIOLABS_CONNECT_APP_ID)%'",
+                        "    app_secret: '%env(SENSIOLABS_CONNECT_APP_SECRET)%'",
+                        "    scope:      'SCOPE_PUBLIC'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sensio_labs_connect.yaml": {
+                    "contents": [
+                        "_sensiolabs_connect:",
+                        "    resource: \"@SensioLabsConnectBundle/Resources/config/routing.xml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e072eff5420ffac8713716b4580b44cc5c81feec"
+        }
+    }
+}

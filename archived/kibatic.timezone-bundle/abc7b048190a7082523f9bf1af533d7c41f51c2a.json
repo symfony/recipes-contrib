@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "kibatic/timezone-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Kibatic\\TimezoneBundle\\KibaticTimezoneBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/kibatic_timezone.yaml": {
+                    "contents": [
+                        "kibatic_timezone:",
+                        "    default_display_timezone: 'Europe/Paris'",
+                        "    timezone_provider: 'kibatic_timezone.default_provider'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "abc7b048190a7082523f9bf1af533d7c41f51c2a"
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "alexandret/evc-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Alexandre\\EvcBundle\\AlexandreEvcBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "EVC_API": "Enter the api version provided by evc.de support",
+                    "EVC_USERNAME": "Enter your reseller account number",
+                    "EVC_PASSWORD": "Enter your api password, not the password to connect on evc.de website"
+                }
+            },
+            "files": {
+                "config/packages/alexandre_evc.yaml": {
+                    "contents": [
+                        "alexandre_evc:",
+                        "    api_id: '%env(EVC_API)%'",
+                        "    username: '%env(EVC_USERNAME)%'",
+                        "    password: '%env(EVC_PASSWORD)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "32f4cc1f12a640985710762638f18dfdbb68d7df"
+        }
+    }
+}

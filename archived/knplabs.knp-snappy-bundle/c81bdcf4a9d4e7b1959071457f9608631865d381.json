@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "knplabs/knp-snappy-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Knp\\Bundle\\SnappyBundle\\KnpSnappyBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "WKHTMLTOPDF_PATH": "/usr/local/bin/wkhtmltopdf",
+                    "WKHTMLTOIMAGE_PATH": "/usr/local/bin/wkhtmltoimage"
+                }
+            },
+            "files": {
+                "config/packages/knp_snappy.yaml": {
+                    "contents": [
+                        "knp_snappy:",
+                        "    pdf:",
+                        "        enabled:    true",
+                        "        binary:     '%env(WKHTMLTOPDF_PATH)%'",
+                        "        options:    []",
+                        "    image:",
+                        "        enabled:    true",
+                        "        binary:     '%env(WKHTMLTOIMAGE_PATH)%'",
+                        "        options:    []",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c81bdcf4a9d4e7b1959071457f9608631865d381"
+        }
+    }
+}

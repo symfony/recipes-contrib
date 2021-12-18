@@ -1,0 +1,119 @@
+{
+    "manifests": {
+        "friendsofsymfony/user-bundle": {
+            "manifest": {
+                "bundles": {
+                    "FOS\\UserBundle\\FOSUserBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "env": {
+                    "MAILER_SENDER_ADDRESS": "joh.doe@example.com",
+                    "MAILER_SENDER_NAME": "John Doe"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>              </>",
+                    "<bg=blue;fg=white> What's next? </>",
+                    "<bg=blue;fg=white>              </>",
+                    "",
+                    "  - If not, install a driver storage and change it in <fg=green>config/packages/fos_user.yaml</>",
+                    "",
+                    "  - Modify your email address config in <fg=green>.env</>",
+                    "",
+                    "  - Uncomment <fg=green>csrf_protection</> and make sure <fg=green>twig engine</> is turned on by adding in <fg=green>config/packages/framework.yaml</>:",
+                    "",
+                    "framework:",
+                    "    # ...",
+                    "    csrf_protection: true",
+                    "    templating:",
+                    "        engines: ['twig']",
+                    "",
+                    "  - Create your User class",
+                    "    https://symfony.com/doc/master/bundles/FOSUserBundle/index.html#step-3-create-your-user-class",
+                    "",
+                    "  - Modify your security configuration in <fg=green>config/packages/security.yaml</>",
+                    "    https://symfony.com/doc/master/bundles/FOSUserBundle/index.html#step-4-configure-your-application-s-security-yml"
+                ]
+            },
+            "files": {
+                "config/packages/fos_user.yaml": {
+                    "contents": [
+                        "fos_user:",
+                        "    db_driver: no_driver # valid values are 'orm', 'mongodb' and 'couchdb'",
+                        "    user_class: App\\Entity\\User",
+                        "    firewall_name: main",
+                        "    service:",
+                        "        mailer: fos_user.mailer.noop",
+                        "    from_email:",
+                        "        address: \"%env(MAILER_SENDER_ADDRESS)%\"",
+                        "        sender_name: \"%env(MAILER_SENDER_NAME)%\"",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/fos_user.yaml": {
+                    "contents": [
+                        "fos_user_security:",
+                        "    resource: \"@FOSUserBundle/Resources/config/routing/security.xml\"",
+                        "",
+                        "fos_user_profile:",
+                        "    resource: \"@FOSUserBundle/Resources/config/routing/profile.xml\"",
+                        "    prefix: /profile",
+                        "",
+                        "fos_user_register:",
+                        "    resource: \"@FOSUserBundle/Resources/config/routing/registration.xml\"",
+                        "    prefix: /register",
+                        "",
+                        "fos_user_resetting:",
+                        "    resource: \"@FOSUserBundle/Resources/config/routing/resetting.xml\"",
+                        "    prefix: /resetting",
+                        "",
+                        "fos_user_change_password:",
+                        "    resource: \"@FOSUserBundle/Resources/config/routing/change_password.xml\"",
+                        "    prefix: /profile",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/User.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "use FOS\\UserBundle\\Model\\User as BaseUser;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity",
+                        " * @ORM\\Table(name=\"fos_user\")",
+                        " */",
+                        "class User extends BaseUser",
+                        "{",
+                        "    /**",
+                        "     * @ORM\\Column(type=\"integer\")",
+                        "     * @ORM\\Id",
+                        "     * @ORM\\GeneratedValue(strategy=\"AUTO\")",
+                        "     */",
+                        "    protected $id;",
+                        "",
+                        "    public function __construct()",
+                        "    {",
+                        "        parent::__construct();",
+                        "        // your own logic",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "55fbe103bb5511f46a3bce047f729a89fc4d5237"
+        }
+    }
+}

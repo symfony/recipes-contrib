@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "core23/matomo-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Core23\\MatomoBundle\\Core23MatomoBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/core23_matomo.yaml": {
+                    "contents": [
+                        "sonata_block:",
+                        "    blocks:",
+                        "        core23_matomo.block.statistic:",
+                        "        core23_matomo.block.tracker:",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2b9e18de0ac9dd663b19444fc83240a4c02eb569"
+        }
+    }
+}

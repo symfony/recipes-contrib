@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "excelwebzone/recaptcha-bundle": {
+            "manifest": {
+                "bundles": {
+                    "EWZ\\Bundle\\RecaptchaBundle\\EWZRecaptchaBundle": [
+                        "all"
+                    ]
+                },
+                "env": {
+                    "EWZ_RECAPTCHA_SITE_KEY": "",
+                    "EWZ_RECAPTCHA_SECRET": ""
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/dev/ewz_recaptcha.yaml": {
+                    "contents": [
+                        "ewz_recaptcha:",
+                        "    enabled: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/ewz_recaptcha.yaml": {
+                    "contents": [
+                        "# See https://github.com/excelwebzone/EWZRecaptchaBundle for full configuration",
+                        "ewz_recaptcha:",
+                        "    public_key:  '%env(EWZ_RECAPTCHA_SITE_KEY)%'",
+                        "    private_key: '%env(EWZ_RECAPTCHA_SECRET)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "fd4da7bc71749db65bc83abf5d164bfa9c839cf4"
+        }
+    }
+}

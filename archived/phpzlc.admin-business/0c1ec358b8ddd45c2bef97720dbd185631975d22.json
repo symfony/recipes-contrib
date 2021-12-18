@@ -1,0 +1,19 @@
+{
+    "manifests": {
+        "phpzlc/admin-business": {
+            "manifest": {
+                "copy-from-package": {
+                    "routing/": "config/routing/",
+                    "Business/": "src/Business/",
+                    "Controller/": "src/Controller/",
+                    "Entity/": "src/Entity/",
+                    "Repository/": "src/Repository/",
+                    "templates/": "templates/",
+                    "DataFixtures/": "src/DataFixtures/"
+                }
+            },
+            "files": [],
+            "ref": "0c1ec358b8ddd45c2bef97720dbd185631975d22"
+        }
+    }
+}

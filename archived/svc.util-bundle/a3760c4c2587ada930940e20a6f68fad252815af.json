@@ -1,0 +1,44 @@
+{
+    "manifests": {
+        "svc/util-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Svc\\UtilBundle\\SvcUtilBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * Please adapt config/packages/svc-util.yaml"
+                ]
+            },
+            "files": {
+                "config/packages/svc_util.yaml": {
+                    "contents": [
+                        "# Default configuration for \"SvcUtilBundle\"",
+                        "svc_util:",
+                        "    mailer:",
+                        "        # Default sender mail address",
+                        "        mail_address:         dev@sv-systems.com",
+                        "        # Default sender name",
+                        "        mail_name:            'Test User'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/svc_util.yaml": {
+                    "contents": [
+                        "_svc_util:",
+                        "    resource: '@SvcUtilBundle/src/Resources/config/routes.xml'",
+                        "    prefix: /svc-util/{_locale}",
+                        ""
+                    ],
+                    "executable": true
+                }
+            },
+            "ref": "a3760c4c2587ada930940e20a6f68fad252815af"
+        }
+    }
+}

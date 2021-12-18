@@ -1,0 +1,56 @@
+{
+    "manifests": {
+        "tienvx/mbt-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Tienvx\\Bundle\\MbtBundle\\TienvxMbtBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "var/": "%VAR_DIR%/"
+                },
+                "env": {
+                    "SLACK_HOOK_URL": "https://hooks.slack.com/...",
+                    "SLACK_FROM": "Example",
+                    "SLACK_TO": "#a-channel or @a-person",
+                    "SLACK_MESSAGE": "A new bug was found!",
+                    "EMAIL_FROM": "from@example.com",
+                    "EMAIL_TO": "to@example.com",
+                    "EMAIL_SUBJECT": "A new bug was found!"
+                }
+            },
+            "files": {
+                "config/packages/tienvx_mbt.yaml": {
+                    "contents": [
+                        "tienvx_mbt:",
+                        "    slack_hook_url: '%env(SLACK_HOOK_URL)%'",
+                        "    slack_from: '%env(SLACK_FROM)%'",
+                        "    slack_to: '%env(SLACK_TO)%'",
+                        "    slack_message: '%env(SLACK_MESSAGE)%'",
+                        "    email_from: '%env(EMAIL_FROM)%'",
+                        "    email_to: '%env(EMAIL_TO)%'",
+                        "    email_subject: '%env(EMAIL_SUBJECT)%'",
+                        "",
+                        "flysystem:",
+                        "    storages:",
+                        "        mbt.storage:",
+                        "            adapter: 'local'",
+                        "            options:",
+                        "                directory: \"%kernel.project_dir%/var/storage/screenshots\"",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "var/storage/screenshots/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9115d708d793208b5129daa8aa17d17f470aaa2e"
+        }
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "manifests": {
+        "mmucklo/queue-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Dtc\\QueueBundle\\DtcQueueBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "Please update config/packages/dtc_queue.yaml to accurately reflect your needs (odm / orm / beanstalkd / rabbit_mq etc.)",
+                    "  - For a full list of configuration options, see:",
+                    "    * https://github.com/mmucklo/DtcQueueBundle/Resources/doc/full-configuration.md",
+                    "",
+                    "For admin, make sure the twig engine is turned on in framework.yaml",
+                    "",
+                    "  - If not, add the following to config/packages/framework.yaml:",
+                    "",
+                    "framework:",
+                    "    # ...",
+                    "    templating:",
+                    "        engines: ['twig']"
+                ]
+            },
+            "files": {
+                "config/packages/dtc_queue.yaml": {
+                    "contents": [
+                        "dtc_queue:",
+                        "    default_manager: odm",
+                        "    record_timings: false",
+                        "    document_manager: default",
+                        "    entity_manager: default",
+                        "    priority_max: 255",
+                        "    priority_direction: desc",
+                        "    admin:",
+                        "        chartjs: 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/dtc_queue.yaml": {
+                    "contents": [
+                        "dtc_queue:",
+                        "    resource: '@DtcQueueBundle/Resources/config/routing.yml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "bbdbf104ef6ddb6f7ffcbe79b95d3345bf7643a5"
+        }
+    }
+}

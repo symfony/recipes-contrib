@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "sulu/headless-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Sulu\\Bundle\\HeadlessBundle\\SuluHeadlessBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * The <fg=green>SuluHeadlessBundle</> is almost ready:",
+                    "    Change the controller of your templates to <info>Sulu\\Bundle\\HeadlessBundle\\Controller\\HeadlessWebsiteController::indexAction</>.",
+                    "    Read the documentation at <comment>https://github.com/sulu/SuluHeadlessBundle/blob/0.x/README.md</> to learn how."
+                ]
+            },
+            "files": {
+                "config/routes/sulu_headless_website.yaml": {
+                    "contents": [
+                        "sulu_headless:",
+                        "    type: portal",
+                        "    resource: \"@SuluHeadlessBundle/Resources/config/routing_website.yml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "92d32212649ac3d97c1e4035c3abdce4e112a296"
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "mtarld/symbok-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Mtarld\\SymbokBundle\\SymbokBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                                          </>",
+                    "<bg=blue;fg=white> What's next for SymbokBundle? </>",
+                    "<bg=blue;fg=white>                                          </>",
+                    "",
+                    "  * <fg=blue>Configure</> bundle in <comment>config/packages/symbok.yaml</>",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/mtarld/symbok-bundle/blob/master/src/Resources/doc/index.md</>"
+                ]
+            },
+            "files": {
+                "config/packages/symbok.yaml": {
+                    "contents": [
+                        "symbok:",
+                        "    # Namespaces that you want to be processed by symbok",
+                        "    namespaces:",
+                        "        # - 'App\\Entity'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "37e3a18bd581e09ec8a2c2a6c1f2112443b72352"
+        }
+    }
+}

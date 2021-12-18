@@ -1,0 +1,53 @@
+{
+    "manifests": {
+        "nordeus/crowd-user-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Nordeus\\CrowdUserBundle\\NordeusCrowdUserBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "NORDEUS_CROWD_APPLICATION_NAME": "crowd_application_name",
+                    "NORDEUS_CROWD_APPLICATION_PASSWORD": "crowd_application_password"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Configure parameters:</>: <comment>https://github.com/Nordeus/CrowdUserBundle#4-configure-parameters</>",
+                    "  * <fg=blue>Configure your application's security</>: <comment>https://github.com/Nordeus/CrowdUserBundle#5-configure-your-applications-security</>",
+                    "  * Your application is now ready to use!",
+                    "",
+                    "Full documentation is available at: <comment>https://github.com/Nordeus/CrowdUserBundle</>"
+                ]
+            },
+            "files": {
+                "config/packages/nordeus_crowd_user.yaml": {
+                    "contents": [
+                        "# https://github.com/Nordeus/CrowdUserBundle#4-configure-parameters",
+                        "nordeus_crowd_user:",
+                        "    crowd_application_name: '%env(NORDEUS_CROWD_APPLICATION_NAME)%'",
+                        "    crowd_application_password: '%env(NORDEUS_CROWD_APPLICATION_PASSWORD)%'",
+                        "    crowd_service_url: http://crowd.your_domain.com:8095",
+                        "    sso_cookie_domain: your_domain.com",
+                        "    roles_to_groups:",
+                        "        ROLE_USER: [ users ]",
+                        "        ROLE_ADMIN: [ admins, superadmins ]",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/nordeus_crowd_user.yaml": {
+                    "contents": [
+                        "nordeus_crowd_user:",
+                        "    resource: \"@NordeusCrowdUserBundle/Resources/config/routing.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "cf39e8a9ebad184c8478c234c8be3b3193ea7238"
+        }
+    }
+}

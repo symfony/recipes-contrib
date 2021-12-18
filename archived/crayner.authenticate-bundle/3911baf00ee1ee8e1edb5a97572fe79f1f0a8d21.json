@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "crayner/authenticate-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Crayner\\Authenticate\\CraynerAuthenticateBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/crayner_authenticate.yaml": {
+                    "contents": [
+                        "crayner_authenticate:",
+                        "    resource: '@CraynerAuthenticateBundle/Resources/config/routes.yaml'",
+                        "    prefix: /security",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3911baf00ee1ee8e1edb5a97572fe79f1f0a8d21"
+        }
+    }
+}

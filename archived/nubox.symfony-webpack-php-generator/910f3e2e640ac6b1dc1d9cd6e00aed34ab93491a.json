@@ -1,0 +1,21 @@
+{
+    "manifests": {
+        "nubox/symfony-webpack-php-generator": {
+            "manifest": {
+                "bundles": {
+                    "NuBox\\WebPack\\Generator\\SymfonyWebpackPHPGeneratorBundle": [
+                        "all"
+                    ]
+                },
+                "composer-scripts": {
+                    "nubox:webpack:config:apply --no-config-allowed": "symfony-cmd"
+                },
+                "gitignore": [
+                    "webpack.config.js.bak"
+                ]
+            },
+            "files": [],
+            "ref": "910f3e2e640ac6b1dc1d9cd6e00aed34ab93491a"
+        }
+    }
+}

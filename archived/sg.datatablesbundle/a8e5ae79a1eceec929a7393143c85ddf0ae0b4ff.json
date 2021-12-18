@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "sg/datatablesbundle": {
+            "manifest": {
+                "bundles": {
+                    "Sg\\DatatablesBundle\\SgDatatablesBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/sg_datatables_bundle.yaml": {
+                    "contents": [
+                        "sg_datatables_bundle:",
+                        "    resource: \"@SgDatatablesBundle/Controller/\"",
+                        "    type:     annotation",
+                        "    prefix:   /sg",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a8e5ae79a1eceec929a7393143c85ddf0ae0b4ff"
+        }
+    }
+}

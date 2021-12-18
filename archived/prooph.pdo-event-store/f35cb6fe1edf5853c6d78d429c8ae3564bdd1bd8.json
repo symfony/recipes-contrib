@@ -1,0 +1,56 @@
+{
+    "manifests": {
+        "prooph/pdo-event-store": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "copy-from-package": {
+                    "scripts/": "%CONFIG_DIR%/scripts/"
+                },
+                "env": {
+                    "MYSQL_DSN": "mysql:host=127.0.0.1;dbname=event_streams",
+                    "MYSQL_USER": "user",
+                    "MYSQL_PASSWORD": "password"
+                },
+                "post-install-output": [
+                    "  * Modify your MYSQL_* configuration in <fg=green>.env</>",
+                    "",
+                    "  * Create event streams and projections tables using SQL scripts",
+                    "    in <comment>%CONFIG_DIR%/scripts/*</comment>"
+                ]
+            },
+            "files": {
+                "config/packages/prooph_pdo_event_store.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        public: false",
+                        "",
+                        "    Prooph\\EventStore\\EventStore: '@app.event_store.default'",
+                        "",
+                        "    app.event_store.default:",
+                        "        class: Prooph\\EventStore\\Pdo\\MySqlEventStore",
+                        "        arguments:",
+                        "            - '@prooph_event_store.message_factory'",
+                        "            - '@app.event_store.pdo_connection.mysql'",
+                        "            - '@app.event_store.mysql.persistence_strategy'",
+                        "",
+                        "    app.event_store.pdo_connection.mysql:",
+                        "        class: \\PDO",
+                        "        arguments:",
+                        "            - '%env(MYSQL_DSN)%'",
+                        "            - '%env(MYSQL_USER)%'",
+                        "            - '%env(MYSQL_PASSWORD)%'",
+                        "",
+                        "    app.event_store.mysql.persistence_strategy:",
+                        "        class: Prooph\\EventStore\\Pdo\\PersistenceStrategy\\MySqlSingleStreamStrategy",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f35cb6fe1edf5853c6d78d429c8ae3564bdd1bd8"
+        }
+    }
+}

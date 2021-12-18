@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "emag-tech-labs/annotation-cache-bundle": {
+            "manifest": {
+                "bundles": {
+                    "EmagTechLabs\\AnnotationCacheBundle\\AnnotationCacheBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/emag_annotation_cache.yaml": {
+                    "contents": [
+                        "annotation_cache:",
+                        "    provider: cache.app",
+                        "    ignore_namespaces:",
+                        "        - 'App\\Entity'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "11fc35a1e2e704e0a6b5f95d272a6b1b9173f0a0"
+        }
+    }
+}

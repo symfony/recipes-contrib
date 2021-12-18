@@ -1,0 +1,24 @@
+{
+    "manifests": {
+        "jawira/case-converter-twig": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/case_converter_twig.yaml": {
+                    "contents": [
+                        "services:",
+                        "    jawira.case.converter.twig:",
+                        "        class: Jawira\\CaseConverterTwig\\CaseConverterExtension",
+                        "        tags: ['twig.extension']",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "aa886497cfde343cc978ea1687abc383219ebce8"
+        }
+    }
+}

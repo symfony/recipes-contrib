@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "nuboxdevcom/maintenance-bundle": {
+            "manifest": {
+                "bundles": {
+                    "NDC\\MaintenanceBundle\\NDCMaintenanceBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ndc_maintenance.yaml": {
+                    "contents": [
+                        "ndc_maintenance:",
+                        "    authorized_ips:",
+                        "        - '127.0.0.1'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "bd53f9097f444c90079c17d2533ada4edff9beb5"
+        }
+    }
+}

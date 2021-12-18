@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "pusher/pusher-php-server": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "PUSHER_APP_ID": "",
+                    "PUSHER_KEY": "",
+                    "PUSHER_SECRET": ""
+                }
+            },
+            "files": {
+                "config/packages/pusher_php_server.yaml": {
+                    "contents": [
+                        "services:",
+                        "    Pusher\\Pusher:",
+                        "        public: true",
+                        "        arguments:",
+                        "            - '%env(PUSHER_KEY)%'",
+                        "            - '%env(PUSHER_SECRET)%'",
+                        "            - '%env(PUSHER_APP_ID)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8dd3ea817217453e14ab596317177465211e01d2"
+        }
+    }
+}

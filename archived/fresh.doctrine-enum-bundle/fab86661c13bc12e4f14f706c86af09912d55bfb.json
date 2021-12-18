@@ -1,0 +1,25 @@
+{
+    "manifests": {
+        "fresh/doctrine-enum-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Fresh\\DoctrineEnumBundle\\FreshDoctrineEnumBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "src/DBAL/Types/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "fab86661c13bc12e4f14f706c86af09912d55bfb"
+        }
+    }
+}

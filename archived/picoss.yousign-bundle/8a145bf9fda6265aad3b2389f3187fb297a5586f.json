@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "picoss/yousign-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Picoss\\YousignBundle\\PicossYousignBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "YOUSIGN_API_URL": "https://apidemo.yousign.fr:8181",
+                    "YOUSIGN_IFRAME_URL": "https://demo.yousign.fr",
+                    "YOUSIGN_API_KEY": "api_key",
+                    "YOUSIGN_USERNAME": "username",
+                    "YOUSIGN_PASSWORD": "password"
+                },
+                "post-install-output": [
+                    "  * You now need to create a yousign account",
+                    "    1. Visit <info>https://demo.yousign.fr/fr/public/api/registration</info>",
+                    "    2. Modify your YOUSIGN_API_KEY, YOUSIGN_USERNAME and YOUSIGN_PASSWORD config in <fg=green>.env</>"
+                ]
+            },
+            "files": {
+                "config/packages/picoss_yousign.yaml": {
+                    "contents": [
+                        "picoss_yousign:",
+                        "    api_url: '%env(YOUSIGN_API_URL)%'",
+                        "    iframe_url: '%env(YOUSIGN_IFRAME_URL)%'",
+                        "    api_key: '%env(YOUSIGN_API_KEY)%'",
+                        "    username: '%env(YOUSIGN_USERNAME)%'",
+                        "    password: '%env(YOUSIGN_PASSWORD)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8a145bf9fda6265aad3b2389f3187fb297a5586f"
+        }
+    }
+}

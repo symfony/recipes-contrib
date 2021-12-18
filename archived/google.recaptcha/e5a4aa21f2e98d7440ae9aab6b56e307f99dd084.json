@@ -1,0 +1,57 @@
+{
+    "manifests": {
+        "google/recaptcha": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "To use Google Recaptcha, you must register a site on Recaptcha's admin panel:",
+                    "#2": "https://www.google.com/recaptcha/admin",
+                    "GOOGLE_RECAPTCHA_SITE_KEY": "",
+                    "GOOGLE_RECAPTCHA_SECRET": ""
+                },
+                "container": {
+                    "google_recaptcha_site_key": "%env(GOOGLE_RECAPTCHA_SITE_KEY)%"
+                },
+                "post-install-output": [
+                    "  * Register a site on https://www.google.com/recaptcha/admin",
+                    "",
+                    "  * Modify your GOOGLE_RECAPTCHA_SITE_KEY and GOOGLE_RECAPTCHA_SECRET config in <fg=green>.env</>",
+                    "",
+                    "  * Inject the <fg=green>ReCaptcha\\ReCaptcha</> service when you need to <fg=green>verify</> a submitted captcha"
+                ]
+            },
+            "files": {
+                "config/packages/google_recaptcha.yaml": {
+                    "contents": [
+                        "services:",
+                        "",
+                        "    # Inject this service in your controllers/services to verify a submitted captcha.",
+                        "    ReCaptcha\\ReCaptcha:",
+                        "        arguments:",
+                        "            $secret: '%env(GOOGLE_RECAPTCHA_SECRET)%'",
+                        "            $requestMethod: '@ReCaptcha\\RequestMethod'",
+                        "",
+                        "    # Curl is set here as default transport to communicate with Google servers.",
+                        "    # If you do not have php-curl extension, you can change for a socket or a plain POST request.",
+                        "    # Check out the repository for all other request methods:",
+                        "    # https://github.com/google/recaptcha/tree/master/src/ReCaptcha/RequestMethod",
+                        "    ReCaptcha\\RequestMethod: '@ReCaptcha\\RequestMethod\\CurlPost'",
+                        "    ReCaptcha\\RequestMethod\\CurlPost: null",
+                        "    ReCaptcha\\RequestMethod\\Curl: null",
+                        "",
+                        "# Uncomment this line if you want to inject the site key to all your Twig templates.",
+                        "# You can also inject the \"google_recaptcha_site_key\" container parameter to your controllers.",
+                        "#twig:",
+                        "#    globals:",
+                        "#        google_recaptcha_site_key: '%google_recaptcha_site_key%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e5a4aa21f2e98d7440ae9aab6b56e307f99dd084"
+        }
+    }
+}

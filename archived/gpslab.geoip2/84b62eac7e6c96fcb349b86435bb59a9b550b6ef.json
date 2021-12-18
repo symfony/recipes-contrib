@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "gpslab/geoip2": {
+            "manifest": {
+                "bundles": {
+                    "GpsLab\\Bundle\\GeoIP2Bundle\\GpsLabGeoIP2Bundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "composer-scripts": {
+                    "geoip2:update": "symfony-cmd"
+                }
+            },
+            "files": {
+                "config/packages/gpslab_geoip.yaml": {
+                    "contents": [
+                        "gpslab_geoip:",
+                        "    # Path to download GeoIP database.",
+                        "    cache: '%kernel.cache_dir%/GeoLite2-City.mmdb'",
+                        "",
+                        "    # URL for download new GeoIP database.",
+                        "    url: 'https://geolite.maxmind.com/download/geoip/database/GeoLite2-City.mmdb.gz'",
+                        "",
+                        "    # Get model data in this locale",
+                        "    locales: [ 'en' ]",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "84b62eac7e6c96fcb349b86435bb59a9b550b6ef"
+        }
+    }
+}

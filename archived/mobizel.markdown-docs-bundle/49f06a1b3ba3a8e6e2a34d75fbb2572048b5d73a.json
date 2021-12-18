@@ -1,0 +1,48 @@
+{
+    "manifests": {
+        "mobizel/markdown-docs-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Mobizel\\Bundle\\MarkdownDocsBundle\\MobizelMarkdownDocsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "docs/": "docs/"
+                }
+            },
+            "files": {
+                "config/packages/mobizel_markdown_docs.yaml": {
+                    "contents": [
+                        "mobizel_markdown_docs:",
+                        "    docs_dir: '%kernel.project_dir%/docs'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/mobizel_markdown_docs.yaml": {
+                    "contents": [
+                        "_mobizel_markdowns:",
+                        "    resource: '@MobizelMarkdownDocsBundle/Resources/config/routes.xml'",
+                        "    prefix: docs",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "docs/index.md": {
+                    "contents": [
+                        "# Documentation",
+                        "",
+                        "Your documentation is now ready and you can start working on it.",
+                        "",
+                        "[Documentation of the bundle](https://github.com/mobizel/markdown-docs-bundle/blob/master/docs/index.md)",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "49f06a1b3ba3a8e6e2a34d75fbb2572048b5d73a"
+        }
+    }
+}

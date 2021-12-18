@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "sulu/sylius-producer-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Sulu\\Bundle\\SyliusProducerPlugin\\SuluSyliusProducerPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SULU_SYLIUS_MESSENGER_TRANSPORT_DSN": ""
+                }
+            },
+            "files": {
+                "config/packages/sulu_sylius_producer.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SuluSyliusProducerPlugin/Resources/config/app/config.yaml\" }",
+                        "",
+                        "framework:",
+                        "    messenger:",
+                        "        transports:",
+                        "            sulu_sylius_transport: '%env(SULU_SYLIUS_MESSENGER_TRANSPORT_DSN)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6baaf160837f34414c40a82d1428df84233a90e0"
+        }
+    }
+}
