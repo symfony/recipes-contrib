@@ -1,13 +1,12 @@
 twig:
-  form_themes:
-    - '@EasyMedia/form/easy-media.html.twig'
+    form_themes:
+        - '@EasyMedia/form/easy-media.html.twig'
 
 doctrine:
-  dbal:
-    types:
-      easy_media_type: Adeliom\EasyMediaBundle\Types\EasyMediaType
+    dbal:
+        types:
+            easy_media_type: Adeliom\EasyMediaBundle\Types\EasyMediaType
 
 easy_media:
-  media_entity: App\Entity\EasyMedia\Media
-  folder_entity: App\Entity\EasyMedia\Folder
-
+    media_entity: App\Entity\EasyMedia\Media
+    folder_entity: App\Entity\EasyMedia\Folder
