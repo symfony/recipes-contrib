@@ -1,4 +1,4 @@
 easy_page:
-  resource: '@EasyPageBundle/Resources/config/routes.xml'
+    resource: '@EasyPageBundle/Resources/config/routes.xml'
 
 
