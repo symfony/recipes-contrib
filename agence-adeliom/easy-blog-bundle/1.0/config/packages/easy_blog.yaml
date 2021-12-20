@@ -1,0 +1,11 @@
+easy_blog:
+  post:
+    class: App\Entity\EasyBlog\Post
+    repository: App\Repository\EasyBlog\PostRepository
+    crud: App\Controller\Admin\EasyBlog\PostCrudController
+  category:
+    class: App\Entity\EasyBlog\Category
+    repository: App\Repository\EasyBlog\CategoryRepository
+    crud: App\Controller\Admin\EasyBlog\CategoryCrudController
+  page:
+    root_path: '/blog'

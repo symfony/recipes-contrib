@@ -1,0 +1,2 @@
+easy_blog:
+  resource: '@EasyBlogBundle/Resources/config/routes.xml'
