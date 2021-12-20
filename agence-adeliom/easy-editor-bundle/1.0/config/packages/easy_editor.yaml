@@ -1,0 +1,8 @@
+twig:
+  form_themes:
+    - '@EasyMedia/form/easy-media.html.twig'
+
+doctrine:
+  dbal:
+    types:
+      easy_editor_type: Adeliom\EasyEditorBundle\Types\EasyEditorType
