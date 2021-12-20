@@ -1,0 +1,3 @@
+easy_redirect:
+  redirect_class: App\Entity\EasyRedirect\Redirect
+  not_found_class: App\Entity\EasyRedirect\NotFound
