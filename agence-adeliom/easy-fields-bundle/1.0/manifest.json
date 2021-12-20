@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Adeliom\\EasyFieldsBundle\\EasyFieldsBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
