@@ -1,0 +1,5 @@
+easy_admin_user:
+  user_class: App\Entity\EasyAdmin\User
+  user_repository: App\Repository\EasyAdmin\UserRepository
+  reset_password_class: App\Entity\EasyAdmin\ResetPasswordRequest
+  reset_password_repository: App\Repository\EasyAdmin\ResetPasswordRequestRepository

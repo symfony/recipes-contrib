@@ -1,0 +1,2 @@
+easy_admin_user:
+  resource: '@EasyAdminUserBundle/Resources/config/routes.yaml'

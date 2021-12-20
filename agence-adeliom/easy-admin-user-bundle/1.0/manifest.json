@@ -1,0 +1,10 @@
+{
+    "bundles": {
+        "Adeliom\\EasyAdminUserBundle\\EasyAdminUserBundle": ["all"],
+        "SymfonyCasts\\Bundle\\ResetPassword\\SymfonyCastsResetPasswordBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "src/": "%SRC_DIR%/"
+    }
+}
