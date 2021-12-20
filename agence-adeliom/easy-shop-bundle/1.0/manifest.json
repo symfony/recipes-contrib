@@ -53,5 +53,17 @@
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/",
         "src/": "%SRC_DIR%/"
+    },
+    "container": {
+        "sylius_core.public_dir": "%kernel.project_dir%/public/upload",
+        "sylius.security.shop_regex": "^/(?!admin|api/.*|api$|media/.*)[^/]++",
+        "sylius.security.new_api_route": "/api/v2",
+        "sylius.security.new_api_regex": "^%sylius.security.new_api_route%",
+        "sylius.security.new_api_admin_route": "%sylius.security.new_api_route%/admin",
+        "sylius.security.new_api_admin_regex": "^%sylius.security.new_api_admin_route%",
+        "sylius.security.new_api_shop_route": "%sylius.security.new_api_route%/shop",
+        "sylius.security.new_api_shop_regex": "^%sylius.security.new_api_shop_route%",
+        "sylius.security.new_api_user_account_route": "%sylius.security.new_api_shop_route%/account",
+        "sylius.security.new_api_user_account_regex": "^%sylius.security.new_api_user_account_route%"
     }
 }

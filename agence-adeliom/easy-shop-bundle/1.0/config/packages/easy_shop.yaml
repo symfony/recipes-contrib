@@ -20,7 +20,7 @@ twig:
         sylius: "@sylius.context.shopper"
         sylius_base_locale: "%kernel.default_locale%"
         sylius_meta:
-            version: !php/const Sylius\Bundle\CoreBundle\Application\Kernel::VERSION
+            version: '1.10.4'
 
 a2lix_translation_form:
     locale_provider: Adeliom\EasyShopBundle\Locale\SyliusLocalProvider
