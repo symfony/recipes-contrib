@@ -1,0 +1,52 @@
+
+## FOR LOCALIZED URL
+#
+#easy_shop:
+#    resource: "@EasyShopBundle/Resources/config/routing.yml"
+#    prefix: /{_locale}
+#    requirements:
+#        _locale: ^[A-Za-z]{2,4}(_([A-Za-z]{4}|[0-9]{3}))?(_([A-Za-z]{2}|[0-9]{3}))?$
+#
+#easy_shop_payum:
+#    resource: "@EasyShopBundle/Resources/config/routing/payum.yml"
+#
+#easy_shop_default_locale:
+#    path: /
+#    methods: [GET]
+#    defaults:
+#        _controller: sylius.controller.shop.locale_switch:switchAction
+## WITH SEO FRIENDLY URL
+#easy_seo_url_shop:
+#    prefix: /{_locale}
+#    resource: "@SyliusSeoUrlPlugin/Resources/config/shop_routing.yml"
+
+
+easy_shop:
+    resource: "@EasyShopBundle/Resources/config/routing.yml"
+
+easy_seo_url_shop:
+    resource: "@EasyShopBundle/Resources/config/seo_shop_routing.yml"
+
+easy_shop_payum:
+    resource: "@EasyShopBundle/Resources/config/routing/payum.yml"
+
+sylius_api:
+    resource: "@SyliusApiBundle/Resources/config/routing.yml"
+    prefix: "%sylius.security.new_api_route%"
+
+# see https://web.dev/change-password-url/
+easy_shop_request_password_reset_token_redirect:
+    path: /.well-known/change-password
+    methods: [GET]
+    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::redirectAction
+    defaults:
+        route: easy_shop_request_password_reset_token
+        permanent: false
+
+
+sylius_shop_homepage:
+    path: /homepage
+    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::redirectAction
+    defaults:
+        route: easy_page_index
+        permanent: true

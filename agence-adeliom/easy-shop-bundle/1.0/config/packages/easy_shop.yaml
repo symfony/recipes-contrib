@@ -1,0 +1,320 @@
+imports:
+  - { resource: "@EasyShopBundle/Resources/config/app/config.yml" }
+
+parameters:
+  sylius_core.public_dir: '%kernel.project_dir%/public/upload'
+  sylius.security.shop_regex: "^/(?!admin|api/.*|api$|media/.*)[^/]++"
+  sylius.security.new_api_route: "/api/v2"
+  sylius.security.new_api_regex: "^%sylius.security.new_api_route%"
+  sylius.security.new_api_admin_route: "%sylius.security.new_api_route%/admin"
+  sylius.security.new_api_admin_regex: "^%sylius.security.new_api_admin_route%"
+  sylius.security.new_api_shop_route: "%sylius.security.new_api_route%/shop"
+  sylius.security.new_api_shop_regex: "^%sylius.security.new_api_shop_route%"
+  sylius.security.new_api_user_account_route: "%sylius.security.new_api_shop_route%/account"
+  sylius.security.new_api_user_account_regex: "^%sylius.security.new_api_user_account_route%"
+
+twig:
+  form_themes:
+    - '@EasyShop/form/admin_product.html.twig'
+  globals:
+    sylius: "@sylius.context.shopper"
+    sylius_base_locale: "%kernel.default_locale%"
+    sylius_meta:
+      version: !php/const Sylius\Bundle\CoreBundle\Application\Kernel::VERSION
+
+a2lix_translation_form:
+  locale_provider: Adeliom\EasyShopBundle\Locale\SyliusLocalProvider
+
+knp_gaufrette:
+  adapters:
+    sylius_image:
+      local:
+        directory: "%sylius_core.public_dir%/media/image"
+        create: true
+  filesystems:
+    sylius_image:
+      adapter: "%sylius.uploader.filesystem%"
+
+doctrine:
+  orm:
+    entity_managers:
+      default:
+        dql:
+          string_functions:
+            DATE_FORMAT: Sylius\Bundle\CoreBundle\Doctrine\DQL\DateFormat
+            DAY: Sylius\Bundle\CoreBundle\Doctrine\DQL\Day
+            HOUR: Sylius\Bundle\CoreBundle\Doctrine\DQL\Hour
+            MONTH: Sylius\Bundle\CoreBundle\Doctrine\DQL\Month
+            WEEK: Sylius\Bundle\CoreBundle\Doctrine\DQL\Week
+            YEAR: Sylius\Bundle\CoreBundle\Doctrine\DQL\Year
+
+# See dos how to configure the bundle: https://symfony.com/doc/current/bundles/LiipImagineBundle/basic-usage.html
+liip_imagine:
+  # valid drivers options include "gd" or "gmagick" or "imagick"
+  driver: "gd"
+  loaders:
+    default:
+      filesystem:
+        data_root:
+          - '%kernel.project_dir%/public/upload'
+          - '%sylius_core.public_dir%/media/image'
+  resolvers:
+    default:
+      web_path:
+        web_root: '%kernel.project_dir%/public'
+        cache_prefix: "media/cache"
+  filter_sets:
+    sylius_small:
+      filters:
+        thumbnail: { size: [ 120, 90 ], mode: outbound }
+    sylius_medium:
+      filters:
+        thumbnail: { size: [ 240, 180 ], mode: outbound }
+    sylius_large:
+      filters:
+        thumbnail: { size: [ 640, 480 ], mode: outbound }
+
+stof_doctrine_extensions:
+  default_locale: "%kernel.default_locale%"
+  orm:
+    default:
+      tree: true
+      sluggable: true
+      timestampable: true
+      loggable: true
+      sortable: true
+
+easy_shop:
+  product_grid:
+    include_all_descendants: true
+  locale_switcher: storage
+
+sylius_api:
+  enabled: true
+
+sylius_addressing:
+  resources:
+    address:
+      classes:
+        model: App\Entity\EasyShop\Addressing\Address
+    country:
+      classes:
+        model: App\Entity\EasyShop\Addressing\Country
+    province:
+      classes:
+        model: App\Entity\EasyShop\Addressing\Province
+    zone:
+      classes:
+        model: App\Entity\EasyShop\Addressing\Zone
+    zone_member:
+      classes:
+        model: App\Entity\EasyShop\Addressing\ZoneMember
+
+sylius_attribute:
+  resources:
+    product:
+      attribute:
+        classes:
+          model: App\Entity\EasyShop\Product\ProductAttribute
+        translation:
+          classes:
+            model: App\Entity\EasyShop\Product\ProductAttributeTranslation
+      attribute_value:
+        classes:
+          model: App\Entity\EasyShop\Product\ProductAttributeValue
+
+sylius_channel:
+  resources:
+    channel:
+      classes:
+        model: App\Entity\EasyShop\Channel\Channel
+sylius_core:
+  resources:
+    product_image:
+      classes:
+        model: App\Entity\EasyShop\Product\ProductImage
+    taxon_image:
+      classes:
+        model: App\Entity\EasyShop\Taxonomy\TaxonImage
+    product_taxon:
+      classes:
+        model: App\Entity\EasyShop\Product\ProductTaxon
+    channel_pricing:
+      classes:
+        model: App\Entity\EasyShop\Channel\ChannelPricing
+
+sylius_currency:
+  resources:
+    currency:
+      classes:
+        model: App\Entity\EasyShop\Currency\Currency
+    exchange_rate:
+      classes:
+        model: App\Entity\EasyShop\Currency\ExchangeRate
+
+sylius_customer:
+  resources:
+    customer:
+      classes:
+        model: App\Entity\EasyShop\Customer\Customer
+    customer_group:
+      classes:
+        model: App\Entity\EasyShop\Customer\CustomerGroup
+
+sylius_locale:
+  resources:
+    locale:
+      classes:
+        model: App\Entity\EasyShop\Locale\Locale
+
+sylius_order:
+  resources:
+    order:
+      classes:
+        model: App\Entity\EasyShop\Order\Order
+    order_item:
+      classes:
+        model: App\Entity\EasyShop\Order\OrderItem
+    order_item_unit:
+      classes:
+        model: App\Entity\EasyShop\Order\OrderItemUnit
+    adjustment:
+      classes:
+        model: App\Entity\EasyShop\Order\Adjustment
+    order_sequence:
+      classes:
+        model: App\Entity\EasyShop\Order\OrderSequence
+
+sylius_payment:
+  resources:
+    payment_method:
+      classes:
+        model: App\Entity\EasyShop\Payment\PaymentMethod
+      translation:
+        classes:
+          model: App\Entity\EasyShop\Payment\PaymentMethodTranslation
+    payment:
+      classes:
+        model: App\Entity\EasyShop\Payment\Payment
+
+sylius_payum:
+  resources:
+    payment_security_token:
+      classes:
+        model: App\Entity\EasyShop\Payment\PaymentSecurityToken
+    gateway_config:
+      classes:
+        model: App\Entity\EasyShop\Payment\GatewayConfig
+
+sylius_product:
+  resources:
+    product:
+      classes:
+        model: App\Entity\EasyShop\Product\Product
+      translation:
+        classes:
+          model: App\Entity\EasyShop\Product\ProductTranslation
+    product_variant:
+      classes:
+        model: App\Entity\EasyShop\Product\ProductVariant
+      translation:
+        classes:
+          model: App\Entity\EasyShop\Product\ProductVariantTranslation
+    product_option:
+      classes:
+        model: App\Entity\EasyShop\Product\ProductOption
+      translation:
+        classes:
+          model: App\Entity\EasyShop\Product\ProductOptionTranslation
+    product_option_value:
+      classes:
+        model: App\Entity\EasyShop\Product\ProductOptionValue
+      translation:
+        classes:
+          model: App\Entity\EasyShop\Product\ProductOptionValueTranslation
+    product_association:
+      classes:
+        model: App\Entity\EasyShop\Product\ProductAssociation
+    product_association_type:
+      classes:
+        model: App\Entity\EasyShop\Product\ProductAssociationType
+      translation:
+        classes:
+          model: App\Entity\EasyShop\Product\ProductAssociationTypeTranslation
+
+sylius_promotion:
+  resources:
+    promotion:
+      classes:
+        model: App\Entity\EasyShop\Promotion\Promotion
+    promotion_rule:
+      classes:
+        model: App\Entity\EasyShop\Promotion\PromotionRule
+    promotion_action:
+      classes:
+        model: App\Entity\EasyShop\Promotion\PromotionAction
+    promotion_coupon:
+      classes:
+        model: App\Entity\EasyShop\Promotion\PromotionCoupon
+
+sylius_review:
+  resources:
+    product:
+      review:
+        classes:
+          model: App\Entity\EasyShop\Product\ProductReview
+
+sylius_shipping:
+  resources:
+    shipment:
+      classes:
+        model: App\Entity\EasyShop\Shipping\Shipment
+    shipping_method:
+      classes:
+        model: App\Entity\EasyShop\Shipping\ShippingMethod
+      translation:
+        classes:
+          model: App\Entity\EasyShop\Shipping\ShippingMethodTranslation
+    shipping_category:
+      classes:
+        model: App\Entity\EasyShop\Shipping\ShippingCategory
+
+sylius_taxation:
+  resources:
+    tax_category:
+      classes:
+        model: App\Entity\EasyShop\Taxation\TaxCategory
+    tax_rate:
+      classes:
+        model: App\Entity\EasyShop\Taxation\TaxRate
+
+sylius_taxonomy:
+  resources:
+    taxon:
+      classes:
+        model: App\Entity\EasyShop\Taxonomy\Taxon
+      translation:
+        classes:
+          model: App\Entity\EasyShop\Taxonomy\TaxonTranslation
+
+sylius_user:
+  resources:
+    admin:
+      user:
+        classes:
+          model: App\Entity\EasyShop\User\AdminUser
+    shop:
+      user:
+        classes:
+          model: App\Entity\EasyShop\User\ShopUser
+    oauth:
+      user:
+        classes:
+          model: App\Entity\EasyShop\User\UserOAuth
+
+sylius_theme:
+  sources:
+    filesystem:
+      scan_depth: 1
+      directories:
+        - "%kernel.project_dir%/themes"
