@@ -1,0 +1,3 @@
+easy_config:
+  config_class: App\Entity\EasyConfig\Config
+  config_repository: App\Repository\EasyConfig\ConfigRepository
