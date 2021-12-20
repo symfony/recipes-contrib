@@ -1,0 +1,11 @@
+easy_faq:
+  entry:
+    class: App\Entity\EasyFaq\Entry
+    repository: App\Repository\EasyFaq\EntryRepository
+    crud: App\Controller\Admin\EasyFaq\EntryCrudController
+  category:
+    class: App\Entity\EasyFaq\Category
+    repository: App\Repository\EasyFaq\CategoryRepository
+    crud: App\Controller\Admin\EasyFaq\CategoryCrudController
+  page:
+    root_path: '/faq'

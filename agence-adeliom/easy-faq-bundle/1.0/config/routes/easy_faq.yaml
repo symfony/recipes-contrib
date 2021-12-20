@@ -1,0 +1,2 @@
+easy_faq:
+  resource: '@EasyFaqBundle/Resources/config/routes.xml'
