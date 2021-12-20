@@ -1,0 +1,3 @@
+easy_media:
+  # loads routes from the given routing file stored in some bundle
+  resource: '@EasyMediaBundle/Resources/config/routes.xml'

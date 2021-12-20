@@ -1,0 +1,12 @@
+twig:
+  form_themes:
+    - '@EasyMedia/form/easy-media.html.twig'
+
+doctrine:
+  dbal:
+    types:
+      easy_media_type: Adeliom\EasyMediaBundle\Types\EasyMediaType
+
+easy_media:
+  lock_entity: App\Entity\EasyMedia\Lock
+  metas_entity: App\Entity\EasyMedia\Metas
