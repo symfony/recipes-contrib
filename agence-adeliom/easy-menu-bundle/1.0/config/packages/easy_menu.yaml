@@ -1,0 +1,9 @@
+easy_menu:
+  menu:
+    class: App\Entity\EasyMenu\Menu
+    repository: App\Repository\EasyMenu\MenuRepository
+    crud: App\Controller\Admin\EasyMenu\MenuCrudController
+  menu_item:
+    class: App\Entity\EasyMenu\MenuItem
+    repository: App\Repository\EasyMenu\MenuItemRepository
+    crud: App\Controller\Admin\EasyMenu\MenuItemCrudController
