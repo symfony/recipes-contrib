@@ -1,2 +1,2 @@
 easy_fields:
-  resource: '@EasyFieldsBundle/Resources/config/routes.xml'
+    resource: '@EasyFieldsBundle/Resources/config/routes.xml'
