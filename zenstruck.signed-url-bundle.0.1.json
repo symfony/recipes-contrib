@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "zenstruck/signed-url-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Zenstruck\\ZenstruckSignedUrlBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "31d896a3ad202a6d383522d7c63fc6981d3eb472"
+        }
+    }
+}

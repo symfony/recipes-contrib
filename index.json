@@ -1548,6 +1548,9 @@
         "zendesk/zendesk_api_client_php": [
             "2.2"
         ],
+        "zenstruck/signed-url-bundle": [
+            "0.1"
+        ],
         "zephyr/allmysms-bundle": [
             "1.0"
         ]
@@ -1558,6 +1561,7 @@
     "_links": {
         "repository": "github.com/symfony/recipes-contrib",
         "origin_template": "{package}:{version}@github.com/symfony/recipes-contrib:master",
-        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes-contrib/flex/main/{package_dotted}.{version}.json"
+        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes-contrib/flex/main/{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes-contrib/flex/main/archived/{package_dotted}/{ref}.json"
     }
 }
