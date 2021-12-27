@@ -1,0 +1,6 @@
+{
+    "env": {
+        "OAUTH_FT_ID": "APPLICATION_ID",
+        "OAUTH_FT_SECRET": "APPLICATION_SECRET"
+    }
+}
