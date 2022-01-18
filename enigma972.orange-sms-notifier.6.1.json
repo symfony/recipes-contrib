@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "enigma972/orange-sms-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "ORANGE_SMS_DSN=orange-sms://CLIENT_ID:CLIENT_SECRET@default?from=FROM&sender_name=SENDER_NAME"
+                }
+            },
+            "files": [],
+            "ref": "0fa356dda815d5eaf7f27b2c324203643c910692"
+        }
+    }
+}

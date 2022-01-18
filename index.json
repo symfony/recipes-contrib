@@ -363,6 +363,9 @@
         "enhavo/app-bundle": [
             "0.9"
         ],
+        "enigma972/orange-sms-notifier": [
+            "6.1"
+        ],
         "enigma972/user-bundle": [
             "0.4"
         ],
