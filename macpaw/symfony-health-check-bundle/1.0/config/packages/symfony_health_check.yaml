@@ -1,0 +1,5 @@
+symfony_health_check:
+    health_checks:
+        - id: symfony_health_check.status_up_check
+    ping_checks:
+        - id: symfony_health_check.status_up_check
