@@ -1,0 +1,59 @@
+{
+    "manifests": {
+        "macpaw/symfony-health-check-bundle": {
+            "manifest": {
+                "bundles": {
+                    "SymfonyHealthCheckBundle\\SymfonyHealthCheckBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                                                </>",
+                    "<bg=blue;fg=white> Next: Symfony Health Check Bundle Configuration </>",
+                    "<bg=blue;fg=white>                                                </>",
+                    "",
+                    "  *. Add healthcheck firewall to <fg=green>config/security.yaml</> file",
+                    "",
+                    "<comment>",
+                    "security:",
+                    "    firewalls:",
+                    "        healthcheck:",
+                    "            pattern: ^/health",
+                    "            security: false",
+                    "        ping:",
+                    "            pattern: ^/ping",
+                    "            security: false",
+                    "</>",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/MacPaw/symfony-health-check-bundle</>",
+                    "  * <fg=blue>Read</> the upgrade documentation at <comment>https://github.com/MacPaw/symfony-health-check-bundle/blob/develop/UPGRADE-1.0.md</>"
+                ]
+            },
+            "files": {
+                "config/packages/symfony_health_check.yaml": {
+                    "contents": [
+                        "symfony_health_check:",
+                        "    health_checks:",
+                        "        - id: symfony_health_check.status_up_check",
+                        "    ping_checks:",
+                        "        - id: symfony_health_check.status_up_check",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/symfony_health_check.yaml": {
+                    "contents": [
+                        "health_check:",
+                        "    resource: '@SymfonyHealthCheckBundle/Resources/config/routes.xml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7bcf3b4de9b5271d0f389ce58ec6cce55f48ee6f"
+        }
+    }
+}

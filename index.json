@@ -799,7 +799,8 @@
             "0.0"
         ],
         "macpaw/symfony-health-check-bundle": [
-            "0.1"
+            "0.1",
+            "1.0"
         ],
         "mael/intervention-image-bundle": [
             "1.0"
