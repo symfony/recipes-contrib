@@ -16,3 +16,4 @@ security:
 </>
 
   * <fg=blue>Read</> the documentation at <comment>https://github.com/MacPaw/symfony-health-check-bundle</>
+  * <fg=blue>Read</> the upgrade documentation at <comment>https://github.com/MacPaw/symfony-health-check-bundle/blob/develop/UPGRADE-1.0.md</>
