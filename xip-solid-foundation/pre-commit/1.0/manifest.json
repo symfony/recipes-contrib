@@ -1,0 +1,5 @@
+{
+    "copy-from-recipe": {
+        "bin/pre-commit": "%BIN_DIR%/pre-commit"
+    }
+}
