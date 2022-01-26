@@ -4,5 +4,5 @@
     3. Start using webhooks!
 
   * <fg=blue>Read</> the documentation:
-    1. For the Bundle: <comment>https://github.com/labymod/discord-webhook-bundle</>
-    2. For using and configuring the webhooks: <comment>https://github.com/labymod/discord-webhook</>
+    1. For the Bundle: <comment>https://github.com/LabyMod/discord-webhook-bundle/blob/master/README.md</>
+    2. For using and configuring the webhooks: <comment>https://github.com/LabyMod/discord-webhook/blob/master/README.md</>
