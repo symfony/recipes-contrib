@@ -1,5 +1,8 @@
 {
     "copy-from-recipe": {
-        "bin/pre-commit": "%BIN_DIR%/pre-commit"
+        "bin/pre-commit": "%BIN_DIR%/pre-commit",
+	"config/": "%CONFIG_DIR%/",
+	".php-cs-fixer.dist.php": ".php-cs-fixer.dist.php",
+	"phpunit.xml.dist": "phpunit.xml.dist"
     }
 }
