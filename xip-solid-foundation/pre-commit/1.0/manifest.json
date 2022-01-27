@@ -2,8 +2,8 @@
     "copy-from-recipe": {
         "bin/": "%BIN_DIR%/",
         "config/": "%CONFIG_DIR%/",
-        ".php-cs-fixer.php": ".php-cs-fixer.php",
-        "phpunit.xml.dist": "phpunit.xml.dist"
+        "phpunit.xml.dist": "phpunit.xml.dist",
+        ".php-cs-fixer.php": ".php-cs-fixer.php"
     }
 }
 
