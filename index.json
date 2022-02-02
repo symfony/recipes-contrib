@@ -249,7 +249,8 @@
             "1.0"
         ],
         "datana-gmbh/datapool-api": [
-            "1.0"
+            "1.0",
+            "2.3"
         ],
         "datana-gmbh/intercom-config": [
             "1.1"

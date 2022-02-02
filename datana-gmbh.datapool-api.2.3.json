@@ -1,0 +1,70 @@
+{
+    "manifests": {
+        "datana-gmbh/datapool-api": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "DATAPOOL_API_BASE_URI": "",
+                    "DATAPOOL_API_USERNAME": "",
+                    "DATAPOOL_API_PASSWORD": ""
+                }
+            },
+            "files": {
+                "config/packages/datana_datapool_api.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "",
+                        "    Datana\\Datapool\\Api\\DatapoolClient:",
+                        "        arguments:",
+                        "            - '%env(DATAPOOL_API_BASE_URI)%'",
+                        "            - '%env(DATAPOOL_API_USERNAME)%'",
+                        "            - '%env(DATAPOOL_API_PASSWORD)%'",
+                        "",
+                        "    Datana\\Datapool\\Api\\AktenApi: null",
+                        "    Datana\\Datapool\\Api\\AktenApiInterface: '@Datana\\Datapool\\Api\\AktenApi'",
+                        "",
+                        "    Datana\\Datapool\\Api\\AktenEventLogApi: null",
+                        "    Datana\\Datapool\\Api\\NullAktenEventLogApi: null",
+                        "",
+                        "    Datana\\Datapool\\Api\\AktenzeichenApi: null",
+                        "    Datana\\Datapool\\Api\\FakeAktenzeichenApi: null",
+                        "",
+                        "    Datana\\Datapool\\Api\\ChatProtocolApi: null",
+                        "    Datana\\Datapool\\Api\\NullChatProtocolApi: null",
+                        "",
+                        "    Datana\\Datapool\\Api\\SystemEventLogApi: null",
+                        "    Datana\\Datapool\\Api\\NullSystemEventLogApi: null",
+                        "",
+                        "when@prod:",
+                        "    services:",
+                        "        Datana\\Datapool\\Api\\AktenEventLogApiInterface: '@Datana\\Datapool\\Api\\AktenEventLogApi'",
+                        "        Datana\\Datapool\\Api\\AktenzeichenApiInterface: '@Datana\\Datapool\\Api\\AktenzeichenApi'",
+                        "        Datana\\Datapool\\Api\\ChatProtocolApiInterface: '@Datana\\Datapool\\Api\\ChatProtocolApi'",
+                        "        Datana\\Datapool\\Api\\SystemEventLogApiInterface: '@Datana\\Datapool\\Api\\SystemEventLogApi'",
+                        "",
+                        "when@dev:",
+                        "    services:",
+                        "        Datana\\Datapool\\Api\\AktenEventLogApiInterface: '@Datana\\Datapool\\Api\\NullAktenEventLogApi'",
+                        "        Datana\\Datapool\\Api\\AktenzeichenApiInterface: '@Datana\\Datapool\\Api\\FakeAktenzeichenApi'",
+                        "        Datana\\Datapool\\Api\\ChatProtocolApiInterface: '@Datana\\Datapool\\Api\\NullChatProtocolApi'",
+                        "        Datana\\Datapool\\Api\\SystemEventLogApiInterface: '@Datana\\Datapool\\Api\\NullSystemEventLogApi'",
+                        "",
+                        "when@test:",
+                        "    services:",
+                        "        Datana\\Datapool\\Api\\AktenEventLogApiInterface: '@Datana\\Datapool\\Api\\NullAktenEventLogApi'",
+                        "        Datana\\Datapool\\Api\\AktenzeichenApiInterface: '@Datana\\Datapool\\Api\\FakeAktenzeichenApi'",
+                        "        Datana\\Datapool\\Api\\ChatProtocolApiInterface: '@Datana\\Datapool\\Api\\NullChatProtocolApi'",
+                        "        Datana\\Datapool\\Api\\SystemEventLogApiInterface: '@Datana\\Datapool\\Api\\NullSystemEventLogApi'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "4212c5fcd5fcb123468baceaae46326f05958e9e"
+        }
+    }
+}
