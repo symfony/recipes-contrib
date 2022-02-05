@@ -1,0 +1,6 @@
+oka_notifier_server_notification:
+    resource: "@OkaNotifierServerBundle/config/routes/notification.yaml"
+
+# Uncommented here if you want to enable reporting 
+#oka_notifier_server_reporting:
+#    resource: "@OkaNotifierServerBundle/config/routes/reporting.yaml"
