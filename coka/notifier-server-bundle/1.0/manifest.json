@@ -1,0 +1,18 @@
+{
+    "bundles": {
+        "Oka\\Notifier\\ServerBundle\\OkaNotifierServerBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "src/": "%SRC_DIR%/" 
+    },
+    "env": {
+        "NOTIFIER_SMPP_DSN": "smpp://user:password@127.0.0.1:8775",
+        "NOTIFIER_CLICKATELL_URL": "https://api.clickatell.com",
+        "NOTIFIER_CLICKATELL_API_TOKEN": "s$cretf0rt3st",
+        "NOTIFIER_INFOBIP_URL": "https://api.infobip.com",
+        "NOTIFIER_INFOBIP_API_KEY": "s$cretf0rt3st",
+        "NOTIFIER_WIREPICK_CLIENT_ID": "client",
+        "NOTIFIER_WIREPICK_PASSWORD": "s$cretf0rt3st"
+    }
+}
