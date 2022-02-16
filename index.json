@@ -1557,6 +1557,18 @@
             "1.0"
         ]
     },
+    "recipe-conflicts": {
+        "jane-php/json-schema": {
+            "6.0": {
+                "symfony/symfony": "<5.0"
+            }
+        },
+        "jane-php/open-api-common": {
+            "6.0": {
+                "symfony/symfony": "<5.0"
+            }
+        }
+    },
     "versions": [],
     "branch": "master",
     "is_contrib": true,
@@ -1564,6 +1576,8 @@
         "repository": "github.com/symfony/recipes-contrib",
         "origin_template": "{package}:{version}@github.com/symfony/recipes-contrib:master",
         "recipe_template": "https://raw.githubusercontent.com/symfony/recipes-contrib/flex/main/{package_dotted}.{version}.json",
-        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes-contrib/flex/main/archived/{package_dotted}/{ref}.json"
+        "recipe_template_relative": "{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes-contrib/flex/main/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
     }
 }
