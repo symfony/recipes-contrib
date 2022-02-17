@@ -1,2 +1,0 @@
-  * If you are using <info>sonata-project/classification-bundle</>, fix annotations for
-    <info>App\Entity\SonataMediaMedia::$category</>
