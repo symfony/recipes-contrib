@@ -1274,17 +1274,8 @@
         "sonata-project/media-bundle": [
             "3.13"
         ],
-        "sonata-project/media-odm-pack": [
-            "1.0"
-        ],
-        "sonata-project/media-orm-pack": [
-            "1.0"
-        ],
         "sonata-project/notification-bundle": [
             "3.4"
-        ],
-        "sonata-project/notification-orm-pack": [
-            "1.0"
         ],
         "sonata-project/page-bundle": [
             "3.9"
