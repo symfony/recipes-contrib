@@ -655,7 +655,7 @@
         "jsor/doctrine-postgis": [
             "1.7"
         ],
-        "jupi007/prestashop-webservice-bundle": [
+        "jupi/prestashop-webservice-bundle": [
             "1.0"
         ],
         "jurry/amqp-symfony-bundle": [

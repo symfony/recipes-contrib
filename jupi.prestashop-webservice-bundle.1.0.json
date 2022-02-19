@@ -1,9 +1,9 @@
 {
     "manifests": {
-        "jupi007/prestashop-webservice-bundle": {
+        "jupi/prestashop-webservice-bundle": {
             "manifest": {
                 "bundles": {
-                    "Jupi007\\PrestaShopWebserviceBundle\\Jupi007PrestaShopWebserviceBundle": [
+                    "Jupi\\PrestaShopWebserviceBundle\\JupiPrestaShopWebserviceBundle": [
                         "all"
                     ]
                 },
@@ -16,9 +16,9 @@
                 }
             },
             "files": {
-                "config/packages/jupi007_presta_shop_webservice.yaml": {
+                "config/packages/jupi_presta_shop_webservice.yaml": {
                     "contents": [
-                        "jupi007_presta_shop_webservice:",
+                        "jupi_presta_shop_webservice:",
                         "    connection:",
                         "        store_root_path: '%env(PRESTA_WEBSERVICE_ROOT_PATH)%'",
                         "        authentication_key: '%env(PRESTA_WEBSERVICE_AUTH_KEY)%'",
@@ -27,7 +27,7 @@
                     "executable": false
                 }
             },
-            "ref": "d3b32d4cf79c652245dbf70eb97609dc85dc789d"
+            "ref": "13559cc3b8fd6e5c8cef6d9549e2b84702174d61"
         }
     }
 }
