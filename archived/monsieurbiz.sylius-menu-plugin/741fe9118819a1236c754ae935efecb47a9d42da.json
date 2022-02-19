@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "monsieurbiz/sylius-menu-plugin": {
+            "manifest": {
+                "bundles": {
+                    "MonsieurBiz\\SyliusMenuPlugin\\MonsieurBizSyliusMenuPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/monsieurbiz_sylius_menu_plugin.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@MonsieurBizSyliusMenuPlugin/Resources/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/monsieurbiz_sylius_menu_plugin.yaml": {
+                    "contents": [
+                        "monsieurbiz_menu_admin_menu:",
+                        "    resource: \"@MonsieurBizSyliusMenuPlugin/Resources/config/routes/admin.yaml\"",
+                        "    prefix: /%sylius_admin.path_name%",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "741fe9118819a1236c754ae935efecb47a9d42da"
+        }
+    }
+}
