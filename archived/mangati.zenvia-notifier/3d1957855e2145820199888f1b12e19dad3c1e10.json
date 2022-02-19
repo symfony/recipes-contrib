@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "mangati/zenvia-notifier": {
+            "manifest": {
+                "env": {
+                    "#1": "ZENVIA_DSN=zenvia://FROM:TOKEN@default"
+                }
+            },
+            "files": [],
+            "ref": "3d1957855e2145820199888f1b12e19dad3c1e10"
+        }
+    }
+}

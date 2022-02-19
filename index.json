@@ -837,6 +837,9 @@
         "maksze/telemetry-bundle": [
             "0.4"
         ],
+        "mangati/zenvia-notifier": [
+            "1.0"
+        ],
         "mapado/rest-client-sdk-bundle": [
             "0.24"
         ],
