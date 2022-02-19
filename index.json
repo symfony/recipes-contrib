@@ -1006,7 +1006,8 @@
             "1.0"
         ],
         "networking/init-cms-bundle": [
-            "4.0"
+            "4.0",
+            "4.4"
         ],
         "nicohaase/twig-isbn-formatter": [
             "0.1"
