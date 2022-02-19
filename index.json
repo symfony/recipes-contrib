@@ -1402,6 +1402,9 @@
         "sylius/resource-bundle": [
             "1.6"
         ],
+        "symandy/makefile-maker-bundle": [
+            "0.5"
+        ],
         "symfony-bundles/kafka-bundle": [
             "1.0"
         ],

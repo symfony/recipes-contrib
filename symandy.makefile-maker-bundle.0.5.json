@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "symandy/makefile-maker-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symandy\\MakefileMakerBundle\\SymandyMakefileMakerBundle": [
+                        "dev"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/dev/symandy_makefile_maker.yaml": {
+                    "contents": [
+                        "# Create your Makefile commands here, full reference available at",
+                        "# https://github.com/Symandy/MakefileMakerBundle#configuration",
+                        "symandy_makefile_maker:",
+                        "    groups:",
+                        "#        your_project_name:",
+                        "#            commands:",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0df1b5d60634214865540c97e9f8f3ece425f34c"
+        }
+    }
+}
