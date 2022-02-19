@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "labymod/discord-webhook-bundle": {
+            "manifest": {
+                "bundles": {
+                    "DiscordWebhookBundle\\DiscordWebhookBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "DWH_DEFAULT_URL": ""
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Getting started</> with Discord webhooks:",
+                    "    1. Open up your <comment>.env</> file and set the default webhook URL",
+                    "    2. Optional: Start creating additional clients in <comment>config/discord_webhook.yaml</>",
+                    "    3. Start using webhooks!",
+                    "",
+                    "  * <fg=blue>Read</> the documentation:",
+                    "    1. For the Bundle: <comment>https://github.com/LabyMod/discord-webhook-bundle/blob/master/README.md</>",
+                    "    2. For using and configuring the webhooks: <comment>https://github.com/LabyMod/discord-webhook/blob/master/README.md</>"
+                ]
+            },
+            "files": {
+                "config/packages/discord_webhook.yaml": {
+                    "contents": [
+                        "discord_webhook:",
+                        "    default_url: '%env(DWH_DEFAULT_URL)%'",
+                        "    clients: { }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5ca3ad26a8ce5233cdb80b2ad1b4fdc3f931c18e"
+        }
+    }
+}

@@ -739,6 +739,9 @@
         "kynno/smartbots-bundle": [
             "0.1"
         ],
+        "labymod/discord-webhook-bundle": [
+            "1.0"
+        ],
         "lag/adminbundle": [
             "1.0"
         ],
