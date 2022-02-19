@@ -963,6 +963,9 @@
         "monsieurbiz/sylius-settings-plugin": [
             "1.0"
         ],
+        "monsieurbiz/sylius-shipping-slot-plugin": [
+            "1.0"
+        ],
         "monsieursloop/woleet-bundle": [
             "1.0",
             "1.2"

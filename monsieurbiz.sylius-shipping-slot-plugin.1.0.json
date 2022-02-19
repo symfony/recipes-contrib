@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "monsieurbiz/sylius-shipping-slot-plugin": {
+            "manifest": {
+                "bundles": {
+                    "MonsieurBiz\\SyliusShippingSlotPlugin\\MonsieurBizSyliusShippingSlotPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "copy-from-package": {
+                    "src/Resources/views/SyliusShopBundle/Checkout/SelectShipping/_choice.html.twig": "templates/bundles/SyliusShopBundle/Checkout/SelectShipping/_choice.html.twig"
+                }
+            },
+            "files": {
+                "config/packages/monsieurbiz_sylius_shipping_slot_plugin.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@MonsieurBizSyliusShippingSlotPlugin/Resources/config/config.yaml\" }",
+                        "",
+                        "monsieurbiz_sylius_shipping_slot:",
+                        "    expiration:",
+                        "        slot: '30 minutes'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/monsieurbiz_sylius_shipping_slot_plugin.yaml": {
+                    "contents": [
+                        "monsieurbiz_shipping_slot_admin:",
+                        "    resource: \"@MonsieurBizSyliusShippingSlotPlugin/Resources/config/routing/admin.yaml\"",
+                        "    prefix: /%sylius_admin.path_name%",
+                        "",
+                        "monsieurbiz_shipping_slot_shop:",
+                        "    resource: \"@MonsieurBizSyliusShippingSlotPlugin/Resources/config/routing/shop.yaml\"",
+                        "    prefix: /{_locale}",
+                        "    requirements:",
+                        "        _locale: ^[A-Za-z]{2,4}(_([A-Za-z]{4}|[0-9]{3}))?(_([A-Za-z]{2}|[0-9]{3}))?$",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7dd3ef817e477afffff610638f30de9282d7285d"
+        }
+    }
+}
