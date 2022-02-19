@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "coka/service-discovery-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Oka\\ServiceDiscoveryBundle\\OkaServiceDiscoveryBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/oka_service_discovery.yaml": {
+                    "contents": [
+                        "oka_service_discovery:",
+                        "    cache_id: cache.app",
+                        "    load_balancing_algorithm: 'round-robin'",
+                        "    dsn: 'php://array'",
+                        "    options:",
+                        "        # Put the options of catalog for the current registry",
+                        "#        services:",
+                        "#          localhost:",
+                        "#            - scheme: 'http'",
+                        "#              host: 127.0.0.1",
+                        "#              port: 80",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "000045dffc0187c59626a5b18c5828bf9be66e67"
+        }
+    }
+}

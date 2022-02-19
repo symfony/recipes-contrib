@@ -190,6 +190,9 @@
         "coka/rest-request-validator-bundle": [
             "1.0"
         ],
+        "coka/service-discovery-bundle": [
+            "1.0"
+        ],
         "coka/wsse-authentication-bundle": [
             "1.0"
         ],
@@ -299,7 +302,8 @@
             "5.0"
         ],
         "doctrine/mongodb-odm-bundle": [
-            "3.3"
+            "3.3",
+            "4.1"
         ],
         "doctrine/phpcr-bundle": [
             "2.0"
@@ -1559,6 +1563,12 @@
         ]
     },
     "recipe-conflicts": {
+        "doctrine/mongodb-odm-bundle": {
+            "4.1": {
+                "doctrine/cache": "<1.11",
+                "symfony/framework-bundle": "<5.3"
+            }
+        },
         "jane-php/json-schema": {
             "6.0": {
                 "symfony/symfony": "<5.0"
