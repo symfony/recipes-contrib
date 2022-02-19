@@ -1,0 +1,80 @@
+{
+    "manifests": {
+        "nyholm/sunflower": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "env": {
+                    "APP_ENV": "dev"
+                },
+                "gitignore": [
+                    "/.env.local",
+                    "/.env.local.php",
+                    "/.env.*.local",
+                    "/%VAR_DIR%/",
+                    "/vendor/"
+                ]
+            },
+            "files": {
+                "config/bundles.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "return [];",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/services.yaml": {
+                    "contents": [
+                        "# This file is the entry point to configure your own services.",
+                        "# Files in the packages/ subdirectory configure your dependencies.",
+                        "",
+                        "# Put parameters here that don't need to change on each machine where the app is deployed",
+                        "# https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration",
+                        "parameters:",
+                        "",
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    App\\:",
+                        "        resource: '../src/'",
+                        "        exclude:",
+                        "            - '../src/Entity/'",
+                        "            - '../src/Kernel.php'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Kernel.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "namespace App;",
+                        "",
+                        "use Nyholm\\SunflowerKernel;",
+                        "",
+                        "class Kernel extends SunflowerKernel",
+                        "{",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "38b6d4a4d24d3ed555121ce23ab4982ad4f261a1"
+        }
+    }
+}

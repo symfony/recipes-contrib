@@ -1051,6 +1051,9 @@
         "numberninecms/cms": [
             "0.2"
         ],
+        "nyholm/sunflower": [
+            "0.2"
+        ],
         "nzo/url-encryptor-bundle": [
             "6.0"
         ],
