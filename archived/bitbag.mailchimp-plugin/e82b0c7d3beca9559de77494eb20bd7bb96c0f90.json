@@ -1,0 +1,59 @@
+{
+    "manifests": {
+        "bitbag/mailchimp-plugin": {
+            "manifest": {
+                "bundles": {
+                    "BitBag\\SyliusMailChimpPlugin\\BitBagSyliusMailChimpPlugin": [
+                        "all"
+                    ]
+                },
+                "container": {
+                    "mailchimp.api_key": "%env(resolve:MAIL_CHIMP_API_KEY)%",
+                    "mailchimp.list_id": "%env(resolve:MAIL_CHIMP_LIST_ID)%",
+                    "mailchimp.webhook_secret": "%env(resolve:MAIL_CHIMP_WEBHOOK_SECRET)%"
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MAIL_CHIMP_API_KEY": "YOUR_KEY",
+                    "MAIL_CHIMP_LIST_ID": "YOUR_LIST_ID",
+                    "MAIL_CHIMP_WEBHOOK_SECRET": "QUERY_PARAMETER_FOR_UNSUBSCRIBED_WEBHHOOK"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>              </>",
+                    "<bg=blue;fg=white> What's next? </>",
+                    "<bg=blue;fg=white>              </>",
+                    "",
+                    "  * Start using your fresh plugin:",
+                    "    1. Include the newsletter in your template:",
+                    "        <comment>{% include '@BitBagSyliusMailChimpPlugin/_subscribe.html.twig' %}</>",
+                    "    2. Add these javascripts to the layout template that includes your subscription form imported in the previous steps",
+                    "       <comment><script src=\"{{ asset('path/to/jquery.js') }}\"></script>",
+                    "                <script src=\"{{ asset('bundles/bitbagsyliusmailchimpplugin/bitbag-mailchimp-plugin-newsletter.js') }}\"></script>",
+                    "                <script>",
+                    "                    $('#footer-newsletter-form').joinNewsletter();",
+                    "                </script></>",
+                    "",
+                    "",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://https://github.com/BitBagCommerce/SyliusMailChimpPlugin/tree/master/doc</>",
+                    "",
+                    "If you want to contact us, the best way is to fill the form on our website or send us an e-mail to <comment>hello@bitbag.io</comment> with your question(s).",
+                    "  We guarantee that we answer as soon as we can!"
+                ]
+            },
+            "files": {
+                "config/routes/bitbag_sylius_mailchimp_plugin.yaml": {
+                    "contents": [
+                        "bitbag_sylius_mailchimp_plugin:",
+                        "    resource: \"@BitBagSyliusMailChimpPlugin/Resources/config/routing.yml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e82b0c7d3beca9559de77494eb20bd7bb96c0f90"
+        }
+    }
+}

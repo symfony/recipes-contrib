@@ -1,0 +1,51 @@
+{
+    "manifests": {
+        "pentatrion/vite-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Pentatrion\\ViteBundle\\PentatrionViteBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-package": {
+                    "install/assets/": "assets/",
+                    "install/package.json": "package.json",
+                    "install/vite.config.js": "vite.config.js"
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "gitignore": [
+                    "/node_modules/",
+                    "/%PUBLIC_DIR%/build/"
+                ],
+                "post-install-output": [
+                    "  <bg=blue;fg=white>                                                                </>",
+                    "  <bg=blue;fg=white>         Getting started using </><bg=blue;fg=white;options=bold>pentatrion/vite-bundle</><bg=blue;fg=white>           </>",
+                    "  <bg=blue;fg=white>                                                                </>",
+                    "",
+                    "  <fg=blue;options=bold>Configure</> <fg=blue>your transformations:</>",
+                    "    1. Verify and uncomment the configuration in <comment>%CONFIG_DIR%/packages/pentatrion_vite.yaml</>.",
+                    "    2. Verify the Vite configuration in <comment>/vite.config.js</>.",
+                    "    3. Install npm and run <comment>npm i</>.",
+                    "    4. Add JS Twig function <comment>{{ vite_entry_script_tags('app.js') }}</> into your base.html.twig.",
+                    "    5. Add CSS Twig function <comment>{{ vite_entry_link_tags('app.js') }}</> into your base.html.twig.",
+                    "    6. Start the development server: <comment>npm run dev</>.",
+                    "    7. Start coding into <comment>assets/app.js</>"
+                ]
+            },
+            "files": {
+                "config/routes/dev/pentatrion_vite.yaml": {
+                    "contents": [
+                        "_pentatrion_vite:",
+                        "    prefix: /build",
+                        "    resource: \"@PentatrionViteBundle/Resources/config/routing.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f96caf0ead1ee91e1c8dfda8e5b82834adfc0f31"
+        }
+    }
+}

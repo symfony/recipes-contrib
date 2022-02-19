@@ -118,6 +118,9 @@
         "bitbag/cms-plugin": [
             "3.0"
         ],
+        "bitbag/mailchimp-plugin": [
+            "1.2"
+        ],
         "bitbag/product-bundle-plugin": [
             "1.2"
         ],
@@ -770,6 +773,9 @@
         "leapt/core-bundle": [
             "2.2"
         ],
+        "leapt/froala-editor-bundle": [
+            "1.0"
+        ],
         "leapt/im-bundle": [
             "2.0"
         ],
@@ -1125,7 +1131,9 @@
             "0.2"
         ],
         "pentatrion/vite-bundle": [
-            "0.1"
+            "0.1",
+            "0.2",
+            "1.0"
         ],
         "php-amqplib/rabbitmq-bundle": [
             "1.12"
