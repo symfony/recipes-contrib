@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "phpzlc/snapshot-business": {
+            "manifest": {
+                "copy-from-package": {
+                    "Business/": "src/Business/",
+                    "Entity/": "src/Entity/",
+                    "Repository/": "src/Repository/"
+                }
+            },
+            "files": [],
+            "ref": "0d8604a7ab049e8e06ca71e3fd1cd92dc5072c25"
+        }
+    }
+}

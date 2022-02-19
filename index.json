@@ -1184,6 +1184,9 @@
         "phpzlc/rbac-business": [
             "1.0"
         ],
+        "phpzlc/snapshot-business": [
+            "1.0"
+        ],
         "phpzlc/upload-business": [
             "1.0"
         ],
