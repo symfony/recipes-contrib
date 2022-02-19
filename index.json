@@ -942,6 +942,9 @@
         "monsieurbiz/sylius-coliship-plugin": [
             "0.1"
         ],
+        "monsieurbiz/sylius-homepage-plugin": [
+            "1.0"
+        ],
         "monsieurbiz/sylius-no-commerce-plugin": [
             "0.1"
         ],
