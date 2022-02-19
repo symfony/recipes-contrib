@@ -1,0 +1,3 @@
+discord_webhook:
+    default_url: '%env(DWH_DEFAULT_URL)%'
+    clients: { }
