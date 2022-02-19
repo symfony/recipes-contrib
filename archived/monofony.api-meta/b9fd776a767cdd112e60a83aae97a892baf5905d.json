@@ -1,0 +1,16 @@
+{
+    "manifests": {
+        "monofony/api-meta": {
+            "manifest": {
+                "copy-from-package": {
+                    ".recipe/config/": "%CONFIG_DIR%/",
+                    ".recipe/spec/": "spec/",
+                    ".recipe/src/": "%SRC_DIR%/",
+                    ".recipe/tests/": "tests/"
+                }
+            },
+            "files": [],
+            "ref": "b9fd776a767cdd112e60a83aae97a892baf5905d"
+        }
+    }
+}

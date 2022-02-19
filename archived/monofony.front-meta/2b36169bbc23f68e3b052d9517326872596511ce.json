@@ -1,0 +1,18 @@
+{
+    "manifests": {
+        "monofony/front-meta": {
+            "manifest": {
+                "copy-from-package": {
+                    ".recipe/assets/": "assets/",
+                    ".recipe/config/": "%CONFIG_DIR%/",
+                    ".recipe/features/": "features/",
+                    ".recipe/src/": "%SRC_DIR%/",
+                    ".recipe/templates/": "templates/",
+                    ".recipe/tests/": "tests/"
+                }
+            },
+            "files": [],
+            "ref": "2b36169bbc23f68e3b052d9517326872596511ce"
+        }
+    }
+}

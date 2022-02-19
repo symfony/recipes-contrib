@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "monofony/core-meta": {
+            "manifest": {
+                "container": {
+                    "locale": "en",
+                    "email_contact": "contact@example.com",
+                    "email_name": "Contact AppName",
+                    "email_sender": "no-reply@example.com"
+                },
+                "copy-from-package": {
+                    ".recipe/config/": "%CONFIG_DIR%/",
+                    ".recipe/features/": "features/",
+                    ".recipe/migrations/": "migrations/",
+                    ".recipe/spec/": "spec/",
+                    ".recipe/src/": "%SRC_DIR%/",
+                    ".recipe/templates/": "templates/",
+                    ".recipe/tests/": "tests/",
+                    ".recipe/translations/": "translations/",
+                    ".recipe/config-builder.js": "config-builder.js"
+                },
+                "env": {
+                    "OAUTH_CLIENT_ID": "%generate(secret)%",
+                    "OAUTH_SECRET": "%generate(secret)%"
+                },
+                "gitignore": [
+                    "/public/assets",
+                    "/public/media"
+                ]
+            },
+            "files": [],
+            "ref": "7fa5f4b232834f5857ca279e99bb8ad57cc4dff9"
+        }
+    }
+}

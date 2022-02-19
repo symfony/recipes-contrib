@@ -1,0 +1,19 @@
+{
+    "manifests": {
+        "monofony/admin-meta": {
+            "manifest": {
+                "copy-from-package": {
+                    ".recipe/assets/": "assets/",
+                    ".recipe/config/": "%CONFIG_DIR%/",
+                    ".recipe/features/": "features/",
+                    ".recipe/spec/": "spec/",
+                    ".recipe/src/": "%SRC_DIR%/",
+                    ".recipe/templates/": "templates/",
+                    ".recipe/tests/": "tests/"
+                }
+            },
+            "files": [],
+            "ref": "8d32c12797d022e670e2e9b8416c00235089ef06"
+        }
+    }
+}

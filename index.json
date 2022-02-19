@@ -896,6 +896,18 @@
         "moneyphp/money-bundle": [
             "0.1"
         ],
+        "monofony/admin-meta": [
+            "0.8"
+        ],
+        "monofony/api-meta": [
+            "0.8"
+        ],
+        "monofony/core-meta": [
+            "0.8"
+        ],
+        "monofony/front-meta": [
+            "0.8"
+        ],
         "monsieurbiz/sylius-admin-better-login-plugin": [
             "1.0"
         ],
