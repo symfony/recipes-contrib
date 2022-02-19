@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "nzo/url-encryptor-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Nzo\\UrlEncryptorBundle\\NzoUrlEncryptorBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "NZO_ENCRYPTOR_SECRET": "change_me",
+                    "NZO_ENCRYPTOR_IV": "change_me"
+                }
+            },
+            "files": {
+                "config/packages/nzo_encryptor.yaml": {
+                    "contents": [
+                        "nzo_encryptor:",
+                        "    secret_key: '%env(NZO_ENCRYPTOR_SECRET)%'",
+                        "    secret_iv:  '%env(NZO_ENCRYPTOR_IV)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "42101a4fa1a537375c079e952e75338d017d6dae"
+        }
+    }
+}

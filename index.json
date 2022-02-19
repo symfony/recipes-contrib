@@ -1017,6 +1017,9 @@
         "numberninecms/cms": [
             "0.2"
         ],
+        "nzo/url-encryptor-bundle": [
+            "6.0"
+        ],
         "oat-sa/bundle-health-check": [
             "1.0"
         ],
