@@ -1,0 +1,16 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "src/": "%SRC_DIR%/"
+    },
+    "env": {
+        "APP_ENV": "dev"
+    },
+    "gitignore": [
+        "/.env.local",
+        "/.env.local.php",
+        "/.env.*.local",
+        "/%VAR_DIR%/",
+        "/vendor/"
+    ]
+}
