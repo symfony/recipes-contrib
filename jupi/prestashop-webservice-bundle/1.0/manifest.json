@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Jupi007\\PrestaShopWebserviceBundle\\Jupi007PrestaShopWebserviceBundle": ["all"]
+        "Jupi\\PrestaShopWebserviceBundle\\JupiPrestaShopWebserviceBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
