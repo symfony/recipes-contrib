@@ -1098,6 +1098,10 @@
         "pasaiakoudala/authbundle": [
             "0.1"
         ],
+        "patchlevel/event-sourcing-bundle": [
+            "1.0",
+            "1.2"
+        ],
         "payplug/sylius-payplug-plugin": [
             "0.2"
         ],
