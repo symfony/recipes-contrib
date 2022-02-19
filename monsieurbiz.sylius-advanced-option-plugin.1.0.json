@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "monsieurbiz/sylius-advanced-option-plugin": {
+            "manifest": {
+                "bundles": {
+                    "MonsieurBiz\\SyliusAdvancedOptionPlugin\\MonsieurBizSyliusAdvancedOptionPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "copy-from-package": {
+                    "src/Resources/templates/": "templates/"
+                }
+            },
+            "files": {
+                "config/packages/monsieurbiz_sylius_advanced_option_plugin.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@MonsieurBizSyliusAdvancedOptionPlugin/Resources/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/monsieurbiz_sylius_advanced_option_plugin.yaml": {
+                    "contents": [
+                        "monsieurbiz_advanced_option_admin:",
+                        "    resource: \"@MonsieurBizSyliusAdvancedOptionPlugin/Resources/config/routing/admin.yaml\"",
+                        "    prefix: /%sylius_admin.path_name%",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0268ed50008430d50fc45493fc8dcd6876315f1e"
+        }
+    }
+}

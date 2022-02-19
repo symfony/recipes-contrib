@@ -933,6 +933,9 @@
         "monsieurbiz/sylius-admin-better-login-plugin": [
             "1.0"
         ],
+        "monsieurbiz/sylius-advanced-option-plugin": [
+            "1.0"
+        ],
         "monsieurbiz/sylius-alert-message-plugin": [
             "1.0"
         ],
