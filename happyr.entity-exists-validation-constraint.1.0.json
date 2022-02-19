@@ -1,0 +1,25 @@
+{
+    "manifests": {
+        "happyr/entity-exists-validation-constraint": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/happyr_entity_exists_validator.yaml": {
+                    "contents": [
+                        "# See Readme at https://github.com/Happyr/entity-exists-validation-constraint",
+                        "services:",
+                        "    Happyr\\Validator\\Constraint\\EntityExistValidator:",
+                        "        arguments: [ '@doctrine.orm.entity_manager' ]",
+                        "        tags: [ 'validator.constraint_validator' ]",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6bb4d395c4af35301599aec4f7b6810c3fb660cb"
+        }
+    }
+}

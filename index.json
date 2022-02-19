@@ -549,6 +549,9 @@
         "hans-peter-ording/nflfastr-symfony-bundle": [
             "0.9"
         ],
+        "happyr/entity-exists-validation-constraint": [
+            "1.0"
+        ],
         "happyr/json-api-response-factory": [
             "0.1"
         ],
