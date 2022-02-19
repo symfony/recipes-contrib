@@ -115,6 +115,12 @@
         "birkof/netopia-mobilpay-bundle": [
             "1.0"
         ],
+        "bitbag/cms-plugin": [
+            "3.0"
+        ],
+        "bitbag/product-bundle-plugin": [
+            "1.2"
+        ],
         "bitbag/shipping-export-plugin": [
             "1.0"
         ],

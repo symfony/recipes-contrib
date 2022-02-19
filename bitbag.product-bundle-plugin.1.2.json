@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "bitbag/product-bundle-plugin": {
+            "manifest": {
+                "bundles": {
+                    "BitBag\\SyliusProductBundlePlugin\\BitBagSyliusProductBundlePlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  If you want to contact us, the best way is to fill the form on our website or send us an e-mail to <comment>hello@bitbag.io</comment> with your question(s).",
+                    "  We guarantee that we answer as soon as we can!"
+                ]
+            },
+            "files": {
+                "config/packages/bitbag_product_bundle_plugin.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@BitBagSyliusProductBundlePlugin/Resources/config/config.yml\" }",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/bitbag_product_bundle_plugin.yaml": {
+                    "contents": [
+                        "bitbag_sylius_product_bundle_plugin:",
+                        "    resource: \"@BitBagSyliusProductBundlePlugin/Resources/config/routing.yml\"",
+                        "    prefix: /admin",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8efcad59ed3478924f2b5fa78572929b28e8b898"
+        }
+    }
+}

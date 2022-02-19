@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "bitbag/cms-plugin": {
+            "manifest": {
+                "bundles": {
+                    "BitBag\\SyliusCmsPlugin\\BitBagSyliusCmsPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  If you want to contact us, the best way is to fill the form on our website or send us an e-mail to <comment>hello@bitbag.io</comment> with your question(s).",
+                    "  We guarantee that we answer as soon as we can!"
+                ]
+            },
+            "files": {
+                "config/packages/bitbag_cms_plugin.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@BitBagSyliusCmsPlugin/Resources/config/config.yml\" }",
+                        "",
+                        "twig:",
+                        "    form_themes:",
+                        "        - '@BitBagSyliusCmsPlugin/Form/ckeditor_widget.html.twig'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/bitbag_cms_plugin.yaml": {
+                    "contents": [
+                        "bitbag_sylius_cms_plugin:",
+                        "    resource: \"@BitBagSyliusCmsPlugin/Resources/config/routing.yml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e3c6714d3910e4a76171a069242fe2a2ceb220af"
+        }
+    }
+}
