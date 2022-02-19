@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "BitBag\\SyliusProductBundlePlugin\\BitBagSyliusProductBundlePlugin": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
