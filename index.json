@@ -712,7 +712,8 @@
         ],
         "kunstmaan/admin-bundle": [
             "5.2",
-            "5.9"
+            "5.9",
+            "5.10"
         ],
         "kunstmaan/adminlist-bundle": [
             "5.2"
@@ -1379,7 +1380,8 @@
             "2.0"
         ],
         "sulu/form-bundle": [
-            "2.0"
+            "2.0",
+            "2.2"
         ],
         "sulu/headless-bundle": [
             "0.1"
