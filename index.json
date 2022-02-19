@@ -311,6 +311,9 @@
         "doctrine/phpcr-dbal-symfony-pack": [
             "1.0"
         ],
+        "drenso/symfony-oidc-bundle": [
+            "2.0"
+        ],
         "drenso/symfony-shared": [
             "0.8"
         ],
