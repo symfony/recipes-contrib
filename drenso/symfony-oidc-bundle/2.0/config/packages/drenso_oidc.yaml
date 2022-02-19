@@ -1,0 +1,18 @@
+drenso_oidc:
+    #default_client: default # The default client, will be aliased to OidcClientInterface
+    clients:
+        default: # The client name, each client will be aliased to its name (for example, $defaultOidcClient)
+            # Required OIDC client configuration
+            well_known_url: '%env(OIDC_WELL_KNOWN_URL)%'
+            client_id: '%env(OIDC_CLIENT_ID)%'
+            client_secret: '%env(OIDC_CLIENT_SECRET)%'
+
+            # Extra configuration options
+            #redirect_route: '/login_check'
+            #custom_client_headers: []
+
+        # Add any extra client
+        #link: # Will be accessible using $linkOidcClient
+            #well_known_url: '%env(LINK_WELL_KNOWN_URL)%'
+            #client_id: '%env(LINK_CLIENT_ID)%'
+            #client_secret: '%env(LINK_CLIENT_SECRET)%'
