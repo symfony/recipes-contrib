@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "coka/input-handler-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Oka\\InputHandlerBundle\\OkaInputHandlerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/oka_input_handler.yaml": {
+                    "contents": [
+                        "oka_input_handler:",
+                        "    error_handler:",
+                        "        default_request_format: 'json'",
+                        "        override_problem_normalizer: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "53d28efbdf7c6eb4b56f0760de9177a6a729768a"
+        }
+    }
+}
