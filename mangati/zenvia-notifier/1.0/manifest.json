@@ -1,0 +1,5 @@
+{
+    "env": {
+        "#1": "ZENVIA_DSN=zenvia://FROM:TOKEN@default"
+    }
+}
