@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "rikudou/psr6-dynamo-db-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Rikudou\\DynamoDbCacheBundle\\RikudouDynamoDbCacheBundle": [
+                        "prod"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "DYNAMODB_CACHE_TABLE": "cache",
+                    "#AWS_REGION": "us-east-1"
+                }
+            },
+            "files": {
+                "config/packages/prod/rikudou_dynamo_db_cache.yaml": {
+                    "contents": [
+                        "rikudou_dynamo_db_cache:",
+                        "    table: '%env(DYNAMODB_CACHE_TABLE)%'",
+                        "    # Use DynamoDB by default for cache & sessions",
+                        "    replace_default_adapter: true",
+                        "    client_config:",
+                        "        region: '%env(AWS_REGION)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b8c90b14aff68e58377f293274db6e5a9855445a"
+        }
+    }
+}

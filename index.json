@@ -1269,6 +1269,9 @@
         "redrat/api-helper-bundle": [
             "0.1"
         ],
+        "rikudou/psr6-dynamo-db-bundle": [
+            "2.0"
+        ],
         "ro0nl/http-responder": [
             "0.1"
         ],
