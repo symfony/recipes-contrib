@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "kunstmaan/cookie-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Kunstmaan\\CookieBundle\\KunstmaanCookieBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/kunstmaan_cookie.yaml": {
+                    "contents": [
+                        "KunstmaanCookieBundle:",
+                        "    resource: \"@KunstmaanCookieBundle/Resources/config/routing.yml\"",
+                        "    # If your site is not multilanguage, remove the \"{_locale}/\" part of prefix and requirements",
+                        "    prefix:   /{_locale}/",
+                        "    requirements:",
+                        "        _locale: \"%kunstmaan_admin.required_locales%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "23aa5cbfcce8b587a5751a137bd09ab7fc3a8af8"
+        }
+    }
+}

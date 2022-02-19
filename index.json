@@ -721,6 +721,9 @@
         "kunstmaan/config-bundle": [
             "5.2"
         ],
+        "kunstmaan/cookie-bundle": [
+            "6.0"
+        ],
         "kunstmaan/dashboard-bundle": [
             "5.2"
         ],
