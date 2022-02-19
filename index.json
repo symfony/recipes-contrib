@@ -1175,7 +1175,8 @@
             "1.0"
         ],
         "qossmic/deptrac-shim": [
-            "0.7"
+            "0.7",
+            "0.19"
         ],
         "ramsey/uuid-doctrine": [
             "1.3"
