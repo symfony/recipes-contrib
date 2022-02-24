@@ -1,6 +1,9 @@
 {
     "aliases": [],
     "recipes": {
+        "abel/keycloak-bearer-only-adapter-bundle": [
+            "1.0"
+        ],
         "ad3n/ratchet-bundle": [
             "0.4"
         ],

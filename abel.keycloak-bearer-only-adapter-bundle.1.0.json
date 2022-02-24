@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "abel/keycloak-bearer-only-adapter-bundle": {
+            "manifest": {
+                "bundles": {
+                    "ABEL\\Bundle\\keycloakBearerOnlyAdapterBundle\\ABELkeycloakBearerOnlyAdapterBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "OAUTH_KEYCLOAK_ISSUER": "...",
+                    "OAUTH_KEYCLOAK_REALM": "...",
+                    "OAUTH_KEYCLOAK_CLIENT_ID": "...",
+                    "OAUTH_KEYCLOAK_CLIENT_SECRET": "..."
+                }
+            },
+            "files": {
+                "config/packages/abel_keycloak_bearer_only_adapter.yaml": {
+                    "contents": [
+                        "abel_keycloak_bearer_only_adapter:",
+                        "    issuer: '%env(OAUTH_KEYCLOAK_ISSUER)%'",
+                        "    realm: '%env(OAUTH_KEYCLOAK_REALM)%'",
+                        "    client_id: '%env(OAUTH_KEYCLOAK_CLIENT_ID)%'",
+                        "    client_secret: '%env(OAUTH_KEYCLOAK_CLIENT_SECRET)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "310bec9aba1b62024ff8fc43e9df318e00eac4ab"
+        }
+    }
+}
