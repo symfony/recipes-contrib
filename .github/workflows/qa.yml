@@ -14,5 +14,3 @@ jobs:
             branch: master
             contrib: true
             find_yaml: -not -wholename 'codeception/codeception/*/tests/*' -not -wholename 'codeception/codeception/*/codeception.yml'
-            create_project_php: '8.0'
-
