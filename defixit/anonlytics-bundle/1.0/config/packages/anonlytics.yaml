@@ -1,0 +1,3 @@
+anonlytics:
+    client_token: '%env(resolve:ANONLYTICS_CLIENT_TOKEN)%'
+    site_token: '%env(resolve:ANONLYTICS_SITE_TOKEN)%'
