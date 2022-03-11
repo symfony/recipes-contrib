@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "DeFixIT\\AnonlyticsBundle\\AnonlyticsBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "ANONLYTICS_CLIENT_TOKEN": "",
+        "ANONLYTICS_SITE_TOKEN": ""
+    }
+}
