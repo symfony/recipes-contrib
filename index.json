@@ -285,6 +285,9 @@
         "debril/rss-atom-bundle": [
             "4.0"
         ],
+        "defixit/anonlytics-bundle": [
+            "1.0"
+        ],
         "dekalee/autopilot-bundle": [
             "1.0"
         ],
@@ -772,9 +775,6 @@
             "1.0"
         ],
         "lag/adminbundle": [
-            "1.0"
-        ],
-        "league/flysystem-bundle": [
             "1.0"
         ],
         "league/tactician-bundle": [

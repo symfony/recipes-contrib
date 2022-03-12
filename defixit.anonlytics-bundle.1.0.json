@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "defixit/anonlytics-bundle": {
+            "manifest": {
+                "bundles": {
+                    "DeFixIT\\AnonlyticsBundle\\AnonlyticsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "ANONLYTICS_CLIENT_TOKEN": "",
+                    "ANONLYTICS_SITE_TOKEN": ""
+                }
+            },
+            "files": {
+                "config/packages/anonlytics.yaml": {
+                    "contents": [
+                        "anonlytics:",
+                        "    client_token: '%env(resolve:ANONLYTICS_CLIENT_TOKEN)%'",
+                        "    site_token: '%env(resolve:ANONLYTICS_SITE_TOKEN)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d313a131498690388d69f3f93713d7f9e5816525"
+        }
+    }
+}
