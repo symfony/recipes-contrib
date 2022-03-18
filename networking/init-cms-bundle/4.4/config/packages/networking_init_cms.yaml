@@ -12,6 +12,9 @@ imports:
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/sonata_user.yaml" }
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/stof_doctrine_extensions.yaml" }
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/symfony_cmf_routing_extra.yaml" }
+    - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/webpack_encore.yaml" }
+    - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/assets.yamll" }
+    -
 # Default security configuration
 #    - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/security.yaml" }
 
