@@ -9,10 +9,12 @@ imports:
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/sonata_block.yaml" }
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/sonata_doctrine_admin.yaml" }
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/sonata_media.yaml" }
-    - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/sonata_notification.yaml" }
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/sonata_user.yaml" }
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/stof_doctrine_extensions.yaml" }
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/symfony_cmf_routing_extra.yaml" }
+    - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/webpack_encore.yaml" }
+    - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/assets.yaml" }
+
 # Default security configuration
 #    - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/security.yaml" }
 
