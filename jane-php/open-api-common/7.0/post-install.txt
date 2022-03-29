@@ -1,0 +1,8 @@
+  * <fg=blue>Finish</> package configuration:
+    1. Configure <comment>config/jane/open_api.php</> with your specification details
+    2. Run <comment>bin/jane-open-api-generate</>
+    3. Add <comment>generated/</> directory to your composer autoload definition (eg. <comment>"MyApp\\Library\\Generated\\": "generated/"</>)
+    4. Open <comment>config/packages/jane.yaml</> and replace <comment>MyApp\Library\Generated\</> namespace with your generated namespace.
+    5. Then remove line comments
+
+Documentation: https://jane.readthedocs.io/en/latest/
