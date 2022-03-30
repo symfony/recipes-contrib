@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "Sonata\\Twig\\Bridge\\Symfony\\SonataTwigBundle": ["all"]
+    }
+}
