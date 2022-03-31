@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "sonata-project/block-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Sonata\\BlockBundle\\SonataBlockBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sonata_block.yaml": {
+                    "contents": [
+                        "sonata_block:",
+                        "    http_cache: false",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b4edd2a1e6ac1827202f336cac2771cb529de542"
+        }
+    }
+}

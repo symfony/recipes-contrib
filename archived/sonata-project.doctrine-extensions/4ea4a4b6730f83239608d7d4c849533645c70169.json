@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "sonata-project/doctrine-extensions": {
+            "manifest": {
+                "bundles": {
+                    "Sonata\\Doctrine\\Bridge\\Symfony\\SonataDoctrineBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "4ea4a4b6730f83239608d7d4c849533645c70169"
+        }
+    }
+}

@@ -276,7 +276,13 @@
         "datana-gmbh/intercom-config": [
             "1.1"
         ],
+        "datana-gmbh/logz-io-handler": [
+            "1.0"
+        ],
         "datana-gmbh/sendgrid-dynamic-template-mailer": [
+            "1.0"
+        ],
+        "datana-gmbh/zammad-api": [
             "1.0"
         ],
         "deamon/logger-extra-bundle": [
@@ -631,10 +637,12 @@
         ],
         "jane-php/json-schema": [
             "5.0",
-            "6.0"
+            "6.0",
+            "7.0"
         ],
         "jane-php/open-api-common": [
-            "6.0"
+            "6.0",
+            "7.0"
         ],
         "jawira/case-converter-twig": [
             "0.0"
@@ -1346,11 +1354,20 @@
             "3.64",
             "4.0"
         ],
+        "sonata-project/block-bundle": [
+            "4.11"
+        ],
         "sonata-project/classification-bundle": [
             "3.7"
         ],
         "sonata-project/core-bundle": [
             "3.9"
+        ],
+        "sonata-project/doctrine-extensions": [
+            "1.8"
+        ],
+        "sonata-project/exporter": [
+            "2.4"
         ],
         "sonata-project/form-extensions": [
             "1.0",
@@ -1367,6 +1384,9 @@
         ],
         "sonata-project/translation-bundle": [
             "2.3"
+        ],
+        "sonata-project/twig-extensions": [
+            "1.2"
         ],
         "spiechu/symfony-commons-bundle": [
             "0.1"
@@ -1565,6 +1585,9 @@
         "vich/uploader-bundle": [
             "1.7"
         ],
+        "victor-prdh/recaptcha-bundle": [
+            "1.5"
+        ],
         "vincentchalamon/nav-bundle": [
             "1.0"
         ],
@@ -1647,10 +1670,16 @@
         "jane-php/json-schema": {
             "6.0": {
                 "symfony/symfony": "<5.0"
+            },
+            "7.0": {
+                "symfony/symfony": "<5.0"
             }
         },
         "jane-php/open-api-common": {
             "6.0": {
+                "symfony/symfony": "<5.0"
+            },
+            "7.0": {
                 "symfony/symfony": "<5.0"
             }
         }

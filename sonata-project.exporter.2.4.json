@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "sonata-project/exporter": {
+            "manifest": {
+                "bundles": {
+                    "Sonata\\Exporter\\Bridge\\Symfony\\SonataExporterBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "93d6df022ef1dc24bdfa8667ddd560bbde89a7cc"
+        }
+    }
+}

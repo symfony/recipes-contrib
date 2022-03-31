@@ -1,0 +1,48 @@
+{
+    "manifests": {
+        "datana-gmbh/zammad-api": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "ZAMMAD_API_BASE_URI": "",
+                    "ZAMMAD_API_TOKEN": ""
+                }
+            },
+            "files": {
+                "config/packages/datana_zammad_api.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "",
+                        "    Datana\\Zammad\\Api\\ZammadClient:",
+                        "        arguments:",
+                        "            - '%env(ZAMMAD_API_BASE_URI)%'",
+                        "            - '%env(ZAMMAD_API_TOKEN)%'",
+                        "",
+                        "    Datana\\Zammad\\Api\\TicketsApi: null",
+                        "    Datana\\Zammad\\Api\\NullTicketsApi: null",
+                        "    Datana\\Zammad\\Api\\TicketsApiInterface: '@Datana\\Zammad\\Api\\TicketsApi'",
+                        "",
+                        "when@prod:",
+                        "    services:",
+                        "        Datana\\Zammad\\Api\\TicketsApiInterface: '@Datana\\Zammad\\Api\\TicketsApi'",
+                        "",
+                        "when@dev:",
+                        "    services:",
+                        "        Datana\\Zammad\\Api\\TicketsApiInterface: '@Datana\\Zammad\\Api\\NullTicketsApi'",
+                        "",
+                        "when@test:",
+                        "    services:",
+                        "        Datana\\Zammad\\Api\\TicketsApiInterface: '@Datana\\Zammad\\Api\\NullTicketsApi'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a6faf65c34a5e17f25d32c1d54a50fd06246b8ae"
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "datana-gmbh/logz-io-handler": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "LOGZ_IO_TOKEN": "",
+                    "LOGZ_IO_APPLICATION_NAME": ""
+                }
+            },
+            "files": {
+                "config/packages/datana_logz_io_handler.yaml": {
+                    "contents": [
+                        "services:",
+                        "    Inpsyde\\LogzIoMonolog\\Handler\\LogzIoHandler:",
+                        "        arguments:",
+                        "            $token: '%env(LOGZ_IO_TOKEN)%'",
+                        "            $host: 'listener-eu.logz.io'",
+                        "",
+                        "    Datana\\LogzIo\\Handler\\Processor\\AddApplicationNameProcessor:",
+                        "        arguments:",
+                        "            - '%env(LOGZ_IO_APPLICATION_NAME)%'",
+                        "        tags: ['monolog.processor']",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f4451b890bd52ca14812f70d68d733b5f2de6ea4"
+        }
+    }
+}

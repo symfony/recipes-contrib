@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "sonata-project/twig-extensions": {
+            "manifest": {
+                "bundles": {
+                    "Sonata\\Twig\\Bridge\\Symfony\\SonataTwigBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "30dba2f9b719f21b497a6302f41aac07f9079e13"
+        }
+    }
+}

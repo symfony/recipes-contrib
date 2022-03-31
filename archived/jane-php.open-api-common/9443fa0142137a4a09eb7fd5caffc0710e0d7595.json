@@ -1,0 +1,75 @@
+{
+    "manifests": {
+        "jane-php/open-api-common": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "bin/": "%BIN_DIR%/",
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "conflict": {
+                    "symfony/symfony": "<5.0"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Finish</> package configuration:",
+                    "    1. Configure <comment>config/jane/open_api.php</> with your specification details",
+                    "    2. Run <comment>bin/jane-open-api-generate</>",
+                    "    3. Add <comment>generated/</> directory to your composer autoload definition (eg. <comment>\"MyApp\\\\Library\\\\Generated\\\\\": \"generated/\"</>)",
+                    "    4. Open <comment>config/packages/jane.yaml</> and replace <comment>MyApp\\Library\\Generated\\</> namespace with your generated namespace.",
+                    "    5. Then remove line comments",
+                    "",
+                    "Documentation: https://jane.readthedocs.io/en/latest/"
+                ]
+            },
+            "files": {
+                "bin/jane-open-api-generate": {
+                    "contents": [
+                        "#!/usr/bin/env php",
+                        "<?php",
+                        "",
+                        "require __DIR__ . '/../vendor/autoload.php';",
+                        "",
+                        "use Jane\\Component\\OpenApiCommon\\Console\\Command\\GenerateCommand;",
+                        "use Jane\\Component\\OpenApiCommon\\Console\\Loader\\ConfigLoader;",
+                        "use Jane\\Component\\OpenApiCommon\\Console\\Loader\\OpenApiMatcher;",
+                        "use Jane\\Component\\OpenApiCommon\\Console\\Loader\\SchemaLoader;",
+                        "use Symfony\\Component\\Console\\Input\\ArrayInput;",
+                        "use Symfony\\Component\\Console\\Output\\NullOutput;",
+                        "",
+                        "$command = new GenerateCommand(new ConfigLoader(), new SchemaLoader(), new OpenApiMatcher());",
+                        "$inputArray = new ArrayInput(['--config-file' => __DIR__ . '/../config/jane/open_api.php'], $command->getDefinition());",
+                        "",
+                        "$command->execute($inputArray, new NullOutput());",
+                        ""
+                    ],
+                    "executable": true
+                },
+                "config/jane/open_api.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "return [",
+                        "    'openapi-file' => __DIR__ . '/open-api.yaml',",
+                        "    'namespace' => 'MyApp\\Library\\Generated',",
+                        "    'directory' => __DIR__ . '/../../generated',",
+                        "];",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/jane.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "#    MyApp\\Library\\Generated\\Normalizer\\JaneObjectNormalizer: null",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9443fa0142137a4a09eb7fd5caffc0710e0d7595"
+        }
+    }
+}

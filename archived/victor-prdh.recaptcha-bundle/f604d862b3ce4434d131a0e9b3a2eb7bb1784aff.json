@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "victor-prdh/recaptcha-bundle": {
+            "manifest": {
+                "bundles": {
+                    "VictorPrdh\\RecaptchaBundle\\RecaptchaBundle": [
+                        "all"
+                    ]
+                },
+                "env": {
+                    "GOOGLE_RECAPTCHA_SITE_KEY": "",
+                    "GOOGLE_RECAPTCHA_SECRET_KEY": ""
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/recaptcha.yaml": {
+                    "contents": [
+                        "recaptcha:",
+                        "    google_site_key: '%env(GOOGLE_RECAPTCHA_SITE_KEY)%'",
+                        "    google_secret_key: '%env(GOOGLE_RECAPTCHA_SECRET_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f604d862b3ce4434d131a0e9b3a2eb7bb1784aff"
+        }
+    }
+}
