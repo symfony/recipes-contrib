@@ -4,7 +4,7 @@ services:
             $token: '%env(LOGZ_IO_TOKEN)%'
             $host: 'listener-eu.logz.io'
 
-    Datana\LogzIo\Handler\Processor\AddApplicationNameProcessor:
+    Datana\LogzIo\Handler\Logger\Processor\AddApplicationNameProcessor:
         arguments:
             - '%env(LOGZ_IO_APPLICATION_NAME)%'
         tags: ['monolog.processor']
