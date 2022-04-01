@@ -830,6 +830,9 @@
         "loophp/psr17": [
             "1.0"
         ],
+        "loophp/repository-monadic-helper": [
+            "1.0"
+        ],
         "m-adamski/symfony-mailer-bundle": [
             "1.0"
         ],

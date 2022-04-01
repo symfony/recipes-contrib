@@ -1,0 +1,26 @@
+{
+    "manifests": {
+        "loophp/repository-monadic-helper": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/loophp_repository_monadic_helper.yaml": {
+                    "contents": [
+                        "services:",
+                        "    loophp\\RepositoryMonadicHelper\\MonadicRepositoryFactory:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    loophp\\RepositoryMonadicHelper\\MonadicRepositoryFactoryInterface: '@loophp\\RepositoryMonadicHelper\\MonadicRepositoryFactory'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9cbe40b028acd1deace713732c19c5bb16b18842"
+        }
+    }
+}
