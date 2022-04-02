@@ -1,4 +1,7 @@
 services:
+    _defaults:
+        autowire: true
+
     Inpsyde\LogzIoMonolog\Handler\LogzIoHandler:
         arguments:
             $token: '%env(LOGZ_IO_TOKEN)%'
