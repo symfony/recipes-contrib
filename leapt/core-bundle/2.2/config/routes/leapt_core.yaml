@@ -1,0 +1,6 @@
+leapt_core_feed:
+    resource: '@LeaptCoreBundle/Resources/config/routing_feed.yml'
+    prefix: /feed
+
+leapt_core_sitemap:
+    resource: '@LeaptCoreBundle/Resources/config/routing_sitemap.yml'

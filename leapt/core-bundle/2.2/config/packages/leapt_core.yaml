@@ -1,3 +1,3 @@
-# Read the documentation: https://core-bundle.leapt.io/configuration_reference.html
+# Read the documentation: https://core-bundle.leapt.dev/configuration_reference/
 leapt_core:
     upload_dir: '%kernel.project_dir%/public'
