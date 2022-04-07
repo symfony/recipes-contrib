@@ -1,13 +1,13 @@
 meta:
-  defaults:
-    description: '' # Enter the default description and get contents with meta_description() function in your template",
-    title: '' # Enter the default title for your application and get contents with meta_title() function in your template",
-    'og:image': "Feel free to add any tag and get their contents with meta('og:image') function or a filter: 'og:image'"
-  paths:
-    '/any-path': #for this path, default value will be replaced"
-      description: 'A custom description for http://my_app/any-path' #for this path, default value will be replaced",
-      title: 'A custom title for http://my_app/any-path' #for this path, default value will be replaced"
-    # You can custom meta tags for any path
-    #'/another-path':
-    #  description:'foo'
-    #  title:'bar'
+    defaults:
+        description: '' # Enter the default description and get contents with meta_description() function in your template",
+        title: '' # Enter the default title for your application and get contents with meta_title() function in your template",
+        'og:image': "Feel free to add any tag and get their contents with meta('og:image') function or a filter: 'og:image'"
+    paths:
+        '/any-path': #for this path, default value will be replaced"
+            description: 'A custom description for http://my_app/any-path' #for this path, default value will be replaced",
+            title: 'A custom title for http://my_app/any-path' #for this path, default value will be replaced"
+        # You can customize meta tags for any path
+        #'/another-path':
+        #    description:'foo'
+        #    title:'bar'
