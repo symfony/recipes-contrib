@@ -1,4 +1,4 @@
-meta:
+longitude_one_meta:
     defaults:
         description: '' # Enter the default description and get contents with meta_description() function in your template",
         title: '' # Enter the default title for your application and get contents with meta_title() function in your template",
