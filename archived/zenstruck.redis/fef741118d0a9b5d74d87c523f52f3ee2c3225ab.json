@@ -1,0 +1,86 @@
+{
+    "manifests": {
+        "zenstruck/redis": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "REDIS_DSN": "redis://localhost"
+                }
+            },
+            "files": {
+                "config/packages/zenstruck_redis.yaml": {
+                    "contents": [
+                        "services:",
+                        "    Zenstruck\\Redis:",
+                        "        factory: [ 'Zenstruck\\Redis', 'create' ]",
+                        "        arguments: [ '%env(REDIS_DSN)%' ]",
+                        "",
+                        "# Define additional clients here. See https://github.com/zenstruck/redis#readme",
+                        "# for more details.",
+                        "#",
+                        "# Separate proxy's that have different prefixes:",
+                        "#",
+                        "#    redis1:",
+                        "#        class: Zenstruck\\Redis",
+                        "#        factory: ['Zenstruck\\Redis', 'create']",
+                        "#        arguments: ['%env(REDIS_DSN)%', { prefix: 'prefix1:' }]",
+                        "#    redis2:",
+                        "#        class: Zenstruck\\Redis",
+                        "#        factory: ['Zenstruck\\Redis', 'create']",
+                        "#        arguments: ['%env(REDIS_DSN)%', { prefix: 'prefix2:' }]",
+                        "#",
+                        "# Separate proxy that uses PHP serialization:",
+                        "#",
+                        "#    serialization_redis:",
+                        "#        class: Zenstruck\\Redis",
+                        "#        factory: ['Zenstruck\\Redis', 'create']",
+                        "#        arguments: ['%env(REDIS_DSN)%', { serializer: php }]",
+                        "#",
+                        "# ExpiringSet service:",
+                        "#",
+                        "#    active_users:",
+                        "#        class: Zenstruck\\Redis\\Utility\\ExpiringSet",
+                        "#        factory: ['@Zenstruck\\Redis', 'expiringSet']",
+                        "#        arguments:",
+                        "#          - active_users # redis key",
+                        "#",
+                        "# Configure Redis session storage (symfony/expression-language required)",
+                        "#",
+                        "#    redis_session_handler:",
+                        "#        class:  Symfony\\Component\\HttpFoundation\\Session\\Storage\\Handler\\RedisSessionHandler",
+                        "#        arguments:",
+                        "#            - \"@=service('Zenstruck\\\\\\\\Redis').realClient()\"",
+                        "#",
+                        "# config/packages/framework.yaml:",
+                        "# framework:",
+                        "#    # ...",
+                        "#    session:",
+                        "#        handler_id: redis_session_handler",
+                        "#",
+                        "# Specific clients that are autowireable:",
+                        "#",
+                        "#    Redis:",
+                        "#        class: Redis",
+                        "#        factory: ['Zenstruck\\Redis', 'createClient']",
+                        "#        arguments: ['%env(REDIS_DSN)%'] # note REDIS_DSN must be for \\Redis client",
+                        "#",
+                        "#    RedisArray:",
+                        "#        class: RedisArray",
+                        "#        factory: ['Zenstruck\\Redis', 'createClient']",
+                        "#        arguments: ['%env(REDIS_DSN)%'] # note REDIS_DSN must be for \\RedisArray client",
+                        "#",
+                        "#    RedisCluster:",
+                        "#        class: RedisCluster",
+                        "#        factory: ['Zenstruck\\Redis', 'createClient']",
+                        "#        arguments: ['%env(REDIS_DSN)%'] # note REDIS_DSN must be for \\RedisCluster client",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "fef741118d0a9b5d74d87c523f52f3ee2c3225ab"
+        }
+    }
+}

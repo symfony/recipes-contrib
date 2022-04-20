@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "datana-gmbh/doctrine-postgres-milliseconds-platform": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/datana_doctrine_postgres_milliseconds_platform.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "",
+                        "    Datana\\Doctrine\\Postgres\\Platform\\Doctrine\\DBAL\\Platforms\\PostgreSQLMillisecondsPlatform: null",
+                        "",
+                        "doctrine:",
+                        "    dbal:",
+                        "        # We want to store DateTime objects with milliseconds",
+                        "        # The solution is built on https://github.com/doctrine/dbal/issues/2873#issuecomment-701052412",
+                        "        # but instead of using microseconds we use milliseconds",
+                        "        platform_service: Datana\\Doctrine\\Postgres\\Platform\\Doctrine\\DBAL\\Platforms\\PostgreSQLMillisecondsPlatform",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "af0c8d3974e5582ae0508fb85856e11ae8802c04"
+        }
+    }
+}

@@ -273,6 +273,12 @@
             "1.0",
             "2.3"
         ],
+        "datana-gmbh/doctrine-datetime-milliseconds-type": [
+            "1.0"
+        ],
+        "datana-gmbh/doctrine-postgres-milliseconds-platform": [
+            "1.0"
+        ],
         "datana-gmbh/intercom-config": [
             "1.1"
         ],
@@ -1656,8 +1662,14 @@
         "zendesk/zendesk_api_client_php": [
             "2.2"
         ],
+        "zenstruck/redis": [
+            "0.1"
+        ],
         "zenstruck/signed-url-bundle": [
             "0.1"
+        ],
+        "zenstruck/twig-service-bundle": [
+            "0.2"
         ],
         "zephyr/allmysms-bundle": [
             "1.0"
@@ -1688,11 +1700,11 @@
         }
     },
     "versions": [],
-    "branch": "master",
+    "branch": "main",
     "is_contrib": true,
     "_links": {
         "repository": "github.com/symfony/recipes-contrib",
-        "origin_template": "{package}:{version}@github.com/symfony/recipes-contrib:master",
+        "origin_template": "{package}:{version}@github.com/symfony/recipes-contrib:main",
         "recipe_template": "https://raw.githubusercontent.com/symfony/recipes-contrib/flex/main/{package_dotted}.{version}.json",
         "recipe_template_relative": "{package_dotted}.{version}.json",
         "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes-contrib/flex/main/archived/{package_dotted}/{ref}.json",

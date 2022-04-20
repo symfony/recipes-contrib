@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "zenstruck/twig-service-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Zenstruck\\Twig\\ZenstruckTwigServiceBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "9d9a3fe38d928e035eb80587fd875e78294f39e2"
+        }
+    }
+}
