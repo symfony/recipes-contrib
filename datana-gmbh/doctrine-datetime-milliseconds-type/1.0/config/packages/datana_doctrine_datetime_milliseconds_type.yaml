@@ -1,0 +1,13 @@
+services:
+    _defaults:
+        autowire: true
+
+    Datana\Doctrine\Type\Doctrine\DBAL\Types\Type\DateTimeMillisecondsType: null
+
+doctrine:
+    dbal:
+        types:
+            # We want to store DateTime objects with milliseconds
+            # The solution is built on https://github.com/doctrine/dbal/issues/2873#issuecomment-701052412
+            # but instead of using microseconds we use milliseconds
+            datetime: Datana\Doctrine\Type\Doctrine\DBAL\Types\Type\DateTimeMillisecondsType
