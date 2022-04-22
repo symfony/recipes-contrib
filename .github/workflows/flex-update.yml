@@ -1,7 +1,7 @@
 name: Update Flex endpoint
 
 on:
-    workflow_dispatch:
+    workflow_dispatch: null
     push:
         branches:
             - main
