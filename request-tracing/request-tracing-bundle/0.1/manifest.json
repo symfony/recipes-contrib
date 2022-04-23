@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "RequestTracing\\RequestTracingBundle\\RequestTracingBundle": ["all"]
+    }
+}
