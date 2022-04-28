@@ -1,0 +1,3 @@
+routmoute_sirene:
+    consumer_key: '%env(ROUTMOUTE_SIRENE_CONSUMER_KEY)%'
+    consumer_secret: '%env(ROUTMOUTE_SIRENE_CONSUMER_SECRET)%'
