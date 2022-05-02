@@ -11,6 +11,5 @@ jobs:
     call-qa:
         uses: symfony/recipes/.github/workflows/callable-qa.yml@main
         with:
-            branch: main
             contrib: true
             find_yaml: -not -wholename 'codeception/codeception/*/tests/*' -not -wholename 'codeception/codeception/*/codeception.yml'
