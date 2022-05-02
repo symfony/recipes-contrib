@@ -279,6 +279,9 @@
         "datana-gmbh/doctrine-postgres-milliseconds-platform": [
             "1.0"
         ],
+        "datana-gmbh/doctrine-postgres-public-schema-listener": [
+            "1.0"
+        ],
         "datana-gmbh/intercom-config": [
             "1.1"
         ],

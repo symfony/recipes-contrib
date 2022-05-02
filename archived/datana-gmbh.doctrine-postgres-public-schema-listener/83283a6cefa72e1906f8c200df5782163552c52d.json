@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "datana-gmbh/doctrine-postgres-public-schema-listener": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/datana_doctrine_postgres_public_schema_listener.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "",
+                        "    Datana\\Doctrine\\EventSubscriber\\MigrationEventSubscriber:",
+                        "        tags:",
+                        "            - { name: doctrine.event_subscriber, connection: default }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "83283a6cefa72e1906f8c200df5782163552c52d"
+        }
+    }
+}
