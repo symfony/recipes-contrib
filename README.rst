@@ -12,6 +12,8 @@ repository for your project, run the following command:
 
     composer config extra.symfony.allow-contrib true
 
+See `RECIPES.md`_ for a full list of recipes that live in this repository.
+
 Contributing
 ------------
 
@@ -72,3 +74,4 @@ front-end assets etc. Recipes are for quick installation of packages.
 .. _`Symfony Flex`: https://github.com/symfony/flex
 .. _`Symfony recipes`: https://github.com/symfony/recipes
 .. _`documentation`: https://github.com/symfony/recipes
+.. _`RECIPES.md`: https://github.com/symfony/recipes-contrib/blob/flex/main/RECIPES.md
