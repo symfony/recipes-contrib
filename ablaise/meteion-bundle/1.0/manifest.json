@@ -6,6 +6,6 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "METEION_RAWEXD_PATH": "/path/to/rawexd",
+        "METEION_RAWEXD_PATH": "/path/to/rawexd"
     }
 }
