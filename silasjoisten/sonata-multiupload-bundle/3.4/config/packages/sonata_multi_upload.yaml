@@ -1,7 +1,7 @@
 sonata_admin:
+    # Add the providers here to enable multiupload
     providers:
         - sonata.media.provider.image
-        - sonata.media.provider.video
 
     assets:
         extra_stylesheets:
