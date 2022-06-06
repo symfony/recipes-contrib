@@ -1,0 +1,40 @@
+{
+    "manifests": {
+        "leapt/froala-editor-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Leapt\\FroalaEditorBundle\\LeaptFroalaEditorBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/leapt_froala_editor.yaml": {
+                    "contents": [
+                        "twig:",
+                        "    form_themes:",
+                        "        - '@LeaptFroalaEditor/Form/froala_widget.html.twig'",
+                        "",
+                        "leapt_froala_editor:",
+                        "    language: en",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/leapt_froala_editor.yaml": {
+                    "contents": [
+                        "leapt_froala_editor:",
+                        "    resource: '@LeaptFroalaEditorBundle/Resources/config/routing.php'",
+                        "    prefix:   /froala-editor",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c2307db860954077e79f27ac1e8afa231e9fce89"
+        }
+    }
+}

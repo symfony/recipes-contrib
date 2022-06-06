@@ -1,0 +1,56 @@
+{
+    "manifests": {
+        "gesdinet/jwt-refresh-token-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Gesdinet\\JWTRefreshTokenBundle\\GesdinetJWTRefreshTokenBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/gesdinet_jwt_refresh_token.yaml": {
+                    "contents": [
+                        "gesdinet_jwt_refresh_token:",
+                        "    refresh_token_class: App\\Entity\\RefreshToken",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/gesdinet_jwt_refresh_token.yaml": {
+                    "contents": [
+                        "gesdinet_jwt_refresh_token:",
+                        "    path: /api/token/refresh",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/RefreshToken.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "use Gesdinet\\JWTRefreshTokenBundle\\Entity\\RefreshToken as BaseRefreshToken;",
+                        "",
+                        "/**",
+                        " * @ORM\\Entity",
+                        " * @ORM\\Table(\"refresh_tokens\")",
+                        " */",
+                        "class RefreshToken extends BaseRefreshToken",
+                        "{",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "13fb2b58ec6204211815eb6f4c69e4918e5af617"
+        }
+    }
+}

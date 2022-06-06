@@ -164,6 +164,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [ferror/phpscan](https://packagist.org/packages/ferror/phpscan) | [1.0](ferror/phpscan/1.0) |
 | [flagception/flagception-bundle](https://packagist.org/packages/flagception/flagception-bundle) | [3.0](flagception/flagception-bundle/3.0) |
 | [flux-se/sylius-payum-stripe-plugin](https://packagist.org/packages/flux-se/sylius-payum-stripe-plugin) | [2.0](flux-se/sylius-payum-stripe-plugin/2.0) |
+| [fpt/stripe-bundle](https://packagist.org/packages/fpt/stripe-bundle) | [0.5](fpt/stripe-bundle/0.5) |
 | [fresh/centrifugo-bundle](https://packagist.org/packages/fresh/centrifugo-bundle) | [1.3](fresh/centrifugo-bundle/1.3) |
 | [fresh/doctrine-enum-bundle](https://packagist.org/packages/fresh/doctrine-enum-bundle) | [6.0](fresh/doctrine-enum-bundle/6.0) |
 | [friends-of-behat/symfony-extension](https://packagist.org/packages/friends-of-behat/symfony-extension) | [2.0](friends-of-behat/symfony-extension/2.0) |
@@ -173,6 +174,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [friendsofsymfony/oauth-server-bundle](https://packagist.org/packages/friendsofsymfony/oauth-server-bundle) | [1.6](friendsofsymfony/oauth-server-bundle/1.6) |
 | [friendsofsymfony/rest-bundle](https://packagist.org/packages/friendsofsymfony/rest-bundle) | [2.2](friendsofsymfony/rest-bundle/2.2) |
 | [geosocio/http-serializer-bundle](https://packagist.org/packages/geosocio/http-serializer-bundle) | [2.0](geosocio/http-serializer-bundle/2.0) |
+| [gesdinet/jwt-refresh-token-bundle](https://packagist.org/packages/gesdinet/jwt-refresh-token-bundle) | [1.0](gesdinet/jwt-refresh-token-bundle/1.0) |
 | [gheb/configuration-converter-bundle](https://packagist.org/packages/gheb/configuration-converter-bundle) | [0.5](gheb/configuration-converter-bundle/0.5) |
 | [gheb/data-migrations-bundle](https://packagist.org/packages/gheb/data-migrations-bundle) | [1.3](gheb/data-migrations-bundle/1.3) |
 | [gheb/docusign-bundle](https://packagist.org/packages/gheb/docusign-bundle) | [5.0](gheb/docusign-bundle/5.0) |
@@ -259,8 +261,8 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [lag/adminbundle](https://packagist.org/packages/lag/adminbundle) | [1.0](lag/adminbundle/1.0) |
 | [league/tactician-bundle](https://packagist.org/packages/league/tactician-bundle) | [1.0](league/tactician-bundle/1.0) |
 | [leapt/core-bundle](https://packagist.org/packages/leapt/core-bundle) | [2.2](leapt/core-bundle/2.2) |
-| [leapt/froala-editor-bundle](https://packagist.org/packages/leapt/froala-editor-bundle) | [1.0](leapt/froala-editor-bundle/1.0) |
-| [leapt/im-bundle](https://packagist.org/packages/leapt/im-bundle) | [2.0](leapt/im-bundle/2.0) |
+| [leapt/froala-editor-bundle](https://packagist.org/packages/leapt/froala-editor-bundle) | [1.2](leapt/froala-editor-bundle/1.2) |
+| [leapt/im-bundle](https://packagist.org/packages/leapt/im-bundle) | [4.1](leapt/im-bundle/4.1) |
 | [leogout/seo-bundle](https://packagist.org/packages/leogout/seo-bundle) | [1.0](leogout/seo-bundle/1.0) |
 | [lepiaf/sapient-bundle](https://packagist.org/packages/lepiaf/sapient-bundle) | [0.1](lepiaf/sapient-bundle/0.1) |
 | [lexik/cron-file-generator-bundle](https://packagist.org/packages/lexik/cron-file-generator-bundle) | [1.0](lexik/cron-file-generator-bundle/1.0) |
@@ -433,7 +435,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sg/datatablesbundle](https://packagist.org/packages/sg/datatablesbundle) | [1.0](sg/datatablesbundle/1.0) |
 | [siganushka/generic-bundle](https://packagist.org/packages/siganushka/generic-bundle) | [0.3](siganushka/generic-bundle/0.3) |
 | [siganushka/region-bundle](https://packagist.org/packages/siganushka/region-bundle) | [0.1](siganushka/region-bundle/0.1) |
-| [silasjoisten/sonata-multiupload-bundle](https://packagist.org/packages/silasjoisten/sonata-multiupload-bundle) | [2.1](silasjoisten/sonata-multiupload-bundle/2.1) |
+| [silasjoisten/sonata-multiupload-bundle](https://packagist.org/packages/silasjoisten/sonata-multiupload-bundle) | [3.4](silasjoisten/sonata-multiupload-bundle/3.4) |
 | [slot/mandrill-bundle](https://packagist.org/packages/slot/mandrill-bundle) | [1.1](slot/mandrill-bundle/1.1) |
 | [snc/redis-bundle](https://packagist.org/packages/snc/redis-bundle) | [2.0](snc/redis-bundle/2.0) |
 | [soljian/steam-authentication-bundle](https://packagist.org/packages/soljian/steam-authentication-bundle) | [1.0](soljian/steam-authentication-bundle/1.0) |
@@ -466,6 +468,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sulu/sylius-producer-plugin](https://packagist.org/packages/sulu/sylius-producer-plugin) | [0.2](sulu/sylius-producer-plugin/0.2) |
 | [sulu/webpack-encore](https://packagist.org/packages/sulu/webpack-encore) | [1.0](sulu/webpack-encore/1.0) |
 | [suncat/mobile-detect-bundle](https://packagist.org/packages/suncat/mobile-detect-bundle) | [1.0](suncat/mobile-detect-bundle/1.0) |
+| [survos/barcode-bundle](https://packagist.org/packages/survos/barcode-bundle) | [1.0](survos/barcode-bundle/1.0) |
 | [svc/contactform-bundle](https://packagist.org/packages/svc/contactform-bundle) | [1.0](svc/contactform-bundle/1.0) |
 | [svc/param-bundle](https://packagist.org/packages/svc/param-bundle) | [1.0](svc/param-bundle/1.0) |
 | [svc/util-bundle](https://packagist.org/packages/svc/util-bundle) | [1.0](svc/util-bundle/1.0) |

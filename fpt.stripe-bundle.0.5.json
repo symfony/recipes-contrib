@@ -1,0 +1,45 @@
+{
+    "manifests": {
+        "fpt/stripe-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Fpt\\StripeBundle\\FptStripeBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "STRIPE_PUBLISHABLE_KEY": "pk_***",
+                    "STRIPE_SECRET_KEY": "sk_***",
+                    "STRIPE_WEBHOOK_SIGNATURE_KEY": "wh_***"
+                }
+            },
+            "files": {
+                "config/packages/stripe.yaml": {
+                    "contents": [
+                        "fpt_stripe:",
+                        "    credentials:",
+                        "        publishable_key: \"%env(STRIPE_PUBLISHABLE_KEY)%\"",
+                        "        secret_key: \"%env(STRIPE_SECRET_KEY)%\"",
+                        "    webhook:",
+                        "        check_signature: true",
+                        "        signature_key: \"%env(STRIPE_WEBHOOK_SIGNATURE_KEY)%\"",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/stripe.yaml": {
+                    "contents": [
+                        "stripe_webhooks:",
+                        "    resource: \"@FptStripeBundle/Resources/config/routes.php\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b08d10161bfafa6dfa58f73d5151cc021187038f"
+        }
+    }
+}

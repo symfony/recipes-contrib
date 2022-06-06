@@ -501,6 +501,9 @@
             "1.2",
             "2.0"
         ],
+        "fpt/stripe-bundle": [
+            "0.5"
+        ],
         "fresh/centrifugo-bundle": [
             "1.3"
         ],
@@ -528,6 +531,9 @@
         ],
         "geosocio/http-serializer-bundle": [
             "2.0"
+        ],
+        "gesdinet/jwt-refresh-token-bundle": [
+            "1.0"
         ],
         "gheb/configuration-converter-bundle": [
             "0.5"
@@ -801,10 +807,12 @@
             "2.2"
         ],
         "leapt/froala-editor-bundle": [
-            "1.0"
+            "1.0",
+            "1.2"
         ],
         "leapt/im-bundle": [
-            "2.0"
+            "2.0",
+            "4.1"
         ],
         "leogout/seo-bundle": [
             "1.0"
@@ -1350,7 +1358,8 @@
             "0.1"
         ],
         "silasjoisten/sonata-multiupload-bundle": [
-            "2.1"
+            "2.1",
+            "3.4"
         ],
         "slot/mandrill-bundle": [
             "1.1"
@@ -1452,6 +1461,9 @@
             "1.0"
         ],
         "suncat/mobile-detect-bundle": [
+            "1.0"
+        ],
+        "survos/barcode-bundle": [
             "1.0"
         ],
         "svc/contactform-bundle": [
