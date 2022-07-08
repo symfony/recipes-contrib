@@ -5,6 +5,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | Package | Latest Recipe |
 | --- | --- |
 | [abel/keycloak-bearer-only-adapter-bundle](https://packagist.org/packages/abel/keycloak-bearer-only-adapter-bundle) | [1.0](abel/keycloak-bearer-only-adapter-bundle/1.0) |
+| [ablaise/meteion-bundle](https://packagist.org/packages/ablaise/meteion-bundle) | [1.0](ablaise/meteion-bundle/1.0) |
 | [ad3n/ratchet-bundle](https://packagist.org/packages/ad3n/ratchet-bundle) | [0.4](ad3n/ratchet-bundle/0.4) |
 | [adback/adback-sdk-php-symfony](https://packagist.org/packages/adback/adback-sdk-php-symfony) | [2.4](adback/adback-sdk-php-symfony/2.4) |
 | [adlarge/fixtures-documentation-bundle](https://packagist.org/packages/adlarge/fixtures-documentation-bundle) | [1.1](adlarge/fixtures-documentation-bundle/1.1) |
@@ -111,7 +112,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [disjfa/translation-bundle](https://packagist.org/packages/disjfa/translation-bundle) | [0.1](disjfa/translation-bundle/0.1) |
 | [dobryprogramator/smartform-bundle](https://packagist.org/packages/dobryprogramator/smartform-bundle) | [1.0](dobryprogramator/smartform-bundle/1.0) |
 | [dockfony/dockfony](https://packagist.org/packages/dockfony/dockfony) | [5.0](dockfony/dockfony/5.0) |
-| [doctrine/mongodb-odm-bundle](https://packagist.org/packages/doctrine/mongodb-odm-bundle) | [4.1](doctrine/mongodb-odm-bundle/4.1) |
+| [doctrine/mongodb-odm-bundle](https://packagist.org/packages/doctrine/mongodb-odm-bundle) | [4.4](doctrine/mongodb-odm-bundle/4.4) |
 | [doctrine/phpcr-bundle](https://packagist.org/packages/doctrine/phpcr-bundle) | [2.0](doctrine/phpcr-bundle/2.0) |
 | [doctrine/phpcr-dbal-symfony-pack](https://packagist.org/packages/doctrine/phpcr-dbal-symfony-pack) | [1.0](doctrine/phpcr-dbal-symfony-pack/1.0) |
 | [drenso/symfony-oidc-bundle](https://packagist.org/packages/drenso/symfony-oidc-bundle) | [2.0](drenso/symfony-oidc-bundle/2.0) |
@@ -420,6 +421,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [redirectionio/proxy-symfony](https://packagist.org/packages/redirectionio/proxy-symfony) | [0.2](redirectionio/proxy-symfony/0.2) |
 | [redjanym/fcm-bundle](https://packagist.org/packages/redjanym/fcm-bundle) | [1.1](redjanym/fcm-bundle/1.1) |
 | [redrat/api-helper-bundle](https://packagist.org/packages/redrat/api-helper-bundle) | [0.1](redrat/api-helper-bundle/0.1) |
+| [request-tracing/request-tracing-bundle](https://packagist.org/packages/request-tracing/request-tracing-bundle) | [0.1](request-tracing/request-tracing-bundle/0.1) |
 | [rikudou/psr6-dynamo-db-bundle](https://packagist.org/packages/rikudou/psr6-dynamo-db-bundle) | [2.0](rikudou/psr6-dynamo-db-bundle/2.0) |
 | [ro0nl/http-responder](https://packagist.org/packages/ro0nl/http-responder) | [0.1](ro0nl/http-responder/0.1) |
 | [rokka/client-bundle](https://packagist.org/packages/rokka/client-bundle) | [1.0](rokka/client-bundle/1.0) |

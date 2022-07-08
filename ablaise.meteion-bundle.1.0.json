@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "ablaise/meteion-bundle": {
+            "manifest": {
+                "bundles": {
+                    "MeteionBundle\\MeteionBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "METEION_RAWEXD_PATH": "/path/to/rawexd"
+                }
+            },
+            "files": {
+                "config/packages/meteion.yaml": {
+                    "contents": [
+                        "meteion:",
+                        "    dbal_connection: 'default'",
+                        "    rawexd_path: '%env(METEION_RAWEXD_PATH)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ac447e5420ce872d2bf5b49801c9956fb5688b5a"
+        }
+    }
+}

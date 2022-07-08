@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "request-tracing/request-tracing-bundle": {
+            "manifest": {
+                "bundles": {
+                    "RequestTracing\\RequestTracingBundle\\RequestTracingBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "c8b556e28e9598d83e00b9b5e9f652f1bafdf439"
+        }
+    }
+}

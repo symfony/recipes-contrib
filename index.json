@@ -4,6 +4,9 @@
         "abel/keycloak-bearer-only-adapter-bundle": [
             "1.0"
         ],
+        "ablaise/meteion-bundle": [
+            "1.0"
+        ],
         "ad3n/ratchet-bundle": [
             "0.4"
         ],
@@ -334,7 +337,8 @@
         ],
         "doctrine/mongodb-odm-bundle": [
             "3.3",
-            "4.1"
+            "4.1",
+            "4.4"
         ],
         "doctrine/phpcr-bundle": [
             "2.0"
@@ -1308,6 +1312,9 @@
             "1.1"
         ],
         "redrat/api-helper-bundle": [
+            "0.1"
+        ],
+        "request-tracing/request-tracing-bundle": [
             "0.1"
         ],
         "rikudou/psr6-dynamo-db-bundle": [
