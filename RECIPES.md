@@ -23,7 +23,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [artox-lab/clarc-bundle](https://packagist.org/packages/artox-lab/clarc-bundle) | [0.1](artox-lab/clarc-bundle/0.1) |
 | [artox-lab/clarc-message-bus-bundle](https://packagist.org/packages/artox-lab/clarc-message-bus-bundle) | [1.0](artox-lab/clarc-message-bus-bundle/1.0) |
 | [artox-lab/sms-bundle](https://packagist.org/packages/artox-lab/sms-bundle) | [1.0](artox-lab/sms-bundle/1.0) |
-| [artprima/prometheus-metrics-bundle](https://packagist.org/packages/artprima/prometheus-metrics-bundle) | [1.0](artprima/prometheus-metrics-bundle/1.0) |
+| [artprima/prometheus-metrics-bundle](https://packagist.org/packages/artprima/prometheus-metrics-bundle) | [1.14](artprima/prometheus-metrics-bundle/1.14) |
 | [assoconnect/mjml-bundle](https://packagist.org/packages/assoconnect/mjml-bundle) | [1.0](assoconnect/mjml-bundle/1.0) |
 | [async-aws/async-aws-bundle](https://packagist.org/packages/async-aws/async-aws-bundle) | [1.0](async-aws/async-aws-bundle/1.0) |
 | [atlas/symfony](https://packagist.org/packages/atlas/symfony) | [1.0](atlas/symfony/1.0) |

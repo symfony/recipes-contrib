@@ -59,7 +59,8 @@
             "1.0"
         ],
         "artprima/prometheus-metrics-bundle": [
-            "1.0"
+            "1.0",
+            "1.14"
         ],
         "assoconnect/mjml-bundle": [
             "1.0"
