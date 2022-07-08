@@ -530,6 +530,9 @@
         "friendsofsymfony/rest-bundle": [
             "2.2"
         ],
+        "fsi/files": [
+            "1.5"
+        ],
         "geosocio/http-serializer-bundle": [
             "2.0"
         ],

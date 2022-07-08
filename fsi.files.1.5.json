@@ -1,0 +1,45 @@
+{
+    "manifests": {
+        "fsi/files": {
+            "manifest": {
+                "bundles": {
+                    "FSi\\Component\\Files\\Integration\\Symfony\\FilesBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/fsi_files.yaml": {
+                    "contents": [
+                        "---",
+                        "fsi_files:",
+                        "    # if you have only a single filesystem, enter it here, otherwise provide them for each entity",
+                        "    default_entity_filesystem: null",
+                        "    url_adapters: []",
+                        "    entities: []",
+                        "",
+                        "#    Example configuration:",
+                        "#",
+                        "#    url_adapters:",
+                        "#        local_filesystem: 'adapter.service_id'",
+                        "#    entities:",
+                        "#        Tests\\Entity\\FileEntity:",
+                        "#            filesystem: 'local_filesystem'",
+                        "#            prefix: file_entity",
+                        "#            fields:",
+                        "#                # Full configuration",
+                        "#                - { name: file, prefix: file_entity_file, pathField: filePath }",
+                        "#                # Minimal configuration equal to { name: image, prefix: file_entity, pathField: imagePath }",
+                        "#                - [image]",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "781f6b4786043761ba48d9812cadcd7bb5e1d3ce"
+        }
+    }
+}
