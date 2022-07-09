@@ -1,3 +1,4 @@
+# Read the documentation: https://github.com/CedrickOka/notifier-server-bundle/blob/master/docs/index.md
 oka_notifier_server:
     # Activate the channels you need here
     channels:

@@ -1,6 +1,10 @@
-oka_notifier_server_notification:
+oka_notifier_server_notifications:
     resource: "@OkaNotifierServerBundle/config/routes/notification.yaml"
 
+# Uncommented here if you want to enable local notification channel 
+#oka_notifier_server_messages:
+#    resource: "@OkaNotifierServerBundle/config/routes/message.yaml"
+
 # Uncommented here if you want to enable reporting 
-#oka_notifier_server_reporting:
+#oka_notifier_server_send_reports:
 #    resource: "@OkaNotifierServerBundle/config/routes/reporting.yaml"
