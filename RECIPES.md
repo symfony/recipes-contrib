@@ -434,7 +434,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [secit-pl/imap-bundle](https://packagist.org/packages/secit-pl/imap-bundle) | [1.0](secit-pl/imap-bundle/1.0) |
 | [seferov/aws-bundle](https://packagist.org/packages/seferov/aws-bundle) | [3.0](seferov/aws-bundle/3.0) |
 | [sensiolabs/connect-bundle](https://packagist.org/packages/sensiolabs/connect-bundle) | [4.0](sensiolabs/connect-bundle/4.0) |
-| [sentry/sentry-symfony](https://packagist.org/packages/sentry/sentry-symfony) | [3.0](sentry/sentry-symfony/3.0) |
+| [sentry/sentry-symfony](https://packagist.org/packages/sentry/sentry-symfony) | [4.0](sentry/sentry-symfony/4.0) |
 | [sg/datatablesbundle](https://packagist.org/packages/sg/datatablesbundle) | [1.0](sg/datatablesbundle/1.0) |
 | [siganushka/generic-bundle](https://packagist.org/packages/siganushka/generic-bundle) | [0.3](siganushka/generic-bundle/0.3) |
 | [siganushka/region-bundle](https://packagist.org/packages/siganushka/region-bundle) | [0.1](siganushka/region-bundle/0.1) |
