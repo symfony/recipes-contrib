@@ -1,11 +1,11 @@
 {
     "bundles": {
-        "Sentry\\SentryBundle\\SentryBundle": ["prod"]
+        "MeteionBundle\\MeteionBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "SENTRY_DSN": ""
+        "METEION_RAWEXD_PATH": "/path/to/rawexd"
     }
 }

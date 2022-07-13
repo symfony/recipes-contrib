@@ -4,8 +4,8 @@
 require __DIR__ . '/../vendor/autoload.php';
 
 use Jane\Component\JsonSchema\Console\Command\GenerateCommand;
-use Jane\Component\OpenApiCommon\Console\Loader\ConfigLoader;
-use Jane\Component\OpenApiCommon\Console\Loader\SchemaLoader;
+use Jane\Component\JsonSchema\Console\Loader\ConfigLoader;
+use Jane\Component\JsonSchema\Console\Loader\SchemaLoader;
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Output\NullOutput;
 
