@@ -5,5 +5,9 @@
         "Controller/": "src/Controller/",
         "public/": "public/",
         "Document/":"src/Document/"
-    }
+    },
+    "gitignore": [
+        "/public/upload/*",
+        "!/public/upload/.gitignore"
+    ]
 }
