@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "UnivLorraine\\Bundle\\SymfonyCasBundle\\SymfonyCasBundle": ["all"]
+        "UnivLorraine\\Bundle\\SymfonyCasBundle\\UnivLorraineSymfonyCasBundle": ["all"]
     },
 
     "copy-from-package": {
