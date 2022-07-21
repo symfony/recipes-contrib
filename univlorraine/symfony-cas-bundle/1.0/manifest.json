@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "UnivLorraine\\Bundle\\SymfonyCasBundle\\SymfonyCasBundle": ["all"]
+    },
+
+    "copy-from-package": {
+        "Resources/config/": "%CONFIG_DIR%/"
+    }
+}
