@@ -12,8 +12,6 @@
     },
     "env": {
         "ADMIN_PATH": "admin",
-        "MEDIA_PATH": "/",
-        "GOOGLE_CLIENT_ID": "",
-        "GOOGLE_CLIENT_SECRET": ""
+        "MEDIA_PATH": "/"
     }
 }

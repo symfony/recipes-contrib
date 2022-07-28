@@ -9,6 +9,7 @@ use EDB\AdminBundle\Entity\AbstractUser;
 
 /**
  * @ORM\Entity
+ * @ORM\HasLifecycleCallbacks
  */
 class User extends AbstractUser
 {

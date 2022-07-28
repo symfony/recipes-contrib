@@ -9,6 +9,7 @@ use EDB\AdminBundle\Entity\AbstractMedia;
 
 /**
  * @ORM\Entity
+ * @ORM\HasLifecycleCallbacks
  */
 class Media extends AbstractMedia
 {
