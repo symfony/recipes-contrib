@@ -1,4 +1,4 @@
-crud_dynamic:
+edb_dynamic:
     resource: .
     type: admin
     prefix: '%edb_admin_path%'
