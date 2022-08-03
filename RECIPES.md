@@ -449,7 +449,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sonata-project/doctrine-extensions](https://packagist.org/packages/sonata-project/doctrine-extensions) | [1.8](sonata-project/doctrine-extensions/1.8) |
 | [sonata-project/exporter](https://packagist.org/packages/sonata-project/exporter) | [2.4](sonata-project/exporter/2.4) |
 | [sonata-project/form-extensions](https://packagist.org/packages/sonata-project/form-extensions) | [1.4](sonata-project/form-extensions/1.4) |
-| [sonata-project/media-bundle](https://packagist.org/packages/sonata-project/media-bundle) | [3.13](sonata-project/media-bundle/3.13) |
+| [sonata-project/media-bundle](https://packagist.org/packages/sonata-project/media-bundle) | [4.0](sonata-project/media-bundle/4.0) |
 | [sonata-project/notification-bundle](https://packagist.org/packages/sonata-project/notification-bundle) | [3.4](sonata-project/notification-bundle/3.4) |
 | [sonata-project/page-bundle](https://packagist.org/packages/sonata-project/page-bundle) | [3.9](sonata-project/page-bundle/3.9) |
 | [sonata-project/translation-bundle](https://packagist.org/packages/sonata-project/translation-bundle) | [2.3](sonata-project/translation-bundle/2.3) |
