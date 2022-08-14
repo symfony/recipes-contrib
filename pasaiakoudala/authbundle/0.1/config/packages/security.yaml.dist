@@ -1,27 +1,27 @@
 security:
-  enable_authenticator_manager: true
-  password_hashers:
-    PasaiakoUdala\AuthBundle\Entity\User:
-      algorithm: auto
+    enable_authenticator_manager: true
+    password_hashers:
+        PasaiakoUdala\AuthBundle\Entity\User:
+            algorithm: auto
 
-  providers:
-    database_users:
-      entity: { class: PasaiakoUdala\AuthBundle\Entity\User, property: username }
+    providers:
+        database_users:
+            entity: { class: PasaiakoUdala\AuthBundle\Entity\User, property: username }
 
-  firewalls:
-    dev:
-      pattern: ^/(_(profiler|wdt)|css|images|js)/
-      security: false
-    main:
-      #            pattern: ^/
-      lazy: true
-      provider: database_users
-      custom_authenticator: paud.form.auth
-      logout:
-        path: pasaiakoudala_auth_logout
-  #                target: default
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            #            pattern: ^/
+            lazy: true
+            provider: database_users
+            custom_authenticator: paud.form.auth
+            logout:
+                path: pasaiakoudala_auth_logout
+    #                target: default
 
 
-  access_control:
-    #        - { path: ^/login, roles: PUBLIC_ACCESS }
-    - { path: ^/admin, roles: ROLE_ADMIN }
+    access_control:
+        #        - { path: ^/login, roles: PUBLIC_ACCESS }
+        - { path: ^/admin, roles: ROLE_ADMIN }
