@@ -1,5 +1,5 @@
 edb_admin:
-    admin_icon: "code" #  See https://fontawesome.com/icons/categories
+    admin_icon: "code" # See https://fontawesome.com/v5/icons/allergies?s=solid
     admin_title: "Admin"
     source_prefix: "media_source"
     cache_prefix: "media_cache"
