@@ -1,0 +1,2 @@
+imports:
+    - { resource: "@OdiseoSyliusVendorPlugin/Resources/config/config.yaml" }

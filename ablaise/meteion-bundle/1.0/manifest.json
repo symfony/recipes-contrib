@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "MeteionBundle\\MeteionBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "METEION_RAWEXD_PATH": "/path/to/rawexd"
+    }
+}

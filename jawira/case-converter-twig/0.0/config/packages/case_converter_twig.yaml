@@ -1,0 +1,4 @@
+services:
+    jawira.case.converter.twig:
+        class: Jawira\CaseConverterTwig\CaseConverterExtension
+        tags: ['twig.extension']

@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "OldSound\\RabbitMqBundle\\OldSoundRabbitMqBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "RABBITMQ_URL": "amqp://guest:guest@localhost:5672",
+        "RABBITMQ_VHOST": "/"
+    }
+}

@@ -1,0 +1,3 @@
+_pentatrion_upload:
+    prefix: /media-manager
+    resource: "@PentatrionUploadBundle/Resources/config/routing.yaml"

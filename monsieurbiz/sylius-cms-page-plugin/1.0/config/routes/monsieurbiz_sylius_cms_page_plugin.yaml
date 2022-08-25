@@ -1,0 +1,7 @@
+monsieurbiz_cms_page_admin:
+    resource: "@MonsieurBizSyliusCmsPagePlugin/Resources/config/routing/admin.yaml"
+    prefix: /%sylius_admin.path_name%
+
+monsieurbiz_cms_page_shop:
+    resource: "@MonsieurBizSyliusCmsPagePlugin/Resources/config/routing/shop.yaml"
+    prefix: /{_locale}

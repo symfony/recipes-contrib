@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "FSi\\Component\\Files\\Integration\\Symfony\\FilesBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

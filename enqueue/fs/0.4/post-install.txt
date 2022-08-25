@@ -1,7 +1,3 @@
-<bg=yellow;fg=black>                                  </>
-<bg=yellow;fg=black> Using fs (filesystem) in Enqueue </>
-<bg=yellow;fg=black>                                  </>
-
   * Configure <comment>ENQUEUE_DSN=file://%kernel.project_dir%/var/queue</comment>
     in your <comment>.env</comment> file.
 

@@ -1,0 +1,6 @@
+imports:
+    - { resource: "@BitBagSyliusCmsPlugin/Resources/config/config.yml" }
+
+twig:
+    form_themes:
+        - '@BitBagSyliusCmsPlugin/Form/ckeditor_widget.html.twig'

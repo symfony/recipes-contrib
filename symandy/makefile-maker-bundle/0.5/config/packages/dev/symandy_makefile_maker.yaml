@@ -1,0 +1,6 @@
+# Create your Makefile commands here, full reference available at
+# https://github.com/Symandy/MakefileMakerBundle#configuration
+symandy_makefile_maker:
+    groups:
+#        your_project_name:
+#            commands:

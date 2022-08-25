@@ -1,0 +1,10 @@
+mobizel_markdown_docs:
+    contexts:
+        main:
+            path: /docs
+            docs_dir: '%kernel.project_dir%/docs'
+            metadata:
+                #title: 'Your documentation title'
+
+        # You can add as many contexts as you need
+        # See https://github.com/mobizel/markdown-docs-bundle/blob/master/docs/how-to-add-docs-contexts.md

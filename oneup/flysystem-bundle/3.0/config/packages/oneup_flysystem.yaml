@@ -1,4 +1,4 @@
-# Read the documentation: https://github.com/1up-lab/OneupFlysystemBundle/tree/master/Resources/doc/index.md
+# Read the documentation: https://github.com/1up-lab/OneupFlysystemBundle/blob/release/3.x/Resources/doc/index.md
 oneup_flysystem:
     adapters:
         default_adapter:

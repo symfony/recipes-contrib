@@ -1,0 +1,7 @@
+services:
+    _defaults:
+        autowire: true
+
+    Datana\Doctrine\EventSubscriber\MigrationEventSubscriber:
+        tags:
+            - { name: doctrine.event_subscriber, connection: default }

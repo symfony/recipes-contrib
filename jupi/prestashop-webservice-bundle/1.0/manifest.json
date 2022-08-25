@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Jupi\\PrestaShopWebserviceBundle\\JupiPrestaShopWebserviceBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "PRESTA_WEBSERVICE_ROOT_PATH": "https://absolute-path-to-your-store.com",
+        "PRESTA_WEBSERVICE_AUTH_KEY": "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789"
+    }
+}

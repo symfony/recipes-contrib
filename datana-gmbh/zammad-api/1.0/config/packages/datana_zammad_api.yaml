@@ -1,0 +1,24 @@
+services:
+    _defaults:
+        autowire: true
+
+    Datana\Zammad\Api\ZammadClient:
+        arguments:
+            - '%env(ZAMMAD_API_BASE_URI)%'
+            - '%env(ZAMMAD_API_TOKEN)%'
+
+    Datana\Zammad\Api\TicketsApi: null
+    Datana\Zammad\Api\NullTicketsApi: null
+    Datana\Zammad\Api\TicketsApiInterface: '@Datana\Zammad\Api\TicketsApi'
+
+when@prod:
+    services:
+        Datana\Zammad\Api\TicketsApiInterface: '@Datana\Zammad\Api\TicketsApi'
+
+when@dev:
+    services:
+        Datana\Zammad\Api\TicketsApiInterface: '@Datana\Zammad\Api\NullTicketsApi'
+
+when@test:
+    services:
+        Datana\Zammad\Api\TicketsApiInterface: '@Datana\Zammad\Api\NullTicketsApi'

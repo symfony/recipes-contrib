@@ -1,7 +1,3 @@
-<bg=yellow;fg=black>                          </>
-<bg=yellow;fg=black> Using MongoDB in Enqueue </>
-<bg=yellow;fg=black>                          </>
-
   * Configure <comment>ENQUEUE_DSN=mongodb://localhost:27017/db_name</comment>
     in your <comment>.env</comment> file.
 

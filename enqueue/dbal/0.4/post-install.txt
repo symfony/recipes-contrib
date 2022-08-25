@@ -1,7 +1,3 @@
-<bg=yellow;fg=black>                                  </>
-<bg=yellow;fg=black> Using Doctrine's dbal in Enqueue </>
-<bg=yellow;fg=black>                                  </>
-
   * Configure <comment>ENQUEUE_DSN=mysql://user:pass@localhost:3306/mqdev</comment>
     in your <comment>.env</comment> file.
 

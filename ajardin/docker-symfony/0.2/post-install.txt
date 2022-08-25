@@ -1,7 +1,3 @@
-<bg=blue;fg=white>                      </>
-<bg=blue;fg=white> Docker Configuration </>
-<bg=blue;fg=white>                      </>
-
   * Edit the <fg=green>docker/.env</> file to configure your own settings.
 
   * Edit the <fg=green>docker/nginx/conf.d/custom.conf</> file to configure your own virtual host.

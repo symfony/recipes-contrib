@@ -1,0 +1,4 @@
+rpc:
+    path:     /rpc
+    defaults: { _controller: RpcServerBundle:Rpc:handler }
+    methods:  [POST]

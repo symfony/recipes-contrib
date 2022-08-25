@@ -1,0 +1,2 @@
+coop_tilleuls_url_signer:
+    signature_key: '%env(string:SIGNATURE_KEY)%'

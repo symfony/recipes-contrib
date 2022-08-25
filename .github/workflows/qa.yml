@@ -1,0 +1,17 @@
+name: Q&A
+
+on:
+    pull_request_target:
+
+defaults:
+    run:
+        shell: bash
+
+jobs:
+    call-qa:
+        uses: symfony/recipes/.github/workflows/callable-qa.yml@main
+        with:
+            contrib: true
+            find_yaml: -not -wholename 'codeception/codeception/*/tests/*' -not -wholename 'codeception/codeception/*/codeception.yml'
+        secrets:
+            token: ${{ secrets.BOT_TOKEN }}

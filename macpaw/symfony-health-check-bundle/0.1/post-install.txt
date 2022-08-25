@@ -1,0 +1,11 @@
+  *. Add healthcheck firewall to <fg=green>config/security.yaml</> file
+
+<comment>
+security:
+    firewalls:
+        healthcheck:
+            pattern: ^/health
+            security: false
+</>
+
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/MacPaw/symfony-health-check-bundle</>

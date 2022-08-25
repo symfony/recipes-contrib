@@ -1,5 +1,3 @@
-<bg=blue;fg=white>🎉 Getting started using </><bg=blue;fg=white;options=bold>troopers/alertify-bundle</><bg=blue;fg=white>          </>
-
 <fg=blue;options=bold>Finish the configuration<fg=blue>:</>
 1. You <options=bold>MUST</> follow the guide to include js and / or css assets https://github.com/Troopers/AlertifyBundle/blob/master/Resources/doc/configuration.md</>.
 2. You <options=bold>MAY</> configure your favorite alert library (<comment>toastr</>, <comment>notie</>, <comment>pushjs</>... and even your <comment>own</>).

@@ -1,0 +1,8 @@
+services:
+    # Register loophp/psr17/Psr17 class and autowire/autoconfigure it.
+    loophp\psr17\Psr17:
+        autowire: true
+        autoconfigure: true
+
+    # Alias the service to the Psr17 interface.
+    loophp\psr17\Psr17Interface: '@loophp\psr17\Psr17'
