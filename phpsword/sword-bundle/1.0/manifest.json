@@ -1,0 +1,24 @@
+{
+    "bundles": {
+        "Sword\\SwordBundle\\SwordBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "copy-from-package": {
+        "install/bin/console": "%BIN_DIR%/console",
+        "install/wp/wp-config.php": "wp/wp-config.php",
+        "install/docker/": "docker/",
+        "install/docker-compose.yml": "docker-compose.yml",
+        "install/docker-compose.prod.yml": "docker-compose.prod.yml",
+        "install/Makefile": "Makefile"
+    },
+    "gitignore": [
+        "/wp/*",
+        "!wp/wp-config.php",
+        "!wp/content",
+        "wp/content/*",
+        "!wp/content/themes",
+        "wp/content/themes/twenty*"
+    ]
+}
