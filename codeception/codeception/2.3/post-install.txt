@@ -9,6 +9,6 @@ tests/acceptance.suite.yml written  <- acceptance tests suite configuration
 <options=bold>Next steps:</options=bold>
 1. Edit <options=bold>tests/acceptance.suite.yml</options=bold> to set the url of your application. Change PhpBrowser to WebDriver to enable browser testing.
 2. Edit <options=bold>tests/functional.suite.yml</options=bold> to enable Doctrine module if needed.
-3. Create your first acceptance test using <comment>vendor/bin/codecept g:cest acceptance First</comment>
+3. Create your first acceptance test using <comment>vendor/bin/codecept g:cest Acceptance First</comment>
 4. Write your first test in <options=bold>tests/acceptance/FirstCest.php</options=bold>
 5. Run tests using: <comment>vendor/bin/codecept run</comment>
