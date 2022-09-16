@@ -9,4 +9,4 @@ modules:
     enabled:
         - PhpBrowser:
             url: http://localhost/myapp
-step_decorators: ~
+step_decorators: null
