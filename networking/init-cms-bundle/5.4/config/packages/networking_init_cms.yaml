@@ -29,6 +29,8 @@ jms_serializer:
 
 
 networking_init_cms:
+    cache:
+        activate: true #enable for product, false in dev config
     #Base classes to be used for the page and user entities
     class:
         page: "App\\Entity\\Page"
@@ -51,8 +53,6 @@ networking_init_cms:
                 - { name: header , class: 'col-md-12'}
                 - { name: left , class: 'col-md-3'}
                 - { name: right , class: 'col-md-9'}
-    cache:
-        activate: true #enable for product, false in dev config
 
     # For more information regarding configuration of the CMS Bundle, please visit the following documentation
     # https://github.com/networking/init-cms-bundle/blob/master/doc/configuration.md
