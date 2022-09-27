@@ -1,4 +1,5 @@
 imports:
+    - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/assets.yaml" }
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/doctrine.yaml" }
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/fos_ck_editor.yaml" }
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/jms_serializer.yaml" }
@@ -11,7 +12,7 @@ imports:
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/sonata_media.yaml" }
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/sonata_user.yaml" }
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/symfony_cmf_routing_extra.yaml" }
-    - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/assets.yaml" }
+
 
 # Default security configuration
 #    - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/security.yaml" }
