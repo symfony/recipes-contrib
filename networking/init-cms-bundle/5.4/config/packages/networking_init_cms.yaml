@@ -1,7 +1,6 @@
 imports:
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/doctrine.yaml" }
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/fos_ck_editor.yaml" }
-    - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/fos_user.yaml" }
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/jms_serializer.yaml" }
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/mopa_bootstrap.yaml" }
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/oneup_flysystem.yaml" }
