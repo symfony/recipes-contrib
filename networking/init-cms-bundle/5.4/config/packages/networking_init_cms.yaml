@@ -28,9 +28,6 @@ jms_serializer:
                 namespace_prefix: "App"
                 path: "%kernel.project_dir%/config/serializer"
 
-framework:
-    http_method_override: true
-    
 networking_init_cms:
     cache:
         activate: true #enable for product, false in dev config
@@ -47,15 +44,12 @@ networking_init_cms:
             icon: "bundles/networkinginitcms/img/template_header_one_column.png"
             zones:
                 - { name: header, class: 'col-md-12' }
-                - { name: main_content, class: 'col-md-12'}
+                - { name: main_content, class: 'col-md-12' }
         'app_two_column':
             template: "@NetworkingInitCms/sandbox/page/two_column.html.twig"
             name: "Two Column"
             icon: "bundles/networkinginitcms/img/template_header_two_column.png"
             zones:
-                - { name: header , class: 'col-md-12'}
-                - { name: left , class: 'col-md-3'}
-                - { name: right , class: 'col-md-9'}
-
-    # For more information regarding configuration of the CMS Bundle, please visit the following documentation
-    # https://github.com/networking/init-cms-bundle/blob/master/doc/configuration.md
+                - { name: header , class: 'col-md-12' }
+                - { name: left , class: 'col-md-3' }
+                - { name: right , class: 'col-md-9' }
