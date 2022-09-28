@@ -3,7 +3,7 @@ imports:
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/doctrine.yaml" }
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/fos_ck_editor.yaml" }
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/jms_serializer.yaml" }
-    - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/mopa_bootstrap.yaml" }
+    - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/networking_bootstrap.yaml" }
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/oneup_flysystem.yaml" }
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/oneup_uploader.yaml" }
     - { resource: "@NetworkingInitCmsBundle/Resources/config/cms/sonata_admin.yaml" }
@@ -28,7 +28,9 @@ jms_serializer:
                 namespace_prefix: "App"
                 path: "%kernel.project_dir%/config/serializer"
 
-
+framework:
+    http_method_override: true
+    
 networking_init_cms:
     cache:
         activate: true #enable for product, false in dev config
