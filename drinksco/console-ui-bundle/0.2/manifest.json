@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "Drinksco\\ConsoleUiBundle\\ConsoleUiBundle": ["dev"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "CONSOLE_UI_MERCURE_URL": "http://localhost:3001/.well-known/mercure",
+        "CONSOLE_UI_MERCURE_PUBLIC_URL": "http://localhost:3001/.well-known/mercure",
+        "CONSOLE_UI_JWT_SECRET": "!ChangeThisMercureHubJWTSecretKey!",
+        "CONSOLE_API_URL": "http://localhost:3000"
+    }
+}
