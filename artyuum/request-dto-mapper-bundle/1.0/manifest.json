@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Artyum\\RequestDtoMapperBundle\\ArtyumRequestDtoMapperBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
