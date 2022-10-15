@@ -1,3 +1,3 @@
 when@dev:
-  SfBugBundle:
-    resource: '@SfBugBundle/Resources/config/routing/routing.yaml'
+    SfBugBundle:
+        resource: '@SfBugBundle/Resources/config/routing/routing.yaml'
