@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "Ajardin\\BlizzardSdkBundle\\AjardinBlizzardSdkBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "Generate your own API credentials through the Blizzard Developer Portal.",
+        "#2": "https://develop.battle.net/access/clients",
+        "BLIZZARD_CLIENT_ID": "",
+        "BLIZZARD_CLIENT_SECRET": ""
+    }
+}
