@@ -16,6 +16,9 @@
         "adlarge/fixtures-documentation-bundle": [
             "1.1"
         ],
+        "ajardin/blizzard-sdk-bundle": [
+            "1.0"
+        ],
         "ajardin/docker-symfony": [
             "0.2"
         ],

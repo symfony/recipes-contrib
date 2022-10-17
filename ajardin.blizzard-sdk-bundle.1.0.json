@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "ajardin/blizzard-sdk-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Ajardin\\BlizzardSdkBundle\\AjardinBlizzardSdkBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Generate your own API credentials through the Blizzard Developer Portal.",
+                    "#2": "https://develop.battle.net/access/clients",
+                    "BLIZZARD_CLIENT_ID": "",
+                    "BLIZZARD_CLIENT_SECRET": ""
+                }
+            },
+            "files": {
+                "config/packages/ajardin_blizzard_sdk_bundle.yaml": {
+                    "contents": [
+                        "ajardin_blizzard_sdk:",
+                        "    blizzard:",
+                        "        client_id: '%env(BLIZZARD_CLIENT_ID)%'",
+                        "        client_secret: '%env(BLIZZARD_CLIENT_SECRET)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f45b27719b9bb9b7fbee863d202bd011b36fe8c3"
+        }
+    }
+}
