@@ -1,0 +1,13 @@
+{
+    "copy-from-package": {
+        "routing/": "config/routing/",
+        "Business/": "src/Business/",
+        "Controller/": "src/Controller/",
+        "public/": "public/",
+        "Document/":"src/Document/"
+    },
+    "gitignore": [
+        "/public/upload/*",
+        "!/public/upload/.gitignore"
+    ]
+}
