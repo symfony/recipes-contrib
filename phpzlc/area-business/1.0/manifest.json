@@ -1,0 +1,10 @@
+{
+    "copy-from-package": {
+        "routing/": "config/routing/",
+        "Business/": "src/Business/",
+        "Controller/": "src/Controller/",
+        "Entity/": "src/Entity/",
+        "Repository/": "src/Repository/",
+        "DataFixtures/": "src/DataFixtures/"
+    }
+}
