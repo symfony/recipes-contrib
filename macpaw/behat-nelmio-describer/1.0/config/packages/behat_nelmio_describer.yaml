@@ -1,0 +1,2 @@
+behat_nelmio_describer:
+    behat_test_path: '%kernel.project_dir%/features'
