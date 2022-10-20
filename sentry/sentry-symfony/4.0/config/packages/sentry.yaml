@@ -6,15 +6,15 @@ when@prod:
 #        https://docs.sentry.io/platforms/php/guides/symfony/#monolog-integration
 #        register_error_listener: false
 
-#        monolog:
-#            handlers:
-#                sentry:
-#                    type: service
-#                    id: Sentry\Monolog\Handler
+#    monolog:
+#        handlers:
+#            sentry:
+#                type: service
+#                id: Sentry\Monolog\Handler
 
-#        services:
-#            Sentry\Monolog\Handler:
-#                arguments:
-#                    $hub: '@Sentry\State\HubInterface'
-#                    $level: !php/const Monolog\Logger::ERROR
-#                    $bubble: false
+#    services:
+#        Sentry\Monolog\Handler:
+#            arguments:
+#                $hub: '@Sentry\State\HubInterface'
+#                $level: !php/const Monolog\Logger::ERROR
+#                $bubble: false
