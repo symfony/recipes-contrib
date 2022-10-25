@@ -462,7 +462,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [squizlabs/php_codesniffer](https://packagist.org/packages/squizlabs/php_codesniffer) | [3.6](squizlabs/php_codesniffer/3.6) |
 | [sroze/messenger-enqueue-transport](https://packagist.org/packages/sroze/messenger-enqueue-transport) | [0.1](sroze/messenger-enqueue-transport/0.1) |
 | [sroze/openwhisk-bundle](https://packagist.org/packages/sroze/openwhisk-bundle) | [0.2](sroze/openwhisk-bundle/0.2) |
-| [stefandoorn/sitemap-plugin](https://packagist.org/packages/stefandoorn/sitemap-plugin) | [1.0](stefandoorn/sitemap-plugin/1.0) |
+| [stefandoorn/sitemap-plugin](https://packagist.org/packages/stefandoorn/sitemap-plugin) | [2.0](stefandoorn/sitemap-plugin/2.0) |
 | [stof/doctrine-extensions-bundle](https://packagist.org/packages/stof/doctrine-extensions-bundle) | [1.2](stof/doctrine-extensions-bundle/1.2) |
 | [sulu/article-bundle](https://packagist.org/packages/sulu/article-bundle) | [2.0](sulu/article-bundle/2.0) |
 | [sulu/form-bundle](https://packagist.org/packages/sulu/form-bundle) | [2.2](sulu/form-bundle/2.2) |

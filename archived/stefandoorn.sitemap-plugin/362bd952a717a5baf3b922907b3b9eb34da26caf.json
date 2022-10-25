@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "stefandoorn/sitemap-plugin": {
+            "manifest": {
+                "bundles": {
+                    "SitemapPlugin\\SitemapPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sitemap_plugin.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SitemapPlugin/Resources/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sitemap_plugin.yaml": {
+                    "contents": [
+                        "sylius_sitemap:",
+                        "    resource: \"@SitemapPlugin/Resources/config/routing.yml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "362bd952a717a5baf3b922907b3b9eb34da26caf"
+        }
+    }
+}
