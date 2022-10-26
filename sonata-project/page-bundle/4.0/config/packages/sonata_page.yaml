@@ -8,6 +8,7 @@ sonata_admin:
         extra_stylesheets:
             - bundles/sonatapage/app.css
 
+# https://docs.sonata-project.org/projects/SonataPageBundle/en/4.x/reference/advanced_configuration/
 sonata_page:
     multisite: host
     use_streamed_response: false
@@ -31,6 +32,7 @@ sonata_page:
     ignore_uri_patterns:
         - ^/admin\/   # ignore admin route, ie route containing 'admin'
 
+    #https://docs.sonata-project.org/projects/SonataPageBundle/en/4.x/reference/page_composer/
     default_template: default
     templates:
         default:
@@ -72,9 +74,3 @@ sonata_page:
     catch_exceptions:
         not_found: [404]    # render 404 page with "not_found" key (name generated: _page_internal_error_{key})
         fatal:     [500]    # so you can use the same page for different http errors or specify specific page for each error
-
-    class:
-        page: 'App\Entity\SonataPagePage'
-        snapshot: 'App\Entity\SonataPageSnapshot'
-        block: 'App\Entity\SonataPageBlock'
-        site: 'App\Entity\SonataPageSite'
