@@ -1,0 +1,6 @@
+# add this firewall to the security.yaml if security bundle is installed
+#security:
+#  firewalls:
+#    healthcheck:
+#      pattern: ^/healthcheck
+#      security: false
