@@ -2,9 +2,6 @@
     "bundles": {
         "EGSoft\\HealthCheckBundle\\HealthCheckBundle": ["all"]
     },
-    "aliases": [
-        "egsoft-healthcheck-bundle", "egsoft-healthcheck"
-    ],
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     }
