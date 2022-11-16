@@ -1,0 +1,2 @@
+redjan_ym_fcm:
+    firebase_api_key: '%env(resolve:FCM_SERVER_KEY)%'

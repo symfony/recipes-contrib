@@ -1,0 +1,20 @@
+<bg=blue;fg=white>              </>
+<bg=blue;fg=white> What's next? </>
+<bg=blue;fg=white>              </>
+
+  * Start using your fresh plugin:
+    1. Include the newsletter in your template:
+        <comment>{% include '@BitBagSyliusMailChimpPlugin/_subscribe.html.twig' %}</>
+    2. Add these javascripts to the layout template that includes your subscription form imported in the previous steps
+       <comment><script src="{{ asset('path/to/jquery.js') }}"></script>
+                <script src="{{ asset('bundles/bitbagsyliusmailchimpplugin/bitbag-mailchimp-plugin-newsletter.js') }}"></script>
+                <script>
+                    $('#footer-newsletter-form').joinNewsletter();
+                </script></>
+
+
+
+  * <fg=blue>Read</> the documentation at <comment>https://https://github.com/BitBagCommerce/SyliusMailChimpPlugin/tree/master/doc</>
+
+If you want to contact us, the best way is to fill the form on our website or send us an e-mail to <comment>hello@bitbag.io</comment> with your question(s).
+  We guarantee that we answer as soon as we can!

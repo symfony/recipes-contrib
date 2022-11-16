@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Nzo\\UrlEncryptorBundle\\NzoUrlEncryptorBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "NZO_ENCRYPTOR_SECRET": "change_me",
+        "NZO_ENCRYPTOR_IV": "change_me"
+    }
+}

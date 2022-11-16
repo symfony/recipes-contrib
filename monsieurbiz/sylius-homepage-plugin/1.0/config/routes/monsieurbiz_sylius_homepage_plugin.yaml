@@ -1,0 +1,18 @@
+monsieurbiz_sylius_homepage_admin:
+    resource: "@MonsieurBizSyliusHomepagePlugin/Resources/config/routes/admin.yaml"
+    prefix: /%sylius_admin.path_name%
+
+monsieurbiz_sylius_homepage_homepage:
+    path: /{_locale}/
+    methods: [GET]
+    requirements:
+        _locale: ^[a-z]{2}(?:_[A-Z]{2})?$
+    defaults:
+        _controller: monsieurbiz_homepage.controller.homepage:indexAction
+        _sylius:
+            template: '@MonsieurBizSyliusHomepagePlugin/Homepage/index.html.twig'
+            repository:
+                method: findOneByChannelAndLocale
+                arguments:
+                    - "expr:service('sylius.context.channel').getChannel()"
+                    - "expr:service('sylius.context.locale').getLocaleCode()"

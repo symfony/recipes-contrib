@@ -1,0 +1,3 @@
+eu_login_api_authentication:
+    resource: '@EuLoginApiAuthenticationBundle/Resources/config/routes/routes.php'
+    prefix: /api

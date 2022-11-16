@@ -1,6 +1,2 @@
-<bg=blue;fg=white>                              </>
-<bg=blue;fg=white> WandiMailer, What's next? </>
-<bg=blue;fg=white>                              </>
-
   * The Wandi/MailerBundle needs your default sender configuration.
     Modify your WANDI_MAILER_SENDER_NAME and WANDI_MAILER_SENDER_ADDRESS config in <fg=green>.env</>

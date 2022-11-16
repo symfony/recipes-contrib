@@ -1,6 +1,2 @@
-<bg=blue;fg=white>                       </>
-<bg=blue;fg=white> To finish the install </>
-<bg=blue;fg=white>                       </>
-
   * Your Connect Holland Timechimp bundle installation is almost ready:
     1. Add your Timechimp Access Token to the .env file

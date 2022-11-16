@@ -1,7 +1,3 @@
-<bg=blue;fg=white>                        </>
-<bg=blue;fg=white> Dockfony Configuration </>
-<bg=blue;fg=white>                        </>
-
   * Edit the <fg=green>.env</> file to change the database setting if you require. For instance:
 
         <fg=green>DATABASE_URL=mysql://$DB_USERNAME:$DB_PASSWORD@mysql:3306/$DB_DATABASE</>

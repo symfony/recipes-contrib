@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Rikudou\\DynamoDbCacheBundle\\RikudouDynamoDbCacheBundle": ["prod"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "DYNAMODB_CACHE_TABLE": "cache",
+        "#AWS_REGION": "us-east-1"
+    }
+}

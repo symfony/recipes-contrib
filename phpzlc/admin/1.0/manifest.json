@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "PHPZlc\\Admin\\Bundle\\PHPZlcAdminBundle": ["all"]
+    },
+    "copy-from-package": {
+        "Bundle/phpzlc-admin.yaml": "config/packages/phpzlc-admin.yaml"
+    },
+    "env": {
+        "ADMIN_ENV": "dev"
+    }
+}

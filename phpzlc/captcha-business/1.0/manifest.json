@@ -1,0 +1,8 @@
+{
+    "copy-from-package": {
+        "Business/": "src/Business/",
+        "Controller/": "src/Controller/",
+        "routing/": "config/routing/",
+        "Document/":"src/Document/"
+    }
+}

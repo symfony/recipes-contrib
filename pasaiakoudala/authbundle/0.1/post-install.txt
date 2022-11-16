@@ -1,0 +1,6 @@
+* eguneratu datu basea, erabiltzailearen taula sortzeko
+php bin/console
+
+* moldatu security.yaml fitxategia
+rm config/package/security.yaml
+mv config/package/security.yaml.dist config/package/security.yaml

@@ -1,2 +1,1 @@
-<bg=blue;fg=white> Next for OverblogGraphiQLBundle </>
     1. Browse to <comment>/graphiql</>

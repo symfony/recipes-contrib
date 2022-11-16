@@ -1,7 +1,3 @@
-<bg=blue;fg=white>                              </>
-<bg=blue;fg=white> Mozaic bundle configuration  </>
-<bg=blue;fg=white>                              </>
-
   * Modify the UNSPLASH_APPLICATION_ID and UNSPLASH_APPLICATION_SECRET config in .env
 
   * Don't forget to add the vue component in you javascript

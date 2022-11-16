@@ -1,0 +1,4 @@
+survos_barcode:
+    foregroundColor: black
+    widthFactor: 2
+    height: 60

@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Drenso\\OidcBundle\\DrensoOidcBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "OIDC_WELL_KNOWN_URL": "Enter the .well-known url for the OIDC provider",
+        "OIDC_CLIENT_ID": "Enter your OIDC client id",
+        "OIDC_CLIENT_SECRET": "Enter your OIDC client secret"
+    }
+}

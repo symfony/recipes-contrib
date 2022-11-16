@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "Pentatrion\\ViteBundle\\PentatrionViteBundle": ["all"]
+    },
+    "copy-from-package": {
+        "install/assets/": "assets/",
+        "install/package.json": "package.json",
+        "install/vite.config.js": "vite.config.js"
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "gitignore": ["/node_modules/", "/%PUBLIC_DIR%/build/"]
+}

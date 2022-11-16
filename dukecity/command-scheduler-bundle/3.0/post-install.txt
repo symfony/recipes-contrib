@@ -1,0 +1,9 @@
+  * <fg=blue>Update your DB schema</>
+    1. php bin/console make:migration
+    2. php bin/console doctrine:migrations:migrate
+
+  * <fg=red;fg=white>Secure / Configure</> your application:
+    1. Secure your route by adding <comment>- { path: ^/command-scheduler, role: ROLE_ADMIN }</> in your security config.
+    2. Set the single-entry point in crontab : <comment>* * * * * php /your_app/bin/console scheduler:execute</>
+
+  * <fg=blue>Schedule</> your commands at <comment>http://your-app/command-scheduler/list</>

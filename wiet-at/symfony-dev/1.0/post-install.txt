@@ -1,0 +1,1 @@
+wiet-at/symfony-dev: Please check your .env file and adapt it according to your needs.

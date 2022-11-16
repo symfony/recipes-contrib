@@ -1,0 +1,4 @@
+jupi_presta_shop_webservice:
+    connection:
+        store_root_path: '%env(PRESTA_WEBSERVICE_ROOT_PATH)%'
+        authentication_key: '%env(PRESTA_WEBSERVICE_AUTH_KEY)%'

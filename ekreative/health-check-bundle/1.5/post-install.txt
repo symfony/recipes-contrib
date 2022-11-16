@@ -1,7 +1,3 @@
-<bg=blue;fg=white>                                                </>
-<bg=blue;fg=white> Next: EkreativeHealthCheckBundle Configuration </>
-<bg=blue;fg=white>                                                </>
-
   * You can add more doctrine/redis connections to your config in <fg=green>config/packages/ekreative_health_check.yaml</>
 
   *. Add healthcheck firewall to <fg=green>config/security.yaml</> file

@@ -1,0 +1,3 @@
+dunglas_digital_ocean:
+    connections:
+        default: '%env(DIGITAL_OCEAN_TOKEN)%'

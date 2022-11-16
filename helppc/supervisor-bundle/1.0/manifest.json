@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "HelpPC\\Bundle\\SupervisorBundle\\SupervisorBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

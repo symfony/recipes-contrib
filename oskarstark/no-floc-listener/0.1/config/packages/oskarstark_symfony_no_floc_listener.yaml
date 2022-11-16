@@ -1,0 +1,3 @@
+services:
+    OskarStark\Symfony\EventListener\NoFlocListener:
+        autoconfigure: true

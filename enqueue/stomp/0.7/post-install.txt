@@ -1,7 +1,3 @@
-<bg=yellow;fg=black>                        </>
-<bg=yellow;fg=black> Using STOMP in Enqueue </>
-<bg=yellow;fg=black>                        </>
-
   * Configure <comment>ENQUEUE_DSN=stomp://example.com:1000?login=theLogin</comment>
     in your <comment>.env</comment> file.
 

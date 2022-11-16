@@ -1,0 +1,6 @@
+# All available configuration can be found here:
+# https://github.com/lhapaipai/upload-bundle#advanced-configuration
+
+pentatrion_upload:
+    # update to ["small"] if you have installed liip/imagine-bundle
+    liip_filters: []

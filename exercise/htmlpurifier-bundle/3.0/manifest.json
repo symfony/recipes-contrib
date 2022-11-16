@@ -1,1 +1,8 @@
-../0.2/manifest.json
+{
+    "bundles": {
+        "Exercise\\HTMLPurifierBundle\\ExerciseHTMLPurifierBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

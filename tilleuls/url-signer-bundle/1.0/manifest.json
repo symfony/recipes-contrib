@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "CoopTilleuls\\UrlSignerBundle\\CoopTilleulsUrlSignerBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "SIGNATURE_KEY": "change_me"
+    }
+}
