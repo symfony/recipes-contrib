@@ -1,4 +1,0 @@
-logbook:
-  api:
-    url: "%env(LOGBOOK_API_URL)%"
-    key: "%env(LOGBOOK_API_KEY)%"
