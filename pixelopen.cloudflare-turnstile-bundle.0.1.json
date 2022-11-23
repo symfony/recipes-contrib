@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "pixelopen/cloudflare-turnstile-bundle": {
+            "manifest": {
+                "bundles": {
+                    "PixelOpen\\CloudflareTurnstileBundle\\PixelOpenCloudflareTurnstileBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "TURNSTILE_KEY": "3x00000000000000000000FF",
+                    "TURNSTILE_SECRET": "1x0000000000000000000000000000000AA"
+                },
+                "post-install-output": [
+                    "  * The <fg=green>Cloudflare Turnstile Bundle</> is almost ready",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/Pixel-Open/cloudflare-turnstile-bundle</>"
+                ]
+            },
+            "files": {
+                "config/packages/pixel_open_cloudflare_turnstile.yaml": {
+                    "contents": [
+                        "pixel_open_cloudflare_turnstile:",
+                        "    key: \"%env(TURNSTILE_KEY)%\"",
+                        "    secret: \"%env(TURNSTILE_SECRET)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6173b9aff0056dd99ca70a2caa940cc7bcac0b4b"
+        }
+    }
+}

@@ -1258,6 +1258,9 @@
         "piou-piou/ribs-cron-bundle": [
             "1.0"
         ],
+        "pixelopen/cloudflare-turnstile-bundle": [
+            "0.1"
+        ],
         "player259/graphql-bundle": [
             "1.0"
         ],
