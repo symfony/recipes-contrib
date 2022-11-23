@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "PixelOpen\\CloudflareTurnstileBundle\\PixelOpenCloudflareTurnstileBundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "TURNSTILE_KEY": "3x00000000000000000000FF",
+        "TURNSTILE_SECRET": "1x0000000000000000000000000000000AA"
+    }
+}
