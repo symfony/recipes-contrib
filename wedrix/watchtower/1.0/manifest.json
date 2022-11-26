@@ -3,10 +3,10 @@
         "commands/": "%SRC_DIR%/Command/",
         "controllers/": "%SRC_DIR%/Controller/",
         "services/": "%SRC_DIR%",
-        "watchtower_bootstrap": "%VAR_DIR%"
+        "watchtower_bootstrap": "%BIN_DIR%/_watchtower_tmp"
     },
     "composer-scripts": {
-        "%VAR_DIR%/watchtower_bootstrap": "php-script",
-        "%BIN_DIR%/console watchtower:schema:generate": "php-script"
+        "%BIN_DIR%/_watchtower_tmp/watchtower_bootstrap": "php-script",
+        "%BIN_DIR%/tmp/console watchtower:schema:generate": "php-script"
     }
 }
