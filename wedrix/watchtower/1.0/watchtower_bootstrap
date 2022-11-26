@@ -1,6 +1,0 @@
-#!/usr/bin/env php
-<?php
-
-mkdir(dirname(__DIR__, 2)."/resources/graphql/plugins");
-mkdir(dirname(__DIR__, 2)."/resources/graphql/scalar_type_definitions");
-unlink(__FILE__);
