@@ -6,7 +6,7 @@
         "bootstrap.php": "%VAR_DIR%"
     },
     "composer-scripts": {
-        "php var/bootstrap.php": "script",
-        "php bin/console watchtower:schema:generate": "script"
+        "var/bootstrap.php": "php-script",
+        "bin/console watchtower:schema:generate": "php-script"
     }
 }
