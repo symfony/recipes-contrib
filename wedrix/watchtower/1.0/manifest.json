@@ -2,11 +2,11 @@
     "copy-from-recipe": {
         "commands/": "%SRC_DIR%/Command/",
         "controllers/": "%SRC_DIR%/Controller/",
-        "services/": "%SRC_DIR%"
+        "services/": "%SRC_DIR%",
+        "bootstrap.php": "%VAR_DIR%"
     },
     "composer-scripts": {
-        "mkdir ./resources/graphql/plugins": "script",
-        "mkdir ./resources/graphql/scalar_type_definitions": "script",
+        "php %VAR_DIR%/bootstrap.php": "script",
         "php bin/console watchtower:schema:generate": "script"
     }
 }
