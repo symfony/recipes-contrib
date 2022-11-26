@@ -3,7 +3,7 @@
         "commands/": "%SRC_DIR%/Command/",
         "controllers/": "%SRC_DIR%/Controller/",
         "services/": "%SRC_DIR%",
-        "resources/": "resources/"
+        "config/": "%CONFIG_DIR%"
     },
     "composer-scripts": {
         "%BIN_DIR%/console watchtower:schema:generate": "php-script"

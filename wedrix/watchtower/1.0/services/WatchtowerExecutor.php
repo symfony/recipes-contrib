@@ -18,11 +18,11 @@ final class WatchtowerExecutor
     {
         return new Executor(
             entityManager: $this->entityManager,
-            schemaFileDirectory: dirname(__DIR__) . '/resources/graphql/schema.graphql',
+            schemaFileDirectory: dirname(__DIR__) . '/config/graphql/schema.graphql',
             schemaCacheFileDirectory: dirname(__DIR__) . '/var/cache/graphql/schema.graphql',
             cachesTheSchema: $this->parameterBag->get('kernel.environment') !== 'dev',
-            pluginsDirectory: dirname(__DIR__) . '/resources/graphql/plugins',
-            scalarTypeDefinitionsDirectory: dirname(__DIR__) . '/resources/graphql/scalar_type_definitions'
+            pluginsDirectory: dirname(__DIR__) . '/config/graphql/plugins',
+            scalarTypeDefinitionsDirectory: dirname(__DIR__) . '/config/graphql/scalar_type_definitions'
         );
     }
 }
