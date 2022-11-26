@@ -6,7 +6,7 @@
         "watchtower_bootstrap": "%VAR_DIR%"
     },
     "composer-scripts": {
-        "var/watchtower_bootstrap": "php-script",
-        "bin/console watchtower:schema:generate": "php-script"
+        "%VAR_DIR%/watchtower_bootstrap": "php-script",
+        "%BIN_DIR%/console watchtower:schema:generate": "php-script"
     }
 }
