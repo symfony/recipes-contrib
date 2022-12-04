@@ -6,6 +6,7 @@ namespace App\Command\Watchtower;
 
 use App\WatchtowerConsole;
 use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Helper\QuestionHelper;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\ConsoleOutputInterface;
@@ -52,6 +53,10 @@ final class AddScalarTypeDefinition extends Command
         if (is_null($typeName = $input->getOption('type-name'))) {
             $typeName = (function () use ($input, $output): bool {
                 $helper = $this->getHelper('question');
+
+                if (!$helper instanceof QuestionHelper) {
+                    throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
+                }
     
                 return $helper->ask($input, $output, new Question(
                     question: "What is the custom scalar's name? "

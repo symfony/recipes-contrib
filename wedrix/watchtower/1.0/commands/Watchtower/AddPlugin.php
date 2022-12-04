@@ -6,6 +6,7 @@ namespace App\Command\Watchtower;
 
 use App\WatchtowerConsole;
 use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Helper\QuestionHelper;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\ConsoleOutputInterface;
@@ -84,6 +85,10 @@ final class AddPlugin extends Command
         ) {
             $pluginType = (function () use ($input, $output, $pluginTypes): string {
                 $helper = $this->getHelper('question');
+
+                if (!$helper instanceof QuestionHelper) {
+                    throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
+                }
     
                 return $helper->ask($input, $output, new ChoiceQuestion(
                     question: "What's the plugin type? ",
@@ -102,6 +107,10 @@ final class AddPlugin extends Command
         ) {
             $nodeType = (function () use ($input, $output): string {
                 $helper = $this->getHelper('question');
+
+                if (!$helper instanceof QuestionHelper) {
+                    throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
+                }
     
                 return $helper->ask($input, $output, new Question(
                     question: "What's the node type? "
@@ -119,6 +128,10 @@ final class AddPlugin extends Command
         ) {
             $fieldName = (function () use ($input, $output): string {
                 $helper = $this->getHelper('question');
+
+                if (!$helper instanceof QuestionHelper) {
+                    throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
+                }
     
                 return $helper->ask($input, $output, new Question(
                     question: "What's the field name? "
@@ -133,6 +146,10 @@ final class AddPlugin extends Command
         ) {
             $filter = (function () use ($input, $output): string {
                 $helper = $this->getHelper('question');
+
+                if (!$helper instanceof QuestionHelper) {
+                    throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
+                }
     
                 return $helper->ask($input, $output, new Question(
                     question: "What's the filter? "
@@ -147,6 +164,10 @@ final class AddPlugin extends Command
         ) {
             $ordering = (function () use ($input, $output): string {
                 $helper = $this->getHelper('question');
+
+                if (!$helper instanceof QuestionHelper) {
+                    throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
+                }
     
                 return $helper->ask($input, $output, new Question(
                     question: "What's the ordering? "
@@ -158,6 +179,10 @@ final class AddPlugin extends Command
             if (is_null($isForCollections = $input->getOption('is-for-collections'))) {
                 $isForCollections = (function () use ($input, $output): bool {
                     $helper = $this->getHelper('question');
+
+                    if (!$helper instanceof QuestionHelper) {
+                        throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
+                    }
         
                     return $helper->ask($input, $output, new ConfirmationQuestion(
                         question: "Is the authorizor for collections? "
