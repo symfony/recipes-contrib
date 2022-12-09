@@ -1,0 +1,7 @@
+iepgdsi:
+    my_var_string: "%env(VAR_STRING_IPEG)%"
+    my_var_string_option: "OOOOOOptionnel !!!"
+    my_array:
+      - "element1"
+      - "element2"
+    my_integer: 22
