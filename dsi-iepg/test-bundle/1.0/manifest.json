@@ -8,5 +8,5 @@
     "env": {
         "VAR_STRING_IPEG": "Hello from .env",
         "VAR_STRING_IPEG_OPTION": "Optionnal from .envvvv"
-        }
+    }
 }
