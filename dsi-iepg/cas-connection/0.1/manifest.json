@@ -11,7 +11,7 @@
         "CAS_PATH": "http://my-server.com",
         "CAS_PORT": 443,
         "CAS_CA": false,
-        "CAS_CA_PATH": null
+        "CAS_CA_PATH": ""
     }
 }
 
