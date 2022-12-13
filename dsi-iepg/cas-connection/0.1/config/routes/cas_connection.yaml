@@ -1,0 +1,3 @@
+cas_connection:
+    resource: '@CasConnectionBundle/Resources/config/routes.yaml'
+    prefix: /cas-connection

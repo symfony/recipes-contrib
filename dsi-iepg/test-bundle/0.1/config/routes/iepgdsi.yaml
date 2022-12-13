@@ -1,3 +1,0 @@
-_tools:
-    resource: '@TestBundle/Resources/config/routes.yaml'
-    prefix: /my-route

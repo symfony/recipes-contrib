@@ -1,0 +1,6 @@
+cas_connection:
+    cas_host: "%env(CAS_HOST)%"
+    cas_path: "%env(CAS_PATH)%"
+    cas_port: '%env(int:CAS_PORT)%'
+    cas_ca: '%env(bool:CAS_CA)%'
+    cas_ca_path: "%env(CAS_CA_PATH)%"

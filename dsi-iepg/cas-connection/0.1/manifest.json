@@ -1,0 +1,15 @@
+{
+    "bundles": {
+        "Iepg\\Bundle\\Cas\\CasConnectionBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "CAS_HOST": "cas-adresse.com",
+        "CAS_PATH": "http://my-server.com",
+        "CAS_PORT": 443,
+        "CAS_CA": false,
+        "CAS_CA_PATH": null
+    }
+}
