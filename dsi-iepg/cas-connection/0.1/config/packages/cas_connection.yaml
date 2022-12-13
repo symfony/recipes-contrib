@@ -4,3 +4,8 @@ cas_connection:
     cas_port: '%env(int:CAS_PORT)%'
     cas_ca: '%env(bool:CAS_CA)%'
     cas_ca_path: "%env(CAS_CA_PATH)%"
+
+twig:
+    paths:
+       '%kernel.project_dir%/vendor/dsi-iepg/cas-connection/src/Resources/views': cas_connection
+
