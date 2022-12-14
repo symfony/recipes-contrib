@@ -4,6 +4,7 @@ cas_connection:
     cas_port: "%env(int:CAS_PORT)%"
     cas_ca: "%env(bool:CAS_CA)%"
     cas_ca_path: "%env(CAS_CA_PATH)%"
+    cas_dispatcher_name: "%env(CAS_DISPATCHER_NAME)%"
 
 twig:
     paths:

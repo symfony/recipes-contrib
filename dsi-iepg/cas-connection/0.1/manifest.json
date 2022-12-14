@@ -7,10 +7,24 @@
         "src/": "%SRC_DIR%/"
     },
     "env": {
+        "#1": "Parameters for CAS connection",
         "CAS_HOST": "cas-adresse.com",
-        "CAS_PATH": "http://my-server.com",
-        "CAS_PORT": 443,
+        "#2": "This value is optional",
+        "#3": "If it's empty the path will the base url",
+        "#4": "example: Scheme://HttpHost+BasePath",
+        "CAS_PATH": null,
+        "#5": "This value is optional",
+        "#6": "If it's empty the port will 443",
+        "CAS_PORT": null,
         "CAS_CA": false,
-        "CAS_CA_PATH": ""
+        "#7": "This value is optional",
+        "#8": "if it's empty you don't use ceretificat",
+        "#9": "THIS SETTING IS NOT RECOMMENDED FOR PRODUCTION!",
+        "CAS_CA_PATH": null,
+        "#10": "this value is optional. You can custome the NAME of the dispatcher route",
+        "#11": "Where does the user go according to his role ",
+        "#12": "The default value is 'cas_dispatcher'",
+        "CAS_DISPATCHER_NAME": null,
+        "#13": "end of Cas-connection"
     }
 }
