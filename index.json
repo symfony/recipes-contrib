@@ -22,6 +22,9 @@
         "ajardin/docker-symfony": [
             "0.2"
         ],
+        "ajgl/breakpoint-twig-extension": [
+            "0.3"
+        ],
         "akondas/symfony-consul-bundle": [
             "0.1"
         ],

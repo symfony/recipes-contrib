@@ -11,6 +11,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [adlarge/fixtures-documentation-bundle](https://packagist.org/packages/adlarge/fixtures-documentation-bundle) | [1.1](adlarge/fixtures-documentation-bundle/1.1) |
 | [ajardin/blizzard-sdk-bundle](https://packagist.org/packages/ajardin/blizzard-sdk-bundle) | [1.0](ajardin/blizzard-sdk-bundle/1.0) |
 | [ajardin/docker-symfony](https://packagist.org/packages/ajardin/docker-symfony) | [0.2](ajardin/docker-symfony/0.2) |
+| [ajgl/breakpoint-twig-extension](https://packagist.org/packages/ajgl/breakpoint-twig-extension) | [0.3](ajgl/breakpoint-twig-extension/0.3) |
 | [akondas/symfony-consul-bundle](https://packagist.org/packages/akondas/symfony-consul-bundle) | [0.1](akondas/symfony-consul-bundle/0.1) |
 | [alexandret/evc-bundle](https://packagist.org/packages/alexandret/evc-bundle) | [1.0](alexandret/evc-bundle/1.0) |
 | [algolia/algolia-search-bundle](https://packagist.org/packages/algolia/algolia-search-bundle) | [2.2](algolia/algolia-search-bundle/2.2) |
