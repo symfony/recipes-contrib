@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "spatie/symfony-ignition-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Spatie\\SymfonyIgnitionBundle\\IgnitionBundle": [
+                        "dev"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ignition.yaml": {
+                    "contents": [
+                        "ignition:",
+                        "    dark_mode: false",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5e504db6aa95f5d8f664f6c9e073c406fb60c85d"
+        }
+    }
+}

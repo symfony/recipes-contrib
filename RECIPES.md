@@ -456,6 +456,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sonata-project/page-bundle](https://packagist.org/packages/sonata-project/page-bundle) | [3.9](sonata-project/page-bundle/3.9) |
 | [sonata-project/translation-bundle](https://packagist.org/packages/sonata-project/translation-bundle) | [2.3](sonata-project/translation-bundle/2.3) |
 | [sonata-project/twig-extensions](https://packagist.org/packages/sonata-project/twig-extensions) | [1.2](sonata-project/twig-extensions/1.2) |
+| [spatie/symfony-ignition-bundle](https://packagist.org/packages/spatie/symfony-ignition-bundle) | [0.0](spatie/symfony-ignition-bundle/0.0) |
 | [spiechu/symfony-commons-bundle](https://packagist.org/packages/spiechu/symfony-commons-bundle) | [0.1](spiechu/symfony-commons-bundle/0.1) |
 | [spomky-labs/jose-bundle](https://packagist.org/packages/spomky-labs/jose-bundle) | [2.2](spomky-labs/jose-bundle/2.2) |
 | [spomky-labs/lexik-jose-bridge](https://packagist.org/packages/spomky-labs/lexik-jose-bridge) | [2.0](spomky-labs/lexik-jose-bridge/2.0) |

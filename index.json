@@ -1428,6 +1428,9 @@
         "sonata-project/twig-extensions": [
             "1.2"
         ],
+        "spatie/symfony-ignition-bundle": [
+            "0.0"
+        ],
         "spiechu/symfony-commons-bundle": [
             "0.1"
         ],
