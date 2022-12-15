@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "Ajgl\\Twig\\Extension\\SymfonyBundle\\AjglBreakpointTwigExtensionBundle": ["dev"]
+    }
+}
