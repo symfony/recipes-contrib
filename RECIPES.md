@@ -520,7 +520,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [tsantos/serializer-bundle](https://packagist.org/packages/tsantos/serializer-bundle) | [1.0](tsantos/serializer-bundle/1.0) |
 | [velhron/dadata-bundle](https://packagist.org/packages/velhron/dadata-bundle) | [1.0](velhron/dadata-bundle/1.0) |
 | [verschoof/transip-api-bundle](https://packagist.org/packages/verschoof/transip-api-bundle) | [1.2](verschoof/transip-api-bundle/1.2) |
-| [vich/uploader-bundle](https://packagist.org/packages/vich/uploader-bundle) | [1.7](vich/uploader-bundle/1.7) |
+| [vich/uploader-bundle](https://packagist.org/packages/vich/uploader-bundle) | [1.13](vich/uploader-bundle/1.13) |
 | [victor-prdh/recaptcha-bundle](https://packagist.org/packages/victor-prdh/recaptcha-bundle) | [1.5](victor-prdh/recaptcha-bundle/1.5) |
 | [vincentchalamon/nav-bundle](https://packagist.org/packages/vincentchalamon/nav-bundle) | [1.0](vincentchalamon/nav-bundle/1.0) |
 | [wandi/easyadmin-plus-bundle](https://packagist.org/packages/wandi/easyadmin-plus-bundle) | [0.3](wandi/easyadmin-plus-bundle/0.3) |

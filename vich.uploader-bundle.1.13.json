@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "vich/uploader-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Vich\\UploaderBundle\\VichUploaderBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/vich_uploader.yaml": {
+                    "contents": [
+                        "vich_uploader:",
+                        "    db_driver: orm",
+                        "",
+                        "    #mappings:",
+                        "    #    products:",
+                        "    #        uri_prefix: /images/products",
+                        "    #        upload_destination: '%kernel.project_dir%/public/images/products'",
+                        "    #        namer: Vich\\UploaderBundle\\Naming\\SmartUniqueNamer",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "1b3064c2f6b255c2bc2f56461aaeb76b11e07e36"
+        }
+    }
+}

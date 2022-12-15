@@ -1635,7 +1635,8 @@
             "1.2"
         ],
         "vich/uploader-bundle": [
-            "1.7"
+            "1.7",
+            "1.13"
         ],
         "victor-prdh/recaptcha-bundle": [
             "1.5"
