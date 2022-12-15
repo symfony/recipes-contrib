@@ -220,7 +220,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [jawira/case-converter-twig](https://packagist.org/packages/jawira/case-converter-twig) | [0.0](jawira/case-converter-twig/0.0) |
 | [jbtcd/fitbit-bundle](https://packagist.org/packages/jbtcd/fitbit-bundle) | [1.0](jbtcd/fitbit-bundle/1.0) |
 | [jmose/command-scheduler-bundle](https://packagist.org/packages/jmose/command-scheduler-bundle) | [2.0](jmose/command-scheduler-bundle/2.0) |
-| [jms/serializer-bundle](https://packagist.org/packages/jms/serializer-bundle) | [3.0](jms/serializer-bundle/3.0) |
+| [jms/serializer-bundle](https://packagist.org/packages/jms/serializer-bundle) | [4.0](jms/serializer-bundle/4.0) |
 | [jolicode/gif-exception-bundle](https://packagist.org/packages/jolicode/gif-exception-bundle) | [1.0](jolicode/gif-exception-bundle/1.0) |
 | [jolicode/jolitypo](https://packagist.org/packages/jolicode/jolitypo) | [1.0](jolicode/jolitypo/1.0) |
 | [jonathankablan/fast-entity-bundle](https://packagist.org/packages/jonathankablan/fast-entity-bundle) | [2.0](jonathankablan/fast-entity-bundle/2.0) |
@@ -453,7 +453,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sonata-project/form-extensions](https://packagist.org/packages/sonata-project/form-extensions) | [1.4](sonata-project/form-extensions/1.4) |
 | [sonata-project/media-bundle](https://packagist.org/packages/sonata-project/media-bundle) | [4.0](sonata-project/media-bundle/4.0) |
 | [sonata-project/notification-bundle](https://packagist.org/packages/sonata-project/notification-bundle) | [3.4](sonata-project/notification-bundle/3.4) |
-| [sonata-project/page-bundle](https://packagist.org/packages/sonata-project/page-bundle) | [3.9](sonata-project/page-bundle/3.9) |
+| [sonata-project/page-bundle](https://packagist.org/packages/sonata-project/page-bundle) | [4.0](sonata-project/page-bundle/4.0) |
 | [sonata-project/translation-bundle](https://packagist.org/packages/sonata-project/translation-bundle) | [2.3](sonata-project/translation-bundle/2.3) |
 | [sonata-project/twig-extensions](https://packagist.org/packages/sonata-project/twig-extensions) | [1.2](sonata-project/twig-extensions/1.2) |
 | [spatie/symfony-ignition-bundle](https://packagist.org/packages/spatie/symfony-ignition-bundle) | [0.0](spatie/symfony-ignition-bundle/0.0) |
