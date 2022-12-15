@@ -281,6 +281,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [m-adamski/symfony-schedule-bundle](https://packagist.org/packages/m-adamski/symfony-schedule-bundle) | [1.0](m-adamski/symfony-schedule-bundle/1.0) |
 | [maba/webpack-bundle](https://packagist.org/packages/maba/webpack-bundle) | [1.0](maba/webpack-bundle/1.0) |
 | [machy8/webloader-bundle](https://packagist.org/packages/machy8/webloader-bundle) | [1.1](machy8/webloader-bundle/1.1) |
+| [macpaw/behat-nelmio-describer](https://packagist.org/packages/macpaw/behat-nelmio-describer) | [1.0](macpaw/behat-nelmio-describer/1.0) |
 | [macpaw/sentry-monolog-adapter](https://packagist.org/packages/macpaw/sentry-monolog-adapter) | [0.0](macpaw/sentry-monolog-adapter/0.0) |
 | [macpaw/symfony-health-check-bundle](https://packagist.org/packages/macpaw/symfony-health-check-bundle) | [1.0](macpaw/symfony-health-check-bundle/1.0) |
 | [mael/intervention-image-bundle](https://packagist.org/packages/mael/intervention-image-bundle) | [1.0](mael/intervention-image-bundle/1.0) |

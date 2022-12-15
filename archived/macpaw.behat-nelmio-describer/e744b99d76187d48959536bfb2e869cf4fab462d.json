@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "macpaw/behat-nelmio-describer": {
+            "manifest": {
+                "bundles": {
+                    "BehatNelmioDescriber\\BehatNelmioDescriberBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/MacPaw/behat-nelmio-describer</>"
+                ]
+            },
+            "files": {
+                "config/packages/behat_nelmio_describer.yaml": {
+                    "contents": [
+                        "behat_nelmio_describer:",
+                        "    behat_test_path: '%kernel.project_dir%/features'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e744b99d76187d48959536bfb2e869cf4fab462d"
+        }
+    }
+}
