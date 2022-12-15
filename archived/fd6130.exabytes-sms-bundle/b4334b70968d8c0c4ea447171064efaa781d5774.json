@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "fd6130/exabytes-sms-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Fd\\ExabytesBundle\\FdExabytesBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%"
+                },
+                "env": {
+                    "EXABYTES_USERNAME": "",
+                    "EXABYTES_PASSWORD": ""
+                }
+            },
+            "files": {
+                "config/packages/fd_exabytes.yaml": {
+                    "contents": [
+                        "fd_exabytes:",
+                        "    username: '%env(EXABYTES_USERNAME)%'",
+                        "    password: '%env(EXABYTES_PASSWORD)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b4334b70968d8c0c4ea447171064efaa781d5774"
+        }
+    }
+}
