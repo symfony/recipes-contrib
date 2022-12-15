@@ -66,6 +66,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [codeception/codeception](https://packagist.org/packages/codeception/codeception) | [2.3](codeception/codeception/2.3) |
 | [coka/api-bundle](https://packagist.org/packages/coka/api-bundle) | [4.0](coka/api-bundle/4.0) |
 | [coka/cors-bundle](https://packagist.org/packages/coka/cors-bundle) | [1.0](coka/cors-bundle/1.0) |
+| [coka/doctrine-encrypt-bundle](https://packagist.org/packages/coka/doctrine-encrypt-bundle) | [1.0](coka/doctrine-encrypt-bundle/1.0) |
 | [coka/file-bundle](https://packagist.org/packages/coka/file-bundle) | [3.0](coka/file-bundle/3.0) |
 | [coka/input-handler-bundle](https://packagist.org/packages/coka/input-handler-bundle) | [1.0](coka/input-handler-bundle/1.0) |
 | [coka/pagination-bundle](https://packagist.org/packages/coka/pagination-bundle) | [5.0](coka/pagination-bundle/5.0) |

@@ -193,6 +193,9 @@
         "coka/cors-bundle": [
             "1.0"
         ],
+        "coka/doctrine-encrypt-bundle": [
+            "1.0"
+        ],
         "coka/file-bundle": [
             "3.0"
         ],
