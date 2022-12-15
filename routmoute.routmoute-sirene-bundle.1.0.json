@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "routmoute/routmoute-sirene-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Routmoute\\Bundle\\RoutmouteSireneBundle\\RoutmouteSireneBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "ROUTMOUTE_SIRENE_CONSUMER_KEY": "YourInseeConsumerKey",
+                    "ROUTMOUTE_SIRENE_CONSUMER_SECRET": "YourInseeConsumerSecret"
+                }
+            },
+            "files": {
+                "config/packages/routmoute_sirene.yaml": {
+                    "contents": [
+                        "routmoute_sirene:",
+                        "    consumer_key: '%env(ROUTMOUTE_SIRENE_CONSUMER_KEY)%'",
+                        "    consumer_secret: '%env(ROUTMOUTE_SIRENE_CONSUMER_SECRET)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "73965273df96b5c0ba430c047594ab19991c2cae"
+        }
+    }
+}

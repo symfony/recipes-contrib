@@ -78,7 +78,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [connectholland/timechimp-bundle](https://packagist.org/packages/connectholland/timechimp-bundle) | [1.0](connectholland/timechimp-bundle/1.0) |
 | [connectholland/uptime-robot-bundle](https://packagist.org/packages/connectholland/uptime-robot-bundle) | [1.0](connectholland/uptime-robot-bundle/1.0) |
 | [contao/core-bundle](https://packagist.org/packages/contao/core-bundle) | [4.6](contao/core-bundle/4.6) |
-| [contao/installation-bundle](https://packagist.org/packages/contao/installation-bundle) | [4.6](contao/installation-bundle/4.6) |
+| [contao/installation-bundle](https://packagist.org/packages/contao/installation-bundle) | [4.10](contao/installation-bundle/4.10) |
 | [contentful/contentful-bundle](https://packagist.org/packages/contentful/contentful-bundle) | [4.0](contentful/contentful-bundle/4.0) |
 | [core23/facebook-bundle](https://packagist.org/packages/core23/facebook-bundle) | [0.4](core23/facebook-bundle/0.4) |
 | [core23/gdpr-bundle](https://packagist.org/packages/core23/gdpr-bundle) | [0.2](core23/gdpr-bundle/0.2) |
@@ -183,7 +183,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [goetas/twital-bundle](https://packagist.org/packages/goetas/twital-bundle) | [1.3](goetas/twital-bundle/1.3) |
 | [goksagun/scheduler-bundle](https://packagist.org/packages/goksagun/scheduler-bundle) | [1.0](goksagun/scheduler-bundle/1.0) |
 | [gonzakpo/websocket-bundle](https://packagist.org/packages/gonzakpo/websocket-bundle) | [1.0](gonzakpo/websocket-bundle/1.0) |
-| [google/apiclient](https://packagist.org/packages/google/apiclient) | [2.0](google/apiclient/2.0) |
+| [google/apiclient](https://packagist.org/packages/google/apiclient) | [2.10](google/apiclient/2.10) |
 | [google/recaptcha](https://packagist.org/packages/google/recaptcha) | [1.1](google/recaptcha/1.1) |
 | [googlechromelabs/ise-web-security-bundle](https://packagist.org/packages/googlechromelabs/ise-web-security-bundle) | [1.0](googlechromelabs/ise-web-security-bundle/1.0) |
 | [gpslab/domain-event-bundle](https://packagist.org/packages/gpslab/domain-event-bundle) | [2.2](gpslab/domain-event-bundle/2.2) |
@@ -429,6 +429,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [rokka/client-bundle](https://packagist.org/packages/rokka/client-bundle) | [1.0](rokka/client-bundle/1.0) |
 | [roukmoute/hashids-bundle](https://packagist.org/packages/roukmoute/hashids-bundle) | [1.4](roukmoute/hashids-bundle/1.4) |
 | [routmoute/routmoute-discord-bundle](https://packagist.org/packages/routmoute/routmoute-discord-bundle) | [1.1](routmoute/routmoute-discord-bundle/1.1) |
+| [routmoute/routmoute-sirene-bundle](https://packagist.org/packages/routmoute/routmoute-sirene-bundle) | [1.0](routmoute/routmoute-sirene-bundle/1.0) |
 | [rundum/event-base](https://packagist.org/packages/rundum/event-base) | [0.0](rundum/event-base/0.0) |
 | [ruwler/ruwler-sdk-bundle](https://packagist.org/packages/ruwler/ruwler-sdk-bundle) | [1.0](ruwler/ruwler-sdk-bundle/1.0) |
 | [scheb/two-factor-bundle](https://packagist.org/packages/scheb/two-factor-bundle) | [3.16](scheb/two-factor-bundle/3.16) |

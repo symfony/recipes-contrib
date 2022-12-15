@@ -231,7 +231,8 @@
             "4.6"
         ],
         "contao/installation-bundle": [
-            "4.6"
+            "4.6",
+            "4.10"
         ],
         "contentful/contentful-bundle": [
             "3.0",
@@ -563,7 +564,8 @@
             "1.0"
         ],
         "google/apiclient": [
-            "2.0"
+            "2.0",
+            "2.10"
         ],
         "google/recaptcha": [
             "1.1"
@@ -1338,6 +1340,9 @@
         ],
         "routmoute/routmoute-discord-bundle": [
             "1.1"
+        ],
+        "routmoute/routmoute-sirene-bundle": [
+            "1.0"
         ],
         "rundum/event-base": [
             "0.0"

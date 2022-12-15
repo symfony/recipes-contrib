@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "google/apiclient": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "GOOGLE_API_KEY": "",
+                    "GOOGLE_CLIENT_ID": "",
+                    "GOOGLE_CLIENT_SECRET": "",
+                    "GOOGLE_AUTH_CONFIG": "%kernel.project_dir%/path/to/file.json"
+                }
+            },
+            "files": {
+                "config/packages/google_apiclient.yaml": {
+                    "contents": [
+                        "services:",
+                        "    Google\\Client:",
+                        "        class: Google\\Client",
+                        "        calls:",
+                        "            # Authentication with \"API key\"",
+                        "            - [setDeveloperKey, ['%env(GOOGLE_API_KEY)%']]",
+                        "            # Authentication with \"OAuth 2.0\" using Client ID & Secret",
+                        "            - [setClientId, ['%env(GOOGLE_CLIENT_ID)%']]",
+                        "            - [setClientSecret, ['%env(GOOGLE_CLIENT_SECRET)%']]",
+                        "            # Authentication with \"OAuth 2.0\" or \"Service account\" using JSON",
+                        "            - [setAuthConfig, ['%env(resolve:GOOGLE_AUTH_CONFIG)%']]",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "07a97ec434d43b7903c78069a04c92adb6442e52"
+        }
+    }
+}
