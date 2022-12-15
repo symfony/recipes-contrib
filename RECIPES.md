@@ -42,7 +42,6 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [beelab/recaptcha2-bundle](https://packagist.org/packages/beelab/recaptcha2-bundle) | [2.0](beelab/recaptcha2-bundle/2.0) |
 | [beelab/tag-bundle](https://packagist.org/packages/beelab/tag-bundle) | [1.3](beelab/tag-bundle/1.3) |
 | [beelab/test-bundle](https://packagist.org/packages/beelab/test-bundle) | [2.0](beelab/test-bundle/2.0) |
-| [biig/domain](https://packagist.org/packages/biig/domain) | [1.0](biig/domain/1.0) |
 | [birkof/netopia-mobilpay-bundle](https://packagist.org/packages/birkof/netopia-mobilpay-bundle) | [1.0](birkof/netopia-mobilpay-bundle/1.0) |
 | [bitbag/cms-plugin](https://packagist.org/packages/bitbag/cms-plugin) | [3.0](bitbag/cms-plugin/3.0) |
 | [bitbag/mailchimp-plugin](https://packagist.org/packages/bitbag/mailchimp-plugin) | [1.2](bitbag/mailchimp-plugin/1.2) |
