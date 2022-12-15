@@ -444,6 +444,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [slot/mandrill-bundle](https://packagist.org/packages/slot/mandrill-bundle) | [1.1](slot/mandrill-bundle/1.1) |
 | [snc/redis-bundle](https://packagist.org/packages/snc/redis-bundle) | [2.0](snc/redis-bundle/2.0) |
 | [soljian/steam-authentication-bundle](https://packagist.org/packages/soljian/steam-authentication-bundle) | [1.0](soljian/steam-authentication-bundle/1.0) |
+| [solvrtech/symfony-logbook](https://packagist.org/packages/solvrtech/symfony-logbook) | [1.0](solvrtech/symfony-logbook/1.0) |
 | [sonata-project/admin-bundle](https://packagist.org/packages/sonata-project/admin-bundle) | [4.0](sonata-project/admin-bundle/4.0) |
 | [sonata-project/block-bundle](https://packagist.org/packages/sonata-project/block-bundle) | [4.11](sonata-project/block-bundle/4.11) |
 | [sonata-project/classification-bundle](https://packagist.org/packages/sonata-project/classification-bundle) | [3.7](sonata-project/classification-bundle/3.7) |

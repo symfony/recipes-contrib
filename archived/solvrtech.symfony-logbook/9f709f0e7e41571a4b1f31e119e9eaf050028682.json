@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "solvrtech/symfony-logbook": {
+            "manifest": {
+                "bundles": {
+                    "Solvrtech\\Symfony\\Logbook\\LogbookBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "LOGBOOK_API_URL": "Logbook API url",
+                    "LOGBOOK_API_KEY": "Logbook API key"
+                }
+            },
+            "files": {
+                "config/packages/logbook.yaml": {
+                    "contents": [
+                        "logbook:",
+                        "    api:",
+                        "        url: \"%env(LOGBOOK_API_URL)%\"",
+                        "        key: \"%env(LOGBOOK_API_KEY)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9f709f0e7e41571a4b1f31e119e9eaf050028682"
+        }
+    }
+}

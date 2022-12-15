@@ -1389,6 +1389,9 @@
         "soljian/steam-authentication-bundle": [
             "1.0"
         ],
+        "solvrtech/symfony-logbook": [
+            "1.0"
+        ],
         "sonata-project/admin-bundle": [
             "3.31",
             "3.64",
