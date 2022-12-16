@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "swag-industries/doctrine-domain-events": {
+            "manifest": {
+                "bundles": {
+                    "Biig\\Component\\Domain\\Integration\\Symfony\\DomainBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/doctrine_domain_event.yaml": {
+                    "contents": [
+                        "biig_domain:",
+                        "    # Learn more about configuration in the bundle configuration reference",
+                        "    # https://github.com/Swagindustries/doctrine-domain-events/blob/v2.2.0/docs/domain_event_dispatcher.md",
+                        "",
+                        "    # Post persist events are *not* activated by default, you need to enable the post persist listeners",
+                        "    persist_listeners:",
+                        "        # As doctrine supports many connections, you need to enable your connections one by one",
+                        "        doctrine: ['default']",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8b8b80b1093b4a67f05c1e9e5ecc24b7c5f4a59e"
+        }
+    }
+}

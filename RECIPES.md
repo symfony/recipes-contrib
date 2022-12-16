@@ -483,6 +483,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [svc/contactform-bundle](https://packagist.org/packages/svc/contactform-bundle) | [1.0](svc/contactform-bundle/1.0) |
 | [svc/param-bundle](https://packagist.org/packages/svc/param-bundle) | [1.0](svc/param-bundle/1.0) |
 | [svc/util-bundle](https://packagist.org/packages/svc/util-bundle) | [1.0](svc/util-bundle/1.0) |
+| [swag-industries/doctrine-domain-events](https://packagist.org/packages/swag-industries/doctrine-domain-events) | [1.0](swag-industries/doctrine-domain-events/1.0) |
 | [swag-industries/melodiia](https://packagist.org/packages/swag-industries/melodiia) | [0.7](swag-industries/melodiia/0.7) |
 | [swarrot/swarrot-bundle](https://packagist.org/packages/swarrot/swarrot-bundle) | [1.6](swarrot/swarrot-bundle/1.6) |
 | [sylius/admin-order-creation-plugin](https://packagist.org/packages/sylius/admin-order-creation-plugin) | [0.6](sylius/admin-order-creation-plugin/0.6) |
