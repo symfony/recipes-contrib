@@ -408,7 +408,8 @@
             "0.9"
         ],
         "emag-tech-labs/annotation-cache-bundle": [
-            "5.0"
+            "5.0",
+            "6.0"
         ],
         "emag-tech-labs/rabbitmq-bundle": [
             "2.0"

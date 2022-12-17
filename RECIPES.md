@@ -134,7 +134,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [ekreative/health-check-bundle](https://packagist.org/packages/ekreative/health-check-bundle) | [1.5](ekreative/health-check-bundle/1.5) |
 | [elao/enum](https://packagist.org/packages/elao/enum) | [1.7](elao/enum/1.7) |
 | [elephantly/kahlan-bundle](https://packagist.org/packages/elephantly/kahlan-bundle) | [0.9](elephantly/kahlan-bundle/0.9) |
-| [emag-tech-labs/annotation-cache-bundle](https://packagist.org/packages/emag-tech-labs/annotation-cache-bundle) | [5.0](emag-tech-labs/annotation-cache-bundle/5.0) |
+| [emag-tech-labs/annotation-cache-bundle](https://packagist.org/packages/emag-tech-labs/annotation-cache-bundle) | [6.0](emag-tech-labs/annotation-cache-bundle/6.0) |
 | [emag-tech-labs/rabbitmq-bundle](https://packagist.org/packages/emag-tech-labs/rabbitmq-bundle) | [2.0](emag-tech-labs/rabbitmq-bundle/2.0) |
 | [emanuilnikolov/igdb-api-bundle](https://packagist.org/packages/emanuilnikolov/igdb-api-bundle) | [1.0](emanuilnikolov/igdb-api-bundle/1.0) |
 | [enhavo/app-bundle](https://packagist.org/packages/enhavo/app-bundle) | [0.9](enhavo/app-bundle/0.9) |
