@@ -1,0 +1,8 @@
+# configuration for "SvcVersioningBundle", see doc for more parameters
+svc_versioning:
+
+    # Should git runs after version increase?
+    run_git:              false
+
+    # Should deploy runs after git?
+    run_deploy:           false
