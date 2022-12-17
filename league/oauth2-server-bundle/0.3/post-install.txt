@@ -1,0 +1,18 @@
+  1. <bg=magenta;fg=white> Provide a key pair </>
+    i)   Generate a private/public key pair (preferably with a password): <comment>https://oauth2.thephpleague.com/installation/#generating-public-and-private-keys</>
+    ii)  Configure the <info>private_key</> and <info>public_key</> with the respective key locations
+    iii) (Optional) Set the <info>private_key_passphrase</> to the private key password set in the previous step
+
+  2. <bg=magenta;fg=white> Configure the OAuth2 encryption key </>
+    i)   Add the <info>OAUTH2_ENCRYPTION_KEY</> env variable in <info>.env.local</> (don't commit your production secrets): <comment>https://oauth2.thephpleague.com/installation/#string-password</>
+    ii)  Configure the <info>encryption_key</> with a secure encryption key: <comment>https://oauth2.thephpleague.com/installation/#string-password</>
+
+  3. <bg=magenta;fg=white> Update the database </>
+    i)   Update the database so bundle entities can be persisted using Doctrine: <comment>bin/console doctrine:schema:update --force</>
+
+  4. <bg=magenta;fg=white> Enable the authenticator security system in <comment>config/security.yaml</> file:</>
+    i)   <comment>security:</>
+         <comment>    enable_authenticator_manager: true</>
+
+  5. <bg=magenta;fg=white> Read the docs </>
+    i)   Read the documentation at <comment>https://github.com/thephpleague/oauth2-server-bundle/blob/master/docs/index.md</>
