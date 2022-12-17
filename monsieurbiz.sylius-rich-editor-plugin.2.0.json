@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "monsieurbiz/sylius-rich-editor-plugin": {
+            "manifest": {
+                "bundles": {
+                    "MonsieurBiz\\SyliusRichEditorPlugin\\MonsieurBizSyliusRichEditorPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/monsieurbiz_sylius_rich_editor_plugin.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@MonsieurBizSyliusRichEditorPlugin/Resources/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/monsieurbiz_sylius_rich_editor_plugin.yaml": {
+                    "contents": [
+                        "monsieurbiz_richeditor_admin:",
+                        "    resource: \"@MonsieurBizSyliusRichEditorPlugin/Resources/config/routing/admin.yaml\"",
+                        "    prefix: /%sylius_admin.path_name%",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e4d7cf0fc492ff63d6f136eb0e5cead10452b088"
+        }
+    }
+}

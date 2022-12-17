@@ -328,7 +328,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [monsieurbiz/sylius-homepage-plugin](https://packagist.org/packages/monsieurbiz/sylius-homepage-plugin) | [1.0](monsieurbiz/sylius-homepage-plugin/1.0) |
 | [monsieurbiz/sylius-menu-plugin](https://packagist.org/packages/monsieurbiz/sylius-menu-plugin) | [1.0](monsieurbiz/sylius-menu-plugin/1.0) |
 | [monsieurbiz/sylius-no-commerce-plugin](https://packagist.org/packages/monsieurbiz/sylius-no-commerce-plugin) | [0.1](monsieurbiz/sylius-no-commerce-plugin/0.1) |
-| [monsieurbiz/sylius-rich-editor-plugin](https://packagist.org/packages/monsieurbiz/sylius-rich-editor-plugin) | [1.0](monsieurbiz/sylius-rich-editor-plugin/1.0) |
+| [monsieurbiz/sylius-rich-editor-plugin](https://packagist.org/packages/monsieurbiz/sylius-rich-editor-plugin) | [2.0](monsieurbiz/sylius-rich-editor-plugin/2.0) |
 | [monsieurbiz/sylius-sales-reports-plugin](https://packagist.org/packages/monsieurbiz/sylius-sales-reports-plugin) | [1.0](monsieurbiz/sylius-sales-reports-plugin/1.0) |
 | [monsieurbiz/sylius-settings-plugin](https://packagist.org/packages/monsieurbiz/sylius-settings-plugin) | [1.0](monsieurbiz/sylius-settings-plugin/1.0) |
 | [monsieurbiz/sylius-shipping-slot-plugin](https://packagist.org/packages/monsieurbiz/sylius-shipping-slot-plugin) | [1.0](monsieurbiz/sylius-shipping-slot-plugin/1.0) |
