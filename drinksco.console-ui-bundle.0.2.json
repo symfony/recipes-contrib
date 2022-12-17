@@ -1,0 +1,62 @@
+{
+    "manifests": {
+        "drinksco/console-ui-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Drinksco\\ConsoleUiBundle\\ConsoleUiBundle": [
+                        "dev"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "CONSOLE_UI_MERCURE_URL": "http://localhost:3001/.well-known/mercure",
+                    "CONSOLE_UI_MERCURE_PUBLIC_URL": "http://localhost:3001/.well-known/mercure",
+                    "CONSOLE_UI_JWT_SECRET": "!ChangeThisMercureHubJWTSecretKey!",
+                    "CONSOLE_API_URL": "http://localhost:3000"
+                },
+                "post-install-output": [
+                    "  * Configure Webpack",
+                    "    <comment>",
+                    "        // webpack.config.js",
+                    "        const Dotenv = require('dotenv-webpack');",
+                    "        ...",
+                    "            .addEntry('component-loader', './node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js')",
+                    "            .addEntry('console-ui', './vendor/drinksco/console-ui-bundle/assets/app.js')",
+                    "            ...",
+                    "            // uncomment if you use TypeScript",
+                    "            .enableTypeScriptLoader()",
+                    "            ...",
+                    "            .addPlugin(new Dotenv())",
+                    "        ...",
+                    "    </comment>",
+                    "",
+                    "  * To run electron App update <command><package.json/command> file",
+                    "    <comment>",
+                    "        ...",
+                    "            \"main\": \"./vendor/drinksco/console-ui-bundle/main.js\",",
+                    "            \"scripts\": {",
+                    "                ...",
+                    "                \"console-ui-start\": \"electron .\"",
+                    "            }",
+                    "    </comment>",
+                    "",
+                    "  * Install yarn dependencies",
+                    "    <comment>yarn add --dev @hotwired/stimulus @symfony/stimulus-bridge @symfony/webpack-encore core-js dotenv dotenv-webpack electron regenerator-runtime ts-loader typescript webpack-notifier @material/card @material/mwc-button @material/mwc-checkbox @material/mwc-circular-progress @material/mwc-dialog @material/mwc-formfield @material/mwc-icon @material/mwc-list @material/mwc-textfield @material/mwc-top-app-bar-fixed @webcomponents/webcomponentsjs lit material-components-web</comment>",
+                    "",
+                    "  * Build console-ui app",
+                    "    <comment>yarn encore production</comment>",
+                    "",
+                    "  * Not using Docker install Mercure Hub",
+                    "    Download the legacy binary from Mercure releases page https://github.com/dunglas/mercure/releases,",
+                    "    and extract binary in the project root folder",
+                    "",
+                    "  * Check environment variables in your <comment>.env</comment>"
+                ]
+            },
+            "files": [],
+            "ref": "1598393c7161dd54324ee53ab101d665ecff2718"
+        }
+    }
+}

@@ -359,6 +359,9 @@
         "drenso/symfony-shared": [
             "0.8"
         ],
+        "drinksco/console-ui-bundle": [
+            "0.2"
+        ],
         "drupol/ecl-twig-bundle": [
             "0.1"
         ],

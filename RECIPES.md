@@ -119,6 +119,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [doctrine/phpcr-dbal-symfony-pack](https://packagist.org/packages/doctrine/phpcr-dbal-symfony-pack) | [1.0](doctrine/phpcr-dbal-symfony-pack/1.0) |
 | [drenso/symfony-oidc-bundle](https://packagist.org/packages/drenso/symfony-oidc-bundle) | [2.0](drenso/symfony-oidc-bundle/2.0) |
 | [drenso/symfony-shared](https://packagist.org/packages/drenso/symfony-shared) | [0.8](drenso/symfony-shared/0.8) |
+| [drinksco/console-ui-bundle](https://packagist.org/packages/drinksco/console-ui-bundle) | [0.2](drinksco/console-ui-bundle/0.2) |
 | [drupol/ecl-twig-bundle](https://packagist.org/packages/drupol/ecl-twig-bundle) | [0.1](drupol/ecl-twig-bundle/0.1) |
 | [dukecity/command-scheduler-bundle](https://packagist.org/packages/dukecity/command-scheduler-bundle) | [3.0](dukecity/command-scheduler-bundle/3.0) |
 | [dunglas/digital-ocean-bundle](https://packagist.org/packages/dunglas/digital-ocean-bundle) | [1.0](dunglas/digital-ocean-bundle/1.0) |
