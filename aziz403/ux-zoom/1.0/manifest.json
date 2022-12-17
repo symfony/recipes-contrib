@@ -1,6 +1,6 @@
 {
     "copy-from-recipe": {
-        "config/packages/ux_zoom.yaml": "%CONFIG_DIR%/packages/ux_zoom.yaml"
+        "config/": "%CONFIG_DIR%/"
     },
     "env": {
         "ZOOM_SDK_KEY": "!ChangeMe!",
