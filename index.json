@@ -1195,7 +1195,8 @@
         ],
         "patchlevel/event-sourcing-bundle": [
             "1.0",
-            "1.2"
+            "1.2",
+            "2.0"
         ],
         "payplug/sylius-payplug-plugin": [
             "0.2"
