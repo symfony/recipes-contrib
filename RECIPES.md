@@ -330,6 +330,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [monsieurbiz/sylius-no-commerce-plugin](https://packagist.org/packages/monsieurbiz/sylius-no-commerce-plugin) | [0.1](monsieurbiz/sylius-no-commerce-plugin/0.1) |
 | [monsieurbiz/sylius-rich-editor-plugin](https://packagist.org/packages/monsieurbiz/sylius-rich-editor-plugin) | [2.0](monsieurbiz/sylius-rich-editor-plugin/2.0) |
 | [monsieurbiz/sylius-sales-reports-plugin](https://packagist.org/packages/monsieurbiz/sylius-sales-reports-plugin) | [1.0](monsieurbiz/sylius-sales-reports-plugin/1.0) |
+| [monsieurbiz/sylius-search-plugin](https://packagist.org/packages/monsieurbiz/sylius-search-plugin) | [1.0](monsieurbiz/sylius-search-plugin/1.0) |
 | [monsieurbiz/sylius-settings-plugin](https://packagist.org/packages/monsieurbiz/sylius-settings-plugin) | [1.0](monsieurbiz/sylius-settings-plugin/1.0) |
 | [monsieurbiz/sylius-shipping-slot-plugin](https://packagist.org/packages/monsieurbiz/sylius-shipping-slot-plugin) | [1.0](monsieurbiz/sylius-shipping-slot-plugin/1.0) |
 | [monsieursloop/woleet-bundle](https://packagist.org/packages/monsieursloop/woleet-bundle) | [1.2](monsieursloop/woleet-bundle/1.2) |
