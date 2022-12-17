@@ -71,6 +71,9 @@
             "1.0",
             "1.14"
         ],
+        "artyuum/request-dto-mapper-bundle": [
+            "1.0"
+        ],
         "assoconnect/mjml-bundle": [
             "1.0"
         ],

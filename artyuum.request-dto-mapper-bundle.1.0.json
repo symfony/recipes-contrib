@@ -1,0 +1,54 @@
+{
+    "manifests": {
+        "artyuum/request-dto-mapper-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Artyum\\RequestDtoMapperBundle\\ArtyumRequestDtoMapperBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/artyum_request_dto_mapper.yaml": {
+                    "contents": [
+                        "# Read the documentation at https://github.com/artyuum/request-dto-mapper-bundle",
+                        "artyum_request_dto_mapper:",
+                        "",
+                        "    # Used if the attribute does not specify any (must be a FQCN implementing \"\\Artyum\\RequestDtoMapperBundle\\Extractor\\ExtractorInterface\").",
+                        "    default_extractor: null # Example: Artyum\\RequestDtoMapperBundle\\Extractor\\JsonExtractor",
+                        "",
+                        "    # The configuration related to the denormalizer (https://symfony.com/doc/current/components/serializer.html).",
+                        "    denormalizer:",
+                        "",
+                        "        # Used when mapping the request data to the DTO if the attribute does not set any.",
+                        "        default_options: []",
+                        "",
+                        "        # Used when mapping the request data to the DTO (merged with the values passed by the attribute or \"default_options\").",
+                        "        additional_options: []",
+                        "",
+                        "    # The configuration related to the validator (https://symfony.com/doc/current/validation.html).",
+                        "    validation:",
+                        "",
+                        "        # Whether to validate the DTO after mapping it.",
+                        "        enabled: false",
+                        "",
+                        "        # Used when validating the DTO if the attribute does not set any.",
+                        "        default_groups: []",
+                        "",
+                        "        # Used when validating the DTO (merged with the values passed by the attribute or \"default_groups\").",
+                        "        additional_groups: []",
+                        "",
+                        "        # Whether to throw an exception if the DTO validation failed (constraint violations).",
+                        "        throw_on_violation: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "44cb1f72b30bb12a238ec639228233ae38a1e502"
+        }
+    }
+}
