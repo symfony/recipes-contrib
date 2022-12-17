@@ -168,6 +168,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [ferror/phpscan](https://packagist.org/packages/ferror/phpscan) | [1.0](ferror/phpscan/1.0) |
 | [flagception/flagception-bundle](https://packagist.org/packages/flagception/flagception-bundle) | [3.0](flagception/flagception-bundle/3.0) |
 | [flux-se/sylius-payum-stripe-plugin](https://packagist.org/packages/flux-se/sylius-payum-stripe-plugin) | [2.0](flux-se/sylius-payum-stripe-plugin/2.0) |
+| [fluxter/saas-provider-bundle](https://packagist.org/packages/fluxter/saas-provider-bundle) | [2.0](fluxter/saas-provider-bundle/2.0) |
 | [fpt/stripe-bundle](https://packagist.org/packages/fpt/stripe-bundle) | [0.5](fpt/stripe-bundle/0.5) |
 | [fresh/centrifugo-bundle](https://packagist.org/packages/fresh/centrifugo-bundle) | [1.3](fresh/centrifugo-bundle/1.3) |
 | [fresh/doctrine-enum-bundle](https://packagist.org/packages/fresh/doctrine-enum-bundle) | [6.0](fresh/doctrine-enum-bundle/6.0) |
@@ -264,6 +265,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [kynno/smartbots-bundle](https://packagist.org/packages/kynno/smartbots-bundle) | [0.1](kynno/smartbots-bundle/0.1) |
 | [labymod/discord-webhook-bundle](https://packagist.org/packages/labymod/discord-webhook-bundle) | [1.0](labymod/discord-webhook-bundle/1.0) |
 | [lag/adminbundle](https://packagist.org/packages/lag/adminbundle) | [1.0](lag/adminbundle/1.0) |
+| [league/oauth2-server-bundle](https://packagist.org/packages/league/oauth2-server-bundle) | [0.3](league/oauth2-server-bundle/0.3) |
 | [league/tactician-bundle](https://packagist.org/packages/league/tactician-bundle) | [1.0](league/tactician-bundle/1.0) |
 | [leapt/core-bundle](https://packagist.org/packages/leapt/core-bundle) | [2.2](leapt/core-bundle/2.2) |
 | [leapt/froala-editor-bundle](https://packagist.org/packages/leapt/froala-editor-bundle) | [1.2](leapt/froala-editor-bundle/1.2) |
@@ -278,6 +280,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [liuggio/statsd-client-bundle](https://packagist.org/packages/liuggio/statsd-client-bundle) | [1.6](liuggio/statsd-client-bundle/1.6) |
 | [lolautruche/payline-bundle](https://packagist.org/packages/lolautruche/payline-bundle) | [2.0](lolautruche/payline-bundle/2.0) |
 | [long-running/long-running](https://packagist.org/packages/long-running/long-running) | [0.1](long-running/long-running/0.1) |
+| [longitude-one/meta-bundle](https://packagist.org/packages/longitude-one/meta-bundle) | [1.0](longitude-one/meta-bundle/1.0) |
 | [loophp/psr17](https://packagist.org/packages/loophp/psr17) | [1.0](loophp/psr17/1.0) |
 | [loophp/repository-monadic-helper](https://packagist.org/packages/loophp/repository-monadic-helper) | [1.0](loophp/repository-monadic-helper/1.0) |
 | [m-adamski/symfony-mailer-bundle](https://packagist.org/packages/m-adamski/symfony-mailer-bundle) | [1.0](m-adamski/symfony-mailer-bundle/1.0) |
@@ -472,7 +475,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [stefandoorn/sitemap-plugin](https://packagist.org/packages/stefandoorn/sitemap-plugin) | [2.0](stefandoorn/sitemap-plugin/2.0) |
 | [stof/doctrine-extensions-bundle](https://packagist.org/packages/stof/doctrine-extensions-bundle) | [1.2](stof/doctrine-extensions-bundle/1.2) |
 | [sulu/article-bundle](https://packagist.org/packages/sulu/article-bundle) | [2.0](sulu/article-bundle/2.0) |
-| [sulu/form-bundle](https://packagist.org/packages/sulu/form-bundle) | [2.2](sulu/form-bundle/2.2) |
+| [sulu/form-bundle](https://packagist.org/packages/sulu/form-bundle) | [2.4](sulu/form-bundle/2.4) |
 | [sulu/headless-bundle](https://packagist.org/packages/sulu/headless-bundle) | [0.1](sulu/headless-bundle/0.1) |
 | [sulu/redirect-bundle](https://packagist.org/packages/sulu/redirect-bundle) | [2.0](sulu/redirect-bundle/2.0) |
 | [sulu/sylius-consumer-bundle](https://packagist.org/packages/sulu/sylius-consumer-bundle) | [0.4](sulu/sylius-consumer-bundle/0.4) |

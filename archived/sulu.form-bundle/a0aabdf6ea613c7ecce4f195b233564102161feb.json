@@ -1,0 +1,52 @@
+{
+    "manifests": {
+        "sulu/form-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Sulu\\Bundle\\FormBundle\\SuluFormBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * The <fg=green>SuluFormBundle</> is almost ready:",
+                    "    1. Print the sql statements required to update your database schema by running <info>php bin/console doctrine:schema:update --dump-sql</>.",
+                    "    2. If the statements look fine to you, run the same command using <info>--force</> to execute them.",
+                    "    3. Make sure your user has all the necessary permissions for the <fg=green>SuluFormBundle</>.",
+                    "    4. Use <info>bin/console sulu:form:generate-form</info> to create a dummy form.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/sulu/SuluFormBundle/blob/2.x/Resources/doc/index.md</>"
+                ]
+            },
+            "files": {
+                "config/packages/sulu_form.yaml": {
+                    "contents": [
+                        "sulu_form:",
+                        "#   csrf_protection: true # requires additional changes see: https://github.com/sulu/SuluFormBundle/blob/2.4.0/Resources/doc/csrf.md",
+                        "    mail:",
+                        "        from: \"%env(SULU_ADMIN_EMAIL)%\"",
+                        "        to: \"%env(SULU_ADMIN_EMAIL)%\"",
+                        "        sender: \"%env(SULU_ADMIN_EMAIL)%\"",
+                        "    media:",
+                        "        protected: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sulu_form_admin.yaml": {
+                    "contents": [
+                        "sulu_form_api:",
+                        "    resource: \"@SuluFormBundle/Resources/config/routing_api.yml\"",
+                        "    type: rest",
+                        "    prefix: /admin/api",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a0aabdf6ea613c7ecce4f195b233564102161feb"
+        }
+    }
+}

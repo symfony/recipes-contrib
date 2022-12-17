@@ -517,6 +517,9 @@
             "1.2",
             "2.0"
         ],
+        "fluxter/saas-provider-bundle": [
+            "2.0"
+        ],
         "fpt/stripe-bundle": [
             "0.5"
         ],
@@ -821,6 +824,9 @@
         "lag/adminbundle": [
             "1.0"
         ],
+        "league/oauth2-server-bundle": [
+            "0.3"
+        ],
         "league/tactician-bundle": [
             "1.0"
         ],
@@ -864,6 +870,9 @@
         ],
         "long-running/long-running": [
             "0.1"
+        ],
+        "longitude-one/meta-bundle": [
+            "1.0"
         ],
         "loophp/psr17": [
             "1.0"
@@ -1487,7 +1496,8 @@
         ],
         "sulu/form-bundle": [
             "2.0",
-            "2.2"
+            "2.2",
+            "2.4"
         ],
         "sulu/headless-bundle": [
             "0.1"

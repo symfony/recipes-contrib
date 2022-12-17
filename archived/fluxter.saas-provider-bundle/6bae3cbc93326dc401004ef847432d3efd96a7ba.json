@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "fluxter/saas-provider-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Fluxter\\SaasProviderBundle\\SaasProviderBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/saas_provider_bundle.yaml": {
+                    "contents": [
+                        "saas_provider:",
+                        "    client_entity: App\\Entity\\Client",
+                        "    global_url: app.yourdomain.tld",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6bae3cbc93326dc401004ef847432d3efd96a7ba"
+        }
+    }
+}

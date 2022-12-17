@@ -1,0 +1,48 @@
+{
+    "manifests": {
+        "longitude-one/meta-bundle": {
+            "manifest": {
+                "bundles": {
+                    "LongitudeOne\\MetaBundle\\LongitudeOneMetaBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=#0057B7;fg=#FFDD00>            </>",
+                    "<bg=#0057B7;fg=#FFDD00> STAND WITH </>",
+                    "<bg=#FFDD00;fg=#0057B7>  UKRAINE   </>",
+                    "<bg=#FFDD00;fg=#0057B7>            </>",
+                    "",
+                    "  * The <fg=blue>longitude-one/meta-bundle</> is almost ready:",
+                    "    1. Feel free to edit the config/packages/meta.yaml file, this file is yours ;",
+                    "    2. Use meta_description() meta_title() and meta('foo') in your templates to get custom description, title or the default ones."
+                ]
+            },
+            "files": {
+                "config/packages/meta.yaml": {
+                    "contents": [
+                        "longitude_one_meta:",
+                        "    defaults:",
+                        "        description: '' # Enter the default description and get contents with meta_description() function in your template\",",
+                        "        title: '' # Enter the default title for your application and get contents with meta_title() function in your template\",",
+                        "        'og:image': \"Feel free to add any tag and get their contents with meta('og:image') function or a filter: 'og:image'\"",
+                        "    paths:",
+                        "        '/any-path': #for this path, default value will be replaced",
+                        "            description: 'A custom description for http://my_app/any-path' #for this path, default value will be replaced",
+                        "            title: 'A custom title for http://my_app/any-path' #for this path, default value will be replaced",
+                        "        # You can customize meta tags for any path",
+                        "        #'/another-path':",
+                        "        #    description:'foo'",
+                        "        #    title:'bar'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5eba9a36a384e5b6d6e314b4d7bde87fade50a4d"
+        }
+    }
+}
