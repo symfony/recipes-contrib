@@ -248,7 +248,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [koff/i18n-form-bundle](https://packagist.org/packages/koff/i18n-form-bundle) | [4.0](koff/i18n-form-bundle/4.0) |
 | [kriswallsmith/buzz](https://packagist.org/packages/kriswallsmith/buzz) | [1.0](kriswallsmith/buzz/1.0) |
 | [kunicmarko/jms-messenger-adapter](https://packagist.org/packages/kunicmarko/jms-messenger-adapter) | [0.1](kunicmarko/jms-messenger-adapter/0.1) |
-| [kunstmaan/admin-bundle](https://packagist.org/packages/kunstmaan/admin-bundle) | [5.10](kunstmaan/admin-bundle/5.10) |
+| [kunstmaan/admin-bundle](https://packagist.org/packages/kunstmaan/admin-bundle) | [6.0](kunstmaan/admin-bundle/6.0) |
 | [kunstmaan/adminlist-bundle](https://packagist.org/packages/kunstmaan/adminlist-bundle) | [5.2](kunstmaan/adminlist-bundle/5.2) |
 | [kunstmaan/config-bundle](https://packagist.org/packages/kunstmaan/config-bundle) | [5.2](kunstmaan/config-bundle/5.2) |
 | [kunstmaan/cookie-bundle](https://packagist.org/packages/kunstmaan/cookie-bundle) | [6.0](kunstmaan/cookie-bundle/6.0) |

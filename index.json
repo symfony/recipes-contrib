@@ -772,7 +772,8 @@
         "kunstmaan/admin-bundle": [
             "5.2",
             "5.9",
-            "5.10"
+            "5.10",
+            "6.0"
         ],
         "kunstmaan/adminlist-bundle": [
             "5.2"
