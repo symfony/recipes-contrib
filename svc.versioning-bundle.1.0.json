@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "svc/versioning-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Svc\\VersioningBundle\\SvcVersioningBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * Please adapt config/packages/svc-versioning.yaml (see doc)"
+                ]
+            },
+            "files": {
+                "config/packages/svc_versioning.yaml": {
+                    "contents": [
+                        "# configuration for \"SvcVersioningBundle\", see doc for more parameters",
+                        "svc_versioning:",
+                        "",
+                        "    # Should git runs after version increase?",
+                        "    run_git:              false",
+                        "",
+                        "    # Should deploy runs after git?",
+                        "    run_deploy:           false",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "007c0cfb06aecacfaba99c1608eb0de85a61874b"
+        }
+    }
+}

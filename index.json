@@ -1529,6 +1529,9 @@
         "svc/util-bundle": [
             "1.0"
         ],
+        "svc/versioning-bundle": [
+            "1.0"
+        ],
         "swag-industries/doctrine-domain-events": [
             "1.0"
         ],
