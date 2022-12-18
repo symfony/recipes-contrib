@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Aziz403\\UX\\Zoom\\ZoomBundle": ["all"]
+        "Aziz403\\UX\\Zoom\\UxZoomBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
