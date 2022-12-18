@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "aziz403/ux-zoom": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "ZOOM_SDK_KEY": "!ChangeMe!",
+                    "ZOOM_SDK_SECRET": "!ChangeMe!"
+                }
+            },
+            "files": {
+                "config/packages/ux_zoom.yaml": {
+                    "contents": [
+                        "ux_zoom:",
+                        "    sdk:",
+                        "        key: '%env(ZOOM_SDK_KEY)%'",
+                        "        secret: '%env(ZOOM_SDK_SECRET)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "00d0b5afcf7b026689e9514a397231df54e1081b"
+        }
+    }
+}

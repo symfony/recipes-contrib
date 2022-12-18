@@ -87,6 +87,9 @@
         "aws/aws-sdk-php-symfony": [
             "1.3"
         ],
+        "aziz403/ux-zoom": [
+            "1.0"
+        ],
         "backup-manager/symfony": [
             "2.1"
         ],

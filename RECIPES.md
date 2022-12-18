@@ -32,6 +32,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [async-aws/async-aws-bundle](https://packagist.org/packages/async-aws/async-aws-bundle) | [1.0](async-aws/async-aws-bundle/1.0) |
 | [atlas/symfony](https://packagist.org/packages/atlas/symfony) | [1.0](atlas/symfony/1.0) |
 | [aws/aws-sdk-php-symfony](https://packagist.org/packages/aws/aws-sdk-php-symfony) | [1.3](aws/aws-sdk-php-symfony/1.3) |
+| [aziz403/ux-zoom](https://packagist.org/packages/aziz403/ux-zoom) | [1.0](aziz403/ux-zoom/1.0) |
 | [backup-manager/symfony](https://packagist.org/packages/backup-manager/symfony) | [2.1](backup-manager/symfony/2.1) |
 | [baldinof/roadrunner-bundle](https://packagist.org/packages/baldinof/roadrunner-bundle) | [2.0](baldinof/roadrunner-bundle/2.0) |
 | [basster/lazy-response-bundle](https://packagist.org/packages/basster/lazy-response-bundle) | [1.0](basster/lazy-response-bundle/1.0) |
