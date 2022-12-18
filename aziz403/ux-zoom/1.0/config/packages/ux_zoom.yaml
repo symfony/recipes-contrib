@@ -1,0 +1,4 @@
+ux_zoom:
+    sdk:
+        key: '%env(ZOOM_SDK_KEY)%'
+        secret: '%env(ZOOM_SDK_SECRET)%'
