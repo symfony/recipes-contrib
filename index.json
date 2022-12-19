@@ -1690,6 +1690,9 @@
         "vincentchalamon/nav-bundle": [
             "1.0"
         ],
+        "vincentlanglet/twig-cs-fixer": [
+            "0.6"
+        ],
         "wandi/easyadmin-plus-bundle": [
             "0.1",
             "0.3"

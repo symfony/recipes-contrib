@@ -536,6 +536,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [vich/uploader-bundle](https://packagist.org/packages/vich/uploader-bundle) | [1.13](vich/uploader-bundle/1.13) |
 | [victor-prdh/recaptcha-bundle](https://packagist.org/packages/victor-prdh/recaptcha-bundle) | [1.5](victor-prdh/recaptcha-bundle/1.5) |
 | [vincentchalamon/nav-bundle](https://packagist.org/packages/vincentchalamon/nav-bundle) | [1.0](vincentchalamon/nav-bundle/1.0) |
+| [vincentlanglet/twig-cs-fixer](https://packagist.org/packages/vincentlanglet/twig-cs-fixer) | [0.6](vincentlanglet/twig-cs-fixer/0.6) |
 | [wandi/easyadmin-plus-bundle](https://packagist.org/packages/wandi/easyadmin-plus-bundle) | [0.3](wandi/easyadmin-plus-bundle/0.3) |
 | [wandi/mailer-bundle](https://packagist.org/packages/wandi/mailer-bundle) | [1.0](wandi/mailer-bundle/1.0) |
 | [web-auth/webauthn-symfony-bundle](https://packagist.org/packages/web-auth/webauthn-symfony-bundle) | [3.0](web-auth/webauthn-symfony-bundle/3.0) |

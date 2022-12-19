@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "vincentlanglet/twig-cs-fixer": {
+            "manifest": {
+                "gitignore": [
+                    "/.twig-cs-fixer.cache"
+                ]
+            },
+            "files": [],
+            "ref": "e4da12a48e8138479bd24a675321bcfd84950266"
+        }
+    }
+}
