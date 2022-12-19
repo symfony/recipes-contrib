@@ -1,0 +1,2 @@
+oka_doctrine_encrypt:
+    secret: '%env(OKA_DOCTRINE_ENCRYPT_SECRET)%'

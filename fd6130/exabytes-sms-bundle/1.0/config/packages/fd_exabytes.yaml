@@ -1,0 +1,3 @@
+fd_exabytes:
+    username: '%env(EXABYTES_USERNAME)%'
+    password: '%env(EXABYTES_PASSWORD)%'
