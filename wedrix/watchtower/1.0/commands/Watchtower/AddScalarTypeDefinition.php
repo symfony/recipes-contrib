@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace App\Command\Watchtower;
 
-use App\WatchtowerConsole;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\QuestionHelper;
 use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\ConsoleOutputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\Question;
+use Symfony\Component\HttpKernel\KernelInterface;
 use Wedrix\Watchtower\Console;
 
 final class AddScalarTypeDefinition extends Command
@@ -23,22 +23,19 @@ final class AddScalarTypeDefinition extends Command
     protected readonly Console $watchtowerConsole;
 
     public function __construct(
-        WatchtowerConsole $watchtowerConsole
+        EntityManagerInterface $entityManager,
+        KernelInterface $kernel
     )
     {
-        $this->watchtowerConsole = $watchtowerConsole->getInstance();
+        $this->watchtowerConsole = new Console(
+            entityManager: $entityManager,
+            schemaFileDirectory: ($projectDir = $kernel->getProjectDir()) . '/config/graphql/schema.graphql',
+            schemaCacheFileDirectory: $projectDir . '/var/cache/graphql/schema.graphql',
+            pluginsDirectory: $projectDir . '/config/graphql/plugins',
+            scalarTypeDefinitionsDirectory: $projectDir . '/config/graphql/scalar_type_definitions'
+        );
 
         parent::__construct();
-    }
-
-    protected function configure()
-    {
-        $this->addOption(
-                'type-name', 
-                null,
-                InputOption::VALUE_REQUIRED, 
-                "The custom scalar's name."
-            );
     }
 
     protected function execute(
@@ -49,20 +46,18 @@ final class AddScalarTypeDefinition extends Command
         if (!$output instanceof ConsoleOutputInterface) {
             throw new \LogicException('This command accepts only an instance of "ConsoleOutputInterface".');
         }
+        
+        $typeName = (function () use ($input, $output): bool {
+            $helper = $this->getHelper('question');
 
-        if (is_null($typeName = $input->getOption('type-name'))) {
-            $typeName = (function () use ($input, $output): bool {
-                $helper = $this->getHelper('question');
+            if (!$helper instanceof QuestionHelper) {
+                throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
+            }
 
-                if (!$helper instanceof QuestionHelper) {
-                    throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
-                }
-    
-                return $helper->ask($input, $output, new Question(
-                    question: "What is the custom scalar's name? "
-                ));
-            })();
-        }
+            return $helper->ask($input, $output, new Question(
+                question: "What is the custom scalar's name? "
+            ));
+        })();
 
         $this->watchtowerConsole
             ->addScalarTypeDifinition(

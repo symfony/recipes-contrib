@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace App\Command\Watchtower;
 
-use App\WatchtowerConsole;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\HttpKernel\KernelInterface;
 use Wedrix\Watchtower\Console;
 
 final class GenerateSchema extends Command
@@ -19,10 +20,17 @@ final class GenerateSchema extends Command
     protected readonly Console $watchtowerConsole;
 
     public function __construct(
-        WatchtowerConsole $watchtowerConsole
+        EntityManagerInterface $entityManager,
+        KernelInterface $kernel
     )
     {
-        $this->watchtowerConsole = $watchtowerConsole->getInstance();
+        $this->watchtowerConsole = new Console(
+            entityManager: $entityManager,
+            schemaFileDirectory: ($projectDir = $kernel->getProjectDir()) . '/config/graphql/schema.graphql',
+            schemaCacheFileDirectory: $projectDir . '/var/cache/graphql/schema.graphql',
+            pluginsDirectory: $projectDir . '/config/graphql/plugins',
+            scalarTypeDefinitionsDirectory: $projectDir . '/config/graphql/scalar_type_definitions'
+        );
 
         parent::__construct();
     }

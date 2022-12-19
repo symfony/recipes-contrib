@@ -2,7 +2,6 @@
     "copy-from-recipe": {
         "commands/": "%SRC_DIR%/Command/",
         "controllers/": "%SRC_DIR%/Controller/",
-        "services/": "%SRC_DIR%",
         "config/": "%CONFIG_DIR%"
     },
     "composer-scripts": {
