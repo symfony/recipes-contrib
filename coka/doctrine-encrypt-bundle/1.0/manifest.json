@@ -6,6 +6,6 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "OKA_DOCTRINE_ENCRYPT_SECRET": "%generate(secret)%%generate(secret)%"
+        "OKA_DOCTRINE_ENCRYPT_SECRET": "%generate(secret)%"
     }
 }
