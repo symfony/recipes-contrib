@@ -1656,7 +1656,8 @@
         ],
         "timiki/rpc-server-bundle": [
             "4.0",
-            "4.2"
+            "4.2",
+            "5.0"
         ],
         "toiba/fullcalendar-bundle": [
             "6.2"

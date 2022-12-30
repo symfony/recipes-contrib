@@ -1,0 +1,57 @@
+{
+    "manifests": {
+        "timiki/rpc-server-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Timiki\\Bundle\\RpcServerBundle\\RpcServerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/rpc_server.yaml": {
+                    "contents": [
+                        "# Read the documentation: https://github.com/timiki/rpc-server-bundle",
+                        "",
+                        "rpc_server:",
+                        "",
+                        "    mapping: '%kernel.project_dir%/src/Method'",
+                        "",
+                        "    # id cache service, must be instanced of Psr\\Cache\\CacheItemPoolInterface",
+                        "    # by default use file cache",
+                        "",
+                        "    cache: null",
+                        "",
+                        "    # id serializer service, must be instanced of Timiki\\Bundle\\RpcServerBundle\\Serializer\\SerializerInterface",
+                        "    # by default use 'rpc.server.serializer.base' service",
+                        "",
+                        "    serializer: null",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/rpc_server.yaml": {
+                    "contents": [
+                        "rpc:",
+                        "    path: /rpc",
+                        "    defaults: { _controller: Timiki\\Bundle\\RpcServerBundle\\Controller\\RpcController::handlerAction }",
+                        "    methods: [ POST ]",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Method/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "360274d492d94224fa5f892e63f195b22a85a0a0"
+        }
+    }
+}

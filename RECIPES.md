@@ -525,7 +525,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [tilleuls/sylius-quick-import-plugin](https://packagist.org/packages/tilleuls/sylius-quick-import-plugin) | [0.1](tilleuls/sylius-quick-import-plugin/0.1) |
 | [tilleuls/url-signer-bundle](https://packagist.org/packages/tilleuls/url-signer-bundle) | [1.0](tilleuls/url-signer-bundle/1.0) |
 | [timiki/rpc-client-bundle](https://packagist.org/packages/timiki/rpc-client-bundle) | [4.0](timiki/rpc-client-bundle/4.0) |
-| [timiki/rpc-server-bundle](https://packagist.org/packages/timiki/rpc-server-bundle) | [4.2](timiki/rpc-server-bundle/4.2) |
+| [timiki/rpc-server-bundle](https://packagist.org/packages/timiki/rpc-server-bundle) | [5.0](timiki/rpc-server-bundle/5.0) |
 | [toiba/fullcalendar-bundle](https://packagist.org/packages/toiba/fullcalendar-bundle) | [6.2](toiba/fullcalendar-bundle/6.2) |
 | [trikoder/oauth2-bundle](https://packagist.org/packages/trikoder/oauth2-bundle) | [3.0](trikoder/oauth2-bundle/3.0) |
 | [troopers/alertify-bundle](https://packagist.org/packages/troopers/alertify-bundle) | [3.0](troopers/alertify-bundle/3.0) |
