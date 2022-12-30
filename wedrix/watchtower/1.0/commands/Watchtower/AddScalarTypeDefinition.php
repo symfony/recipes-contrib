@@ -47,7 +47,7 @@ final class AddScalarTypeDefinition extends Command
             throw new \LogicException('This command accepts only an instance of "ConsoleOutputInterface".');
         }
         
-        $typeName = (function () use ($input, $output): bool {
+        $typeName = (function () use ($input, $output): string {
             $helper = $this->getHelper('question');
 
             if (!$helper instanceof QuestionHelper) {

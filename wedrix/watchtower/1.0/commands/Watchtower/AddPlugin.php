@@ -49,11 +49,7 @@ final class AddPlugin extends Command
             throw new \LogicException('This command only accepts an instance of "ConsoleOutputInterface".');
         }
         
-        $pluginTypes = [
-            'filter','ordering','selector','resolver','authorizor','mutation','subscription'
-        ];
-        
-        $pluginType = (function () use ($input, $output, $pluginTypes): string {
+        $pluginType = (function () use ($input, $output): string {
             $helper = $this->getHelper('question');
 
             if (!$helper instanceof QuestionHelper) {
@@ -62,171 +58,183 @@ final class AddPlugin extends Command
 
             return $helper->ask($input, $output, new ChoiceQuestion(
                 question: "What's the plugin type? ",
-                choices: $pluginTypes,
+                choices: [
+                    'filter','ordering','selector','resolver','authorizor','mutation','subscription'
+                ],
             ));
         })();
 
-        if (
-            in_array($pluginType, $pluginTypes = [
-                    'filter','ordering','selector','resolver'
-                ]
-            )
-        ) {
-            $parentNodeType = (function () use ($input, $output): string {
-                $helper = $this->getHelper('question');
-
-                if (!$helper instanceof QuestionHelper) {
-                    throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
-                }
-    
-                return $helper->ask($input, $output, new Question(
-                    question: "What's the parent node type? "
-                ));
-            })();
-        }
-
-        if (
-            in_array($pluginType, $pluginTypes = [
-                    'selector','resolver'
-                ]
-            )
-        ) {
-            $fieldName = (function () use ($input, $output): string {
-                $helper = $this->getHelper('question');
-
-                if (!$helper instanceof QuestionHelper) {
-                    throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
-                }
-    
-                return $helper->ask($input, $output, new Question(
-                    question: "What's the field name? "
-                ));
-            })();
-        }
-
         if ($pluginType === 'filter') {
-            $filterName = (function () use ($input, $output): string {
-                $helper = $this->getHelper('question');
-
-                if (!$helper instanceof QuestionHelper) {
-                    throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
-                }
-    
-                return $helper->ask($input, $output, new Question(
-                    question: "What's the filter name? "
-                ));
-            })();
-
             $this->watchtowerConsole
                 ->addFilterPlugin(
-                    parentNodeType: $parentNodeType,
-                    filterName: $filterName
+                    parentNodeType: (function () use ($input, $output): string {
+                        $helper = $this->getHelper('question');
+
+                        if (!$helper instanceof QuestionHelper) {
+                            throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
+                        }
+
+                        return $helper->ask($input, $output, new Question(
+                            question: "What's the parent node type? "
+                        ));
+                    })(),
+                    filterName: (function () use ($input, $output): string {
+                        $helper = $this->getHelper('question');
+        
+                        if (!$helper instanceof QuestionHelper) {
+                            throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
+                        }
+            
+                        return $helper->ask($input, $output, new Question(
+                            question: "What's the filter name? "
+                        ));
+                    })()
                 );
         }
 
         if ($pluginType === 'ordering') {
-            $orderingName = (function () use ($input, $output): string {
-                $helper = $this->getHelper('question');
-
-                if (!$helper instanceof QuestionHelper) {
-                    throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
-                }
-    
-                return $helper->ask($input, $output, new Question(
-                    question: "What's the ordering name? "
-                ));
-            })();
-
             $this->watchtowerConsole
                 ->addOrderingPlugin(
-                    parentNodeType: $parentNodeType,
-                    orderingName: $orderingName
+                    parentNodeType: (function () use ($input, $output): string {
+                        $helper = $this->getHelper('question');
+
+                        if (!$helper instanceof QuestionHelper) {
+                            throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
+                        }
+
+                        return $helper->ask($input, $output, new Question(
+                            question: "What's the parent node type? "
+                        ));
+                    })(),
+                    orderingName: (function () use ($input, $output): string {
+                        $helper = $this->getHelper('question');
+        
+                        if (!$helper instanceof QuestionHelper) {
+                            throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
+                        }
+            
+                        return $helper->ask($input, $output, new Question(
+                            question: "What's the ordering name? "
+                        ));
+                    })()
                 );
         }
 
         if ($pluginType === 'selector') {
             $this->watchtowerConsole
                 ->addSelectorPlugin(
-                    parentNodeType: $parentNodeType,
-                    fieldName: $fieldName
+                    parentNodeType: (function () use ($input, $output): string {
+                        $helper = $this->getHelper('question');
+
+                        if (!$helper instanceof QuestionHelper) {
+                            throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
+                        }
+
+                        return $helper->ask($input, $output, new Question(
+                            question: "What's the parent node type? "
+                        ));
+                    })(),
+                    fieldName: (function () use ($input, $output): string {
+                        $helper = $this->getHelper('question');
+
+                        if (!$helper instanceof QuestionHelper) {
+                            throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
+                        }
+
+                        return $helper->ask($input, $output, new Question(
+                            question: "What's the field name? "
+                        ));
+                    })()
                 );
         }
 
         if ($pluginType === 'resolver') {
             $this->watchtowerConsole
                 ->addResolverPlugin(
-                    parentNodeType: $parentNodeType,
-                    fieldName: $fieldName
+                    parentNodeType: (function () use ($input, $output): string {
+                        $helper = $this->getHelper('question');
+
+                        if (!$helper instanceof QuestionHelper) {
+                            throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
+                        }
+
+                        return $helper->ask($input, $output, new Question(
+                            question: "What's the parent node type? "
+                        ));
+                    })(),
+                    fieldName: (function () use ($input, $output): string {
+                        $helper = $this->getHelper('question');
+
+                        if (!$helper instanceof QuestionHelper) {
+                            throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
+                        }
+
+                        return $helper->ask($input, $output, new Question(
+                            question: "What's the field name? "
+                        ));
+                    })()
                 );
         }
 
         if ($pluginType === 'authorizor') {
-            $nodeType = (function () use ($input, $output): string {
-                $helper = $this->getHelper('question');
-
-                if (!$helper instanceof QuestionHelper) {
-                    throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
-                }
-    
-                return $helper->ask($input, $output, new Question(
-                    question: "What's the node type? "
-                ));
-            })();
-
-            $isForCollections = (function () use ($input, $output, $nodeType): bool {
-                $helper = $this->getHelper('question');
-
-                if (!$helper instanceof QuestionHelper) {
-                    throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
-                }
-    
-                return $helper->ask($input, $output, new ConfirmationQuestion(
-                    question: "Is the authorizor for collections of $nodeType? "
-                ));
-            })();
-
             $this->watchtowerConsole
                 ->addAuthorizorPlugin(
-                    nodeType: $nodeType,
-                    isForCollections: $isForCollections
+                    nodeType: $nodeType = (function () use ($input, $output): string {
+                        $helper = $this->getHelper('question');
+        
+                        if (!$helper instanceof QuestionHelper) {
+                            throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
+                        }
+            
+                        return $helper->ask($input, $output, new Question(
+                            question: "What's the node type? "
+                        ));
+                    })(),
+                    isForCollections: (function () use ($input, $output, $nodeType): bool {
+                        $helper = $this->getHelper('question');
+        
+                        if (!$helper instanceof QuestionHelper) {
+                            throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
+                        }
+            
+                        return $helper->ask($input, $output, new ConfirmationQuestion(
+                            question: "Is the authorizor for collections of $nodeType? "
+                        ));
+                    })()
                 );
         }
 
         if ($pluginType === 'mutation') {
-            $mutationName = (function () use ($input, $output): string {
-                $helper = $this->getHelper('question');
-
-                if (!$helper instanceof QuestionHelper) {
-                    throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
-                }
-    
-                return $helper->ask($input, $output, new Question(
-                    question: "What's the mutation name? "
-                ));
-            })();
-
             $this->watchtowerConsole
                 ->addMutationPlugin(
-                    mutationName: $mutationName
+                    mutationName: (function () use ($input, $output): string {
+                        $helper = $this->getHelper('question');
+        
+                        if (!$helper instanceof QuestionHelper) {
+                            throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
+                        }
+            
+                        return $helper->ask($input, $output, new Question(
+                            question: "What's the mutation name? "
+                        ));
+                    })()
                 );
         }
 
         if ($pluginType === 'subscription') {
-            $subscriptionName = (function () use ($input, $output): string {
-                $helper = $this->getHelper('question');
-
-                if (!$helper instanceof QuestionHelper) {
-                    throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
-                }
-    
-                return $helper->ask($input, $output, new Question(
-                    question: "What's the subscription name? "
-                ));
-            })();
-
             $this->watchtowerConsole
                 ->addSubscriptionPlugin(
-                    subscriptionName: $subscriptionName
+                    subscriptionName: (function () use ($input, $output): string {
+                        $helper = $this->getHelper('question');
+        
+                        if (!$helper instanceof QuestionHelper) {
+                            throw new \Exception("Instance of ".QuestionHelper::class." expected, ".get_class($helper)." given.");
+                        }
+            
+                        return $helper->ask($input, $output, new Question(
+                            question: "What's the subscription name? "
+                        ));
+                    })()
                 );
         }
 
