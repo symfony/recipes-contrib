@@ -1255,6 +1255,9 @@
         "phpfastcgi/fastcgi-daemon": [
             "0.11"
         ],
+        "phpsword/sword-bundle": [
+            "1.0"
+        ],
         "phpzlc/admin": [
             "1.0"
         ],
