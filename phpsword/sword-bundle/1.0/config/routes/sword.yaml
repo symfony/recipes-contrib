@@ -1,0 +1,2 @@
+sword:
+    resource: '@SwordBundle/config/routing.yaml'
