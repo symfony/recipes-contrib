@@ -3,27 +3,26 @@
         "Iepg\\Bundle\\Cas\\CasConnectionBundle": ["all"]
     },
     "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/",
-        "src/": "%SRC_DIR%/"
+        "config/": "%CONFIG_DIR%/"
     },
     "env": {
         "#1": "#### Parameters for CAS connection ###",
         "CAS_HOST": "cas-adresse.com",
-        "#2": "#This value is optional",
-        "#3": "#If it's empty the path will the base url",
-        "#4": "#example: Scheme://HttpHost+BasePath",
+        "#2": "# This value is optional",
+        "#3": "# If it's empty the path will the base url",
+        "#4": "# example: Scheme://HttpHost+BasePath",
         "CAS_PATH": "",
-        "#5": "#This value is optional",
-        "#6": "#If it's empty the port will 443",
+        "#5": "# This value is optional",
+        "#6": "# If it's empty the port will 443",
         "CAS_PORT": "",
-        "#7": "#This value is optional",
-        "#8": "#if it's 'false' you don't use ceretificat",
-        "#9": "#THIS SETTING IS NOT RECOMMENDED FOR PRODUCTION!",
-        "CAS_CA": false,
+        "#7": "# This value is optional",
+        "#8": "# if it's 'false' you don't use ceretificat",
+        "#9": "# THIS SETTING IS NOT RECOMMENDED FOR PRODUCTION!",
+        "CAS_CA": "false",
         "CAS_CA_PATH": "",
-        "#10": "#this value is optional. You can custome the NAME of the dispatcher route",
-        "#11": "#Where does the user go according to his role ",
-        "#12": "#The default value is 'cas_dispatcher'",
+        "#10": "# this value is optional. You can custome the NAME of the dispatcher route",
+        "#11": "# Where does the user go according to his role ",
+        "#12": "# The default value is 'cas_dispatcher'",
         "CAS_DISPATCHER_NAME": "",
         "#13": "#### end of Cas-connection ####"
     }

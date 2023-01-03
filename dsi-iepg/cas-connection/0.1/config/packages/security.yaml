@@ -9,8 +9,3 @@ security:
         main:
             provider: app_user_provider
             custom_authenticator: Iepg\Bundle\Cas\Controller\CasAuthenticator
-
-    access_control:
-        - { path: ^/admin, roles: ROLE_ADMIN }
-        - { path: ^/cas-connection/cas-admin, roles: ROLE_ADMIN }
-        - { path: ^/cas-connection/cas-user, roles: ROLE_USER }
