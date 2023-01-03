@@ -22,7 +22,7 @@
         "CAS_CA_PATH": "",
         "#10": "# this value is optional. You can custome the NAME of the dispatcher route",
         "#11": "# Where does the user go according to his role ",
-        "#12": "# The default value is 'cas_dispatcher'",
+        "#12": "# The default value is 'cas_dispatcher'.",
         "CAS_DISPATCHER_NAME": "",
         "#13": "#### end of Cas-connection ####"
     }
