@@ -3,7 +3,8 @@
         "Iepg\\Bundle\\Cas\\CasConnectionBundle": ["all"]
     },
     "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
+        "config/": "%CONFIG_DIR%/",
+        "src/": ""
     },
     "env": {
         "#1": "#### Parameters for CAS connection ###",
