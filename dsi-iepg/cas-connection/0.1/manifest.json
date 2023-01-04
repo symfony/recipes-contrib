@@ -3,8 +3,7 @@
         "Iepg\\Bundle\\Cas\\CasConnectionBundle": ["all"]
     },
     "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/",
-        "src/": "%SRC_DIR%/"
+        "config/": "%CONFIG_DIR%/"
     },
     "env": {
         "#1": "#### Parameters for CAS connection ###",
@@ -25,6 +24,6 @@
         "#11": "# Where does the user go according to his role ",
         "#12": "# The default value is 'cas_dispatcher'",
         "CAS_DISPATCHER_NAME": "",
-        "#13": "#### end of Cas-connection ####"
+        "#13": "#### end of Cas-connection ####."
     }
 }
