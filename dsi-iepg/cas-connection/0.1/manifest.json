@@ -4,7 +4,7 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/",
-        "src/": ""
+        "src/": "%SRC_DIR%/"
     },
     "env": {
         "#1": "#### Parameters for CAS connection ###",
