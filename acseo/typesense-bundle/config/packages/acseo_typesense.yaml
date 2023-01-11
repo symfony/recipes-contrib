@@ -3,7 +3,7 @@ acseo_typesense:
     typesense:
         url: '%env(resolve:TYPESENSE_URL)%'
         key: '%env(resolve:TYPESENSE_KEY)%'
-        #collection_prefix: 'app_'                 # Optional : add prefix to all collection 
-                                                   #            names in Typesense
+        # Optional : add prefix to all collection names in Typesense
+        #collection_prefix: 'app_'
     # Collection settings
-    collections: ~
+    collections: null
