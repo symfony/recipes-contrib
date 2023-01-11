@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "acseo/typesense-bundle": {
+            "manifest": {
+                "bundles": {
+                    "ACSEO\\TypesenseBundle\\ACSEOTypesenseBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "TYPESENSE_URL": "http://localhost:8108",
+                    "TYPESENSE_KEY": "123"
+                }
+            },
+            "files": {
+                "config/packages/acseo_typesense.yaml": {
+                    "contents": [
+                        "# Read the documentation: https://github.com/acseo/TypesenseBundle/blob/master/README.md",
+                        "acseo_typesense:",
+                        "    typesense:",
+                        "        url: '%env(resolve:TYPESENSE_URL)%'",
+                        "        key: '%env(resolve:TYPESENSE_KEY)%'",
+                        "        # Optional : add prefix to all collection names in Typesense",
+                        "        #collection_prefix: 'app_'",
+                        "    # Collection settings",
+                        "    collections: null",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b202ccc902adb679c089d541b1b2748d595b4315"
+        }
+    }
+}

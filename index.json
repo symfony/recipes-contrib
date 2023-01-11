@@ -7,6 +7,9 @@
         "ablaise/meteion-bundle": [
             "1.0"
         ],
+        "acseo/typesense-bundle": [
+            "0.7"
+        ],
         "ad3n/ratchet-bundle": [
             "0.4"
         ],

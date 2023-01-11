@@ -6,6 +6,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | --- | --- |
 | [abel/keycloak-bearer-only-adapter-bundle](https://packagist.org/packages/abel/keycloak-bearer-only-adapter-bundle) | [1.0](abel/keycloak-bearer-only-adapter-bundle/1.0) |
 | [ablaise/meteion-bundle](https://packagist.org/packages/ablaise/meteion-bundle) | [1.0](ablaise/meteion-bundle/1.0) |
+| [acseo/typesense-bundle](https://packagist.org/packages/acseo/typesense-bundle) | [0.7](acseo/typesense-bundle/0.7) |
 | [ad3n/ratchet-bundle](https://packagist.org/packages/ad3n/ratchet-bundle) | [0.4](ad3n/ratchet-bundle/0.4) |
 | [adback/adback-sdk-php-symfony](https://packagist.org/packages/adback/adback-sdk-php-symfony) | [2.4](adback/adback-sdk-php-symfony/2.4) |
 | [adlarge/fixtures-documentation-bundle](https://packagist.org/packages/adlarge/fixtures-documentation-bundle) | [1.1](adlarge/fixtures-documentation-bundle/1.1) |
