@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "webylum/puppeteer-server-client-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Webylum\\PuppeteerServerClient\\WebylumPuppeteerServerClientBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%"
+                },
+                "env": {
+                    "PUPPETEER_SERVER_URL": "http://localhost:10000"
+                }
+            },
+            "files": {
+                "config/packages/webylum_puppeteer_server_client.yaml": {
+                    "contents": [
+                        "webylum_puppeteer_server_client:",
+                        "    server:",
+                        "        url: '%env(PUPPETEER_SERVER_URL)%'",
+                        "    public_dir: '%kernel.project_dir%/public'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "11fc7c588eabc0382c23d77d5dcea83f438a4af1"
+        }
+    }
+}

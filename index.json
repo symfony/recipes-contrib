@@ -1718,6 +1718,9 @@
             "2.1",
             "2.3"
         ],
+        "webylum/puppeteer-server-client-bundle": [
+            "1.2"
+        ],
         "weglot/translate-bundle": [
             "0.6"
         ],

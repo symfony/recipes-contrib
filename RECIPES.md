@@ -544,6 +544,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [wandi/mailer-bundle](https://packagist.org/packages/wandi/mailer-bundle) | [1.0](wandi/mailer-bundle/1.0) |
 | [web-auth/webauthn-symfony-bundle](https://packagist.org/packages/web-auth/webauthn-symfony-bundle) | [3.0](web-auth/webauthn-symfony-bundle/3.0) |
 | [webinarium/symfony-lazysec](https://packagist.org/packages/webinarium/symfony-lazysec) | [2.3](webinarium/symfony-lazysec/2.3) |
+| [webylum/puppeteer-server-client-bundle](https://packagist.org/packages/webylum/puppeteer-server-client-bundle) | [1.2](webylum/puppeteer-server-client-bundle/1.2) |
 | [weglot/translate-bundle](https://packagist.org/packages/weglot/translate-bundle) | [0.6](weglot/translate-bundle/0.6) |
 | [wemakecustom/doctrine-naming-strategy-bundle](https://packagist.org/packages/wemakecustom/doctrine-naming-strategy-bundle) | [1.0](wemakecustom/doctrine-naming-strategy-bundle/1.0) |
 | [wiet-at/symfony-dev](https://packagist.org/packages/wiet-at/symfony-dev) | [1.0](wiet-at/symfony-dev/1.0) |
