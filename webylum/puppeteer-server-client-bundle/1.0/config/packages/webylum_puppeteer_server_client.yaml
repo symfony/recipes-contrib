@@ -1,0 +1,3 @@
+webylum_puppeteer_server_client:
+  server:
+    host: '%env(PUPPETEER_SERVER_URL)%'
