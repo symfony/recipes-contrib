@@ -1,0 +1,54 @@
+{
+    "manifests": {
+        "prooph/pdo-event-store": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "copy-from-package": {
+                    "scripts/": "%CONFIG_DIR%/scripts/"
+                },
+                "env": {
+                    "EVENT_STORE_DSN": "pgsql:host=127.0.0.1;dbname=event_streams",
+                    "EVENT_STORE_USER": "user",
+                    "EVENT_STORE_PASSWORD": "password"
+                },
+                "post-install-output": [
+                    "  * Modify your EVENT_STORE_* configuration in <fg=green>.env</>",
+                    "",
+                    "  * Create event streams and projections tables using SQL scripts",
+                    "    in <comment>%CONFIG_DIR%/scripts/*</comment>"
+                ]
+            },
+            "files": {
+                "config/packages/prooph_pdo_event_store.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        public: false",
+                        "",
+                        "    app.event_store.default:",
+                        "        class: Prooph\\EventStore\\Pdo\\PostgresEventStore",
+                        "        arguments:",
+                        "            - '@prooph_event_store.message_factory'",
+                        "            - '@app.event_store.pdo_connection.postgres'",
+                        "            - '@app.event_store.postgres.persistence_strategy'",
+                        "",
+                        "    app.event_store.pdo_connection.postgres:",
+                        "        class: \\PDO",
+                        "        arguments:",
+                        "            - '%env(EVENT_STORE_DSN)%'",
+                        "            - '%env(EVENT_STORE_USER)%'",
+                        "            - '%env(EVENT_STORE_PASSWORD)%'",
+                        "",
+                        "    app.event_store.postgres.persistence_strategy:",
+                        "        class: Prooph\\EventStore\\Pdo\\PersistenceStrategy\\PostgresSingleStreamStrategy",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "020f87be92de58907f180d552e1a1b0d8c34cdd1"
+        }
+    }
+}
