@@ -1,0 +1,13 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "copy-from-package": {
+        "scripts/": "%CONFIG_DIR%/scripts/"
+    },
+    "env": {
+        "EVENT_STORE_DSN": "pgsql:host=127.0.0.1;dbname=event_streams",
+        "EVENT_STORE_USER": "user",
+        "EVENT_STORE_PASSWORD": "password"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Spatie\\SymfonyIgnitionBundle\\IgnitionBundle": ["dev"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

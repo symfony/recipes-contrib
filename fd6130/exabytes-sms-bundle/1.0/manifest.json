@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Fd\\ExabytesBundle\\FdExabytesBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%"
+    },
+    "env": {
+        "EXABYTES_USERNAME": "",
+        "EXABYTES_PASSWORD": ""
+    }
+}

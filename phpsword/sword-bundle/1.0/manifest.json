@@ -1,0 +1,21 @@
+{
+    "bundles": {
+        "Sword\\SwordBundle\\SwordBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "copy-from-package": {
+        "install/wp/wp-config.php": "wp/wp-config.php",
+        "install/docker/": "docker/",
+        "install/Makefile": "Makefile"
+    },
+    "gitignore": [
+        "/wp/*",
+        "!wp/wp-config.php",
+        "!wp/content",
+        "wp/content/*",
+        "!wp/content/themes",
+        "wp/content/themes/twenty*"
+    ]
+}

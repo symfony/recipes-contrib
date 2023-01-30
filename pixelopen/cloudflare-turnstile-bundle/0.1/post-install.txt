@@ -1,0 +1,3 @@
+  * The <fg=green>Cloudflare Turnstile Bundle</> is almost ready
+
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/Pixel-Open/cloudflare-turnstile-bundle</>

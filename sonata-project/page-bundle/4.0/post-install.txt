@@ -1,0 +1,13 @@
+ * Your Page is almost ready:
+    1. Generate a migration for Sonata Page Database <info>php bin/console doctrine:migrations:diff</info>
+        <comment>
+            If you use Doctrine Attribute Reference, You must change Sonata Entities generated in Entity folder.
+            You can check more details at https://www.doctrine-project.org/projects/doctrine-orm/en/current/reference/attributes-reference.html
+
+            You can also use Rector to refactor, check more details at https://getrector.org/blog/how-to-upgrade-annotations-to-attributes
+        </comment>
+    2. Apply the migration generated <info>php bin/console doctrine:migrations:migrate --no-interaction</info>
+    3. Create your first site: <info>bin/console sonata:page:create-site --enabled --name=localhost --locale=- --host=localhost --relativePath=- --enabledFrom=now --enabledTo=- --default</info>
+        <comment>After you generate your site, You will see few commands to execute to have your Site ready.</comment>
+
+  * <fg=blue>Read</> the documentation at <comment>https://docs.sonata-project.org/projects/SonataPageBundle/en/4.x/</comment>

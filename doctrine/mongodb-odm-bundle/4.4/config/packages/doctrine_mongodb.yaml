@@ -12,7 +12,6 @@ doctrine_mongodb:
             mappings:
                 App:
                     is_bundle: false
-                    type: annotation
                     dir: '%kernel.project_dir%/src/Document'
                     prefix: 'App\Document'
                     alias: App

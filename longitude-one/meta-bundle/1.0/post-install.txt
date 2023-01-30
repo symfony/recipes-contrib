@@ -1,0 +1,8 @@
+<bg=#0057B7;fg=#FFDD00>            </>
+<bg=#0057B7;fg=#FFDD00> STAND WITH </>
+<bg=#FFDD00;fg=#0057B7>  UKRAINE   </>
+<bg=#FFDD00;fg=#0057B7>            </>
+
+  * The <fg=blue>longitude-one/meta-bundle</> is almost ready:
+    1. Feel free to edit the config/packages/meta.yaml file, this file is yours ;
+    2. Use meta_description() meta_title() and meta('foo') in your templates to get custom description, title or the default ones.
