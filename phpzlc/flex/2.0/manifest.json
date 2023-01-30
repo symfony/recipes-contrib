@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "PHPZlc\\Flex\\Bundle\\FlexBundle": ["dev", "test"]
+    },
+    "copy-from-recipe": {
+        "phpzlc-flex.yaml": "config/packages/phpzlc-flex.yaml"
+    }
+}
