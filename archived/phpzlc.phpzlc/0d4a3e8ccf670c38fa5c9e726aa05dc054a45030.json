@@ -1,0 +1,25 @@
+{
+    "manifests": {
+        "phpzlc/phpzlc": {
+            "manifest": {
+                "bundles": {
+                    "PHPZlc\\PHPZlc\\Bundle\\PHPZlcBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "Business/": "src/Business/"
+                }
+            },
+            "files": {
+                "Business/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0d4a3e8ccf670c38fa5c9e726aa05dc054a45030"
+        }
+    }
+}

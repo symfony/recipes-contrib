@@ -408,11 +408,12 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [phpzlc/auth-business](https://packagist.org/packages/phpzlc/auth-business) | [1.0](phpzlc/auth-business/1.0) |
 | [phpzlc/captcha-business](https://packagist.org/packages/phpzlc/captcha-business) | [1.0](phpzlc/captcha-business/1.0) |
 | [phpzlc/document-bundle](https://packagist.org/packages/phpzlc/document-bundle) | [1.1](phpzlc/document-bundle/1.1) |
-| [phpzlc/phpzlc](https://packagist.org/packages/phpzlc/phpzlc) | [1.0](phpzlc/phpzlc/1.0) |
+| [phpzlc/flex](https://packagist.org/packages/phpzlc/flex) | [2.0](phpzlc/flex/2.0) |
+| [phpzlc/phpzlc](https://packagist.org/packages/phpzlc/phpzlc) | [2.5](phpzlc/phpzlc/2.5) |
 | [phpzlc/platform-business](https://packagist.org/packages/phpzlc/platform-business) | [1.0](phpzlc/platform-business/1.0) |
 | [phpzlc/rbac-business](https://packagist.org/packages/phpzlc/rbac-business) | [1.0](phpzlc/rbac-business/1.0) |
 | [phpzlc/snapshot-business](https://packagist.org/packages/phpzlc/snapshot-business) | [1.0](phpzlc/snapshot-business/1.0) |
-| [phpzlc/upload-business](https://packagist.org/packages/phpzlc/upload-business) | [1.0](phpzlc/upload-business/1.0) |
+| [phpzlc/upload-business](https://packagist.org/packages/phpzlc/upload-business) | [2.0](phpzlc/upload-business/2.0) |
 | [picoss/yousign-bundle](https://packagist.org/packages/picoss/yousign-bundle) | [2.2](picoss/yousign-bundle/2.2) |
 | [pierstoval/character-manager](https://packagist.org/packages/pierstoval/character-manager) | [0.5](pierstoval/character-manager/0.5) |
 | [piou-piou/ribs-cron-bundle](https://packagist.org/packages/piou-piou/ribs-cron-bundle) | [1.0](piou-piou/ribs-cron-bundle/1.0) |

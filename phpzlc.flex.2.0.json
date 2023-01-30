@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "phpzlc/flex": {
+            "manifest": {
+                "bundles": {
+                    "PHPZlc\\Flex\\Bundle\\FlexBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "phpzlc-flex.yaml": "config/packages/phpzlc-flex.yaml"
+                }
+            },
+            "files": {
+                "phpzlc-flex.yaml": {
+                    "contents": [
+                        "services:",
+                        "    phpzlc.flex.command.install:",
+                        "        class: \\PHPZlc\\Flex\\Bundle\\Command\\InstallCommand",
+                        "        tags: [ console.command ]",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d584485724054a868b1834a2ba0d9facac964b8d"
+        }
+    }
+}

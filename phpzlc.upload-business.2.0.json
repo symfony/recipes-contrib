@@ -1,0 +1,14 @@
+{
+    "manifests": {
+        "phpzlc/upload-business": {
+            "manifest": {
+                "gitignore": [
+                    "/public/upload/*",
+                    "!/public/upload/.gitignore"
+                ]
+            },
+            "files": [],
+            "ref": "fd515c4d1308a7aeddf726a13169d26a9b6a687f"
+        }
+    }
+}

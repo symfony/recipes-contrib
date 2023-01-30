@@ -1279,8 +1279,12 @@
         "phpzlc/document-bundle": [
             "1.1"
         ],
+        "phpzlc/flex": [
+            "2.0"
+        ],
         "phpzlc/phpzlc": [
-            "1.0"
+            "1.0",
+            "2.5"
         ],
         "phpzlc/platform-business": [
             "1.0"
@@ -1292,7 +1296,8 @@
             "1.0"
         ],
         "phpzlc/upload-business": [
-            "1.0"
+            "1.0",
+            "2.0"
         ],
         "picoss/yousign-bundle": [
             "2.0",
