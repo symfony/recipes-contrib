@@ -1,0 +1,1 @@
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/IDCI-Consulting/IDCIKeycloakSecurityBundle/blob/master/README.md</>

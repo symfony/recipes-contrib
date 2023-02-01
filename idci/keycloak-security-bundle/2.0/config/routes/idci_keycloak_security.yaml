@@ -1,0 +1,3 @@
+IDCIKeycloakSecurityBundle:
+    resource: "@IDCIKeycloakSecurityBundle/Resources/config/routing.yaml"
+    prefix: /
