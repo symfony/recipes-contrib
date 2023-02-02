@@ -1,0 +1,54 @@
+{
+    "manifests": {
+        "idci/keycloak-security-bundle": {
+            "manifest": {
+                "bundles": {
+                    "IDCI\\Bundle\\KeycloakSecurityBundle\\IDCIKeycloakSecurityBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "KEYCLOAK_SERVER_BASE_URL": "http://keycloak:8080",
+                    "KEYCLOAK_SERVER_PUBLIC_BASE_URL": "${KEYCLOAK_SERVER_BASE_URL}",
+                    "KEYCLOAK_SERVER_PRIVATE_BASE_URL": "${KEYCLOAK_SERVER_BASE_URL}",
+                    "KEYCLOAK_REALM": "",
+                    "KEYCLOAK_CLIENT_ID": "",
+                    "KEYCLOAK_CLIENT_SECRET": ""
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/IDCI-Consulting/IDCIKeycloakSecurityBundle/blob/master/README.md</>"
+                ]
+            },
+            "files": {
+                "config/packages/idci_keycloak_security.yaml": {
+                    "contents": [
+                        "idci_keycloak_security:",
+                        "    server_url: '%env(resolve:KEYCLOAK_SERVER_BASE_URL)%'",
+                        "    server_public_url: '%env(resolve:KEYCLOAK_SERVER_PUBLIC_BASE_URL)%'",
+                        "    server_private_url: '%env(resolve:KEYCLOAK_SERVER_PRIVATE_BASE_URL)%'",
+                        "    realm: '%env(resolve:KEYCLOAK_REALM)%'",
+                        "    client_id: '%env(resolve:KEYCLOAK_CLIENT_ID)%'",
+                        "    client_secret: '%env(resolve:KEYCLOAK_CLIENT_SECRET)%'",
+                        "    default_target_route_name: 'app_home'",
+                        "    ssl_verification: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/idci_keycloak_security.yaml": {
+                    "contents": [
+                        "IDCIKeycloakSecurityBundle:",
+                        "    resource: \"@IDCIKeycloakSecurityBundle/Resources/config/routing.yaml\"",
+                        "    prefix: /",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c160126d5ae8b2625161194e5d5c685b6c60c03d"
+        }
+    }
+}

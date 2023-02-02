@@ -210,7 +210,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [horlyk/fetch-xml-bundle](https://packagist.org/packages/horlyk/fetch-xml-bundle) | [1.1](horlyk/fetch-xml-bundle/1.1) |
 | [hugosoltys/fitz-bundle](https://packagist.org/packages/hugosoltys/fitz-bundle) | [1.0](hugosoltys/fitz-bundle/1.0) |
 | [hwi/oauth-bundle](https://packagist.org/packages/hwi/oauth-bundle) | [0.6](hwi/oauth-bundle/0.6) |
-| [idci/keycloak-security-bundle](https://packagist.org/packages/idci/keycloak-security-bundle) | [1.0](idci/keycloak-security-bundle/1.0) |
+| [idci/keycloak-security-bundle](https://packagist.org/packages/idci/keycloak-security-bundle) | [2.0](idci/keycloak-security-bundle/2.0) |
 | [ijanki/prometheus-bundle](https://packagist.org/packages/ijanki/prometheus-bundle) | [0.9](ijanki/prometheus-bundle/0.9) |
 | [ikoene/marvel-api-bundle](https://packagist.org/packages/ikoene/marvel-api-bundle) | [0.5](ikoene/marvel-api-bundle/0.5) |
 | [imper86/allegro-api-bundle](https://packagist.org/packages/imper86/allegro-api-bundle) | [3.0](imper86/allegro-api-bundle/3.0) |
