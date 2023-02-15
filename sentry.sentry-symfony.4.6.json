@@ -14,7 +14,8 @@
                     "SENTRY_DSN": ""
                 },
                 "conflict": {
-                    "symfony/framework-bundle": "<5.4"
+                    "symfony/framework-bundle": "<5.4",
+                    "symfony/monolog-bundle": "<3.7"
                 }
             },
             "files": {
@@ -27,6 +28,7 @@
                         "#        If you are using Monolog, you also need this additional configuration to log the errors correctly:",
                         "#        https://docs.sentry.io/platforms/php/guides/symfony/#monolog-integration",
                         "#        register_error_listener: false",
+                        "#        register_error_handler: false",
                         "",
                         "#    monolog:",
                         "#        handlers:",
@@ -34,27 +36,12 @@
                         "#                type: sentry",
                         "#                level: !php/const Monolog\\Logger::ERROR",
                         "#                hub_id: Sentry\\State\\HubInterface",
-                        "",
-                        "#    If you are using MonologBundle prior to v3.7, you need to configure the handler as a service instead:",
-                        "",
-                        "#    monolog:",
-                        "#        handlers:",
-                        "#            sentry:",
-                        "#                type: service",
-                        "#                id: Sentry\\Monolog\\Handler",
-                        "",
-                        "#    services:",
-                        "#        Sentry\\Monolog\\Handler:",
-                        "#            arguments:",
-                        "#                $hub: '@Sentry\\State\\HubInterface'",
-                        "#                $level: !php/const Monolog\\Logger::ERROR",
-                        "#                $bubble: false",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "27b184582b31a79a21f461df82fd8a0eaba658ff"
+            "ref": "f7b4706a3e8a6f096b7392f3146f4f7f65ff594c"
         }
     }
 }

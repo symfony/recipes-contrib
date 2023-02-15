@@ -1421,7 +1421,8 @@
         "sentry/sentry-symfony": [
             "1.0",
             "3.0",
-            "4.0"
+            "4.0",
+            "4.6"
         ],
         "sg/datatablesbundle": [
             "1.0"
@@ -1815,6 +1816,10 @@
         "sentry/sentry-symfony": {
             "4.0": {
                 "symfony/framework-bundle": "<5.4"
+            },
+            "4.6": {
+                "symfony/framework-bundle": "<5.4",
+                "symfony/monolog-bundle": "<3.7"
             }
         }
     },
