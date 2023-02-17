@@ -1,0 +1,2 @@
+spec_shaper_encrypt:
+    encrypt_key: '%env(ENCRYPT_KEY)%
