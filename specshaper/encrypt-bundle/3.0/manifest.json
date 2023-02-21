@@ -6,6 +6,6 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "ENCRYPT_KEY": "change_me"
+        "SPEC_SHAPER_ENCRYPT_KEY": "change_me"
     }
 }
