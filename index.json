@@ -1493,6 +1493,9 @@
         "spatie/symfony-ignition-bundle": [
             "0.0"
         ],
+        "specshaper/encrypt-bundle": [
+            "3.0"
+        ],
         "spiechu/symfony-commons-bundle": [
             "0.1"
         ],
