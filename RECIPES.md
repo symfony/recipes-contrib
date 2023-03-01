@@ -232,6 +232,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [jolicode/gif-exception-bundle](https://packagist.org/packages/jolicode/gif-exception-bundle) | [1.0](jolicode/gif-exception-bundle/1.0) |
 | [jolicode/jolitypo](https://packagist.org/packages/jolicode/jolitypo) | [1.0](jolicode/jolitypo/1.0) |
 | [jonathankablan/fast-entity-bundle](https://packagist.org/packages/jonathankablan/fast-entity-bundle) | [2.0](jonathankablan/fast-entity-bundle/2.0) |
+| [jrmgx/interactive-bundle](https://packagist.org/packages/jrmgx/interactive-bundle) | [1.0](jrmgx/interactive-bundle/1.0) |
 | [jsor/doctrine-postgis](https://packagist.org/packages/jsor/doctrine-postgis) | [1.7](jsor/doctrine-postgis/1.7) |
 | [jupi/prestashop-webservice-bundle](https://packagist.org/packages/jupi/prestashop-webservice-bundle) | [1.0](jupi/prestashop-webservice-bundle/1.0) |
 | [jurry/amqp-symfony-bundle](https://packagist.org/packages/jurry/amqp-symfony-bundle) | [1.0](jurry/amqp-symfony-bundle/1.0) |

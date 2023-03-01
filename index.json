@@ -721,6 +721,9 @@
         "jonathankablan/fast-entity-bundle": [
             "2.0"
         ],
+        "jrmgx/interactive-bundle": [
+            "1.0"
+        ],
         "jsor/doctrine-postgis": [
             "1.7"
         ],

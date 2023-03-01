@@ -1,0 +1,19 @@
+{
+    "manifests": {
+        "jrmgx/interactive-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Jrmgx\\InteractiveBundle\\InteractiveBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-package": {
+                    "bin/interactive_console": "%BIN_DIR%/interactive"
+                }
+            },
+            "files": [],
+            "ref": "be62ae3467bcdbb3be7ff97160b4b1d1f8ea841a"
+        }
+    }
+}
