@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "neimheadh/sonata-annotation-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Neimheadh\\SonataAnnotationBundle\\SonataAnnotationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sonata_annotation.yaml": {
+                    "contents": [
+                        "sonata_annotation:",
+                        "    directory: '%kernel.project_dir%/src/Entity'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "42763bea049b98d688b32bfe328ef04981f24630"
+        }
+    }
+}

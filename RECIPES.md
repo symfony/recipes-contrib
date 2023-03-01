@@ -352,6 +352,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [nedac/sylius-minimum-order-value-plugin](https://packagist.org/packages/nedac/sylius-minimum-order-value-plugin) | [1.0](nedac/sylius-minimum-order-value-plugin/1.0) |
 | [nedac/sylius-order-now-plugin](https://packagist.org/packages/nedac/sylius-order-now-plugin) | [1.0](nedac/sylius-order-now-plugin/1.0) |
 | [nedac/sylius-temporarily-out-of-stock-plugin](https://packagist.org/packages/nedac/sylius-temporarily-out-of-stock-plugin) | [1.0](nedac/sylius-temporarily-out-of-stock-plugin/1.0) |
+| [neimheadh/sonata-annotation-bundle](https://packagist.org/packages/neimheadh/sonata-annotation-bundle) | [2.0](neimheadh/sonata-annotation-bundle/2.0) |
 | [nella/monolog-tracy-bundle](https://packagist.org/packages/nella/monolog-tracy-bundle) | [2.0](nella/monolog-tracy-bundle/2.0) |
 | [nelmio/api-doc-bundle](https://packagist.org/packages/nelmio/api-doc-bundle) | [3.0](nelmio/api-doc-bundle/3.0) |
 | [nelmio/solarium-bundle](https://packagist.org/packages/nelmio/solarium-bundle) | [2.4](nelmio/solarium-bundle/2.4) |

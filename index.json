@@ -1099,6 +1099,9 @@
         "nedac/sylius-temporarily-out-of-stock-plugin": [
             "1.0"
         ],
+        "neimheadh/sonata-annotation-bundle": [
+            "2.0"
+        ],
         "nella/monolog-tracy-bundle": [
             "2.0"
         ],
