@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Jrmgx\\InteractiveBundle\\InteractiveBundle": ["dev", "test"]
+    },
+    "copy-from-package": {
+        "bin/interactive_console": "%BIN_DIR%/interactive"
+    }
+}
