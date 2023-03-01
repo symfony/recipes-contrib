@@ -549,6 +549,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [webylum/puppeteer-server-client-bundle](https://packagist.org/packages/webylum/puppeteer-server-client-bundle) | [1.2](webylum/puppeteer-server-client-bundle/1.2) |
 | [weglot/translate-bundle](https://packagist.org/packages/weglot/translate-bundle) | [0.6](weglot/translate-bundle/0.6) |
 | [wemakecustom/doctrine-naming-strategy-bundle](https://packagist.org/packages/wemakecustom/doctrine-naming-strategy-bundle) | [1.0](wemakecustom/doctrine-naming-strategy-bundle/1.0) |
+| [wemxo/dynamic-form-bundle](https://packagist.org/packages/wemxo/dynamic-form-bundle) | [1.0](wemxo/dynamic-form-bundle/1.0) |
 | [wiet-at/symfony-dev](https://packagist.org/packages/wiet-at/symfony-dev) | [1.0](wiet-at/symfony-dev/1.0) |
 | [willdurand/geocoder-bundle](https://packagist.org/packages/willdurand/geocoder-bundle) | [5.0](willdurand/geocoder-bundle/5.0) |
 | [willdurand/hateoas-bundle](https://packagist.org/packages/willdurand/hateoas-bundle) | [2.0](willdurand/hateoas-bundle/2.0) |

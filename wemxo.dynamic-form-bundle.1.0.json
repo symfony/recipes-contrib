@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "wemxo/dynamic-form-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Wemxo\\DynamicFormBundle\\DynamicFormBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/dynamic_form.yaml": {
+                    "contents": [
+                        "dynamic_form:",
+                        "    recursive: true",
+                        "    config_paths:",
+                        "        - '%kernel.project_dir%/config/dynamic_form'",
+                        "    cache_pool: null",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2d548a36fcd6c33db0789a70e079ad60351a5555"
+        }
+    }
+}
