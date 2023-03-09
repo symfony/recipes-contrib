@@ -382,6 +382,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [oneup/flysystem-bundle](https://packagist.org/packages/oneup/flysystem-bundle) | [4.0](oneup/flysystem-bundle/4.0) |
 | [oneup/uploader-bundle](https://packagist.org/packages/oneup/uploader-bundle) | [2.0](oneup/uploader-bundle/2.0) |
 | [onurb/doctrine-yuml-bundle](https://packagist.org/packages/onurb/doctrine-yuml-bundle) | [1.1](onurb/doctrine-yuml-bundle/1.1) |
+| [openai-php/symfony](https://packagist.org/packages/openai-php/symfony) | [0.3](openai-php/symfony/0.3) |
 | [orbitale/cms-bundle](https://packagist.org/packages/orbitale/cms-bundle) | [3.0](orbitale/cms-bundle/3.0) |
 | [orbitale/easyimpress-bundle](https://packagist.org/packages/orbitale/easyimpress-bundle) | [1.0](orbitale/easyimpress-bundle/1.0) |
 | [oskarstark/env-var-extension](https://packagist.org/packages/oskarstark/env-var-extension) | [1.0](oskarstark/env-var-extension/1.0) |

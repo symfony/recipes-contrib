@@ -1195,6 +1195,9 @@
         "onurb/doctrine-yuml-bundle": [
             "1.1"
         ],
+        "openai-php/symfony": [
+            "0.3"
+        ],
         "orbitale/cms-bundle": [
             "3.0"
         ],

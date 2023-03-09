@@ -1,0 +1,21 @@
+{
+    "manifests": {
+        "openai-php/symfony": {
+            "manifest": {
+                "bundles": {
+                    "OpenAI\\Symfony\\OpenAIBundle": [
+                        "all"
+                    ]
+                },
+                "env": {
+                    "#1": "Generate your own API credentials through the OpenAI Platform portal.",
+                    "#2": "https://platform.openai.com/account/api-keys",
+                    "OPENAI_API_KEY": "sk-...",
+                    "OPENAI_ORGANIZATION": ""
+                }
+            },
+            "files": [],
+            "ref": "23b35dfd25adb2c5c467a50239a9ef0aa16f9328"
+        }
+    }
+}
