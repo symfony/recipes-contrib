@@ -561,7 +561,8 @@
             "1.6"
         ],
         "friendsofsymfony/rest-bundle": [
-            "2.2"
+            "2.2",
+            "3.0"
         ],
         "fsi/files": [
             "1.5"
