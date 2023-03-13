@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "youritservices/mock-server-bundle": {
+            "manifest": {
+                "bundles": {
+                    "YourITServices\\MockServerBundle\\MockServerBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MOCK_SERVER_HOST": "http://mock-api:1080"
+                }
+            },
+            "files": {
+                "config/packages/mock_server.yaml": {
+                    "contents": [
+                        "when@test: &test",
+                        "    mock_server:",
+                        "        host_url: '%env(MOCK_SERVER_HOST)%'",
+                        "        mocks_directory: '%kernel.project_dir%/tests/apiMocks'",
+                        "",
+                        "when@dev: *test",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b512074c09b63a66ae7e506494ed3895a4559975"
+        }
+    }
+}

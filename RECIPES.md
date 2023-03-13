@@ -562,6 +562,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [xcore/inline-editing-bundle](https://packagist.org/packages/xcore/inline-editing-bundle) | [1.2](xcore/inline-editing-bundle/1.2) |
 | [xiidea/easy-audit](https://packagist.org/packages/xiidea/easy-audit) | [2.0](xiidea/easy-audit/2.0) |
 | [yamilovs/sms-bundle](https://packagist.org/packages/yamilovs/sms-bundle) | [1.0](yamilovs/sms-bundle/1.0) |
+| [youritservices/mock-server-bundle](https://packagist.org/packages/youritservices/mock-server-bundle) | [1.0](youritservices/mock-server-bundle/1.0) |
 | [ywh/cvss-bundle](https://packagist.org/packages/ywh/cvss-bundle) | [1.0](ywh/cvss-bundle/1.0) |
 | [ywh/doctrine-encryption-bundle](https://packagist.org/packages/ywh/doctrine-encryption-bundle) | [1.0](ywh/doctrine-encryption-bundle/1.0) |
 | [zendesk/zendesk_api_client_php](https://packagist.org/packages/zendesk/zendesk_api_client_php) | [2.2](zendesk/zendesk_api_client_php/2.2) |
