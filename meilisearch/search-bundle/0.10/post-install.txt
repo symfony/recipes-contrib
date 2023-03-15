@@ -1,0 +1,4 @@
+  * Edit the configuration in <fg=green>config/packages/meilisearch.yaml</>
+    to start indexing your data.
+
+Documentation: https://github.com/meilisearch/meilisearch-symfony/wiki
