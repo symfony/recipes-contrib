@@ -1,0 +1,70 @@
+{
+    "manifests": {
+        "meilisearch/search-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Meilisearch\\Bundle\\MeilisearchBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Uncomment the following line if you use Meilisearch through Docker",
+                    "#2": "MEILISEARCH_URL=http://meilisearch:7700",
+                    "MEILISEARCH_URL": "http://127.0.0.1:7700",
+                    "MEILISEARCH_API_KEY": "!ChangeMe!",
+                    "MEILISEARCH_PREFIX": "app_${APP_ENV}_"
+                },
+                "docker-compose": {
+                    "docker-compose.yml": {
+                        "services": [
+                            "meilisearch:",
+                            "  image: getmeili/meilisearch:${MEILISEARCH_VERSION:-v1.0}",
+                            "  environment:",
+                            "    # You should definitely change the master key in production",
+                            "    MEILI_MASTER_KEY: ${MEILI_MASTER_KEY:-!ChangeMe!}",
+                            "  volumes:",
+                            "    - meilisearch_data:/meili_data"
+                        ],
+                        "volumes": [
+                            "meilisearch_data:"
+                        ]
+                    },
+                    "docker-compose.override.yml": {
+                        "services": [
+                            "meilisearch:",
+                            "  ports:",
+                            "    - \"7700\""
+                        ]
+                    }
+                },
+                "post-install-output": [
+                    "  * Edit the configuration in <fg=green>config/packages/meilisearch.yaml</>",
+                    "    to start indexing your data.",
+                    "",
+                    "Documentation: https://github.com/meilisearch/meilisearch-symfony/wiki"
+                ]
+            },
+            "files": {
+                "config/packages/meilisearch.yaml": {
+                    "contents": [
+                        "meilisearch:",
+                        "    url: '%env(MEILISEARCH_URL)%' # URL of the Meilisearch server (mandatory)",
+                        "    api_key: '%env(MEILISEARCH_API_KEY)%' # API key to access the Meilisearch server (mandatory)",
+                        "    prefix: '%env(MEILISEARCH_PREFIX)%'",
+                        "    indices:",
+                        "        # Define entities or documents that should be indexed to Meilisearch.",
+                        "        # See https://github.com/meilisearch/meilisearch-symfony/wiki/configure-searchable-data",
+                        "        #- name: posts",
+                        "        #  class: App\\Entity\\Post",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f0730f97441a5391832fb176305f69abe86b70a3"
+        }
+    }
+}

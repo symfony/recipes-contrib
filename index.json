@@ -965,6 +965,9 @@
         "mediamonks/sonata-media-bundle": [
             "2.0"
         ],
+        "meilisearch/search-bundle": [
+            "0.10"
+        ],
         "merceslab/spreadsheet-client-bundle": [
             "1.0"
         ],
