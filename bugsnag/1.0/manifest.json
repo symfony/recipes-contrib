@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Bugsnag\\BugsnagBundle\\BugsnagBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/packages/Bugsnag.yaml": "%CONFIG_DIR%/packages/"
+    },
+    "env": {
+        "BUGSNAG_API_KEY": ""
+    }
+}
