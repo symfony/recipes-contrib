@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "bugsnag/bugsnag-symfony": {
+            "manifest": {
+                "bundles": {
+                    "Bugsnag\\BugsnagBundle\\BugsnagBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "BUGSNAG_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/bugsnag.yaml": {
+                    "contents": [
+                        "bugsnag:",
+                        "    api_key: '%env(BUGSNAG_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f571597c0e65ca904f2d853c2396017ab28da0df"
+        }
+    }
+}

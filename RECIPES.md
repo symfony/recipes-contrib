@@ -60,6 +60,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [broadway/event-store-mongodb](https://packagist.org/packages/broadway/event-store-mongodb) | [0.2](broadway/event-store-mongodb/0.2) |
 | [broadway/read-model-elasticsearch](https://packagist.org/packages/broadway/read-model-elasticsearch) | [0.3](broadway/read-model-elasticsearch/0.3) |
 | [broadway/read-model-mongodb](https://packagist.org/packages/broadway/read-model-mongodb) | [0.2](broadway/read-model-mongodb/0.2) |
+| [bugsnag/bugsnag-symfony](https://packagist.org/packages/bugsnag/bugsnag-symfony) | [1.13](bugsnag/bugsnag-symfony/1.13) |
 | [bukashk0zzz/filter-bundle](https://packagist.org/packages/bukashk0zzz/filter-bundle) | [2.0](bukashk0zzz/filter-bundle/2.0) |
 | [bukashk0zzz/liip-imagine-serialization-bundle](https://packagist.org/packages/bukashk0zzz/liip-imagine-serialization-bundle) | [2.0](bukashk0zzz/liip-imagine-serialization-bundle/2.0) |
 | [byte-artist/menu-bundle](https://packagist.org/packages/byte-artist/menu-bundle) | [0.1](byte-artist/menu-bundle/0.1) |
