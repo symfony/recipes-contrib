@@ -1,7 +1,7 @@
 logbook:
     api:
         # The base url of logbook app.
-        url: "%env(LOGBOOK_API_URL)%"
+        url: ""
 
         # The API key of logbook client app.
-        key: "%env(LOGBOOK_API_KEY)%"
+        key: ""
