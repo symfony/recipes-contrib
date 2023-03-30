@@ -8,6 +8,5 @@
     "env": {
         "LOGBOOK_API_URL": "Logbook API url",
         "LOGBOOK_API_KEY": "Logbook API key",
-        "LOGBOOK_LEVEL": "ERROR"
     }
 }
