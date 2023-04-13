@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "monsieurbiz/sylius-no-commerce-plugin": {
+            "manifest": {
+                "bundles": {
+                    "MonsieurBiz\\SyliusNoCommercePlugin\\MonsieurBizSyliusNoCommercePlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/monsieurbiz_sylius_nocommerce_plugin.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@MonsieurBizSyliusNoCommercePlugin/Resources/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b87bb636d27036715b314d9937226c755aef6c10"
+        }
+    }
+}
