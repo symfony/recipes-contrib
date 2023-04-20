@@ -1,8 +1,0 @@
-edb_dynamic:
-    resource: .
-    type: admin
-    prefix: '%edb_admin_path%'
-
-edb_admin:
-    resource: '@EDBAdminBundle/Resources/config/routes.yaml'
-    prefix: '%edb_admin_path%'
