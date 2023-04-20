@@ -11,9 +11,9 @@
         "cache:clear": "symfony-cmd"
     },
     "env": {
-        "ADMIN_PATH": "admin",
-        "MEDIA_PATH": "/",
-        "GOOGLE_CLIENT_ID": "",
-        "GOOGLE_CLIENT_SECRET": ""
+        "EDB_ADMIN_PATH": "admin",
+        "EDB_MEDIA_PATH": "/",
+        "EDB_GOOGLE_CLIENT_ID": "",
+        "EDB_GOOGLE_CLIENT_SECRET": ""
     }
 }

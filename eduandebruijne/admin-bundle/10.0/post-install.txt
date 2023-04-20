@@ -1,0 +1,1 @@
+  * <fg=blue>Read</> the installation instructions at <comment>https://github.com/eduandebruijne/admin-bundle</>

@@ -3,5 +3,5 @@ edb_admin:
     admin_title: "Admin"
     source_prefix: "media_source"
     cache_prefix: "media_cache"
-    media_class: App\Entity\Media
-    user_class: App\Entity\User
+    media_class: ~
+    user_class: ~
