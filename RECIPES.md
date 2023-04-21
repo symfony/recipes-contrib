@@ -510,7 +510,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sylius/customer-reorder-plugin](https://packagist.org/packages/sylius/customer-reorder-plugin) | [1.0](sylius/customer-reorder-plugin/1.0) |
 | [sylius/invoicing-plugin](https://packagist.org/packages/sylius/invoicing-plugin) | [0.5](sylius/invoicing-plugin/0.5) |
 | [sylius/refund-plugin](https://packagist.org/packages/sylius/refund-plugin) | [0.4](sylius/refund-plugin/0.4) |
-| [sylius/resource-bundle](https://packagist.org/packages/sylius/resource-bundle) | [1.6](sylius/resource-bundle/1.6) |
+| [sylius/resource-bundle](https://packagist.org/packages/sylius/resource-bundle) | [1.9](sylius/resource-bundle/1.9) |
 | [symandy/makefile-maker-bundle](https://packagist.org/packages/symandy/makefile-maker-bundle) | [0.5](symandy/makefile-maker-bundle/0.5) |
 | [symfony-bundles/kafka-bundle](https://packagist.org/packages/symfony-bundles/kafka-bundle) | [1.0](symfony-bundles/kafka-bundle/1.0) |
 | [symfony-bundles/redis-bundle](https://packagist.org/packages/symfony-bundles/redis-bundle) | [2.0](symfony-bundles/redis-bundle/2.0) |

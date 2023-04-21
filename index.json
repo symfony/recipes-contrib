@@ -1612,7 +1612,8 @@
             "0.4"
         ],
         "sylius/resource-bundle": [
-            "1.6"
+            "1.6",
+            "1.9"
         ],
         "symandy/makefile-maker-bundle": [
             "0.5"
