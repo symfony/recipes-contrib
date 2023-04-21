@@ -133,6 +133,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [ecphp/cas-bundle](https://packagist.org/packages/ecphp/cas-bundle) | [2.0](ecphp/cas-bundle/2.0) |
 | [ecphp/eu-login-api-authentication-bundle](https://packagist.org/packages/ecphp/eu-login-api-authentication-bundle) | [1.0](ecphp/eu-login-api-authentication-bundle/1.0) |
 | [ecphp/eu-login-bundle](https://packagist.org/packages/ecphp/eu-login-bundle) | [2.0](ecphp/eu-login-bundle/2.0) |
+| [eduandebruijne/admin-bundle](https://packagist.org/packages/eduandebruijne/admin-bundle) | [11.0](eduandebruijne/admin-bundle/11.0) |
 | [egeloen/ckeditor-bundle](https://packagist.org/packages/egeloen/ckeditor-bundle) | [5.0](egeloen/ckeditor-bundle/5.0) |
 | [eightpoints/guzzle-bundle](https://packagist.org/packages/eightpoints/guzzle-bundle) | [7.0](eightpoints/guzzle-bundle/7.0) |
 | [ekino/newrelic-bundle](https://packagist.org/packages/ekino/newrelic-bundle) | [2.0](ekino/newrelic-bundle/2.0) |

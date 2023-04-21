@@ -1,0 +1,59 @@
+{
+    "manifests": {
+        "eduandebruijne/admin-bundle": {
+            "manifest": {
+                "bundles": {
+                    "EDB\\AdminBundle\\EDBAdminBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "composer-scripts": {
+                    "assets:install %PUBLIC_DIR%": "symfony-cmd",
+                    "cache:clear": "symfony-cmd"
+                },
+                "env": {
+                    "EDB_ADMIN_PATH": "admin",
+                    "EDB_MEDIA_PATH": "/",
+                    "EDB_GOOGLE_CLIENT_ID": "",
+                    "EDB_GOOGLE_CLIENT_SECRET": ""
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Read</> the Installation Instructions at <comment>https://github.com/eduandebruijne/admin-bundle</>"
+                ]
+            },
+            "files": {
+                "config/packages/edb_admin.yaml": {
+                    "contents": [
+                        "edb_admin:",
+                        "    admin_icon: \"code\" # See https://fontawesome.com/v5/search?s=solid",
+                        "    admin_title: \"Admin\"",
+                        "    source_prefix: \"media_source\"",
+                        "    cache_prefix: \"media_cache\"",
+                        "    media_class: null",
+                        "    user_class: null",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/edb_admin.yaml": {
+                    "contents": [
+                        "edb_dynamic:",
+                        "    resource: .",
+                        "    type: admin",
+                        "    prefix: '%edb_admin_path%'",
+                        "",
+                        "edb_admin:",
+                        "    resource: '@EDBAdminBundle/Resources/config/routes.yaml'",
+                        "    prefix: '%edb_admin_path%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "686141dec7cc4e51d115295d33c6a9e89ec73e89"
+        }
+    }
+}

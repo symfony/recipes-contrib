@@ -403,6 +403,9 @@
             "1.0",
             "2.0"
         ],
+        "eduandebruijne/admin-bundle": [
+            "11.0"
+        ],
         "egeloen/ckeditor-bundle": [
             "5.0"
         ],
