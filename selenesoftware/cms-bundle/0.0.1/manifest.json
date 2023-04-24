@@ -1,0 +1,7 @@
+{
+    "bundles": {
+        "Selene\\CMSBundle\\seleneCMSBundle": ["all"]
+    }
+}
+
+
