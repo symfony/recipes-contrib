@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "yousign/zdd-message-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Yousign\\ZddMessageBundle\\ZddMessageBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/zdd_message.yaml": {
+                    "contents": [
+                        "# https://github.com/Yousign/zdd-message-bundle",
+                        "zdd_message:",
+                        "    # The service that will configure the messages to assert, it should implement MessageConfiguratorInterface.",
+                        "    configurator: null # replace with the service id that configure the messages to assert.",
+                        "",
+                        "    # The directory where the serialized messages will be stored (default: '%kernel.logs_dir%')",
+                        "    #  serialized_messages_dir: 'var/serialized_messages'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6682c113f89c708228a6f4c5e2af44ad0932663e"
+        }
+    }
+}

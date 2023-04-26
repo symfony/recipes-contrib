@@ -1798,6 +1798,9 @@
         "youritservices/mock-server-bundle": [
             "1.0"
         ],
+        "yousign/zdd-message-bundle": [
+            "0.1"
+        ],
         "ywh/cvss-bundle": [
             "1.0"
         ],
