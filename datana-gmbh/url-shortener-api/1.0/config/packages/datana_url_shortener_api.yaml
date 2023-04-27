@@ -1,0 +1,12 @@
+services:
+    _defaults:
+        autowire: true
+
+    Datana\UrlShortener\Api\UrlShortenerClient:
+        arguments:
+            - '%env(URL_SHORTENER_API_BASE_URI)%'
+            - '%env(URL_SHORTENER_API_USERNAME)%'
+            - '%env(URL_SHORTENER_API_PASSWORD)%'
+
+    Datana\UrlShortener\Api\UrlShortenerApi: null
+    Datana\UrlShortener\Api\UrlShortenerApiInterface: '@Datana\UrlShortener\Api\UrlShortenerApi'
