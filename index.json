@@ -317,6 +317,9 @@
         "datana-gmbh/sendgrid-dynamic-template-mailer": [
             "1.0"
         ],
+        "datana-gmbh/url-shortener-api": [
+            "1.0"
+        ],
         "datana-gmbh/zammad-api": [
             "1.0"
         ],

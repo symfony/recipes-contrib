@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "datana-gmbh/url-shortener-api": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "URL_SHORTENER_API_BASE_URI": "",
+                    "URL_SHORTENER_API_USERNAME": "",
+                    "URL_SHORTENER_API_PASSWORD": ""
+                }
+            },
+            "files": {
+                "config/packages/datana_url_shortener_api.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "",
+                        "    Datana\\UrlShortener\\Api\\UrlShortenerClient:",
+                        "        arguments:",
+                        "            - '%env(URL_SHORTENER_API_BASE_URI)%'",
+                        "            - '%env(URL_SHORTENER_API_USERNAME)%'",
+                        "            - '%env(URL_SHORTENER_API_PASSWORD)%'",
+                        "",
+                        "    Datana\\UrlShortener\\Api\\UrlShortenerApi: null",
+                        "    Datana\\UrlShortener\\Api\\UrlShortenerApiInterface: '@Datana\\UrlShortener\\Api\\UrlShortenerApi'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e239c48186bf5d6f6efb0ac2f597a4df5b806261"
+        }
+    }
+}

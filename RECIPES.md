@@ -106,6 +106,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [datana-gmbh/intercom-config](https://packagist.org/packages/datana-gmbh/intercom-config) | [1.1](datana-gmbh/intercom-config/1.1) |
 | [datana-gmbh/logz-io-handler](https://packagist.org/packages/datana-gmbh/logz-io-handler) | [1.0](datana-gmbh/logz-io-handler/1.0) |
 | [datana-gmbh/sendgrid-dynamic-template-mailer](https://packagist.org/packages/datana-gmbh/sendgrid-dynamic-template-mailer) | [1.0](datana-gmbh/sendgrid-dynamic-template-mailer/1.0) |
+| [datana-gmbh/url-shortener-api](https://packagist.org/packages/datana-gmbh/url-shortener-api) | [1.0](datana-gmbh/url-shortener-api/1.0) |
 | [datana-gmbh/zammad-api](https://packagist.org/packages/datana-gmbh/zammad-api) | [1.0](datana-gmbh/zammad-api/1.0) |
 | [deamon/logger-extra-bundle](https://packagist.org/packages/deamon/logger-extra-bundle) | [4.0](deamon/logger-extra-bundle/4.0) |
 | [debril/rss-atom-bundle](https://packagist.org/packages/debril/rss-atom-bundle) | [4.0](debril/rss-atom-bundle/4.0) |
