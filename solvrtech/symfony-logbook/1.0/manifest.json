@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Solvrtech\\Symfony\\Logbook\\LogbookBundle": ["all"]
+        "Solvrtech\\Logbook\\LogbookBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
