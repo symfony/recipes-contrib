@@ -444,6 +444,9 @@
         "enhavo/app-bundle": [
             "0.9"
         ],
+        "eniams/safe-migrations": [
+            "0.1"
+        ],
         "enigma972/orange-sms-notifier": [
             "6.1"
         ],
