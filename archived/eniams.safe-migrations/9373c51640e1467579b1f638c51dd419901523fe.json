@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "eniams/safe-migrations": {
+            "manifest": {
+                "bundles": {
+                    "Eniams\\SafeMigrationsBundle\\SafeMigrationsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/safe_migrations.yaml": {
+                    "contents": [
+                        "# https://github.com/ismail1432/safe-migrations-bundle",
+                        "safe_migrations:",
+                        "    # The path where the doctrine migrations are stored. (required)",
+                        "    migrations_path: '%kernel.project_dir%/migrations'",
+                        "    # List of critical tables that need a warning when they are modified. (optional)",
+                        "    # critical_tables:",
+                        "    #  - 'user'",
+                        "    #  - 'product'",
+                        "    #  - ...",
+                        "    # The statement that will be excluded from check. (optional)",
+                        "    # excluded_statements: # List of operations that not need a warning",
+                        "    # - 'TRUNCATE TABLE'",
+                        "    # - ...",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9373c51640e1467579b1f638c51dd419901523fe"
+        }
+    }
+}

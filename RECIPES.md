@@ -146,7 +146,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [emag-tech-labs/rabbitmq-bundle](https://packagist.org/packages/emag-tech-labs/rabbitmq-bundle) | [2.0](emag-tech-labs/rabbitmq-bundle/2.0) |
 | [emanuilnikolov/igdb-api-bundle](https://packagist.org/packages/emanuilnikolov/igdb-api-bundle) | [1.0](emanuilnikolov/igdb-api-bundle/1.0) |
 | [enhavo/app-bundle](https://packagist.org/packages/enhavo/app-bundle) | [0.9](enhavo/app-bundle/0.9) |
-| [eniams/safe-migrations](https://packagist.org/packages/eniams/safe-migrations) | [0.1](eniams/safe-migrations/0.1) |
+| [eniams/safe-migrations](https://packagist.org/packages/eniams/safe-migrations) | [1.0](eniams/safe-migrations/1.0) |
 | [enigma972/orange-sms-notifier](https://packagist.org/packages/enigma972/orange-sms-notifier) | [6.1](enigma972/orange-sms-notifier/6.1) |
 | [enigma972/user-bundle](https://packagist.org/packages/enigma972/user-bundle) | [0.4](enigma972/user-bundle/0.4) |
 | [enqueue/amqp-bunny](https://packagist.org/packages/enqueue/amqp-bunny) | [0.7](enqueue/amqp-bunny/0.7) |
