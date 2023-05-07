@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Eniams\\SafeMigrationsBundle\\SafeMigrationsBundle": ["dev"]
+        "Eniams\\SafeMigrationsBundle\\SafeMigrationsBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"

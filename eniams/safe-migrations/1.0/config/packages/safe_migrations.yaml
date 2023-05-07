@@ -3,7 +3,7 @@ safe_migrations:
     # The path where the doctrine migrations are stored. (required)
     migrations_path: '%kernel.project_dir%/migrations'
     # List of critical tables that need a warning when they are modified. (optional)
-    # critical_tables: # List of critical tables
+    # critical_tables:
     #  - 'user'
     #  - 'product'
     #  - ...
