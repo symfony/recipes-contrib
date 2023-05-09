@@ -1,0 +1,5 @@
+shopware_app:
+    shop_class: App\Entity\Shop
+    name: '%env(SHOPWARE_APP_NAME)%'
+    secret: '%env(SHOPWARE_APP_SECRET)%'
+

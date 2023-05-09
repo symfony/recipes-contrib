@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Shopware\\AppBundle\\ShopwareAppBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "src/": "%SRC_DIR%/"
+    },
+    "env": {
+        "SHOPWARE_APP_NAME": "TestApp",
+        "SHOPWARE_APP_SECRET": "MySecret"
+    }
+}
