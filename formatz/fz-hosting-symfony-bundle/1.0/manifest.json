@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "FormatZ\\FzHostingBundle\\FormatzFzHostingBundle": ["all"]
+        "Formatz\\FzHostingBundle\\FormatzFzHostingBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
