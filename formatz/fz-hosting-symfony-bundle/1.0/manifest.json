@@ -6,7 +6,6 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "#1": "FZ HOSTING SYMFONY BUNDLE",
         "FZ_HOSTING_API_ENDPOINT": "https://hostings.format-z.ch",
         "FZ_HOSTING_API_KEY": "changeme"
     }
