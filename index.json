@@ -1453,6 +1453,9 @@
         "sg/datatablesbundle": [
             "1.0"
         ],
+        "shopware/app-bundle": [
+            "1.0"
+        ],
         "siganushka/generic-bundle": [
             "0.3"
         ],

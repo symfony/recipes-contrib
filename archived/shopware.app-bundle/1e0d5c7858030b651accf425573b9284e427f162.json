@@ -1,0 +1,68 @@
+{
+    "manifests": {
+        "shopware/app-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Shopware\\AppBundle\\ShopwareAppBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "env": {
+                    "SHOPWARE_APP_NAME": "TestApp",
+                    "SHOPWARE_APP_SECRET": "MySecret"
+                }
+            },
+            "files": {
+                "config/packages/shopware_app.yaml": {
+                    "contents": [
+                        "shopware_app:",
+                        "    shop_class: App\\Entity\\Shop",
+                        "    name: '%env(SHOPWARE_APP_NAME)%'",
+                        "    secret: '%env(SHOPWARE_APP_SECRET)%'",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/shopware_app.yaml": {
+                    "contents": [
+                        "shopware_app_lifecycle:",
+                        "    resource: '@ShopwareAppBundle/Resources/config/routing/lifecycle.xml'",
+                        "    prefix: /app",
+                        "",
+                        "shopware_app_webhook:",
+                        "    resource: '@ShopwareAppBundle/Resources/config/routing/webhook.xml'",
+                        "    prefix: /app",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/Shop.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping\\Entity;",
+                        "use Shopware\\AppBundle\\Entity\\AbstractShop;",
+                        "",
+                        "#[Entity]",
+                        "class Shop extends AbstractShop",
+                        "{",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "1e0d5c7858030b651accf425573b9284e427f162"
+        }
+    }
+}

@@ -461,6 +461,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sensiolabs/connect-bundle](https://packagist.org/packages/sensiolabs/connect-bundle) | [4.0](sensiolabs/connect-bundle/4.0) |
 | [sentry/sentry-symfony](https://packagist.org/packages/sentry/sentry-symfony) | [4.6](sentry/sentry-symfony/4.6) |
 | [sg/datatablesbundle](https://packagist.org/packages/sg/datatablesbundle) | [1.0](sg/datatablesbundle/1.0) |
+| [shopware/app-bundle](https://packagist.org/packages/shopware/app-bundle) | [1.0](shopware/app-bundle/1.0) |
 | [siganushka/generic-bundle](https://packagist.org/packages/siganushka/generic-bundle) | [0.3](siganushka/generic-bundle/0.3) |
 | [siganushka/region-bundle](https://packagist.org/packages/siganushka/region-bundle) | [0.1](siganushka/region-bundle/0.1) |
 | [silasjoisten/sonata-multiupload-bundle](https://packagist.org/packages/silasjoisten/sonata-multiupload-bundle) | [3.4](silasjoisten/sonata-multiupload-bundle/3.4) |
