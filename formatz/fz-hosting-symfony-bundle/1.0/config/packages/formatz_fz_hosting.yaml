@@ -1,0 +1,3 @@
+formatz_fz_hosting:
+  api_key: '%env(resolve:FZ_HOSTING_API_KEY)%'
+  api_endpoint: '%env(resolve:FZ_HOSTING_API_ENDPOINT)%'
