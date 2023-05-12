@@ -178,6 +178,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [flagception/flagception-bundle](https://packagist.org/packages/flagception/flagception-bundle) | [3.0](flagception/flagception-bundle/3.0) |
 | [flux-se/sylius-payum-stripe-plugin](https://packagist.org/packages/flux-se/sylius-payum-stripe-plugin) | [2.0](flux-se/sylius-payum-stripe-plugin/2.0) |
 | [fluxter/saas-provider-bundle](https://packagist.org/packages/fluxter/saas-provider-bundle) | [2.0](fluxter/saas-provider-bundle/2.0) |
+| [formatz/fz-hosting-symfony-bundle](https://packagist.org/packages/formatz/fz-hosting-symfony-bundle) | [1.0](formatz/fz-hosting-symfony-bundle/1.0) |
 | [fpt/stripe-bundle](https://packagist.org/packages/fpt/stripe-bundle) | [0.5](fpt/stripe-bundle/0.5) |
 | [fresh/centrifugo-bundle](https://packagist.org/packages/fresh/centrifugo-bundle) | [1.3](fresh/centrifugo-bundle/1.3) |
 | [fresh/doctrine-enum-bundle](https://packagist.org/packages/fresh/doctrine-enum-bundle) | [6.0](fresh/doctrine-enum-bundle/6.0) |
