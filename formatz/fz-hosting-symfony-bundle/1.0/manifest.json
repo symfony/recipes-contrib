@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Formatz\\FzHostingBundle\\FormatzFzHostingBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "FZ_HOSTING_API_ENDPOINT": "https://hostings.format-z.ch",
+        "FZ_HOSTING_API_KEY": "changeme"
+    }
+}
