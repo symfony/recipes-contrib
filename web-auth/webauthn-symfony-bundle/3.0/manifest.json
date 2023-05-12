@@ -6,7 +6,7 @@
         "config/": "%CONFIG_DIR%"
     },
     "env": {
-        "RELAYING_PARTY_ID": "example.com",
-        "RELAYING_PARTY_NAME": "My Application"
+        "RELYING_PARTY_ID": "example.com",
+        "RELYING_PARTY_NAME": "My Application"
     }
 }
