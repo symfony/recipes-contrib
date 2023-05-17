@@ -1,0 +1,8 @@
+  // Note: Installing the <comment>spiral/roadrunner-cli</> package is not mandatory
+  // There is alternatives to install the RoadRunner binary:
+  // See <fg=blue>https://roadrunner.dev/docs/intro-install/2023.x</>
+  
+  * <fg=blue>Download</> RoadRunner locally: <comment>composer require spiral/roadrunner-cli && vendor/bin/rr get --location bin/</>
+  * <fg=blue>Run</> your application: <comment>bin/rr serve -c .rr.dev.yaml --debug</>
+  * <fg=blue>For production, use:</> <comment>bin/rr serve</>
+  * Visit http://localhost:8080

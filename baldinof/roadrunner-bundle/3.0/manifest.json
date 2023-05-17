@@ -1,0 +1,15 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "copy-from-package": {
+        ".rr.yaml": ".rr.yaml",
+        ".rr.dev.yaml": ".rr.dev.yaml"
+    },
+    "bundles": {
+        "Baldinof\\RoadRunnerBundle\\BaldinofRoadRunnerBundle": ["all"]
+    },
+    "gitignore": [
+        "/bin/rr"
+    ]
+}
