@@ -36,7 +36,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [aziz403/ux-datatable](https://packagist.org/packages/aziz403/ux-datatable) | [1.0](aziz403/ux-datatable/1.0) |
 | [aziz403/ux-zoom](https://packagist.org/packages/aziz403/ux-zoom) | [1.0](aziz403/ux-zoom/1.0) |
 | [backup-manager/symfony](https://packagist.org/packages/backup-manager/symfony) | [2.1](backup-manager/symfony/2.1) |
-| [baldinof/roadrunner-bundle](https://packagist.org/packages/baldinof/roadrunner-bundle) | [2.0](baldinof/roadrunner-bundle/2.0) |
+| [baldinof/roadrunner-bundle](https://packagist.org/packages/baldinof/roadrunner-bundle) | [3.0](baldinof/roadrunner-bundle/3.0) |
 | [basster/lazy-response-bundle](https://packagist.org/packages/basster/lazy-response-bundle) | [1.0](basster/lazy-response-bundle/1.0) |
 | [basster/twig-base64-extension](https://packagist.org/packages/basster/twig-base64-extension) | [1.0](basster/twig-base64-extension/1.0) |
 | [bcc/cron-manager-bundle](https://packagist.org/packages/bcc/cron-manager-bundle) | [3.1](bcc/cron-manager-bundle/3.1) |
