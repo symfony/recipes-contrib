@@ -1,0 +1,8 @@
+# https://github.com/Yousign/zdd-message-bundle
+zdd_message:
+    # The directory where the serialized messages will be stored (default: '%kernel.project_dir%'/var/zdd-message)
+    # serialized_messages_dir: 'var/serialized_messages'
+    # log_untracked_messages:
+    #   messenger:
+    #     enable: true # false by default
+    #     level: 'error' # warning by default

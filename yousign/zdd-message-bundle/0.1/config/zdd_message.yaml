@@ -1,7 +1,0 @@
-# https://github.com/Yousign/zdd-message-bundle
-zdd_message:
-    # The service that will configure the messages to assert, it should implement MessageConfiguratorInterface.
-    configurator: null # replace with the service id that configure the messages to assert.
-
-    # The directory where the serialized messages will be stored (default: '%kernel.logs_dir%')
-    #  serialized_messages_dir: 'var/serialized_messages'
