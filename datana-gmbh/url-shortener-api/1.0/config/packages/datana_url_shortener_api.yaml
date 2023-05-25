@@ -9,4 +9,5 @@ services:
             - '%env(URL_SHORTENER_API_PASSWORD)%'
 
     Datana\UrlShortener\Api\UrlShortenerApi: null
+    Datana\UrlShortener\Api\FakeUrlShortenerApi: null
     Datana\UrlShortener\Api\UrlShortenerApiInterface: '@Datana\UrlShortener\Api\UrlShortenerApi'
