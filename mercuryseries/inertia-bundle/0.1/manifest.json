@@ -1,10 +1,5 @@
 {
     "bundles": {
-        "Rompetomp\\InertiaBundle\\RompetompInertiaBundle": ["all"],
-        "Dneustadt\\CsrfCookieBundle\\DneustadtCsrfCookieBundle": ["all"],
-        "FOS\\JsRoutingBundle\\FOSJsRoutingBundle": ["all"],
-        "Symfony\\WebpackEncoreBundle\\WebpackEncoreBundle": ["all"],
-        "Symfony\\Bundle\\TwigBundle\\TwigBundle": ["all"],
         "MercurySeries\\Bundle\\InertiaBundle\\MercurySeriesInertiaBundle": ["all"]
     },
     "copy-from-recipe": {
