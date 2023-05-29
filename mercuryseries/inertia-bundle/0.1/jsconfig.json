@@ -1,9 +1,9 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["assets/js/*"]
-    }
-  },
-  "exclude": ["node_modules", "public"]
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["assets/js/*"]
+        }
+    },
+    "exclude": ["node_modules", "public"]
 }
