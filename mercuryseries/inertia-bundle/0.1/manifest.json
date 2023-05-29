@@ -17,14 +17,5 @@
         "webpack.ssr.config.js": "webpack.ssr.config.js",
         "jsconfig.json": "jsconfig.json"
     },
-    "gitignore": ["/%PUBLIC_DIR%/build-ssr/"],
-    "add-lines": [
-        {
-            "file": "config/routes.yaml",
-            "content": "    defaults:\n        csrf:\n            create: true\n            require:\n                - 'POST'\n                - 'PUT'\n                - 'PATCH'\n                - 'DELETE'",
-            "position": "after_target",
-            "target": "type: attribute",
-            "warn_if_missing": true
-        }
-    ]
+    "gitignore": ["/%PUBLIC_DIR%/build-ssr/"]
 }

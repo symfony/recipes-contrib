@@ -33,6 +33,6 @@ mercuryseries_inertia_maker:
     csrf_cookie:
         expire: 0
         path: /
-        # domain: ~
+        # domain: null
         secure: true
         sameSite: lax
