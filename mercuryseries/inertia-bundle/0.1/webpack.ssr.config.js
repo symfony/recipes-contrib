@@ -13,7 +13,6 @@ Encore.addPlugin(new FosRouting())
     .enableReactPreset()
     .addAliases({
         "@": path.resolve("assets/js"),
-        "@img": path.resolve("assets/img"),
     })
     .addEntry("ssr", "./assets/js/ssr.js")
     .disableSingleRuntimeChunk()
