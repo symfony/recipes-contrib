@@ -1,5 +1,5 @@
   <bg=blue;fg=white>                                                              </>
-  <bg=blue;fg=white>         Getting started using </><bg=blue;fg=white;options=bold>mercuryseries/inertia-maker-bundle</><bg=blue;fg=white>         </>
+  <bg=blue;fg=white>         Getting started using </><bg=blue;fg=white;options=bold>mercuryseries/inertia-bundle</><bg=blue;fg=white>         </>
   <bg=blue;fg=white>                                                              </>
 
   <fg=blue;options=bold>Configure</> <fg=blue>your transformations:</>
