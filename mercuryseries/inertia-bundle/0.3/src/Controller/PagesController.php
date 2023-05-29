@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use MercurySeries\Bundle\InertiaMakerBundle\Controller\AbstractController;
+use MercurySeries\Bundle\InertiaBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
