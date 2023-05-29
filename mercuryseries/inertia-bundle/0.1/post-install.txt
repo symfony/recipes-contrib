@@ -3,8 +3,8 @@
   <bg=blue;fg=white>                                                              </>
 
   <fg=blue;options=bold>Configure</> <fg=blue>your transformations:</>
-    1. Add if necessary a configuration file in <comment>%CONFIG_DIR%/packages/mercuryseries_inertia_maker.yaml</>.
-    2. Verify the Webpack configuration in <comment>/webpack.config.js</>.
+    1. Update if necessary the configuration file in <comment>%CONFIG_DIR%/packages/mercuryseries_inertia.yaml</>.
+    2. Verify the Webpack configuration in <comment>webpack.config.js</>.
     3. Install npm and run <comment>npm install</>.
     4. Start the development server: <comment>npm run dev</>.
     5. Start coding into <comment>assets/js/pages/</>
