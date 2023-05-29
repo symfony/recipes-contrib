@@ -1,0 +1,8 @@
+body {
+  background-color: #f8fafc;
+}
+
+a.active {
+  font-weight: bold;
+  color: lightcoral;
+}
