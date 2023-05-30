@@ -7,5 +7,5 @@
     2. Choose your stack <comment>symfony console inertia:install react</> or <comment>symfony console inertia:install vue</>.
     3. You can add SSR support by adding the <comment>--ssr</> option. Ex: <comment>symfony console inertia:install react --ssr</> or <comment>symfony console inertia:install vue --ssr</>.
     3. Install npm packages with <comment>npm install</>.
-    4. Build assets with <comment>npm run dev</>.
+    4. Build your assets with <comment>npm run dev</>.
     5. Start coding into <comment>assets/js/pages/</>
