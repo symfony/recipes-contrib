@@ -1,4 +1,4 @@
-# If you use PHP attributes
+# uncomment if you use PHP attributes
 # controllers:
 #     resource:
 #         path: ../../src/Controller/
@@ -9,7 +9,7 @@
 #             create: true
 #             require: ['POST', 'PUT', 'PATCH', 'DELETE']
 
-# If you use annotations
+# uncomment if you use annotations
 # controllers:
 #     resource: ../../src/Controller/
 #     type: annotation
