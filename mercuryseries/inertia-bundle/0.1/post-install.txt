@@ -3,9 +3,10 @@
   <bg=blue;fg=white>                                                              </>
 
   <fg=blue;options=bold>Configure</> <fg=blue>your transformations:</>
-    1. Update if necessary the configuration file in <comment>%CONFIG_DIR%/packages/mercuryseries_inertia.yaml</>.
-    2. Choose your stack <comment>symfony console inertia:install react</> or <comment>symfony console inertia:install vue</>.
-    3. You can add SSR support by adding the <comment>--ssr</> option. Ex: <comment>symfony console inertia:install react --ssr</> or <comment>symfony console inertia:install vue --ssr</>.
-    3. Install npm packages with <comment>npm install</>.
-    4. Build your assets with <comment>npm run dev</>.
-    5. Start coding into <comment>assets/js/pages/</>
+    1. Install <comment>symfony/webpack-encore-bundle</> for Webpack or <comment>pentatrion/vite-bundle</> for Vite.
+    2. Update if necessary the configuration file in <comment>%CONFIG_DIR%/packages/mercuryseries_inertia.yaml</>.
+    3. Choose your stack <comment>symfony console inertia:install react</> or <comment>symfony console inertia:install vue</>.
+    4. You can add SSR support by adding the <comment>--ssr</> option. Ex: <comment>symfony console inertia:install react --ssr</> or <comment>symfony console inertia:install vue --ssr</>.
+    5. Install Yarn and run <comment>npm install</>.
+    6. Start the development server: <comment>npm run dev-server</>.
+    7. Start coding into <comment>assets/js/pages/</>
