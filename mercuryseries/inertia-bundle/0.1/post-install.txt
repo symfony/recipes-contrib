@@ -5,7 +5,6 @@
   <fg=blue;options=bold>Configure</> <fg=blue>your transformations:</>
     1. React stack: <comment>symfony console inertia:install react --ssr --webpack</> for Webpack Encore or <comment>symfony console inertia:install react --ssr --vite</> for Vite.
     2. Vue stack: <comment>symfony console inertia:install vue --ssr --webpack</> for Webpack Encore or <comment>symfony console inertia:install vue --ssr --vite</> for Vite.
-    3. Uncomment the appropriate route configuration boilerplate in <fg=green>%CONFIG_DIR%/routes/mercuryseries_inertia.yaml</> to enable CSRF protection.
-    4. Adjust the configuration in <comment>%CONFIG_DIR%/packages/mercuryseries_inertia.yaml</> according to your needs.
-    5. Start the development server: <comment>npm run dev-server</>.
-    6. Start coding into <comment>assets/js/pages/</>
+    3. Adjust the configuration in <comment>%CONFIG_DIR%/packages/mercuryseries_inertia.yaml</> according to your needs.
+    4. Start the development server: <comment>npm run dev-server</>.
+    5. Start coding into <comment>assets/js/pages/</>
