@@ -4,13 +4,6 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/",
-        "src/": "%SRC_DIR%/",
-        "assets/": "assets/",
-        "templates/": "templates/",
-        "package.json": "package.json",
-        "webpack.config.js": "webpack.config.js",
-        "webpack.ssr.config.js": "webpack.ssr.config.js",
-        "jsconfig.json": "jsconfig.json"
     },
     "gitignore": ["/%PUBLIC_DIR%/build-ssr/"],
     "add-lines": [
