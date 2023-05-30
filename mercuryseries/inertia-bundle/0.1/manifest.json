@@ -3,7 +3,7 @@
         "MercurySeries\\Bundle\\InertiaBundle\\MercurySeriesInertiaBundle": ["all"]
     },
     "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/",
+        "config/": "%CONFIG_DIR%/"
     },
     "gitignore": ["/%PUBLIC_DIR%/build-ssr/"],
     "add-lines": [
