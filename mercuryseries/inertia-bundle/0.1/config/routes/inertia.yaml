@@ -1,0 +1,19 @@
+# If you use PHP attributes
+# controllers:
+#     resource:
+#         path: ../../src/Controller/
+#         namespace: App\Controller
+#     type: attribute
+#     defaults:
+#         csrf:
+#             create: true
+#             require: ['POST', 'PUT', 'PATCH', 'DELETE']
+
+# If you use annotations
+# controllers:
+#     resource: ../../src/Controller/
+#     type: annotation
+#     defaults:
+#         csrf:
+#             create: true
+#             require: ['POST', 'PUT', 'PATCH', 'DELETE']
