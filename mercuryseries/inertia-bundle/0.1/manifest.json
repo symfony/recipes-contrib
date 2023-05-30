@@ -12,6 +12,15 @@
             "content": "    defaults:\n        csrf:\n            create: true\n            require:\n                - 'POST'\n                - 'PUT'\n                - 'PATCH'\n                - 'DELETE'",
             "position": "after_target",
             "target": "type: attribute",
+            "requires": "symfony/flex:^2",
+            "warn_if_missing": true
+        },
+        {
+            "file": "config/routes/annotations.yaml",
+            "content": "    defaults:\n        csrf:\n            create: true\n            require:\n                - 'POST'\n                - 'PUT'\n                - 'PATCH'\n                - 'DELETE'",
+            "position": "after_target",
+            "target": "type: annotation",
+            "requires": "symfony/flex:^1.17|^2",
             "warn_if_missing": true
         }
     ]
