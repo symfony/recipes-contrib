@@ -393,6 +393,9 @@
         "dunglas/doctrine-json-odm": [
             "0.1"
         ],
+        "dunglas/solid-client-php": [
+            "1.0"
+        ],
         "ecphp/api-gw-authentication-bundle": [
             "1.0"
         ],

@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "dunglas/solid-client-php": {
+            "manifest": {
+                "bundles": {
+                    "Dunglas\\PhpSolidClient\\Bundle\\DunglasSolidClientBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "1c342a2b6c1b26272e788c1727014d15c61fb1f2"
+        }
+    }
+}

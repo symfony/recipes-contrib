@@ -130,6 +130,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [dukecity/command-scheduler-bundle](https://packagist.org/packages/dukecity/command-scheduler-bundle) | [3.0](dukecity/command-scheduler-bundle/3.0) |
 | [dunglas/digital-ocean-bundle](https://packagist.org/packages/dunglas/digital-ocean-bundle) | [1.0](dunglas/digital-ocean-bundle/1.0) |
 | [dunglas/doctrine-json-odm](https://packagist.org/packages/dunglas/doctrine-json-odm) | [0.1](dunglas/doctrine-json-odm/0.1) |
+| [dunglas/solid-client-php](https://packagist.org/packages/dunglas/solid-client-php) | [1.0](dunglas/solid-client-php/1.0) |
 | [ecphp/api-gw-authentication-bundle](https://packagist.org/packages/ecphp/api-gw-authentication-bundle) | [1.0](ecphp/api-gw-authentication-bundle/1.0) |
 | [ecphp/cas-bundle](https://packagist.org/packages/ecphp/cas-bundle) | [2.0](ecphp/cas-bundle/2.0) |
 | [ecphp/eu-login-api-authentication-bundle](https://packagist.org/packages/ecphp/eu-login-api-authentication-bundle) | [1.0](ecphp/eu-login-api-authentication-bundle/1.0) |
