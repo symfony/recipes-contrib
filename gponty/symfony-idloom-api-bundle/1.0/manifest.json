@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Gponty\\IdLoomBundle\\IdLoomBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "IDLOOM_URL": "your_idloom_url"
+    }
+}
