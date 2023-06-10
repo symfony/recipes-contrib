@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "gponty/symfony-idloom-api-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Gponty\\IdLoomBundle\\IdLoomBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "IDLOOM_URL": "your_idloom_url"
+                }
+            },
+            "files": {
+                "config/packages/idloom.yaml": {
+                    "contents": [
+                        "# Read the documentation: https://github.com/gponty/symfony-idloom-api/blob/main/README.md",
+                        "id_loom:",
+                        "    idloom_url: '%env(resolve:IDLOOM_URL)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6ca750fac535bd5bc309d93f3b1faa6e3234e71c"
+        }
+    }
+}

@@ -621,6 +621,9 @@
         "googlechromelabs/ise-web-security-bundle": [
             "1.0"
         ],
+        "gponty/symfony-idloom-api-bundle": [
+            "1.0"
+        ],
         "gpslab/domain-event-bundle": [
             "2.2"
         ],

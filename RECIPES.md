@@ -201,6 +201,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [google/apiclient](https://packagist.org/packages/google/apiclient) | [2.10](google/apiclient/2.10) |
 | [google/recaptcha](https://packagist.org/packages/google/recaptcha) | [1.1](google/recaptcha/1.1) |
 | [googlechromelabs/ise-web-security-bundle](https://packagist.org/packages/googlechromelabs/ise-web-security-bundle) | [1.0](googlechromelabs/ise-web-security-bundle/1.0) |
+| [gponty/symfony-idloom-api-bundle](https://packagist.org/packages/gponty/symfony-idloom-api-bundle) | [1.0](gponty/symfony-idloom-api-bundle/1.0) |
 | [gpslab/domain-event-bundle](https://packagist.org/packages/gpslab/domain-event-bundle) | [2.2](gpslab/domain-event-bundle/2.2) |
 | [gpslab/geoip2](https://packagist.org/packages/gpslab/geoip2) | [2.0](gpslab/geoip2/2.0) |
 | [gpslab/pagination-bundle](https://packagist.org/packages/gpslab/pagination-bundle) | [1.2](gpslab/pagination-bundle/1.2) |
