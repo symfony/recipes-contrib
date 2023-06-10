@@ -1,0 +1,3 @@
+# Read the documentation: https://github.com/gponty/symfony-idloom-api/blob/main/README.md
+id_loom:
+    idloom_url: '%env(resolve:IDLOOM_URL)%'
