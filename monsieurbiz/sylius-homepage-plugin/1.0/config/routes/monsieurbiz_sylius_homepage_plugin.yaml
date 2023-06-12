@@ -8,7 +8,7 @@ monsieurbiz_sylius_homepage_homepage:
     requirements:
         _locale: ^[a-z]{2}(?:_[A-Z]{2})?$
     defaults:
-        _controller: monsieurbiz_homepage.controller.homepage:indexAction
+        _controller: monsieurbiz_homepage.controller.homepage::indexAction
         _sylius:
             template: '@MonsieurBizSyliusHomepagePlugin/Homepage/index.html.twig'
             repository:
