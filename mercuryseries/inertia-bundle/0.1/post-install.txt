@@ -3,8 +3,8 @@
   <bg=blue;fg=white>                                                              </>
 
   <fg=blue;options=bold>Configure</> <fg=blue>your transformations:</>
-    1. React stack: <comment>symfony console inertia:install react --ssr --webpack</> for Webpack Encore or <comment>symfony console inertia:install react --ssr --vite</> for Vite.
-    2. Vue stack: <comment>symfony console inertia:install vue --ssr --webpack</> for Webpack Encore or <comment>symfony console inertia:install vue --ssr --vite</> for Vite.
+    1. React stack: <comment>symfony console inertia:install react --ssr --buildtool=webpack</> for Webpack or <comment>symfony console inertia:install react --ssr --buildtool=vite</> for Vite.
+    2. Vue stack: <comment>symfony console inertia:install vue --ssr --buildtool=webpack</> for Webpack or <comment>symfony console inertia:install vue --ssr --buildtool=vite</> for Vite.
     3. Adjust the configuration in <comment>%CONFIG_DIR%/packages/mercuryseries_inertia.yaml</> according to your needs.
     4. Start the development server: <comment>npm run dev-server</>.
     5. Start coding into <comment>assets/js/pages/</>
