@@ -993,6 +993,9 @@
         "merceslab/spreadsheet-client-bundle": [
             "1.0"
         ],
+        "mercuryseries/inertia-bundle": [
+            "0.1"
+        ],
         "meritoo/common-bundle": [
             "0.1"
         ],

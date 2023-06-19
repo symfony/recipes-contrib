@@ -319,6 +319,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [mediamonks/sonata-media-bundle](https://packagist.org/packages/mediamonks/sonata-media-bundle) | [2.0](mediamonks/sonata-media-bundle/2.0) |
 | [meilisearch/search-bundle](https://packagist.org/packages/meilisearch/search-bundle) | [0.10](meilisearch/search-bundle/0.10) |
 | [merceslab/spreadsheet-client-bundle](https://packagist.org/packages/merceslab/spreadsheet-client-bundle) | [1.0](merceslab/spreadsheet-client-bundle/1.0) |
+| [mercuryseries/inertia-bundle](https://packagist.org/packages/mercuryseries/inertia-bundle) | [0.1](mercuryseries/inertia-bundle/0.1) |
 | [meritoo/common-bundle](https://packagist.org/packages/meritoo/common-bundle) | [0.1](meritoo/common-bundle/0.1) |
 | [meteo-concept/hcaptcha-bundle](https://packagist.org/packages/meteo-concept/hcaptcha-bundle) | [1.0](meteo-concept/hcaptcha-bundle/1.0) |
 | [mgdsoft/stackdriver-bundle](https://packagist.org/packages/mgdsoft/stackdriver-bundle) | [0.1](mgdsoft/stackdriver-bundle/0.1) |

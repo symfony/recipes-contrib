@@ -1,0 +1,78 @@
+{
+    "manifests": {
+        "mercuryseries/inertia-bundle": {
+            "manifest": {
+                "bundles": {
+                    "MercurySeries\\Bundle\\InertiaBundle\\MercurySeriesInertiaBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "gitignore": [
+                    "/%PUBLIC_DIR%/build-ssr/"
+                ],
+                "post-install-output": [
+                    "  <bg=blue;fg=white>                                                              </>",
+                    "  <bg=blue;fg=white>         Getting started using </><bg=blue;fg=white;options=bold>mercuryseries/inertia-bundle</><bg=blue;fg=white>         </>",
+                    "  <bg=blue;fg=white>                                                              </>",
+                    "",
+                    "  <fg=blue;options=bold>Configure</> <fg=blue>your transformations:</>",
+                    "    1. React stack: <comment>symfony console inertia:install react --ssr --bundler=webpack</> for Webpack or <comment>symfony console inertia:install react --ssr --bundler=vite</> for Vite.",
+                    "    2. Vue stack: <comment>symfony console inertia:install vue --ssr --bundler=webpack</> for Webpack or <comment>symfony console inertia:install vue --ssr --bundler=vite</> for Vite.",
+                    "    3. Adjust the configuration in <comment>%CONFIG_DIR%/packages/mercuryseries_inertia.yaml</> according to your needs.",
+                    "    4. Start the development server: <comment>npm run dev-server</>.",
+                    "    5. Start coding into <comment>assets/js/pages/</>"
+                ]
+            },
+            "files": {
+                "config/packages/mercuryseries_inertia.yaml": {
+                    "contents": [
+                        "mercuryseries_inertia:",
+                        "    # |--------------------------------------------------------------------------",
+                        "    # | Server-side Rendering",
+                        "    # |--------------------------------------------------------------------------",
+                        "    # |",
+                        "    # | These options configures if and how Inertia uses Server Side Rendering",
+                        "    # | to pre-render the initial visits made to your application's pages.",
+                        "    # |",
+                        "    # | You can specify a custom SSR bundle path, or omit it to let Inertia",
+                        "    # | try and automatically detect it for you.",
+                        "    # |",
+                        "    # | Do note that enabling these options will NOT automatically make SSR work,",
+                        "    # | as a separate rendering service needs to be available. To learn more,",
+                        "    # | please visit https://inertiajs.com/server-side-rendering",
+                        "    ssr:",
+                        "        enabled: false",
+                        "        url: 'http://127.0.0.1:13714/render'",
+                        "        # bundle: '%kernel.project_dir%/public/build-ssr/ssr.js'",
+                        "",
+                        "    # |--------------------------------------------------------------------------",
+                        "    # | CSRF Protection",
+                        "    # |--------------------------------------------------------------------------",
+                        "    # | CSRF (Cross-Site Request Forgery) protection is a security measure",
+                        "    # | to prevent malicious websites from making requests on behalf of users",
+                        "    # | without their consent.",
+                        "    # |",
+                        "    # | Inertia provides CSRF protection by configuring CSRF tokens and cookies.",
+                        "    # | The CSRF cookie is used to store the CSRF token, and it is sent with each",
+                        "    # | request made to the application. The CSRF token is verified on the server",
+                        "    # | side to ensure the authenticity of the request.",
+                        "    # |",
+                        "    # | To learn more, please visit https://inertiajs.com/csrf-protection",
+                        "    csrf_cookie:",
+                        "        expire: 0",
+                        "        path: /",
+                        "        # domain: null",
+                        "        secure: true",
+                        "        sameSite: lax",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "64f81787251bb4c6d90cc2944e85b4c235b46fe4"
+        }
+    }
+}
