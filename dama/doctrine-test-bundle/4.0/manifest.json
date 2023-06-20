@@ -10,7 +10,8 @@
             "file": "phpunit.xml.dist",
             "content": "        <extension class=\"DAMA\\DoctrineTestBundle\\PHPUnit\\PHPUnitExtension\" />",
             "position": "after_target",
-            "target": "<extensions>"
+            "target": "<extensions>",
+            "warn_if_missing": true
         }
     ]
 }
