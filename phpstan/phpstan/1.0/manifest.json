@@ -1,0 +1,5 @@
+{
+    "copy-from-recipe": {
+        "phpstan.neon": "phpstan.neon"
+    }
+}
