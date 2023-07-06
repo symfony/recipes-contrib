@@ -1301,6 +1301,9 @@
         "phpfastcgi/fastcgi-daemon": [
             "0.11"
         ],
+        "phpstan/phpstan": [
+            "1.0"
+        ],
         "phpsword/sword-bundle": [
             "1.0"
         ],

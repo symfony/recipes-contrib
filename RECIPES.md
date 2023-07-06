@@ -414,6 +414,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [php-translation/symfony-bundle](https://packagist.org/packages/php-translation/symfony-bundle) | [0.10](php-translation/symfony-bundle/0.10) |
 | [phpfastcache/phpfastcache-bundle](https://packagist.org/packages/phpfastcache/phpfastcache-bundle) | [3.0](phpfastcache/phpfastcache-bundle/3.0) |
 | [phpfastcgi/fastcgi-daemon](https://packagist.org/packages/phpfastcgi/fastcgi-daemon) | [0.11](phpfastcgi/fastcgi-daemon/0.11) |
+| [phpstan/phpstan](https://packagist.org/packages/phpstan/phpstan) | [1.0](phpstan/phpstan/1.0) |
 | [phpsword/sword-bundle](https://packagist.org/packages/phpsword/sword-bundle) | [1.0](phpsword/sword-bundle/1.0) |
 | [phpzlc/admin](https://packagist.org/packages/phpzlc/admin) | [1.0](phpzlc/admin/1.0) |
 | [phpzlc/admin-business](https://packagist.org/packages/phpzlc/admin-business) | [1.0](phpzlc/admin-business/1.0) |
