@@ -1,0 +1,15 @@
+wedrix_watchtower:
+  endpoint: '/graphql.json'
+  schema_file: '%kernel.project_dir%/resources/schema.graphql'
+  plugins_directory: '%kernel.project_dir%/resources/watchtower/plugins'
+  scalar_type_definitions_directory: '%kernel.project_dir%/resources/watchtower/scalar_type_definitions'
+  schema_cache_directory: '%kernel.project_dir%/var/cache/watchtower/schema'
+  cache_schema: false
+  debug: true
+  context:
+    entity_manager: 'doctrine.orm.entity_manager'
+
+when@prod:
+  wedrix_watchtower:
+    cache_schema: true
+    debug: false
