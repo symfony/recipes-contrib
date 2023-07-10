@@ -1779,6 +1779,9 @@
         "webylum/puppeteer-server-client-bundle": [
             "1.2"
         ],
+        "wedrix/watchtower-bundle": [
+            "1.0"
+        ],
         "weglot/translate-bundle": [
             "0.6"
         ],
