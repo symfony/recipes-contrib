@@ -1,6 +1,6 @@
 wedrix_watchtower:
     endpoint: '/graphql.json'
-    schema_file: '%kernel.project_dir%/config/schema.graphql'
+    schema_file: '%kernel.project_dir%/config/watchtower/schema.graphql'
     plugins_directory: '%kernel.project_dir%/config/watchtower/plugins'
     scalar_type_definitions_directory: '%kernel.project_dir%/config/watchtower/scalar_type_definitions'
     schema_cache_directory: '%kernel.project_dir%/var/cache/watchtower/schema'
