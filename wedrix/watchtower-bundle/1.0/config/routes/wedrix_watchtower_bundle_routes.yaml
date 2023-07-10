@@ -1,0 +1,2 @@
+wedrix_watchtower_bundle_routes:
+    resource: '@WedrixWatchtowerBundle/config/routes.yaml'

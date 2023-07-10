@@ -1,0 +1,18 @@
+wedrix_watchtower:
+    endpoint: '/graphql.json'
+    schema_file: '%kernel.project_dir%/config/watchtower/schema.graphql'
+    plugins_directory: '%kernel.project_dir%/config/watchtower/plugins'
+    scalar_type_definitions_directory: '%kernel.project_dir%/config/watchtower/scalar_type_definitions'
+    schema_cache_directory: '%kernel.project_dir%/var/cache/watchtower/schema'
+    cache_schema: false
+    debug: true
+    context:
+        # Register services here to access them in the context param.
+        # The service key can be any name of your choosing but the value should be the service id.
+        # For example: entity_manager: 'doctrine.orm.entity_manager'
+        entity_manager: 'doctrine.orm.entity_manager'
+
+when@prod:
+    wedrix_watchtower:
+        cache_schema: true
+        debug: false
