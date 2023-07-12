@@ -1,1 +1,0 @@
-Remember to move the plugin above the grid bundle.
