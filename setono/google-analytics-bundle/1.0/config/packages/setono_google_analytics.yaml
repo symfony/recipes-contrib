@@ -4,4 +4,6 @@ setono_google_analytics:
             -   measurement_id: '%env(GOOGLE_ANALYTICS_MEASUREMENT_ID)%'
 
     # If you want to use tag manager instead of gtag, just remove the lines above and enable tag_manager below
-    # tag_manager: null
+    # tag_manager:
+    #     containers:
+    #         -   container_id: '%env(GOOGLE_ANALYTICS_CONTAINER_ID)%'
