@@ -1,0 +1,8 @@
+imports:
+    - { resource: "@SetonoSyliusAnalyticsPlugin/Resources/config/app/config.yaml" }
+
+setono_google_analytics:
+    gtag: ~
+
+    # If you want to use tag manager instead of gtag, just remove the line above and remove the comment below
+    # tag_manager: ~

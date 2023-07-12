@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Setono\\SyliusAnalyticsPlugin\\SetonoSyliusAnalyticsPlugin": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
