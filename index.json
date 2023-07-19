@@ -1466,6 +1466,9 @@
             "4.0",
             "4.6"
         ],
+        "setono/google-analytics-bundle": [
+            "1.0"
+        ],
         "sg/datatablesbundle": [
             "1.0"
         ],

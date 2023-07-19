@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "setono/google-analytics-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Setono\\GoogleAnalyticsBundle\\SetonoGoogleAnalyticsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "GOOGLE_ANALYTICS_MEASUREMENT_ID": "YOUR_GOOGLE_ANALYTICS_MEASUREMENT_ID"
+                }
+            },
+            "files": {
+                "config/packages/setono_google_analytics.yaml": {
+                    "contents": [
+                        "setono_google_analytics:",
+                        "    gtag:",
+                        "        properties:",
+                        "            - measurement_id: '%env(GOOGLE_ANALYTICS_MEASUREMENT_ID)%'",
+                        "",
+                        "    # If you want to use tag manager instead of gtag, just remove the lines above and enable tag_manager below",
+                        "    # tag_manager:",
+                        "    #     containers:",
+                        "    #         - container_id: '%env(GOOGLE_ANALYTICS_CONTAINER_ID)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7f094361ae83e1a17b50db04082131023ca5443b"
+        }
+    }
+}
