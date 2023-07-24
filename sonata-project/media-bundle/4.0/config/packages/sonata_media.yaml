@@ -15,10 +15,10 @@ sonata_media:
 
     cdn:
         server:
-            path: /upload/media
+            path: /uploads/media
 
     filesystem:
         local:
             # Directory for uploads should be writable
-            directory: "%kernel.project_dir%/public/upload/media"
+            directory: "%kernel.project_dir%/public/uploads/media"
             create: false
