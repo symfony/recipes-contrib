@@ -1071,6 +1071,9 @@
             "0.1",
             "1.0"
         ],
+        "monsieurbiz/sylius-order-history-plugin": [
+            "1.0"
+        ],
         "monsieurbiz/sylius-rich-editor-plugin": [
             "1.0",
             "2.0"

@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "monsieurbiz/sylius-order-history-plugin": {
+            "manifest": {
+                "bundles": {
+                    "MonsieurBiz\\SyliusOrderHistoryPlugin\\MonsieurBizSyliusOrderHistoryPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/monsieurbiz_sylius_order_history_plugin.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@MonsieurBizSyliusOrderHistoryPlugin/Resources/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/monsieurbiz_sylius_order_history_plugin.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    resource: '@MonsieurBizSyliusOrderHistoryPlugin/Resources/config/routes.yaml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c8eb174da30181b1859df00b368e3dd04cfe4fc9"
+        }
+    }
+}
