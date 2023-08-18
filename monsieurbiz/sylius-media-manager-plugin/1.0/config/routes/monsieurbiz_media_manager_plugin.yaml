@@ -1,0 +1,2 @@
+monsieurbiz_sylius_media_manager_admin:
+    resource: "@MonsieurBizSyliusMediaManagerPlugin/Resources/config/routes.yaml"
