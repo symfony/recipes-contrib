@@ -5,7 +5,7 @@ workerman:
             listen: http://0.0.0.0:80
             processes: 4
 
-    relod_strategy:
+    reload_strategy:
         exception:
             active: true
 
