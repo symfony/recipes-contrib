@@ -1088,7 +1088,8 @@
             "1.0"
         ],
         "monsieurbiz/sylius-search-plugin": [
-            "1.0"
+            "1.0",
+            "2.0"
         ],
         "monsieurbiz/sylius-settings-plugin": [
             "1.0"

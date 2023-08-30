@@ -1,0 +1,47 @@
+{
+    "manifests": {
+        "monsieurbiz/sylius-search-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Jane\\Bundle\\AutoMapperBundle\\JaneAutoMapperBundle": [
+                        "all"
+                    ],
+                    "MonsieurBiz\\SyliusSearchPlugin\\MonsieurBizSyliusSearchPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "copy-from-package": {
+                    "src/Resources/templates/": "templates/"
+                },
+                "env": {
+                    "MONSIEURBIZ_SEARCHPLUGIN_ES_HOST": "${ELASTICSEARCH_HOST:-localhost}",
+                    "MONSIEURBIZ_SEARCHPLUGIN_ES_PORT": "${ELASTICSEARCH_PORT:-9200}",
+                    "MONSIEURBIZ_SEARCHPLUGIN_ES_URL": "http://${MONSIEURBIZ_SEARCHPLUGIN_ES_HOST}:${MONSIEURBIZ_SEARCHPLUGIN_ES_PORT}/",
+                    "MONSIEURBIZ_SEARCHPLUGIN_MESSENGER_TRANSPORT_DSN": "doctrine://default"
+                }
+            },
+            "files": {
+                "config/packages/monsieurbiz_sylius_search_plugin.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@MonsieurBizSyliusSearchPlugin/Resources/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/monsieurbiz_sylius_search_plugin.yaml": {
+                    "contents": [
+                        "monsieurbiz_search_plugin:",
+                        "    resource: \"@MonsieurBizSyliusSearchPlugin/Resources/config/routing.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e8d4f636ebaf5c24972d45bd2eeec6b09ed127e3"
+        }
+    }
+}
