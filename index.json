@@ -312,6 +312,9 @@
         "datana-gmbh/intercom-config": [
             "1.1"
         ],
+        "datana-gmbh/iusta-api": [
+            "1.0"
+        ],
         "datana-gmbh/logz-io-handler": [
             "1.0"
         ],
