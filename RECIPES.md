@@ -297,6 +297,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [longitude-one/meta-bundle](https://packagist.org/packages/longitude-one/meta-bundle) | [1.0](longitude-one/meta-bundle/1.0) |
 | [loophp/psr17](https://packagist.org/packages/loophp/psr17) | [1.0](loophp/psr17/1.0) |
 | [loophp/repository-monadic-helper](https://packagist.org/packages/loophp/repository-monadic-helper) | [1.0](loophp/repository-monadic-helper/1.0) |
+| [luzrain/workerman-bundle](https://packagist.org/packages/luzrain/workerman-bundle) | [0.1](luzrain/workerman-bundle/0.1) |
 | [m-adamski/symfony-mailer-bundle](https://packagist.org/packages/m-adamski/symfony-mailer-bundle) | [1.0](m-adamski/symfony-mailer-bundle/1.0) |
 | [m-adamski/symfony-schedule-bundle](https://packagist.org/packages/m-adamski/symfony-schedule-bundle) | [1.0](m-adamski/symfony-schedule-bundle/1.0) |
 | [maba/webpack-bundle](https://packagist.org/packages/maba/webpack-bundle) | [1.0](maba/webpack-bundle/1.0) |

@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "luzrain/workerman-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Luzrain\\WorkermanBundle\\WorkermanBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/workerman.yaml": {
+                    "contents": [
+                        "workerman:",
+                        "    servers:",
+                        "        -",
+                        "            name: 'Symfony webserver'",
+                        "            listen: http://0.0.0.0:80",
+                        "            processes: 4",
+                        "",
+                        "    reload_strategy:",
+                        "        exception:",
+                        "            active: true",
+                        "",
+                        "        file_monitor:",
+                        "            active: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "913b079c70c523b869e8eb936b0234f4e6f6ee11"
+        }
+    }
+}
