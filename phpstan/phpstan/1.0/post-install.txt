@@ -1,4 +1,4 @@
-  * Edit the <comment>phpstan.neon</comment> file to configure PHPStan.
+  * Edit the <comment>phpstan.neon.dist</comment> file to configure PHPStan.
 
   * For the full options, see
     <comment>https://phpstan.org/user-guide/getting-started</comment>
