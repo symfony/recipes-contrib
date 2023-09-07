@@ -1426,6 +1426,9 @@
         "redrat/api-helper-bundle": [
             "0.1"
         ],
+        "rekalogika/temporary-url-bundle": [
+            "1.0"
+        ],
         "request-tracing/request-tracing-bundle": [
             "0.1"
         ],
