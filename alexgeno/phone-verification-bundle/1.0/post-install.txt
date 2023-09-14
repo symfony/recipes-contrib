@@ -1,0 +1,9 @@
+<bg=blue;fg=white>              </>
+<bg=blue;fg=white> What's next? </>
+<bg=blue;fg=white>              </>
+
+  * <fg=blue>Run</> the bundle:
+    1. Change a storage driver and sender transport if you need to
+    2. Install the respective packages;
+
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/alexeygeno/phone-verification-bundle/blob/master/README.md</>

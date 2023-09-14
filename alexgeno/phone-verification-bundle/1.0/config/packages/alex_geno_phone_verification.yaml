@@ -1,0 +1,19 @@
+alex_geno_phone_verification:
+    storage:
+        driver: redis # redis || mongodb
+        redis:
+            connection: default
+        mongodb:
+            connection: default
+    sender:
+        transport: vonage
+    manager:
+        otp:
+            length: '%env(int:PHONE_VERIFICATION_OTP_LENGTH)%'
+        rate_limits:
+            initiate: #for every 'to' no more than 'count' initiations over 'period_secs' seconds
+                period_secs: '%env(int:PHONE_VERIFICATION_RATE_LIMIT_INITIATE_PERIOD_SECS)%'
+                count: '%env(int:PHONE_VERIFICATION_RATE_LIMIT_INITIATE_COUNT)%'
+            complete: #for every 'to' no more than 'count' failed completions over 'period_secs' seconds
+                period_secs: '%env(int:PHONE_VERIFICATION_RATE_LIMIT_COMPLETE_PERIOD_SECS)%' # this is also the expiration period for OTP
+                count: '%env(int:PHONE_VERIFICATION_RATE_LIMIT_COMPLETE_COUNT)%'

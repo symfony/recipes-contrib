@@ -1,0 +1,19 @@
+{
+    "bundles": {
+        "Snc\\RedisBundle\\SncRedisBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "1000..9999",
+        "#2": "for every 'to' no more than 10 initiations over 24 hours",
+        "#4": "for every 'to' no more than 5 failed completions over 5 minutes",
+        "#5": "this is also the expiration period for OTP",
+        "PHONE_VERIFICATION_OTP_LENGTH": "4",
+        "PHONE_VERIFICATION_RATE_LIMIT_INITIATE_PERIOD_SECS": "86400",
+        "PHONE_VERIFICATION_RATE_LIMIT_INITIATE_COUNT": "10",
+        "PHONE_VERIFICATION_RATE_LIMIT_COMPLETE_PERIOD_SECS": "300",
+        "PHONE_VERIFICATION_RATE_LIMIT_COMPLETE_COUNT": "5"
+    }
+}
