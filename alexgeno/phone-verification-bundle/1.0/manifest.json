@@ -21,7 +21,7 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "    clients:",
-            "content": "        default:\n            type: predis\n            alias: default\n           dsn: \"%env(REDIS_URL)%\""
+            "content": "        default:\n            type: predis\n            alias: default\n            dsn: \"%env(REDIS_URL)%\""
         }
     ]
 }
