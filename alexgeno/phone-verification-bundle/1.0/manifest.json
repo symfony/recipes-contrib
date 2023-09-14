@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Snc\\RedisBundle\\SncRedisBundle": ["all"]
+        "AlexGeno\\PhoneVerificationBundle\\AlexGenoPhoneVerificationBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
