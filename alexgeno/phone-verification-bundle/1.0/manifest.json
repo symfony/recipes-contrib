@@ -14,5 +14,14 @@
         "#2": "for every 'to' no more than 5 failed completions over 5 minutes",
         "PHONE_VERIFICATION_RATE_LIMIT_COMPLETE_PERIOD_SECS": "300",
         "PHONE_VERIFICATION_RATE_LIMIT_COMPLETE_COUNT": "5"
-    }
+    },
+    "add-lines": [
+        {
+            "file": "config/packages/snc_redis.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    clients:",
+            "content": "        default:\n            type: predis\n            alias: default\n           dsn: \"%env(REDIS_URL)%\""
+        }
+    ]
 }
