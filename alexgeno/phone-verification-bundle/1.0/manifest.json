@@ -7,7 +7,7 @@
     },
     "env": {
         "#0": "1000..9999",
-        "PHONE_VERIFICATION_OTP_LENGTH": "4 #\"1000..9999\"",
+        "PHONE_VERIFICATION_OTP_LENGTH": "4",
         "#1": "for every 'to' no more than 10 initiations over 24 hours",
         "PHONE_VERIFICATION_RATE_LIMIT_INITIATE_PERIOD_SECS": "86400",
         "PHONE_VERIFICATION_RATE_LIMIT_INITIATE_COUNT": "10",
