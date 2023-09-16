@@ -1,0 +1,8 @@
+phone_verification_initiate:
+        path: /phone-verification/initiate/{to}
+        controller: AlexGeno\PhoneVerificationBundle\Controller\PhoneVerificationController::initiate
+        methods: POST
+phone_verification_complete:
+        path: /phone-verification/complete/{to}/{otp}
+        controller: AlexGeno\PhoneVerificationBundle\Controller\PhoneVerificationController::complete
+        methods: POST
