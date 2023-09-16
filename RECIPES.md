@@ -15,6 +15,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [ajgl/breakpoint-twig-extension](https://packagist.org/packages/ajgl/breakpoint-twig-extension) | [0.3](ajgl/breakpoint-twig-extension/0.3) |
 | [akondas/symfony-consul-bundle](https://packagist.org/packages/akondas/symfony-consul-bundle) | [0.1](akondas/symfony-consul-bundle/0.1) |
 | [alexandret/evc-bundle](https://packagist.org/packages/alexandret/evc-bundle) | [1.0](alexandret/evc-bundle/1.0) |
+| [alexgeno/phone-verification-bundle](https://packagist.org/packages/alexgeno/phone-verification-bundle) | [1.0](alexgeno/phone-verification-bundle/1.0) |
 | [algolia/algolia-search-bundle](https://packagist.org/packages/algolia/algolia-search-bundle) | [2.2](algolia/algolia-search-bundle/2.2) |
 | [algolia/search-bundle](https://packagist.org/packages/algolia/search-bundle) | [3.0](algolia/search-bundle/3.0) |
 | [ambient-link/ability-sdk](https://packagist.org/packages/ambient-link/ability-sdk) | [1.0](ambient-link/ability-sdk/1.0) |

@@ -1,0 +1,77 @@
+{
+    "manifests": {
+        "alexgeno/phone-verification-bundle": {
+            "manifest": {
+                "bundles": {
+                    "AlexGeno\\PhoneVerificationBundle\\AlexGenoPhoneVerificationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#0": "1000..9999",
+                    "PHONE_VERIFICATION_OTP_LENGTH": "4",
+                    "#1": "for every 'to' no more than 10 initiations over 24 hours",
+                    "PHONE_VERIFICATION_RATE_LIMIT_INITIATE_PERIOD_SECS": "86400",
+                    "PHONE_VERIFICATION_RATE_LIMIT_INITIATE_COUNT": "10",
+                    "#2": "for every 'to' no more than 5 failed completions over 5 minutes",
+                    "PHONE_VERIFICATION_RATE_LIMIT_COMPLETE_PERIOD_SECS": "300",
+                    "PHONE_VERIFICATION_RATE_LIMIT_COMPLETE_COUNT": "5"
+                },
+                "add-lines": [
+                    {
+                        "file": "config/packages/snc_redis.yaml",
+                        "position": "after_target",
+                        "warn_if_missing": true,
+                        "target": "    clients:",
+                        "content": "        default:\n            type: predis\n            alias: default\n            dsn: \"%env(REDIS_URL)%\""
+                    }
+                ]
+            },
+            "files": {
+                "config/packages/alex_geno_phone_verification.yaml": {
+                    "contents": [
+                        "alex_geno_phone_verification:",
+                        "    storage:",
+                        "        driver: redis # redis || mongodb",
+                        "        redis:",
+                        "            connection: default",
+                        "        mongodb:",
+                        "            connection: default",
+                        "    sender:",
+                        "        transport: vonage",
+                        "    manager:",
+                        "        otp:",
+                        "            length: '%env(int:PHONE_VERIFICATION_OTP_LENGTH)%'",
+                        "        rate_limits:",
+                        "            initiate: #for every 'to' no more than 'count' initiations over 'period_secs' seconds",
+                        "                period_secs: '%env(int:PHONE_VERIFICATION_RATE_LIMIT_INITIATE_PERIOD_SECS)%'",
+                        "                count: '%env(int:PHONE_VERIFICATION_RATE_LIMIT_INITIATE_COUNT)%'",
+                        "            complete: #for every 'to' no more than 'count' failed completions over 'period_secs' seconds",
+                        "                period_secs: '%env(int:PHONE_VERIFICATION_RATE_LIMIT_COMPLETE_PERIOD_SECS)%' # this is also the expiration period for OTP",
+                        "                count: '%env(int:PHONE_VERIFICATION_RATE_LIMIT_COMPLETE_COUNT)%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/alex_geno_phone_verification.yaml": {
+                    "contents": [
+                        "phone_verification_initiate:",
+                        "        path: /phone-verification/initiate/{to}",
+                        "        controller: AlexGeno\\PhoneVerificationBundle\\Controller\\PhoneVerificationController::initiate",
+                        "        methods: POST",
+                        "phone_verification_complete:",
+                        "        path: /phone-verification/complete/{to}/{otp}",
+                        "        controller: AlexGeno\\PhoneVerificationBundle\\Controller\\PhoneVerificationController::complete",
+                        "        methods: POST",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "752d032731bf39795d733b1b5d00fa99350de304"
+        }
+    }
+}
