@@ -4,6 +4,6 @@
     },
     "env": {
         "FORMULARIO_API_BASE_URI": "",
-        "FORMULARIO_API_TOKEN": "",
+        "FORMULARIO_API_TOKEN": ""
     }
 }
