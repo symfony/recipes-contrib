@@ -2,7 +2,7 @@ services:
     _defaults:
         autowire: true
 
-    Datana\Formulario\Api\DatapoolClient:
+    Datana\Formulario\Api\FormularioClient:
         arguments:
             - '%env(FORMULARIO_API_BASE_URI)%'
             - '%env(FORMULARIO_API_TOKEN)%'
