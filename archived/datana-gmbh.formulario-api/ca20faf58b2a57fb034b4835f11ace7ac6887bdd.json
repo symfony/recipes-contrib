@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "datana-gmbh/formulario-api": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "FORMULARIO_API_BASE_URI": "",
+                    "FORMULARIO_API_TOKEN": ""
+                }
+            },
+            "files": {
+                "config/packages/datana_formulario_api.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "",
+                        "    Datana\\Formulario\\Api\\FormularioClient:",
+                        "        arguments:",
+                        "            - '%env(FORMULARIO_API_BASE_URI)%'",
+                        "            - '%env(FORMULARIO_API_TOKEN)%'",
+                        "",
+                        "    Datana\\Formulario\\Api\\DateneingabenApi: null",
+                        "    Datana\\Formulario\\Api\\DateneingabenApiInterface: '@Datana\\Formulario\\Api\\DateneingabenApi'",
+                        "",
+                        "    Datana\\Formulario\\Api\\StatisticsApi: null",
+                        "    Datana\\Formulario\\Api\\StatisticsApiInterface: '@Datana\\Formulario\\Api\\StatisticsApi'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ca20faf58b2a57fb034b4835f11ace7ac6887bdd"
+        }
+    }
+}
