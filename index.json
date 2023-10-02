@@ -1076,6 +1076,9 @@
         "monsieurbiz/sylius-homepage-plugin": [
             "1.0"
         ],
+        "monsieurbiz/sylius-media-manager-plugin": [
+            "1.0"
+        ],
         "monsieurbiz/sylius-menu-plugin": [
             "1.0"
         ],
