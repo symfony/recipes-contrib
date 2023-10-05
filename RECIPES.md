@@ -104,6 +104,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [datana-gmbh/doctrine-datetime-milliseconds-type](https://packagist.org/packages/datana-gmbh/doctrine-datetime-milliseconds-type) | [1.0](datana-gmbh/doctrine-datetime-milliseconds-type/1.0) |
 | [datana-gmbh/doctrine-postgres-milliseconds-platform](https://packagist.org/packages/datana-gmbh/doctrine-postgres-milliseconds-platform) | [1.0](datana-gmbh/doctrine-postgres-milliseconds-platform/1.0) |
 | [datana-gmbh/doctrine-postgres-public-schema-listener](https://packagist.org/packages/datana-gmbh/doctrine-postgres-public-schema-listener) | [1.0](datana-gmbh/doctrine-postgres-public-schema-listener/1.0) |
+| [datana-gmbh/fake-api-client](https://packagist.org/packages/datana-gmbh/fake-api-client) | [1.0](datana-gmbh/fake-api-client/1.0) |
 | [datana-gmbh/formulario-api](https://packagist.org/packages/datana-gmbh/formulario-api) | [1.0](datana-gmbh/formulario-api/1.0) |
 | [datana-gmbh/intercom-config](https://packagist.org/packages/datana-gmbh/intercom-config) | [1.1](datana-gmbh/intercom-config/1.1) |
 | [datana-gmbh/iusta-api](https://packagist.org/packages/datana-gmbh/iusta-api) | [1.0](datana-gmbh/iusta-api/1.0) |
