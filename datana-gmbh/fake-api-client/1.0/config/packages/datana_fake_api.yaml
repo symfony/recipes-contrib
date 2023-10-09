@@ -11,12 +11,3 @@ services:
 
     Datana\FakeApi\Api\Formulario\DateneingabenApi: null
     Datana\FakeApi\Api\Formulario\StatisticsApi: null
-when@dev:
-    services:
-        Datana\Formulario\Api\DateneingabenApiInterface: '@Datana\FakeApi\Api\Formulario\DateneingabenApi'
-        Datana\Formulario\Api\StatisticsApiInterface: '@Datana\FakeApi\Api\Formulario\StatisticsApi'
-
-when@test:
-    services:
-        Datana\Formulario\Api\DateneingabenApiInterface: '@Datana\FakeApi\Api\Formulario\DateneingabenApi'
-        Datana\Formulario\Api\StatisticsApiInterface: '@Datana\FakeApi\Api\Formulario\StatisticsApi'
