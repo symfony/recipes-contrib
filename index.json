@@ -313,7 +313,8 @@
             "1.0"
         ],
         "datana-gmbh/fake-api-client": [
-            "1.0"
+            "1.0",
+            "2.0"
         ],
         "datana-gmbh/formulario-api": [
             "1.0"

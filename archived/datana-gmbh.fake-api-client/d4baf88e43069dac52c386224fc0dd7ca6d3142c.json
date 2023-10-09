@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "datana-gmbh/fake-api-client": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "FAKE_API_BASE_URI": "",
+                    "FAKE_API_USERNAME": "",
+                    "FAKE_API_PASSWORD": "",
+                    "FAKE_API_DISABLE_CACHE": "false"
+                }
+            },
+            "files": {
+                "config/packages/datana_fake_api.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "",
+                        "    Datana\\FakeApi\\FakeApiClient:",
+                        "        arguments:",
+                        "            - '%env(FAKE_API_BASE_URI)%'",
+                        "            - '%env(FAKE_API_USERNAME)%'",
+                        "            - '%env(FAKE_API_PASSWORD)%'",
+                        "            - '%env(bool:FAKE_API_DISABLE_CACHE)%'",
+                        "",
+                        "    Datana\\FakeApi\\Formulario\\DateneingabenApi: null",
+                        "    Datana\\FakeApi\\Formulario\\StatisticsApi: null",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d4baf88e43069dac52c386224fc0dd7ca6d3142c"
+        }
+    }
+}
