@@ -21,7 +21,7 @@ functions:
         handler: public/index.php
         timeout: 28 # in seconds (API Gateway has a timeout of 29 seconds)
         layers:
-            - ${bref:layer.php-80-fpm}
+            - ${bref:layer.php-81-fpm}
         events:
             - httpApi: '*'
     # This function let us run console commands in Lambda
@@ -29,7 +29,7 @@ functions:
         handler: bin/console
         timeout: 120 # in seconds
         layers:
-            - ${bref:layer.php-80} # PHP
+            - ${bref:layer.php-81} # PHP
             - ${bref:layer.console} # The "console" layer
 
 package:

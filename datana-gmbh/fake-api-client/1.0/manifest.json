@@ -1,0 +1,11 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "FAKE_API_BASE_URI": "",
+        "FAKE_API_USERNAME": "",
+        "FAKE_API_PASSWORD": "",
+        "FAKE_API_DISABLE_CACHE": "false"
+    }
+}
