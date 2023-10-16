@@ -1,0 +1,4 @@
+# Read the documentation: https://github.com/gponty/symfony-monday-api/blob/main/README.md
+monday:
+    api_key: '%env(MONDAY_API_KEY)%'
+    api_version: '%env(MONDAY_API_VERSION)%'
