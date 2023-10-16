@@ -1,16 +1,12 @@
 <?php
-
 // config/routes.php
-use Survos\CommandBundle\Controller\CommandController;
+
 use Symfony\Component\Routing\Loader\Configurator\RoutingConfigurator;
 
-return function (RoutingConfigurator $routes) {
-    $routes->add('survos_commands', '/admin/commands')
-        ->controller([CommandController::class, 'commands'])
+return static function (RoutingConfigurator $routes): void {
+    $routes->import('@SurvosCommandBundle/config/routes.php')
+        ->prefix('/admin') // consider adding this route to the access_control key in security
+        ->schemes(['https'])
     ;
-
-    $routes->add('survos_command', 'admin/run-command/{commandName}')
-        ->controller([CommandController::class, 'runCommand'])
-    ;
-
 };
+
