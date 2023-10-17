@@ -7,7 +7,8 @@
     },
     "env": {
         "GOTENBERG_HOST": "localhost",
-        "GOTENBERG_PORT": "3000"
+        "GOTENBERG_PORT": "3000",
+        "GOTENBERG_URL": "http://${GOTENBERG_HOST}:${GOTENBERG_PORT}"
     },
     "docker-compose": {
         "docker-compose.yml": {
