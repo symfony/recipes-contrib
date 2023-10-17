@@ -6,6 +6,9 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
+        "#1": "The variables GOTENBERG_HOST & GOTENBERG_PORT are only used for Docker",
+        "#2": "integration. The library uses only GOTENBERG_URL. You can override",
+        "#3": "GOTENBERG_URL and safely ignore GOTENBERG_HOST & GOTENBERG_PORT.",
         "GOTENBERG_HOST": "localhost",
         "GOTENBERG_PORT": "3000",
         "GOTENBERG_URL": "http://${GOTENBERG_HOST}:${GOTENBERG_PORT}"
