@@ -1,0 +1,4 @@
+survos_command:
+    # expose app:my-command, etc.
+    namespaces: [app]
+
