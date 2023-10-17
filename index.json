@@ -1632,6 +1632,9 @@
         "survos/barcode-bundle": [
             "1.0"
         ],
+        "survos/command-bundle": [
+            "1.5"
+        ],
         "svc/contactform-bundle": [
             "1.0"
         ],
