@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Survos\\CommandBundle\\SurvosCommandBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
+
