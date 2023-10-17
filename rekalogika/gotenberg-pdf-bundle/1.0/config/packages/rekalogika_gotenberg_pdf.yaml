@@ -1,0 +1,2 @@
+rekalogika_gotenberg_pdf:
+    url: 'http://%env(GOTENBERG_HOST)%:%env(GOTENBERG_PORT)%'

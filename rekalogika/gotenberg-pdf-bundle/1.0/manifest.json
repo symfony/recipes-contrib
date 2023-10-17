@@ -1,0 +1,27 @@
+{
+    "bundles": {
+        "Rekalogika\\GotenbergPdfBundle\\RekalogikaGotenbergPdfBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "GOTENBERG_HOST": "localhost",
+        "GOTENBERG_PORT": "3000"
+    },
+    "docker-compose": {
+        "docker-compose.yml": {
+            "services": [
+                "gotenberg:",
+                "  image: docker.io/gotenberg/gotenberg:7"
+            ]
+        },
+        "docker-compose.override.yml": {
+            "services": [
+                "gotenberg:",
+                "  ports:",
+                "    - \"3000\""
+            ]
+        }
+    }
+}
