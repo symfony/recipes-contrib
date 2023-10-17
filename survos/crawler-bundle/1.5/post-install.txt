@@ -1,0 +1,8 @@
+<bg=green;fg=white>                </>
+<bg=green;fg=white> success        </>
+<bg=green;fg=white>                </>
+
+  * <fg=yellow>Next steps:</>
+    1. Configure /config/packages/survos_crawler.php and add the users and routes to ignore
+    2. Run symfony console survos:crawl
+    3. Visit <comment>/admin/crawler-results</>.
