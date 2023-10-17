@@ -637,6 +637,9 @@
         "gponty/symfony-idloom-api-bundle": [
             "1.0"
         ],
+        "gponty/symfony-monday-api-bundle": [
+            "1.0"
+        ],
         "gpslab/domain-event-bundle": [
             "2.2"
         ],

@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "gponty/symfony-monday-api-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Gponty\\MondayBundle\\MondayBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MONDAY_API_KEY": "your_monday_api_key",
+                    "MONDAY_API_VERSION": "your_monday_api_version"
+                }
+            },
+            "files": {
+                "config/packages/monday.yaml": {
+                    "contents": [
+                        "# Read the documentation: https://github.com/gponty/symfony-monday-api/blob/main/README.md",
+                        "monday:",
+                        "    api_key: '%env(MONDAY_API_KEY)%'",
+                        "    api_version: '%env(MONDAY_API_VERSION)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ad15a141cbc3a478d6c6b43e921ea2209dfa84a2"
+        }
+    }
+}
