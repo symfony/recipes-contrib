@@ -1442,6 +1442,9 @@
         "redrat/api-helper-bundle": [
             "0.1"
         ],
+        "rekalogika/gotenberg-pdf-bundle": [
+            "1.0"
+        ],
         "rekalogika/temporary-url-bundle": [
             "1.0"
         ],

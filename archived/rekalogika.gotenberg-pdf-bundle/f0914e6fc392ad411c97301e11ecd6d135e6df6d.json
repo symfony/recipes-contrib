@@ -1,0 +1,50 @@
+{
+    "manifests": {
+        "rekalogika/gotenberg-pdf-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Rekalogika\\GotenbergPdfBundle\\RekalogikaGotenbergPdfBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "The variables GOTENBERG_HOST & GOTENBERG_PORT are only used for Docker",
+                    "#2": "integration. The library uses only GOTENBERG_URL. You can override",
+                    "#3": "GOTENBERG_URL and safely ignore GOTENBERG_HOST & GOTENBERG_PORT.",
+                    "GOTENBERG_HOST": "localhost",
+                    "GOTENBERG_PORT": "3000",
+                    "GOTENBERG_URL": "http://${GOTENBERG_HOST}:${GOTENBERG_PORT}"
+                },
+                "docker-compose": {
+                    "docker-compose.yml": {
+                        "services": [
+                            "gotenberg:",
+                            "  image: docker.io/gotenberg/gotenberg:7"
+                        ]
+                    },
+                    "docker-compose.override.yml": {
+                        "services": [
+                            "gotenberg:",
+                            "  ports:",
+                            "    - \"3000\""
+                        ]
+                    }
+                }
+            },
+            "files": {
+                "config/packages/rekalogika_gotenberg_pdf.yaml": {
+                    "contents": [
+                        "rekalogika_gotenberg_pdf:",
+                        "    url: '%env(GOTENBERG_URL)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f0914e6fc392ad411c97301e11ecd6d135e6df6d"
+        }
+    }
+}
