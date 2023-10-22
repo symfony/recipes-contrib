@@ -3,7 +3,7 @@ survos_crawler:
 #    base_url: 'https://my-project.wip/'
     user_class: App\Entity\User
     users:
-       - user@user.com
+        - user@user.com
     max_depth : 3
     routes_to_ignore :
         - 'app_logout'
