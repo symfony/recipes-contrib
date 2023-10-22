@@ -1638,6 +1638,9 @@
         "survos/command-bundle": [
             "1.5"
         ],
+        "survos/crawler-bundle": [
+            "1.5"
+        ],
         "svc/contactform-bundle": [
             "1.0"
         ],
