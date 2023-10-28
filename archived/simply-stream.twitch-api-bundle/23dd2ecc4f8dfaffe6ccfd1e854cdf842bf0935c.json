@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "simply-stream/twitch-api-bundle": {
+            "manifest": {
+                "bundles": {
+                    "SimplyStream\\TwitchApiBundle\\SimplyStreamTwitchApiBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "TWITCH_ID": "",
+                    "TWITCH_SECRET": "",
+                    "TWITCH_REDIRECT_URI": "",
+                    "TWITCH_WEBHOOK_SECRET": ""
+                }
+            },
+            "files": {
+                "config/packages/simplystream_twitch_api.yaml": {
+                    "contents": [
+                        "simplystream_twitch_api:",
+                        "    twitch_id: '%env(TWITCH_ID)%'",
+                        "    twitch_secret: '%env(TWITCH_SECRET)%'",
+                        "    redirect_uri: '%env(TWITCH_REDIRECT_URI)%'",
+                        "    webhook:",
+                        "        secret: '%env(TWITCH_WEBHOOK_SECRET)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "23dd2ecc4f8dfaffe6ccfd1e854cdf842bf0935c"
+        }
+    }
+}
