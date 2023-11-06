@@ -491,6 +491,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sonata-project/classification-bundle](https://packagist.org/packages/sonata-project/classification-bundle) | [3.7](sonata-project/classification-bundle/3.7) |
 | [sonata-project/core-bundle](https://packagist.org/packages/sonata-project/core-bundle) | [3.9](sonata-project/core-bundle/3.9) |
 | [sonata-project/doctrine-extensions](https://packagist.org/packages/sonata-project/doctrine-extensions) | [1.8](sonata-project/doctrine-extensions/1.8) |
+| [sonata-project/entity-audit-bundle](https://packagist.org/packages/sonata-project/entity-audit-bundle) | [1.1](sonata-project/entity-audit-bundle/1.1) |
 | [sonata-project/exporter](https://packagist.org/packages/sonata-project/exporter) | [2.4](sonata-project/exporter/2.4) |
 | [sonata-project/form-extensions](https://packagist.org/packages/sonata-project/form-extensions) | [1.4](sonata-project/form-extensions/1.4) |
 | [sonata-project/media-bundle](https://packagist.org/packages/sonata-project/media-bundle) | [4.0](sonata-project/media-bundle/4.0) |

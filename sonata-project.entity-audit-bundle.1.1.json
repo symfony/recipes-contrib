@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "sonata-project/entity-audit-bundle": {
+            "manifest": {
+                "bundles": {
+                    "SimpleThings\\EntityAudit\\SimpleThingsEntityAuditBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/sonata_entity_audit.yaml": {
+                    "contents": [
+                        "sonata_entity_audit:",
+                        "    resource: '@SimpleThingsEntityAuditBundle/Resources/config/routing/audit.xml'",
+                        "    prefix: /audit",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "15582fec4b2a012e8e9020916e567c641ea4a039"
+        }
+    }
+}
