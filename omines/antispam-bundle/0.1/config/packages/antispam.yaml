@@ -39,5 +39,7 @@ antispam:
 
 when@test:
     antispam:
-        # disable in tests
+        # In automated tests the bundle and included components should by default run in passive mode,
+        # to ensure your form submissions will not get rejected due to being exactly what they are -
+        # an automated bot filling in your site forms in a distinctly non-human way.
         passive: true
