@@ -337,6 +337,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [mobizel/markdown-docs-bundle](https://packagist.org/packages/mobizel/markdown-docs-bundle) | [0.9](mobizel/markdown-docs-bundle/0.9) |
 | [mobizel/symfony-capistrano](https://packagist.org/packages/mobizel/symfony-capistrano) | [0.2](mobizel/symfony-capistrano/0.2) |
 | [moneyphp/money-bundle](https://packagist.org/packages/moneyphp/money-bundle) | [0.1](moneyphp/money-bundle/0.1) |
+| [mongodb/symfony-bundle](https://packagist.org/packages/mongodb/symfony-bundle) | [0.1](mongodb/symfony-bundle/0.1) |
 | [monofony/admin-meta](https://packagist.org/packages/monofony/admin-meta) | [0.8](monofony/admin-meta/0.8) |
 | [monofony/api-meta](https://packagist.org/packages/monofony/api-meta) | [0.8](monofony/api-meta/0.8) |
 | [monofony/core-meta](https://packagist.org/packages/monofony/core-meta) | [0.8](monofony/core-meta/0.8) |

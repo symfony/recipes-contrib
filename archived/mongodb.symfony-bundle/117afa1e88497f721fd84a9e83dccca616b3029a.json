@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "mongodb/symfony-bundle": {
+            "manifest": {
+                "bundles": {
+                    "MongoDB\\Bundle\\MongoDBBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MONGODB_URI": "mongodb://localhost:27017"
+                }
+            },
+            "files": {
+                "config/packages/mongodb.yaml": {
+                    "contents": [
+                        "mongodb:",
+                        "    clients:",
+                        "        default: '%env(MONGODB_URI)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "117afa1e88497f721fd84a9e83dccca616b3029a"
+        }
+    }
+}
