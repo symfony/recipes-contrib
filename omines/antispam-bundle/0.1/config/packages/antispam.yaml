@@ -19,8 +19,9 @@ antispam:
 
             #
             # The measures above should already have notable effect on the amount of spam that gets through
-            # your forms. Still getting annoying amounts? Consider uncommenting and modifying some of the
-            # examples below after careful consideration about their impact
+            # your forms. Still getting annoying amounts? Analyze the patterns of uncaught spam, then
+            # consider uncommenting and modifying some of the examples below after careful consideration
+            # about their impact.
             #
 
             # Reject text fields that contain (lame attempts at) HTML or BBCode
