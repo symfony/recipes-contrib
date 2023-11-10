@@ -36,3 +36,8 @@ antispam:
 #            url_count:
 #                max: 3
 #                max_identical: 1
+
+when@test:
+    antispam:
+        # disable in tests
+        passive: true
