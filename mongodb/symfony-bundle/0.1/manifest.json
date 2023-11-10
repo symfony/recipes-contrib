@@ -6,6 +6,6 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "MONGODB_URI": ""
+        "MONGODB_URI": "mongodb://localhost:27017"
     }
 }
