@@ -1,6 +1,7 @@
 {
     "bundles": {
-        "Wedrix\\WatchtowerBundle\\WedrixWatchtowerBundle": ["all"]
+        "Wedrix\\WatchtowerBundle\\WedrixWatchtowerBundle": ["all"],
+        "Doctrine\\Bundle\\DoctrineBundle\\DoctrineBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
