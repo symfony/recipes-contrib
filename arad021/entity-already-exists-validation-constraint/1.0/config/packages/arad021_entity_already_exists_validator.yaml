@@ -1,0 +1,5 @@
+# See Readme at https://github.com/arad021/entity-already-exists-validation-constraint
+services:
+    Arad021\Validator\Constraint\EntityExistValidator:
+        arguments: ['@doctrine.orm.entity_manager']
+        tags: [ 'validator.constraint_validator' ]
