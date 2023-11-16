@@ -396,6 +396,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [octopouce-mu/admin-bundle](https://packagist.org/packages/octopouce-mu/admin-bundle) | [1.0](octopouce-mu/admin-bundle/1.0) |
 | [odiseoteam/sylius-vendor-plugin](https://packagist.org/packages/odiseoteam/sylius-vendor-plugin) | [1.6](odiseoteam/sylius-vendor-plugin/1.6) |
 | [odolbeau/phone-number-bundle](https://packagist.org/packages/odolbeau/phone-number-bundle) | [3.0](odolbeau/phone-number-bundle/3.0) |
+| [omines/antispam-bundle](https://packagist.org/packages/omines/antispam-bundle) | [0.1](omines/antispam-bundle/0.1) |
 | [omines/datatables-bundle](https://packagist.org/packages/omines/datatables-bundle) | [0.1](omines/datatables-bundle/0.1) |
 | [oneup/flysystem-bundle](https://packagist.org/packages/oneup/flysystem-bundle) | [4.0](oneup/flysystem-bundle/4.0) |
 | [oneup/uploader-bundle](https://packagist.org/packages/oneup/uploader-bundle) | [2.0](oneup/uploader-bundle/2.0) |

@@ -1241,6 +1241,9 @@
         "odolbeau/phone-number-bundle": [
             "3.0"
         ],
+        "omines/antispam-bundle": [
+            "0.1"
+        ],
         "omines/datatables-bundle": [
             "0.1"
         ],
