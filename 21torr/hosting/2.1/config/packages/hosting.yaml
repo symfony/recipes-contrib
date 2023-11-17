@@ -1,0 +1,2 @@
+hosting:
+    tier: '%env(HOSTING_TIER)%'
