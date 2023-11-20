@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "tales-from-a-dev/twig-tailwind-extra": {
+            "manifest": {
+                "bundles": {
+                    "TalesFromADev\\Twig\\Extra\\Tailwind\\Bridge\\Symfony\\Bundle\\TalesFromADevTwigExtraTailwindBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "7243ab070ed66198eb82c026684e9b9773e7b64a"
+        }
+    }
+}
