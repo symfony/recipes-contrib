@@ -1,0 +1,10 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "DATAPOOL_API_BASE_URI": "",
+        "DATAPOOL_API_USERNAME": "",
+        "DATAPOOL_API_PASSWORD": ""
+    }
+}
