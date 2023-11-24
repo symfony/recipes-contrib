@@ -6,7 +6,8 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/",
-        "src/": "%SRC_DIR%/"
+        "src/": "%SRC_DIR%/",
+        "migrations/": "migrations/"
     },
     "env": {
         "DB_DRIVER": "mysql",
