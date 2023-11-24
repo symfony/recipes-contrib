@@ -100,7 +100,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [dama/doctrine-test-bundle](https://packagist.org/packages/dama/doctrine-test-bundle) | [4.0](dama/doctrine-test-bundle/4.0) |
 | [damienharper/auditor-bundle](https://packagist.org/packages/damienharper/auditor-bundle) | [4.0](damienharper/auditor-bundle/4.0) |
 | [damienharper/doctrine-audit-bundle](https://packagist.org/packages/damienharper/doctrine-audit-bundle) | [1.0](damienharper/doctrine-audit-bundle/1.0) |
-| [datana-gmbh/datapool-api](https://packagist.org/packages/datana-gmbh/datapool-api) | [2.3](datana-gmbh/datapool-api/2.3) |
+| [datana-gmbh/datapool-api](https://packagist.org/packages/datana-gmbh/datapool-api) | [3.16](datana-gmbh/datapool-api/3.16) |
 | [datana-gmbh/doctrine-datetime-milliseconds-type](https://packagist.org/packages/datana-gmbh/doctrine-datetime-milliseconds-type) | [1.0](datana-gmbh/doctrine-datetime-milliseconds-type/1.0) |
 | [datana-gmbh/doctrine-postgres-milliseconds-platform](https://packagist.org/packages/datana-gmbh/doctrine-postgres-milliseconds-platform) | [1.0](datana-gmbh/doctrine-postgres-milliseconds-platform/1.0) |
 | [datana-gmbh/doctrine-postgres-public-schema-listener](https://packagist.org/packages/datana-gmbh/doctrine-postgres-public-schema-listener) | [1.0](datana-gmbh/doctrine-postgres-public-schema-listener/1.0) |

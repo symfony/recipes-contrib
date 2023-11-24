@@ -301,7 +301,8 @@
         ],
         "datana-gmbh/datapool-api": [
             "1.0",
-            "2.3"
+            "2.3",
+            "3.16"
         ],
         "datana-gmbh/doctrine-datetime-milliseconds-type": [
             "1.0"

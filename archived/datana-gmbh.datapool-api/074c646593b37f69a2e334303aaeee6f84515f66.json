@@ -1,0 +1,73 @@
+{
+    "manifests": {
+        "datana-gmbh/datapool-api": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "DATAPOOL_API_BASE_URI": "",
+                    "DATAPOOL_API_USERNAME": "",
+                    "DATAPOOL_API_PASSWORD": ""
+                }
+            },
+            "files": {
+                "config/packages/datana_datapool_api.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "",
+                        "    Datana\\Datapool\\Api\\DatapoolClient:",
+                        "        arguments:",
+                        "            - '%env(DATAPOOL_API_BASE_URI)%'",
+                        "            - '%env(DATAPOOL_API_USERNAME)%'",
+                        "            - '%env(DATAPOOL_API_PASSWORD)%'",
+                        "",
+                        "    Datana\\Datapool\\Api\\AktenApi: null",
+                        "    Datana\\Datapool\\Api\\AktenApiInterface: '@Datana\\Datapool\\Api\\AktenApi'",
+                        "",
+                        "    Datana\\Datapool\\Api\\AktenEventLogApi: null",
+                        "    Datana\\Datapool\\Api\\NullAktenEventLogApi: null",
+                        "",
+                        "    Datana\\Datapool\\Api\\AktenzeichenApi: null",
+                        "    Datana\\Datapool\\Api\\FakeAktenzeichenApi: null",
+                        "",
+                        "    Datana\\Datapool\\Api\\ChatProtocolApi: null",
+                        "    Datana\\Datapool\\Api\\NullChatProtocolApi: null",
+                        "",
+                        "    Datana\\Datapool\\Api\\SystemEventLogApi: null",
+                        "    Datana\\Datapool\\Api\\NullSystemEventLogApi: null",
+                        "",
+                        "    Datana\\Datapool\\Api\\KnowledgeToolsApi: null",
+                        "    Datana\\Datapool\\Api\\KnowledgeToolsApiInterface: '@Datana\\Datapool\\Api\\KnowledgeToolsApi'",
+                        "",
+                        "when@prod:",
+                        "    services:",
+                        "        Datana\\Datapool\\Api\\AktenEventLogApiInterface: '@Datana\\Datapool\\Api\\AktenEventLogApi'",
+                        "        Datana\\Datapool\\Api\\AktenzeichenApiInterface: '@Datana\\Datapool\\Api\\AktenzeichenApi'",
+                        "        Datana\\Datapool\\Api\\ChatProtocolApiInterface: '@Datana\\Datapool\\Api\\ChatProtocolApi'",
+                        "        Datana\\Datapool\\Api\\SystemEventLogApiInterface: '@Datana\\Datapool\\Api\\SystemEventLogApi'",
+                        "",
+                        "when@dev:",
+                        "    services:",
+                        "        Datana\\Datapool\\Api\\AktenEventLogApiInterface: '@Datana\\Datapool\\Api\\NullAktenEventLogApi'",
+                        "        Datana\\Datapool\\Api\\AktenzeichenApiInterface: '@Datana\\Datapool\\Api\\FakeAktenzeichenApi'",
+                        "        Datana\\Datapool\\Api\\ChatProtocolApiInterface: '@Datana\\Datapool\\Api\\NullChatProtocolApi'",
+                        "        Datana\\Datapool\\Api\\SystemEventLogApiInterface: '@Datana\\Datapool\\Api\\NullSystemEventLogApi'",
+                        "",
+                        "when@test:",
+                        "    services:",
+                        "        Datana\\Datapool\\Api\\AktenEventLogApiInterface: '@Datana\\Datapool\\Api\\NullAktenEventLogApi'",
+                        "        Datana\\Datapool\\Api\\AktenzeichenApiInterface: '@Datana\\Datapool\\Api\\FakeAktenzeichenApi'",
+                        "        Datana\\Datapool\\Api\\ChatProtocolApiInterface: '@Datana\\Datapool\\Api\\NullChatProtocolApi'",
+                        "        Datana\\Datapool\\Api\\SystemEventLogApiInterface: '@Datana\\Datapool\\Api\\NullSystemEventLogApi'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "074c646593b37f69a2e334303aaeee6f84515f66"
+        }
+    }
+}
