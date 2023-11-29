@@ -30,6 +30,6 @@ cycle:
 when@test:
     cycle:
         dbal:
-            databases:
-                default:
-                    prefix: '_test%env(default::TEST_TOKEN)%'
+            connections:
+                default_connection:
+                    dbname: 'test_%env(resolve:DB_NAME)%'
