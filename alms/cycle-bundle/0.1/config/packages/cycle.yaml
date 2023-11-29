@@ -28,7 +28,8 @@ cycle:
         directory: "%kernel.project_dir%/migrations"
 
 when@test:
-    dbal:
-    databases:
-        default:
-            prefix: '_test%env(default::TEST_TOKEN)%'
+    cycle:
+        dbal:
+            databases:
+                default:
+                    prefix: '_test%env(default::TEST_TOKEN)%'
