@@ -327,7 +327,8 @@
             "1.0"
         ],
         "datana-gmbh/logz-io-handler": [
-            "1.0"
+            "1.0",
+            "1.7"
         ],
         "datana-gmbh/sendgrid-dynamic-template-mailer": [
             "1.0"
