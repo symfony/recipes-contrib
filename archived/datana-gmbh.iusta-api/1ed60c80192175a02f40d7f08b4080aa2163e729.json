@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "datana-gmbh/iusta-api": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "IUSTA_API_BASE_URI": "",
+                    "IUSTA_API_TOKEN": ""
+                }
+            },
+            "files": {
+                "config/packages/datana_iusta_api.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "",
+                        "    Datana\\Iusta\\Api\\IustaClient:",
+                        "        arguments:",
+                        "            - '%env(IUSTA_API_BASE_URI)%'",
+                        "            - '%env(IUSTA_API_TOKEN)%'",
+                        "",
+                        "    Datana\\Iusta\\Api\\AktenApi: null",
+                        "    Datana\\Iusta\\Api\\AktenApiInterface: '@Datana\\Iusta\\Api\\AktenApi'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "1ed60c80192175a02f40d7f08b4080aa2163e729"
+        }
+    }
+}
