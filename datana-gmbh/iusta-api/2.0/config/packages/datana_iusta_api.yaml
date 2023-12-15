@@ -1,0 +1,11 @@
+services:
+    _defaults:
+        autowire: true
+
+    Datana\Iusta\Api\IustaClient:
+        arguments:
+            - '%env(IUSTA_API_BASE_URI)%'
+            - '%env(IUSTA_API_TOKEN)%'
+
+    Datana\Iusta\Api\AktenApi: null
+    Datana\Iusta\Api\AktenApiInterface: '@Datana\Iusta\Api\AktenApi'

@@ -1,0 +1,9 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "IUSTA_API_BASE_URI": "",
+        "IUSTA_API_TOKEN": ""
+    }
+}
