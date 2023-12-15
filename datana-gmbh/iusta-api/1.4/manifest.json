@@ -4,7 +4,6 @@
     },
     "env": {
         "IUSTA_API_BASE_URI": "",
-        "IUSTA_API_USERNAME": "",
-        "IUSTA_API_PASSWORD": ""
+        "IUSTA_API_TOKEN": ""
     }
 }
