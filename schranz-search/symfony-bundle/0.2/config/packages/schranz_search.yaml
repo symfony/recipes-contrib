@@ -1,0 +1,13 @@
+schranz_search:
+    schemas:
+        default:
+            dir: '%kernel.project_dir%/config/schemas'
+    engines:
+        default:
+            adapter: '%env(SEAL_DSN)%'
+when@test:
+    schranz_search:
+        engines:
+            default:
+                adapter: 'memory://'
+        index_name_prefix: test_
