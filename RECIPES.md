@@ -472,6 +472,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [rundum/event-base](https://packagist.org/packages/rundum/event-base) | [0.0](rundum/event-base/0.0) |
 | [ruwler/ruwler-sdk-bundle](https://packagist.org/packages/ruwler/ruwler-sdk-bundle) | [1.0](ruwler/ruwler-sdk-bundle/1.0) |
 | [scheb/two-factor-bundle](https://packagist.org/packages/scheb/two-factor-bundle) | [3.16](scheb/two-factor-bundle/3.16) |
+| [schranz-search/symfony-bundle](https://packagist.org/packages/schranz-search/symfony-bundle) | [0.2](schranz-search/symfony-bundle/0.2) |
 | [sebtm/inwx-api-bundle](https://packagist.org/packages/sebtm/inwx-api-bundle) | [1.0](sebtm/inwx-api-bundle/1.0) |
 | [secit-pl/imap-bundle](https://packagist.org/packages/secit-pl/imap-bundle) | [1.0](secit-pl/imap-bundle/1.0) |
 | [seferov/aws-bundle](https://packagist.org/packages/seferov/aws-bundle) | [3.0](seferov/aws-bundle/3.0) |

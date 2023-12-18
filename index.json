@@ -1487,6 +1487,9 @@
         "scheb/two-factor-bundle": [
             "3.16"
         ],
+        "schranz-search/symfony-bundle": [
+            "0.2"
+        ],
         "sebtm/inwx-api-bundle": [
             "0.1",
             "0.2",
