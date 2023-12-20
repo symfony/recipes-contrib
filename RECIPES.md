@@ -107,7 +107,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [datana-gmbh/fake-api-client](https://packagist.org/packages/datana-gmbh/fake-api-client) | [2.0](datana-gmbh/fake-api-client/2.0) |
 | [datana-gmbh/formulario-api](https://packagist.org/packages/datana-gmbh/formulario-api) | [1.0](datana-gmbh/formulario-api/1.0) |
 | [datana-gmbh/intercom-config](https://packagist.org/packages/datana-gmbh/intercom-config) | [1.1](datana-gmbh/intercom-config/1.1) |
-| [datana-gmbh/iusta-api](https://packagist.org/packages/datana-gmbh/iusta-api) | [2.0](datana-gmbh/iusta-api/2.0) |
+| [datana-gmbh/iusta-api](https://packagist.org/packages/datana-gmbh/iusta-api) | [3.0](datana-gmbh/iusta-api/3.0) |
 | [datana-gmbh/logz-io-handler](https://packagist.org/packages/datana-gmbh/logz-io-handler) | [1.7](datana-gmbh/logz-io-handler/1.7) |
 | [datana-gmbh/sendgrid-dynamic-template-mailer](https://packagist.org/packages/datana-gmbh/sendgrid-dynamic-template-mailer) | [1.0](datana-gmbh/sendgrid-dynamic-template-mailer/1.0) |
 | [datana-gmbh/url-shortener-api](https://packagist.org/packages/datana-gmbh/url-shortener-api) | [1.0](datana-gmbh/url-shortener-api/1.0) |

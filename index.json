@@ -325,7 +325,8 @@
         ],
         "datana-gmbh/iusta-api": [
             "1.0",
-            "2.0"
+            "2.0",
+            "3.0"
         ],
         "datana-gmbh/logz-io-handler": [
             "1.0",
