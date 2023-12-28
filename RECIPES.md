@@ -546,6 +546,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [synolia/sylius-mail-tester-plugin](https://packagist.org/packages/synolia/sylius-mail-tester-plugin) | [1.0](synolia/sylius-mail-tester-plugin/1.0) |
 | [synolia/sylius-scheduler-command-plugin](https://packagist.org/packages/synolia/sylius-scheduler-command-plugin) | [2.0](synolia/sylius-scheduler-command-plugin/2.0) |
 | [systemsdk/easy-log-bundle](https://packagist.org/packages/systemsdk/easy-log-bundle) | [1.10](systemsdk/easy-log-bundle/1.10) |
+| [tales-from-a-dev/flowbite-bundle](https://packagist.org/packages/tales-from-a-dev/flowbite-bundle) | [0.4](tales-from-a-dev/flowbite-bundle/0.4) |
 | [tales-from-a-dev/twig-tailwind-extra](https://packagist.org/packages/tales-from-a-dev/twig-tailwind-extra) | [0.2](tales-from-a-dev/twig-tailwind-extra/0.2) |
 | [tattali/calendar-bundle](https://packagist.org/packages/tattali/calendar-bundle) | [1.1](tattali/calendar-bundle/1.1) |
 | [tbbc/money-bundle](https://packagist.org/packages/tbbc/money-bundle) | [4.0](tbbc/money-bundle/4.0) |

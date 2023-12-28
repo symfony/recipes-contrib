@@ -1728,6 +1728,9 @@
         "systemsdk/easy-log-bundle": [
             "1.10"
         ],
+        "tales-from-a-dev/flowbite-bundle": [
+            "0.4"
+        ],
         "tales-from-a-dev/twig-tailwind-extra": [
             "0.2"
         ],

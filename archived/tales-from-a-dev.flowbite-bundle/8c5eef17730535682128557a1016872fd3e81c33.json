@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "tales-from-a-dev/flowbite-bundle": {
+            "manifest": {
+                "bundles": {
+                    "TalesFromADev\\FlowbiteBundle\\TalesFromADevFlowbiteBundle": [
+                        "all"
+                    ]
+                },
+                "add-lines": [
+                    {
+                        "file": "tailwind.config.js",
+                        "content": "    \"./vendor/tales-from-a-dev/flowbite-bundle/templates/**/*.html.twig\",",
+                        "position": "after_target",
+                        "target": "content: [",
+                        "warn_if_missing": true
+                    },
+                    {
+                        "file": "config/packages/twig.yaml",
+                        "content": "    form_themes:\n        - '@TalesFromADevFlowbite/form/default.html.twig'",
+                        "position": "after_target",
+                        "target": "default_path: '%kernel.project_dir%/templates'",
+                        "warn_if_missing": true,
+                        "requires": "symfony/twig-bundle"
+                    }
+                ]
+            },
+            "files": [],
+            "ref": "8c5eef17730535682128557a1016872fd3e81c33"
+        }
+    }
+}
