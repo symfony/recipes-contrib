@@ -1,5 +1,5 @@
 idempotency:
-  name: 'api'
-  methods: ['POST', 'PUT', 'PATCH']
-  scope: 'headers'
-  location: 'Header-Idempotency-Key'
+    name: 'api'
+    methods: ['POST', 'PUT', 'PATCH']
+    scope: 'headers'
+    location: 'Header-Idempotency-Key'
