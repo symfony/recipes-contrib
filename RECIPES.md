@@ -583,7 +583,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [web-auth/webauthn-symfony-bundle](https://packagist.org/packages/web-auth/webauthn-symfony-bundle) | [3.0](web-auth/webauthn-symfony-bundle/3.0) |
 | [webinarium/symfony-lazysec](https://packagist.org/packages/webinarium/symfony-lazysec) | [2.3](webinarium/symfony-lazysec/2.3) |
 | [webylum/puppeteer-server-client-bundle](https://packagist.org/packages/webylum/puppeteer-server-client-bundle) | [1.2](webylum/puppeteer-server-client-bundle/1.2) |
-| [wedrix/watchtower-bundle](https://packagist.org/packages/wedrix/watchtower-bundle) | [1.0](wedrix/watchtower-bundle/1.0) |
+| [wedrix/watchtower-bundle](https://packagist.org/packages/wedrix/watchtower-bundle) | [2.0](wedrix/watchtower-bundle/2.0) |
 | [weglot/translate-bundle](https://packagist.org/packages/weglot/translate-bundle) | [0.6](weglot/translate-bundle/0.6) |
 | [wemakecustom/doctrine-naming-strategy-bundle](https://packagist.org/packages/wemakecustom/doctrine-naming-strategy-bundle) | [1.0](wemakecustom/doctrine-naming-strategy-bundle/1.0) |
 | [wemxo/dynamic-form-bundle](https://packagist.org/packages/wemxo/dynamic-form-bundle) | [1.0](wemxo/dynamic-form-bundle/1.0) |
