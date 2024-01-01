@@ -243,6 +243,9 @@
         "comsave/salesforce-outbound-message-bundle": [
             "0.3"
         ],
+        "conejerock/idempotency-bundle": [
+            "1.0"
+        ],
         "connectholland/cookie-consent-bundle": [
             "0.4"
         ],

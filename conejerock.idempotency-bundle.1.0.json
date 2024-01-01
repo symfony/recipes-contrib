@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "conejerock/idempotency-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Conejerock\\IdempotencyBundle\\IdempotencyBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/idempotency.yaml": {
+                    "contents": [
+                        "idempotency:",
+                        "    name: 'app'",
+                        "    methods: ['POST', 'PUT', 'PATCH']",
+                        "    location: 'Header-Idempotency-Key'",
+                        "    scope: 'headers'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3b38aa5d91a127d4d8ba41a542b7713636c0e7b8"
+        }
+    }
+}

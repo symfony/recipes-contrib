@@ -82,6 +82,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [coka/wsse-authentication-bundle](https://packagist.org/packages/coka/wsse-authentication-bundle) | [1.0](coka/wsse-authentication-bundle/1.0) |
 | [commercetools/symfony-bundle](https://packagist.org/packages/commercetools/symfony-bundle) | [0.4](commercetools/symfony-bundle/0.4) |
 | [comsave/salesforce-outbound-message-bundle](https://packagist.org/packages/comsave/salesforce-outbound-message-bundle) | [0.3](comsave/salesforce-outbound-message-bundle/0.3) |
+| [conejerock/idempotency-bundle](https://packagist.org/packages/conejerock/idempotency-bundle) | [1.0](conejerock/idempotency-bundle/1.0) |
 | [connectholland/cookie-consent-bundle](https://packagist.org/packages/connectholland/cookie-consent-bundle) | [0.4](connectholland/cookie-consent-bundle/0.4) |
 | [connectholland/timechimp-bundle](https://packagist.org/packages/connectholland/timechimp-bundle) | [1.0](connectholland/timechimp-bundle/1.0) |
 | [connectholland/uptime-robot-bundle](https://packagist.org/packages/connectholland/uptime-robot-bundle) | [1.0](connectholland/uptime-robot-bundle/1.0) |
