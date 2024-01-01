@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "nelmio/solarium-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Nelmio\\SolariumBundle\\NelmioSolariumBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SOLR_HOST": "localhost",
+                    "SOLR_CORE": "example"
+                }
+            },
+            "files": {
+                "config/packages/nelmio_solarium.yaml": {
+                    "contents": [
+                        "nelmio_solarium:",
+                        "    endpoints:",
+                        "        default:",
+                        "            host: \"%env(SOLR_HOST)%\"",
+                        "            core: \"%env(SOLR_CORE)%\"",
+                        "            # The following are the default parameters for Solarium client:",
+                        "            # scheme: http",
+                        "            # port: 8983",
+                        "            # path: /solr",
+                        "    clients:",
+                        "        default:",
+                        "            endpoints: [default]",
+                        "            # You can customize the http timeout (in seconds) here. The default is 5sec.",
+                        "            # adapter_timeout: 5",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f5714ba6eab6c2399a1abc8209edef8a221a25b4"
+        }
+    }
+}

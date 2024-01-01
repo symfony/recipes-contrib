@@ -1180,7 +1180,8 @@
             "3.0"
         ],
         "nelmio/solarium-bundle": [
-            "2.4"
+            "2.4",
+            "5.0"
         ],
         "neo4j/neo4j-bundle": [
             "0.4"
