@@ -288,7 +288,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [league/tactician-bundle](https://packagist.org/packages/league/tactician-bundle) | [1.0](league/tactician-bundle/1.0) |
 | [leapt/core-bundle](https://packagist.org/packages/leapt/core-bundle) | [2.2](leapt/core-bundle/2.2) |
 | [leapt/froala-editor-bundle](https://packagist.org/packages/leapt/froala-editor-bundle) | [1.2](leapt/froala-editor-bundle/1.2) |
-| [leapt/im-bundle](https://packagist.org/packages/leapt/im-bundle) | [4.1](leapt/im-bundle/4.1) |
+| [leapt/im-bundle](https://packagist.org/packages/leapt/im-bundle) | [5.0](leapt/im-bundle/5.0) |
 | [leogout/seo-bundle](https://packagist.org/packages/leogout/seo-bundle) | [1.0](leogout/seo-bundle/1.0) |
 | [lepiaf/sapient-bundle](https://packagist.org/packages/lepiaf/sapient-bundle) | [0.1](lepiaf/sapient-bundle/0.1) |
 | [lexik/cron-file-generator-bundle](https://packagist.org/packages/lexik/cron-file-generator-bundle) | [1.0](lexik/cron-file-generator-bundle/1.0) |
