@@ -1,0 +1,5 @@
+idempotency:
+    name: 'app'
+    methods: ['POST', 'PUT', 'PATCH']
+    location: 'Header-Idempotency-Key'
+    scope: 'headers'
