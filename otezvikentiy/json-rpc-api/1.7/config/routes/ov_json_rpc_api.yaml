@@ -1,0 +1,2 @@
+ov_json_rpc_api:
+    resource: '@OVJsonRPCAPIBundle/config/routes/routes.yaml'
