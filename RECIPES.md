@@ -25,6 +25,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [anezi/locale-extension](https://packagist.org/packages/anezi/locale-extension) | [1.0](anezi/locale-extension/1.0) |
 | [antishov/doctrine-extensions-bundle](https://packagist.org/packages/antishov/doctrine-extensions-bundle) | [1.4](antishov/doctrine-extensions-bundle/1.4) |
 | [anyx/login-gate-bundle](https://packagist.org/packages/anyx/login-gate-bundle) | [1.0](anyx/login-gate-bundle/1.0) |
+| [arad021/entity-already-exists-validation-constraint](https://packagist.org/packages/arad021/entity-already-exists-validation-constraint) | [1.0](arad021/entity-already-exists-validation-constraint/1.0) |
 | [armin/scssphp-bundle](https://packagist.org/packages/armin/scssphp-bundle) | [1.0](armin/scssphp-bundle/1.0) |
 | [artox-lab/clarc-bundle](https://packagist.org/packages/artox-lab/clarc-bundle) | [0.1](artox-lab/clarc-bundle/0.1) |
 | [artox-lab/clarc-message-bus-bundle](https://packagist.org/packages/artox-lab/clarc-message-bus-bundle) | [1.0](artox-lab/clarc-message-bus-bundle/1.0) |

@@ -64,6 +64,9 @@
         "anyx/login-gate-bundle": [
             "1.0"
         ],
+        "arad021/entity-already-exists-validation-constraint": [
+            "1.0"
+        ],
         "armin/scssphp-bundle": [
             "1.0"
         ],

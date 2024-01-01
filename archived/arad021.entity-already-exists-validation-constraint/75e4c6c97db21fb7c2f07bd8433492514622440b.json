@@ -1,0 +1,25 @@
+{
+    "manifests": {
+        "arad021/entity-already-exists-validation-constraint": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/arad021_entity_already_exists_validator.yaml": {
+                    "contents": [
+                        "# See Readme at https://github.com/arad021/entity-already-exists-validation-constraint",
+                        "services:",
+                        "    Arad021\\Validator\\Constraint\\EntityNotExistValidator:",
+                        "        arguments: ['@doctrine.orm.entity_manager']",
+                        "        tags: [ 'validator.constraint_validator' ]",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "75e4c6c97db21fb7c2f07bd8433492514622440b"
+        }
+    }
+}
