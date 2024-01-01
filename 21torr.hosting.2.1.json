@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "21torr/hosting": {
+            "manifest": {
+                "bundles": {
+                    "Torr\\Hosting\\HostingBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "HOSTING_TIER": "development"
+                },
+                "gitignore": [
+                    "/.build-info.json"
+                ]
+            },
+            "files": {
+                "config/packages/hosting.yaml": {
+                    "contents": [
+                        "hosting:",
+                        "    tier: '%env(HOSTING_TIER)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "cc9fac2b32b1db240afab9621c18ffaf5b4b742f"
+        }
+    }
+}

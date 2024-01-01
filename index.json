@@ -1,6 +1,9 @@
 {
     "aliases": [],
     "recipes": {
+        "21torr/hosting": [
+            "2.1"
+        ],
         "abel/keycloak-bearer-only-adapter-bundle": [
             "1.0"
         ],
