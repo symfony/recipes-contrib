@@ -1,0 +1,58 @@
+{
+    "manifests": {
+        "otezvikentiy/json-rpc-api": {
+            "manifest": {
+                "bundles": {
+                    "OV\\JsonRPCAPIBundle\\OVJsonRPCAPIBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "composer-scripts": {
+                    "cache:clear": "symfony-cmd"
+                },
+                "env": {
+                    "OV_JSON_RPC_API_SWAGGER_PATH": "%PUBLIC_DIR%/openapi/",
+                    "OV_JSON_RPC_API_BASE_URL": "http://localhost",
+                    "OV_JSON_RPC_API_AUTH_TOKEN": ""
+                }
+            },
+            "files": {
+                "config/packages/ov_json_rpc_api.yaml": {
+                    "contents": [
+                        "ov_json_rpc_api:",
+                        "    swagger:",
+                        "        api_v1:",
+                        "            api_version: '1'",
+                        "            base_path: '%env(string:OV_JSON_RPC_API_BASE_URL)%'",
+                        "            auth_token_name: 'X-AUTH-TOKEN'",
+                        "            auth_token_test_value: '%env(string:OV_JSON_RPC_API_AUTH_TOKEN)%' #set blank for prod environment",
+                        "            info:",
+                        "                title: 'Some awesome api title here'",
+                        "                description: 'Some description about your api here would be appreciated if you like'",
+                        "                terms_of_service_url: 'https://terms_of_service_url.test/url'",
+                        "                contact:",
+                        "                    name: 'John Doe'",
+                        "                    url: 'https://john-doe.test'",
+                        "                    email: 'john.doe@john-doe.test'",
+                        "                license: 'MIT license'",
+                        "                licenseUrl: 'https://john-doe.test/mit-license'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/ov_json_rpc_api.yaml": {
+                    "contents": [
+                        "ov_json_rpc_api:",
+                        "    resource: '@OVJsonRPCAPIBundle/config/routes/routes.yaml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "4c4ec8c18a1d698fdc1490b81bb14267820f15ee"
+        }
+    }
+}

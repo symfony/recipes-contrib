@@ -1286,6 +1286,9 @@
         "oskarstark/symfony-http-responder": [
             "0.1"
         ],
+        "otezvikentiy/json-rpc-api": [
+            "1.7"
+        ],
         "otobul/epaybg-bundle": [
             "1.0"
         ],
