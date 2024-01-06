@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "datana-gmbh/iusta-api": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "IUSTA_API_BASE_URI": "",
+                    "IUSTA_API_TOKEN": ""
+                }
+            },
+            "files": {
+                "config/packages/datana_iusta_api.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "",
+                        "    Datana\\Iusta\\Api\\IustaClient:",
+                        "        arguments:",
+                        "            - '%env(IUSTA_API_BASE_URI)%'",
+                        "            - '%env(IUSTA_API_TOKEN)%'",
+                        "",
+                        "    Datana\\Iusta\\Api\\CaseApi: null",
+                        "    Datana\\Iusta\\Api\\CaseApiInterface: '@Datana\\Iusta\\Api\\CaseApi'",
+                        "",
+                        "    Datana\\Iusta\\Api\\DatasetApi: null",
+                        "    Datana\\Iusta\\Api\\DatasetApiInterface: '@Datana\\Iusta\\Api\\DatasetApi'",
+                        "",
+                        "    Datana\\Iusta\\Api\\ImportApi: null",
+                        "    Datana\\Iusta\\Api\\ImportApiInterface: '@Datana\\Iusta\\Api\\ImportApi'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "bb1a34893782c2548f4bc876d899a100840bb2c9"
+        }
+    }
+}
