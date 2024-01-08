@@ -127,7 +127,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [disjfa/translation-bundle](https://packagist.org/packages/disjfa/translation-bundle) | [0.1](disjfa/translation-bundle/0.1) |
 | [dobryprogramator/smartform-bundle](https://packagist.org/packages/dobryprogramator/smartform-bundle) | [1.0](dobryprogramator/smartform-bundle/1.0) |
 | [dockfony/dockfony](https://packagist.org/packages/dockfony/dockfony) | [5.0](dockfony/dockfony/5.0) |
-| [doctrine/mongodb-odm-bundle](https://packagist.org/packages/doctrine/mongodb-odm-bundle) | [4.4](doctrine/mongodb-odm-bundle/4.4) |
+| [doctrine/mongodb-odm-bundle](https://packagist.org/packages/doctrine/mongodb-odm-bundle) | [5.0](doctrine/mongodb-odm-bundle/5.0) |
 | [doctrine/phpcr-bundle](https://packagist.org/packages/doctrine/phpcr-bundle) | [2.0](doctrine/phpcr-bundle/2.0) |
 | [doctrine/phpcr-dbal-symfony-pack](https://packagist.org/packages/doctrine/phpcr-dbal-symfony-pack) | [1.0](doctrine/phpcr-dbal-symfony-pack/1.0) |
 | [drenso/symfony-oidc-bundle](https://packagist.org/packages/drenso/symfony-oidc-bundle) | [2.0](drenso/symfony-oidc-bundle/2.0) |

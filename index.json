@@ -391,7 +391,8 @@
         "doctrine/mongodb-odm-bundle": [
             "3.3",
             "4.1",
-            "4.4"
+            "4.4",
+            "5.0"
         ],
         "doctrine/phpcr-bundle": [
             "2.0"
