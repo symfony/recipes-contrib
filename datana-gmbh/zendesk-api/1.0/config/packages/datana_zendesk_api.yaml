@@ -23,5 +23,5 @@ when@dev:
 
 when@test:
     services:
-        Datana\Zammad\Api\TicketsApiInterface: '@Datana\Zendesk\Api\NullTicketsApi'
-        Datana\Zammad\Api\AttachmentsApiInterface: '@Datana\Zendesk\Api\NullAttachmentsApi'
+        Datana\Zendesk\Api\TicketsApiInterface: '@Datana\Zendesk\Api\NullTicketsApi'
+        Datana\Zendesk\Api\AttachmentsApiInterface: '@Datana\Zendesk\Api\NullAttachmentsApi'
