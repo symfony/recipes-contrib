@@ -1,0 +1,47 @@
+{
+    "manifests": {
+        "datana-gmbh/zendesk-api": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/datana_zendesk_api.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "",
+                        "    Datana\\Zendesk\\Api\\TicketsApi: null",
+                        "    Datana\\Zendesk\\Api\\NullTicketsApi: null",
+                        "    Datana\\Zendesk\\Api\\TicketsApiInterface: '@Datana\\Zendesk\\Api\\TicketsApi'",
+                        "",
+                        "    Datana\\Zendesk\\Api\\AttachmentsApi: null",
+                        "    Datana\\Zendesk\\Api\\NullAttachmentsApi: null",
+                        "    Datana\\Zendesk\\Api\\AttachmentsApiInterface: '@Datana\\Zendesk\\Api\\AttachmentsApi'",
+                        "",
+                        "",
+                        "when@prod:",
+                        "    services:",
+                        "        Datana\\Zendesk\\Api\\TicketsApiInterface: '@Datana\\Zendesk\\Api\\TicketsApi'",
+                        "        Datana\\Zendesk\\Api\\AttachmentsApiInterface: '@Datana\\Zendesk\\Api\\AttachmentsApi'",
+                        "",
+                        "when@dev:",
+                        "    services:",
+                        "        Datana\\Zendesk\\Api\\TicketsApiInterface: '@Datana\\Zendesk\\Api\\NullTicketsApi'",
+                        "        Datana\\Zendesk\\Api\\AttachmentsApiInterface: '@Datana\\Zendesk\\Api\\NullAttachmentsApi'",
+                        "",
+                        "when@test:",
+                        "    services:",
+                        "        Datana\\Zammad\\Api\\TicketsApiInterface: '@Datana\\Zendesk\\Api\\NullTicketsApi'",
+                        "        Datana\\Zammad\\Api\\AttachmentsApiInterface: '@Datana\\Zendesk\\Api\\NullAttachmentsApi'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8498c9895ae7bd22e7018b2be426469be113be2c"
+        }
+    }
+}

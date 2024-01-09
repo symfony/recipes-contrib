@@ -351,6 +351,9 @@
         "datana-gmbh/zammad-api": [
             "1.0"
         ],
+        "datana-gmbh/zendesk-api": [
+            "1.0"
+        ],
         "deamon/logger-extra-bundle": [
             "4.0"
         ],

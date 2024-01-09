@@ -115,6 +115,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [datana-gmbh/sendgrid-dynamic-template-mailer](https://packagist.org/packages/datana-gmbh/sendgrid-dynamic-template-mailer) | [1.0](datana-gmbh/sendgrid-dynamic-template-mailer/1.0) |
 | [datana-gmbh/url-shortener-api](https://packagist.org/packages/datana-gmbh/url-shortener-api) | [1.0](datana-gmbh/url-shortener-api/1.0) |
 | [datana-gmbh/zammad-api](https://packagist.org/packages/datana-gmbh/zammad-api) | [1.0](datana-gmbh/zammad-api/1.0) |
+| [datana-gmbh/zendesk-api](https://packagist.org/packages/datana-gmbh/zendesk-api) | [1.0](datana-gmbh/zendesk-api/1.0) |
 | [deamon/logger-extra-bundle](https://packagist.org/packages/deamon/logger-extra-bundle) | [4.0](deamon/logger-extra-bundle/4.0) |
 | [debril/rss-atom-bundle](https://packagist.org/packages/debril/rss-atom-bundle) | [4.0](debril/rss-atom-bundle/4.0) |
 | [defixit/anonlytics-bundle](https://packagist.org/packages/defixit/anonlytics-bundle) | [1.0](defixit/anonlytics-bundle/1.0) |
