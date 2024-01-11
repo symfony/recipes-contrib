@@ -5,7 +5,7 @@ when@prod:
         # automatic instrumentation (there might be some performance penalty)
         # https://docs.sentry.io/platforms/php/guides/symfony/performance/instrumentation/automatic-instrumentation/
         tracing:
-            enabled: true
+            enabled: false
 
 #        If you are using Monolog, you also need this additional configuration to log the errors correctly:
 #        https://docs.sentry.io/platforms/php/guides/symfony/#monolog-integration
