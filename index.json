@@ -758,6 +758,9 @@
         "jawira/case-converter-twig": [
             "0.0"
         ],
+        "jawira/doctrine-diagram-bundle": [
+            "0.7"
+        ],
         "jbtcd/fitbit-bundle": [
             "1.0"
         ],
