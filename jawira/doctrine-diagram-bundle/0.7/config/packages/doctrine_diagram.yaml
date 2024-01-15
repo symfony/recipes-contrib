@@ -1,0 +1,5 @@
+# https://github.com/jawira/doctrine-diagram-bundle
+doctrine_diagram:
+    size: midi
+    filename: database
+    format: svg
