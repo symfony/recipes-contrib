@@ -1,9 +1,9 @@
 qdrant_openai:
-  qdrant:
-    key: '%env(resolve:QDRANT_API_KEY)%'
-    endpoint: '%env(resolve:QDRANT_API_ENDPOINT)%'
-    port: '%env(int:QDRANT_API_PORT)%'
+    qdrant:
+        key: '%env(resolve:QDRANT_API_KEY)%'
+        endpoint: '%env(resolve:QDRANT_API_ENDPOINT)%'
+        port: '%env(int:QDRANT_API_PORT)%'
 
-  openai:
-    key: '%env(resolve:OPENAI_API_KEY)%'
-    organization: '%env(resolve:OPENAI_ORGANIZATION)%'
+    openai:
+        key: '%env(resolve:OPENAI_API_KEY)%'
+        organization: '%env(resolve:OPENAI_ORGANIZATION)%'
