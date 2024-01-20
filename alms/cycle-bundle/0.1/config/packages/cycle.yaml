@@ -4,7 +4,6 @@ cycle:
             default:
                 connection: default_connection
 
-
         connections:
             default_connection:
                 driver: mysql
