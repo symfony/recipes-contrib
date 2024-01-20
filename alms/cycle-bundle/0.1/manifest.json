@@ -1,0 +1,23 @@
+{
+    "bundles": {
+        "Alms\\Bundle\\CycleBundle\\CycleBundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "src/": "%SRC_DIR%/",
+        "migrations/": "migrations/"
+    },
+    "env": {
+        "DB_DRIVER": "mysql",
+        "DB_HOST": "localhost",
+        "DB_PORT": "3306",
+        "DB_NAME": "app",
+        "DB_USER": "root",
+        "DB_PASSWORD": "secret"
+    },
+    "post-install-output": [
+        "  * Modify your database config in <fg=green>.env</>"
+    ]
+}
