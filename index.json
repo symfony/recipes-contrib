@@ -209,7 +209,8 @@
             "0.3"
         ],
         "codeception/codeception": [
-            "2.3"
+            "2.3",
+            "5.0"
         ],
         "coka/api-bundle": [
             "3.0",

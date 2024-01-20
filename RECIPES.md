@@ -71,7 +71,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [cache/cache-bundle](https://packagist.org/packages/cache/cache-bundle) | [1.0](cache/cache-bundle/1.0) |
 | [ckrack/optimus-bundle](https://packagist.org/packages/ckrack/optimus-bundle) | [0.1](ckrack/optimus-bundle/0.1) |
 | [codebuds/mattermost-publication-bundle](https://packagist.org/packages/codebuds/mattermost-publication-bundle) | [0.3](codebuds/mattermost-publication-bundle/0.3) |
-| [codeception/codeception](https://packagist.org/packages/codeception/codeception) | [2.3](codeception/codeception/2.3) |
+| [codeception/codeception](https://packagist.org/packages/codeception/codeception) | [5.0](codeception/codeception/5.0) |
 | [coka/api-bundle](https://packagist.org/packages/coka/api-bundle) | [4.0](coka/api-bundle/4.0) |
 | [coka/cors-bundle](https://packagist.org/packages/coka/cors-bundle) | [1.0](coka/cors-bundle/1.0) |
 | [coka/doctrine-encrypt-bundle](https://packagist.org/packages/coka/doctrine-encrypt-bundle) | [1.0](coka/doctrine-encrypt-bundle/1.0) |
