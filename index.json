@@ -1924,6 +1924,9 @@
         "ywh/doctrine-encryption-bundle": [
             "1.0"
         ],
+        "zemasterkrom/zmkr-cloudflare-turnstile-bundle": [
+            "0.1"
+        ],
         "zendesk/zendesk_api_client_php": [
             "2.2"
         ],

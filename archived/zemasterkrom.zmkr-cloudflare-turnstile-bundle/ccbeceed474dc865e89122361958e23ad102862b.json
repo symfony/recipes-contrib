@@ -1,0 +1,45 @@
+{
+    "manifests": {
+        "zemasterkrom/zmkr-cloudflare-turnstile-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Zemasterkrom\\CloudflareTurnstileBundle\\ZmkrCloudflareTurnstileBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "CLOUDFLARE_TURNSTILE_SITEKEY": "1x00000000000000000000AA",
+                    "CLOUDFLARE_TURNSTILE_SECRET_KEY": "1x0000000000000000000000000000000AA"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>              </>",
+                    "<bg=blue;fg=white> Almost ready </>",
+                    "<bg=blue;fg=white>              </>",
+                    "",
+                    "  * <fg=blue>Configure</> the captcha initializer parameters:",
+                    "    1. Modify Cloudflare Turnstile keys in your .env file to use your application keys (<comment>CLOUDFLARE_TURNSTILE_SITEKEY</>, <comment>CLOUDFLARE_TURNSTILE_SECRET_KEY</>)",
+                    "    2. Associate a <comment>CloudflareTurnstileType</> in your form builder",
+                    "    3. Check that the submitted form is valid: captcha validation will be automatically triggered",
+                    "",
+                    "  * Read the documentation at <comment>https://github.com/Zemasterkrom/zmkr-cloudflare-turnstile-bundle</>"
+                ]
+            },
+            "files": {
+                "config/packages/zmkr_cloudflare_turnstile.yaml": {
+                    "contents": [
+                        "zmkr_cloudflare_turnstile:",
+                        "    captcha:",
+                        "        sitekey: \"%env(CLOUDFLARE_TURNSTILE_SITEKEY)%\"",
+                        "        secret_key: \"%env(CLOUDFLARE_TURNSTILE_SECRET_KEY)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ccbeceed474dc865e89122361958e23ad102862b"
+        }
+    }
+}
