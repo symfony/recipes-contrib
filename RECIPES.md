@@ -19,6 +19,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [alexgeno/phone-verification-bundle](https://packagist.org/packages/alexgeno/phone-verification-bundle) | [1.0](alexgeno/phone-verification-bundle/1.0) |
 | [algolia/algolia-search-bundle](https://packagist.org/packages/algolia/algolia-search-bundle) | [2.2](algolia/algolia-search-bundle/2.2) |
 | [algolia/search-bundle](https://packagist.org/packages/algolia/search-bundle) | [3.0](algolia/search-bundle/3.0) |
+| [alms/cycle-bundle](https://packagist.org/packages/alms/cycle-bundle) | [0.1](alms/cycle-bundle/0.1) |
 | [ambient-link/ability-sdk](https://packagist.org/packages/ambient-link/ability-sdk) | [1.0](ambient-link/ability-sdk/1.0) |
 | [andchir/omnipay-bundle](https://packagist.org/packages/andchir/omnipay-bundle) | [1.0](andchir/omnipay-bundle/1.0) |
 | [andchir/shopkeeper4-comments](https://packagist.org/packages/andchir/shopkeeper4-comments) | [1.0](andchir/shopkeeper4-comments/1.0) |

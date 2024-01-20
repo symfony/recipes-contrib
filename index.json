@@ -46,6 +46,9 @@
         "algolia/search-bundle": [
             "3.0"
         ],
+        "alms/cycle-bundle": [
+            "0.1"
+        ],
         "ambient-link/ability-sdk": [
             "1.0"
         ],

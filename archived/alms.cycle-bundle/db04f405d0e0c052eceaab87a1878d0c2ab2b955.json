@@ -1,0 +1,90 @@
+{
+    "manifests": {
+        "alms/cycle-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Alms\\Bundle\\CycleBundle\\CycleBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/",
+                    "migrations/": "migrations/"
+                },
+                "env": {
+                    "DB_DRIVER": "mysql",
+                    "DB_HOST": "localhost",
+                    "DB_PORT": "3306",
+                    "DB_NAME": "app",
+                    "DB_USER": "root",
+                    "DB_PASSWORD": "secret"
+                },
+                "post-install-output": [
+                    "  * Modify your database config in <fg=green>.env</>"
+                ]
+            },
+            "files": {
+                "config/packages/cycle.yaml": {
+                    "contents": [
+                        "cycle:",
+                        "    dbal:",
+                        "        databases:",
+                        "            default:",
+                        "                connection: default_connection",
+                        "",
+                        "        connections:",
+                        "            default_connection:",
+                        "                driver: mysql",
+                        "                host: '%env(resolve:DB_HOST)%'",
+                        "                port: '%env(int:DB_PORT)%'",
+                        "                dbname: '%env(resolve:DB_NAME)%'",
+                        "                user: '%env(resolve:DB_USER)%'",
+                        "                password: '%env(resolve:DB_PASSWORD)%'",
+                        "                charset: utf8",
+                        "",
+                        "    orm:",
+                        "        schema:",
+                        "            type: attribute",
+                        "            dir: \"%kernel.project_dir%/src/Entity\"",
+                        "        cache_dir: \"%kernel.cache_dir%/cycle\"",
+                        "        relation:",
+                        "            fk_create: false",
+                        "            index_create: false",
+                        "",
+                        "    migration:",
+                        "        directory: \"%kernel.project_dir%/migrations\"",
+                        "",
+                        "when@test:",
+                        "    cycle:",
+                        "        dbal:",
+                        "            connections:",
+                        "                default_connection:",
+                        "                    dbname: 'test_%env(resolve:DB_NAME)%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "migrations/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Repository/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "db04f405d0e0c052eceaab87a1878d0c2ab2b955"
+        }
+    }
+}
