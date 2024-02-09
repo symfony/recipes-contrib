@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "baskooijmaninc/suzie-bundle": {
+            "manifest": {
+                "bundles": {
+                    "KooijmanInc\\SuzieBundle": [
+                        "all"
+                    ]
+                },
+                "env": {
+                    "DB_HOST": "localhost",
+                    "DB_USER": "root",
+                    "DB_PASS": "root",
+                    "DB_PORT": "3306",
+                    "DB_NAME": "",
+                    "DB_CHARSET": "utf8mb4"
+                },
+                "files": {
+                    "config/packages/suzie.yaml": {
+                        "contents": [
+                            "suzie:",
+                            "   conneciton:",
+                            "       host: '%env(DB_HOST)%'",
+                            "       user: '%env(DB_USER)%'",
+                            "       pass: '%env(DB_PASS)%'",
+                            "       port: '%env(DB_PORT)%'",
+                            "       dbname: '%env(DB_NAME)%'",
+                            "       charset: '%env(DB_CHARSET)%'"
+                        ]
+                    },
+                    "suzie.yaml": {
+                        "contents": [
+                            "# This file is the entry point to configure Suzie.",
+                            "# Suzie is build to work with symfony, symfony settings are mandatory",
+                            "settings:",
+                            "   # default path for suzie models",
+                            "   path:",
+                            "       suzieDirectory: \"src/Suzie\"",
+                            "",
+                            "   # settings for databases",
+                            "   databases:",
+                            "       multiple: true  # using multiple databases. If true then all DataAccess files need the property database set with the database name"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
