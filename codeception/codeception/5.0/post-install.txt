@@ -1,9 +1,9 @@
-File codeception.yml created        <- Global configuration
-tests/Unit created                  <- Unit tests
+codeception.yml written             <- Global configuration
+tests/Unit/ created                 <- Unit tests
 tests/Unit.suite.yml written        <- Unit test suite configuration
-tests/Functional created            <- Functional tests
+tests/Functional/ created           <- Functional tests
 tests/Functional.suite.yml written  <- Functional test suite configuration
-tests/Acceptance created            <- Acceptance tests
+tests/Acceptance/ created           <- Acceptance tests
 tests/Acceptance.suite.yml written  <- Acceptance test suite configuration
 <info>Codeception is installed for acceptance, functional, and unit testing</>
 <options=bold>Next steps:</>
