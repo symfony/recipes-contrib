@@ -1,9 +1,9 @@
 o_auth2_azure:
-    clientId: "%env(AUTH_CLIEN_ID)%"
-    clientSecret: "%env(AUTH_CLIENT_PASS)%"
-    tenant: "%env(AUTH_TENANT)%"
-    redirectUri: "%env(AUTH_REDIRECT_URI)%"
+    clientId: '%env(AUTH_CLIEN_ID)%'
+    clientSecret: '%env(AUTH_CLIENT_PASS)%'
+    tenant: '%env(AUTH_TENANT)%'
+    redirectUri: '%env(AUTH_REDIRECT_URI)%'
 
     # Optional
-    redirectToUrl: "%env(bool:AUTH_REDIRECT_TO_URL)%" # Activate redirect after authentication
-    redirectUrl: "%env(AUTH_REDIRECT_URL)%" # URL to redirect after authentication
+    redirectToUrl: '%env(bool:AUTH_REDIRECT_TO_URL)%' # Activate redirect after authentication
+    redirectUrl: '%env(AUTH_REDIRECT_URL)%' # URL to redirect after authentication
