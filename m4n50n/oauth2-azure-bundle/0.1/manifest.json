@@ -1,0 +1,24 @@
+{
+    "bundles": {
+        "M4n50n\\OAuth2AzureBundle\\OAuth2AzureBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "composer-scripts": {
+        "cache:clear": "symfony-cmd"
+    },
+    "env": {
+        "AUTH_CLIEN_ID": "",
+        "AUTH_CLIENT_PASS": "",
+        "AUTH_TENANT": "",
+        "AUTH_REDIRECT_URI": "",
+        "AUTH_REDIRECT_TO_URL": false,
+        "AUTH_REDIRECT_URL": ""
+    },
+    "gitignore": [
+        ".env",
+        "/var/",
+        "/vendor/"
+    ]
+}
