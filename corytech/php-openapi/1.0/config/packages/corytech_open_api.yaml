@@ -1,0 +1,3 @@
+corytech_open_api:
+  handle_exceptions_on_path_prefixes:
+    - "/api/v1"
