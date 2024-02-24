@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "corytech/php-openapi": {
+            "manifest": {
+                "bundles": {
+                    "Corytech\\OpenApi\\CorytechOpenApiBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/corytech_open_api.yaml": {
+                    "contents": [
+                        "corytech_open_api:",
+                        "    handle_exceptions_on_path_prefixes:",
+                        "        - \"/api/v1\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "00eec2546ddd3de6bfeba8124d2487b95ecf8066"
+        }
+    }
+}

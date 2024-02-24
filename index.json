@@ -291,6 +291,9 @@
         "core23/shariff-bundle": [
             "3.0"
         ],
+        "corytech/php-openapi": [
+            "1.0"
+        ],
         "cpliakas/git-wrapper": [
             "3.0"
         ],
