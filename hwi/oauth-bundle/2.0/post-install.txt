@@ -1,0 +1,15 @@
+  * <fg=blue>Configure</> your application:
+    1. Add firewall by adding <comment>- main:
+                                             anonymous: true
+                                             oauth:
+                                                 resource_owners:
+                                                     my_github:     "/login/check-github"
+                                                 login_path:        /login
+                                                 use_forward:       false
+                                                 failure_path:      /login
+
+                                                 oauth_user_provider:
+                                                     service: hwi_oauth.user.provider
+</> in your security firewalls section.
+
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/hwi/HWIOAuthBundle/blob/master/docs/3-configuring_the_security_layer.md</>
