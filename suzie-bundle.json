@@ -19,7 +19,7 @@
                     "config/packages/suzie.yaml": {
                         "contents": [
                             "suzie:",
-                            "   conneciton:",
+                            "   connection:",
                             "       host: '%env(DB_HOST)%'",
                             "       user: '%env(DB_USER)%'",
                             "       pass: '%env(DB_PASS)%'",
