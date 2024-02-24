@@ -711,7 +711,8 @@
             "1.0"
         ],
         "hwi/oauth-bundle": [
-            "0.6"
+            "0.6",
+            "2.0"
         ],
         "idci/keycloak-security-bundle": [
             "1.0",
