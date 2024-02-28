@@ -15,7 +15,7 @@
                 "  profiles:",
                 "    - monitoring",
                 "  ports:",
-                "    - ${STATSD_EXPORTER_WEB_MACHINE_PORT:-9102}"
+                "    - ${STATSD_EXPORTER_WEB_MACHINE_PORT:-9102}:9102"
             ]
         }
     }
