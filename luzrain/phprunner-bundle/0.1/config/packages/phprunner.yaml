@@ -2,7 +2,7 @@ phprunner:
     servers:
         -
             name: Webserver
-            listen: http://0.0.0.0:80
+            listen: http://0.0.0.0:8080
             processes: 4
 
     reload_strategy:
