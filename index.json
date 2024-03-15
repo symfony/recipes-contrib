@@ -970,6 +970,9 @@
         "loophp/repository-monadic-helper": [
             "1.0"
         ],
+        "luzrain/phprunner-bundle": [
+            "0.1"
+        ],
         "luzrain/workerman-bundle": [
             "0.1"
         ],

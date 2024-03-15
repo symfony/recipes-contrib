@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "luzrain/phprunner-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Luzrain\\PhpRunnerBundle\\PhpRunnerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/phprunner.yaml": {
+                    "contents": [
+                        "phprunner:",
+                        "    servers:",
+                        "        -",
+                        "            name: Webserver",
+                        "            listen: http://0.0.0.0:8080",
+                        "            processes: 4",
+                        "",
+                        "    reload_strategy:",
+                        "        on_exception:",
+                        "            active: true",
+                        "        on_file_change:",
+                        "            active: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f2aa7a639caddac0a101948db5dd92d6f531f30d"
+        }
+    }
+}
