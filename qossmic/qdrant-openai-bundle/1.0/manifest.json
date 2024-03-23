@@ -1,0 +1,15 @@
+{
+    "bundles": {
+        "Qossmic\\QdrantOpenaiBundle\\QdrantOpenaiBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "QDRANT_API_KEY": "<your qdrant api key>",
+        "QDRANT_API_ENDPOINT": "<your qdrant cloud provider dsn>",
+        "QDRANT_API_PORT": "<your qdrant cloud provider port>",
+        "OPENAI_API_KEY": "<your openai api key>",
+        "OPENAI_ORGANIZATION": "<your openai organization>"
+    }
+}
