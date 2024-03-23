@@ -1,0 +1,6 @@
+  * <fg=blue>Configure</> your application:
+    1. Add firewall by adding <comment>- security:
+                                           access_control:
+                                             - { path: ^/log-viewer, roles: ROLE_ADMIN }
+
+</> in your security firewalls section.
