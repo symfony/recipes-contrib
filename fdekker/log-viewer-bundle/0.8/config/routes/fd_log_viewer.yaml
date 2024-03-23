@@ -1,4 +1,4 @@
 fd_symfony_log_viewer:
-  resource: .
-  type: fd_symfony_log_viewer
-  prefix: /log-viewer
+    resource: .
+    type: fd_symfony_log_viewer
+    prefix: /log-viewer
