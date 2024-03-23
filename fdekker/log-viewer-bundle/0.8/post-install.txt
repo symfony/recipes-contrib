@@ -1,5 +1,4 @@
   *. Update your firewall in <fg=green>config/security.yaml</> file, and add a section to the access_control:
-
 <comment>
 security:
     access_control:
