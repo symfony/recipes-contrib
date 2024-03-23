@@ -1,6 +1,7 @@
-  * <fg=blue>Configure</> your application:
-    1. Add firewall by adding <comment>- security:
-                                           access_control:
-                                             - { path: ^/log-viewer, roles: ROLE_ADMIN }
+  *. Update your firewall in <fg=green>config/security.yaml</> file, and add a section to the access_control:
 
-</> in your security firewalls section.
+<comment>
+security:
+    access_control:
+        - { path: ^/log-viewer, roles: ROLE_ADMIN }
+</>
