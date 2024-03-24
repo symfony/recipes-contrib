@@ -1,0 +1,2 @@
+numbernine:
+    resource: '@NumberNineBundle/config/routing.yaml'
