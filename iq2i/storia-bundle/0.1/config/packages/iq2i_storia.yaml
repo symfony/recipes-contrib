@@ -1,0 +1,2 @@
+iq2i_storia:
+    default_path: '%kernel.project_dir%/storia'
