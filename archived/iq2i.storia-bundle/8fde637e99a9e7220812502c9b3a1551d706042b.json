@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "iq2i/storia-bundle": {
+            "manifest": {
+                "bundles": {
+                    "IQ2i\\StoriaBundle\\IQ2iStoriaBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "storia/": "storia/"
+                }
+            },
+            "files": {
+                "config/packages/iq2i_storia.yaml": {
+                    "contents": [
+                        "iq2i_storia:",
+                        "    default_path: '%kernel.project_dir%/storia'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/iq2i_storia.yaml": {
+                    "contents": [
+                        "iq2i_storia:",
+                        "    resource: '@IQ2iStoriaBundle/config/routes.php'",
+                        "    prefix: '/storia'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "storia/components/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "storia/pages/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8fde637e99a9e7220812502c9b3a1551d706042b"
+        }
+    }
+}

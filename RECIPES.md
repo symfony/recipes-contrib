@@ -239,6 +239,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [insidestyles/json-rpc-bundle](https://packagist.org/packages/insidestyles/json-rpc-bundle) | [2.0](insidestyles/json-rpc-bundle/2.0) |
 | [insidestyles/swoole-bridge-bundle](https://packagist.org/packages/insidestyles/swoole-bridge-bundle) | [0.4](insidestyles/swoole-bridge-bundle/0.4) |
 | [inspector-apm/inspector-symfony](https://packagist.org/packages/inspector-apm/inspector-symfony) | [1.0](inspector-apm/inspector-symfony/1.0) |
+| [iq2i/storia-bundle](https://packagist.org/packages/iq2i/storia-bundle) | [0.1](iq2i/storia-bundle/0.1) |
 | [isaac/gazesymfonybundle](https://packagist.org/packages/isaac/gazesymfonybundle) | [0.1](isaac/gazesymfonybundle/0.1) |
 | [jacquesndl/mailer-bundle](https://packagist.org/packages/jacquesndl/mailer-bundle) | [1.0](jacquesndl/mailer-bundle/1.0) |
 | [jane-php/json-schema](https://packagist.org/packages/jane-php/json-schema) | [7.0](jane-php/json-schema/7.0) |

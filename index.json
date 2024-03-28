@@ -749,6 +749,9 @@
         "inspector-apm/inspector-symfony": [
             "1.0"
         ],
+        "iq2i/storia-bundle": [
+            "0.1"
+        ],
         "isaac/gazesymfonybundle": [
             "0.1"
         ],
