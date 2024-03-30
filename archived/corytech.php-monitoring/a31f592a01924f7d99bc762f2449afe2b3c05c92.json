@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "corytech/php-monitoring": {
+            "manifest": {
+                "bundles": {
+                    "Corytech\\Monitoring\\CorytechMonitoringBundle": [
+                        "all"
+                    ]
+                },
+                "env": {
+                    "STATSD_HOST": "statsd_exporter",
+                    "STATSD_PORT": "9125",
+                    "STATSD_NAMESPACE": ""
+                },
+                "docker-compose": {
+                    "docker-compose.yml": {
+                        "services": [
+                            "statsd_exporter:",
+                            "  image: prom/statsd-exporter:v0.26.0",
+                            "  profiles:",
+                            "    - monitoring",
+                            "  ports:",
+                            "    - ${STATSD_EXPORTER_WEB_MACHINE_PORT:-9102}:9102"
+                        ]
+                    }
+                }
+            },
+            "files": [],
+            "ref": "a31f592a01924f7d99bc762f2449afe2b3c05c92"
+        }
+    }
+}

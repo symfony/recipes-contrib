@@ -97,6 +97,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [core23/lastfm-bundle](https://packagist.org/packages/core23/lastfm-bundle) | [0.4](core23/lastfm-bundle/0.4) |
 | [core23/matomo-bundle](https://packagist.org/packages/core23/matomo-bundle) | [1.1](core23/matomo-bundle/1.1) |
 | [core23/shariff-bundle](https://packagist.org/packages/core23/shariff-bundle) | [3.0](core23/shariff-bundle/3.0) |
+| [corytech/php-monitoring](https://packagist.org/packages/corytech/php-monitoring) | [1.0](corytech/php-monitoring/1.0) |
 | [corytech/php-openapi](https://packagist.org/packages/corytech/php-openapi) | [1.0](corytech/php-openapi/1.0) |
 | [cpliakas/git-wrapper](https://packagist.org/packages/cpliakas/git-wrapper) | [3.0](cpliakas/git-wrapper/3.0) |
 | [crayner/authenticate-bundle](https://packagist.org/packages/crayner/authenticate-bundle) | [1.0](crayner/authenticate-bundle/1.0) |
