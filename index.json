@@ -950,7 +950,8 @@
             "1.8"
         ],
         "liip/monitor-bundle": [
-            "2.6"
+            "2.6",
+            "3.0"
         ],
         "lireincore/imgcache-bundle": [
             "0.1"

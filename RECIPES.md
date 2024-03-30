@@ -301,7 +301,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [lexik/cron-file-generator-bundle](https://packagist.org/packages/lexik/cron-file-generator-bundle) | [1.0](lexik/cron-file-generator-bundle/1.0) |
 | [lexik/maintenance-bundle](https://packagist.org/packages/lexik/maintenance-bundle) | [2.1](lexik/maintenance-bundle/2.1) |
 | [liip/imagine-bundle](https://packagist.org/packages/liip/imagine-bundle) | [1.8](liip/imagine-bundle/1.8) |
-| [liip/monitor-bundle](https://packagist.org/packages/liip/monitor-bundle) | [2.6](liip/monitor-bundle/2.6) |
+| [liip/monitor-bundle](https://packagist.org/packages/liip/monitor-bundle) | [3.0](liip/monitor-bundle/3.0) |
 | [lireincore/imgcache-bundle](https://packagist.org/packages/lireincore/imgcache-bundle) | [0.1](lireincore/imgcache-bundle/0.1) |
 | [liuggio/statsd-client-bundle](https://packagist.org/packages/liuggio/statsd-client-bundle) | [1.6](liuggio/statsd-client-bundle/1.6) |
 | [lolautruche/payline-bundle](https://packagist.org/packages/lolautruche/payline-bundle) | [2.0](lolautruche/payline-bundle/2.0) |

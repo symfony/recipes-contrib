@@ -1,0 +1,21 @@
+{
+    "manifests": {
+        "liip/monitor-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Liip\\Monitor\\LiipMonitorBundle": [
+                        "all"
+                    ]
+                },
+                "post-install-output": [
+                    "  <options=bold>Configure</> the bundle and routes:",
+                    "    1. You <options=bold>MUST</> verify the configuration in <comment>%CONFIG_DIR%/packages/monitor.yaml</>.",
+                    "    2. You <options=bold>MAY</> configure additional your checks and reporters, see the README.md for instructions.",
+                    "    3. You <options=bold>MAY</> configure the routes as specified in the README.md if you enable the controller."
+                ]
+            },
+            "files": [],
+            "ref": "c38820baed9dec9cab54517c47aa6844c5347d54"
+        }
+    }
+}
