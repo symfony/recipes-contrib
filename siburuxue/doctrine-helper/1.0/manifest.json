@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Doctrine\\Helper\\Bundle\\DoctrineHelperBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "Doctrine\\Helper\\": ""
+    }
+}
