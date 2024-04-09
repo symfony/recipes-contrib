@@ -1,0 +1,12 @@
+phpstreamserver:
+    servers:
+        -
+            name: Webserver
+            listen: http://0.0.0.0:8080
+            processes: 4
+
+    reload_strategy:
+        on_exception:
+            active: true
+        on_file_change:
+            active: true
