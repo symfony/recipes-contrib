@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Rompetomp\\InertiaBundle\\InertiaBundle::class": ["all"]
+        "Rompetomp\\InertiaBundle\\InertiaBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
