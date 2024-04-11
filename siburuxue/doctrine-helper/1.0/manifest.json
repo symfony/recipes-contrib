@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Doctrine\\Helper\\Bundle\\DoctrineHelperBundle": ["all"]
+    },
+    "copy-from-package": {
+        "Bundle/siburuxue-doctrine-helper.yaml": "config/packages/siburuxue-doctrine-helper.yaml"
+    }
+}
