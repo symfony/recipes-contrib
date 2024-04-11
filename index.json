@@ -980,6 +980,9 @@
         "luzrain/phprunner-bundle": [
             "0.1"
         ],
+        "luzrain/phpstreamserver-bundle": [
+            "0.2"
+        ],
         "luzrain/workerman-bundle": [
             "0.1"
         ],

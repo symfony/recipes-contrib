@@ -311,6 +311,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [loophp/psr17](https://packagist.org/packages/loophp/psr17) | [1.0](loophp/psr17/1.0) |
 | [loophp/repository-monadic-helper](https://packagist.org/packages/loophp/repository-monadic-helper) | [1.0](loophp/repository-monadic-helper/1.0) |
 | [luzrain/phprunner-bundle](https://packagist.org/packages/luzrain/phprunner-bundle) | [0.1](luzrain/phprunner-bundle/0.1) |
+| [luzrain/phpstreamserver-bundle](https://packagist.org/packages/luzrain/phpstreamserver-bundle) | [0.2](luzrain/phpstreamserver-bundle/0.2) |
 | [luzrain/workerman-bundle](https://packagist.org/packages/luzrain/workerman-bundle) | [0.1](luzrain/workerman-bundle/0.1) |
 | [m-adamski/symfony-mailer-bundle](https://packagist.org/packages/m-adamski/symfony-mailer-bundle) | [1.0](m-adamski/symfony-mailer-bundle/1.0) |
 | [m-adamski/symfony-schedule-bundle](https://packagist.org/packages/m-adamski/symfony-schedule-bundle) | [1.0](m-adamski/symfony-schedule-bundle/1.0) |
