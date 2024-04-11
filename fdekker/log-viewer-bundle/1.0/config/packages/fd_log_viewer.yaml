@@ -1,0 +1,14 @@
+# Read the documentation: https://github.com/frankdekker/symfony-log-viewer-bundle/blob/master/docs/configuration-reference.md
+
+fd_log_viewer:
+    log_files:
+        monolog:
+            type: monolog
+            name: Monolog
+            downloadable: false
+            deletable: false
+
+    hosts:
+        localhost:
+            name: Local
+            host: null
