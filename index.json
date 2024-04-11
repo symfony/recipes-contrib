@@ -1568,6 +1568,9 @@
         "shopware/app-bundle": [
             "1.0"
         ],
+        "siburuxue/doctrine-helper": [
+            "1.0"
+        ],
         "siganushka/generic-bundle": [
             "0.3"
         ],

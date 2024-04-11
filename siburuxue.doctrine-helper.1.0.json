@@ -1,0 +1,18 @@
+{
+    "manifests": {
+        "siburuxue/doctrine-helper": {
+            "manifest": {
+                "bundles": {
+                    "Doctrine\\Helper\\Bundle\\DoctrineHelperBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-package": {
+                    "Bundle/siburuxue-doctrine-helper.yaml": "config/packages/siburuxue-doctrine-helper.yaml"
+                }
+            },
+            "files": [],
+            "ref": "b5d5e097e1037ea03aa254078130a32e1ca2e066"
+        }
+    }
+}
