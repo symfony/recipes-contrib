@@ -1584,6 +1584,9 @@
         "simply-stream/twitch-api-bundle": [
             "0.1"
         ],
+        "skipthedragon/inertia-bundle": [
+            "1.0"
+        ],
         "slot/mandrill-bundle": [
             "1.1"
         ],

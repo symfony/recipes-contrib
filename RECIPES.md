@@ -499,6 +499,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [siganushka/region-bundle](https://packagist.org/packages/siganushka/region-bundle) | [0.1](siganushka/region-bundle/0.1) |
 | [silasjoisten/sonata-multiupload-bundle](https://packagist.org/packages/silasjoisten/sonata-multiupload-bundle) | [3.4](silasjoisten/sonata-multiupload-bundle/3.4) |
 | [simply-stream/twitch-api-bundle](https://packagist.org/packages/simply-stream/twitch-api-bundle) | [0.1](simply-stream/twitch-api-bundle/0.1) |
+| [skipthedragon/inertia-bundle](https://packagist.org/packages/skipthedragon/inertia-bundle) | [1.0](skipthedragon/inertia-bundle/1.0) |
 | [slot/mandrill-bundle](https://packagist.org/packages/slot/mandrill-bundle) | [1.1](slot/mandrill-bundle/1.1) |
 | [snc/redis-bundle](https://packagist.org/packages/snc/redis-bundle) | [2.0](snc/redis-bundle/2.0) |
 | [soljian/steam-authentication-bundle](https://packagist.org/packages/soljian/steam-authentication-bundle) | [1.0](soljian/steam-authentication-bundle/1.0) |
