@@ -1,0 +1,57 @@
+{
+    "manifests": {
+        "sentry/sentry-symfony": {
+            "manifest": {
+                "bundles": {
+                    "Sentry\\SentryBundle\\SentryBundle": [
+                        "prod"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SENTRY_DSN": ""
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<5.4",
+                    "symfony/monolog-bundle": "<3.7"
+                }
+            },
+            "files": {
+                "config/packages/sentry.yaml": {
+                    "contents": [
+                        "when@prod:",
+                        "    sentry:",
+                        "        dsn: '%env(SENTRY_DSN)%'",
+                        "        options:",
+                        "            ignore_exceptions:",
+                        "                - 'Symfony\\Component\\ErrorHandler\\Error\\FatalError'",
+                        "                - 'Symfony\\Component\\Debug\\Exception\\FatalErrorException'",
+                        "",
+                        "#        If you are using Monolog, you also need this additional configuration to log the errors correctly:",
+                        "#        https://docs.sentry.io/platforms/php/guides/symfony/#monolog-integration",
+                        "#        register_error_listener: false",
+                        "#        register_error_handler: false",
+                        "",
+                        "#    monolog:",
+                        "#        handlers:",
+                        "#            sentry:",
+                        "#                type: sentry",
+                        "#                level: !php/const Monolog\\Logger::ERROR",
+                        "#                hub_id: Sentry\\State\\HubInterface",
+                        "",
+                        "#    Uncomment these lines to register a log message processor that resolves PSR-3 placeholders",
+                        "#    https://docs.sentry.io/platforms/php/guides/symfony/#monolog-integration",
+                        "#    services:",
+                        "#        Monolog\\Processor\\PsrLogMessageProcessor:",
+                        "#            tags: { name: monolog.processor, handler: sentry }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "76afa07d23e76f678942f00af5a6a417ba0816d0"
+        }
+    }
+}

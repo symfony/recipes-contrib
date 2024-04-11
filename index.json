@@ -1550,7 +1550,8 @@
             "1.0",
             "3.0",
             "4.0",
-            "4.6"
+            "4.6",
+            "5.0"
         ],
         "setono/google-analytics-bundle": [
             "1.0"
@@ -1990,6 +1991,10 @@
                 "symfony/framework-bundle": "<5.4"
             },
             "4.6": {
+                "symfony/framework-bundle": "<5.4",
+                "symfony/monolog-bundle": "<3.7"
+            },
+            "5.0": {
                 "symfony/framework-bundle": "<5.4",
                 "symfony/monolog-bundle": "<3.7"
             }

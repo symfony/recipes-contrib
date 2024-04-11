@@ -488,7 +488,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [secit-pl/imap-bundle](https://packagist.org/packages/secit-pl/imap-bundle) | [1.0](secit-pl/imap-bundle/1.0) |
 | [seferov/aws-bundle](https://packagist.org/packages/seferov/aws-bundle) | [3.0](seferov/aws-bundle/3.0) |
 | [sensiolabs/connect-bundle](https://packagist.org/packages/sensiolabs/connect-bundle) | [4.0](sensiolabs/connect-bundle/4.0) |
-| [sentry/sentry-symfony](https://packagist.org/packages/sentry/sentry-symfony) | [4.6](sentry/sentry-symfony/4.6) |
+| [sentry/sentry-symfony](https://packagist.org/packages/sentry/sentry-symfony) | [5.0](sentry/sentry-symfony/5.0) |
 | [setono/google-analytics-bundle](https://packagist.org/packages/setono/google-analytics-bundle) | [1.0](setono/google-analytics-bundle/1.0) |
 | [sg/datatablesbundle](https://packagist.org/packages/sg/datatablesbundle) | [1.0](sg/datatablesbundle/1.0) |
 | [shopware/app-bundle](https://packagist.org/packages/shopware/app-bundle) | [1.0](shopware/app-bundle/1.0) |
