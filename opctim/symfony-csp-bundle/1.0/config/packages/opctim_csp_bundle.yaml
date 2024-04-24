@@ -1,5 +1,5 @@
 opctim_csp_bundle:
-    # See vendor/opctim/symfony-csp-bundle/README.md for more details.
+    # See https://github.com/opctim/symfony-csp-bundle/blob/main/README.md for more details.
     always_add: []
 
     # https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
