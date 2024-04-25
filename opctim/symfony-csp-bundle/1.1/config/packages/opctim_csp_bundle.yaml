@@ -6,6 +6,7 @@ opctim_csp_bundle:
     report:
         url: null
         route: null
+        routeParams: []
         chance: 100
 
     # https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
