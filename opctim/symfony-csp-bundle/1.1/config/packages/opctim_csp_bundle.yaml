@@ -4,8 +4,8 @@ opctim_csp_bundle:
 
     # See https://github.com/opctim/symfony-csp-bundle?tab=readme-ov-file#the-report-option
     report:
-        url: ~
-        route: ~
+        url: null
+        route: null
         chance: 100
 
     # https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
