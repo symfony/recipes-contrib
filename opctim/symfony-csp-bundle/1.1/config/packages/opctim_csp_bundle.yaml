@@ -11,7 +11,7 @@ opctim_csp_bundle:
 
     # https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
     # See https://github.com/opctim/symfony-csp-bundle?tab=readme-ov-file#configuration
-    directives: # &directives
+    directives:
         default-src:
             - "'self'"
             - 'data:'
@@ -34,5 +34,4 @@ when@dev:
         # always_add: []
 
         directives:
-            # <<: *directives
             # Add your directive overrides here
