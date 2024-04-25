@@ -1,8 +1,9 @@
 opctim_csp_bundle:
-    # See https://github.com/opctim/symfony-csp-bundle/blob/main/README.md for more details.
+    # See https://github.com/opctim/symfony-csp-bundle?tab=readme-ov-file#the-always_add-option
     always_add: []
 
     # https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
+    # See https://github.com/opctim/symfony-csp-bundle?tab=readme-ov-file#configuration
     directives: &directives
         default-src:
             - "'self'"
@@ -27,4 +28,4 @@ when@dev:
 
         directives:
             <<: *directives
-            # Add your overrides here
+            # Add your directive overrides here
