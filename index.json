@@ -1305,6 +1305,9 @@
         "onurb/doctrine-yuml-bundle": [
             "1.1"
         ],
+        "opctim/symfony-csp-bundle": [
+            "1.1"
+        ],
         "openai-php/symfony": [
             "0.3"
         ],
