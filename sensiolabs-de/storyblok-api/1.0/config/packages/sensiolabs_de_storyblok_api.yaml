@@ -1,0 +1,14 @@
+services:
+    _defaults:
+        autowire: true
+
+    SensioLabs\Storyblok\Api\StoryblokClient:
+        arguments:
+            - '%env(STORYBLOK_API_BASE_URI)%'
+            - '%env(STORYBLOK_API_TOKEN)%'
+
+    SensioLabs\Storyblok\Api\StoriesApi: null
+    SensioLabs\Storyblok\Api\StoriesApiInterface: '@Datana\Datapool\Api\StoriesApi'
+
+    SensioLabs\Storyblok\Api\LinksApi: null
+    SensioLabs\Storyblok\Api\LinksApiInterface: '@Datana\Datapool\Api\LinksApi'
