@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Softavis\\FlysystemCloudflareBundle\\FlysystemCloudflareBundle": ["all"]
+    },
+    "env": {
+        "CLOUDFLARE_ACCOUNT_ID": "",
+        "CLOUDFLARE_ACCOUNT_HASH": "",
+        "CLOUDFLARE_ACCESS_TOKEN": "",
+        "CLOUDFLARE_VARIANT_NAME": ""
+    }
+}
