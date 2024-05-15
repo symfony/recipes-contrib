@@ -575,6 +575,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [theplankmeister/form-data-transposer](https://packagist.org/packages/theplankmeister/form-data-transposer) | [1.0](theplankmeister/form-data-transposer/1.0) |
 | [tienvx/mbt-api-bundle](https://packagist.org/packages/tienvx/mbt-api-bundle) | [1.15](tienvx/mbt-api-bundle/1.15) |
 | [tienvx/mbt-bundle](https://packagist.org/packages/tienvx/mbt-bundle) | [1.17](tienvx/mbt-bundle/1.17) |
+| [tiime/tested-routes-checker-bundle](https://packagist.org/packages/tiime/tested-routes-checker-bundle) | [1.0](tiime/tested-routes-checker-bundle/1.0) |
 | [tilleuls/forgot-password-bundle](https://packagist.org/packages/tilleuls/forgot-password-bundle) | [1.0](tilleuls/forgot-password-bundle/1.0) |
 | [tilleuls/migration-bundle](https://packagist.org/packages/tilleuls/migration-bundle) | [1.1](tilleuls/migration-bundle/1.1) |
 | [tilleuls/sylius-quick-import-plugin](https://packagist.org/packages/tilleuls/sylius-quick-import-plugin) | [0.1](tilleuls/sylius-quick-import-plugin/0.1) |

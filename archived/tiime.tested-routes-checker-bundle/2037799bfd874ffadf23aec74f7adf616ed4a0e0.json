@@ -1,0 +1,16 @@
+{
+    "manifests": {
+        "tiime/tested-routes-checker-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Tiime\\TestedRoutesCheckerBundle\\TiimeTestedRoutesCheckerBundle": [
+                        "dev",
+                        "test"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "2037799bfd874ffadf23aec74f7adf616ed4a0e0"
+        }
+    }
+}
