@@ -1,0 +1,21 @@
+{
+    "manifests": {
+        "softavis/flysystem-cloudflare-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Softavis\\FlysystemCloudflareBundle\\FlysystemCloudflareBundle": [
+                        "all"
+                    ]
+                },
+                "env": {
+                    "CLOUDFLARE_ACCOUNT_ID": "",
+                    "CLOUDFLARE_ACCOUNT_HASH": "",
+                    "CLOUDFLARE_ACCESS_TOKEN": "",
+                    "CLOUDFLARE_VARIANT_NAME": ""
+                }
+            },
+            "files": [],
+            "ref": "246d68d6f5215d55f15ce631a116598e9e83e252"
+        }
+    }
+}

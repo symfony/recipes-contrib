@@ -503,6 +503,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [skipthedragon/inertia-bundle](https://packagist.org/packages/skipthedragon/inertia-bundle) | [1.0](skipthedragon/inertia-bundle/1.0) |
 | [slot/mandrill-bundle](https://packagist.org/packages/slot/mandrill-bundle) | [1.1](slot/mandrill-bundle/1.1) |
 | [snc/redis-bundle](https://packagist.org/packages/snc/redis-bundle) | [2.0](snc/redis-bundle/2.0) |
+| [softavis/flysystem-cloudflare-bundle](https://packagist.org/packages/softavis/flysystem-cloudflare-bundle) | [0.1](softavis/flysystem-cloudflare-bundle/0.1) |
 | [soljian/steam-authentication-bundle](https://packagist.org/packages/soljian/steam-authentication-bundle) | [1.0](soljian/steam-authentication-bundle/1.0) |
 | [solvrtech/symfony-logbook](https://packagist.org/packages/solvrtech/symfony-logbook) | [1.0](solvrtech/symfony-logbook/1.0) |
 | [sonata-project/admin-bundle](https://packagist.org/packages/sonata-project/admin-bundle) | [4.0](sonata-project/admin-bundle/4.0) |
