@@ -15,6 +15,9 @@ services:
 
     SensioLabs\Storyblok\Api\StoryblokClientInterface: '@SensioLabs\Storyblok\Api\StoryblokClient'
 
+    SensioLabs\Storyblok\Api\DatasourceApi: null
+    SensioLabs\Storyblok\Api\DatasourceApiInterface: '@SensioLabs\Storyblok\Api\DatasourceApi'
+
     SensioLabs\Storyblok\Api\StoriesApi: null
     SensioLabs\Storyblok\Api\StoriesApiInterface: '@SensioLabs\Storyblok\Api\StoriesApi'
 
