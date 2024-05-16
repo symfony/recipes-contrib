@@ -1,3 +1,9 @@
+framework:
+    http_client:
+        scoped_clients:
+            storyblok.client:
+                base_uri: '%env(STORYBLOK_API_BASE_URI)%'
+
 services:
     _defaults:
         autowire: true
@@ -7,8 +13,10 @@ services:
             - '%env(STORYBLOK_API_BASE_URI)%'
             - '%env(STORYBLOK_API_TOKEN)%'
 
+    SensioLabs\Storyblok\Api\StoryblokClientInterface: '@SensioLabs\Storyblok\Api\StoryblokClient'
+
     SensioLabs\Storyblok\Api\StoriesApi: null
     SensioLabs\Storyblok\Api\StoriesApiInterface: '@SensioLabs\Storyblok\Api\StoriesApi'
 
     SensioLabs\Storyblok\Api\LinksApi: null
-    SensioLabs\Storyblok\Api\LinksApiInterface: '@SensioLabs\Storyblok\Api\LinksApi'
+    SensioLabs\Storyblok\Api\LinksAipInterface: '@SensioLabs\Storyblok\Api\LinksApi'
