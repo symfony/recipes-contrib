@@ -1,0 +1,9 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "STORYBLOK_API_BASE_URI": "https://api.storyblok.com",
+        "STORYBLOK_API_TOKEN": ""
+    }
+}
