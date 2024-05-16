@@ -1,0 +1,46 @@
+{
+    "manifests": {
+        "sensiolabs-de/storyblok-api": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "STORYBLOK_API_BASE_URI": "https://api.storyblok.com",
+                    "STORYBLOK_API_TOKEN": ""
+                }
+            },
+            "files": {
+                "config/packages/sensiolabs_de_storyblok_api.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    http_client:",
+                        "        scoped_clients:",
+                        "            storyblok.client:",
+                        "                base_uri: '%env(STORYBLOK_API_BASE_URI)%'",
+                        "",
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "",
+                        "    SensioLabs\\Storyblok\\Api\\StoryblokClient:",
+                        "        arguments:",
+                        "            - '%env(STORYBLOK_API_BASE_URI)%'",
+                        "            - '%env(STORYBLOK_API_TOKEN)%'",
+                        "",
+                        "    SensioLabs\\Storyblok\\Api\\StoryblokClientInterface: '@SensioLabs\\Storyblok\\Api\\StoryblokClient'",
+                        "",
+                        "    SensioLabs\\Storyblok\\Api\\StoriesApi: null",
+                        "    SensioLabs\\Storyblok\\Api\\StoriesApiInterface: '@SensioLabs\\Storyblok\\Api\\StoriesApi'",
+                        "",
+                        "    SensioLabs\\Storyblok\\Api\\LinksApi: null",
+                        "    SensioLabs\\Storyblok\\Api\\LinksApiInterface: '@SensioLabs\\Storyblok\\Api\\LinksApi'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "77eb5c30e9a87f988eeccf2462f21c616d666c58"
+        }
+    }
+}

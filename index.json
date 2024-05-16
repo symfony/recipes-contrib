@@ -1553,6 +1553,9 @@
         "seferov/aws-bundle": [
             "3.0"
         ],
+        "sensiolabs-de/storyblok-api": [
+            "1.0"
+        ],
         "sensiolabs/connect-bundle": [
             "4.0"
         ],
