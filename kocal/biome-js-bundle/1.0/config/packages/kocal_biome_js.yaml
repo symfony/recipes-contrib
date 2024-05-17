@@ -1,0 +1,3 @@
+kocal_biome_js:
+    # Explicitly configure the version of Biome.js to use (https://github.com/biomejs/biome/tags), or null to use the latest version
+    binary_version: null

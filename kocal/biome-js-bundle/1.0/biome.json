@@ -1,0 +1,9 @@
+{
+    "files": {
+        "ignore": [
+            "assets/vendor/*",
+            "vendor/*",
+            "public/bundles/*"
+        ]
+    }
+}

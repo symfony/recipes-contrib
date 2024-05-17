@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Kocal\\BiomeJsBundle\\KocalBiomeJsBundle": ["dev"]
+    },
+    "copy-from-recipe": {
+        "biome.json": "biome.json",
+        "config/": "%CONFIG_DIR%/"
+    }
+}
