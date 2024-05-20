@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Endeavour\\GroeigidsApiClientBundle\\GroeigidsApiClientBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "GROEIGIDS_API_KEY": "your-groeigids-api-key"
+    }
+}

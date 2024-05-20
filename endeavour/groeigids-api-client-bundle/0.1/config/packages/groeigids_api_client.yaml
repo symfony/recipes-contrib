@@ -1,0 +1,2 @@
+groeigids_api_client:
+    api_key: '%env(GROEIGIDS_API_KEY)%'
