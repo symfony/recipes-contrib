@@ -850,6 +850,9 @@
         "knyk/mailbox-bundle": [
             "1.0"
         ],
+        "kocal/biome-js-bundle": [
+            "1.0"
+        ],
         "koff/i18n-form-bundle": [
             "4.0"
         ],
