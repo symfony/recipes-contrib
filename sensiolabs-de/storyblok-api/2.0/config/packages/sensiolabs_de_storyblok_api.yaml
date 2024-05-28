@@ -1,0 +1,25 @@
+services:
+    _defaults:
+        autowire: true
+
+    SensioLabs\Storyblok\Api\StoryblokClient:
+        arguments:
+            - '%env(STORYBLOK_API_BASE_URI)%'
+            - '%env(STORYBLOK_API_TOKEN)%'
+
+    SensioLabs\Storyblok\Api\StoryblokClientInterface: '@SensioLabs\Storyblok\Api\StoryblokClient'
+
+    SensioLabs\Storyblok\Api\DatasourceApi: null
+    SensioLabs\Storyblok\Api\DatasourceApiInterface: '@SensioLabs\Storyblok\Api\DatasourceApi'
+
+    SensioLabs\Storyblok\Api\DatasourceEntriesApi: null
+    SensioLabs\Storyblok\Api\DatasourceEntriesApiInterface: '@SensioLabs\Storyblok\Api\DatasourceEntriesApi'
+
+    SensioLabs\Storyblok\Api\StoriesApi: null
+    SensioLabs\Storyblok\Api\StoriesApiInterface: '@SensioLabs\Storyblok\Api\StoriesApi'
+
+    SensioLabs\Storyblok\Api\LinksApi: null
+    SensioLabs\Storyblok\Api\LinksApiInterface: '@SensioLabs\Storyblok\Api\LinksApi'
+
+    SensioLabs\Storyblok\Api\TagsApi: null
+    SensioLabs\Storyblok\Api\TagsApiInterface: '@SensioLabs\Storyblok\Api\TagsApi'
