@@ -491,7 +491,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sebtm/inwx-api-bundle](https://packagist.org/packages/sebtm/inwx-api-bundle) | [1.0](sebtm/inwx-api-bundle/1.0) |
 | [secit-pl/imap-bundle](https://packagist.org/packages/secit-pl/imap-bundle) | [1.0](secit-pl/imap-bundle/1.0) |
 | [seferov/aws-bundle](https://packagist.org/packages/seferov/aws-bundle) | [3.0](seferov/aws-bundle/3.0) |
-| [sensiolabs-de/storyblok-api](https://packagist.org/packages/sensiolabs-de/storyblok-api) | [1.0](sensiolabs-de/storyblok-api/1.0) |
+| [sensiolabs-de/storyblok-api](https://packagist.org/packages/sensiolabs-de/storyblok-api) | [2.0](sensiolabs-de/storyblok-api/2.0) |
 | [sensiolabs/connect-bundle](https://packagist.org/packages/sensiolabs/connect-bundle) | [4.0](sensiolabs/connect-bundle/4.0) |
 | [sentry/sentry-symfony](https://packagist.org/packages/sentry/sentry-symfony) | [5.0](sentry/sentry-symfony/5.0) |
 | [setono/google-analytics-bundle](https://packagist.org/packages/setono/google-analytics-bundle) | [1.0](setono/google-analytics-bundle/1.0) |

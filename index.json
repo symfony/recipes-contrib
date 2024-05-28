@@ -1557,7 +1557,8 @@
             "3.0"
         ],
         "sensiolabs-de/storyblok-api": [
-            "1.0"
+            "1.0",
+            "2.0"
         ],
         "sensiolabs/connect-bundle": [
             "4.0"
