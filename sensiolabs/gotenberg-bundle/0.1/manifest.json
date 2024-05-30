@@ -1,0 +1,25 @@
+{
+  "bundles": {
+    "Sensiolabs\\GotenbergBundle\\SensiolabsGotenbergBundle": ["all"]
+  },
+  "copy-from-recipe": {
+    "config/": "%CONFIG_DIR%/"
+  },
+  "env": {
+    "GOTENBERG_DSN": "http://localhost:3000"
+  },
+  "docker-compose": {
+    "compose.yaml": {
+      "services": [
+        "gotenberg:",
+        "  image: 'gotenberg/gotenberg:8'",
+        "  command:",
+        "    - 'gotenberg'",
+        "    - '--chromium-auto-start'",
+        "    - '--chromium-allow-insecure-localhost'",
+        "    - '--chromium-ignore-certificate-errors'",
+        "    - '--chromium-clear-cookies'"
+      ]
+    }
+  }
+}
