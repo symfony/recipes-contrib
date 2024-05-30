@@ -1,0 +1,5 @@
+tiriel_firestore_odm:
+    # Replace the following values by your own
+    project_name: my-project
+    # Can be an env var, a string to a file, or a yaml array with the values from the credentials file
+    service_account: '%kernel.project_dir%/config/secrets/my_project.json'
