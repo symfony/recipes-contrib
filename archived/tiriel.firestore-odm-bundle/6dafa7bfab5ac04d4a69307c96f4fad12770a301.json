@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "tiriel/firestore-odm-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Tiriel\\FirestoreOdmBundle\\FirestoreOdmBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/tiriel.yaml": {
+                    "contents": [
+                        "tiriel_firestore_odm:",
+                        "    # Replace the following values by your own",
+                        "    project_name: my-project",
+                        "    # Can be an env var, a string to a file, or a yaml array with the values from the credentials file",
+                        "    service_account: '%kernel.project_dir%/config/secrets/my_project.json'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6dafa7bfab5ac04d4a69307c96f4fad12770a301"
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "tiriel/firestore-security-bridge": {
+            "manifest": {
+                "bundles": {
+                    "Tiriel\\FirestoreSecurityBundle\\FirestoreSecurityBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/tiriel.yaml": {
+                    "contents": [
+                        "tiriel_firestore_security:",
+                        "    # Should be the id of a valid FirestoreDtoManager created for Tiriel/FirestoreOdmBundle, without the @",
+                        "    user_manager: 'my_manager_id'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0104978205310c228ef9cdfc9c1a320394f03dfb"
+        }
+    }
+}

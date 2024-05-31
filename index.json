@@ -1863,6 +1863,12 @@
             "4.2",
             "5.0"
         ],
+        "tiriel/firestore-odm-bundle": [
+            "0.2"
+        ],
+        "tiriel/firestore-security-bridge": [
+            "0.2"
+        ],
         "toiba/fullcalendar-bundle": [
             "6.2"
         ],
