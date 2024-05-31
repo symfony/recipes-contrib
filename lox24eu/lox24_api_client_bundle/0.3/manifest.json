@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "lox24\\bundle\\api_client\\LOX24Bundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/packages/"
+    },
+    "env": {
+        "LOX24_API_TOKEN": "FILL LOX24 API TOKEN HERE"
+    }
+}
