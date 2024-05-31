@@ -1,0 +1,5 @@
+lox24_api:
+  api:
+    token: '%env(LOX24_API_TOKEN)%'
+    http_client: '@psr18.http_client'
+    request_factory: '@nyholm.psr7.psr17_factory'
