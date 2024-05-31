@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "lox24eu/lox24_api_client_bundle": {
+            "manifest": {
+                "bundles": {
+                    "lox24\\bundle\\api_client\\LOX24Bundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/packages/"
+                },
+                "env": {
+                    "LOX24_API_TOKEN": "FILL LOX24 API TOKEN HERE"
+                }
+            },
+            "files": {
+                "config/lox24_api.yaml": {
+                    "contents": [
+                        "lox24:",
+                        "    api:",
+                        "        token: '%env(LOX24_API_TOKEN)%'",
+                        "        http_client: '@psr18.http_client'",
+                        "        request_factory: '@nyholm.psr7.psr17_factory'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b717e0c04568d678aef0638b9f333287c0e87803"
+        }
+    }
+}

@@ -983,6 +983,9 @@
         "loophp/repository-monadic-helper": [
             "1.0"
         ],
+        "lox24eu/lox24_api_client_bundle": [
+            "0.3"
+        ],
         "luzrain/phprunner-bundle": [
             "0.1"
         ],
