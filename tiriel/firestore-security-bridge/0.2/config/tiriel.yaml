@@ -1,0 +1,3 @@
+tiriel_firestore_security:
+    # Should be the id of a valid FirestoreDtoManager created for Tiriel/FirestoreOdmBundle, without the @
+    user_manager: 'my_manager_id'
