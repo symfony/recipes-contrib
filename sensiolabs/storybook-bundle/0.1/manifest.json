@@ -6,5 +6,8 @@
         "config/": "%CONFIG_DIR%/",
         "stories/": "stories/",
         "templates/": "templates/"
+    },
+    "conflict": {
+        "symfony/framework-bundle": "<7.0"
     }
 }
