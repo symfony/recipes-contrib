@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Tiriel\\FirestoreSecurityBundle\\FirestoreSecurityBundle": ["all"]
+        "Tiriel\\FirestoreSecurityBridge\\TirielFirestoreSecurityBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
