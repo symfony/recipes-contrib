@@ -1,4 +1,4 @@
-storybook: ~
+storybook: null
 
 when@dev:
     storybook:
