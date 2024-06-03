@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Tiriel\\FirestoreOdmBundle\\FirestoreOdmBundle": ["all"]
+        "Tiriel\\FirestoreOdmBundle\\TirielFirestoreOdmBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
