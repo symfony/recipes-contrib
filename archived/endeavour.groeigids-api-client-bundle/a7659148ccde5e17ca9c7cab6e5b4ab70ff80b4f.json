@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "endeavour/groeigids-api-client-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Endeavour\\GroeigidsApiClientBundle\\GroeigidsApiClientBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "GROEIGIDS_API_KEY": "your-groeigids-api-key"
+                }
+            },
+            "files": {
+                "config/packages/groeigids_api_client.yaml": {
+                    "contents": [
+                        "groeigids_api_client:",
+                        "    api_key: '%env(GROEIGIDS_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a7659148ccde5e17ca9c7cab6e5b4ab70ff80b4f"
+        }
+    }
+}

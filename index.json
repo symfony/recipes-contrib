@@ -487,6 +487,9 @@
         "emanuilnikolov/igdb-api-bundle": [
             "1.0"
         ],
+        "endeavour/groeigids-api-client-bundle": [
+            "0.1"
+        ],
         "enhavo/app-bundle": [
             "0.9"
         ],
