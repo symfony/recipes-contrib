@@ -11,6 +11,6 @@
         "templates/": "templates/"
     },
     "conflict": {
-        "symfony/framework-bundle": "<7.0"
+        "symfony/framework-bundle": "<6.4"
     }
 }
