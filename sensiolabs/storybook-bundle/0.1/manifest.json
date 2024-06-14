@@ -2,6 +2,9 @@
     "bundles": {
         "Storybook\\StorybookBundle": ["all"]
     },
+    "gitignore": [
+        "/node_modules"
+    ],
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/",
         "stories/": "stories/",
