@@ -1486,6 +1486,9 @@
         "qandidate/toggle-bundle": [
             "1.0"
         ],
+        "qossmic/deptrac": [
+            "2.0"
+        ],
         "qossmic/deptrac-shim": [
             "0.7",
             "0.19"

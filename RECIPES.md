@@ -469,6 +469,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [pugx/geo-form-bundle](https://packagist.org/packages/pugx/geo-form-bundle) | [0.2](pugx/geo-form-bundle/0.2) |
 | [pusher/pusher-php-server](https://packagist.org/packages/pusher/pusher-php-server) | [3.0](pusher/pusher-php-server/3.0) |
 | [qandidate/toggle-bundle](https://packagist.org/packages/qandidate/toggle-bundle) | [1.0](qandidate/toggle-bundle/1.0) |
+| [qossmic/deptrac](https://packagist.org/packages/qossmic/deptrac) | [2.0](qossmic/deptrac/2.0) |
 | [qossmic/deptrac-shim](https://packagist.org/packages/qossmic/deptrac-shim) | [0.19](qossmic/deptrac-shim/0.19) |
 | [ramsey/uuid-doctrine](https://packagist.org/packages/ramsey/uuid-doctrine) | [1.3](ramsey/uuid-doctrine/1.3) |
 | [ravenflux/php-functions](https://packagist.org/packages/ravenflux/php-functions) | [3.0](ravenflux/php-functions/3.0) |
