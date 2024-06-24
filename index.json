@@ -1572,6 +1572,9 @@
         "sensiolabs/connect-bundle": [
             "4.0"
         ],
+        "sensiolabs/gotenberg-bundle": [
+            "0.1"
+        ],
         "sentry/sentry-symfony": [
             "1.0",
             "3.0",

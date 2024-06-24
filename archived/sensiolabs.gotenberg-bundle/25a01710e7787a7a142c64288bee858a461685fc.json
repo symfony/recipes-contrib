@@ -1,0 +1,59 @@
+{
+    "manifests": {
+        "sensiolabs/gotenberg-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Sensiolabs\\GotenbergBundle\\SensiolabsGotenbergBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "GOTENBERG_DSN": "http://localhost:3000"
+                },
+                "docker-compose": {
+                    "compose.yaml": {
+                        "services": [
+                            "gotenberg:",
+                            "  image: 'gotenberg/gotenberg:8'"
+                        ]
+                    },
+                    "compose.override.yaml": {
+                        "services": [
+                            "gotenberg:",
+                            "  ports:",
+                            "    - \"3000\""
+                        ]
+                    }
+                },
+                "post-install-output": [
+                    "  * Do not forget to start the new <fg=green>Gotenberg</> container if enabled."
+                ]
+            },
+            "files": {
+                "config/packages/gotenberg.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    http_client:",
+                        "        scoped_clients:",
+                        "            gotenberg.client:",
+                        "                base_uri: '%env(GOTENBERG_DSN)%'",
+                        "",
+                        "sensiolabs_gotenberg:",
+                        "    http_client: 'gotenberg.client'",
+                        "#    default_options:",
+                        "#        pdf:",
+                        "#            html:",
+                        "#                metadata:",
+                        "#                    Keywords: 'Symfony'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "25a01710e7787a7a142c64288bee858a461685fc"
+        }
+    }
+}
