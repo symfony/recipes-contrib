@@ -1,2 +1,2 @@
 rayenbou_ticket:
-    resource: "@RayenbouTicketBundle/config/routing.yaml"
+    resource: "@RayenbouTicketBundle/Resources/config/routing.yaml"
