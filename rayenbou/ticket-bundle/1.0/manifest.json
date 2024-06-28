@@ -5,7 +5,6 @@
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%"
     },
-
     "env": {
         "RAYENBOU_TICKET_URL": "",
         "RAYENBOU_TICKET_USERNAME": "",
