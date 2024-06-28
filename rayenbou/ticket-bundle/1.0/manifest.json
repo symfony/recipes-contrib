@@ -1,0 +1,44 @@
+{
+  "manifests": {
+    "rayenbou/ticket-bundle": {
+      "aliases": ["rayenbou-ticket", "rayenbou-ticket-bundle"],
+      "manifest": {
+        "bundles": {
+          "RayenBou\\TicketBundle\\RayenbouTicketBundle": ["all"]
+        },
+        "copy-from-recipe": {
+          "config/": "%CONFIG_DIR%"
+        }
+      },
+      "env": {
+        "RAYENBOU_TICKET_URL": "",
+        "RAYENBOU_TICKET_USERNAME": "",
+        "RAYENBOU_TICKET_PASSWORD": ""
+      },
+      "files": {
+        "config/packages/rayenbou_ticket.yaml": {
+          "contents": [
+            "rayenbou_ticket:",
+            "  authentication:",
+            "    url: '%env(RAYENBOU_TICKET_URL)%'",
+            "    username: '%env(RAYENBOU_TICKET_USERNAME)%'",
+            "    password: '%env(RAYENBOU_TICKET_PASSWORD)%'",
+            "  settings:",
+            "    verify_peer: false",
+            ""
+          ],
+          "executable": false
+        },
+        "config/routes/rayenbou_ticket.yaml": {
+          "contents": [
+            "rayenbou_ticket:",
+            "    resource: \"@RayenbouTicketBundle/config/routing.yaml\"",
+            ""
+          ],
+          "executable": false
+        }
+      },
+      "ref": "63166e7e48c23fc86168899cbf183144c5829a22"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+rayen_bou_ticket:
+  authentication:
+    url: '%env(RAYENBOU_TICKET_URL)%'
+    username: '%env(RAYENBOU_TICKET_USERNAME)%'
+    password: '%env(RAYENBOU_TICKET_PASSWORD)%'
+  settings:
+    verify_peer: false
