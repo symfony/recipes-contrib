@@ -1,4 +1,4 @@
-rayen_bou_ticket:
+rayenbou_ticket:
     authentication:
         url: "%env(RAYENBOU_TICKET_URL)%"
         username: "%env(RAYENBOU_TICKET_USERNAME)%"
