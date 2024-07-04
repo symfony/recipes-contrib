@@ -5,3 +5,4 @@ kaya_oauth2:
         client_realm_client_id: '%env(IDP_CLIENT_REALM_CLIENT_ID)%'
         admin_realm_client_id: '%env(IDP_ADMIN_REALM_CLIENT_ID)%'
         admin_realm_client_secret: '%env(IDP_ADMIN_REALM_CLIENT_SECRET)%'
+        
