@@ -7,7 +7,9 @@
         "IDP_ADMIN_REALM_CLIENT_SECRET": "<your-admin-client-secret>"
     },
     "bundles": {
-        "Nerd4ever\\Kaya\\OAuth2\\KayaOAuth2Bundle": ["all"]
+        "Nerd4ever\\Kaya\\OAuth2\\KayaOAuth2Bundle": [
+            "all"
+        ]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
