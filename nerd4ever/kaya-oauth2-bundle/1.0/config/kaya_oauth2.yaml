@@ -1,7 +1,18 @@
 kaya_oauth2:
     idp:
+        # O endpoint base do servidor IDP (Identity Provider)
         realm_endpoint: "%env(IDP_REALM_ENDPOINT)%"
+        # O nome do Realm no IDP
         admin_realm_endpoint: "%env(IDP_ADMIN_REALM_ENDPOINT)%"
+        # O ID do cliente para a interface de usuário, usado quando existe um client ID diferente
         client_realm_client_id: "%env(IDP_CLIENT_REALM_CLIENT_ID)%"
+        # O ID do cliente usado para manipular contas de usuários e grupos
         admin_realm_client_id: "%env(IDP_ADMIN_REALM_CLIENT_ID)%"
+        # O segredo do cliente usado para manipular contas de usuários e grupos
         admin_realm_client_secret: "%env(IDP_ADMIN_REALM_CLIENT_SECRET)%"
+        # Política de criação de contas:
+        # always - sempre atualiza a conta local
+        # never - nunca cria a conta local, apenas autoriza o usuário
+        # once - cria a conta apenas na primeira vez, não atualiza nas próximas vezes
+        # Valores possíveis: always, never, once
+        account_creation_policy: always
