@@ -15,4 +15,4 @@ kaya_oauth2:
         # never - nunca cria a conta local, apenas autoriza o usuário
         # once - cria a conta apenas na primeira vez, não atualiza nas próximas vezes
         # Valores possíveis: always, never, once
-        account_creation_policy: always
+        account_creation_policy: once
