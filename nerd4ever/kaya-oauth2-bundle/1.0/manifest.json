@@ -1,0 +1,19 @@
+{
+    "env": {
+        "IDP_REALM_ENDPOINT": "https://<your-idp-openid-connect-endpoint>",
+        "IDP_ADMIN_REALM_ENDPOINT": "<your-realm>",
+        "IDP_CLIENT_REALM_CLIENT_ID": "<your-client-id>",
+        "IDP_ADMIN_REALM_CLIENT_ID": "<your-admin-client-id>",
+        "IDP_ADMIN_REALM_CLIENT_SECRET": "<your-admin-client-secret>"
+    },
+    "bundles": {
+        "Nerd4ever\\Kaya\\OAuth2\\KayaOAuth2Bundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "aliases": [
+        "kaya-oauth2-bundle",
+        "kaya-oauth2-bundle-recipe"
+    ]
+}
