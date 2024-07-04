@@ -13,9 +13,5 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
-    },
-    "aliases": [
-        "kaya-oauth2-bundle",
-        "kaya-oauth2-bundle-recipe"
-    ]
+    }
 }
