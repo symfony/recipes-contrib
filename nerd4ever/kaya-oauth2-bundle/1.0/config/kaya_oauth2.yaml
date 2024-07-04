@@ -1,8 +1,7 @@
 kaya_oauth2:
     idp:
-        realm_endpoint: '%env(IDP_REALM_ENDPOINT)%'
-        admin_realm_endpoint: '%env(IDP_ADMIN_REALM_ENDPOINT)%'
-        client_realm_client_id: '%env(IDP_CLIENT_REALM_CLIENT_ID)%'
-        admin_realm_client_id: '%env(IDP_ADMIN_REALM_CLIENT_ID)%'
-        admin_realm_client_secret: '%env(IDP_ADMIN_REALM_CLIENT_SECRET)%'
-        
+        realm_endpoint: "%env(IDP_REALM_ENDPOINT)%"
+        admin_realm_endpoint: "%env(IDP_ADMIN_REALM_ENDPOINT)%"
+        client_realm_client_id: "%env(IDP_CLIENT_REALM_CLIENT_ID)%"
+        admin_realm_client_id: "%env(IDP_ADMIN_REALM_CLIENT_ID)%"
+        admin_realm_client_secret: "%env(IDP_ADMIN_REALM_CLIENT_SECRET)%"
