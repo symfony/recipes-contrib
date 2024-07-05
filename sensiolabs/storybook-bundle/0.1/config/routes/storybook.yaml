@@ -1,0 +1,2 @@
+storybook:
+    resource: '@StorybookBundle/config/routes.php'

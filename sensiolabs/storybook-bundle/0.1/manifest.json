@@ -1,0 +1,16 @@
+{
+    "bundles": {
+        "Storybook\\StorybookBundle": ["all"]
+    },
+    "gitignore": [
+        "/node_modules"
+    ],
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "stories/": "stories/",
+        "templates/": "templates/"
+    },
+    "conflict": {
+        "symfony/framework-bundle": "<6.4"
+    }
+}
