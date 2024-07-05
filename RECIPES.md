@@ -497,6 +497,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sensiolabs-de/storyblok-api](https://packagist.org/packages/sensiolabs-de/storyblok-api) | [2.0](sensiolabs-de/storyblok-api/2.0) |
 | [sensiolabs/connect-bundle](https://packagist.org/packages/sensiolabs/connect-bundle) | [4.0](sensiolabs/connect-bundle/4.0) |
 | [sensiolabs/gotenberg-bundle](https://packagist.org/packages/sensiolabs/gotenberg-bundle) | [0.1](sensiolabs/gotenberg-bundle/0.1) |
+| [sensiolabs/storybook-bundle](https://packagist.org/packages/sensiolabs/storybook-bundle) | [0.1](sensiolabs/storybook-bundle/0.1) |
 | [sentry/sentry-symfony](https://packagist.org/packages/sentry/sentry-symfony) | [5.0](sentry/sentry-symfony/5.0) |
 | [setono/google-analytics-bundle](https://packagist.org/packages/setono/google-analytics-bundle) | [1.0](setono/google-analytics-bundle/1.0) |
 | [sg/datatablesbundle](https://packagist.org/packages/sg/datatablesbundle) | [1.0](sg/datatablesbundle/1.0) |

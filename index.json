@@ -1575,6 +1575,9 @@
         "sensiolabs/gotenberg-bundle": [
             "0.1"
         ],
+        "sensiolabs/storybook-bundle": [
+            "0.1"
+        ],
         "sentry/sentry-symfony": [
             "1.0",
             "3.0",
@@ -2031,6 +2034,11 @@
             },
             "7.0": {
                 "symfony/symfony": "<5.0"
+            }
+        },
+        "sensiolabs/storybook-bundle": {
+            "0.1": {
+                "symfony/framework-bundle": "<6.4"
             }
         },
         "sentry/sentry-symfony": {

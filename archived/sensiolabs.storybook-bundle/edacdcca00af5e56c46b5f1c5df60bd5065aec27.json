@@ -1,0 +1,93 @@
+{
+    "manifests": {
+        "sensiolabs/storybook-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Storybook\\StorybookBundle": [
+                        "all"
+                    ]
+                },
+                "gitignore": [
+                    "/node_modules"
+                ],
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "stories/": "stories/",
+                    "templates/": "templates/"
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<6.4"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>              </>",
+                    "<bg=blue;fg=white> What's next? </>",
+                    "<bg=blue;fg=white>              </>",
+                    "",
+                    "  * <fg=blue>Run</> your application:",
+                    "    1. Initialize Storybook in your project: <comment>bin/console storybook:init</> command;",
+                    "       - This will create basic configuration files and add required dependencies to your package.json.",
+                    "    2. Follow the instructions provided by the storybook:init command"
+                ]
+            },
+            "files": {
+                "config/packages/storybook.yaml": {
+                    "contents": [
+                        "when@dev:",
+                        "    storybook:",
+                        "        sandbox:",
+                        "            allowedFunctions:",
+                        "                - 'dump'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/storybook.yaml": {
+                    "contents": [
+                        "storybook:",
+                        "    resource: '@StorybookBundle/config/routes.php'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "stories/Components.stories.js": {
+                    "contents": [
+                        "import {twig} from \"@sensiolabs/storybook-symfony-webpack5\";",
+                        "",
+                        "export default {",
+                        "    component: twig`",
+                        "        <div>Hello {{ name }}!</div>",
+                        "    `,",
+                        "    args: {",
+                        "        name: 'World'",
+                        "    }",
+                        "}",
+                        "",
+                        "export const Default = {};",
+                        "",
+                        "export const John = {",
+                        "    args: {",
+                        "        name: 'John'",
+                        "    }",
+                        "};",
+                        "",
+                        "export const Jane = {",
+                        "    args: {",
+                        "        name: 'Jane'",
+                        "    }",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "templates/bundles/StorybookBundle/Preview.html.twig": {
+                    "contents": [
+                        "{% extends '@!Storybook/preview.html.twig' %}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "edacdcca00af5e56c46b5f1c5df60bd5065aec27"
+        }
+    }
+}
