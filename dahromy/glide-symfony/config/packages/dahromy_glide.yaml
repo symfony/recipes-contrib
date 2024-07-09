@@ -2,5 +2,4 @@ dahromy_glide:
     source: '%kernel.project_dir%/public/uploads'
     cache: '%kernel.project_dir%/var/cache/glide'
     signature_key: '%env(GLIDE_SIGNATURE_KEY)%'
-    driver: 'gd'
-    base_url: '/images/'
+    # Add other default configuration options as needed
