@@ -1,5 +1,5 @@
 services:
-    Softspring\\Component\\DoctrineMigrationsVersionComparator\\VersionNumberComparator: ~
+    Softspring\\Component\\DoctrineMigrationsVersionComparator\\VersionNumberComparator: null
 
 doctrine_migrations:
     services:
