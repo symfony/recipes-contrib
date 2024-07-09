@@ -3,3 +3,4 @@ dahromy_glide:
     cache: '%kernel.project_dir%/var/cache/glide'
     signature_key: '%env(GLIDE_SIGNATURE_KEY)%'
     driver: 'gd'
+    base_url: '/images/'
