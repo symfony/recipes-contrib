@@ -3,4 +3,5 @@ services:
 
 doctrine_migrations:
     services:
+        # configure the version comparator service
         'Doctrine\\Migrations\\Version\\Comparator': 'Softspring\\Component\\DoctrineMigrationsVersionComparator\\VersionNumberComparator'
