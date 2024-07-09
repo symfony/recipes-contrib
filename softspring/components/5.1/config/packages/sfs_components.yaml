@@ -1,0 +1,3 @@
+twig:
+    globals:
+        sfs_components_theme: 'bootstrap5'
