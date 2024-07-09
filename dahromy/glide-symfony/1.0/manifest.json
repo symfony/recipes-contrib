@@ -1,4 +1,7 @@
 {
+    "conflict": {
+        "php": "<8.0"
+    },
     "bundles": {
         "DahRomy\\Glide\\DahRomyGlideBundle": ["all"]
     },
