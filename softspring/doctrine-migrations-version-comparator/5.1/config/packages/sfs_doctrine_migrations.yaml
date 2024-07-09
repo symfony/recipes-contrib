@@ -1,0 +1,6 @@
+services:
+    Softspring\\Component\\DoctrineMigrationsVersionComparator\\VersionNumberComparator: ~
+
+doctrine_migrations:
+    services:
+        'Doctrine\\Migrations\\Version\\Comparator': 'Softspring\\Component\\DoctrineMigrationsVersionComparator\\VersionNumberComparator'
