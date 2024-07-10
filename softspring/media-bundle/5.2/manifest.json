@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Softspring\\MediaBundle\\SfsMediaBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "config/"
+    }
+}
