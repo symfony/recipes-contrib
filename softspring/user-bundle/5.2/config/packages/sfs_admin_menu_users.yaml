@@ -1,0 +1,30 @@
+twig:
+    globals:
+        admin_menu:
+            users:
+                translation_key: 'sidebar.menu.users.title'
+                users:
+                    translation_key: 'sidebar.menu.users.users'
+                    route: 'sfs_user_admin_users_list'
+                    role: PERMISSION_SFS_USER_ADMIN_USERS_LIST
+                    active_expression: 'sfs_user_admin_users_'
+                    icon: 'bi bi-people'
+                administrators:
+                    translation_key: 'sidebar.menu.users.administrators'
+                    route: 'sfs_user_admin_administrators_list'
+                    role: PERMISSION_SFS_USER_ADMIN_ADMINISTRATORS_LIST
+                    active_expression: 'sfs_user_admin_administrators_'
+                    icon: 'bi bi-people-fill'
+#                history:
+#                    translation_key: 'sidebar.menu.users.access_history'
+#                    route: 'sfs_user_admin_access_history_list'
+#                    role: ROLE_ADMIN_ACCESS_HISTORY_LIST
+#                    active_expression: 'sfs_user_admin_access_history_'
+#                    icon: 'bi bi-person-lines-fill'
+#                invitations:
+#                    translation_key: 'sidebar.menu.users.invitations'
+#                    route: 'sfs_user_admin_invitations_list'
+#                    role: ROLE_ADMIN_INVITATIONS_LIST
+#                    active_expression: 'sfs_user_admin_invitations_'
+#                    icon: 'bi bi-person-plus'
+
