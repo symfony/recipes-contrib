@@ -1,9 +1,0 @@
-{
-    "bundles": {
-        "Softspring\\Component\\Components\\SfsComponentsBundle": ["all"]
-    },
-    "copy-from-recipe": {
-        "config/": "config/",
-        "templates/": "templates/"
-    }
-}
