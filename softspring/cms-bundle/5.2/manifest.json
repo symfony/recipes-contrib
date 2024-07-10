@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Softspring\\CmsBundle\\SfsCmsBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "config/",
+        "translations/": "translations/"
+    }
+}
