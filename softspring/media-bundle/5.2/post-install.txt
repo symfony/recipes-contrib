@@ -1,0 +1,2 @@
+  * The <fg=green>SfsMediaBundle</> is ready to use.
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/softspring/media-bundle/blob/5.2/README.md</>
