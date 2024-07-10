@@ -103,6 +103,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [crayner/authenticate-bundle](https://packagist.org/packages/crayner/authenticate-bundle) | [1.0](crayner/authenticate-bundle/1.0) |
 | [csa/guzzle-bundle](https://packagist.org/packages/csa/guzzle-bundle) | [3.0](csa/guzzle-bundle/3.0) |
 | [cyberomulus/sitemap-generator-bundle](https://packagist.org/packages/cyberomulus/sitemap-generator-bundle) | [1.2](cyberomulus/sitemap-generator-bundle/1.2) |
+| [dahromy/glide-symfony](https://packagist.org/packages/dahromy/glide-symfony) | [1.0](dahromy/glide-symfony/1.0) |
 | [dama/doctrine-test-bundle](https://packagist.org/packages/dama/doctrine-test-bundle) | [7.2](dama/doctrine-test-bundle/7.2) |
 | [damienharper/auditor-bundle](https://packagist.org/packages/damienharper/auditor-bundle) | [4.0](damienharper/auditor-bundle/4.0) |
 | [damienharper/doctrine-audit-bundle](https://packagist.org/packages/damienharper/doctrine-audit-bundle) | [1.0](damienharper/doctrine-audit-bundle/1.0) |
