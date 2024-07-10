@@ -27,4 +27,3 @@ twig:
 #                    role: ROLE_ADMIN_INVITATIONS_LIST
 #                    active_expression: 'sfs_user_admin_invitations_'
 #                    icon: 'bi bi-person-plus'
-
