@@ -1,3 +1,4 @@
+  * The <fg=green>SfsUserBundle</> is ready to use.
   * Now you need to make some manually changes:
 
     Add the config/packages/security.yaml.dist to your yaml file
