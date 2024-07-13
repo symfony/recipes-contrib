@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "softspring/permissions-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Softspring\\PermissionsBundle\\SfsPermissionsBundle": [
+                        "all"
+                    ]
+                },
+                "conflict": {
+                    "php": "<8.1"
+                },
+                "post-install-output": [
+                    "  * The <fg=green>SfsPermissionsBundle</> is almost ready:",
+                    "",
+                    "    You can use PERMISSION_ prefixed roles to define your permissions structure."
+                ]
+            },
+            "files": [],
+            "ref": "6d7ef4c495a51db268a7bfe2eb6640617973b2ec"
+        }
+    }
+}

@@ -1640,6 +1640,9 @@
         "softspring/media-bundle": [
             "5.2"
         ],
+        "softspring/permissions-bundle": [
+            "5.2"
+        ],
         "soljian/steam-authentication-bundle": [
             "1.0"
         ],
@@ -2075,6 +2078,11 @@
             "5.0": {
                 "symfony/framework-bundle": "<5.4",
                 "symfony/monolog-bundle": "<3.7"
+            }
+        },
+        "softspring/permissions-bundle": {
+            "5.2": {
+                "php": "<8.1"
             }
         }
     },
