@@ -519,6 +519,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [softspring/media-bundle](https://packagist.org/packages/softspring/media-bundle) | [5.2](softspring/media-bundle/5.2) |
 | [softspring/permissions-bundle](https://packagist.org/packages/softspring/permissions-bundle) | [5.2](softspring/permissions-bundle/5.2) |
 | [softspring/twig-extra-bundle](https://packagist.org/packages/softspring/twig-extra-bundle) | [5.2](softspring/twig-extra-bundle/5.2) |
+| [softspring/user-bundle](https://packagist.org/packages/softspring/user-bundle) | [5.2](softspring/user-bundle/5.2) |
 | [soljian/steam-authentication-bundle](https://packagist.org/packages/soljian/steam-authentication-bundle) | [1.0](soljian/steam-authentication-bundle/1.0) |
 | [solvrtech/symfony-logbook](https://packagist.org/packages/solvrtech/symfony-logbook) | [1.0](solvrtech/symfony-logbook/1.0) |
 | [sonata-project/admin-bundle](https://packagist.org/packages/sonata-project/admin-bundle) | [4.0](sonata-project/admin-bundle/4.0) |
