@@ -1,0 +1,15 @@
+  * The <fg=green>SfsUserBundle</> is ready to use.
+  * Now you need to make some manually changes:
+
+    Add the config/packages/security.yaml.dist to your yaml file
+        mv config/packages/security.yaml.dist config/packages/security.yaml
+
+    Run doctrine migrations
+        php bin/console doctrine:migrations:diff --namespace=\"DoctrineMigrations\"
+        php bin/console doctrine:migrations:migrate -n
+
+    Create a user
+        php bin/console sfs:user:create username email password
+
+    Promote the user to admin if you want
+        php bin/console sfs:user:promote username
