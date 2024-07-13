@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "softspring/media-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Softspring\\MediaBundle\\SfsMediaBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "config/"
+                },
+                "post-install-output": [
+                    "  * The <fg=green>SfsMediaBundle</> is ready to use.",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/softspring/media-bundle/blob/5.2/README.md</>"
+                ]
+            },
+            "files": {
+                "config/packages/sfs_media.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: '@SfsMediaBundle/config/security/admin_role_hierarchy.yaml' }",
+                        "",
+                        "sfs_media:",
+                        "    driver: filesystem",
+                        "    filesystem:",
+                        "        path: '%kernel.project_dir%/public/media'",
+                        "        url: '/media'",
+                        "    media:",
+                        "        admin_controller: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "589fde8af23fd4eeca9dd712b300d13344a7b64a"
+        }
+    }
+}
