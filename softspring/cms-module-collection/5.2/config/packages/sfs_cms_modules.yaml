@@ -1,0 +1,3 @@
+sfs_cms:
+    collections:
+        - vendor/softspring/cms-module-collection
