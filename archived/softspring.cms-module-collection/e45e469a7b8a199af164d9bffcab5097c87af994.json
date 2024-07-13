@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "softspring/cms-module-collection": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "config/"
+                }
+            },
+            "files": {
+                "config/packages/sfs_cms_modules.yaml": {
+                    "contents": [
+                        "sfs_cms:",
+                        "    collections:",
+                        "        - vendor/softspring/cms-module-collection",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e45e469a7b8a199af164d9bffcab5097c87af994"
+        }
+    }
+}

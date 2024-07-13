@@ -513,6 +513,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [snc/redis-bundle](https://packagist.org/packages/snc/redis-bundle) | [2.0](snc/redis-bundle/2.0) |
 | [softavis/flysystem-cloudflare-bundle](https://packagist.org/packages/softavis/flysystem-cloudflare-bundle) | [0.1](softavis/flysystem-cloudflare-bundle/0.1) |
 | [softspring/cms-bundle](https://packagist.org/packages/softspring/cms-bundle) | [5.2](softspring/cms-bundle/5.2) |
+| [softspring/cms-module-collection](https://packagist.org/packages/softspring/cms-module-collection) | [5.2](softspring/cms-module-collection/5.2) |
 | [softspring/components](https://packagist.org/packages/softspring/components) | [5.1](softspring/components/5.1) |
 | [softspring/doctrine-migrations-version-comparator](https://packagist.org/packages/softspring/doctrine-migrations-version-comparator) | [5.1](softspring/doctrine-migrations-version-comparator/5.1) |
 | [soljian/steam-authentication-bundle](https://packagist.org/packages/soljian/steam-authentication-bundle) | [1.0](soljian/steam-authentication-bundle/1.0) |

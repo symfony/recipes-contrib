@@ -1628,6 +1628,9 @@
         "softspring/cms-bundle": [
             "5.2"
         ],
+        "softspring/cms-module-collection": [
+            "5.2"
+        ],
         "softspring/components": [
             "5.1"
         ],
