@@ -1625,6 +1625,9 @@
         "softavis/flysystem-cloudflare-bundle": [
             "0.1"
         ],
+        "softspring/cms-bundle": [
+            "5.2"
+        ],
         "softspring/components": [
             "5.1"
         ],
