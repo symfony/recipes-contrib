@@ -1625,6 +1625,9 @@
         "softavis/flysystem-cloudflare-bundle": [
             "0.1"
         ],
+        "softspring/components": [
+            "5.1"
+        ],
         "soljian/steam-authentication-bundle": [
             "1.0"
         ],
