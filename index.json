@@ -1628,6 +1628,9 @@
         "softspring/components": [
             "5.1"
         ],
+        "softspring/doctrine-migrations-version-comparator": [
+            "5.1"
+        ],
         "soljian/steam-authentication-bundle": [
             "1.0"
         ],
