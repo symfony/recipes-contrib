@@ -1643,6 +1643,9 @@
         "softspring/permissions-bundle": [
             "5.2"
         ],
+        "softspring/twig-extra-bundle": [
+            "5.2"
+        ],
         "soljian/steam-authentication-bundle": [
             "1.0"
         ],

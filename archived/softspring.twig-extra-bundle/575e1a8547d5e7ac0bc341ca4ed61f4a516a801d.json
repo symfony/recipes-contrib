@@ -1,0 +1,19 @@
+{
+    "manifests": {
+        "softspring/twig-extra-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Softspring\\TwigExtraBundle\\SfsTwigExtraBundle": [
+                        "all"
+                    ]
+                },
+                "post-install-output": [
+                    "  * The <fg=green>SfsTwigExtraBundle</> is ready to use.",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/softspring/twig-extra-bundle/blob/5.2/README.md</>"
+                ]
+            },
+            "files": [],
+            "ref": "575e1a8547d5e7ac0bc341ca4ed61f4a516a801d"
+        }
+    }
+}
