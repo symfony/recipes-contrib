@@ -1,0 +1,3 @@
+  * The <fg=green>SfsPermissionsBundle</> is almost ready:
+
+    You can use PERMISSION_ prefixed roles to define your permissions structure.
