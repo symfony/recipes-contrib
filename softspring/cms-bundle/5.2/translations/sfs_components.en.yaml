@@ -1,0 +1,10 @@
+sidebar:
+    menu:
+        cms:
+            title: "CMS"
+            pages: "Pages"
+            menus: "Menus"
+            blocks: "Blocks"
+            medias: "Medias"
+            routes: "Routes"
+            sites: "Sites"

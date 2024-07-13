@@ -1,0 +1,15 @@
+* Your admin is almost ready:
+
+1. Install webpack by running <comment>composer require webpack</comment>
+2. Install Javascript dependencies
+    yarn install
+    yarn add @popperjs/core bootstrap underscore.string bootstrap-icons --dev
+    yarn build
+3. Edit <comment>webpack.config.js</comment> and <info>uncomment</info> the following lines:
+
+    Encore
+        // ...
+        .addEntry('admin', './assets/js/admin.js')
+        // ...
+        .enableSassLoader()
+        // ...

@@ -1,0 +1,41 @@
+twig:
+    globals:
+        admin_menu:
+            cms:
+                translation_key: 'sidebar.menu.cms.title'
+                pages:
+                    translation_key: 'sidebar.menu.cms.pages'
+                    route: 'sfs_cms_admin_content_page_list'
+                    # role: ROLE_SFS_CMS_ADMIN_PAGES_LIST
+                    active_expression: 'sfs_cms_admin_content_page_'
+                    icon: 'bi bi-code-slash'
+                menus:
+                    translation_key: 'sidebar.menu.cms.menus'
+                    route: 'sfs_cms_admin_menus_list'
+                    # role: ROLE_SFS_CMS_ADMIN_MENUS_LIST
+                    active_expression: 'sfs_cms_admin_menus_'
+                    icon: 'bi bi-list-nested'
+                blocks:
+                    translation_key: 'sidebar.menu.cms.blocks'
+                    route: 'sfs_cms_admin_blocks_list'
+                    # role: ROLE_SFS_CMS_ADMIN_BLOCKS_LIST
+                    active_expression: 'sfs_cms_admin_blocks_'
+                    icon: 'bi bi-puzzle'
+                medias:
+                    translation_key: 'sidebar.menu.cms.medias'
+                    route: 'sfs_media_admin_medias_list'
+                    # role: ROLE_SFS_MEDIA_ADMIN_MEDIAS_LIST
+                    active_expression: 'sfs_media_admin_medias_'
+                    icon: 'bi bi-images'
+                routes:
+                    translation_key: 'sidebar.menu.cms.routes'
+                    route: 'sfs_cms_admin_routes_list'
+                    # role: ROLE_SFS_CMS_ADMIN_ROUTES_LIST
+                    active_expression: 'sfs_cms_admin_routes_'
+                    icon: 'bi bi-signpost-split'
+                sites:
+                    translation_key: 'sidebar.menu.cms.sites'
+                    route: 'sfs_cms_admin_sites_list'
+                    # role: ROLE_SFS_CMS_ADMIN_SITES_LIST
+                    active_expression: 'sfs_cms_admin_sites_'
+                    icon: 'bi bi-diagram-3'
