@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/beelab/tag-bundle/1.3/src" isTestSource="false" packagePrefix="App" />
+      <sourceFolder url="file://$MODULE_DIR$/codeception/codeception/5.0" isTestSource="false" packagePrefix="App" />
+      <sourceFolder url="file://$MODULE_DIR$/enigma972/user-bundle/0.4/src" isTestSource="false" packagePrefix="App" />
+      <sourceFolder url="file://$MODULE_DIR$/friends-of-behat/symfony-extension/2.0" isTestSource="false" packagePrefix="App" />
+      <sourceFolder url="file://$MODULE_DIR$/friendsofsymfony/oauth-server-bundle/1.6/src" isTestSource="false" packagePrefix="App" />
+      <sourceFolder url="file://$MODULE_DIR$/gesdinet/jwt-refresh-token-bundle/1.0/src" isTestSource="false" packagePrefix="App" />
+      <sourceFolder url="file://$MODULE_DIR$/mailxpert/apibundle/0.1/src" isTestSource="false" packagePrefix="App" />
+      <sourceFolder url="file://$MODULE_DIR$/maps_red/ticketing-bundle/0.6/src" isTestSource="false" packagePrefix="App" />
+      <sourceFolder url="file://$MODULE_DIR$/mediamonks/sonata-media-bundle/2.0/src" isTestSource="false" packagePrefix="App" />
+      <sourceFolder url="file://$MODULE_DIR$/msgphp/eav-bundle/0.10/src" isTestSource="false" packagePrefix="App" />
+      <sourceFolder url="file://$MODULE_DIR$/msgphp/user-bundle/0.10/src" isTestSource="false" packagePrefix="App" />
+      <sourceFolder url="file://$MODULE_DIR$/nedac/sylius-minimum-order-value-plugin/1.0/src" isTestSource="false" packagePrefix="App" />
+      <sourceFolder url="file://$MODULE_DIR$/networking/init-cms-bundle/4.0/src" isTestSource="false" packagePrefix="App" />
+      <sourceFolder url="file://$MODULE_DIR$/networking/init-cms-bundle/4.4/src" isTestSource="false" packagePrefix="App" />
+      <sourceFolder url="file://$MODULE_DIR$/nucleos/user-bundle/1.1/src" isTestSource="false" packagePrefix="App" />
+      <sourceFolder url="file://$MODULE_DIR$/nyholm/sunflower/0.2/src" isTestSource="false" packagePrefix="App" />
+      <sourceFolder url="file://$MODULE_DIR$/orbitale/cms-bundle/3.0/src" isTestSource="false" packagePrefix="App" />
+      <sourceFolder url="file://$MODULE_DIR$/phpfastcgi/fastcgi-daemon/0.11/src" isTestSource="false" packagePrefix="App" />
+      <sourceFolder url="file://$MODULE_DIR$/phpzlc/document-bundle/1.1" isTestSource="false" packagePrefix="App" />
+      <sourceFolder url="file://$MODULE_DIR$/pierstoval/character-manager/0.5/src" isTestSource="false" packagePrefix="App" />
+      <sourceFolder url="file://$MODULE_DIR$/prooph/event-store-symfony-bundle/0.4/src" isTestSource="false" packagePrefix="App" />
+      <sourceFolder url="file://$MODULE_DIR$/shopware/app-bundle/1.0/src" isTestSource="false" packagePrefix="App" />
+      <sourceFolder url="file://$MODULE_DIR$/sonata-project/classification-bundle/3.7/src" isTestSource="false" packagePrefix="App" />
+      <sourceFolder url="file://$MODULE_DIR$/sonata-project/page-bundle/3.9/src" isTestSource="false" packagePrefix="App" />
+      <sourceFolder url="file://$MODULE_DIR$/sonata-project/page-bundle/4.0/src" isTestSource="false" packagePrefix="App" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
