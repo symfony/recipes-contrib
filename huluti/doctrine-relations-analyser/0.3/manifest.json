@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "DoctrineRelationsAnalyserBundle\\DoctrineRelationsAnalyserBundle": ["dev", "test"]
+    }
+}
