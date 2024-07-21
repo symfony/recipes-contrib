@@ -722,6 +722,9 @@
         "hugosoltys/fitz-bundle": [
             "1.0"
         ],
+        "huluti/doctrine-relations-analyser": [
+            "0.3"
+        ],
         "hwi/oauth-bundle": [
             "0.6",
             "2.0"

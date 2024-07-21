@@ -1,0 +1,16 @@
+{
+    "manifests": {
+        "huluti/doctrine-relations-analyser": {
+            "manifest": {
+                "bundles": {
+                    "DoctrineRelationsAnalyserBundle\\DoctrineRelationsAnalyserBundle": [
+                        "dev",
+                        "test"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "50612d2d6155f5a50754215e69b2916ac1ea2f67"
+        }
+    }
+}
