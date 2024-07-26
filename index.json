@@ -1867,7 +1867,8 @@
         ],
         "thecodingmachine/graphqlite-bundle": [
             "3.0",
-            "4.0"
+            "4.0",
+            "6.0"
         ],
         "thecodingmachine/tdbm-bundle": [
             "5.0"

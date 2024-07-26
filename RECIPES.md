@@ -588,7 +588,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [teebbstudios/tuieditor-bundle](https://packagist.org/packages/teebbstudios/tuieditor-bundle) | [1.0](teebbstudios/tuieditor-bundle/1.0) |
 | [tg-bot-api/bot-api-base](https://packagist.org/packages/tg-bot-api/bot-api-base) | [1.0](tg-bot-api/bot-api-base/1.0) |
 | [tgalopin/html-sanitizer-bundle](https://packagist.org/packages/tgalopin/html-sanitizer-bundle) | [1.0](tgalopin/html-sanitizer-bundle/1.0) |
-| [thecodingmachine/graphqlite-bundle](https://packagist.org/packages/thecodingmachine/graphqlite-bundle) | [4.0](thecodingmachine/graphqlite-bundle/4.0) |
+| [thecodingmachine/graphqlite-bundle](https://packagist.org/packages/thecodingmachine/graphqlite-bundle) | [6.0](thecodingmachine/graphqlite-bundle/6.0) |
 | [thecodingmachine/tdbm-bundle](https://packagist.org/packages/thecodingmachine/tdbm-bundle) | [5.0](thecodingmachine/tdbm-bundle/5.0) |
 | [theplankmeister/form-data-transposer](https://packagist.org/packages/theplankmeister/form-data-transposer) | [1.0](theplankmeister/form-data-transposer/1.0) |
 | [tienvx/mbt-api-bundle](https://packagist.org/packages/tienvx/mbt-api-bundle) | [1.15](tienvx/mbt-api-bundle/1.15) |
