@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "TheCodingMachine\\GraphQlite\\Bundle\\GraphQLiteBundle": ["all"]
+        "TheCodingMachine\\GraphQLite\\Bundle\\GraphQLiteBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
