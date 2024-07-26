@@ -56,6 +56,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [bitbag/mailchimp-plugin](https://packagist.org/packages/bitbag/mailchimp-plugin) | [1.2](bitbag/mailchimp-plugin/1.2) |
 | [bitbag/product-bundle-plugin](https://packagist.org/packages/bitbag/product-bundle-plugin) | [1.2](bitbag/product-bundle-plugin/1.2) |
 | [bitbag/shipping-export-plugin](https://packagist.org/packages/bitbag/shipping-export-plugin) | [1.0](bitbag/shipping-export-plugin/1.0) |
+| [bitbag/wishlist-plugin](https://packagist.org/packages/bitbag/wishlist-plugin) | [4.4](bitbag/wishlist-plugin/4.4) |
 | [boshurik/telegram-bot-bundle](https://packagist.org/packages/boshurik/telegram-bot-bundle) | [3.1](boshurik/telegram-bot-bundle/3.1) |
 | [botjaeger/nexmo-bundle](https://packagist.org/packages/botjaeger/nexmo-bundle) | [0.5](botjaeger/nexmo-bundle/0.5) |
 | [bref/symfony-bridge](https://packagist.org/packages/bref/symfony-bridge) | [0.1](bref/symfony-bridge/0.1) |

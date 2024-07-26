@@ -162,6 +162,9 @@
         "bitbag/shipping-export-plugin": [
             "1.0"
         ],
+        "bitbag/wishlist-plugin": [
+            "4.4"
+        ],
         "boshurik/telegram-bot-bundle": [
             "3.1"
         ],

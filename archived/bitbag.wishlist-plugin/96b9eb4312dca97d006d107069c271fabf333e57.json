@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "bitbag/wishlist-plugin": {
+            "manifest": {
+                "bundles": {
+                    "BitBag\\SyliusWishlistPlugin\\BitBagSyliusWishlistPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  If you want to contact us, the best way is to fill the form on our website or send us an e-mail to <comment>hello@bitbag.io</comment> with your question(s).",
+                    "  We guarantee that we answer as soon as we can!"
+                ]
+            },
+            "files": {
+                "config/packages/bitbag_wishlist_plugin.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@BitBagSyliusWishlistPlugin/Resources/config/config.yml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/bitbag_wishlist_plugin.yaml": {
+                    "contents": [
+                        "bitbag_sylius_wishlist_plugin:",
+                        "    resource: \"@BitBagSyliusWishlistPlugin/Resources/config/routing.yml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "96b9eb4312dca97d006d107069c271fabf333e57"
+        }
+    }
+}
