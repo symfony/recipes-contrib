@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "TheCodingMachine\\GraphQLite\\Bundle\\GraphQLiteBundle": ["all"]
+        "TheCodingMachine\\Graphqlite\\Bundle\\GraphqliteBundle": ["all"]
     },
     "copy-from-package": {
         "config-template/": "%CONFIG_DIR%/"
