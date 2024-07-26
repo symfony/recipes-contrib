@@ -1,0 +1,2 @@
+imports:
+    - { resource: "@BitBagSyliusWishlistPlugin/Resources/config/config.yml" }
