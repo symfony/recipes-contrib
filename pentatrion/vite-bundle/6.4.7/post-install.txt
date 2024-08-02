@@ -6,7 +6,7 @@
     1. Add if necessary a configuration file in <comment>%CONFIG_DIR%/packages/pentatrion_vite.yaml</>.
     2. Verify the Vite configuration in <comment>/vite.config.js</>.
     3. Check vite templates https://github.com/vitejs/vite/tree/main/packages/create-vite for dependencies to add.
-    4. Install npm and run <comment>npm i</>.
+    4. Run <comment>npm i</>.
     5. Start the development server: <comment>npm run dev</>.
     6. Start coding into <comment>assets/app.js</>
 
