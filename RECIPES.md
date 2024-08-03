@@ -437,7 +437,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [payplug/sylius-payplug-plugin](https://packagist.org/packages/payplug/sylius-payplug-plugin) | [0.2](payplug/sylius-payplug-plugin/0.2) |
 | [payum/payum-bundle](https://packagist.org/packages/payum/payum-bundle) | [2.4](payum/payum-bundle/2.4) |
 | [pentatrion/upload-bundle](https://packagist.org/packages/pentatrion/upload-bundle) | [0.2](pentatrion/upload-bundle/0.2) |
-| [pentatrion/vite-bundle](https://packagist.org/packages/pentatrion/vite-bundle) | [1.0](pentatrion/vite-bundle/1.0) |
+| [pentatrion/vite-bundle](https://packagist.org/packages/pentatrion/vite-bundle) | [6.5](pentatrion/vite-bundle/6.5) |
 | [php-amqplib/rabbitmq-bundle](https://packagist.org/packages/php-amqplib/rabbitmq-bundle) | [1.12](php-amqplib/rabbitmq-bundle/1.12) |
 | [php-http/httplug-bundle](https://packagist.org/packages/php-http/httplug-bundle) | [1.6](php-http/httplug-bundle/1.6) |
 | [php-translation/loco-adapter](https://packagist.org/packages/php-translation/loco-adapter) | [0.8](php-translation/loco-adapter/0.8) |

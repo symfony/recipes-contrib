@@ -1385,7 +1385,8 @@
         "pentatrion/vite-bundle": [
             "0.1",
             "0.2",
-            "1.0"
+            "1.0",
+            "6.5"
         ],
         "php-amqplib/rabbitmq-bundle": [
             "1.12"
