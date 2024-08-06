@@ -35,14 +35,17 @@
                     "contents": [
                         "when@dev:",
                         "    kocal_biome_js:",
-                        "        # Explicitly configure the version of Biome.js to use (https://github.com/biomejs/biome/tags), or null to use the latest version",
-                        "        binary_version: null",
+                        "        # Biome.js CLI version to use:",
+                        "        # - \"latest_stable\": use the latest stable version",
+                        "        # - \"latest_nightly\": use the latest nightly version",
+                        "        # - or a specific version, e.g. \"v1.8.3\", find available tags at https://github.com/biomejs/biome/tags",
+                        "        binary_version: 'latest_stable'",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "518a54d0303c2035edbd6837e1797867d43ffb0e"
+            "ref": "478e2325fefb9f1acf56c8408b8ec58e2cb3abe5"
         }
     }
 }

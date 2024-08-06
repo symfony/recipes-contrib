@@ -863,7 +863,8 @@
             "1.0"
         ],
         "kocal/biome-js-bundle": [
-            "1.0"
+            "1.0",
+            "1.1"
         ],
         "koff/i18n-form-bundle": [
             "4.0"
