@@ -1,10 +1,12 @@
 {
     "files": {
         "ignore": [
-            "composer.json",
             "assets/vendor/*",
-            "vendor/*",
-            "public/bundles/*"
+            "assets/controllers.json",
+            "composer.json",
+            "public/assets/*",
+            "public/bundles/*",
+            "vendor/*"
         ]
     }
 }
