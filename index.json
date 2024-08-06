@@ -1791,7 +1791,8 @@
             "1.0"
         ],
         "swag-industries/doctrine-domain-events": [
-            "1.0"
+            "1.0",
+            "3.1"
         ],
         "swag-industries/melodiia": [
             "0.7"

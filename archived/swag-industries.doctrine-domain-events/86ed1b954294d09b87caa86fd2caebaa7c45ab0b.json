@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "swag-industries/doctrine-domain-events": {
+            "manifest": {
+                "bundles": {
+                    "Biig\\Component\\Domain\\Integration\\Symfony\\DomainBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/doctrine_domain_event.yaml": {
+                    "contents": [
+                        "# By default, the bundle will be active on all connections registered,",
+                        "# but you can specify explicitly which connections it should be enabled on.",
+                        "# Defaults to empty array []",
+                        "",
+                        "#biig_domain:",
+                        "#    entity_managers: ['default']",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "86ed1b954294d09b87caa86fd2caebaa7c45ab0b"
+        }
+    }
+}
