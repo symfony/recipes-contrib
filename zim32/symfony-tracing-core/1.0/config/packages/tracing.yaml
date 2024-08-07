@@ -38,8 +38,8 @@ tracing:
     exporter:
         # dummy exporter which uses logger to export spans
         log:
-          service_name: tracing
-          level: debug
+            service_name: tracing
+            level: debug
 
 #        otlp_http:
 #            endpoint: '%env(OTLP_EXPORTER_ENDPOINT)%'
