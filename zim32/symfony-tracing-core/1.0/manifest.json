@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Zim\\SymfonyTracingCoreBundle\\SymfonyTracingCoreBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "OTLP_EXPORTER_ENDPOINT": "http://some.domain.local:4318/v1/traces"
+    }
+}
