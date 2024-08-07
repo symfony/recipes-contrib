@@ -12,7 +12,7 @@ tracing:
     #    TracerInterface $anyNameHere
     #
     # Usually other tracing bundles will add needed tracers automatically.
-    default: ~
+    default: null
 
     # You can pass additional "name" parameter which will be used when exporting spans for this tracer.
     # By default, tracer name equals to tracer key.
@@ -21,9 +21,9 @@ tracing:
 
   span_sampler:
     # default sampling strategy
-    always_on: ~
+    always_on: null
 
-#    always_off: ~
+#    always_off: null
 
 #    ratio:
 #      ratio: 0.5
