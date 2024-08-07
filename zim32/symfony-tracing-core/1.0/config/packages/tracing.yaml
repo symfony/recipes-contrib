@@ -1,43 +1,43 @@
 tracing:
-  tracers:
-    # For each tracer defined here this bundle will create two services:
-    #    1) One which can be injected as TracerInterface $keyTracer
-    #    2) One which can be injected as ScopedTracerInterface $keyTracer
-    #
-    # F.e. http tracer can be injected as:
-    #    TracerInterface $httpTracer
-    #    ScopedTracerInterface $httpTracer
-    #
-    # Default tracer can be injected with any name. F.e.:
-    #    TracerInterface $anyNameHere
-    #
-    # Usually other tracing bundles will add needed tracers automatically.
-    default: null
+    tracers:
+        # For each tracer defined here this bundle will create two services:
+        #    1) One which can be injected as TracerInterface $keyTracer
+        #    2) One which can be injected as ScopedTracerInterface $keyTracer
+        #
+        # F.e. http tracer can be injected as:
+        #    TracerInterface $httpTracer
+        #    ScopedTracerInterface $httpTracer
+        #
+        # Default tracer can be injected with any name. F.e.:
+        #    TracerInterface $anyNameHere
+        #
+        # Usually other tracing bundles will add needed tracers automatically.
+        default: null
 
-    # You can pass additional "name" parameter which will be used when exporting spans for this tracer.
-    # By default, tracer name equals to tracer key.
-#    someTracer:
-#      name: Some custom tracer name
+        # You can pass additional "name" parameter which will be used when exporting spans for this tracer.
+        # By default, tracer name equals to tracer key.
+    #    someTracer:
+    #      name: Some custom tracer name
 
-  span_sampler:
-    # default sampling strategy
-    always_on: null
+    span_sampler:
+        # default sampling strategy
+        always_on: null
 
-#    always_off: null
+    #    always_off: null
 
-#    ratio:
-#      ratio: 0.5
+    #    ratio:
+    #      ratio: 0.5
 
-#    service:
-#      id: App\Service\TestSpanSampler
+    #    service:
+    #      id: App\Service\TestSpanSampler
 
-#    expression:
-#      expression: "request.query.get('v') == '30'"
+    #    expression:
+    #      expression: "request.query.get('v') == '30'"
 
 
-  exporter:
-    otlp_http:
-      endpoint: '%env(OTLP_EXPORTER_ENDPOINT)%'
+    exporter:
+        otlp_http:
+            endpoint: '%env(OTLP_EXPORTER_ENDPOINT)%'
 
 #    log:
 #      service_name: test-tracing
