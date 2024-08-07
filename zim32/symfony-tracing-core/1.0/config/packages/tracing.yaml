@@ -16,8 +16,9 @@ tracing:
 
         # You can pass additional "name" parameter which will be used when exporting spans for this tracer.
         # By default, tracer name equals to tracer key.
-    #    someTracer:
-    #      name: Some custom tracer name
+
+#        someTracer:
+#          name: Some custom tracer name
 
     span_sampler:
         # default sampling strategy
