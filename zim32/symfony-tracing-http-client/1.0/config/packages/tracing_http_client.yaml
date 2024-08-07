@@ -1,0 +1,11 @@
+tracing:
+    tracers:
+        http: null
+
+http_client_tracing:
+    # choose which services will be decorated with instrumented wrappers
+    decorated_services:
+        -   service: http_client
+            # set to "true" to enable context propagation for this service
+            propagate: false
+            eager_content: true
