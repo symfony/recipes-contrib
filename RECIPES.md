@@ -642,3 +642,4 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [zenstruck/signed-url-bundle](https://packagist.org/packages/zenstruck/signed-url-bundle) | [0.1](zenstruck/signed-url-bundle/0.1) |
 | [zenstruck/twig-service-bundle](https://packagist.org/packages/zenstruck/twig-service-bundle) | [0.2](zenstruck/twig-service-bundle/0.2) |
 | [zephyr/allmysms-bundle](https://packagist.org/packages/zephyr/allmysms-bundle) | [1.0](zephyr/allmysms-bundle/1.0) |
+| [zim32/symfony-tracing-core](https://packagist.org/packages/zim32/symfony-tracing-core) | [1.0](zim32/symfony-tracing-core/1.0) |

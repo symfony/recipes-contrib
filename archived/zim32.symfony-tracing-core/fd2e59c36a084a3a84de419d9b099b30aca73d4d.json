@@ -1,0 +1,74 @@
+{
+    "manifests": {
+        "zim32/symfony-tracing-core": {
+            "manifest": {
+                "bundles": {
+                    "Zim\\SymfonyTracingCoreBundle\\SymfonyTracingCoreBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "OTLP_EXPORTER_ENDPOINT": "http://some.domain.local:4318/v1/traces"
+                }
+            },
+            "files": {
+                "config/packages/tracing.yaml": {
+                    "contents": [
+                        "tracing:",
+                        "    tracers:",
+                        "        # For each tracer defined here this bundle will create two services:",
+                        "        #    1) One which can be injected as TracerInterface $keyTracer",
+                        "        #    2) One which can be injected as ScopedTracerInterface $keyTracer",
+                        "        #",
+                        "        # F.e. http tracer can be injected as:",
+                        "        #    TracerInterface $httpTracer",
+                        "        #    ScopedTracerInterface $httpTracer",
+                        "        #",
+                        "        # Default tracer can be injected with any name. F.e.:",
+                        "        #    TracerInterface $anyNameHere",
+                        "        #",
+                        "        # Usually other tracing bundles will add needed tracers automatically.",
+                        "        default: null",
+                        "",
+                        "        # You can pass additional \"name\" parameter which will be used when exporting spans for this tracer.",
+                        "        # By default, tracer name equals to tracer key.",
+                        "",
+                        "#        someTracer:",
+                        "#          name: Some custom tracer name",
+                        "",
+                        "    span_sampler:",
+                        "        # default sampling strategy",
+                        "        always_on: null",
+                        "",
+                        "    #    always_off: null",
+                        "",
+                        "    #    ratio:",
+                        "    #      ratio: 0.5",
+                        "",
+                        "    #    service:",
+                        "    #      id: App\\Service\\TestSpanSampler",
+                        "",
+                        "    #    expression:",
+                        "    #      expression: \"request.query.get('v') == '30'\"",
+                        "",
+                        "",
+                        "    exporter:",
+                        "        # dummy exporter which uses logger to export spans",
+                        "        log:",
+                        "            service_name: tracing",
+                        "            level: debug",
+                        "",
+                        "#        otlp_http:",
+                        "#            endpoint: '%env(OTLP_EXPORTER_ENDPOINT)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "fd2e59c36a084a3a84de419d9b099b30aca73d4d"
+        }
+    }
+}

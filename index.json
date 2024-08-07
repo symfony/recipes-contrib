@@ -2048,6 +2048,9 @@
         ],
         "zephyr/allmysms-bundle": [
             "1.0"
+        ],
+        "zim32/symfony-tracing-core": [
+            "1.0"
         ]
     },
     "recipe-conflicts": {
