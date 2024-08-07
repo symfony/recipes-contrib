@@ -2051,6 +2051,9 @@
         ],
         "zim32/symfony-tracing-core": [
             "1.0"
+        ],
+        "zim32/symfony-tracing-http-client": [
+            "1.0"
         ]
     },
     "recipe-conflicts": {

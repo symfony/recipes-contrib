@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "zim32/symfony-tracing-http-client": {
+            "manifest": {
+                "bundles": {
+                    "Zim\\SymfonyHttpClientTracingBundle\\SymfonyHttpClientTracingBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/tracing_http_client.yaml": {
+                    "contents": [
+                        "tracing:",
+                        "    tracers:",
+                        "        http: null",
+                        "",
+                        "http_client_tracing:",
+                        "    # choose which services will be decorated with instrumented wrappers",
+                        "    decorated_services:",
+                        "        -   service: http_client",
+                        "            # set to \"true\" to enable context propagation for this service",
+                        "            propagate: false",
+                        "            eager_content: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "160559a5d0316bb0dc06a3d020e409961e8880d0"
+        }
+    }
+}
