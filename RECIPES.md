@@ -644,3 +644,4 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [zephyr/allmysms-bundle](https://packagist.org/packages/zephyr/allmysms-bundle) | [1.0](zephyr/allmysms-bundle/1.0) |
 | [zim32/symfony-tracing-core](https://packagist.org/packages/zim32/symfony-tracing-core) | [1.0](zim32/symfony-tracing-core/1.0) |
 | [zim32/symfony-tracing-http-client](https://packagist.org/packages/zim32/symfony-tracing-http-client) | [1.0](zim32/symfony-tracing-http-client/1.0) |
+| [zim32/symfony-tracing-orm](https://packagist.org/packages/zim32/symfony-tracing-orm) | [1.0](zim32/symfony-tracing-orm/1.0) |
