@@ -1,6 +1,6 @@
 tracing:
     tracers:
-        doctrine: ~
+        doctrine: null
 
 orm_tracing:
     # list of regex patterns to skip certain SQL queries from tracing
