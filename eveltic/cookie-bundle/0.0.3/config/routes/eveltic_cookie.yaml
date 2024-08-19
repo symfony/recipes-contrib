@@ -1,0 +1,6 @@
+eveltic_cookie:
+    resource:
+        path: '@EvelticCookieBundle/src/Controller/'
+        namespace: Eveltic\CookieBundle\Controller
+    type: attribute
+    prefix: /
