@@ -2,7 +2,7 @@
   "bundles": {
     "Eveltic\\CookieBundle\\EvelticCookieBundle": ["all"]
   },
-  "copy-from-package": {
+  "copy-from-recipe": {
     "config/eveltic_cookie.yaml": "%CONFIG_DIR%/packages/eveltic_cookie.yaml",
     "config/routes/eveltic_cookie.yaml": "%CONFIG_DIR%/routes/eveltic_cookie.yaml"
   },
