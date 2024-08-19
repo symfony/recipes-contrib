@@ -1,0 +1,3 @@
+_bug_catcher:
+    resource: "@BugCatcherBundle/config/routes.php"
+    prefix: /

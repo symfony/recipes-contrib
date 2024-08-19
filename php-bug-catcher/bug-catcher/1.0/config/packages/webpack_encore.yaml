@@ -1,0 +1,10 @@
+webpack_encore:
+    builds:
+        bug_catcher: '%kernel.project_dir%/public/bundles/bugcatcher/'
+framework:
+    assets:
+        packages:
+            app:
+                json_manifest_path: '%kernel.project_dir%/public/build/manifest.json'
+            bug_catcher:
+                json_manifest_path: '%kernel.project_dir%/public/bundles/bugcatcher/manifest.json'

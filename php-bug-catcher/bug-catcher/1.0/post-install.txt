@@ -1,0 +1,22 @@
+  * The <fg=green>BugCatcherBundle</> is ready to use.
+  * Now you need to make some manually changes:
+
+    * <fg=blue>Run</> doctrine migrations
+        php bin/console doctrine:database:create
+        php bin/console doctrine:migrations:diff
+        php bin/console doctrine:migrations:migrate
+
+    * <fg=blue>Build</> Webpack
+        yarn install
+        yarn build
+
+    * <fg=blue>Create a user</>
+        php bin/console app:create-user username password
+
+    * <fg=blue>Download</> the icons
+        php bin/console ux:icons:import pajamas:hamburger covid:virus-lab-research-magnifier-1 clarity:archive-line game-icons:magic-broom
+
+    * <fg=blue>Setup</> ping collectors in your /etc/crontab
+        * * * * * www-data php /var/www/bug-catcher/bin/console app:ping-collector > /dev/null 2>&1
+        0 * * * * www-data php /var/www/bug-catcher/bin/console app:record-optimizer --past=1 --precision=5
+        0 0 * * * www-data php /var/www/bug-catcher/bin/console app:record-optimizer --past=7 --precision=60

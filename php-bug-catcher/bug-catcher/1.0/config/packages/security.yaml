@@ -1,0 +1,30 @@
+security:
+    providers:
+        app_user_provider:
+            entity:
+                class: BugCatcher\Entity\User
+                property: email
+    firewalls:
+        api:
+            pattern: ^/api/
+            stateless: true
+        main:
+            provider: app_user_provider
+            form_login:
+                login_path: bug_catcher.security.login
+                check_path: bug_catcher.security.login
+                enable_csrf: true
+            logout:
+                path: bug_catcher.security.logout
+    access_control:
+        - { path: ^/login$, role: PUBLIC_ACCESS }
+        - { path: ^/api, roles: PUBLIC_ACCESS }
+        - { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/detail, roles: ROLE_DEVELOPER }
+        - { path: ^/_components/LogList/clearAll, roles: ROLE_DEVELOPER }
+        - { path: ^/_components/LogList/clearOne, roles: ROLE_DEVELOPER }
+        - { path: ^/, roles: ROLE_CUSTOMER }
+    role_hierarchy:
+        ROLE_ADMIN: ROLE_DEVELOPER
+        ROLE_DEVELOPER: ROLE_CUSTOMER
+        ROLE_CUSTOMER: ROLE_USER

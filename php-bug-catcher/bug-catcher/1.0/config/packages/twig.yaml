@@ -1,0 +1,5 @@
+twig:
+    form_themes: [ '@EasyAdmin/symfony-form-themes/bootstrap_5_layout.html.twig' ]
+    globals:
+        logo: 'default'
+        app_name: 'BugCatcher'
