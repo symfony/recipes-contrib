@@ -1,8 +1,6 @@
 {
     "bundles": {
-        "BugCatcher\\BugCatcherBundle": [
-            "all"
-        ]
+        "BugCatcher\\BugCatcherBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
