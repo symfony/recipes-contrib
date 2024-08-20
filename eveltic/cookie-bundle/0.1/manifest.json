@@ -3,8 +3,7 @@
         "Eveltic\\CookieBundle\\EvelticCookieBundle": ["all"]
     },
     "copy-from-recipe": {
-        "config/eveltic_cookie.yaml": "%CONFIG_DIR%/packages/eveltic_cookie.yaml",
-        "config/eveltic_cookie_routes.yaml": "%CONFIG_DIR%/routes/eveltic_cookie.yaml"
+        "config/": "%CONFIG_DIR%/"
     },
     "post-install-output": [
         "The Eveltic Cookie Bundle has been installed successfully!",
