@@ -8,6 +8,6 @@
     "post-install-output": [
         "The Eveltic Cookie Bundle has been installed successfully!",
         "Configuration files have been copied to config/packages/ and config/routes/",
-        "Update your database to create the new tables (update schema or make migration)"
+        "Update your database to create the new tables (update schema or make migration)."
     ]
 }
