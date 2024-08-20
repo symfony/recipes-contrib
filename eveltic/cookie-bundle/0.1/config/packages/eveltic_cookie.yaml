@@ -9,6 +9,6 @@ eveltic_cookie:
         - name: ads
           required: false
     domain: null
-    expiration: +2 years
+    expiration: "+2 years"
     version: 1
     theme_mode: auto
