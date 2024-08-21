@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "mezcalito/ux-filemanager": {
+            "manifest": {
+                "bundles": {
+                    "Mezcalito\\FileManagerBundle\\MezcalitoFileManagerBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "f657f7fc5d52c262938b6b5e1e46f70b7199feae"
+        }
+    }
+}

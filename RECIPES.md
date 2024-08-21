@@ -346,6 +346,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [mercuryseries/inertia-bundle](https://packagist.org/packages/mercuryseries/inertia-bundle) | [0.1](mercuryseries/inertia-bundle/0.1) |
 | [meritoo/common-bundle](https://packagist.org/packages/meritoo/common-bundle) | [0.1](meritoo/common-bundle/0.1) |
 | [meteo-concept/hcaptcha-bundle](https://packagist.org/packages/meteo-concept/hcaptcha-bundle) | [1.0](meteo-concept/hcaptcha-bundle/1.0) |
+| [mezcalito/ux-filemanager](https://packagist.org/packages/mezcalito/ux-filemanager) | [0.1](mezcalito/ux-filemanager/0.1) |
 | [mgdsoft/stackdriver-bundle](https://packagist.org/packages/mgdsoft/stackdriver-bundle) | [0.1](mgdsoft/stackdriver-bundle/0.1) |
 | [misd/phone-number-bundle](https://packagist.org/packages/misd/phone-number-bundle) | [1.3](misd/phone-number-bundle/1.3) |
 | [mixpanel/mixpanel-php](https://packagist.org/packages/mixpanel/mixpanel-php) | [2.8](mixpanel/mixpanel-php/2.8) |

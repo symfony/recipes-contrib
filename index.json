@@ -1087,6 +1087,9 @@
         "meteo-concept/hcaptcha-bundle": [
             "1.0"
         ],
+        "mezcalito/ux-filemanager": [
+            "0.1"
+        ],
         "mgdsoft/stackdriver-bundle": [
             "0.1"
         ],
