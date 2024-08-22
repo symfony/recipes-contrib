@@ -767,6 +767,9 @@
         "inspector-apm/inspector-symfony": [
             "1.0"
         ],
+        "intervention/image-symfony": [
+            "1.0"
+        ],
         "iq2i/storia-bundle": [
             "0.1"
         ],

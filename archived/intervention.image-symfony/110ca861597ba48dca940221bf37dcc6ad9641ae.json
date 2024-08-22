@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "intervention/image-symfony": {
+            "manifest": {
+                "bundles": {
+                    "Intervention\\Image\\Symfony\\InterventionImageBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/intervention_image.yaml": {
+                    "contents": [
+                        "intervention_image:",
+                        "    driver: Intervention\\Image\\Drivers\\Gd\\Driver",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "110ca861597ba48dca940221bf37dcc6ad9641ae"
+        }
+    }
+}
