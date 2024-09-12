@@ -1,0 +1,16 @@
+{
+    "bundles": {
+        "DahRomy\\MVola\\DahRomyMVolaBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%"
+    },
+    "env": {
+        "MVOLA_ENVIRONMENT": "sandbox",
+        "MVOLA_CONSUMER_KEY": "your_consumer_key_here",
+        "MVOLA_CONSUMER_SECRET": "your_consumer_secret_here",
+        "MVOLA_MERCHANT_NUMBER": "your_merchant_number_here",
+        "MVOLA_COMPANY_NAME": "your_company_name_here",
+        "MVOLA_AUTH_URL": "https://sandbox.mvola.mg/token"
+    }
+}
