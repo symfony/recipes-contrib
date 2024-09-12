@@ -1,0 +1,55 @@
+{
+    "manifests": {
+        "dahromy/glide-symfony": {
+            "manifest": {
+                "conflict": {
+                    "php": "<8.0"
+                },
+                "bundles": {
+                    "DahRomy\\Glide\\DahRomyGlideBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%"
+                },
+                "env": {
+                    "GLIDE_SIGNATURE_KEY": "%generate(secret)%"
+                }
+            },
+            "files": {
+                "config/packages/dahromy_glide.yaml": {
+                    "contents": [
+                        "dahromy_glide:",
+                        "    source: '%kernel.project_dir%/public/uploads'",
+                        "    cache: '%kernel.project_dir%/var/cache/glide'",
+                        "    signature_key: '%env(GLIDE_SIGNATURE_KEY)%'",
+                        "    # Add other default configuration options as needed",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/glide.yaml": {
+                    "contents": [
+                        "glide:",
+                        "    source: '%kernel.project_dir%/public'",
+                        "    cache: '%kernel.project_dir%/var/cache/glide'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/glide.yaml": {
+                    "contents": [
+                        "glide:",
+                        "    resource: '@DahRomyGlideBundle/Resources/config/routes.php'",
+                        "    type: php",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d262c812fb4a055fa781676af5cebc26b456d61a"
+        }
+    }
+}
