@@ -1,4 +1,7 @@
 {
+    "conflict": {
+        "php": "<=7.4"
+    },
     "bundles": {
         "DahRomy\\Mvola\\DahRomyMvolaBundle": ["all"]
     },
