@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "DahRomy\\Mvola\\DahRomyMvolaBundle": ["all"]
+        "DahRomy\\MVola\\DahRomyMVolaBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%"
