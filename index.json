@@ -1609,7 +1609,8 @@
             "1.0"
         ],
         "shopware/app-bundle": [
-            "1.0"
+            "1.0",
+            "4.0"
         ],
         "siburuxue/doctrine-helper": [
             "1.0"
