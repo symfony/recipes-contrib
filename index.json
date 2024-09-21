@@ -315,6 +315,9 @@
         "dahromy/glide-symfony": [
             "1.0"
         ],
+        "dahromy/mvola-bundle": [
+            "1.0"
+        ],
         "dama/doctrine-test-bundle": [
             "4.0",
             "7.2"
