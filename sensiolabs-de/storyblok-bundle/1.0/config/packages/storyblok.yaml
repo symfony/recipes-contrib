@@ -1,0 +1,3 @@
+storyblok:
+    base_uri: '%env(STORYBLOK_API_BASE_URI)%'
+    token: '%env(STORYBLOK_API_TOKEN)%'
