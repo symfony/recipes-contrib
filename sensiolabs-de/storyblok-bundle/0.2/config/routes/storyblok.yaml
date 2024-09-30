@@ -1,2 +1,2 @@
-#storyblok:
-#    resource: '@StoryblokBundle/config/routes.php'
+storyblok:
+    resource: '@StoryblokBundle/config/routes.php'
