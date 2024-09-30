@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "sensiolabs-de/storyblok-bundle": {
+            "manifest": {
+                "bundles": {
+                    "SensioLabs\\Storyblok\\Bundle\\StoryblokBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "STORYBLOK_API_BASE_URI": "https://api.storyblok.com",
+                    "STORYBLOK_API_TOKEN": "",
+                    "#1": "STORYBLOK_ASSETS_API_TOKEN="
+                }
+            },
+            "files": {
+                "config/packages/storyblok.yaml": {
+                    "contents": [
+                        "storyblok:",
+                        "    base_uri: '%env(STORYBLOK_API_BASE_URI)%'",
+                        "    token: '%env(STORYBLOK_API_TOKEN)%'",
+                        "#   assets_token: '%env(STORYBLOK_ASSETS_API_TOKEN)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "344169b91b939a21bbbde9f996f2fbbf8d3b6967"
+        }
+    }
+}

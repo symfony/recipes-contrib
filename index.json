@@ -1590,7 +1590,8 @@
             "2.0"
         ],
         "sensiolabs-de/storyblok-bundle": [
-            "1.0"
+            "0.1",
+            "0.2"
         ],
         "sensiolabs/connect-bundle": [
             "4.0"
