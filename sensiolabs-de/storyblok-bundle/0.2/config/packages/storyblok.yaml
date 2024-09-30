@@ -1,0 +1,5 @@
+storyblok:
+    base_uri: '%env(STORYBLOK_API_BASE_URI)%'
+    token: '%env(STORYBLOK_API_TOKEN)%'
+#   assets_token: '%env(STORYBLOK_ASSETS_API_TOKEN)%'
+#   webhook_secret: '%env(STORYBLOK_WEBHOOK_SECRET)%'
