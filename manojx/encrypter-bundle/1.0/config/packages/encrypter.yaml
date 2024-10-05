@@ -1,2 +1,2 @@
 encrypter:
-    secret: '%env(ENCRYPTER_SECRET)%' # Use the ENCRYPTER_SECRET env variable to set the secret
+    secret: '%env(ENCRYPTER_SECRET)%' # Update ENCRYPTER_SECRET in env file
