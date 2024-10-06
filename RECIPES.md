@@ -496,6 +496,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [routmoute/routmoute-sirene-bundle](https://packagist.org/packages/routmoute/routmoute-sirene-bundle) | [1.0](routmoute/routmoute-sirene-bundle/1.0) |
 | [rundum/event-base](https://packagist.org/packages/rundum/event-base) | [0.0](rundum/event-base/0.0) |
 | [ruwler/ruwler-sdk-bundle](https://packagist.org/packages/ruwler/ruwler-sdk-bundle) | [1.0](ruwler/ruwler-sdk-bundle/1.0) |
+| [saqqal/llm-integration-bundle](https://packagist.org/packages/saqqal/llm-integration-bundle) | [1.0](saqqal/llm-integration-bundle/1.0) |
 | [scheb/two-factor-bundle](https://packagist.org/packages/scheb/two-factor-bundle) | [3.16](scheb/two-factor-bundle/3.16) |
 | [schranz-search/symfony-bundle](https://packagist.org/packages/schranz-search/symfony-bundle) | [0.2](schranz-search/symfony-bundle/0.2) |
 | [sebtm/inwx-api-bundle](https://packagist.org/packages/sebtm/inwx-api-bundle) | [1.0](sebtm/inwx-api-bundle/1.0) |

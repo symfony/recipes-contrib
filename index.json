@@ -1571,6 +1571,9 @@
         "ruwler/ruwler-sdk-bundle": [
             "1.0"
         ],
+        "saqqal/llm-integration-bundle": [
+            "1.0"
+        ],
         "scheb/two-factor-bundle": [
             "3.16"
         ],
