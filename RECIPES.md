@@ -337,6 +337,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [makasim/yadm-bundle](https://packagist.org/packages/makasim/yadm-bundle) | [0.2](makasim/yadm-bundle/0.2) |
 | [maksze/telemetry-bundle](https://packagist.org/packages/maksze/telemetry-bundle) | [0.4](maksze/telemetry-bundle/0.4) |
 | [mangati/zenvia-notifier](https://packagist.org/packages/mangati/zenvia-notifier) | [1.0](mangati/zenvia-notifier/1.0) |
+| [manojx/encrypter-bundle](https://packagist.org/packages/manojx/encrypter-bundle) | [1.0](manojx/encrypter-bundle/1.0) |
 | [mapado/rest-client-sdk-bundle](https://packagist.org/packages/mapado/rest-client-sdk-bundle) | [0.24](mapado/rest-client-sdk-bundle/0.24) |
 | [maps_red/ticketing-bundle](https://packagist.org/packages/maps_red/ticketing-bundle) | [0.6](maps_red/ticketing-bundle/0.6) |
 | [mbarbey/u2f-security-bundle](https://packagist.org/packages/mbarbey/u2f-security-bundle) | [1.0](mbarbey/u2f-security-bundle/1.0) |

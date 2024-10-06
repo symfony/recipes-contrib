@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "manojx/encrypter-bundle": {
+            "manifest": {
+                "bundles": {
+                    "ManojX\\EncrypterBundle\\EncrypterBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "ENCRYPTER_SECRET": "your_secret_key_here"
+                }
+            },
+            "files": {
+                "config/packages/encrypter.yaml": {
+                    "contents": [
+                        "encrypter:",
+                        "    secret: '%env(ENCRYPTER_SECRET)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "27e9822d6df581f770838f4d4f447fffbfcba4ff"
+        }
+    }
+}
