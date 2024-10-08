@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "sylius/ui-translations": {
+            "manifest": {
+                "bundles": {
+                    "Sylius\\UiTranslations\\Symfony\\SyliusUiTranslationsBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "dea908d6a4add041281c1a1a60f37cba55312f98"
+        }
+    }
+}

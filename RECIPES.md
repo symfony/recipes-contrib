@@ -572,11 +572,16 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [swag-industries/melodiia](https://packagist.org/packages/swag-industries/melodiia) | [0.7](swag-industries/melodiia/0.7) |
 | [swarrot/swarrot-bundle](https://packagist.org/packages/swarrot/swarrot-bundle) | [1.6](swarrot/swarrot-bundle/1.6) |
 | [sylius/admin-order-creation-plugin](https://packagist.org/packages/sylius/admin-order-creation-plugin) | [0.6](sylius/admin-order-creation-plugin/0.6) |
+| [sylius/admin-ui](https://packagist.org/packages/sylius/admin-ui) | [0.4](sylius/admin-ui/0.4) |
+| [sylius/bootstrap-admin-ui](https://packagist.org/packages/sylius/bootstrap-admin-ui) | [0.4](sylius/bootstrap-admin-ui/0.4) |
 | [sylius/customer-order-cancellation-plugin](https://packagist.org/packages/sylius/customer-order-cancellation-plugin) | [0.2](sylius/customer-order-cancellation-plugin/0.2) |
 | [sylius/customer-reorder-plugin](https://packagist.org/packages/sylius/customer-reorder-plugin) | [1.0](sylius/customer-reorder-plugin/1.0) |
 | [sylius/invoicing-plugin](https://packagist.org/packages/sylius/invoicing-plugin) | [0.5](sylius/invoicing-plugin/0.5) |
 | [sylius/refund-plugin](https://packagist.org/packages/sylius/refund-plugin) | [0.4](sylius/refund-plugin/0.4) |
-| [sylius/resource-bundle](https://packagist.org/packages/sylius/resource-bundle) | [1.9](sylius/resource-bundle/1.9) |
+| [sylius/resource-bundle](https://packagist.org/packages/sylius/resource-bundle) | [1.12](sylius/resource-bundle/1.12) |
+| [sylius/twig-extra](https://packagist.org/packages/sylius/twig-extra) | [0.4](sylius/twig-extra/0.4) |
+| [sylius/twig-hooks](https://packagist.org/packages/sylius/twig-hooks) | [0.4](sylius/twig-hooks/0.4) |
+| [sylius/ui-translations](https://packagist.org/packages/sylius/ui-translations) | [0.4](sylius/ui-translations/0.4) |
 | [symandy/makefile-maker-bundle](https://packagist.org/packages/symandy/makefile-maker-bundle) | [0.5](symandy/makefile-maker-bundle/0.5) |
 | [symfony-bundles/kafka-bundle](https://packagist.org/packages/symfony-bundles/kafka-bundle) | [1.0](symfony-bundles/kafka-bundle/1.0) |
 | [symfony-bundles/redis-bundle](https://packagist.org/packages/symfony-bundles/redis-bundle) | [2.0](symfony-bundles/redis-bundle/2.0) |

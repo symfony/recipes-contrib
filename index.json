@@ -1819,6 +1819,12 @@
         "sylius/admin-order-creation-plugin": [
             "0.6"
         ],
+        "sylius/admin-ui": [
+            "0.4"
+        ],
+        "sylius/bootstrap-admin-ui": [
+            "0.4"
+        ],
         "sylius/customer-order-cancellation-plugin": [
             "0.2"
         ],
@@ -1833,7 +1839,17 @@
         ],
         "sylius/resource-bundle": [
             "1.6",
-            "1.9"
+            "1.9",
+            "1.12"
+        ],
+        "sylius/twig-extra": [
+            "0.4"
+        ],
+        "sylius/twig-hooks": [
+            "0.4"
+        ],
+        "sylius/ui-translations": [
+            "0.4"
         ],
         "symandy/makefile-maker-bundle": [
             "0.5"

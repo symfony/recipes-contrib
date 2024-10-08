@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "sylius/bootstrap-admin-ui": {
+            "manifest": {
+                "bundles": {
+                    "Sylius\\BootstrapAdminUi\\Symfony\\SyliusBootstrapAdminUiBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sylius_bootstrap_admin_ui.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: '@SyliusBootstrapAdminUiBundle/config/app.php' }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "48198641b4c0d0d365519d74b097be53bf53e335"
+        }
+    }
+}

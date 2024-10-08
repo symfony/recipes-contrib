@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "sylius/admin-ui": {
+            "manifest": {
+                "bundles": {
+                    "Sylius\\AdminUi\\Symfony\\SyliusAdminUiBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/sylius_admin_ui.yaml": {
+                    "contents": [
+                        "sylius_admin_ui:",
+                        "    resource: '@SyliusAdminUiBundle/config/routes.php'",
+                        "    prefix: /admin",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8c08475f21574ea82ca3cd86b30f89fc9e4cd9ba"
+        }
+    }
+}

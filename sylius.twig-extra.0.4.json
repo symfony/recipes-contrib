@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "sylius/twig-extra": {
+            "manifest": {
+                "bundles": {
+                    "Sylius\\TwigExtra\\Symfony\\SyliusTwigExtraBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "00e1c7f2e97de7b0d990e507e1541fd05d4cdbfe"
+        }
+    }
+}

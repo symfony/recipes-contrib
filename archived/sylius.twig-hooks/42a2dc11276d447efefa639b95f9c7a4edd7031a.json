@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "sylius/twig-hooks": {
+            "manifest": {
+                "bundles": {
+                    "Sylius\\TwigHooks\\SyliusTwigHooksBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "42a2dc11276d447efefa639b95f9c7a4edd7031a"
+        }
+    }
+}
