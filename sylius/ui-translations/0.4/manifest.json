@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "Sylius\\UiTranslations\\Symfony\\SyliusUiTranslationsBundle": ["all"]
+    }
+}
