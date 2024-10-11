@@ -1,0 +1,4 @@
+security:
+    providers:
+        eulogin:
+            id: EcPhp\EuLoginBundle\Security\Core\User\EuLoginUserProvider
