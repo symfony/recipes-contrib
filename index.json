@@ -460,7 +460,8 @@
         ],
         "ecphp/eu-login-bundle": [
             "1.0",
-            "2.0"
+            "2.0",
+            "3.0"
         ],
         "eduandebruijne/admin-bundle": [
             "11.0"

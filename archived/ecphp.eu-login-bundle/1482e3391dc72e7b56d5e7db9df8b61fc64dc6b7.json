@@ -1,0 +1,75 @@
+{
+    "manifests": {
+        "ecphp/eu-login-bundle": {
+            "manifest": {
+                "bundles": {
+                    "EcPhp\\EuLoginBundle\\EuLoginBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "ECAS_BASE_URL": "https://ecas.ec.europa.eu/cas",
+                    "ECAS_SERVICE": "",
+                    "ECAS_LOGOUT_SERVICE_URL": "",
+                    "ECAS_PGT_CALLBACK_URL": "",
+                    "ECAS_PROXY_ASSURANCE_LEVEL": "",
+                    "ECAS_AUTHENTICATION_LEVEL": "BASIC",
+                    "ECAS_ASSURANCE_LEVEL_LOW": "/laxValidate",
+                    "ECAS_ASSURANCE_LEVEL_MEDIUM": "/sponsorValidate",
+                    "ECAS_ASSURANCE_LEVEL_HIGH": "/interinstitutionalValidate",
+                    "ECAS_ASSURANCE_LEVEL_TOP": "/strictValidate",
+                    "ECAS_ASSURANCE_LEVEL": "${ECAS_ASSURANCE_LEVEL_TOP}"
+                }
+            },
+            "files": {
+                "config/packages/dev/cas_bundle.yaml": {
+                    "contents": [
+                        "cas:",
+                        "    base_url: '%env(ECAS_BASE_URL)%'",
+                        "    protocol:",
+                        "        login:",
+                        "            path: /login",
+                        "            default_parameters:",
+                        "                service: '%env(ECAS_SERVICE)%'",
+                        "                authenticationLevel: '%env(ECAS_AUTHENTICATION_LEVEL)%'",
+                        "        serviceValidate:",
+                        "            path: '%env(ECAS_ASSURANCE_LEVEL)%'",
+                        "            default_parameters:",
+                        "                userDetails: \"true\"",
+                        "                groups: \"*\"",
+                        "                pgtUrl: '%env(ECAS_PGT_CALLBACK_URL)%'",
+                        "                service: '%env(ECAS_SERVICE)%'",
+                        "        logout:",
+                        "            path: /logout",
+                        "            default_parameters:",
+                        "                service: '%env(ECAS_LOGOUT_SERVICE_URL)%'",
+                        "        proxy:",
+                        "            path: /proxy",
+                        "        proxyValidate:",
+                        "            path: '%env(ECAS_PROXY_ASSURANCE_LEVEL)%'",
+                        "            default_parameters:",
+                        "                userDetails: \"true\"",
+                        "                pgtUrl: '%env(ECAS_PGT_CALLBACK_URL)%'",
+                        "                service: '%env(ECAS_SERVICE)%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/dev/eulogin_cas_security.yaml": {
+                    "contents": [
+                        "security:",
+                        "    providers:",
+                        "        eulogin:",
+                        "            id: EcPhp\\EuLoginBundle\\Security\\Core\\User\\EuLoginUserProvider",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "1482e3391dc72e7b56d5e7db9df8b61fc64dc6b7"
+        }
+    }
+}
