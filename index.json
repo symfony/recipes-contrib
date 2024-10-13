@@ -452,7 +452,8 @@
         ],
         "ecphp/cas-bundle": [
             "1.0",
-            "2.0"
+            "2.0",
+            "3.0"
         ],
         "ecphp/eu-login-api-authentication-bundle": [
             "1.0"

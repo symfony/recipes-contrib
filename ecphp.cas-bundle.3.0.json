@@ -1,0 +1,68 @@
+{
+    "manifests": {
+        "ecphp/cas-bundle": {
+            "manifest": {
+                "bundles": {
+                    "EcPhp\\CasBundle\\CasBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/dev/cas_bundle.yaml": {
+                    "contents": [
+                        "cas:",
+                        "    # Change the URL to your own CAS server",
+                        "    base_url: https://ecas.ec.europa.eu/cas",
+                        "    protocol:",
+                        "        login:",
+                        "            path: /login",
+                        "            default_parameters:",
+                        "                service: cas_bundle_homepage",
+                        "        serviceValidate:",
+                        "            path: /p3/serviceValidate",
+                        "            default_parameters:",
+                        "                format: JSON",
+                        "                #pgtUrl: cas_bundle_proxy_callback",
+                        "        logout:",
+                        "            path: /logout",
+                        "            default_parameters:",
+                        "                service: cas_bundle_homepage",
+                        "        proxy:",
+                        "            path: /proxy",
+                        "        proxyValidate:",
+                        "            path: /p3/proxyValidate",
+                        "            default_parameters:",
+                        "                format: JSON",
+                        "                #pgtUrl: cas_bundle_proxy_callback",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/dev/cas_security.yaml": {
+                    "contents": [
+                        "security:",
+                        "    providers:",
+                        "        cas:",
+                        "            id: EcPhp\\CasBundle\\Security\\Core\\User\\CasUserProvider",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/cas.yaml": {
+                    "contents": [
+                        "cas_bundle:",
+                        "    resource: \"@CasBundle/Resources/config/routes/routes.php\"",
+                        "    prefix: /cas",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8f5b332856eb024476c6404364e985fdda3db7ac"
+        }
+    }
+}
