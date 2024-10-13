@@ -1,0 +1,3 @@
+cas_bundle:
+    resource: "@CasBundle/Resources/config/routes/routes.php"
+    prefix: /cas
