@@ -502,7 +502,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sebtm/inwx-api-bundle](https://packagist.org/packages/sebtm/inwx-api-bundle) | [1.0](sebtm/inwx-api-bundle/1.0) |
 | [secit-pl/imap-bundle](https://packagist.org/packages/secit-pl/imap-bundle) | [1.0](secit-pl/imap-bundle/1.0) |
 | [seferov/aws-bundle](https://packagist.org/packages/seferov/aws-bundle) | [3.0](seferov/aws-bundle/3.0) |
-| [sensiolabs-de/storyblok-bundle](https://packagist.org/packages/sensiolabs-de/storyblok-bundle) | [0.2](sensiolabs-de/storyblok-bundle/0.2) |
+| [sensiolabs-de/storyblok-bundle](https://packagist.org/packages/sensiolabs-de/storyblok-bundle) | [0.3](sensiolabs-de/storyblok-bundle/0.3) |
 | [sensiolabs/connect-bundle](https://packagist.org/packages/sensiolabs/connect-bundle) | [4.0](sensiolabs/connect-bundle/4.0) |
 | [sensiolabs/gotenberg-bundle](https://packagist.org/packages/sensiolabs/gotenberg-bundle) | [0.1](sensiolabs/gotenberg-bundle/0.1) |
 | [sensiolabs/storybook-bundle](https://packagist.org/packages/sensiolabs/storybook-bundle) | [0.1](sensiolabs/storybook-bundle/0.1) |

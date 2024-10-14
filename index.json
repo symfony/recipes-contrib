@@ -1595,7 +1595,8 @@
         ],
         "sensiolabs-de/storyblok-bundle": [
             "0.1",
-            "0.2"
+            "0.2",
+            "0.3"
         ],
         "sensiolabs/connect-bundle": [
             "4.0"
