@@ -1,2 +1,3 @@
-ignition:
-    dark_mode: false
+when@dev:
+    ignition:
+        dark_mode: false
