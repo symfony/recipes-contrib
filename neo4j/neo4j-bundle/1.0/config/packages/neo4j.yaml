@@ -1,0 +1,4 @@
+neo4j:
+    drivers:
+        default:
+            dsn: '%env(resolve:NEO4J_DEFAULT_CONNECTION_DSN)%'
