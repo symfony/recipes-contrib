@@ -397,7 +397,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [nella/monolog-tracy-bundle](https://packagist.org/packages/nella/monolog-tracy-bundle) | [2.0](nella/monolog-tracy-bundle/2.0) |
 | [nelmio/api-doc-bundle](https://packagist.org/packages/nelmio/api-doc-bundle) | [3.0](nelmio/api-doc-bundle/3.0) |
 | [nelmio/solarium-bundle](https://packagist.org/packages/nelmio/solarium-bundle) | [5.0](nelmio/solarium-bundle/5.0) |
-| [neo4j/neo4j-bundle](https://packagist.org/packages/neo4j/neo4j-bundle) | [0.4](neo4j/neo4j-bundle/0.4) |
+| [neo4j/neo4j-bundle](https://packagist.org/packages/neo4j/neo4j-bundle) | [1.0](neo4j/neo4j-bundle/1.0) |
 | [netbull/security-bundle](https://packagist.org/packages/netbull/security-bundle) | [1.0](netbull/security-bundle/1.0) |
 | [netgen/content-browser](https://packagist.org/packages/netgen/content-browser) | [1.0](netgen/content-browser/1.0) |
 | [netgen/layouts-core](https://packagist.org/packages/netgen/layouts-core) | [1.0](netgen/layouts-core/1.0) |
