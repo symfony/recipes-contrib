@@ -7,7 +7,7 @@ sensiolabs_minify:
     minify:
         # Use local binary if available
         # binary_path: 'auto'
-        
+
         # Specify local binary path
         # binary_path: '/usr/bin/minify'
 
