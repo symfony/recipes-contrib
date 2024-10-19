@@ -1605,6 +1605,9 @@
         "sensiolabs/gotenberg-bundle": [
             "0.1"
         ],
+        "sensiolabs/minify-bundle": [
+            "0.9"
+        ],
         "sensiolabs/storybook-bundle": [
             "0.1"
         ],
