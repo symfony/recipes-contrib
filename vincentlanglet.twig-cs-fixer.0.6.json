@@ -1,0 +1,50 @@
+{
+    "manifests": {
+        "vincentlanglet/twig-cs-fixer": {
+            "manifest": {
+                "gitignore": [
+                    "/.twig-cs-fixer.cache"
+                ],
+                "copy-from-recipe": {
+                    ".twig-cs-fixer.php": ".twig-cs-fixer.php"
+                },
+                "post-install-output": [
+                    "<bg=green;fg=white></>",
+                    "<bg=green;fg=white> You can edit the `.twig-cs-fixer.php` to your needs </>",
+                    "<bg=green;fg=white> See https://github.com/VincentLanglet/Twig-CS-Fixer/blob/main/docs/configuration.md </>",
+                    "<bg=green;fg=white> For configuration explanation: </>"
+                ]
+            },
+            "files": {
+                ".twig-cs-fixer.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "$ruleset = new TwigCsFixer\\Ruleset\\Ruleset();",
+                        "",
+                        "// You can start from a default standard",
+                        "$ruleset->addStandard(new TwigCsFixer\\Standard\\TwigCsFixer());",
+                        "",
+                        "//// And then add/remove/override some rules",
+                        "//$ruleset->addRule(new TwigCsFixer\\Rules\\File\\FileExtensionRule());",
+                        "//$ruleset->removeRule(TwigCsFixer\\Rules\\Whitespace\\EmptyLinesRule::class);",
+                        "//$ruleset->overrideRule(",
+                        "//    new TwigCsFixer\\Rules\\Punctuation\\PunctuationSpacingRule(",
+                        "//        ['}' => 1],",
+                        "//        ['{' => 1],",
+                        "//    )",
+                        "//);",
+                        "",
+                        "$config = new TwigCsFixer\\Config\\Config();",
+                        "$config->setRuleset($ruleset);",
+                        "",
+                        "return $config;",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a71c728ed21cac0939ba627a8a31ec6843b6e264"
+        }
+    }
+}
