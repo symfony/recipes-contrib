@@ -1,0 +1,4 @@
+<bg=green;fg=white></>
+<bg=green;fg=white> You can edit the `.twig-cs-fixer.dist.php` to your needs </>
+<bg=green;fg=white> See https://github.com/VincentLanglet/Twig-CS-Fixer/blob/main/docs/configuration.md </>
+<bg=green;fg=white> For configuration explanation. </>
