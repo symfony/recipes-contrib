@@ -1,0 +1,4 @@
+storyblok:
+    space_id: "%env(int:STORYBLOK_SPACE_ID)%"
+    management_token: "%env(STORYBLOK_MANAGEMENT_TOKEN)%"
+    content_token: "%env(STORYBLOK_CONTENT_TOKEN)%"
