@@ -5,6 +5,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | Package | Latest Recipe |
 | --- | --- |
 | [21torr/hosting](https://packagist.org/packages/21torr/hosting) | [3.2](21torr/hosting/3.2) |
+| [21torr/storyblok](https://packagist.org/packages/21torr/storyblok) | [3.0](21torr/storyblok/3.0) |
 | [abel/keycloak-bearer-only-adapter-bundle](https://packagist.org/packages/abel/keycloak-bearer-only-adapter-bundle) | [1.0](abel/keycloak-bearer-only-adapter-bundle/1.0) |
 | [ablaise/meteion-bundle](https://packagist.org/packages/ablaise/meteion-bundle) | [1.0](ablaise/meteion-bundle/1.0) |
 | [acseo/typesense-bundle](https://packagist.org/packages/acseo/typesense-bundle) | [0.7](acseo/typesense-bundle/0.7) |

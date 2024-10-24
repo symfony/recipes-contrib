@@ -5,6 +5,9 @@
             "2.1",
             "3.2"
         ],
+        "21torr/storyblok": [
+            "3.0"
+        ],
         "abel/keycloak-bearer-only-adapter-bundle": [
             "1.0"
         ],
