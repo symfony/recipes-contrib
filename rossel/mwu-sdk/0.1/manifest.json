@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Rossel\\MwuSdk\\MwuSdkBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
