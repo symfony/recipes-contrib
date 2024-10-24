@@ -1,0 +1,6 @@
+task_manager:
+    queues:
+        # queues sorted by priority. Highest priority at the top
+        - app_very_urgent
+        - app_urgent
+        - app
