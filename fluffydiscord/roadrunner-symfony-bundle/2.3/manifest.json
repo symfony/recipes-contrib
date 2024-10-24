@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "FluffyDiscord\\RoadRunnerBundle\\FluffyDiscordRoadRunnerBundle": ["all"]
+    },
+    "copy-from-package": {
+        "install/.rr.yaml": ".rr.yaml"
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "RR_RPC": "tcp://127.0.0.1:6001"
+    }
+}
