@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "21torr/task-manager": {
+            "manifest": {
+                "bundles": {
+                    "Torr\\TaskManager\\TaskManagerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/task_manager.yaml": {
+                    "contents": [
+                        "task_manager:",
+                        "    queues:",
+                        "        # queues sorted by priority. Highest priority at the top",
+                        "        - app_very_urgent",
+                        "        - app_urgent",
+                        "        - app",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e80fc18d88f49e5a5974f9c9eadf6f5fbaad2b21"
+        }
+    }
+}

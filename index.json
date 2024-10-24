@@ -8,6 +8,9 @@
         "21torr/storyblok": [
             "3.0"
         ],
+        "21torr/task-manager": [
+            "2.0"
+        ],
         "abel/keycloak-bearer-only-adapter-bundle": [
             "1.0"
         ],
