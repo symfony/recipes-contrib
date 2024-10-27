@@ -1,0 +1,60 @@
+{
+    "manifests": {
+        "rossel/mwu-sdk": {
+            "manifest": {
+                "bundles": {
+                    "Rossel\\MwuSdk\\MwuSdkBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/mwu_sdk.yaml": {
+                    "contents": [
+                        "mwu_sdk:",
+                        "    switches:",
+                        "        -   ip_address: \"CHANGE_ME!\"",
+                        "            port: \"CHANGE_ME!\"",
+                        "            light_modules_generator:",
+                        "                first_module_id: 1",
+                        "                increment_between_module_ids: 1",
+                        "                number_of_modules: 4",
+                        "    behavior:",
+                        "        display_status:",
+                        "            light:",
+                        "                mode: on",
+                        "                color: red",
+                        "            screen:",
+                        "                mode: on",
+                        "                text: \"0000\"",
+                        "        display_status_after_confirm:",
+                        "            light:",
+                        "                mode: on",
+                        "                color: green",
+                        "            screen:",
+                        "                mode: on",
+                        "                text: \"0000\"",
+                        "        display_status_after_fn:",
+                        "            light:",
+                        "                mode: on",
+                        "                color: yellow",
+                        "            screen:",
+                        "                mode: on",
+                        "                text: \"9999\"",
+                        "        buttons:",
+                        "            fn:",
+                        "                text: \"----\"",
+                        "            quantity_keys:",
+                        "                mode: increment",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a5ab68f54af641ae3ff1a30b3bf67e6628093ba8"
+        }
+    }
+}

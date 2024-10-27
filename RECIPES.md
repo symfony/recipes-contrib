@@ -493,6 +493,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [rikudou/psr6-dynamo-db-bundle](https://packagist.org/packages/rikudou/psr6-dynamo-db-bundle) | [2.0](rikudou/psr6-dynamo-db-bundle/2.0) |
 | [ro0nl/http-responder](https://packagist.org/packages/ro0nl/http-responder) | [0.1](ro0nl/http-responder/0.1) |
 | [rokka/client-bundle](https://packagist.org/packages/rokka/client-bundle) | [1.0](rokka/client-bundle/1.0) |
+| [rossel/mwu-sdk](https://packagist.org/packages/rossel/mwu-sdk) | [0.1](rossel/mwu-sdk/0.1) |
 | [roukmoute/hashids-bundle](https://packagist.org/packages/roukmoute/hashids-bundle) | [1.4](roukmoute/hashids-bundle/1.4) |
 | [routmoute/routmoute-discord-bundle](https://packagist.org/packages/routmoute/routmoute-discord-bundle) | [1.1](routmoute/routmoute-discord-bundle/1.1) |
 | [routmoute/routmoute-sirene-bundle](https://packagist.org/packages/routmoute/routmoute-sirene-bundle) | [1.0](routmoute/routmoute-sirene-bundle/1.0) |

@@ -1566,6 +1566,9 @@
         "rokka/client-bundle": [
             "1.0"
         ],
+        "rossel/mwu-sdk": [
+            "0.1"
+        ],
         "roukmoute/hashids-bundle": [
             "1.4"
         ],
