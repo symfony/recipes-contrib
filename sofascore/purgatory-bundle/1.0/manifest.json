@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Sofascore\\PurgatoryBundle\\PurgatoryBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
