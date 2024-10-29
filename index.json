@@ -1663,6 +1663,9 @@
         "snc/redis-bundle": [
             "2.0"
         ],
+        "sofascore/purgatory-bundle": [
+            "1.0"
+        ],
         "softavis/flysystem-cloudflare-bundle": [
             "0.1"
         ],

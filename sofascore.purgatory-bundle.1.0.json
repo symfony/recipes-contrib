@@ -1,0 +1,65 @@
+{
+    "manifests": {
+        "sofascore/purgatory-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Sofascore\\PurgatoryBundle\\PurgatoryBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  <bg=blue;fg=white>                                                     </>",
+                    "  <bg=blue;fg=white>   Getting Started with </><bg=blue;fg=white;options=bold>sofascore/purgatory-bundle</><bg=blue;fg=white>   </>",
+                    "  <bg=blue;fg=white>                                                     </>",
+                    "",
+                    "  * <fg=blue>Configure</> a purger based on your HTTP cache backend in <comment>config/packages/purgatory.yaml</>",
+                    "  * <fg=blue>Read</> the complete documentation at <comment>https://sofascore.github.io/purgatory-bundle/</>"
+                ]
+            },
+            "files": {
+                "config/packages/purgatory.yaml": {
+                    "contents": [
+                        "# Read the full documentation at: https://sofascore.github.io/purgatory-bundle/",
+                        "",
+                        "purgatory:",
+                        "    # Define patterns for routes whose controllers should not be checked for #[PurgeOn] attributes.",
+                        "    route_ignore_patterns: [ '/^_profiler/', '/^_wdt/' ]",
+                        "",
+                        "    # Define the purger to use. For Varnish, set it to \"varnish\". To create a custom purger, refer to:",
+                        "    # https://sofascore.github.io/purgatory-bundle/custom-purgers.html",
+                        "    purger:",
+                        "        name: symfony",
+                        "        # Specify the hosts from which URLs should be purged. This is primarily used by the Varnish purger.",
+                        "        # hosts: []",
+                        "",
+                        "    # To process purge requests asynchronously, configure the Symfony Messenger transport. For more details, visit:",
+                        "    # https://sofascore.github.io/purgatory-bundle/#configuring-asynchronous-processing",
+                        "    # messenger:",
+                        "    #     transport: null",
+                        "    #     # Set the number of URLs to dispatch per message. Defaults to using all URLs passed to the purger.",
+                        "    #     batch_size: null",
+                        "",
+                        "when@dev:",
+                        "    purgatory:",
+                        "        # Ignore all purge requests during development.",
+                        "        purger: void",
+                        "",
+                        "when@test:",
+                        "    purgatory:",
+                        "        # Enable asserting in tests that the expected purge requests were dispatched. For details, see:",
+                        "        # https://sofascore.github.io/purgatory-bundle/#testing",
+                        "        purger: in-memory",
+                        "        # Disable collecting purge request data in the test environment.",
+                        "        profiler_integration: false",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "624b0a2afe0a95897726236eabfd2d473ad601ab"
+        }
+    }
+}

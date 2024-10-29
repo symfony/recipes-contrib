@@ -522,6 +522,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [skipthedragon/inertia-bundle](https://packagist.org/packages/skipthedragon/inertia-bundle) | [1.0](skipthedragon/inertia-bundle/1.0) |
 | [slot/mandrill-bundle](https://packagist.org/packages/slot/mandrill-bundle) | [1.1](slot/mandrill-bundle/1.1) |
 | [snc/redis-bundle](https://packagist.org/packages/snc/redis-bundle) | [2.0](snc/redis-bundle/2.0) |
+| [sofascore/purgatory-bundle](https://packagist.org/packages/sofascore/purgatory-bundle) | [1.0](sofascore/purgatory-bundle/1.0) |
 | [softavis/flysystem-cloudflare-bundle](https://packagist.org/packages/softavis/flysystem-cloudflare-bundle) | [0.1](softavis/flysystem-cloudflare-bundle/0.1) |
 | [softspring/cms-bundle](https://packagist.org/packages/softspring/cms-bundle) | [5.2](softspring/cms-bundle/5.2) |
 | [softspring/cms-module-collection](https://packagist.org/packages/softspring/cms-module-collection) | [5.2](softspring/cms-module-collection/5.2) |
