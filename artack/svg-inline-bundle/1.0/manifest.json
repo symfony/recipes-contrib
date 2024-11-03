@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Artack\\SvgInlineBundle\\SvgInlineBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
