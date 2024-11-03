@@ -1,0 +1,2 @@
+svg_inline:
+    path: "%kernel.project_dir%/assets/svg"
