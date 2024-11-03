@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "artack/svg-inline-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Artack\\SvgInlineBundle\\SvgInlineBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/artack_svg_inline.yaml": {
+                    "contents": [
+                        "svg_inline:",
+                        "    path: \"%kernel.project_dir%/assets/svg\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2efd7e97ed639c30c26e50642b93c85367757680"
+        }
+    }
+}

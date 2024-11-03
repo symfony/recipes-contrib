@@ -80,6 +80,9 @@
         "armin/scssphp-bundle": [
             "1.0"
         ],
+        "artack/svg-inline-bundle": [
+            "1.0"
+        ],
         "artox-lab/clarc-bundle": [
             "0.1"
         ],
