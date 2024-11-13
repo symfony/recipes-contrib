@@ -21,11 +21,11 @@
         "RUN install-php-extensions mongodb"
     ],
     "docker-compose": {
-        "docker-compose.yml": {
+        "compose.yaml": {
             "services": [
                 "mongodb:",
                 "  # In production, you may want to use a managed database service",
-                "  image: mongodb/mongodb-atlas-local:latest",
+                "  image: mongodb/mongodb-community-server:latest",
                 "  environment:",
                 "    - MONGODB_INITDB_DATABASE=${MONGODB_DB:-app}",
                 "    # You should definitely set a root username and password in production",
@@ -38,7 +38,7 @@
             ],
             "volumes": ["mongodb_data:"]
         },
-        "docker-compose.override.yml": {
+        "compose.override.yaml": {
             "services": [
                 "mongodb:",
                 "  ports:",
