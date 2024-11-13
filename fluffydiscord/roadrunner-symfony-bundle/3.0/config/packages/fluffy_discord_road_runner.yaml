@@ -19,6 +19,21 @@ fluffy_discord_road_runner:
         # and then use dynamic worker scaling as described here https://docs.roadrunner.dev/php-worker/scaling
         lazy_boot: false
 
+        # Optional
+        # -----------
+        # This decides if Symfony routing should be preloaded when worker starts and boots Symfony kernel.
+        # This option halves the initial request response time.
+        # (based on a project with over 400 routes and quite a lot of services, YMMW)
+        #
+        # true (default in PROD) - sends one dummy (empty) HTTP request to the kernel to initialize routing and services around it
+        # false (default in DEV) - only when first worker request arrives, routing and services are loaded
+        #
+        # You might want to create a dummy "/" route for the route to "land",
+        # or listen to onKernelRequest events and look in the request for the attribute
+        # FluffyDiscord\RoadRunnerBundle\Worker\HttpWorker::DUMMY_REQUEST_ATTRIBUTE
+        # Set this to "false" if you have any issues and report them to me.
+        early_router_initialization: true
+
     # https://docs.roadrunner.dev/plugins/centrifuge
     centrifugo:
         # Optional
@@ -49,3 +64,7 @@ fluffy_discord_road_runner:
         # for end-to-end encryption. "sodium" php extension is required.
         # https://docs.roadrunner.dev/key-value/overview-kv#end-to-end-value-encryption
         keypair_path: bin/keypair.key
+
+when@dev:
+    fluffy_discord_road_runner:
+        early_router_initialization: false
