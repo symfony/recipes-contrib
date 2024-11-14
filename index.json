@@ -816,6 +816,9 @@
         "jbtcd/fitbit-bundle": [
             "1.0"
         ],
+        "jeandanyel/list-bundle": [
+            "0.1"
+        ],
         "jmose/command-scheduler-bundle": [
             "2.0"
         ],

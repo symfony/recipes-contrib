@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "jeandanyel/list-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Jeandanyel\\ListBundle\\JeandanyelListBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/jeandanyel_list.yaml": {
+                    "contents": [
+                        "jeandanyel_list:",
+                        "    resource: \"@JeandanyelListBundle/config/routes.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "61fae6d6c9553548671209c92cf5b9518195c579"
+        }
+    }
+}
