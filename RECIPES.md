@@ -196,6 +196,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [felds/quick-mailer-bundle](https://packagist.org/packages/felds/quick-mailer-bundle) | [5.0](felds/quick-mailer-bundle/5.0) |
 | [ferror/phpscan](https://packagist.org/packages/ferror/phpscan) | [1.0](ferror/phpscan/1.0) |
 | [flagception/flagception-bundle](https://packagist.org/packages/flagception/flagception-bundle) | [3.0](flagception/flagception-bundle/3.0) |
+| [fluffydiscord/roadrunner-symfony-bundle](https://packagist.org/packages/fluffydiscord/roadrunner-symfony-bundle) | [3.0](fluffydiscord/roadrunner-symfony-bundle/3.0) |
 | [flux-se/sylius-payum-stripe-plugin](https://packagist.org/packages/flux-se/sylius-payum-stripe-plugin) | [2.0](flux-se/sylius-payum-stripe-plugin/2.0) |
 | [fluxter/saas-provider-bundle](https://packagist.org/packages/fluxter/saas-provider-bundle) | [2.0](fluxter/saas-provider-bundle/2.0) |
 | [formatz/fz-hosting-symfony-bundle](https://packagist.org/packages/formatz/fz-hosting-symfony-bundle) | [1.0](formatz/fz-hosting-symfony-bundle/1.0) |

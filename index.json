@@ -613,6 +613,10 @@
         "flagception/flagception-bundle": [
             "3.0"
         ],
+        "fluffydiscord/roadrunner-symfony-bundle": [
+            "2.3",
+            "3.0"
+        ],
         "flux-se/sylius-payum-stripe-plugin": [
             "1.2",
             "2.0"
