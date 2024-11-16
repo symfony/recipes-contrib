@@ -816,6 +816,9 @@
         "jbtcd/fitbit-bundle": [
             "1.0"
         ],
+        "jeandanyel/crud-bundle": [
+            "0.1"
+        ],
         "jeandanyel/list-bundle": [
             "0.1"
         ],

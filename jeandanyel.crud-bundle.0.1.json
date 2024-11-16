@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "jeandanyel/crud-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Jeandanyel\\CrudBundle\\JeandanyelCrudBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/jeandanyel_crud.yaml": {
+                    "contents": [
+                        "jeandanyel_crud:",
+                        "    resource: \"@JeandanyelCrudBundle/config/routes.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e1a14e824f21130fcb61ac5c2e7d4d0697d80bc3"
+        }
+    }
+}
