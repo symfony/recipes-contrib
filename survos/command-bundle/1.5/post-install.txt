@@ -4,5 +4,5 @@
 
   * <fg=yellow>Next steps:</>
     1. Configure /config/packages/survos_command.php to expose the namespaces (command prefixes)
-    2. <comment>secure the /admin route, configure the route in config/routes/survos_command.php</>;
-    3. Visit <comment>/admin/commmands</>.
+    2. <comment>secure the /admin route, configure the route in config/routes/survos_command.yaml</>;
+    3. Visit <href=/admin/commmands</>.
