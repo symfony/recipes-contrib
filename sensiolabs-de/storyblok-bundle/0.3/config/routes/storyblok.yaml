@@ -1,0 +1,2 @@
+storyblok:
+    resource: '@StoryblokBundle/config/routes.php'

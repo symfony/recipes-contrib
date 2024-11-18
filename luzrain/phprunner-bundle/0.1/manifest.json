@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Luzrain\\PhpRunnerBundle\\PhpRunnerBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

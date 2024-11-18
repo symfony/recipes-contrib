@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Softspring\\PermissionsBundle\\SfsPermissionsBundle": ["all"]
+    },
+    "conflict": {
+        "php": "<8.1"
+    }
+}

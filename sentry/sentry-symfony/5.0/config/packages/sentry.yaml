@@ -1,0 +1,25 @@
+when@prod:
+    sentry:
+        dsn: '%env(SENTRY_DSN)%'
+        options:
+            ignore_exceptions:
+                - 'Symfony\Component\ErrorHandler\Error\FatalError'
+                - 'Symfony\Component\Debug\Exception\FatalErrorException'
+
+#        If you are using Monolog, you also need this additional configuration to log the errors correctly:
+#        https://docs.sentry.io/platforms/php/guides/symfony/#monolog-integration
+#        register_error_listener: false
+#        register_error_handler: false
+
+#    monolog:
+#        handlers:
+#            sentry:
+#                type: sentry
+#                level: !php/const Monolog\Logger::ERROR
+#                hub_id: Sentry\State\HubInterface
+
+#    Uncomment these lines to register a log message processor that resolves PSR-3 placeholders
+#    https://docs.sentry.io/platforms/php/guides/symfony/#monolog-integration
+#    services:
+#        Monolog\Processor\PsrLogMessageProcessor:
+#            tags: { name: monolog.processor, handler: sentry }

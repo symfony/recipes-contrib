@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "SimplyStream\\TwitchApiBundle\\SimplyStreamTwitchApiBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "TWITCH_ID": "",
+        "TWITCH_SECRET": "",
+        "TWITCH_REDIRECT_URI": "",
+        "TWITCH_WEBHOOK_SECRET": ""
+    }
+}

@@ -1,0 +1,5 @@
+when@dev:
+    storybook:
+        sandbox:
+            allowedFunctions:
+                - 'dump'

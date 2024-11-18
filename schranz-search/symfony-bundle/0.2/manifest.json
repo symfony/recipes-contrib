@@ -1,0 +1,19 @@
+{
+    "bundles": {
+        "Schranz\\Search\\Integration\\Symfony\\SearchBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "Install one of the following adapters: https://schranz-search.github.io/schranz-search/getting-started/index.html",
+        "#2": "SEAL_DSN=\"meilisearch://127.0.0.1:7700\"",
+        "#3": "SEAL_DSN=\"algolia://ALGOLIA_APPLICATION_ID:ALGOLIA_ADMIN_API_KEY\"",
+        "#4": "SEAL_DSN=\"elasticsearch://127.0.0.1:9200\"",
+        "#5": "SEAL_DSN=\"opensearch://127.0.0.1:9200\"",
+        "#6": "SEAL_DSN=\"redisearch://127.0.0.1:6379\"",
+        "#7": "SEAL_DSN=\"solr://127.0.0.1:8983\"",
+        "#8": "SEAL_DSN=\"typesense://S3CR3T@127.0.0.1:8108\"",
+        "SEAL_DSN": "loupe://var/indexes"
+    }
+}

@@ -1,0 +1,2 @@
+imports:
+    - { resource: '@SfsUserBundle/config/security/admin_role_hierarchy.yaml' }

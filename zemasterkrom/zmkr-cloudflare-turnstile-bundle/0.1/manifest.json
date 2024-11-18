@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "Zemasterkrom\\CloudflareTurnstileBundle\\ZmkrCloudflareTurnstileBundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "CLOUDFLARE_TURNSTILE_SITEKEY": "1x00000000000000000000AA",
+        "CLOUDFLARE_TURNSTILE_SECRET_KEY": "1x0000000000000000000000000000000AA"
+    }
+}

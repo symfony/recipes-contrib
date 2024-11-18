@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Sensiolabs\\MinifyBundle\\SensiolabsMinifyBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "gitignore": [
+        "/%VAR_DIR%/minify/"
+    ]
+}

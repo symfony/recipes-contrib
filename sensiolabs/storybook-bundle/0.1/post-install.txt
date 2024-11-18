@@ -1,0 +1,8 @@
+<bg=blue;fg=white>              </>
+<bg=blue;fg=white> What's next? </>
+<bg=blue;fg=white>              </>
+
+  * <fg=blue>Run</> your application:
+    1. Initialize Storybook in your project: <comment>bin/console storybook:init</> command;
+       - This will create basic configuration files and add required dependencies to your package.json.
+    2. Follow the instructions provided by the storybook:init command

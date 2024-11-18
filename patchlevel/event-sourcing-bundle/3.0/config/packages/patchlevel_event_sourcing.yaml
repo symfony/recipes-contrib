@@ -1,0 +1,21 @@
+patchlevel_event_sourcing:
+    aggregates: '%kernel.project_dir%/src'
+    events: '%kernel.project_dir%/src'
+    connection:
+        url: '%env(EVENTSTORE_URL)%'
+
+when@dev:
+    patchlevel_event_sourcing:
+        subscription:
+            catch_up: true
+            throw_on_error: true
+            run_after_aggregate_save: true
+            rebuild_after_file_change: true
+            auto_setup: true
+
+when@test:
+    patchlevel_event_sourcing:
+        subscription:
+            catch_up: true
+            throw_on_error: true
+            run_after_aggregate_save: true

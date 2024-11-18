@@ -1,0 +1,1 @@
+  * Modify your EVENTSTORE_URL config in <fg=green>.env</>

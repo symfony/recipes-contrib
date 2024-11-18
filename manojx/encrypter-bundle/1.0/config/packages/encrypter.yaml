@@ -1,0 +1,2 @@
+encrypter:
+    secret: '%env(ENCRYPTER_SECRET)%'

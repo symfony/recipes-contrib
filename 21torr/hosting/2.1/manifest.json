@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "Torr\\Hosting\\HostingBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "HOSTING_TIER": "development"
+    },
+    "gitignore": [
+        "/.build-info.json"
+    ]
+}

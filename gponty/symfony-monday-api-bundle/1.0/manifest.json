@@ -6,7 +6,6 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "MONDAY_API_KEY": "your_monday_api_key",
-        "MONDAY_API_VERSION": "your_monday_api_version"
+        "MONDAY_API_KEY": "your_monday_api_key"
     }
 }

@@ -1,0 +1,4 @@
+security:
+    providers:
+        cas:
+            id: EcPhp\CasBundle\Security\Core\User\CasUserProvider

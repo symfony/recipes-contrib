@@ -1,0 +1,75 @@
+security:
+    # https://symfony.com/doc/current/security.html#registering-the-user-hashing-passwords
+    password_hashers:
+        Symfony\\Component\\Security\\Core\\User\\PasswordAuthenticatedUserInterface: 'auto'
+    # https://symfony.com/doc/current/security.html#loading-the-user-the-user-provider
+    providers:
+        sfs_user:
+            id: sfs_user.user_provider
+
+    access_decision_manager:
+        strategy: unanimous
+        allow_if_all_abstain: false
+
+    role_hierarchy:
+        ROLE_ADMIN:
+            - ROLE_ADMIN_USERS_RW
+            #- ROLE_ADMIN_INVITATION_RO
+            #- ROLE_ALLOWED_TO_SWITCH
+            - ROLE_ADMIN_ADMINISTRATORS_RW
+        ROLE_SUPER_ADMIN:
+            - ROLE_ADMIN
+            - ROLE_ADMIN_ADMINISTRATORS_PROMOTE_SUPER
+            - ROLE_ADMIN_ADMINISTRATORS_DEMOTE_SUPER
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        main:
+            pattern: ^/(admin|app)/
+            lazy: true
+            provider: sfs_user
+            form_login:
+                provider: sfs_user
+                login_path: sfs_user_login
+                check_path: sfs_user_login_check
+
+            # login_throttling:
+            #     max_attempts: 5
+            #     interval: '1 minute'
+
+            # remember_me:
+            #     secret: \"%env(APP_SECRET)%\"
+            #     lifetime: 2592000 # 1 month
+            #     secure: true
+            #     httponly: true
+            #     always_remember_me: false
+
+            logout:
+                path: sfs_user_logout
+
+            # switch_user:
+            #     role: ROLE_ALLOWED_TO_SWITCH
+            #     parameter: _switch_user
+
+    access_control:
+        - { path: ^/app/login, roles: PUBLIC_ACCESS }
+        # - { path: ^/app/invitation, roles: PUBLIC_ACCESS }
+        # - { path: ^/app/register, roles: PUBLIC_ACCESS }
+        - { path: ^/app/reset-password, roles: PUBLIC_ACCESS }
+        - { path: ^/admin, roles: ROLE_ADMIN }
+
+when@test:
+    security:
+        password_hashers:
+            # By default, password hashers are resource intensive and take time. This is
+            # important to generate secure password hashes. In tests however, secure hashes
+            # are not important, waste resources and increase test times. The following
+            # reduces the work factor to the lowest possible values.
+            Symfony\\Component\\Security\\Core\\User\\PasswordAuthenticatedUserInterface:
+                algorithm: auto
+                cost: 4 # Lowest possible value for bcrypt
+                time_cost: 3 # Lowest possible value for argon
+                memory_cost: 10 # Lowest possible value for argon

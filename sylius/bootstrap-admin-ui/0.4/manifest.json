@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Sylius\\BootstrapAdminUi\\Symfony\\SyliusBootstrapAdminUiBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

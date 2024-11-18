@@ -1,0 +1,6 @@
+  <bg=blue;fg=white>                                                     </>
+  <bg=blue;fg=white>   Getting Started with </><bg=blue;fg=white;options=bold>sofascore/purgatory-bundle</><bg=blue;fg=white>   </>
+  <bg=blue;fg=white>                                                     </>
+
+  * <fg=blue>Configure</> a purger based on your HTTP cache backend in <comment>config/packages/purgatory.yaml</>
+  * <fg=blue>Read</> the complete documentation at <comment>https://sofascore.github.io/purgatory-bundle/</>
