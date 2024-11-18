@@ -4,5 +4,6 @@
 
   * <fg=yellow>Next steps:</>
     1. Configure /config/packages/survos_command.yaml to expose the namespaces (command prefixes)
-    2. <comment>secure the /admin route, customize the route in config/routes/survos_command.yaml</>;
-    3. Visit <href=/admin/commmands>/admin/commands</>.
+    2. <comment>Secure the /admin route, customize the route in config/routes/survos_command.yaml</>
+    3. optionally create a command with bin/console make:command app:do-something
+    4. bin/console open:local --path=/admin/commands/list
