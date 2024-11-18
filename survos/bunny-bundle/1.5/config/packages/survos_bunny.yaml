@@ -1,0 +1,5 @@
+survos_bunny:
+  # this is generated automatically with bin/console bunny:config <api-key>
+  # api_key: '%env(BUNNY_API_KEY)%'
+  # set a default storage zone
+  storage_zone: ~

@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Survos\\CommandBundle\\SurvosBunnyBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "BUNNY_API_KEY": ""
+    }
+}
+
