@@ -3,7 +3,8 @@
         "Patchlevel\\EventSourcingBundle\\PatchlevelEventSourcingBundle": ["all"]
     },
     "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
+        "config/": "%CONFIG_DIR%/",
+        "migrations/": "migrations/"
     },
     "env": {
         "#1": "Format described at https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html#connecting-using-a-url",
