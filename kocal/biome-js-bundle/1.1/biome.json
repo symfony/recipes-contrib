@@ -6,6 +6,7 @@
             "composer.json",
             "public/assets/*",
             "public/bundles/*",
+            "var/cache/*",
             "vendor/*"
         ]
     }
