@@ -1,0 +1,2 @@
+  * <fg=blue>Configure</> your versioning strategy in <comment>config/packages/bizkit_versioning.yaml</>.
+  * <fg=blue>Read</> the complete documentation at <comment>https://github.com/HypeMC/versioning-bundle</>
