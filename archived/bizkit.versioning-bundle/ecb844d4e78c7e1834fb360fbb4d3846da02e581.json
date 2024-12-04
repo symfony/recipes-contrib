@@ -1,0 +1,56 @@
+{
+    "manifests": {
+        "bizkit/versioning-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Bizkit\\VersioningBundle\\BizkitVersioningBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Configure</> your versioning strategy in <comment>config/packages/bizkit_versioning.yaml</>.",
+                    "  * <fg=blue>Read</> the complete documentation at <comment>https://github.com/HypeMC/versioning-bundle</>"
+                ]
+            },
+            "files": {
+                "config/packages/bizkit_versioning.yaml": {
+                    "contents": [
+                        "# Read the full documentation at: https://github.com/HypeMC/versioning-bundle",
+                        "",
+                        "bizkit_versioning:",
+                        "",
+                        "    # Prefix added to version parameters.",
+                        "    parameter_prefix: application",
+                        "",
+                        "    # Strategy used for managing version updates.",
+                        "    # Options:",
+                        "    # - 'semver': Semantic Versioning (e.g., 1.0.0, 2.1.0).",
+                        "    # - 'incrementing': Sequential number incrementing (e.g., 1, 2, 3).",
+                        "    strategy: semver",
+                        "",
+                        "    # Set to false to disable VCS integration.",
+                        "    vcs:",
+                        "        # Defines how tags are applied to version commits.",
+                        "        # Options:",
+                        "        # - 'always': Automatically tag each version commit.",
+                        "        # - 'never': Do not tag version commits.",
+                        "        # - 'ask': Prompt the user before tagging.",
+                        "        tagging_mode: ask",
+                        "",
+                        "        # Commit message format, where '%s' is a placeholder for the version number.",
+                        "        # commit_message: 'Update application version to %s'",
+                        "",
+                        "        # Tag message format, where '%s' is a placeholder for the version number.",
+                        "        # tag_message: 'Update application version to %s'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ecb844d4e78c7e1834fb360fbb4d3846da02e581"
+        }
+    }
+}

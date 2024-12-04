@@ -175,6 +175,9 @@
         "bitbag/wishlist-plugin": [
             "4.4"
         ],
+        "bizkit/versioning-bundle": [
+            "1.0"
+        ],
         "boshurik/telegram-bot-bundle": [
             "3.1"
         ],
