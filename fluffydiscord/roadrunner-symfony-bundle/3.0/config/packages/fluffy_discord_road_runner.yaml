@@ -66,5 +66,6 @@ fluffy_discord_road_runner:
         keypair_path: bin/keypair.key
 
 when@dev:
-    fluffy_discord_road_runner:
-        early_router_initialization: false
+    http:
+        fluffy_discord_road_runner:
+            early_router_initialization: false
