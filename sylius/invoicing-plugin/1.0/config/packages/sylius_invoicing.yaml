@@ -1,0 +1,2 @@
+imports:
+    - { resource: "@SyliusInvoicingPlugin/config/config.yaml" }
