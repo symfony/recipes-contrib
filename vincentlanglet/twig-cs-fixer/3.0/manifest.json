@@ -1,0 +1,5 @@
+{
+    "gitignore": [
+        "/.twig-cs-fixer.cache"
+    ]
+}
