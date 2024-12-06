@@ -1,0 +1,19 @@
+{
+    "manifests": {
+        "vincentlanglet/twig-cs-fixer": {
+            "manifest": {
+                "gitignore": [
+                    "/.twig-cs-fixer.cache"
+                ],
+                "post-install-output": [
+                    "<bg=green;fg=white></>",
+                    "<bg=green;fg=white> You can create a `.twig-cs-fixer.dist.php` and configure to your needs </>",
+                    "<bg=green;fg=white> See https://github.com/VincentLanglet/Twig-CS-Fixer/blob/main/docs/configuration.md </>",
+                    "<bg=green;fg=white> For configuration explanation. </>"
+                ]
+            },
+            "files": [],
+            "ref": "d42582ae1bce86fd43491d6264c738b0867f8ffe"
+        }
+    }
+}

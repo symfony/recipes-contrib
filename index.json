@@ -2022,7 +2022,8 @@
             "1.0"
         ],
         "vincentlanglet/twig-cs-fixer": [
-            "0.6"
+            "0.6",
+            "3.0"
         ],
         "wandi/easyadmin-plus-bundle": [
             "0.1",
