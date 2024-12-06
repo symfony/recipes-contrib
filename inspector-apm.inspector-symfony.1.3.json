@@ -1,0 +1,79 @@
+{
+    "manifests": {
+        "inspector-apm/inspector-symfony": {
+            "manifest": {
+                "bundles": {
+                    "Inspector\\Symfony\\Bundle\\InspectorBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "INSPECTOR_INGESTION_KEY": ""
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Read</> the full documentation to properly configure your",
+                    "    Symfony application at <comment>https://docs.inspector.dev/</>"
+                ]
+            },
+            "files": {
+                "config/packages/inspector.yaml": {
+                    "contents": [
+                        "inspector:",
+                        "    ingestion_key: '%env(INSPECTOR_INGESTION_KEY)%'",
+                        "    enabled: true",
+                        "    transport: async",
+                        "    ignore_routes:",
+                        "        - '/wdt*'",
+                        "        - '/profiler*'",
+                        "    ignore_commands:",
+                        "        - 'messenger:consume'",
+                        "        - 'assets:install'",
+                        "        - 'cache:clear'",
+                        "        - 'doctrine:migration:migrate'",
+                        "        - 'schedule:run'",
+                        "",
+                        "        # Development commands section",
+                        "        - 'debug:autowiring'",
+                        "        - 'debug:config'",
+                        "        - 'debug:container'",
+                        "        - 'debug:event-dispatcher'",
+                        "        - 'debug:form'",
+                        "        - 'debug:router'",
+                        "        - 'debug:translation'",
+                        "        - 'debug:twig'",
+                        "        - 'debug:validator'",
+                        "        - 'make:auth'",
+                        "        - 'make:command'",
+                        "        - 'make:controller'",
+                        "        - 'make:crud'",
+                        "        - 'make:docker:database'",
+                        "        - 'make:entity'",
+                        "        - 'make:fixtures'",
+                        "        - 'make:form'",
+                        "        - 'make:functional-test'",
+                        "        - 'make:message'",
+                        "        - 'make:messenger-middleware'",
+                        "        - 'make:migration'",
+                        "        - 'make:registration-form'",
+                        "        - 'make:reset-password'",
+                        "        - 'make:serializer:encoder'",
+                        "        - 'make:serializer:normalizer'",
+                        "        - 'make:subscriber'",
+                        "        - 'make:test'",
+                        "        - 'make:twig-extension'",
+                        "        - 'make:unit-test'",
+                        "        - 'make:user'",
+                        "        - 'make:validator'",
+                        "        - 'make:voter'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "aeef8d8994531b8e10419c5f9b66c79ef6a25c71"
+        }
+    }
+}

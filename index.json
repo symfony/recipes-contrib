@@ -787,7 +787,8 @@
             "0.4"
         ],
         "inspector-apm/inspector-symfony": [
-            "1.0"
+            "1.0",
+            "1.3"
         ],
         "intervention/image-symfony": [
             "1.0"
