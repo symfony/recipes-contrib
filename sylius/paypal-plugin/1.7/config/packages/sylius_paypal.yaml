@@ -1,0 +1,2 @@
+imports:
+    - { resource: "@SyliusPayPalPlugin/Resources/config/config.yaml" }
