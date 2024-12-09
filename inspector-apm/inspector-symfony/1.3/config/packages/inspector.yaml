@@ -9,7 +9,7 @@ inspector:
         - 'messenger:consume'
         - 'assets:install'
         - 'cache:clear'
-        - 'doctrine:migration:migrate'
+        - 'doctrine:migrations:migrate'
         - 'schedule:run'
 
         # Development commands section
