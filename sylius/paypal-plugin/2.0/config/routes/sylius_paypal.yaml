@@ -1,0 +1,12 @@
+sylius_paypal_admin:
+    resource: "@SyliusPayPalPlugin/config/admin_routes.yaml"
+    prefix: /admin
+
+sylius_paypal_shop:
+    resource: "@SyliusPayPalPlugin/config/shop_routes.yaml"
+    prefix: /{_locale}
+    requirements:
+        _locale: ^[a-z]{2}(?:_[A-Z]{2})?$
+
+sylius_paypal_plugin_webhook_refund_order:
+    resource: "@SyliusPayPalPlugin/config/webhook_routes.yaml"
