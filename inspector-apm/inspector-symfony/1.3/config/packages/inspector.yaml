@@ -3,8 +3,8 @@ inspector:
     enabled: true
     transport: async
     ignore_routes:
-        - '/wdt*'
-        - '/profiler*'
+        - '/_wdt*'
+        - '/_profiler*'
     ignore_commands:
         - 'messenger:consume'
         - 'assets:install'
