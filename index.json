@@ -1869,10 +1869,14 @@
             "1.0"
         ],
         "sylius/invoicing-plugin": [
-            "0.5"
+            "0.5",
+            "1.0"
+        ],
+        "sylius/paypal-plugin": [
+            "2.0"
         ],
         "sylius/refund-plugin": [
-            "0.4"
+            "2.0"
         ],
         "sylius/resource-bundle": [
             "1.6",

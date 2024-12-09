@@ -1,0 +1,42 @@
+{
+    "manifests": {
+        "sylius/refund-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Sylius\\RefundPlugin\\SyliusRefundPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sylius_refund.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SyliusRefundPlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sylius_refund.yaml": {
+                    "contents": [
+                        "sylius_refund_admin:",
+                        "    resource: \"@SyliusRefundPlugin/config/admin_routes.yaml\"",
+                        "    prefix: '/%sylius_admin.path_name%'",
+                        "",
+                        "sylius_refund_shop:",
+                        "    resource: \"@SyliusRefundPlugin/config/shop_routes.yaml\"",
+                        "    prefix: /{_locale}",
+                        "    requirements:",
+                        "        _locale: ^[a-z]{2}(?:_[A-Z]{2})?$",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "36277cf0f18b4e1f0f7d720cfd6b11f6e5320e97"
+        }
+    }
+}

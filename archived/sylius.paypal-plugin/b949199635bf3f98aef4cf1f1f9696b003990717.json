@@ -1,0 +1,57 @@
+{
+    "manifests": {
+        "sylius/paypal-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Sylius\\InvoicingPlugin\\SyliusInvoicingPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sylius_paypal.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SyliusInvoicingPlugin/config/config.yaml\" }",
+                        "",
+                        "fos_rest:",
+                        "    exception: true",
+                        "    view:",
+                        "        formats:",
+                        "            json: true",
+                        "            xml:  true",
+                        "        empty_content: 204",
+                        "    format_listener:",
+                        "        rules:",
+                        "            - { path: '^/api/.*', priorities: ['json', 'xml'], fallback_format: json, prefer_extension: true }",
+                        "            - { path: '^/', stop: true }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sylius_paypal.yaml": {
+                    "contents": [
+                        "sylius_paypal_admin:",
+                        "    resource: \"@SyliusPayPalPlugin/config/admin_routes.yaml\"",
+                        "    prefix: /admin",
+                        "",
+                        "sylius_paypal_shop:",
+                        "    resource: \"@SyliusPayPalPlugin/config/shop_routes.yaml\"",
+                        "    prefix: /{_locale}",
+                        "    requirements:",
+                        "        _locale: ^[a-z]{2}(?:_[A-Z]{2})?$",
+                        "",
+                        "sylius_paypal_plugin_webhook_refund_order:",
+                        "    resource: \"@SyliusPayPalPlugin/config/webhook_routes.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b949199635bf3f98aef4cf1f1f9696b003990717"
+        }
+    }
+}

@@ -586,8 +586,9 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sylius/bootstrap-admin-ui](https://packagist.org/packages/sylius/bootstrap-admin-ui) | [0.4](sylius/bootstrap-admin-ui/0.4) |
 | [sylius/customer-order-cancellation-plugin](https://packagist.org/packages/sylius/customer-order-cancellation-plugin) | [0.2](sylius/customer-order-cancellation-plugin/0.2) |
 | [sylius/customer-reorder-plugin](https://packagist.org/packages/sylius/customer-reorder-plugin) | [1.0](sylius/customer-reorder-plugin/1.0) |
-| [sylius/invoicing-plugin](https://packagist.org/packages/sylius/invoicing-plugin) | [0.5](sylius/invoicing-plugin/0.5) |
-| [sylius/refund-plugin](https://packagist.org/packages/sylius/refund-plugin) | [0.4](sylius/refund-plugin/0.4) |
+| [sylius/invoicing-plugin](https://packagist.org/packages/sylius/invoicing-plugin) | [1.0](sylius/invoicing-plugin/1.0) |
+| [sylius/paypal-plugin](https://packagist.org/packages/sylius/paypal-plugin) | [2.0](sylius/paypal-plugin/2.0) |
+| [sylius/refund-plugin](https://packagist.org/packages/sylius/refund-plugin) | [2.0](sylius/refund-plugin/2.0) |
 | [sylius/resource-bundle](https://packagist.org/packages/sylius/resource-bundle) | [1.12](sylius/resource-bundle/1.12) |
 | [sylius/twig-extra](https://packagist.org/packages/sylius/twig-extra) | [0.4](sylius/twig-extra/0.4) |
 | [sylius/twig-hooks](https://packagist.org/packages/sylius/twig-hooks) | [0.4](sylius/twig-hooks/0.4) |

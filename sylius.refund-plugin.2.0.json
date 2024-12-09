@@ -15,21 +15,28 @@
                 "config/packages/sylius_refund.yaml": {
                     "contents": [
                         "imports:",
-                        "    - { resource: \"@SyliusRefundPlugin/Resources/config/app/config.yml\" }",
+                        "    - { resource: \"@SyliusRefundPlugin/config/config.yaml\" }",
                         ""
                     ],
                     "executable": false
                 },
                 "config/routes/sylius_refund.yaml": {
                     "contents": [
-                        "sylius_refund:",
-                        "    resource: \"@SyliusRefundPlugin/Resources/config/routing.yml\"",
+                        "sylius_refund_admin:",
+                        "    resource: \"@SyliusRefundPlugin/config/admin_routes.yaml\"",
+                        "    prefix: '/%sylius_admin.path_name%'",
+                        "",
+                        "sylius_refund_shop:",
+                        "    resource: \"@SyliusRefundPlugin/config/shop_routes.yaml\"",
+                        "    prefix: /{_locale}",
+                        "    requirements:",
+                        "        _locale: ^[a-z]{2}(?:_[A-Z]{2})?$",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "a3f813f608c6f04bd7d0b4cefd73a96bf378c390"
+            "ref": "36277cf0f18b4e1f0f7d720cfd6b11f6e5320e97"
         }
     }
 }
