@@ -3,13 +3,13 @@ inspector:
     enabled: true
     transport: async
     ignore_routes:
-        - '/wdt*'
-        - '/profiler*'
+        - '/_wdt*'
+        - '/_profiler*'
     ignore_commands:
         - 'messenger:consume'
         - 'assets:install'
         - 'cache:clear'
-        - 'doctrine:migration:migrate'
+        - 'doctrine:migrations:migrate'
         - 'schedule:run'
 
         # Development commands section
