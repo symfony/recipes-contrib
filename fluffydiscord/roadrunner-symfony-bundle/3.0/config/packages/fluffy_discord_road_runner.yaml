@@ -67,4 +67,5 @@ fluffy_discord_road_runner:
 
 when@dev:
     fluffy_discord_road_runner:
-        early_router_initialization: false
+        http:
+            early_router_initialization: false
