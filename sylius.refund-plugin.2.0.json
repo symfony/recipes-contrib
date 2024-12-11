@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "sylius/refund-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Sylius\\RefundPlugin\\SyliusRefundPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "add-lines": [
+                    {
+                        "file": "assets/admin/entrypoint.js",
+                        "content": "import '../../vendor/sylius/refund-plugin/assets/entrypoint';",
+                        "position": "bottom",
+                        "warn_if_missing": true
+                    }
+                ]
+            },
+            "files": {
+                "config/packages/sylius_refund.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SyliusRefundPlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sylius_refund.yaml": {
+                    "contents": [
+                        "sylius_refund:",
+                        "    resource: \"@SyliusRefundPlugin/config/routes.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "261e0e5e0902aa5f6178b1eac5c0019191c6d5c4"
+        }
+    }
+}

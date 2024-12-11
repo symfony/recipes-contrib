@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "sylius/invoicing-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Sylius\\InvoicingPlugin\\SyliusInvoicingPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sylius_invoicing.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SyliusInvoicingPlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sylius_invoicing.yaml": {
+                    "contents": [
+                        "sylius_invoicing:",
+                        "    resource: \"@SyliusInvoicingPlugin/config/routes.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d5c2fd325a1c407a6647a2cfe4be4589a3c791c4"
+        }
+    }
+}

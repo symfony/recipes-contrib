@@ -1,0 +1,52 @@
+{
+    "manifests": {
+        "sylius/paypal-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Sylius\\PayPalPlugin\\SyliusPayPalPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/fos_rest.yaml": {
+                    "contents": [
+                        "fos_rest:",
+                        "    exception: true",
+                        "    view:",
+                        "        formats:",
+                        "            json: true",
+                        "            xml:  true",
+                        "        empty_content: 204",
+                        "    format_listener:",
+                        "        rules:",
+                        "            - { path: '^/api/.*', priorities: ['json', 'xml'], fallback_format: json, prefer_extension: true }",
+                        "            - { path: '^/', stop: true }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/sylius_paypal.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SyliusPayPalPlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sylius_paypal.yaml": {
+                    "contents": [
+                        "sylius_paypal:",
+                        "    resource: \"@SyliusPayPalPlugin/config/routes.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "49795985162ee01121eb71c67a8d63acc08d9385"
+        }
+    }
+}
