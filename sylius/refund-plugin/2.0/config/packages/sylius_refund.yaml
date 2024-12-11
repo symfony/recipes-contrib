@@ -1,2 +1,0 @@
-imports:
-    - { resource: "@SyliusRefundPlugin/config/config.yaml" }

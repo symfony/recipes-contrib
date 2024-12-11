@@ -1,14 +1,2 @@
 imports:
-    - { resource: "@SyliusInvoicingPlugin/config/config.yaml" }
-
-fos_rest:
-    exception: true
-    view:
-        formats:
-            json: true
-            xml:  true
-        empty_content: 204
-    format_listener:
-        rules:
-            - { path: '^/api/.*', priorities: ['json', 'xml'], fallback_format: json, prefer_extension: true }
-            - { path: '^/', stop: true }
+    - { resource: "@SyliusPayPalPlugin/config/config.yaml" }
