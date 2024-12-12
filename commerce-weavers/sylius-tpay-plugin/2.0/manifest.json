@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "CommerceWeavers\\SyliusTpayPlugin\\CommerceWeaversSyliusTpayPlugin": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "IMPORTANT! Replace the `<replace_me>` with a value generated using the `vendor/bin/generate-defuse-key` command",
+        "PAYUM_CYPHER_KEY": "<replace_me>"
+    }
+}
