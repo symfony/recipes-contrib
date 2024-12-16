@@ -263,6 +263,9 @@
         "coka/wsse-authentication-bundle": [
             "1.0"
         ],
+        "commerce-weavers/sylius-tpay-plugin": [
+            "2.0"
+        ],
         "commercetools/symfony-bundle": [
             "0.4"
         ],

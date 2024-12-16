@@ -88,6 +88,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [coka/rest-request-validator-bundle](https://packagist.org/packages/coka/rest-request-validator-bundle) | [1.0](coka/rest-request-validator-bundle/1.0) |
 | [coka/service-discovery-bundle](https://packagist.org/packages/coka/service-discovery-bundle) | [1.0](coka/service-discovery-bundle/1.0) |
 | [coka/wsse-authentication-bundle](https://packagist.org/packages/coka/wsse-authentication-bundle) | [1.0](coka/wsse-authentication-bundle/1.0) |
+| [commerce-weavers/sylius-tpay-plugin](https://packagist.org/packages/commerce-weavers/sylius-tpay-plugin) | [2.0](commerce-weavers/sylius-tpay-plugin/2.0) |
 | [commercetools/symfony-bundle](https://packagist.org/packages/commercetools/symfony-bundle) | [0.4](commercetools/symfony-bundle/0.4) |
 | [comsave/salesforce-outbound-message-bundle](https://packagist.org/packages/comsave/salesforce-outbound-message-bundle) | [0.3](comsave/salesforce-outbound-message-bundle/0.3) |
 | [conejerock/idempotency-bundle](https://packagist.org/packages/conejerock/idempotency-bundle) | [1.0](conejerock/idempotency-bundle/1.0) |
