@@ -1,0 +1,5 @@
+@@ -0,0 +1,4 @@
+  * <fg=blue>IMPORTANT!</> Remember to generate Payum's cypher key with the <comment>vendor/bin/generate-defuse-key</comment>
+    and add it to your environment variables as <comment>PAYUM_CYPHER_KEY</comment>
+
+  * <fg=blue>Read</> the Sylius Payum Plugin documentation at <comment>https://github.com/CommerceWeavers/SyliusTpayPlugin/wiki</>
