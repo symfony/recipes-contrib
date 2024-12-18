@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "talleu/php-redis-om": {
+            "manifest": {
+                "bundles": {
+                    "Talleu\\RedisOm\\Bundle\\TalleuPhpRedisOmBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "cfde5c1a67e954fa84a4e51249d0503953359c4e"
+        }
+    }
+}

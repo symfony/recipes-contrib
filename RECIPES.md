@@ -605,6 +605,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [systemsdk/easy-log-bundle](https://packagist.org/packages/systemsdk/easy-log-bundle) | [1.10](systemsdk/easy-log-bundle/1.10) |
 | [tales-from-a-dev/flowbite-bundle](https://packagist.org/packages/tales-from-a-dev/flowbite-bundle) | [0.4](tales-from-a-dev/flowbite-bundle/0.4) |
 | [tales-from-a-dev/twig-tailwind-extra](https://packagist.org/packages/tales-from-a-dev/twig-tailwind-extra) | [0.2](tales-from-a-dev/twig-tailwind-extra/0.2) |
+| [talleu/php-redis-om](https://packagist.org/packages/talleu/php-redis-om) | [0.3](talleu/php-redis-om/0.3) |
 | [tattali/calendar-bundle](https://packagist.org/packages/tattali/calendar-bundle) | [1.1](tattali/calendar-bundle/1.1) |
 | [tbbc/money-bundle](https://packagist.org/packages/tbbc/money-bundle) | [4.0](tbbc/money-bundle/4.0) |
 | [tbmatuka/editorjs-bundle](https://packagist.org/packages/tbmatuka/editorjs-bundle) | [0.1](tbmatuka/editorjs-bundle/0.1) |

@@ -1931,6 +1931,9 @@
         "tales-from-a-dev/twig-tailwind-extra": [
             "0.2"
         ],
+        "talleu/php-redis-om": [
+            "0.3"
+        ],
         "tattali/calendar-bundle": [
             "1.1"
         ],
