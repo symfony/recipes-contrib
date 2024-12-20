@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "wickedone/phrase-tag-bundle": {
+            "manifest": {
+                "bundles": {
+                    "WickedOne\\PhraseTagBundle\\WickedOnePhraseTagBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/wickedone.yaml": {
+                    "contents": [
+                        "wicked_one_phrase_tag:",
+                        "    dsn: '%env(PHRASE_DSN)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9f8187ad7486ca67bb8b0030a2eecbde28c005cd"
+        }
+    }
+}
