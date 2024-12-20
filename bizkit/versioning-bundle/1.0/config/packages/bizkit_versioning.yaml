@@ -7,7 +7,7 @@ bizkit_versioning:
 
     # Strategy used for managing version updates.
     # Options:
-    # - 'semver': Semantic Versioning (e.g., 1.0.0, 2.1.0).
+    # - 'semver': Semantic Versioning (e.g., 2.0.0, 2.2.0).
     # - 'incrementing': Sequential number incrementing (e.g., 1, 2, 3).
     strategy: semver
 

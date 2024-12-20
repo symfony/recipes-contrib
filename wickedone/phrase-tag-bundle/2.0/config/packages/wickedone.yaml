@@ -1,0 +1,2 @@
+wicked_one_phrase_tag:
+    dsn: '%env(PHRASE_DSN)%'
