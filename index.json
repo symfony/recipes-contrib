@@ -2069,6 +2069,9 @@
         "wemxo/dynamic-form-bundle": [
             "1.0"
         ],
+        "wickedone/phrase-tag-bundle": [
+            "2.0"
+        ],
         "wiet-at/symfony-dev": [
             "1.0"
         ],

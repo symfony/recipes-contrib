@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "wickedone/phrase-tag-bundle": {
+            "manifest": {
+                "bundles": {
+                    "WickedOne\\PhraseTagBundle\\WickedOnePhraseTagBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "PHRASE_DSN": "phrase://PROJECT_ID:API_TOKEN@default?userAgent=myProject"
+                }
+            },
+            "files": {
+                "config/packages/wicked_one_phrase_tag.yaml": {
+                    "contents": [
+                        "wicked_one_phrase_tag:",
+                        "    dsn: '%env(PHRASE_DSN)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c72b7d61dcddc891df36bf7ce4434321238c672d"
+        }
+    }
+}
