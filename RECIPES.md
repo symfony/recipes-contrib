@@ -61,7 +61,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [bitbag/shipping-export-plugin](https://packagist.org/packages/bitbag/shipping-export-plugin) | [1.0](bitbag/shipping-export-plugin/1.0) |
 | [bitbag/wishlist-plugin](https://packagist.org/packages/bitbag/wishlist-plugin) | [4.4](bitbag/wishlist-plugin/4.4) |
 | [bizkit/versioning-bundle](https://packagist.org/packages/bizkit/versioning-bundle) | [1.0](bizkit/versioning-bundle/1.0) |
-| [boshurik/telegram-bot-bundle](https://packagist.org/packages/boshurik/telegram-bot-bundle) | [3.1](boshurik/telegram-bot-bundle/3.1) |
+| [boshurik/telegram-bot-bundle](https://packagist.org/packages/boshurik/telegram-bot-bundle) | [6.0](boshurik/telegram-bot-bundle/6.0) |
 | [botjaeger/nexmo-bundle](https://packagist.org/packages/botjaeger/nexmo-bundle) | [0.5](botjaeger/nexmo-bundle/0.5) |
 | [bref/symfony-bridge](https://packagist.org/packages/bref/symfony-bridge) | [0.1](bref/symfony-bridge/0.1) |
 | [broadway/broadway-bundle](https://packagist.org/packages/broadway/broadway-bundle) | [0.4](broadway/broadway-bundle/0.4) |
