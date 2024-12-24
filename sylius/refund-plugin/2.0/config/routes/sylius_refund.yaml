@@ -1,0 +1,2 @@
+sylius_refund:
+    resource: "@SyliusRefundPlugin/config/routes.yaml"
