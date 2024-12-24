@@ -1,0 +1,2 @@
+  * <fg=blue>Set</> <comment>TELEGRAM_BOT_TOKEN</> in your environment
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/BoShurik/TelegramBotBundle</>
