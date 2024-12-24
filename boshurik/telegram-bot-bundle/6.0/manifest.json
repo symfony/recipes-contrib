@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "BoShurik\\TelegramBotBundle\\BoShurikTelegramBotBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "TELEGRAM_BOT_TOKEN": "bot-token"
+    },
+    "container": {
+        "telegram_route_secret": "%env(TELEGRAM_BOT_TOKEN)%"
+    }
+}
