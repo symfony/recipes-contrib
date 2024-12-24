@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "WickedOne\\PhraseTagBundle\\WickedOnePhraseTagBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "PHRASE_DSN": "phrase://PROJECT_ID:API_TOKEN@default?userAgent=myProject"
+    }
+}
