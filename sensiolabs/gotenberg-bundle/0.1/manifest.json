@@ -6,7 +6,7 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "GOTENBERG_DSN": "http://localhost:3000"
+        "GOTENBERG_DSN": "http://gotenberg:3000"
     },
     "docker-compose": {
         "compose.yaml": {
