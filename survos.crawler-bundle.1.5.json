@@ -1,0 +1,57 @@
+{
+    "manifests": {
+        "survos/crawler-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Survos\\CrawlerBundle\\SurvosCrawlerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=green;fg=white>                </>",
+                    "<bg=green;fg=white> success        </>",
+                    "<bg=green;fg=white>                </>",
+                    "",
+                    "  * <fg=yellow>Next steps:</>",
+                    "    1. Configure /config/packages/survos_crawler.php and add the users and routes to ignore",
+                    "    2. Run symfony console survos:crawl",
+                    "    3. Visit <comment>/admin/crawler-results</>."
+                ]
+            },
+            "files": {
+                "config/packages/survos_crawler.yaml": {
+                    "contents": [
+                        "survos_crawler:",
+                        "# if you've run symfony proxy:domain:attach my-project, then the error messages will be displayed with this prefix.  That way, you can simply click on a link to open the page.",
+                        "#    base_url: 'https://my-project.wip/'",
+                        "    user_class: App\\Entity\\User",
+                        "    users:",
+                        "        - user@user.com",
+                        "    max_depth : 3",
+                        "    routes_to_ignore :",
+                        "        - 'app_logout'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/survos_crawler.yaml": {
+                    "contents": [
+                        "survos_crawler:",
+                        "    resource: '@SurvosCrawlerBundle/config/routes.yaml'",
+                        "    # consider adding /admin to this route and securing it in security.yaml",
+                        "    prefix: '/crawler'",
+                        "    # run symfony proxy:domain:attach my-project, then the error messages will be displayed with this prefix.  That way, you can simply click on a link to open the page.",
+                        "    # base_url: 'https://my-project.wip/'",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d16db1be85e21925f873d8099ca9ae7c4d50a208"
+        }
+    }
+}
