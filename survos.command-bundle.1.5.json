@@ -1,0 +1,52 @@
+{
+    "manifests": {
+        "survos/command-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Survos\\CommandBundle\\SurvosCommandBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=green;fg=white>                </>",
+                    "<bg=green;fg=white> success        </>",
+                    "<bg=green;fg=white>                </>",
+                    "",
+                    "  * <fg=yellow>Next steps:</>",
+                    "    1. Configure /config/packages/survos_command.yaml to expose the namespaces (command prefixes)",
+                    "    2. <comment>Secure the /admin route, customize the route in config/routes/survos_command.yaml</>",
+                    "    3. optionally create a command with bin/console make:command app:do-something",
+                    "    4. symfony open:local --path=/admin/commands/list"
+                ]
+            },
+            "files": {
+                "config/packages/survos_command.yaml": {
+                    "contents": [
+                        "survos_command:",
+                        "    # expose app:my-command, etc.",
+                        "    namespaces: [app]",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/survos_command.yaml": {
+                    "contents": [
+                        "survos_command:",
+                        "    prefix: /admin/commands",
+                        "    type: attribute",
+                        "    resource:",
+                        "        path: '@SurvosCommandBundle/src/Controller/'",
+                        "        namespace: Survos\\CommandBundle\\Controller",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "aa84873beca233ab82aaf4c0dddc8d377320cbfa"
+        }
+    }
+}
