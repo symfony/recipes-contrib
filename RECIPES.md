@@ -435,6 +435,9 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [openai-php/symfony](https://packagist.org/packages/openai-php/symfony) | [0.3](openai-php/symfony/0.3) |
 | [orbitale/cms-bundle](https://packagist.org/packages/orbitale/cms-bundle) | [3.0](orbitale/cms-bundle/3.0) |
 | [orbitale/easyimpress-bundle](https://packagist.org/packages/orbitale/easyimpress-bundle) | [1.0](orbitale/easyimpress-bundle/1.0) |
+| [oskarstark/doctrine-datetime-milliseconds-type](https://packagist.org/packages/oskarstark/doctrine-datetime-milliseconds-type) | [2.1](oskarstark/doctrine-datetime-milliseconds-type/2.1) |
+| [oskarstark/doctrine-postgres-milliseconds-platform](https://packagist.org/packages/oskarstark/doctrine-postgres-milliseconds-platform) | [2.1](oskarstark/doctrine-postgres-milliseconds-platform/2.1) |
+| [oskarstark/doctrine-postgres-public-schema-listener](https://packagist.org/packages/oskarstark/doctrine-postgres-public-schema-listener) | [1.2](oskarstark/doctrine-postgres-public-schema-listener/1.2) |
 | [oskarstark/env-var-extension](https://packagist.org/packages/oskarstark/env-var-extension) | [1.0](oskarstark/env-var-extension/1.0) |
 | [oskarstark/no-floc-listener](https://packagist.org/packages/oskarstark/no-floc-listener) | [0.1](oskarstark/no-floc-listener/0.1) |
 | [oskarstark/readable-filesize-extension](https://packagist.org/packages/oskarstark/readable-filesize-extension) | [0.1](oskarstark/readable-filesize-extension/0.1) |

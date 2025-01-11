@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "oskarstark/doctrine-postgres-public-schema-listener": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/oskarstark_doctrine_postgres_public_schema_listener.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "",
+                        "    OskarStark\\Doctrine\\EventSubscriber\\MigrationEventSubscriber:",
+                        "        tags:",
+                        "            - { name: doctrine.event_subscriber, connection: default }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b44fa149a4797580324bd0695854ad48195f4cf2"
+        }
+    }
+}

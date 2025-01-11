@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "oskarstark/doctrine-datetime-milliseconds-type": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/oskarstark_doctrine_datetime_milliseconds_type.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "",
+                        "    OskarStark\\Doctrine\\Type\\Doctrine\\DBAL\\Types\\Type\\DateTimeMillisecondsType: null",
+                        "",
+                        "doctrine:",
+                        "    dbal:",
+                        "        types:",
+                        "            # We want to store DateTime objects with milliseconds",
+                        "            # The solution is built on https://github.com/doctrine/dbal/issues/2873#issuecomment-701052412",
+                        "            # but instead of using microseconds we use milliseconds",
+                        "            datetime: OskarStark\\Doctrine\\Type\\Doctrine\\DBAL\\Types\\Type\\DateTimeMillisecondsType",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "dbfbcbc7ec428cc3755fd0c02db6e8613575e60b"
+        }
+    }
+}

@@ -1379,6 +1379,15 @@
         "orbitale/easyimpress-bundle": [
             "1.0"
         ],
+        "oskarstark/doctrine-datetime-milliseconds-type": [
+            "2.1"
+        ],
+        "oskarstark/doctrine-postgres-milliseconds-platform": [
+            "2.1"
+        ],
+        "oskarstark/doctrine-postgres-public-schema-listener": [
+            "1.2"
+        ],
         "oskarstark/env-var-extension": [
             "1.0"
         ],

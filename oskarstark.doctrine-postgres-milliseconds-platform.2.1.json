@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "oskarstark/doctrine-postgres-milliseconds-platform": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/oskarstark_doctrine_postgres_milliseconds_platform.yaml": {
+                    "contents": [
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "",
+                        "    OskarStark\\Doctrine\\Postgres\\Platform\\Doctrine\\DBAL\\Platforms\\PostgreSQLMillisecondsPlatform: null",
+                        "",
+                        "doctrine:",
+                        "    dbal:",
+                        "        # We want to store DateTime objects with milliseconds",
+                        "        # The solution is built on https://github.com/doctrine/dbal/issues/2873#issuecomment-701052412",
+                        "        # but instead of using microseconds we use milliseconds",
+                        "        platform_service: OskarStark\\Doctrine\\Postgres\\Platform\\Doctrine\\DBAL\\Platforms\\PostgreSQLMillisecondsPlatform",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f40300d25f68059d9f46a9fba0f1b9add394c589"
+        }
+    }
+}
