@@ -1810,6 +1810,9 @@
         "stof/doctrine-extensions-bundle": [
             "1.2"
         ],
+        "storyblok/symfony-bundle": [
+            "0.1"
+        ],
         "sulu/article-bundle": [
             "2.0"
         ],
