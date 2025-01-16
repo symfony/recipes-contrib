@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "SensioLabs\\Storyblok\\Bundle\\StoryblokBundle": ["all"]
+        "Storyblok\\Bundle\\StoryblokBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
