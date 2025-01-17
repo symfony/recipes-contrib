@@ -1895,7 +1895,8 @@
             "2.0"
         ],
         "sylius/refund-plugin": [
-            "0.4"
+            "0.4",
+            "2.0"
         ],
         "sylius/resource-bundle": [
             "1.6",
