@@ -1,0 +1,2 @@
+  * <fg=blue>Read</> the full documentation to properly configure your
+    Symfony application at <comment>https://docs.inspector.dev/guides/symfony/installation</>
