@@ -1,0 +1,12 @@
+{
+  "manifests": {
+    "thedevopser/castor-symfony": {
+      "manifest": {
+        "bundles": {},
+        "copy-from-recipe": {
+          "castor.php": "%PROJECT_DIR%/castor.php"
+        }
+      }
+    }
+  }
+}
