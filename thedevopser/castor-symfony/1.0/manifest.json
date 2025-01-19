@@ -1,5 +1,5 @@
 {
     "copy-from-recipe": {
-        "castor.php": "%ROOT_DIR%/castor.php"
+        "castor.php": "castor.php"
     }
 }
