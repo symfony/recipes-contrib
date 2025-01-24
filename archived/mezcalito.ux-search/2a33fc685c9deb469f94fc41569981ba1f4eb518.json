@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "mezcalito/ux-search": {
+            "manifest": {
+                "bundles": {
+                    "Mezcalito\\UxSearchBundle\\MezcalitoUxSearchBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "MEZCALITO_UX_SEARCH_DEFAULT_DSN=\"meilisearch://key@localhost:7700\"",
+                    "MEZCALITO_UX_SEARCH_DEFAULT_DSN": "doctrine://default"
+                }
+            },
+            "files": {
+                "config/packages/mezcalito_ux_search.yaml": {
+                    "contents": [
+                        "mezcalito_ux_search:",
+                        "    adapters:",
+                        "        default: '%env(MEZCALITO_UX_SEARCH_DEFAULT_DSN)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2a33fc685c9deb469f94fc41569981ba1f4eb518"
+        }
+    }
+}

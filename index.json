@@ -1130,6 +1130,9 @@
         "mezcalito/ux-filemanager": [
             "0.1"
         ],
+        "mezcalito/ux-search": [
+            "0.1"
+        ],
         "mgdsoft/stackdriver-bundle": [
             "0.1"
         ],
