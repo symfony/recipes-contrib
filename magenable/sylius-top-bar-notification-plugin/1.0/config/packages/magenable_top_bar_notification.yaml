@@ -1,0 +1,2 @@
+imports:
+    - { resource: "@MagenableSyliusTopBarNotificationPlugin/config/config.yaml" }

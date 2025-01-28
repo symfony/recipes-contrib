@@ -1,0 +1,2 @@
+magenable_sylius_top_bar_notification_plugin:
+    resource: "@MagenableSyliusTopBarNotificationPlugin/config/routes/admin.yml"
