@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+<?php
+
+use App\Kernel;
+use PHPStreamServer\Symfony\PHPStreamServerRuntime;
+
+$_SERVER['APP_RUNTIME'] = PHPStreamServerRuntime::class;
+
+require_once \dirname(__DIR__).'/vendor/autoload_runtime.php';
+
+return function (array $context) {
+    return new Kernel($context['APP_ENV'], (bool) $context['APP_DEBUG']);
+};
