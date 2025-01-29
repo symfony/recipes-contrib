@@ -327,8 +327,6 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [loophp/psr17](https://packagist.org/packages/loophp/psr17) | [1.0](loophp/psr17/1.0) |
 | [loophp/repository-monadic-helper](https://packagist.org/packages/loophp/repository-monadic-helper) | [1.0](loophp/repository-monadic-helper/1.0) |
 | [lox24eu/lox24_api_client_bundle](https://packagist.org/packages/lox24eu/lox24_api_client_bundle) | [0.3](lox24eu/lox24_api_client_bundle/0.3) |
-| [luzrain/phprunner-bundle](https://packagist.org/packages/luzrain/phprunner-bundle) | [0.1](luzrain/phprunner-bundle/0.1) |
-| [luzrain/phpstreamserver-bundle](https://packagist.org/packages/luzrain/phpstreamserver-bundle) | [0.2](luzrain/phpstreamserver-bundle/0.2) |
 | [luzrain/workerman-bundle](https://packagist.org/packages/luzrain/workerman-bundle) | [0.1](luzrain/workerman-bundle/0.1) |
 | [m-adamski/symfony-mailer-bundle](https://packagist.org/packages/m-adamski/symfony-mailer-bundle) | [1.0](m-adamski/symfony-mailer-bundle/1.0) |
 | [m-adamski/symfony-schedule-bundle](https://packagist.org/packages/m-adamski/symfony-schedule-bundle) | [1.0](m-adamski/symfony-schedule-bundle/1.0) |
@@ -461,6 +459,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [phpfastcache/phpfastcache-bundle](https://packagist.org/packages/phpfastcache/phpfastcache-bundle) | [3.0](phpfastcache/phpfastcache-bundle/3.0) |
 | [phpfastcgi/fastcgi-daemon](https://packagist.org/packages/phpfastcgi/fastcgi-daemon) | [0.11](phpfastcgi/fastcgi-daemon/0.11) |
 | [phpstan/phpstan](https://packagist.org/packages/phpstan/phpstan) | [1.0](phpstan/phpstan/1.0) |
+| [phpstreamserver/symfony](https://packagist.org/packages/phpstreamserver/symfony) | [0.4](phpstreamserver/symfony/0.4) |
 | [phpsword/sword-bundle](https://packagist.org/packages/phpsword/sword-bundle) | [1.0](phpsword/sword-bundle/1.0) |
 | [phpzlc/admin](https://packagist.org/packages/phpzlc/admin) | [1.0](phpzlc/admin/1.0) |
 | [phpzlc/admin-business](https://packagist.org/packages/phpzlc/admin-business) | [1.0](phpzlc/admin-business/1.0) |

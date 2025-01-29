@@ -1036,12 +1036,6 @@
         "lox24eu/lox24_api_client_bundle": [
             "0.3"
         ],
-        "luzrain/phprunner-bundle": [
-            "0.1"
-        ],
-        "luzrain/phpstreamserver-bundle": [
-            "0.2"
-        ],
         "luzrain/workerman-bundle": [
             "0.1"
         ],
@@ -1467,6 +1461,9 @@
         ],
         "phpstan/phpstan": [
             "1.0"
+        ],
+        "phpstreamserver/symfony": [
+            "0.4"
         ],
         "phpsword/sword-bundle": [
             "1.0"

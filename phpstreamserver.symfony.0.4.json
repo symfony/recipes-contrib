@@ -1,0 +1,65 @@
+{
+    "manifests": {
+        "phpstreamserver/symfony": {
+            "manifest": {
+                "bundles": {
+                    "PHPStreamServer\\Symfony\\PHPStreamServerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "bin/": "%BIN_DIR%/",
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "* You're ready to run your Symfony application with PHPStreamServer!",
+                    "  Run <comment>bin/phpss start</> command to get started",
+                    "",
+                    "* <fg=blue>Read</> the documentation at <comment>https://phpstreamserver.dev/docs/general/</>"
+                ]
+            },
+            "files": {
+                "bin/phpss": {
+                    "contents": [
+                        "#!/usr/bin/env php",
+                        "<?php",
+                        "",
+                        "use App\\Kernel;",
+                        "use PHPStreamServer\\Symfony\\PHPStreamServerRuntime;",
+                        "",
+                        "$_SERVER['APP_RUNTIME'] = PHPStreamServerRuntime::class;",
+                        "",
+                        "require_once \\dirname(__DIR__).'/vendor/autoload_runtime.php';",
+                        "",
+                        "return function (array $context) {",
+                        "    return new Kernel($context['APP_ENV'], (bool) $context['APP_DEBUG']);",
+                        "};",
+                        ""
+                    ],
+                    "executable": true
+                },
+                "config/phpss.config.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "use PHPStreamServer\\Core\\ReloadStrategy\\ExceptionReloadStrategy;",
+                        "use PHPStreamServer\\Core\\Server;",
+                        "use PHPStreamServer\\Symfony\\Worker\\SymfonyHttpServerProcess;",
+                        "",
+                        "return static function (Server $server): void {",
+                        "    $server->addWorker(new SymfonyHttpServerProcess(",
+                        "        listen: '0.0.0.0:8080',",
+                        "        reloadStrategies: [",
+                        "            new ExceptionReloadStrategy(),",
+                        "        ],",
+                        "    ));",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "1b6f82bb07b647988aabe46f07074d672d237c5f"
+        }
+    }
+}
