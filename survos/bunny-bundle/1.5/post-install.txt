@@ -1,0 +1,10 @@
+<bg=green;fg=white>                </>
+<bg=green;fg=white> success        </>
+<bg=green;fg=white>                </>
+
+  * <fg=yellow>Next steps:</>
+    1. Get the main API key from https://dash.bunny.net/account/api-key
+    2. Optionally add the key to your environment.  Otherwise, run the command below with the API key as the argument.
+    3. bin/console bunny:config <api-key> >> .env.local
+    4. run bin/console bunny:list to see the zones
+    5. Only add the API keys you need to the production environment.
