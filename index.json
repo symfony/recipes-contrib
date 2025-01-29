@@ -1846,6 +1846,9 @@
         "survos/barcode-bundle": [
             "1.0"
         ],
+        "survos/bunny-bundle": [
+            "1.5"
+        ],
         "survos/command-bundle": [
             "1.5"
         ],

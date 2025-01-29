@@ -578,6 +578,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sulu/webpack-encore](https://packagist.org/packages/sulu/webpack-encore) | [1.0](sulu/webpack-encore/1.0) |
 | [suncat/mobile-detect-bundle](https://packagist.org/packages/suncat/mobile-detect-bundle) | [1.0](suncat/mobile-detect-bundle/1.0) |
 | [survos/barcode-bundle](https://packagist.org/packages/survos/barcode-bundle) | [1.0](survos/barcode-bundle/1.0) |
+| [survos/bunny-bundle](https://packagist.org/packages/survos/bunny-bundle) | [1.5](survos/bunny-bundle/1.5) |
 | [survos/command-bundle](https://packagist.org/packages/survos/command-bundle) | [1.5](survos/command-bundle/1.5) |
 | [survos/crawler-bundle](https://packagist.org/packages/survos/crawler-bundle) | [1.5](survos/crawler-bundle/1.5) |
 | [svc/contactform-bundle](https://packagist.org/packages/svc/contactform-bundle) | [1.0](svc/contactform-bundle/1.0) |
