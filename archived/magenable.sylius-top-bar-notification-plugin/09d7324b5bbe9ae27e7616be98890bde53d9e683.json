@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "magenable/sylius-top-bar-notification-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Magenable\\SyliusTopBarNotificationPlugin\\MagenableSyliusTopBarNotificationPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/magenable_top_bar_notification.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@MagenableSyliusTopBarNotificationPlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/magenable_top_bar_notification.yaml": {
+                    "contents": [
+                        "magenable_sylius_top_bar_notification_plugin:",
+                        "    resource: \"@MagenableSyliusTopBarNotificationPlugin/config/routes/admin.yml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "09d7324b5bbe9ae27e7616be98890bde53d9e683"
+        }
+    }
+}

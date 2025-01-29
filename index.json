@@ -1067,6 +1067,9 @@
         "mael/recaptcha-bundle": [
             "0.1"
         ],
+        "magenable/sylius-top-bar-notification-plugin": [
+            "1.0"
+        ],
         "mailgun/mailgun-php": [
             "2.3"
         ],

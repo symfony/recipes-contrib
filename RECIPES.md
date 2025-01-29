@@ -337,6 +337,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [macpaw/symfony-health-check-bundle](https://packagist.org/packages/macpaw/symfony-health-check-bundle) | [1.0](macpaw/symfony-health-check-bundle/1.0) |
 | [mael/intervention-image-bundle](https://packagist.org/packages/mael/intervention-image-bundle) | [1.0](mael/intervention-image-bundle/1.0) |
 | [mael/recaptcha-bundle](https://packagist.org/packages/mael/recaptcha-bundle) | [0.1](mael/recaptcha-bundle/0.1) |
+| [magenable/sylius-top-bar-notification-plugin](https://packagist.org/packages/magenable/sylius-top-bar-notification-plugin) | [1.0](magenable/sylius-top-bar-notification-plugin/1.0) |
 | [mailgun/mailgun-php](https://packagist.org/packages/mailgun/mailgun-php) | [2.3](mailgun/mailgun-php/2.3) |
 | [mailjet/mailjet-bundle](https://packagist.org/packages/mailjet/mailjet-bundle) | [1.0](mailjet/mailjet-bundle/1.0) |
 | [mailxpert/apibundle](https://packagist.org/packages/mailxpert/apibundle) | [0.1](mailxpert/apibundle/0.1) |
