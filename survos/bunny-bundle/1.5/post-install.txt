@@ -8,6 +8,3 @@
     3. bin/console bunny:config <api-key> >> .env.local
     4. run bin/console bunny:list to see the zones
     5. Only add the API keys you need to the production environment.
-
-
-
