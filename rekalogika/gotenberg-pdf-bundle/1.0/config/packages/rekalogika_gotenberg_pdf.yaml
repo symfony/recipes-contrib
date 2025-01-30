@@ -1,0 +1,2 @@
+rekalogika_gotenberg_pdf:
+    url: '%env(GOTENBERG_URL)%'

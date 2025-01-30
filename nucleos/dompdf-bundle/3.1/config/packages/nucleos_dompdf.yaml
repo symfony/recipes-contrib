@@ -1,0 +1,4 @@
+nucleos_dompdf:
+    defaults:
+        chroot: '%kernel.project_dir%/public/assets' # See https://github.com/dompdf/dompdf/wiki/Usage#security-restrictions-for-local-files
+        logOutputFile: '' # Prevent creating `/tmp/log.htm` which causes problems in some server configurations

@@ -1,0 +1,6 @@
+kunstmaan_search:
+    connection:
+        driver: elastic_search
+        host: localhost
+        port: 9200
+    index_prefix: myproject # Change this prefix to you liking. Maybe the name of your project

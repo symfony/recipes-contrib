@@ -1,0 +1,3 @@
+  * You now need to create a yousign account
+    1. Visit <info>https://demo.yousign.fr/fr/public/api/registration</info>
+    2. Modify your YOUSIGN_API_KEY, YOUSIGN_USERNAME and YOUSIGN_PASSWORD config in <fg=green>.env</>

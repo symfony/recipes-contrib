@@ -1,0 +1,2 @@
+  * The Jacquesndl/MailerBundle needs your default sender configuration.
+    Modify your JACQUESNDL_MAILER_SENDER_NAME and JACQUESNDL_MAILER_SENDER_ADDRESS config in <fg=green>.env</>

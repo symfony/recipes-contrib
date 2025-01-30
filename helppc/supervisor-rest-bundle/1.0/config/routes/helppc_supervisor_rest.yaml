@@ -1,0 +1,3 @@
+supervisor:
+    resource: '@SupervisorRestBundle/Resources/config/routing.xml'
+    prefix:   /api/supervisor

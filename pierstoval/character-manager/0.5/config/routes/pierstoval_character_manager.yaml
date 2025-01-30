@@ -1,0 +1,4 @@
+generator_steps:
+    resource: "@PierstovalCharacterManagerBundle/Controller/StepController.php"
+    type:     annotation
+    prefix:   /character_generator/

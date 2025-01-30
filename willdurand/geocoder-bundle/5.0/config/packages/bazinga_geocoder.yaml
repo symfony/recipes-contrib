@@ -1,0 +1,5 @@
+# See the docs at https://github.com/geocoder-php/BazingaGeocoderBundle
+bazinga_geocoder:
+    # The local IP (127.0.0.1) will be replaced by the fake_ip
+    # see https://github.com/geocoder-php/BazingaGeocoderBundle/blob/5.0.0/Resources/doc/index.md#fake-local-ip
+    fake_ip: 123.123.123.123

@@ -1,0 +1,37 @@
+opctim_csp_bundle:
+    # See https://github.com/opctim/symfony-csp-bundle?tab=readme-ov-file#the-always_add-option
+    always_add: []
+
+    # See https://github.com/opctim/symfony-csp-bundle?tab=readme-ov-file#the-report-option
+    report:
+        url: null
+        route: null
+        route_params: []
+        chance: 100
+
+    # https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
+    # See https://github.com/opctim/symfony-csp-bundle?tab=readme-ov-file#configuration
+    directives:
+        default-src:
+            - "'self'"
+            - 'data:'
+            - 'https:'
+        base-uri:
+            - "'self'"
+        object-src:
+            - "'none'"
+        script-src:
+            - "'self'"
+        img-src:
+            - "'self'"
+        style-src:
+            - "'self'"
+            - "'unsafe-inline'"
+
+# For different set-ups in the dev environment
+when@dev:
+    opctim_csp_bundle:
+        # always_add: []
+
+        directives:
+            # Add your directive overrides here

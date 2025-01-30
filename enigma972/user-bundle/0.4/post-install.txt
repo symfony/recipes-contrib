@@ -1,0 +1,5 @@
+  * Create an User entity and extend Enigma972\UserBundle\Entity\User class
+
+  * And add all properties and methods you needs, it is your!
+
+Documentation: https://www.github.com/enigma972/user-bundle

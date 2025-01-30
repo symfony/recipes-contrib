@@ -1,0 +1,14 @@
+{
+    "conflict": {
+        "php": "<8.0"
+    },
+    "bundles": {
+        "DahRomy\\Glide\\DahRomyGlideBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%"
+    },
+    "env": {
+        "GLIDE_SIGNATURE_KEY": "%generate(secret)%"
+    }
+}

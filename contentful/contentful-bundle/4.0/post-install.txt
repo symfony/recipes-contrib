@@ -1,0 +1,4 @@
+  * Get your space ID and API key from https://www.contentful.com
+    and configure them in your <fg=green>.env</>
+
+Documentation: https://www.contentful.com/developers/docs/php/

@@ -1,0 +1,9 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "LOGZ_IO_TOKEN": "",
+        "LOGZ_IO_APPLICATION_NAME": ""
+    }
+}

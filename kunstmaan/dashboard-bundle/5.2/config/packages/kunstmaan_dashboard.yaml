@@ -1,0 +1,9 @@
+# Configurate the dashboard bundle google api parameters to enable the google widget
+# More info at https://kunstmaanbundlescms.readthedocs.io/en/latest/cookbook/google-analytics-dashboard/
+kunstmaan_dashboard:
+    google_analytics:
+        api:
+            client_id: '%env(GOOGLE_API_CLIENT_ID)%'
+            client_secret: '%env(GOOGLE_API_CLIENT_SECRET)%'
+            dev_key: '%env(GOOGLE_API_DEV_KEY)%'
+            app_name: '%env(GOOGLE_API_APP_NAME)%'

@@ -1,0 +1,7 @@
+  * The <fg=green>SuluFormBundle</> is almost ready:
+    1. Print the sql statements required to update your database schema by running <info>php bin/console doctrine:schema:update --dump-sql</>.
+    2. If the statements look fine to you, run the same command using <info>--force</> to execute them.
+    3. Make sure your user has all the necessary permissions for the <fg=green>SuluFormBundle</>.
+    4. Use <info>bin/console sulu:form:generate-form</info> to create a dummy form.
+
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/sulu/SuluFormBundle/blob/2.x/Resources/doc/index.md</>

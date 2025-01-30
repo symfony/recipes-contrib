@@ -1,0 +1,16 @@
+broadway:
+    event_store: broadway.event_store.mongodb
+
+services:
+    broadway.event_store.mongodb_client:
+        class: MongoDB\Client
+        arguments: ['%mongodb_uri%']
+
+    broadway.event_store.mongodb_collection:
+        class: MongoDB\Collection
+        factory: ['@broadway.event_store.mongodb_client', selectCollection]
+        arguments: ['%mongodb_database%', 'events']
+
+    broadway.event_store.mongodb:
+        class: Broadway\EventStore\MongoDB\MongoDBEventStore
+        arguments: ['@broadway.event_store.mongodb_collection', '@broadway.serializer.payload', '@broadway.serializer.metadata']

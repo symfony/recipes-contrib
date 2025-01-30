@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "SymfonyBundles\\KafkaBundle\\SymfonyBundlesKafkaBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "KAFKA_BROKERS": "kafka.intra:9092"
+    }
+}

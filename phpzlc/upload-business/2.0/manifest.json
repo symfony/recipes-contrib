@@ -1,0 +1,6 @@
+{
+    "gitignore": [
+        "/public/upload/*",
+        "!/public/upload/.gitignore"
+    ]
+}

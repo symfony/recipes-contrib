@@ -1,0 +1,3 @@
+monsieurbiz_advanced_option_admin:
+    resource: "@MonsieurBizSyliusAdvancedOptionPlugin/Resources/config/routing/admin.yaml"
+    prefix: /%sylius_admin.path_name%

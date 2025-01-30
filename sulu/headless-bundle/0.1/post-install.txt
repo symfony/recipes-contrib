@@ -1,0 +1,3 @@
+  * The <fg=green>SuluHeadlessBundle</> is almost ready:
+    Change the controller of your templates to <info>Sulu\Bundle\HeadlessBundle\Controller\HeadlessWebsiteController::indexAction</>.
+    Read the documentation at <comment>https://github.com/sulu/SuluHeadlessBundle/blob/0.x/README.md</> to learn how.

@@ -1,0 +1,12 @@
+commerce_weavers_sylius_tpay_webhook:
+    resource: "@CommerceWeaversSyliusTpayPlugin/config/routes_webhook.php"
+
+commerce_weavers_sylius_tpay_shop:
+    resource: "@CommerceWeaversSyliusTpayPlugin/config/routes_shop.php"
+    prefix: /{_locale}
+    requirements:
+        _locale: ^[A-Za-z]{2,4}(_([A-Za-z]{4}|[0-9]{3}))?(_([A-Za-z]{2}|[0-9]{3}))?$
+
+commerce_weavers_sylius_tpay_admin:
+    resource: "@CommerceWeaversSyliusTpayPlugin/config/routes_admin.php"
+    prefix: /admin

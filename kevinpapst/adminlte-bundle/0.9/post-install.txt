@@ -1,0 +1,7 @@
+  * <fg=blue>Finish</> bundle configuration:
+    1. Open <comment>config/packages/admin_lte.yaml</> and adjust to your needs
+    2. Create a layout file that uses:
+
+    {% extends '@AdminLTE/layout/default-layout.html.twig' %}
+
+Documentation: https://github.com/kevinpapst/AdminLTEBundle/blob/master/Resources/docs/

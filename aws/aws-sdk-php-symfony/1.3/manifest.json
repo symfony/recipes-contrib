@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Aws\\Symfony\\AwsBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "AWS_KEY": "not-a-real-key",
+        "AWS_SECRET": "@@not-a-real-secret"
+    }
+}

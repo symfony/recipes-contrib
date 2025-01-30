@@ -1,0 +1,5 @@
+  * Edit the <fg=green>config/packages/configuration_converter.yaml</> file to configure your own settings.
+
+  * Run <fg=green>bin/console configuration:convert</> to convert your configuration.
+
+Documentation: https://github.com/GregoireHebert/configuration-converter-bundle

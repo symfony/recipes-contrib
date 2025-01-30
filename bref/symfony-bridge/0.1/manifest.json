@@ -1,0 +1,8 @@
+{
+    "copy-from-recipe": {
+        "serverless.yaml": "serverless.yml"
+    },
+    "gitignore": [
+        "/.serverless/"
+    ]
+}

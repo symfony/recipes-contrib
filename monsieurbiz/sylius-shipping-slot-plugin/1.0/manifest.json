@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "MonsieurBiz\\SyliusShippingSlotPlugin\\MonsieurBizSyliusShippingSlotPlugin": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "copy-from-package": {
+        "src/Resources/views/SyliusShopBundle/Checkout/SelectShipping/_choice.html.twig": "templates/bundles/SyliusShopBundle/Checkout/SelectShipping/_choice.html.twig"
+    }
+}

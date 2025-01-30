@@ -1,0 +1,2 @@
+imports:
+    - { resource: "@SitemapPlugin/Resources/config/config.yml" }

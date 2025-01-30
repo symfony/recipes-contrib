@@ -1,0 +1,5 @@
+{
+    "copy-from-package": {
+        "config/form_data_transposer.yaml": "%CONFIG_DIR%/packages/form_data_transposer.yaml"
+    }
+}

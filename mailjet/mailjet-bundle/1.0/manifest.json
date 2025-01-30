@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Mailjet\\MailjetBundle\\MailjetBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "MAILJET_APIKEY_PUBLIC": "your-api_key",
+        "MAILJET_APIKEY_PRIVATE": "@@your-secret_key"
+    }
+}

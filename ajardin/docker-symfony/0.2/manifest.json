@@ -1,0 +1,12 @@
+{
+    "composer-scripts": {
+        "bin/docker-upgrade": "php-script"
+    },
+    "copy-from-recipe": {
+        "bin/": "%BIN_DIR%/"
+    },
+    "gitignore": [
+        "/%BIN_DIR%/docker-upgrade",
+        "/docker/"
+    ]
+}

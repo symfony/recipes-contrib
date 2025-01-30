@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Jurry\\RabbitMQ\\AmqpHandlerBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "JURRY_RABBIT_MQ_DSN": "tcp://guest:guest@localhost:5672"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Tienvx\\Bundle\\MbtApiBundle\\TienvxMbtApiBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "JAVA_BINARY": "java",
+        "PLANTUML_BINARY": "plantuml.jar",
+        "CONSOLE_BINARY": "bin/console"
+    }
+}

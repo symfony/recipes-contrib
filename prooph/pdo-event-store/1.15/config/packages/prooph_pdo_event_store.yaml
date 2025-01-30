@@ -1,0 +1,20 @@
+services:
+    _defaults:
+        public: false
+
+    app.event_store.default:
+        class: Prooph\EventStore\Pdo\PostgresEventStore
+        arguments:
+            - '@prooph_event_store.message_factory'
+            - '@app.event_store.pdo_connection.postgres'
+            - '@app.event_store.postgres.persistence_strategy'
+
+    app.event_store.pdo_connection.postgres:
+        class: \PDO
+        arguments:
+            - '%env(EVENT_STORE_DSN)%'
+            - '%env(EVENT_STORE_USER)%'
+            - '%env(EVENT_STORE_PASSWORD)%'
+
+    app.event_store.postgres.persistence_strategy:
+        class: Prooph\EventStore\Pdo\PersistenceStrategy\PostgresSingleStreamStrategy

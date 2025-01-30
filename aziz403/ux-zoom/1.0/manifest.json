@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Aziz403\\UX\\Zoom\\UxZoomBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "ZOOM_SDK_KEY": "!ChangeMe!",
+        "ZOOM_SDK_SECRET": "!ChangeMe!"
+    }
+}

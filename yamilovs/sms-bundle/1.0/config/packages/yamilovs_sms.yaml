@@ -1,0 +1,4 @@
+yamilovs_sms:
+    providers:
+        # You must to define at least one provider configuration
+        # See more info at https://github.com/yamilovs/SmsBundle#configuration

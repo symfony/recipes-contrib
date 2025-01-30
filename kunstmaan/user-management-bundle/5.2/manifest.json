@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Kunstmaan\\UserManagementBundle\\KunstmaanUserManagementBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

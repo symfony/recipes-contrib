@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "ManojX\\EncrypterBundle\\EncrypterBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "ENCRYPTER_SECRET": "your_secret_key_here"
+    }
+}

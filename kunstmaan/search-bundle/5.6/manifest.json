@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Kunstmaan\\SearchBundle\\KunstmaanSearchBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "container": {
+        "kunstmaan_search.elasticsearch_version": "7"
+    }
+}

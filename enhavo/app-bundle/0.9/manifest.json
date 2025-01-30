@@ -1,0 +1,24 @@
+{
+    "bundles": {
+        "Enhavo\\Bundle\\AppBundle\\EnhavoAppBundle": ["all"]
+    },
+    "container": {
+        "locale": "en"
+    },
+    "env": {
+        "MAILER_FROM": "no-reply@email.com",
+        "MAILER_NAME": "enhavo",
+        "MAILER_TO": "my@email.com"
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "assets/": "assets/",
+        "public/": "%PUBLIC_DIR%/",
+        "tsconfig.json": "tsconfig.json"
+    },
+    "gitignore": [
+        "public/build/enhavo/*",
+        "public/build/theme/*",
+        "public/js/fos_routes.js"
+    ]
+}

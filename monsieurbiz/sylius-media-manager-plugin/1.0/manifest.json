@@ -1,0 +1,15 @@
+{
+    "bundles": {
+        "MonsieurBiz\\SyliusMediaManagerPlugin\\MonsieurBizSyliusMediaManagerPlugin": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "MONSIEURBIZ_SYLIUS_MEDIA_MANAGER_PUBLIC_FOLDER": "%kernel.project_dir%/public",
+        "MONSIEURBIZ_SYLIUS_MEDIA_MANAGER_ROOT_FOLDER_FROM_PUBLIC": "media",
+        "MONSIEURBIZ_SYLIUS_MEDIA_MANAGER_MAX_FILE_SIZE": "5M"
+    }
+}

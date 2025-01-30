@@ -1,0 +1,5 @@
+  * Register a site on https://www.google.com/recaptcha/admin
+
+  * Modify your GOOGLE_RECAPTCHA_SITE_KEY and GOOGLE_RECAPTCHA_SECRET config in <fg=green>.env</>
+
+  * Inject the <fg=green>ReCaptcha\ReCaptcha</> service when you need to <fg=green>verify</> a submitted captcha

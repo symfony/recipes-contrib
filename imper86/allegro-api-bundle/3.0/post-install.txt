@@ -1,0 +1,5 @@
+  * <fg=blue>Register your application</> by visiting <comment>https://apps.developer.allegro.pl/</> or <comment>https://apps.developer.allegro.pl.allegrosandbox.pl/</>
+  * <fg=blue>Edit .env.local</> with your client id and client secret
+  * <fg=blue>Configure</> bundle - <comment>imper86_allegro_api.yaml</> in your <comment>config/packages</> directory
+  * <fg=blue>Do make:migration or doctrine:schema:update</> for bundle's entities
+  * <fg=blue>Start using</> visiting <comment>/allegro-api/start</> - this route will prepare allegro authorization url and will redirect you to allegro login page

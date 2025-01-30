@@ -1,0 +1,12 @@
+sonata_multi_upload:
+    # Add the providers here to enable multiupload
+    providers:
+        - sonata.media.provider.image
+
+sonata_admin:
+    assets:
+        extra_stylesheets:
+            - bundles/sonatamultiupload/dist/sonata-multiupload.css
+
+        extra_javascripts:
+            - bundles/sonatamultiupload/dist/sonata-multiupload.js

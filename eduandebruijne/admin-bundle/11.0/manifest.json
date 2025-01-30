@@ -1,0 +1,18 @@
+{
+    "bundles": {
+        "EDB\\AdminBundle\\EDBAdminBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "composer-scripts": {
+        "assets:install %PUBLIC_DIR%": "symfony-cmd",
+        "cache:clear": "symfony-cmd"
+    },
+    "env": {
+        "EDB_ADMIN_PATH": "admin",
+        "EDB_MEDIA_PATH": "/",
+        "EDB_GOOGLE_CLIENT_ID": "",
+        "EDB_GOOGLE_CLIENT_SECRET": ""
+    }
+}

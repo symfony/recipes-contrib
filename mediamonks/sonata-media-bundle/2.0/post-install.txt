@@ -1,0 +1,3 @@
+  * <fg=blue>Finish the media configuration</>:
+    1. Configure the flysystem filesystems for private and public file storage
+    2. Modify your MEDIA_REDIRECT_URL config in .env, a reverse proxy or CDN is highly recommended

@@ -1,0 +1,5 @@
+  * <fg=blue>Configure</> your application:
+    1. Enable sessions by uncommenting the entire session section in <comment>config/packages/framework.yaml</>
+    2. Secure your route by adding <comment>- { path: ^/admin, role: ROLE_ADMIN }</> in your security access_control section.
+
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/michelsalib/BCCCronManagerBundle/blob/master/README.markdown</> 

@@ -1,0 +1,10 @@
+tienvx_mbt:
+    email_from: '%env(EMAIL_FROM)%'
+    admin_url: '%env(ADMIN_URL)%'
+
+flysystem:
+    storages:
+        mbt.storage:
+            adapter: 'local'
+            options:
+                directory: "%kernel.project_dir%/var/storage/screenshots"

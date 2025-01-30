@@ -1,0 +1,3 @@
+doctrine_yuml:
+    resource: "@OnurbYumlBundle/Resources/config/routing.yml"
+    prefix:   /

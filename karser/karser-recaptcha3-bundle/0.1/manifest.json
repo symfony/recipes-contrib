@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Karser\\Recaptcha3Bundle\\KarserRecaptcha3Bundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "Get your API key and secret from https://g.co/recaptcha/v3",
+        "RECAPTCHA3_KEY": "my_site_key",
+        "RECAPTCHA3_SECRET": "my_secret"
+    }
+}

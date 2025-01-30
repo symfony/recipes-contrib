@@ -1,0 +1,18 @@
+{
+    "bundles": {
+        "BitBag\\SyliusMailChimpPlugin\\BitBagSyliusMailChimpPlugin": ["all"]
+    },
+    "container": {
+        "mailchimp.api_key": "%env(resolve:MAIL_CHIMP_API_KEY)%",
+        "mailchimp.list_id": "%env(resolve:MAIL_CHIMP_LIST_ID)%",
+        "mailchimp.webhook_secret": "%env(resolve:MAIL_CHIMP_WEBHOOK_SECRET)%"
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "MAIL_CHIMP_API_KEY": "YOUR_KEY",
+        "MAIL_CHIMP_LIST_ID": "YOUR_LIST_ID",
+        "MAIL_CHIMP_WEBHOOK_SECRET": "QUERY_PARAMETER_FOR_UNSUBSCRIBED_WEBHHOOK"
+    }
+}

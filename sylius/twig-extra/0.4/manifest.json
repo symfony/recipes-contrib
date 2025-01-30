@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "Sylius\\TwigExtra\\Symfony\\SyliusTwigExtraBundle": ["all"]
+    }
+}

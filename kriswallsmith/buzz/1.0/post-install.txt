@@ -1,0 +1,3 @@
+  * Buzz is great for sending PSR-7 requests. To get started you need to install
+    a PSR-7 implementation and a PSR-17 factory. There are many to choose from.
+    To quickly get started run <info>composer require nyholm/psr7</info>

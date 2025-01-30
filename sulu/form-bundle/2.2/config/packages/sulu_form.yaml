@@ -1,0 +1,11 @@
+sulu_form:
+    mail:
+        from: "%env(SULU_ADMIN_EMAIL)%"
+        to: "%env(SULU_ADMIN_EMAIL)%"
+        sender: "%env(SULU_ADMIN_EMAIL)%"
+    media:
+        protected: true
+
+framework:
+    esi: true
+    fragments: true

@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "IQ2i\\StoriaBundle\\IQ2iStoriaBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "storia/": "storia/"
+    }
+}

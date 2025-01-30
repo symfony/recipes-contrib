@@ -1,0 +1,2 @@
+intervention_image:
+    driver: Intervention\Image\Drivers\Gd\Driver

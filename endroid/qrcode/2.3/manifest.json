@@ -1,8 +1,0 @@
-{
-    "bundles": {
-        "Endroid\\QrCode\\Bundle\\QrCodeBundle\\EndroidQrCodeBundle": ["all"]
-    },
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    }
-}

@@ -1,0 +1,4 @@
+llm_integration:
+    llm_provider: 'api_together'
+    llm_api_key: '%env(LLM_PROVIDER_API_KEY)%'
+    llm_model: '%env(LLM_MODEL)%'

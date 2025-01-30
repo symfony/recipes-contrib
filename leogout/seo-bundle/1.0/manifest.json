@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Leogout\\Bundle\\SeoBundle\\LeogoutSeoBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

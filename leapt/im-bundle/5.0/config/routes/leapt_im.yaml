@@ -1,0 +1,2 @@
+leapt_im:
+    resource: '@LeaptImBundle/config/routing.php'

@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "ExpertCoder\\Swiftmailer\\SendGridBundle\\ExpertCoderSwiftmailerSendGridBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "SENDGRID_API_KEY": "PleaseEnterYourKey"
+    }
+}

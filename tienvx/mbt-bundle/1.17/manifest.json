@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Tienvx\\Bundle\\MbtBundle\\TienvxMbtBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "EMAIL_FROM": "from@example.com",
+        "ADMIN_URL": "http://localhost"
+    }
+}

@@ -1,0 +1,3 @@
+# See https://github.com/contao/core-bundle
+contao:
+    web_dir: "%kernel.project_dir%/public"

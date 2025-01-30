@@ -1,0 +1,14 @@
+# Configuration file for the MaksZeTelemetry bundle
+#
+# For more information about the bundle settings visit:
+# https://github.com/maksze/MaksZeTelemetryBundle/blob/master/README.md
+
+maksze_telemetry:
+    yandex_metrika:
+        #- {id: '%env(YANDEX_METRIKA_ID)%'}
+    yandex_webmaster:
+        #- {id: '%env(YANDEX_WEBMASTER_ID)%'}
+    google_search_console:
+        #- {id: '%env(GOOGLE_SEARCH_CONSOLE_ID)%'}
+    google_analytics:
+        #- {id: '%env(GOOGLE_ANALYTICS_ID)%'}

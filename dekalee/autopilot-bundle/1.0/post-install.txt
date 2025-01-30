@@ -1,0 +1,2 @@
+  * The Dekalee/AutopilotBundle needs your pubsub configuration.
+    Modify your DEKALEE_AUTOPILOT_APIKEY config in <fg=green>.env</>

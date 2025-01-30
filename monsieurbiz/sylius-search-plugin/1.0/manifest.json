@@ -1,0 +1,17 @@
+{
+    "bundles": {
+        "MonsieurBiz\\SyliusSearchPlugin\\MonsieurBizSyliusSearchPlugin": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "copy-from-package": {
+        "src/Resources/templates/": "templates/"
+    },
+    "env": {
+        "MONSIEURBIZ_SEARCHPLUGIN_ES_HOST": "localhost",
+        "MONSIEURBIZ_SEARCHPLUGIN_ES_PORT": "9200"
+    }
+}

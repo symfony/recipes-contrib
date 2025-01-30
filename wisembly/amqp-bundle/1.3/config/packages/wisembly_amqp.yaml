@@ -1,0 +1,16 @@
+wisembly_amqp:
+    console_path: '%kernel.project_dir%/bin/console'
+    broker: 'oldsound'
+    connections:
+        default: '%env(AMQP_URL)%'
+    gates:
+        # here you should declare all your "gates", which are the cornerstone
+        # of this amqp bundle.
+        #
+        # For each gates declares which queue and which exchange it should
+        # communicate with, if these should be auto_declared, which connection
+        # it should use, ... and so on.
+        acme:
+            auto_declare: true
+            queue: acme_queue
+            exchange: acme_exchange

@@ -1,0 +1,9 @@
+  * The weglot/translate-bundle uses Weglot service. Create a free
+    account on https://dashboard.weglot.com/register and modify your WG_API_KEY
+    config in <fg=green>.env</>
+
+  * Edit the configuration in <fg=green>config/packages/weglot_translate.yaml</>
+    to start translate your website.
+
+More details: https://github.com/weglot/translate-bundle
+

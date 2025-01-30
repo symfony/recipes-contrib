@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Alexandre\\EvcBundle\\AlexandreEvcBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "EVC_API": "Enter the api version provided by evc.de support",
+        "EVC_USERNAME": "Enter your reseller account number",
+        "EVC_PASSWORD": "Enter your api password, not the password to connect on evc.de website"
+    }
+}

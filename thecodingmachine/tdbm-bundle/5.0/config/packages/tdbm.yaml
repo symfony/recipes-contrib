@@ -1,0 +1,4 @@
+# Read more about TDBM available options at: https://thecodingmachine.github.io/tdbm/doc/install_symfony.html
+tdbm:
+    bean_namespace: App\Beans
+    dao_namespace: App\Daos

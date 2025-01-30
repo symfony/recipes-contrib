@@ -1,0 +1,2 @@
+connectholland_uptime_robot:
+    api_key: '%env(string:UPTIMEROBOT_API_KEY)%'

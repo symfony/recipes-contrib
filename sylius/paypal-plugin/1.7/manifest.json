@@ -1,0 +1,16 @@
+{
+    "bundles": {
+        "Sylius\\PayPalPlugin\\SyliusPayPalPlugin": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "add-lines": [
+        {
+            "file": "config/routes/sylius_shop.yaml",
+            "position": "bottom",
+            "warn_if_missing": true,
+            "content": "sylius_shop_override_paypal:\n    resource: \"@SyliusPayPalPlugin/Resources/config/sylius_shop_override_routing.yaml\"\n    prefix: /{_locale}\n    requirements:\n        _locale: ^[A-Za-z]{2,4}(_([A-Za-z]{4}|[0-9]{3}))?(_([A-Za-z]{2}|[0-9]{3}))?$\n"
+        }
+    ]
+}

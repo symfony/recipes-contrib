@@ -1,0 +1,12 @@
+sonata_admin:
+    assets:
+        extra_stylesheets:
+            - bundles/sonatatranslation/css/sonata-translation.css
+
+sonata_block:
+    blocks:
+        sonata_translation.block.locale_switcher: null
+
+sonata_translation:
+    locales: ['en']
+    default_locale: 'en'

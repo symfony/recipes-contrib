@@ -1,0 +1,3 @@
+  * The Dekalee/MailjetBundle needs your mailjet configuration.
+    Modify your DEKALEE_MAILJET_API_KEY, DEKALEE_MAILJET_SECRET_KEY
+    and DEKALEE_MAILJET_BASE_TEMPLATE_ID config in <fg=green>.env</>

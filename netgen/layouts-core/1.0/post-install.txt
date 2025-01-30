@@ -1,0 +1,12 @@
+  * For Netgen Layouts to function, you need to import the database tables
+    into your database. Currently, only MySQL is supported. To import the tables,
+    use the following command from your project root:
+
+    <fg=green>php bin/console doctrine:migrations:migrate --configuration=vendor/netgen/layouts-core/migrations/doctrine.yml</>
+
+  * Enable ESI and fragments support in the <fg=green>config/packages/framework.yaml</> file.
+
+  * Complete the installation procedure by following instructions detailed at
+    <comment>https://docs.netgen.io/projects/layouts/en/latest/getting_started/install_existing_project.html</>
+
+Documentation: <comment>https://docs.netgen.io/projects/layouts/en/latest/</>

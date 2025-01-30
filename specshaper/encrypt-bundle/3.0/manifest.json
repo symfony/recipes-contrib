@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "SpecShaper\\EncryptBundle\\SpecShaperEncryptBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "SPEC_SHAPER_ENCRYPT_KEY": "change_me"
+    }
+}

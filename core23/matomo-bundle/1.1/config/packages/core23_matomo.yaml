@@ -1,0 +1,4 @@
+sonata_block:
+    blocks:
+        core23_matomo.block.statistic:
+        core23_matomo.block.tracker:

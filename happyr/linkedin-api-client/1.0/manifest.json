@@ -1,0 +1,9 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "LINKEDIN_API_KEY": "replace_me",
+        "LINKEDIN_API_SECRET": "replace_me"
+    }
+}

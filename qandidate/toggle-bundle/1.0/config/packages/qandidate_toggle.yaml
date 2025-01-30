@@ -1,0 +1,5 @@
+# see https://github.com/qandidate-labs/qandidate-toggle-bundle/blob/master/README.md#configuration
+
+qandidate_toggle:
+    persistence: config
+    toggles: null

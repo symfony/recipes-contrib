@@ -1,0 +1,5 @@
+  * Modify the UNSPLASH_APPLICATION_ID and UNSPLASH_APPLICATION_SECRET config in .env
+
+  * Don't forget to add the vue component in you javascript
+
+  * You can check the instructions on the github repo: https://github.com/disjfa/mozaic-bundle

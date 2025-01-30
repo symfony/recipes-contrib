@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Routmoute\\Bundle\\RoutmouteSireneBundle\\RoutmouteSireneBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "ROUTMOUTE_SIRENE_CONSUMER_KEY": "YourInseeConsumerKey",
+        "ROUTMOUTE_SIRENE_CONSUMER_SECRET": "YourInseeConsumerSecret"
+    }
+}

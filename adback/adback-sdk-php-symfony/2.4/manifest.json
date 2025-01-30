@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Adback\\ApiClientBundle\\AdbackApiClientBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "ADBACK_API_CLIENT_ACCESS_TOKEN": "adback-access-token"
+    }
+}

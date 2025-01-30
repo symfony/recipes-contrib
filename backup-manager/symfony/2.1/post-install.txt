@@ -1,0 +1,3 @@
+  * Configure your application:
+    1. Make sure you have proper values in your .env file.
+    2. Configure a good storage for your backups. See the documentation for all possible values. https://github.com/backup-manager/symfony

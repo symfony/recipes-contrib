@@ -1,0 +1,10 @@
+services:
+    _defaults:
+        public: false
+        autowire: true
+        autoconfigure: true
+
+    # registers all neccessary classes as services.
+    Basster\TwigBase64\Converter\ImageToBase64Converter: null
+    Basster\TwigBase64\Twig\Base64ImageExtension: null
+    Basster\TwigBase64\Converter\FileConverterInterface: '@Basster\TwigBase64\Converter\ImageToBase64Converter'

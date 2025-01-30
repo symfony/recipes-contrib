@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "KnpU\\OAuth2ClientBundle\\KnpUOAuth2ClientBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "GpsLab\\Bundle\\GeoIP2Bundle\\GpsLabGeoIP2Bundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "composer-scripts": {
+        "geoip2:update": "symfony-cmd"
+    }
+}

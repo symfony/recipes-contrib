@@ -1,0 +1,15 @@
+# Read the documentation: https://github.com/timiki/rpc-server-bundle
+
+rpc_server:
+
+    mapping: '%kernel.project_dir%/src/Method'
+
+    # id cache service, must be instanced of Psr\Cache\CacheItemPoolInterface
+    # by default use file cache
+
+    cache: null
+
+    # id serializer service, must be instanced of Timiki\Bundle\RpcServerBundle\Serializer\SerializerInterface
+    # by default use 'rpc.server.serializer.base' service
+
+    serializer: null

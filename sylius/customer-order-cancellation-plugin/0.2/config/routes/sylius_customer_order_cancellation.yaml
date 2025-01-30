@@ -1,0 +1,5 @@
+sylius_customer_order_cancellation_plugin:
+    resource: "@SyliusCustomerOrderCancellationPlugin/Resources/config/routing.yml"
+    prefix: /{_locale}
+    requirements:
+        _locale: ^[a-z]{2}(?:_[A-Z]{2})?$

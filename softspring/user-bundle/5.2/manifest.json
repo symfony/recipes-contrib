@@ -1,0 +1,10 @@
+{
+    "bundles": {
+        "Softspring\\UserBundle\\SfsUserBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "config/",
+        "src/": "src/",
+        "translations/": "translations/"
+    }
+}

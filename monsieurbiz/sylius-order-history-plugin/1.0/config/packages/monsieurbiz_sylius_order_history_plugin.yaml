@@ -1,0 +1,2 @@
+imports:
+    - { resource: "@MonsieurBizSyliusOrderHistoryPlugin/Resources/config/config.yaml" }

@@ -1,0 +1,1 @@
+    Download the adapters you want to use from <comment>http://www.php-cache.com/en/latest/#cache-pool-implementations</comment>.

@@ -1,0 +1,2 @@
+bitbag_sylius_product_bundle_plugin:
+    resource: "@BitBagSyliusProductBundlePlugin/Resources/config/routing.yml"

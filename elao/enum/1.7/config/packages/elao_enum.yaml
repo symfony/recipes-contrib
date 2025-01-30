@@ -1,0 +1,5 @@
+elao_enum:
+    # Provide the enum classes for which you want to automatically generate & register Doctrine DBAL Types:
+    # https://github.com/Elao/PhpEnums#doctrine
+    doctrine:
+        types: {}

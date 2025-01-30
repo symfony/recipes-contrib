@@ -1,0 +1,1 @@
+  * Do not forget to start the new <fg=green>Gotenberg</> container if enabled.

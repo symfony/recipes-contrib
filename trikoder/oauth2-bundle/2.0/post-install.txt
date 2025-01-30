@@ -1,0 +1,18 @@
+  1. <bg=magenta;fg=white> Provide a key pair </>
+    i)   Generate a private/public key pair (preferably with a password): <comment>https://oauth2.thephpleague.com/installation/#generating-public-and-private-keys</>
+    ii)  Configure the <info>private_key</> and <info>public_key</> with the respective key locations
+    iii) (Optional) Set the <info>private_key_passphrase</> to the private key password set in the previous step
+
+  2. <bg=magenta;fg=white> Configure the OAuth2 encryption key </>
+    i)   Add the <info>OAUTH2_ENCRYPTION_KEY</> env variable in <info>.env.local</> (don't commit your production secrets): <comment>https://oauth2.thephpleague.com/installation/#string-password</>
+    ii)  Configure the <info>encryption_key</> with a secure encryption key: <comment>https://oauth2.thephpleague.com/installation/#string-password</>
+
+  3. <bg=magenta;fg=white> Update the database </>
+    i)   Update the database so bundle entities can be persisted using Doctrine: <comment>bin/console doctrine:schema:update --force</>
+
+  4. <bg=magenta;fg=white> Install a PSR 7/17 implementation </>
+    i)   Require a PSR 7/17 implementation. We recommend that you use nyholm/psr7.
+    ii)  (Optional) Choose a different implementation package: <comment>https://github.com/trikoder/oauth2-bundle/blob/v2.x/docs/psr-implementation-switching.md</>
+
+  5. <bg=magenta;fg=white> Read the docs </>
+    i)   Read the documentation at <comment>https://github.com/trikoder/oauth2-bundle/blob/v2.x/docs/basic-setup.md</>

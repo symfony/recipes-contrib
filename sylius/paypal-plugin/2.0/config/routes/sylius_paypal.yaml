@@ -1,0 +1,2 @@
+sylius_paypal:
+    resource: "@SyliusPayPalPlugin/config/routes.yaml"

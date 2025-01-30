@@ -1,0 +1,23 @@
+{
+    "bundles": {
+        "EcPhp\\EuLoginBundle\\EuLoginBundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "ECAS_BASE_URL": "https://ecas.ec.europa.eu/cas",
+        "ECAS_SERVICE": "",
+        "ECAS_LOGOUT_SERVICE_URL": "",
+        "ECAS_PGT_CALLBACK_URL": "",
+        "ECAS_PROXY_ASSURANCE_LEVEL": "",
+        "ECAS_AUTHENTICATION_LEVEL": "BASIC",
+        "ECAS_ASSURANCE_LEVEL_LOW": "/laxValidate",
+        "ECAS_ASSURANCE_LEVEL_MEDIUM": "/sponsorValidate",
+        "ECAS_ASSURANCE_LEVEL_HIGH": "/interinstitutionalValidate",
+        "ECAS_ASSURANCE_LEVEL_TOP": "/strictValidate",
+        "ECAS_ASSURANCE_LEVEL": "${ECAS_ASSURANCE_LEVEL_TOP}"
+    }
+}

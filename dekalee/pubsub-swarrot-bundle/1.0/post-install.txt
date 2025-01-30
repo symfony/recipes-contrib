@@ -1,0 +1,2 @@
+  * The Dekalee/PubSubSwarrotBundle needs your pubsub configuration.
+    Modify your DEKALEE_PUBSUB_SWARROT_KEY_FILE_PATH config in <fg=green>.env</>

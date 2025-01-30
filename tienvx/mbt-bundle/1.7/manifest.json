@@ -1,0 +1,18 @@
+{
+    "bundles": {
+        "Tienvx\\Bundle\\MbtBundle\\TienvxMbtBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "var/": "%VAR_DIR%/"
+    },
+    "env": {
+        "SLACK_HOOK_URL": "https://hooks.slack.com/...",
+        "SLACK_FROM": "Example",
+        "SLACK_TO": "#a-channel or @a-person",
+        "SLACK_MESSAGE": "A new bug was found!",
+        "EMAIL_FROM": "from@example.com",
+        "EMAIL_TO": "to@example.com",
+        "EMAIL_SUBJECT": "A new bug was found!"
+    }
+}

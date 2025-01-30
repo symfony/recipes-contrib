@@ -1,0 +1,6 @@
+#xcore_inline:
+#    fallback: false
+#    table_name: 'inline_content
+#    url_path: '/inline-editing
+#    connection: 'doctrine.dbal.default_connection'
+#    entity_manager: 'doctrine.orm.entity_manager'

@@ -1,0 +1,7 @@
+survos_crawler:
+    resource: '@SurvosCrawlerBundle/config/routes.yaml'
+    # consider adding /admin to this route and securing it in security.yaml
+    prefix: '/crawler'
+    # run symfony proxy:domain:attach my-project, then the error messages will be displayed with this prefix.  That way, you can simply click on a link to open the page.
+    # base_url: 'https://my-project.wip/'
+

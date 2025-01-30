@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Webauthn\\Bundle\\WebauthnBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%"
+    },
+    "env": {
+        "RELYING_PARTY_ID": "example.com",
+        "RELYING_PARTY_NAME": "My Application"
+    }
+}

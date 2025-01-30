@@ -1,0 +1,2 @@
+  * <fg=blue>Configure</> bundle in <comment>config/packages/scheduler.yaml</>
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/goksagun/scheduler-bundle/blob/master/README.md</>

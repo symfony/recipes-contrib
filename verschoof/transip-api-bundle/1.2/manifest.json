@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Verschoof\\TransipApiBundle\\TransipApiBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "privatekey is a multiline key from transip, just remove the breaks to create a one-liner",
+        "VERSCHOOF_TRANSIP_API_LOGIN": "your-api_login",
+        "VERSCHOOF_TRANSIP_API_PRIVATE_KEY": "your-private_key"
+    }
+}

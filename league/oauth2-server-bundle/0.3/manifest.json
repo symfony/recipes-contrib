@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "League\\Bundle\\OAuth2ServerBundle\\LeagueOAuth2ServerBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "Fallback OAuth2 encryption key",
+        "#2": "Please override this with a secure value: https://oauth2.thephpleague.com/installation/#string-password",
+        "OAUTH2_ENCRYPTION_KEY": "%generate(secret)%"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Koff\\Bundle\\I18nFormBundle\\I18nFormBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

@@ -1,0 +1,2 @@
+  * The Wandi/MailerBundle needs your default sender configuration.
+    Modify your WANDI_MAILER_SENDER_NAME and WANDI_MAILER_SENDER_ADDRESS config in <fg=green>.env</>

@@ -1,0 +1,4 @@
+  * <fg=blue>Read</> the documentation at:
+    <comment>https://github.com/GregoireHebert/docusign-bundle</>
+  * <fg=blue>Edit</> the <comment>.env</> file to adapt the authentication settings.
+  * <fg=blue>Edit</> the <comment>config/packages/docusign.yaml</> file to configure your documents signatures.

@@ -1,8 +1,0 @@
-{
-    "bundles": {
-        "Symfony\\Cmf\\Bundle\\SeoBundle\\CmfSeoBundle": ["all"]
-    },
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    }
-}

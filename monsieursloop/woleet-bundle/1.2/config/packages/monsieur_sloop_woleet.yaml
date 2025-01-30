@@ -1,0 +1,6 @@
+monsieur_sloop_woleet:
+    #API KEY
+    api_token: "%env(WOLEET_API_TOKEN)%"
+    #API CALLBACK KEY
+    callback_secret: "%env(WOLEET_CALLBACK_SECRET)%"
+

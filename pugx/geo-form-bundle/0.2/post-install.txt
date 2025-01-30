@@ -1,0 +1,2 @@
+    * <fg=blue>Insert</> sensitive values in configuration file
+    * <fg=blue>Read</> documentation at <comment>https://github.com/PUGX/PUGXGeoFormBundle/blob/master/Resources/doc/index.md</>

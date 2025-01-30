@@ -1,0 +1,6 @@
+  * Generate your spark numbers by running <fg=green>php vendor/bin/optimus spark -f env</>
+    and configure them in your <fg=green>.env</>
+
+Optimus Documentation: https://github.com/jenssegers/optimus
+Bundle Documentation: https://github.com/ckrack/optimus-bundle
+

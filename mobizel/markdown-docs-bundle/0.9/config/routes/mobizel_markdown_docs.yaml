@@ -1,0 +1,3 @@
+_mobizel_markdowns:
+    resource: 'mobizel_markdown_docs.routing.context_loader'
+    type: service

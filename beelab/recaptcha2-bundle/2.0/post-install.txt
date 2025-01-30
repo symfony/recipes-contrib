@@ -1,0 +1,2 @@
+    * <fg=blue>Insert</> sensitive values in your environment values
+    * <fg=blue>Read</> documentation at <comment>https://github.com/Bee-Lab/BeelabRecaptcha2Bundle/blob/master/docs/index.md</>

@@ -1,0 +1,15 @@
+# Library documentation: http://tactician.thephpleague.com/
+# Bundle documentation: https://github.com/thephpleague/tactician-bundle/blob/v1.0/README.md
+tactician:
+    commandbus:
+        default:
+            middleware:
+# Security middleware - https://github.com/thephpleague/tactician-bundle#security-middleware-tacticianmiddlewaresecurity
+#                - tactician.middleware.security
+# Validator middleware - https://github.com/thephpleague/tactician-bundle/tree/v1.0#validator-middleware-tacticianmiddlewarevalidator
+#                - tactician.middleware.validator
+# Locking middleware - http://tactician.thephpleague.com/plugins/locking-middleware/
+#                - tactician.middleware.locking
+# Doctrine transactional middleware, requires additional package - https://github.com/thephpleague/tactician-doctrine
+#                - tactician.middleware.doctrine
+                - tactician.middleware.command_handler

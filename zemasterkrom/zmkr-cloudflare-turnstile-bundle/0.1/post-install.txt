@@ -1,0 +1,10 @@
+<bg=blue;fg=white>              </>
+<bg=blue;fg=white> Almost ready </>
+<bg=blue;fg=white>              </>
+
+  * <fg=blue>Configure</> the captcha initializer parameters:
+    1. Modify Cloudflare Turnstile keys in your .env file to use your application keys (<comment>CLOUDFLARE_TURNSTILE_SITEKEY</>, <comment>CLOUDFLARE_TURNSTILE_SECRET_KEY</>)
+    2. Associate a <comment>CloudflareTurnstileType</> in your form builder
+    3. Check that the submitted form is valid: captcha validation will be automatically triggered
+
+  * Read the documentation at <comment>https://github.com/Zemasterkrom/zmkr-cloudflare-turnstile-bundle</>

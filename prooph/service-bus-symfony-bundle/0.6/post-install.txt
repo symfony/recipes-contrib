@@ -1,0 +1,5 @@
+  * Verify and uncomment the configuration in <comment>%CONFIG_DIR%/packages/prooph_service_bus.yaml</>
+    to register message handlers
+
+  * Dispatch commands by injecting
+    the <comment>Prooph\ServiceBus\CommandBus</comment> service into your controllers

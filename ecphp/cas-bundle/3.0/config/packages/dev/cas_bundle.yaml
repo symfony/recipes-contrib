@@ -1,0 +1,24 @@
+cas:
+    # Change the URL to your own CAS server
+    base_url: https://ecas.ec.europa.eu/cas
+    protocol:
+        login:
+            path: /login
+            default_parameters:
+                service: cas_bundle_homepage
+        serviceValidate:
+            path: /p3/serviceValidate
+            default_parameters:
+                format: JSON
+                #pgtUrl: cas_bundle_proxy_callback
+        logout:
+            path: /logout
+            default_parameters:
+                service: cas_bundle_homepage
+        proxy:
+            path: /proxy
+        proxyValidate:
+            path: /p3/proxyValidate
+            default_parameters:
+                format: JSON
+                #pgtUrl: cas_bundle_proxy_callback

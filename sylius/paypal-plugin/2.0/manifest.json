@@ -1,0 +1,17 @@
+{
+    "bundles": {
+        "Sylius\\PayPalPlugin\\SyliusPayPalPlugin": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "add-lines": [
+        {
+            "file": "config/packages/fos_rest.yaml",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "fos_rest:",
+            "content": "    ###> sylius/paypal-plugin ###\n    exception: true\n    view:\n        formats:\n            json: true\n            xml:  true\n        empty_content: 204\n    format_listener:\n        rules:\n            - { path: '^/api/.*', priorities: ['json', 'xml'], fallback_format: json, prefer_extension: true }\n            - { path: '^/', stop: true }\n    ###< sylius/paypal-plugin ###\n"
+        }
+    ]
+}

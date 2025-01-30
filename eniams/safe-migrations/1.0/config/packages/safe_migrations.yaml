@@ -1,0 +1,13 @@
+# https://github.com/ismail1432/safe-migrations-bundle
+safe_migrations:
+    # The path where the doctrine migrations are stored. (required)
+    migrations_path: '%kernel.project_dir%/migrations'
+    # List of critical tables that need a warning when they are modified. (optional)
+    # critical_tables:
+    #  - 'user'
+    #  - 'product'
+    #  - ...
+    # The statement that will be excluded from check. (optional)
+    # excluded_statements: # List of operations that not need a warning
+    # - 'TRUNCATE TABLE'
+    # - ...

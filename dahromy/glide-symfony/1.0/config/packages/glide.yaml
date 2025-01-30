@@ -1,0 +1,3 @@
+glide:
+    source: '%kernel.project_dir%/public'
+    cache: '%kernel.project_dir%/var/cache/glide'

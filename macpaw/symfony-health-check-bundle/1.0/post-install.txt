@@ -1,0 +1,19 @@
+<bg=blue;fg=white>                                                </>
+<bg=blue;fg=white> Next: Symfony Health Check Bundle Configuration </>
+<bg=blue;fg=white>                                                </>
+
+  *. Add healthcheck firewall to <fg=green>config/security.yaml</> file
+
+<comment>
+security:
+    firewalls:
+        healthcheck:
+            pattern: ^/health
+            security: false
+        ping:
+            pattern: ^/ping
+            security: false
+</>
+
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/MacPaw/symfony-health-check-bundle</>
+  * <fg=blue>Read</> the upgrade documentation at <comment>https://github.com/MacPaw/symfony-health-check-bundle/blob/develop/UPGRADE-1.0.md</>

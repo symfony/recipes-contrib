@@ -1,0 +1,3 @@
+easy_impress:
+    resource: '@EasyImpressBundle/Resources/config/routing.yml'
+    prefix: /presentations

@@ -1,0 +1,3 @@
+logbook_health:
+    resource: "@LogbookBundle/Resources/config/routes.yaml"
+    prefix: /logbook-health

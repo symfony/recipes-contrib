@@ -1,0 +1,25 @@
+Please update config/packages/dtc_queue.yaml:
+
+# config/packages/dtc_queue.yaml
+dtc_queue:
+    manager:
+        # This parameter is required and should typically be set to one of:
+        #   [odm|orm|beanstalkd|rabbit_mq|redis]
+        job: orm
+    # ...
+
+For a full list of configuration options, see:
+   * https://github.com/mmucklo/DtcQueueBundle/blob/master/Resources/doc/full-configuration.md
+
+If you use the "orm" job manager, you'll want to create a migration or update the schema on your database manually. For more info see:
+   * https://github.com/mmucklo/DtcQueueBundle/blob/master/Resources/doc/symfony4-5.md
+
+For admin, make sure twig-pack or twig-bundle + twig is installed.
+
+On older versions of Symfony, the following might be necessary:
+
+# config/packages/framework.yaml
+framework:
+    # ...
+    templating:
+        engines: ['twig']

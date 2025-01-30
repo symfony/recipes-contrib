@@ -1,0 +1,10 @@
+{
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "URL_SHORTENER_API_BASE_URI": "",
+        "URL_SHORTENER_API_USERNAME": "",
+        "URL_SHORTENER_API_PASSWORD": ""
+    }
+}

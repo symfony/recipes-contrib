@@ -1,0 +1,2 @@
+  * <fg=blue>Run</> <fg=green>doctrine:migrations:migrate</> to upgrade database
+  * <fg=blue>Add Cron</> on <fg=green>synolia:scheduler-run</> to execute scheduled commands

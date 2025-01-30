@@ -1,0 +1,54 @@
+# Read more about client options at: https://github.com/kriswallsmith/Buzz/blob/master/doc/client.md
+services:
+    _defaults:
+        public: false
+
+    # Tell the auto wire system to use "FileGetContents" client as default client.
+    # Set this to any of the other clients below (e.g. Curl or MultiCurl) to use a different default client.
+    Buzz\Client\BuzzClientInterface: '@buzz.client.file_get_contents'
+    Buzz\Client\BatchClientInterface: '@buzz.client.multi_curl'
+
+    # Register alias for PSR-18
+    Psr\Http\Client\ClientInterface: '@Buzz\Client\BuzzClientInterface'
+
+    # Clients
+    buzz.client.file_get_contents:
+        class: Buzz\Client\FileGetContents
+        arguments:
+            - '@Psr\Http\Message\ResponseFactoryInterface'
+            -
+                timeout: 10
+                allow_redirects: false
+
+    buzz.client.curl:
+        class: Buzz\Client\Curl
+        arguments:
+            - '@Psr\Http\Message\ResponseFactoryInterface'
+            -
+                timeout: 10
+                allow_redirects: false
+
+    buzz.client.multi_curl:
+        class: Buzz\Client\MultiCurl
+        arguments:
+            - '@Psr\Http\Message\ResponseFactoryInterface'
+            -
+                timeout: 10
+                allow_redirects: false
+
+    # Browser
+    Buzz\Browser:
+        arguments: ['@Buzz\Client\BuzzClientInterface', '@Psr\Http\Message\RequestFactoryInterface']
+        calls:
+            - ['addMiddleware', ['@buzz.middleware.content_length']]
+            - ['addMiddleware', ['@buzz.middleware.logger']]
+
+    # Middleware
+    buzz.middleware.content_length:
+        class: Buzz\Middleware\ContentLengthMiddleware
+
+    buzz.middleware.logger:
+        class: Buzz\Middleware\LoggerMiddleware
+        arguments: ['@?logger']
+        tags:
+            - { name: monolog.logger, channel: buzz }

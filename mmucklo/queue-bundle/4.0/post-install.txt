@@ -1,0 +1,14 @@
+Please update config/packages/dtc_queue.yaml to accurately reflect your needs.
+  (Choose between odm|orm|beanstalkd|rabbit_mq|redis, etc.)
+
+  - For a full list of configuration options, see:
+    * https://github.com/mmucklo/DtcQueueBundle/blob/master/Resources/doc/full-configuration.md
+
+For admin, make sure the twig is installed and the twig engine is turned on in framework.yaml
+
+  - If not, install twig, then add the following to config/packages/framework.yaml:
+
+framework:
+    # ...
+    templating:
+        engines: ['twig']

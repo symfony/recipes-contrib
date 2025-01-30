@@ -1,0 +1,6 @@
+imports:
+    - { resource: "@MonsieurBizSyliusShippingSlotPlugin/Resources/config/config.yaml" }
+
+monsieurbiz_sylius_shipping_slot:
+    expiration:
+        slot: '30 minutes'

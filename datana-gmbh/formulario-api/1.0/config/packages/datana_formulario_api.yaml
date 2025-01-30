@@ -1,0 +1,14 @@
+services:
+    _defaults:
+        autowire: true
+
+    Datana\Formulario\Api\FormularioClient:
+        arguments:
+            - '%env(FORMULARIO_API_BASE_URI)%'
+            - '%env(FORMULARIO_API_TOKEN)%'
+
+    Datana\Formulario\Api\DateneingabenApi: null
+    Datana\Formulario\Api\DateneingabenApiInterface: '@Datana\Formulario\Api\DateneingabenApi'
+
+    Datana\Formulario\Api\StatisticsApi: null
+    Datana\Formulario\Api\StatisticsApiInterface: '@Datana\Formulario\Api\StatisticsApi'

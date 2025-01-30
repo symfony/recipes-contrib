@@ -1,0 +1,3 @@
+  * <fg=blue>Configure</> the bundle:
+    <comment>config/packages/api_platform_ms.yaml</>
+    <comment>https://github.com/mtarld/api-platform-ms-bundle</>

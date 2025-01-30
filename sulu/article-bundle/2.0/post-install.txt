@@ -1,0 +1,7 @@
+  * The <fg=green>SuluArticleBundle</> is almost ready:
+    1. Configure elasticsearch host and index in the <comment>.env</> file.
+    2. Initialize PHPCR by running <info>php bin/console sulu:document:init</>.
+    3. Create the elasticsearch indices by running <info>php bin/console ongr:es:index:create</> and <comment>php bin/console ongr:es:index:create --manager live</>.
+    4. Make sure your user has all the necessary permissions for the <fg=green>SuluArticleBundle</>.
+
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/sulu/SuluArticleBundle/blob/2.x/Resources/doc/README.md</>

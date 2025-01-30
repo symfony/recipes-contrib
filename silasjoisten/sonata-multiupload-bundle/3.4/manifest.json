@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "SilasJoisten\\Sonata\\MultiUploadBundle\\SonataMultiUploadBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
+

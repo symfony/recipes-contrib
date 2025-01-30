@@ -1,0 +1,3 @@
+  * Create a free account on https://developers.marvel.com
+    and modify your MARVEL_PUBLIC_API_KEY and MARVEL_PRIVATE_API_KEY
+    config in <fg=green>.env</>

@@ -1,0 +1,3 @@
+_import.becklyn_javascript_routing:
+    resource: '@BecklynJavaScriptRoutingBundle/Resources/config/routes.yaml'
+    prefix: /_v/routing

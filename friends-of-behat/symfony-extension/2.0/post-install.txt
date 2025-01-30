@@ -1,0 +1,1 @@
+    Run <comment>vendor/bin/behat</> to run the demo tests.

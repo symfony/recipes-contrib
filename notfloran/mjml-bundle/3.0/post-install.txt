@@ -1,0 +1,1 @@
+  * Now install MJML into your project via Yarn or npm : yarn add mjml or npm install mjml --save

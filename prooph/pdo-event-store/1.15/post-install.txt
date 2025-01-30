@@ -1,0 +1,4 @@
+  * Modify your EVENT_STORE_* configuration in <fg=green>.env</>
+
+  * Create event streams and projections tables using SQL scripts
+    in <comment>%CONFIG_DIR%/scripts/*</comment>

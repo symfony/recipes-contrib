@@ -1,0 +1,3 @@
+expert_coder_swiftmailer_send_grid:
+    api_key: '%env(SENDGRID_API_KEY)%'
+    # categories: [development, client_name]

@@ -1,0 +1,14 @@
+<bg=yellow></>
+<bg=yellow> This bundle is Abandoned: use odolbeau/phone-number-bundle instead </>
+
+  composer remove misd/phone-number-bundle --no-scripts
+  composer require odolbeau/phone-number-bundle
+
+<bg=green;fg=white></>
+<bg=green;fg=white> You now can use the phone bundle as described here: </>
+<bg=green;fg=white> https://github.com/misd-service-development/phone-number-bundle#usage </>
+<bg=green;fg=white> The Doctrine configuration has been already done.</>
+<bg=green;fg=white> You now can use `phone_number` as an ORM-Type: </>
+
+  /** @ORM\Column(type="phone_number") */
+  private $phoneNumber;

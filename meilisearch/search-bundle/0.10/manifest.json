@@ -1,0 +1,36 @@
+{
+    "bundles": {
+        "Meilisearch\\Bundle\\MeilisearchBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "Uncomment the following line if you use Meilisearch through Docker",
+        "#2": "MEILISEARCH_URL=http://meilisearch:7700",
+        "MEILISEARCH_URL": "http://127.0.0.1:7700",
+        "MEILISEARCH_API_KEY": "!ChangeMe!",
+        "MEILISEARCH_PREFIX": "app_${APP_ENV}_"
+    },
+    "docker-compose": {
+        "docker-compose.yml": {
+            "services": [
+                "meilisearch:",
+                "  image: getmeili/meilisearch:${MEILISEARCH_VERSION:-v1.0}",
+                "  environment:",
+                "    # You should definitely change the master key in production",
+                "    MEILI_MASTER_KEY: ${MEILI_MASTER_KEY:-!ChangeMe!}",
+                "  volumes:",
+                "    - meilisearch_data:/meili_data"
+            ],
+            "volumes": ["meilisearch_data:"]
+        },
+        "docker-compose.override.yml": {
+            "services": [
+                "meilisearch:",
+                "  ports:",
+                "    - \"7700\""
+            ]
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Torr\\Storyblok\\TorrStoryblokBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "STORYBLOK_SPACE_ID": "",
+        "STORYBLOK_MANAGEMENT_TOKEN": "",
+        "STORYBLOK_CONTENT_TOKEN": ""
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "FOS\\CKEditorBundle\\FOSCKEditorBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "composer-scripts": {
+        "ckeditor:install": "symfony-cmd"
+    }
+}

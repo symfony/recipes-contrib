@@ -1,0 +1,15 @@
+# Codeception Acceptance Test Suite Configuration
+#
+# Perform tests in a browser by either emulating one using PhpBrowser, or in a real browser using WebDriver.
+# If you need both WebDriver and PhpBrowser tests, create a separate suite for each.
+
+actor: AcceptanceTester
+modules:
+    enabled:
+        - PhpBrowser:
+            url: https://localhost:8000
+# Add Codeception\Step\Retry trait to AcceptanceTester to enable retries
+step_decorators:
+    - Codeception\Step\ConditionalAssertion
+    - Codeception\Step\TryTo
+    - Codeception\Step\Retry

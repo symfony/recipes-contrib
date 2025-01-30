@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Mezcalito\\UxSearchBundle\\MezcalitoUxSearchBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "MEZCALITO_UX_SEARCH_DEFAULT_DSN=\"meilisearch://key@localhost:7700\"",
+        "MEZCALITO_UX_SEARCH_DEFAULT_DSN": "doctrine://default"
+    }
+}

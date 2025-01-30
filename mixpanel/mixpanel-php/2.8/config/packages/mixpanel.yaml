@@ -1,0 +1,8 @@
+services:
+    Mixpanel:
+        class: \Mixpanel
+        factory: ['Mixpanel', 'getInstance']
+        arguments:
+            - '%env(MIXPANEL_PROJECT_TOKEN)%'
+# uncomment if EU resident
+#            - { 'host': 'api-eu.mixpanel.com' }

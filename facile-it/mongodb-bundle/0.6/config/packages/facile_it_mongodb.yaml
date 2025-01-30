@@ -1,0 +1,17 @@
+mongo_db_bundle:
+    data_collection: '%kernel.debug%'
+    clients:
+        default:
+            hosts:
+                - { host: '%env(MONGODB_HOST)%', port: '%env(int:MONGODB_PORT)%' }
+            username:         '%env(MONGODB_USER)%'
+            password:         '%env(MONGODB_PASSWORD)%'
+            replicaSet:       '' # default null (no replica)
+            ssl:              false
+            connectTimeoutMS: 3000
+            readPreference:   primaryPreferred # see https://docs.mongodb.com/manual/reference/read-preference/#primary for info
+
+    connections:
+        default:
+            client_name:    default
+            database_name:  '%env(MONGODB_DB)%'

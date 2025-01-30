@@ -1,0 +1,12 @@
+{
+    "container": {
+        "sonata.media.admin.media.controller": "SilasJoisten\\Sonata\\MultiUploadBundle\\Controller\\MultiUploadController"
+    },
+    "bundles": {
+        "SilasJoisten\\Sonata\\MultiUploadBundle\\SonataMultiUploadBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
+

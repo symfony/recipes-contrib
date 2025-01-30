@@ -1,0 +1,9 @@
+sapient:
+    # By default, bundle does nothing without initial configuration.
+    # Run command sapient:configure to get initial configuration.
+    # See http://sapient-bundle.readthedocs.io/en/latest/installation.html
+    guzzle_middleware:
+        unseal: false
+        verify: false
+    sealing_public_keys: null
+    verifying_public_keys: null

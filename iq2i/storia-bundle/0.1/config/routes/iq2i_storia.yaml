@@ -1,0 +1,3 @@
+iq2i_storia:
+    resource: '@IQ2iStoriaBundle/config/routes.php'
+    prefix: '/storia'

@@ -1,0 +1,3 @@
+Please update etc/capistrano/deploy.rb, etc/capistrano/deploy/staging.rb and etc/capistrano/deploy/production.rb to accurately reflect your needs.
+
+  * <fg=blue>Read</> the capistrano symfony documentation at <comment>https://github.com/capistrano/symfony</>

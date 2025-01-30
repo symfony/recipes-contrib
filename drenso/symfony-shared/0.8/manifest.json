@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Drenso\\Shared\\DrensoSharedBundle": ["all"]
+    },
+    "copy-from-package": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

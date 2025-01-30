@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Nedac\\SyliusTemporarilyOutOfStockPlugin\\NedacSyliusTemporarilyOutOfStockPlugin": ["all"]
+    },
+    "copy-from-package": {
+        "src/Resources/views/bundles/": "templates/bundles/"
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

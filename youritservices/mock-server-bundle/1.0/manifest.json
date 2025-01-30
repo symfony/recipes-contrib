@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "YourITServices\\MockServerBundle\\MockServerBundle": ["dev", "test"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "MOCK_SERVER_HOST": "http://mock-api:1080"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Dekalee\\Cdn77Bundle\\DekaleeCdn77Bundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "DEKALEE_CDN77_LOGIN": "your-cdn77-login",
+        "DEKALEE_CDN77_PASSWORD": "@@your-cdn77-password"
+    }
+}

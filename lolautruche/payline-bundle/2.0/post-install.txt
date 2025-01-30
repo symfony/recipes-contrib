@@ -1,0 +1,9 @@
+  * <fg=blue>Configure</> Payline environment variables in <comment>.env</comment>;
+
+  * <fg=blue>Using Symfony 4.4/5.x: Encrypt sensitive environment variables</>
+    with <comment>bin/console secrets:set</comment> command (optional);
+
+  * Using Symfony 3.4/4.x: Ensure to correctly expose the environment variables commented in `.env` file.
+
+  * <fg=blue>Read</> the documentation at:
+    <comment>https://github.com/lolautruche/LolautruchePaylineBundle/blob/master/Resources/doc/00-index.md</>

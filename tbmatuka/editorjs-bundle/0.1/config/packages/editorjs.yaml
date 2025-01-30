@@ -1,0 +1,3 @@
+twig:
+    form_themes:
+        - '@TbmatukaEditorjs/Form/editorjs_widget.html.twig'

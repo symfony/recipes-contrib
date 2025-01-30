@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Qandidate\\Bundle\\ToggleBundle\\QandidateToggleBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Bizkit\\VersioningBundle\\BizkitVersioningBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

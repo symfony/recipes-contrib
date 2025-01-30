@@ -1,0 +1,26 @@
+{
+    "bundles": {
+        "Sensiolabs\\GotenbergBundle\\SensiolabsGotenbergBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "GOTENBERG_DSN": "http://gotenberg:3000"
+    },
+    "docker-compose": {
+        "compose.yaml": {
+            "services": [
+                "gotenberg:",
+                "  image: 'gotenberg/gotenberg:8'"
+            ]
+        },
+        "compose.override.yaml": {
+            "services": [
+                "gotenberg:",
+                "  ports:",
+                "    - \"3000\""
+            ]
+        }
+    }
+}

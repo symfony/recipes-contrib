@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Liuggio\\StatsDClientBundle\\LiuggioStatsDClientBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "STATS_D_HOST": "",
+        "STATS_D_PORT": "",
+        "STATS_D_PROTOCOL": "udp"
+    }
+}

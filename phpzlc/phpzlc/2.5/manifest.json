@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "PHPZlc\\PHPZlc\\Bundle\\PHPZlcBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "Business/":"src/Business/"
+    }
+}

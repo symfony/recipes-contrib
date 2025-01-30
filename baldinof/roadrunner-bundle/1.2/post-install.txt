@@ -1,0 +1,4 @@
+  * <fg=blue>Download</> RoadRunner locally: <comment>vendor/bin/rr get --location bin/</>
+  * <fg=blue>Run</> your application: <comment>bin/rr serve -c .rr.dev.yaml --debug</>
+  * <fg=blue>For production, use: <comment>bin/rr serve</>
+  * Visit http://localhost:8080

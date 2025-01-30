@@ -1,0 +1,2 @@
+  * The Dekalee/EnomBundle needs your enom configuration.
+    Modify your ENOM_UID, ENOM_PASSWORD, ENOM_BASE_URL config in <fg=green>.env</>

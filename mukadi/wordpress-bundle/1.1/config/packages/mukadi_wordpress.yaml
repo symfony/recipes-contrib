@@ -1,0 +1,3 @@
+mukadi_wordpress:
+    table_prefix: "%env(WP_PREFIX)%"
+    wordpress_directory: '%kernel.project_dir%/public/%env(WP_DIR)%'

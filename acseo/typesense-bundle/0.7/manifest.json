@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "ACSEO\\TypesenseBundle\\ACSEOTypesenseBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "TYPESENSE_URL": "http://localhost:8108",
+        "TYPESENSE_KEY" : "123"
+    }
+}

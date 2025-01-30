@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Elao\\Enum\\Bridge\\Symfony\\Bundle\\ElaoEnumBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

@@ -1,0 +1,3 @@
+kibatic_timezone:
+    default_display_timezone: 'Europe/Paris'
+    timezone_provider: 'kibatic_timezone.default_provider'

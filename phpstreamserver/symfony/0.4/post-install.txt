@@ -1,0 +1,4 @@
+* You're ready to run your Symfony application with PHPStreamServer!
+  Run <comment>bin/phpss start</> command to get started
+
+* <fg=blue>Read</> the documentation at <comment>https://phpstreamserver.dev/docs/general/</>

@@ -1,0 +1,2 @@
+  * <fg=blue>Configure</> jobs in <comment>imper86_jobby.yaml</> in your <comment>config/packages</> directory
+  * <fg=blue>Check config details</> with command <comment>./bin/console config:dump imper86_jobby</>

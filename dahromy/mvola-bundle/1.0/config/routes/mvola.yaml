@@ -1,0 +1,2 @@
+mvola:
+    resource: '@DahRomyMVolaBundle/Resources/config/routes.yaml'

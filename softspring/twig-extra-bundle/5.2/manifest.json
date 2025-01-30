@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "Softspring\\TwigExtraBundle\\SfsTwigExtraBundle": ["all"]
+    }
+}

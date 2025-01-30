@@ -1,0 +1,1 @@
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/birkof/netopia-mobilpay-bundle</>

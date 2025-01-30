@@ -1,0 +1,3 @@
+    1. Define your schema, read documentation <comment>https://github.com/overblog/GraphQLBundle/blob/master/docs/definitions/index.md</>
+    2. If you want to see your dumped schema (really not necessary for bootstrap): run <comment>bin/console graphql:dump-schema</comment>
+    3. If you want to have GraphiQL to browse your API run: <comment>composer req --dev overblog/graphiql-bundle</comment>

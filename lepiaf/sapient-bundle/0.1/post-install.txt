@@ -1,0 +1,5 @@
+  * Bundle is installed but it require a configuration.
+    Run command <fg=green>bin/console sapient:configure</>.
+    Then, copy output of command and paste it in <fg=green>config/packages/sapient.yaml</>
+
+  * <fg=blue>Read</> the documentation at <comment>http://sapient-bundle.readthedocs.io/en/latest/</>

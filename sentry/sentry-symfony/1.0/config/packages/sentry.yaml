@@ -1,0 +1,8 @@
+sentry:
+    options:
+        curl_method: async
+
+#    skip_capture:  # To skip certain exceptions, specify a list below
+#      - 'Symfony\Component\HttpKernel\Exception\NotFoundHttpException'
+#      - 'Symfony\Component\HttpKernel\Exception\BadRequestHttpException'
+#      - 'Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException'

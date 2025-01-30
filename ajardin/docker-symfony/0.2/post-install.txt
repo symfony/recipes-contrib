@@ -1,0 +1,11 @@
+  * Edit the <fg=green>docker/.env</> file to configure your own settings.
+
+  * Edit the <fg=green>docker/nginx/conf.d/custom.conf</> file to configure your own virtual host.
+
+  * To manage the Docker environment from the project directory:
+    - If you already have a Makefile in your project, copy the content of the <fg=green>docker/Makefile.sample</> file at the top of it.
+    - If you do not already have a Makefile, the <fg=green>docker/Makefile.sample</> file will be installed in your project.
+
+  * Run <fg=green>make</> to display the list of available commands.
+
+Documentation: https://github.com/ajardin/docker-symfony/wiki

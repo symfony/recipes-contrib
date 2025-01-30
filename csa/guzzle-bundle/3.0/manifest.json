@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Csa\\Bundle\\GuzzleBundle\\CsaGuzzleBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

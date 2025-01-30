@@ -1,0 +1,10 @@
+{
+    "env": {
+        "COMPOSE_PROJECT_NAME": "my-project",
+        "PROJECT_LOCAL_IP": "127.1.2.3"
+    },
+    "copy-from-package": {
+        "dist/docker-compose.yaml": "docker-compose.yaml",
+        "dist/symfony-dev-cli-proxy": "%BIN_DIR%/dev-cli"
+    }
+}

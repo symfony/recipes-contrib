@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Oka\\FileBundle\\OkaFileBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "OKAFILE_STORAGE_ROOT_PATH": "%kernel.project_dir%/public",
+        "OKAFILE_STORAGE_WEB_SERVER_HOST": "localhost"
+    }
+}

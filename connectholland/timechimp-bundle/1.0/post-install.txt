@@ -1,0 +1,2 @@
+  * Your Connect Holland Timechimp bundle installation is almost ready:
+    1. Add your Timechimp Access Token to the .env file

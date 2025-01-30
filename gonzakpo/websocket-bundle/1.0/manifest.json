@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "RollandRock\\WebsocketBundle\\RollandRockWebsocketBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "WEBSOCKET_PORT": "4242"
+    }
+}
+

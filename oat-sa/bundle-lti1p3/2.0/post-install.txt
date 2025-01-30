@@ -1,0 +1,7 @@
+  * <fg=blue>Create</> development keys: <comment>mkdir -p config/secrets/dev && openssl genrsa -out config/secrets/dev/private.key 2048 && openssl rsa -in config/secrets/dev/private.key -outform PEM -pubout -out config/secrets/dev/public.key</>
+
+  * <fg=blue>Configure</> your keys, platform, tools and registrations in file <fg=green>config/packages/lti1p3.yaml</>
+
+  * <fg=blue>Configure</> the platform and tools automated routes in file <fg=green>config/routes/lti1p3.yaml</>
+
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/oat-sa/bundle-lti1p3</>

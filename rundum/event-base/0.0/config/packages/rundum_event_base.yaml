@@ -1,0 +1,8 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    rundum.event.entity.subscriber:
+        class: Rundum\EventSubscriber\EntityEventSubscriber

@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "Fpt\\StripeBundle\\FptStripeBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "STRIPE_PUBLISHABLE_KEY": "pk_***",
+        "STRIPE_SECRET_KEY": "sk_***",
+        "STRIPE_WEBHOOK_SIGNATURE_KEY": "wh_***"
+    }
+}
+

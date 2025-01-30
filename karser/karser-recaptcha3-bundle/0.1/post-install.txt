@@ -1,0 +1,2 @@
+  * <fg=blue>Make sure</> you have proper values in your .env file
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/karser/KarserRecaptcha3Bundle</>

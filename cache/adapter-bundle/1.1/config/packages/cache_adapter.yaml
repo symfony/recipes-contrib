@@ -1,0 +1,4 @@
+cache_adapter:
+    providers:
+        default:
+            factory: cache.factory.array

@@ -1,0 +1,4 @@
+    1. Define your schema, read documentation <comment>https://github.com/overblog/GraphQLBundle/blob/0.9/Resources/doc/definitions/index.md</> or
+    <comment>https://github.com/overblog/GraphQLBundle/blob/0.10/Resources/doc/definitions/index.md</>
+    2. Browse to <comment>/graphiql</>
+    3. Optionally dump your schema: run <comment>bin/console graphql:dump-schema</comment>

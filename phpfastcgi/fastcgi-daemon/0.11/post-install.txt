@@ -1,0 +1,6 @@
+  * <fg=blue>Run</> your application:
+    1. Configure your web server
+    2. Execute the <comment>bin/console fastcgi-daemon:run</> command;
+    3. Browse your application super quickly
+
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/PHPFastCGI/FastCGIDaemon</>

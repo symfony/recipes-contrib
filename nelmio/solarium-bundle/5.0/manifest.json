@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Nelmio\\SolariumBundle\\NelmioSolariumBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "SOLR_HOST": "localhost",
+        "SOLR_CORE": "example"
+    }
+}

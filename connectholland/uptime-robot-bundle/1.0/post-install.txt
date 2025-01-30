@@ -1,0 +1,2 @@
+  * Your Connect Holland Uptime Robot bundle installation is almost ready:
+    1. Add your Uptime Robot Api Key to the .env file

@@ -1,0 +1,6 @@
+  *. Update <fg=green>config/security.yaml</> file, and add a section to the access_control:
+<comment>
+security:
+    access_control:
+        - { path: ^/log-viewer, roles: ROLE_ADMIN }
+</>

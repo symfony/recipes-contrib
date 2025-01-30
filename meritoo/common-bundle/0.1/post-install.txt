@@ -1,0 +1,2 @@
+  * <fg=blue>Read</> the documentation at <comment>https://github.com/meritoo/common-bundle#usage</>
+  * <fg=blue>Configure</> using options described at <comment>https://github.com/meritoo/common-bundle#configuration</>

@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "MongoDB\\Bundle\\MongoDBBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "MONGODB_URI": "mongodb://localhost:27017"
+    }
+}

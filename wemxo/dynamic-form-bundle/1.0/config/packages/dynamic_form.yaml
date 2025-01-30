@@ -1,0 +1,5 @@
+dynamic_form:
+    recursive: true
+    config_paths:
+        - '%kernel.project_dir%/config/dynamic_form'
+    cache_pool: null

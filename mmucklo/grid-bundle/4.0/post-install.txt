@@ -1,0 +1,8 @@
+Warning: make sure the twig engine is turned on in framework.yaml
+
+  - If not, add the following to config/packages/framework.yaml:
+
+framework:
+    # ...
+    templating:
+        engines: ['twig']

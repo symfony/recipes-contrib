@@ -1,0 +1,5 @@
+  * <fg=blue>Configure parameters:</>: <comment>https://github.com/Nordeus/CrowdUserBundle#4-configure-parameters</>
+  * <fg=blue>Configure your application's security</>: <comment>https://github.com/Nordeus/CrowdUserBundle#5-configure-your-applications-security</>
+  * Your application is now ready to use!
+
+Full documentation is available at: <comment>https://github.com/Nordeus/CrowdUserBundle</>

@@ -1,0 +1,18 @@
+imports:
+    - { resource: '@SfsCmsBundle/config/security/admin_role_hierarchy.yaml' }
+
+security:
+    role_hierarchy:
+        ROLE_ADMIN:
+            - ROLE_SFS_MEDIA_ADMIN_MEDIAS_RW
+            - ROLE_SFS_CMS_ADMIN_BLOCKS_RW
+            - ROLE_SFS_CMS_ADMIN_CONTENTS_RW
+            - ROLE_SFS_CMS_ADMIN_ROUTES_RW
+            - ROLE_SFS_CMS_ADMIN_MENUS_RW
+            - ROLE_SFS_CMS_ADMIN_SITES_RO
+            - ROLE_SFS_CMS_ADMIN_CONTENTS_TRANSLATOR
+
+sfs_cms:
+    site:
+        identification: "domain"
+        throw_not_found: false

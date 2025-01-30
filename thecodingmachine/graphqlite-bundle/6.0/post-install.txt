@@ -1,0 +1,3 @@
+  * Edit the <fg=green>config/packages/graphqlite.yml</> file to adapt the controllers and the types namespaces to your project.
+
+Documentation: https://graphqlite.thecodingmachine.io/docs/symfony-bundle

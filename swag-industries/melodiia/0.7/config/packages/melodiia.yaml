@@ -1,0 +1,6 @@
+melodiia:
+    apis:
+        # Define as much APIs you want here
+        main:
+            # This path impacts the behavior of Melodiia. Change it if required
+            base_path: /api/v1

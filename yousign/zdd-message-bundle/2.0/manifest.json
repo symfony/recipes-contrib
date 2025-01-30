@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Yousign\\ZddMessageBundle\\ZddMessageBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Dekalee\\EnomBundle\\DekaleeEnomBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#ENOM_UID": "your-enom-uid",
+        "#ENOM_PASSWORD": "your-enom-password",
+        "#ENOM_BASE_URL": "your-enom-api-base-url"
+    }
+}

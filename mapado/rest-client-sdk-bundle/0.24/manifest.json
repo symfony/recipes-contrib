@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Mapado\\RestClientSdkBundle\\MapadoRestClientSdkBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "src/": "%SRC_DIR%/"
+    },
+    "env": {
+        "MAPADO_REST_CLIENT_SDK_SERVER_URL": "https://my-api.com:8080"
+    }
+}
