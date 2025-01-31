@@ -6,7 +6,7 @@
         "config/": "%CONFIG_DIR%/"
     },
     "post-install-output": [
-        "Thanks for installing my bundle! To complete the setup:",
+        "Thanks for installing my bundle! To complete the setup :",
         "",
         "  * Run <comment>php bin/console castor:install</comment> to initialize castor files",
         "",
