@@ -1,0 +1,10 @@
+castor:
+  vhost:
+    url: "test"
+    nom: ~
+    server: "apache2"
+    os: ~
+    ssl:
+      enabled: false
+      certificate: ~
+      certificate_key: ~

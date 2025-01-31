@@ -1,0 +1,18 @@
+{
+    "bundles": {
+        "TheDevOpser\\CastorBundle\\CastorBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "post-install-output": [
+        "The Castor bundle has been installed! To complete the setup:",
+        "",
+        "  * Run <comment>php bin/console castor:install</comment> to initialize castor files",
+        "",
+        "After each update of the bundle, don't forget to run:",
+        "  * <comment>php bin/console castor:install</comment> to get the latest version of castor files",
+        "",
+        "Documentation: https://github.com/thedevopser/castor-symfony"
+    ]
+}
