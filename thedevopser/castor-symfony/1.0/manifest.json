@@ -6,13 +6,8 @@
         "config/": "%CONFIG_DIR%/"
     },
     "post-install-output": [
-        "Thanks for installing my bundle! To complete the setup :",
+        "Thanks for installing my bundle!",
         "",
-        "  * Run <comment>php bin/console castor:install</comment> to initialize castor files",
-        "",
-        "After each update of the bundle, don't forget to run:",
-        "  * <comment>php bin/console castor:install</comment> to get the latest version of castor files",
-        "",
-        "Documentation: https://github.com/thedevopser/castor-symfony"
+        "  * Run <comment>php bin/console castor:install</comment>"
     ]
 }
