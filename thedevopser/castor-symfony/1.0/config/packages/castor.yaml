@@ -1,10 +1,10 @@
 castor:
   vhost:
     url: "test"
-    nom: ~
+    nom: null
     server: "apache2"
-    os: ~
+    os: null
     ssl:
       enabled: false
-      certificate: ~
-      certificate_key: ~
+      certificate: null
+      certificate_key: null
