@@ -1,4 +1,5 @@
 castor:
+    enabled: true
     vhost:
         url: "test"
         nom: null
