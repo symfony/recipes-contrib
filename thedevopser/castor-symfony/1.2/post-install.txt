@@ -1,0 +1,14 @@
+<bg=blue;fg=white>                              </>
+<bg=blue;fg=white> Welcome to Castor Bundle!    </>
+<bg=blue;fg=white>                              </>
+
+  * <fg=yellow>What's next?</>
+
+    1. Run <comment>php bin/console castor:install</comment> to initialize castor files
+    2. Configure your vhosts in config/packages/castor.yaml
+
+  * <fg=yellow>After each update:</>
+    
+    Run <comment>php bin/console castor:install</comment> again to get the latest features
+
+Documentation: https://github.com/thedevopser/castor-symfony
