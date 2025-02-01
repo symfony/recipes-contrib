@@ -1,0 +1,11 @@
+castor:
+    enabled: true
+    vhost:
+        url: "test"
+        nom: null
+        server: "apache2"
+        os: null
+        ssl:
+            enabled: false
+            certificate: null
+            certificate_key: null
