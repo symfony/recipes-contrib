@@ -5,6 +5,6 @@ castor:
         server: "%env(CASTOR_VHOST_SERVER)%"
         os: null # Auto detect
         ssl:
-            enabled: "%env(CASTOR_VHOST_SSL_ENABLE)%"
+            enabled: "%env(bool:CASTOR_VHOST_SSL_ENABLE)%"
             certificate: null
             certificate_key: null
