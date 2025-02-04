@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "TheDevOpser\\CastorBundle\\CastorBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "CASTOR_VHOST_URL": "test",
+        "CASTOR_VHOST_SERVER": "apache2",
+        "CASTOR_VHOST_SSL_ENABLE": "true"
+    }
+}

@@ -1,0 +1,10 @@
+castor:
+    vhost:
+        url: "%env(CASTOR_VHOST_URL)%"
+        nom: null # If empty be replaced by the project dir name
+        server: "%env(CASTOR_VHOST_SERVER)%"
+        os: null # Auto detect
+        ssl:
+            enabled: "%env(bool:CASTOR_VHOST_SSL_ENABLE)%"
+            certificate: null
+            certificate_key: null
