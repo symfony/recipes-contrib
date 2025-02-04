@@ -1981,6 +1981,9 @@
         "thecodingmachine/tdbm-bundle": [
             "5.0"
         ],
+        "thedevopser/castor-symfony": [
+            "1.0"
+        ],
         "theplankmeister/form-data-transposer": [
             "1.0"
         ],

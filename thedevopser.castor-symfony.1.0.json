@@ -1,0 +1,56 @@
+{
+    "manifests": {
+        "thedevopser/castor-symfony": {
+            "manifest": {
+                "bundles": {
+                    "TheDevOpser\\CastorBundle\\CastorBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "CASTOR_VHOST_URL": "test",
+                    "CASTOR_VHOST_SERVER": "apache2",
+                    "CASTOR_VHOST_SSL_ENABLE": "true"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                              </>",
+                    "<bg=blue;fg=white> Welcome to Castor Bundle!    </>",
+                    "<bg=blue;fg=white>                              </>",
+                    "",
+                    "  * <fg=yellow>What's next?</>",
+                    "",
+                    "    1. Run <comment>php bin/console castor:install</comment> to initialize castor files",
+                    "    2. Configure your vhosts in config/packages/castor.yaml",
+                    "",
+                    "  * <fg=yellow>After each update:</>",
+                    "    ",
+                    "    Run <comment>php bin/console castor:install</comment> again to get the latest features",
+                    "",
+                    "Documentation: https://github.com/thedevopser/castor-symfony"
+                ]
+            },
+            "files": {
+                "config/packages/castor.yaml": {
+                    "contents": [
+                        "castor:",
+                        "    vhost:",
+                        "        url: \"%env(CASTOR_VHOST_URL)%\"",
+                        "        nom: null # If empty be replaced by the project dir name",
+                        "        server: \"%env(CASTOR_VHOST_SERVER)%\"",
+                        "        os: null # Auto detect",
+                        "        ssl:",
+                        "            enabled: \"%env(bool:CASTOR_VHOST_SSL_ENABLE)%\"",
+                        "            certificate: null",
+                        "            certificate_key: null",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "dd23b62eb80291432d29f31082a6f35d34e41db8"
+        }
+    }
+}
