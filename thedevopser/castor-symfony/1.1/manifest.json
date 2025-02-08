@@ -1,0 +1,17 @@
+{
+    "bundles": {
+        "TheDevOpser\\CastorBundle\\CastorBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "CASTOR_VHOST_URL": "test",
+        "CASTOR_VHOST_NOM": "example",
+        "CASTOR_VHOST_SERVER": "apache2",
+        "CASTOR_VHOST_OS": "debian",
+        "CASTOR_VHOST_SSL_ENABLE": 0,
+        "CASTOR_VHOST_SSL_CERTIFICATE": "/path/to/certificate.crt",
+        "CASTOR_VHOST_SSL_CERTIFICATE_KEY": "/path/to/certificate.key"
+    }
+}
