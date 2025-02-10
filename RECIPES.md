@@ -301,7 +301,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [kunstmaan/pagepart-bundle](https://packagist.org/packages/kunstmaan/pagepart-bundle) | [5.2](kunstmaan/pagepart-bundle/5.2) |
 | [kunstmaan/redirect-bundle](https://packagist.org/packages/kunstmaan/redirect-bundle) | [5.2](kunstmaan/redirect-bundle/5.2) |
 | [kunstmaan/search-bundle](https://packagist.org/packages/kunstmaan/search-bundle) | [5.6](kunstmaan/search-bundle/5.6) |
-| [kunstmaan/seo-bundle](https://packagist.org/packages/kunstmaan/seo-bundle) | [5.2](kunstmaan/seo-bundle/5.2) |
+| [kunstmaan/seo-bundle](https://packagist.org/packages/kunstmaan/seo-bundle) | [7.3](kunstmaan/seo-bundle/7.3) |
 | [kunstmaan/sitemap-bundle](https://packagist.org/packages/kunstmaan/sitemap-bundle) | [5.2](kunstmaan/sitemap-bundle/5.2) |
 | [kunstmaan/translator-bundle](https://packagist.org/packages/kunstmaan/translator-bundle) | [5.2](kunstmaan/translator-bundle/5.2) |
 | [kunstmaan/user-management-bundle](https://packagist.org/packages/kunstmaan/user-management-bundle) | [5.2](kunstmaan/user-management-bundle/5.2) |
