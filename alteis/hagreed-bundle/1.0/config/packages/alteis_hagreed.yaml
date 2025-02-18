@@ -1,0 +1,2 @@
+alteis_hagreed:
+  token: '%env(HAGREED_TOKEN)%'
