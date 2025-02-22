@@ -1,0 +1,2 @@
+agilelab_fr_captcha_bundle.routes:
+    resource: '@AgilelabFrCaptchaBundle/config/routes.yaml'

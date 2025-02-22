@@ -1,0 +1,12 @@
+captcha_bundle:
+    width: 120
+    height: 40
+    length: 6
+    lines: 8
+    characters: 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
+    case_sensitive: true
+
+# Uncomment to render the twig block for captcha
+#twig:
+#    form_themes:
+#        - '@AgilelabFrCaptcha/form/agilelab_fr_captcha.html.twig'
