@@ -13,6 +13,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [ad3n/ratchet-bundle](https://packagist.org/packages/ad3n/ratchet-bundle) | [0.4](ad3n/ratchet-bundle/0.4) |
 | [adback/adback-sdk-php-symfony](https://packagist.org/packages/adback/adback-sdk-php-symfony) | [2.4](adback/adback-sdk-php-symfony/2.4) |
 | [adlarge/fixtures-documentation-bundle](https://packagist.org/packages/adlarge/fixtures-documentation-bundle) | [1.1](adlarge/fixtures-documentation-bundle/1.1) |
+| [agilelab-fr/captcha-bundle](https://packagist.org/packages/agilelab-fr/captcha-bundle) | [1.0](agilelab-fr/captcha-bundle/1.0) |
 | [ajardin/blizzard-sdk-bundle](https://packagist.org/packages/ajardin/blizzard-sdk-bundle) | [1.0](ajardin/blizzard-sdk-bundle/1.0) |
 | [ajardin/docker-symfony](https://packagist.org/packages/ajardin/docker-symfony) | [0.2](ajardin/docker-symfony/0.2) |
 | [ajgl/breakpoint-twig-extension](https://packagist.org/packages/ajgl/breakpoint-twig-extension) | [0.3](ajgl/breakpoint-twig-extension/0.3) |

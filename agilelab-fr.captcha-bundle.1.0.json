@@ -1,0 +1,45 @@
+{
+    "manifests": {
+        "agilelab-fr/captcha-bundle": {
+            "manifest": {
+                "bundles": {
+                    "AgilelabFr\\CaptchaBundle\\AgilelabFrCaptchaBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/agilelab_fr_captcha.yaml": {
+                    "contents": [
+                        "captcha_bundle:",
+                        "    width: 120",
+                        "    height: 40",
+                        "    length: 6",
+                        "    lines: 8",
+                        "    characters: 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'",
+                        "    case_sensitive: true",
+                        "",
+                        "# Uncomment to render the twig block for captcha",
+                        "#twig:",
+                        "#    form_themes:",
+                        "#        - '@AgilelabFrCaptcha/form/agilelab_fr_captcha.html.twig'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/agilelab_fr_captcha.yaml": {
+                    "contents": [
+                        "agilelab_fr_captcha_bundle.routes:",
+                        "    resource: '@AgilelabFrCaptchaBundle/config/routes.yaml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f7328713a5819020fa074366542c0dbeee415e8e"
+        }
+    }
+}
