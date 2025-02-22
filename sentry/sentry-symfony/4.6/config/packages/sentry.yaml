@@ -18,9 +18,4 @@ when@prod:
 #                type: sentry
 #                level: !php/const Monolog\Logger::ERROR
 #                hub_id: Sentry\State\HubInterface
-
-#    Uncomment these lines to register a log message processor that resolves PSR-3 placeholders
-#    https://docs.sentry.io/platforms/php/guides/symfony/#monolog-integration
-#    services:
-#        Monolog\Processor\PsrLogMessageProcessor:
-#            tags: { name: monolog.processor, handler: sentry }
+#                process_psr_3_messages: false # Disables the resolution of PSR-3 placeholders
