@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Alteis\\HagreedBundle\\AlteisHagreedBundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "HAGREED_TOKEN": ""
+    }
+}
