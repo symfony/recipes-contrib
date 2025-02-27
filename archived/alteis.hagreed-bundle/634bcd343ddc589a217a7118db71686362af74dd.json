@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "alteis/hagreed-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Alteis\\HagreedBundle\\AlteisHagreedBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "HAGREED_TOKEN": ""
+                }
+            },
+            "files": {
+                "config/packages/alteis_hagreed.yaml": {
+                    "contents": [
+                        "alteis_hagreed:",
+                        "    token: '%env(HAGREED_TOKEN)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "634bcd343ddc589a217a7118db71686362af74dd"
+        }
+    }
+}
