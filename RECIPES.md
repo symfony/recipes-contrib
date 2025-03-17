@@ -457,6 +457,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [pentatrion/vite-bundle](https://packagist.org/packages/pentatrion/vite-bundle) | [6.5](pentatrion/vite-bundle/6.5) |
 | [php-amqplib/rabbitmq-bundle](https://packagist.org/packages/php-amqplib/rabbitmq-bundle) | [1.12](php-amqplib/rabbitmq-bundle/1.12) |
 | [php-http/httplug-bundle](https://packagist.org/packages/php-http/httplug-bundle) | [1.6](php-http/httplug-bundle/1.6) |
+| [php-llm/llm-chain-bundle](https://packagist.org/packages/php-llm/llm-chain-bundle) | [0.16](php-llm/llm-chain-bundle/0.16) |
 | [php-translation/loco-adapter](https://packagist.org/packages/php-translation/loco-adapter) | [0.8](php-translation/loco-adapter/0.8) |
 | [php-translation/symfony-bundle](https://packagist.org/packages/php-translation/symfony-bundle) | [0.10](php-translation/symfony-bundle/0.10) |
 | [phpfastcache/phpfastcache-bundle](https://packagist.org/packages/phpfastcache/phpfastcache-bundle) | [3.0](phpfastcache/phpfastcache-bundle/3.0) |

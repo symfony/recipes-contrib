@@ -1456,6 +1456,9 @@
         "php-http/httplug-bundle": [
             "1.6"
         ],
+        "php-llm/llm-chain-bundle": [
+            "0.16"
+        ],
         "php-translation/loco-adapter": [
             "0.8"
         ],
