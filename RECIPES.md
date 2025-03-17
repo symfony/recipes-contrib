@@ -571,6 +571,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sroze/openwhisk-bundle](https://packagist.org/packages/sroze/openwhisk-bundle) | [0.2](sroze/openwhisk-bundle/0.2) |
 | [stefandoorn/sitemap-plugin](https://packagist.org/packages/stefandoorn/sitemap-plugin) | [2.0](stefandoorn/sitemap-plugin/2.0) |
 | [stof/doctrine-extensions-bundle](https://packagist.org/packages/stof/doctrine-extensions-bundle) | [1.2](stof/doctrine-extensions-bundle/1.2) |
+| [stogon/unleash-bundle](https://packagist.org/packages/stogon/unleash-bundle) | [0.4](stogon/unleash-bundle/0.4) |
 | [storyblok/symfony-bundle](https://packagist.org/packages/storyblok/symfony-bundle) | [0.1](storyblok/symfony-bundle/0.1) |
 | [sulu/article-bundle](https://packagist.org/packages/sulu/article-bundle) | [2.0](sulu/article-bundle/2.0) |
 | [sulu/form-bundle](https://packagist.org/packages/sulu/form-bundle) | [2.4](sulu/form-bundle/2.4) |
