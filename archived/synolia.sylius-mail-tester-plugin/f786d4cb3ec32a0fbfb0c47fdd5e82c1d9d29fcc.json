@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "synolia/sylius-mail-tester-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Synolia\\SyliusMailTesterPlugin\\SynoliaSyliusMailTesterPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/sylius_mail_tester.yaml": {
+                    "contents": [
+                        "synolia_mail_tester:",
+                        "    resource: \"@SynoliaSyliusMailTesterPlugin/config/routes/admin_routing.yaml\"",
+                        "    prefix: '/%sylius_admin.path_name%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f786d4cb3ec32a0fbfb0c47fdd5e82c1d9d29fcc"
+        }
+    }
+}

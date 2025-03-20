@@ -610,7 +610,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [symfony/apache-pack](https://packagist.org/packages/symfony/apache-pack) | [1.0](symfony/apache-pack/1.0) |
 | [symfonycorp/connect](https://packagist.org/packages/symfonycorp/connect) | [7.0](symfonycorp/connect/7.0) |
 | [symfonycorp/connect-bundle](https://packagist.org/packages/symfonycorp/connect-bundle) | [5.0](symfonycorp/connect-bundle/5.0) |
-| [synolia/sylius-mail-tester-plugin](https://packagist.org/packages/synolia/sylius-mail-tester-plugin) | [1.0](synolia/sylius-mail-tester-plugin/1.0) |
+| [synolia/sylius-mail-tester-plugin](https://packagist.org/packages/synolia/sylius-mail-tester-plugin) | [3.0](synolia/sylius-mail-tester-plugin/3.0) |
 | [synolia/sylius-scheduler-command-plugin](https://packagist.org/packages/synolia/sylius-scheduler-command-plugin) | [2.0](synolia/sylius-scheduler-command-plugin/2.0) |
 | [systemsdk/easy-log-bundle](https://packagist.org/packages/systemsdk/easy-log-bundle) | [1.10](systemsdk/easy-log-bundle/1.10) |
 | [tales-from-a-dev/flowbite-bundle](https://packagist.org/packages/tales-from-a-dev/flowbite-bundle) | [0.4](tales-from-a-dev/flowbite-bundle/0.4) |

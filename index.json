@@ -1950,7 +1950,8 @@
             "5.0"
         ],
         "synolia/sylius-mail-tester-plugin": [
-            "1.0"
+            "1.0",
+            "3.0"
         ],
         "synolia/sylius-scheduler-command-plugin": [
             "1.0",
