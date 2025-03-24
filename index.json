@@ -1457,7 +1457,8 @@
             "1.6"
         ],
         "php-llm/llm-chain-bundle": [
-            "0.16"
+            "0.16",
+            "0.19"
         ],
         "php-translation/loco-adapter": [
             "0.8"

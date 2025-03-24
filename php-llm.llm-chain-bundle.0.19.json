@@ -1,0 +1,51 @@
+{
+    "manifests": {
+        "php-llm/llm-chain-bundle": {
+            "manifest": {
+                "bundles": {
+                    "PhpLlm\\LlmChainBundle\\LlmChainBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "OPENAI_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/llm_chain.yaml": {
+                    "contents": [
+                        "# config/packages/llm_chain.yaml",
+                        "services:",
+                        "    _defaults:",
+                        "        autowire: true",
+                        "        autoconfigure: true",
+                        "",
+                        "    PhpLlm\\LlmChain\\Chain\\Toolbox\\Tool\\Clock: null",
+                        "",
+                        "llm_chain:",
+                        "    platform:",
+                        "        openai:",
+                        "            api_key: '%env(OPENAI_API_KEY)%'",
+                        "",
+                        "    chain:",
+                        "        default:",
+                        "            platform: 'llm_chain.platform.openai'",
+                        "            model:",
+                        "                name: 'GPT'",
+                        "                version: 'gpt-4o-mini'",
+                        "            system_prompt: |",
+                        "                You are a helpful assistant and you can provide the current date and time.",
+                        "            tools:",
+                        "                - 'PhpLlm\\LlmChain\\Chain\\Toolbox\\Tool\\Clock'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "263a721f850c6fba105567e27c3614b3b0475dbf"
+        }
+    }
+}
