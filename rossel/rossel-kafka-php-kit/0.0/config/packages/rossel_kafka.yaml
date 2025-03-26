@@ -1,0 +1,3 @@
+rossel_kafka:
+    address: '%env(ROSSEL_KAFKA_ADDRESS)%'
+    port: '%env(ROSSEL_KAFKA_PORT)%'
