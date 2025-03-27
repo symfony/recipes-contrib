@@ -1615,6 +1615,9 @@
         "rossel/mwu-sdk": [
             "0.1"
         ],
+        "rossel/rossel-kafka-php-kit": [
+            "0.0"
+        ],
         "roukmoute/hashids-bundle": [
             "1.4"
         ],
