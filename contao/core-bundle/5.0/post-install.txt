@@ -1,0 +1,9 @@
+  * Enable ESI in the <fg=green>config/packages/framework.yaml</> file.
+
+  * Add the Contao routes to your <fg=green>config/routing.yaml</> file and
+    make sure they are loaded at the very end.
+
+  * Edit your <fg=green>config/security.yaml</> file and include all the
+    necessary providers, firewalls and access control sections.
+
+Documentation: https://docs.contao.org/dev/
