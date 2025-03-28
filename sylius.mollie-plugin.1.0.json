@@ -1,0 +1,42 @@
+{
+    "manifests": {
+        "sylius/mollie-plugin": {
+            "manifest": {
+                "bundles": {
+                    "SyliusMolliePlugin\\SyliusMolliePlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sylius_mollie.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SyliusMolliePlugin/Resources/config/config.yaml\" }",
+                        "",
+                        "winzou_state_machine:",
+                        "    sylius_order_checkout:",
+                        "        transitions:",
+                        "            complete:",
+                        "                from: [cart, addressed, shipping_selected, shipping_skipped, payment_selected, payment_skipped]",
+                        "                to: completed",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sylius_mollie.yaml": {
+                    "contents": [
+                        "sylius_mollie_plugin:",
+                        "    resource: \"@SyliusMolliePlugin/Resources/config/routing.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "76846a439cf68cc581937017d0f2e9401fc9cd0b"
+        }
+    }
+}
