@@ -65,7 +65,6 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [bizkit/versioning-bundle](https://packagist.org/packages/bizkit/versioning-bundle) | [1.0](bizkit/versioning-bundle/1.0) |
 | [boshurik/telegram-bot-bundle](https://packagist.org/packages/boshurik/telegram-bot-bundle) | [6.0](boshurik/telegram-bot-bundle/6.0) |
 | [botjaeger/nexmo-bundle](https://packagist.org/packages/botjaeger/nexmo-bundle) | [0.5](botjaeger/nexmo-bundle/0.5) |
-| [bref/symfony-bridge](https://packagist.org/packages/bref/symfony-bridge) | [0.1](bref/symfony-bridge/0.1) |
 | [broadway/broadway-bundle](https://packagist.org/packages/broadway/broadway-bundle) | [0.4](broadway/broadway-bundle/0.4) |
 | [broadway/event-store-dbal](https://packagist.org/packages/broadway/event-store-dbal) | [0.2](broadway/event-store-dbal/0.2) |
 | [broadway/event-store-mongodb](https://packagist.org/packages/broadway/event-store-mongodb) | [0.2](broadway/event-store-mongodb/0.2) |
