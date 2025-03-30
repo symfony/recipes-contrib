@@ -1,13 +1,14 @@
-# Read the documentation at https://www.serverless.com/framework/docs/providers/aws/guide/serverless.yml/
+# Read the documentation at https://bref.sh/docs/symfony/getting-started
 service: symfony
+
+# Set your team ID if you are using Bref Cloud
+#bref:
+#    team: my-team-id
 
 provider:
     name: aws
     # The AWS region in which to deploy (us-east-1 is the default)
     region: us-east-1
-    # The stage of the application, e.g. dev, production, staging… ('dev' is the default)
-    stage: dev
-    runtime: provided.al2
     environment:
         # Symfony environment variables
         APP_ENV: prod
@@ -16,21 +17,20 @@ plugins:
     - ./vendor/bref/bref
 
 functions:
+
     # This function runs the Symfony website/API
     web:
         handler: public/index.php
+        runtime: php-82-fpm
         timeout: 28 # in seconds (API Gateway has a timeout of 29 seconds)
-        layers:
-            - ${bref:layer.php-81-fpm}
         events:
             - httpApi: '*'
+
     # This function let us run console commands in Lambda
     console:
         handler: bin/console
+        runtime: php-82-console
         timeout: 120 # in seconds
-        layers:
-            - ${bref:layer.php-81} # PHP
-            - ${bref:layer.console} # The "console" layer
 
 package:
     patterns:
