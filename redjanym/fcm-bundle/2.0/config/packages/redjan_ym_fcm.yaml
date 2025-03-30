@@ -1,0 +1,2 @@
+redjan_ym_fcm:
+    service_account_file: '%env(resolve:FCM_DEFAULT_SERVICE_ACCOUNT_FILE_PATH)%'
