@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "rossel/rossel-kafka": {
+            "manifest": {
+                "bundles": {
+                    "Rossel\\RosselKafka\\RosselKafkaBundle": [
+                        "all"
+                    ]
+                },
+                "env": {
+                    "ROSSEL_KAFKA_HOST": "localhost",
+                    "ROSSEL_KAFKA_PORT": "9092"
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/rossel_kafka.yaml": {
+                    "contents": [
+                        "rossel_kafka:",
+                        "    host: '%env(ROSSEL_KAFKA_HOST)%'",
+                        "    port: '%env(ROSSEL_KAFKA_PORT)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6ab76a6ebe16d5a2c6cea07b254f66dbcb687cdd"
+        }
+    }
+}

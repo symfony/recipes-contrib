@@ -1,14 +1,14 @@
 {
     "manifests": {
-        "rossel/rossel-kafka-php-kit": {
+        "rossel/rossel-kafka": {
             "manifest": {
                 "bundles": {
-                    "Rossel\\RosselKafkaPhpKit\\RosselKafkaPhpKitBundle": [
+                    "Rossel\\RosselKafka\\RosselKafkaBundle": [
                         "all"
                     ]
                 },
                 "env": {
-                    "ROSSEL_KAFKA_ADDRESS": "localhost",
+                    "ROSSEL_KAFKA_HOST": "localhost",
                     "ROSSEL_KAFKA_PORT": "9092"
                 },
                 "copy-from-recipe": {
@@ -19,14 +19,14 @@
                 "config/packages/rossel_kafka.yaml": {
                     "contents": [
                         "rossel_kafka:",
-                        "    address: '%env(ROSSEL_KAFKA_ADDRESS)%'",
+                        "    host: '%env(ROSSEL_KAFKA_HOST)%'",
                         "    port: '%env(ROSSEL_KAFKA_PORT)%'",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "98376c4776da3a6480b5c8a3c220d3a29e1acf07"
+            "ref": "6ab76a6ebe16d5a2c6cea07b254f66dbcb687cdd"
         }
     }
 }
