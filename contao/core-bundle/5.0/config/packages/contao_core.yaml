@@ -1,0 +1,10 @@
+# See https://github.com/contao/core-bundle
+contao:
+    preview_script: '/preview.php'
+    upload_path: files
+    csrf_token_name: contao_csrf_token
+    pretty_error_screens: true
+
+when@dev:
+    contao:
+        pretty_error_screens: false
