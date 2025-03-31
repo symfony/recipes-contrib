@@ -1,0 +1,71 @@
+{
+    "manifests": {
+        "league/oauth2-server-bundle": {
+            "manifest": {
+                "bundles": {
+                    "League\\Bundle\\OAuth2ServerBundle\\LeagueOAuth2ServerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Fallback OAuth2 encryption key",
+                    "#2": "Please override this with a secure value: https://oauth2.thephpleague.com/installation/#string-password",
+                    "OAUTH2_ENCRYPTION_KEY": "%generate(secret)%"
+                },
+                "post-install-output": [
+                    "  1. <bg=magenta;fg=white> Provide a key pair </>",
+                    "    i)   Generate a private/public key pair (preferably with a password): <comment>https://oauth2.thephpleague.com/installation/#generating-public-and-private-keys</>",
+                    "    ii)  Configure the <info>private_key</> and <info>public_key</> with the respective key locations",
+                    "    iii) (Optional) Set the <info>private_key_passphrase</> to the private key password set in the previous step",
+                    "",
+                    "  2. <bg=magenta;fg=white> Configure the OAuth2 encryption key </>",
+                    "    i)   Add the <info>OAUTH2_ENCRYPTION_KEY</> env variable in <info>.env.local</> (don't commit your production secrets): <comment>https://oauth2.thephpleague.com/installation/#string-password</>",
+                    "    ii)  Configure the <info>encryption_key</> with a secure encryption key: <comment>https://oauth2.thephpleague.com/installation/#string-password</>",
+                    "",
+                    "  3. <bg=magenta;fg=white> Update the database </>",
+                    "    i)   Update the database so bundle entities can be persisted using Doctrine: <comment>bin/console doctrine:schema:update --force</>",
+                    "",
+                    "  4. <bg=magenta;fg=white> Enable the authenticator security system in <comment>config/security.yaml</> file:</>",
+                    "    i)   <comment>security:</>",
+                    "         <comment>    enable_authenticator_manager: true</>",
+                    "",
+                    "  5. <bg=magenta;fg=white> Read the docs </>",
+                    "    i)   Read the documentation at <comment>https://github.com/thephpleague/oauth2-server-bundle/blob/master/docs/index.md</>"
+                ]
+            },
+            "files": {
+                "config/packages/league_oauth2_server.yaml": {
+                    "contents": [
+                        "league_oauth2_server:",
+                        "    authorization_server:",
+                        "        private_key: /var/oauth/private.key                     # Change this",
+                        "        private_key_passphrase: null                            # Passphrase of the private key, if any",
+                        "        encryption_key: '%env(string:OAUTH2_ENCRYPTION_KEY)%'   # (Optional) Change this",
+                        "    resource_server:",
+                        "        public_key: /var/oauth/public.key                       # Change this",
+                        "    scopes:",
+                        "        available: [EMAIL]                                    # Change this",
+                        "        default: [EMAIL]                                      # Change this",
+                        "    persistence:",
+                        "        doctrine: null",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/league_oauth2.yaml": {
+                    "contents": [
+                        "oauth2:",
+                        "    resource: '@LeagueOAuth2ServerBundle/Resources/config/routes.php'",
+                        "    type: php",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a289d3846a1ce8c58050abfadf213e65cd75bd4e"
+        }
+    }
+}
