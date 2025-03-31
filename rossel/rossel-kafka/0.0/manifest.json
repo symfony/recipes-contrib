@@ -1,9 +1,9 @@
 {
     "bundles": {
-        "Rossel\\RosselKafkaPhpKit\\RosselKafkaPhpKitBundle": ["all"]
+        "Rossel\\RosselKafka\\RosselKafkaBundle": ["all"]
     },
     "env": {
-        "ROSSEL_KAFKA_ADDRESS": "localhost",
+        "ROSSEL_KAFKA_HOST": "localhost",
         "ROSSEL_KAFKA_PORT": "9092"
     },
     "copy-from-recipe": {
