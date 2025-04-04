@@ -1,5 +1,5 @@
 imports:
-    - { resource: "@SyliusMolliePlugin/Resources/config/config.yaml" }
+    - { resource: "@SyliusMolliePlugin/config/config.yaml" }
 
 winzou_state_machine:
     sylius_order_checkout:

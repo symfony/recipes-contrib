@@ -1,2 +1,2 @@
 sylius_mollie_plugin:
-    resource: "@SyliusMolliePlugin/Resources/config/routing.yaml"
+    resource: "@SyliusMolliePlugin/config/routing.yaml"
