@@ -3,10 +3,18 @@
         "Rossel\\RosselKafka\\RosselKafkaBundle": ["all"]
     },
     "env": {
+        "KAFKA_CONTAINER_CLUSTER_ID": "ChangeMe!",
+        "KAFKA_CONTAINER_PORT": "9092",
+        "KAFKA_CONTAINER_INTERNAL_PORT": "29092",
+        "KAFKA_CONTAINER_ADVERTISED_HOST": "kafka",
+        "KAFKA_CONTAINER_QUORUM_VOTERS": "1@kafka:9093",
+        "KAFKA_CONTAINER_BROKER_ID": "-1",
+        "KAFKA_CONTAINER_NODE_ID": "-1",
         "ROSSEL_KAFKA_HOST": "localhost",
         "ROSSEL_KAFKA_PORT": "9092"
     },
     "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
+        "config/": "%CONFIG_DIR%/",
+        "compose.kafka.yaml": "compose.kafka.yaml"
     }
 }
