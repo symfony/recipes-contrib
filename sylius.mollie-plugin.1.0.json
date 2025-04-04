@@ -1,0 +1,56 @@
+{
+    "manifests": {
+        "sylius/mollie-plugin": {
+            "manifest": {
+                "bundles": {
+                    "SyliusMolliePlugin\\SyliusMolliePlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "add-lines": [
+                    {
+                        "file": "assets/admin/entry.js",
+                        "content": "import '../../vendor/sylius/mollie-plugin/src/Resources/assets/admin/entry';",
+                        "position": "bottom",
+                        "warn_if_missing": true
+                    },
+                    {
+                        "file": "assets/shop/entry.js",
+                        "content": "import '../../vendor/sylius/mollie-plugin/src/Resources/assets/shop/entry';",
+                        "position": "bottom",
+                        "warn_if_missing": true
+                    }
+                ]
+            },
+            "files": {
+                "config/packages/sylius_mollie.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SyliusMolliePlugin/Resources/config/config.yaml\" }",
+                        "",
+                        "winzou_state_machine:",
+                        "    sylius_order_checkout:",
+                        "        transitions:",
+                        "            complete:",
+                        "                from: [cart, addressed, shipping_selected, shipping_skipped, payment_selected, payment_skipped]",
+                        "                to: completed",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sylius_mollie.yaml": {
+                    "contents": [
+                        "sylius_mollie_plugin:",
+                        "    resource: \"@SyliusMolliePlugin/Resources/config/routing.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "abbfb4de84bb7caa30893d9205141f39bbbf40a1"
+        }
+    }
+}

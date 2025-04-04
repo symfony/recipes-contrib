@@ -1,0 +1,56 @@
+{
+    "manifests": {
+        "sylius/mollie-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Sylius\\MolliePlugin\\SyliusMolliePlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "add-lines": [
+                    {
+                        "file": "assets/admin/entrypoint.js",
+                        "content": "import '../../vendor/sylius/mollie-plugin/assets/admin/entry';",
+                        "position": "bottom",
+                        "warn_if_missing": true
+                    },
+                    {
+                        "file": "assets/shop/entrypoint.js",
+                        "content": "import '../../vendor/sylius/mollie-plugin/assets/shop/entry';",
+                        "position": "bottom",
+                        "warn_if_missing": true
+                    }
+                ]
+            },
+            "files": {
+                "config/packages/sylius_mollie.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SyliusMolliePlugin/config/config.yaml\" }",
+                        "",
+                        "winzou_state_machine:",
+                        "    sylius_order_checkout:",
+                        "        transitions:",
+                        "            complete:",
+                        "                from: [cart, addressed, shipping_selected, shipping_skipped, payment_selected, payment_skipped]",
+                        "                to: completed",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sylius_mollie.yaml": {
+                    "contents": [
+                        "sylius_mollie_plugin:",
+                        "    resource: \"@SyliusMolliePlugin/config/routing.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "09a0575b218a1b920dbcdf3111974aa044298c61"
+        }
+    }
+}
