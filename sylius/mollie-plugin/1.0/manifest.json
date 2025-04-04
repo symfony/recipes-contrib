@@ -4,5 +4,19 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
-    }
+    },
+    "add-lines": [
+        {
+            "file": "assets/admin/entry.js",
+            "content": "import '../../vendor/sylius/mollie-plugin/src/Resources/assets/admin/entry';",
+            "position": "bottom",
+            "warn_if_missing": true
+        },
+        {
+            "file": "assets/shop/entry.js",
+            "content": "import '../../vendor/sylius/mollie-plugin/src/Resources/assets/shop/entry';",
+            "position": "bottom",
+            "warn_if_missing": true
+        }
+    ]
 }
