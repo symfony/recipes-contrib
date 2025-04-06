@@ -1,3 +1,0 @@
-oauth2:
-    resource: '@LeagueOAuth2ServerBundle/Resources/config/routes.php'
-    type: php
