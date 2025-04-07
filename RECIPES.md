@@ -309,7 +309,6 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [kynno/smartbots-bundle](https://packagist.org/packages/kynno/smartbots-bundle) | [0.1](kynno/smartbots-bundle/0.1) |
 | [labymod/discord-webhook-bundle](https://packagist.org/packages/labymod/discord-webhook-bundle) | [1.0](labymod/discord-webhook-bundle/1.0) |
 | [lag/adminbundle](https://packagist.org/packages/lag/adminbundle) | [1.0](lag/adminbundle/1.0) |
-| [league/oauth2-server-bundle](https://packagist.org/packages/league/oauth2-server-bundle) | [0.3](league/oauth2-server-bundle/0.3) |
 | [league/tactician-bundle](https://packagist.org/packages/league/tactician-bundle) | [1.0](league/tactician-bundle/1.0) |
 | [leapt/core-bundle](https://packagist.org/packages/leapt/core-bundle) | [2.2](leapt/core-bundle/2.2) |
 | [leapt/froala-editor-bundle](https://packagist.org/packages/leapt/froala-editor-bundle) | [1.2](leapt/froala-editor-bundle/1.2) |
