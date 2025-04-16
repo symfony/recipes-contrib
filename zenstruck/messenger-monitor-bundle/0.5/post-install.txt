@@ -1,0 +1,9 @@
+* You're almost ready to use zenstruck/messenger-monitor-bundle!
+
+* First, create a migration with <comment>symfony console make:migration</comment>
+  and run it with <comment>symfony console doctrine:migrations:migrate</comment>.
+
+* Visit <comment>/admin/messenger</comment> as a user with <comment>ROLE_ADMIN</comment>
+  to see the Dashboard UI.
+
+* <fg=blue>Read</> the documentation at <comment>https://github.com/zenstruck/messenger-monitor-bundle</>
