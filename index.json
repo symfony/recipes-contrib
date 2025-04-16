@@ -1908,7 +1908,8 @@
             "1.0"
         ],
         "sylius/mollie-plugin": [
-            "1.0"
+            "1.0",
+            "2.0"
         ],
         "sylius/paypal-plugin": [
             "1.7",

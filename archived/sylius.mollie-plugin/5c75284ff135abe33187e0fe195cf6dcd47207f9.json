@@ -3,7 +3,7 @@
         "sylius/mollie-plugin": {
             "manifest": {
                 "bundles": {
-                    "SyliusMolliePlugin\\SyliusMolliePlugin": [
+                    "Sylius\\MolliePlugin\\SyliusMolliePlugin": [
                         "all"
                     ]
                 },
@@ -12,14 +12,20 @@
                 },
                 "add-lines": [
                     {
-                        "file": "assets/admin/entry.js",
-                        "content": "import '../../vendor/sylius/mollie-plugin/src/Resources/assets/admin/entry';",
+                        "file": "templates/bundles/SyliusShopBundle/_scripts.html.twig",
+                        "content": "<script src=\"https://js.mollie.com/v1/mollie.js\"></script>",
+                        "position": "top",
+                        "warn_if_missing": true
+                    },
+                    {
+                        "file": "assets/admin/entrypoint.js",
+                        "content": "import '../../vendor/sylius/mollie-plugin/assets/admin/entrypoint';",
                         "position": "bottom",
                         "warn_if_missing": true
                     },
                     {
-                        "file": "assets/shop/entry.js",
-                        "content": "import '../../vendor/sylius/mollie-plugin/src/Resources/assets/shop/entry';",
+                        "file": "assets/shop/entrypoint.js",
+                        "content": "import '../../vendor/sylius/mollie-plugin/assets/shop/entrypoint';",
                         "position": "bottom",
                         "warn_if_missing": true
                     }
@@ -29,7 +35,7 @@
                 "config/packages/sylius_mollie.yaml": {
                     "contents": [
                         "imports:",
-                        "    - { resource: \"@SyliusMolliePlugin/Resources/config/config.yaml\" }",
+                        "    - { resource: \"@SyliusMolliePlugin/config/config.yaml\" }",
                         ""
                     ],
                     "executable": false
@@ -37,13 +43,13 @@
                 "config/routes/sylius_mollie.yaml": {
                     "contents": [
                         "sylius_mollie_plugin:",
-                        "    resource: \"@SyliusMolliePlugin/Resources/config/routing.yaml\"",
+                        "    resource: \"@SyliusMolliePlugin/config/routes.yaml\"",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "c3b13054b8f82006128670f21cea8939bf5fae34"
+            "ref": "5c75284ff135abe33187e0fe195cf6dcd47207f9"
         }
     }
 }
