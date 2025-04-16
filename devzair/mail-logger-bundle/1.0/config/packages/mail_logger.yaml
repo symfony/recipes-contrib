@@ -1,0 +1,2 @@
+mail_logger:
+    enabled: true
