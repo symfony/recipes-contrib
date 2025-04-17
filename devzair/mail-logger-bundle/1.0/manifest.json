@@ -1,8 +1,10 @@
 {
-    "bundles": {
-        "DevZair\\MailLoggerBundle\\MailLoggerBundle": ["all"]
-    },
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    }
+   "bundles": {
+      "DevZair\\MailLoggerBundle\\MailLoggerBundle": [
+         "all"
+      ]
+   },
+   "copy-from-recipe": {
+      "config/": "%CONFIG_DIR%/"
+   }
 }
