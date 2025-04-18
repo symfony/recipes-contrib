@@ -1,0 +1,7 @@
+huluti_altcha:
+    enable: true
+    hmacKey: '%env(ALTCHA_SECRET)%'
+
+when@test:
+    huluti_altcha:
+        enable: false

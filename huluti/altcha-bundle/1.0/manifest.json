@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Huluti\\AltchaBundle\\HulutiAltchaBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "ALTCHA_SECRET": "%generate(secret)%"
+    }
+}

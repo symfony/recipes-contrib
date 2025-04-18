@@ -1,0 +1,2 @@
+live_component:
+    resource: '@HulutiAltchaBundle/config/routes.yml'
