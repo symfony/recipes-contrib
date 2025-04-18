@@ -4,5 +4,9 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
+    },
+    "requirements": {
+      "php": ">=8.1",
+      "symfony": "^6.0 || ^7.0"
     }
 }
