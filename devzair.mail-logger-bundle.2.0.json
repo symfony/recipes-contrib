@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "devzair/mail-logger-bundle": {
+            "manifest": {
+                "bundles": {
+                    "DevZair\\MailLoggerBundle\\MailLoggerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "requirements": {
+                    "php": ">=8.1",
+                    "symfony": "^6.0 || ^7.0"
+                }
+            },
+            "files": {
+                "config/packages/mail_logger.yaml": {
+                    "contents": [
+                        "mail_logger:\r",
+                        "    enabled: true\r",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5fede289946b01d695781540d10994f3e3196c3a"
+        }
+    }
+}
