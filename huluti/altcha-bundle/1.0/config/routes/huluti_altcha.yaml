@@ -1,2 +1,2 @@
-live_component:
+huluti_altcha:
     resource: '@HulutiAltchaBundle/config/routes.yml'
