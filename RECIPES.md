@@ -136,6 +136,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [dekalee/enom-bundle](https://packagist.org/packages/dekalee/enom-bundle) | [1.0](dekalee/enom-bundle/1.0) |
 | [dekalee/mailjet-bundle](https://packagist.org/packages/dekalee/mailjet-bundle) | [2.1](dekalee/mailjet-bundle/2.1) |
 | [dekalee/pubsub-swarrot-bundle](https://packagist.org/packages/dekalee/pubsub-swarrot-bundle) | [1.0](dekalee/pubsub-swarrot-bundle/1.0) |
+| [devzair/mail-logger-bundle](https://packagist.org/packages/devzair/mail-logger-bundle) | [1.0](devzair/mail-logger-bundle/1.0) |
 | [disjfa/mozaic-bundle](https://packagist.org/packages/disjfa/mozaic-bundle) | [0.1](disjfa/mozaic-bundle/0.1) |
 | [disjfa/translation-bundle](https://packagist.org/packages/disjfa/translation-bundle) | [0.1](disjfa/translation-bundle/0.1) |
 | [dobryprogramator/smartform-bundle](https://packagist.org/packages/dobryprogramator/smartform-bundle) | [1.0](dobryprogramator/smartform-bundle/1.0) |

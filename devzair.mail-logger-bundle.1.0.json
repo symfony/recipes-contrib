@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "devzair/mail-logger-bundle": {
+            "manifest": {
+                "bundles": {
+                    "DevZair\\MailLoggerBundle\\MailLoggerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/mail_logger.yaml": {
+                    "contents": [
+                        "mail_logger:\r",
+                        "    enabled: true\r",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9825cae2951b02051aa2eb7162dbf55cbf84a56d"
+        }
+    }
+}

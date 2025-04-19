@@ -419,6 +419,9 @@
         "dekalee/pubsub-swarrot-bundle": [
             "1.0"
         ],
+        "devzair/mail-logger-bundle": [
+            "1.0"
+        ],
         "disjfa/mozaic-bundle": [
             "0.1"
         ],
