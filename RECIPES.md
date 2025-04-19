@@ -241,6 +241,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [holadev/amp-toolbox-bundle](https://packagist.org/packages/holadev/amp-toolbox-bundle) | [0.1](holadev/amp-toolbox-bundle/0.1) |
 | [horlyk/fetch-xml-bundle](https://packagist.org/packages/horlyk/fetch-xml-bundle) | [1.1](horlyk/fetch-xml-bundle/1.1) |
 | [hugosoltys/fitz-bundle](https://packagist.org/packages/hugosoltys/fitz-bundle) | [1.0](hugosoltys/fitz-bundle/1.0) |
+| [huluti/altcha-bundle](https://packagist.org/packages/huluti/altcha-bundle) | [1.0](huluti/altcha-bundle/1.0) |
 | [huluti/doctrine-relations-analyser](https://packagist.org/packages/huluti/doctrine-relations-analyser) | [0.3](huluti/doctrine-relations-analyser/0.3) |
 | [hwi/oauth-bundle](https://packagist.org/packages/hwi/oauth-bundle) | [2.0](hwi/oauth-bundle/2.0) |
 | [idci/keycloak-security-bundle](https://packagist.org/packages/idci/keycloak-security-bundle) | [2.0](idci/keycloak-security-bundle/2.0) |

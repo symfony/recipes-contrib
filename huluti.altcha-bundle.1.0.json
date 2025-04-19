@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "huluti/altcha-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Huluti\\AltchaBundle\\HulutiAltchaBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "ALTCHA_SECRET": "%generate(secret)%"
+                }
+            },
+            "files": {
+                "config/packages/huluti_altcha.yaml": {
+                    "contents": [
+                        "huluti_altcha:",
+                        "    enable: true",
+                        "    hmacKey: '%env(ALTCHA_SECRET)%'",
+                        "",
+                        "when@test:",
+                        "    huluti_altcha:",
+                        "        enable: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/huluti_altcha.yaml": {
+                    "contents": [
+                        "huluti_altcha:",
+                        "    resource: '@HulutiAltchaBundle/config/routes.yml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e3899eb5cd2fb88e882a298ac6dcd627169b3263"
+        }
+    }
+}
