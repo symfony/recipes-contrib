@@ -1,6 +1,9 @@
 when@prod:
     sentry:
         dsn: '%env(SENTRY_DSN)%'
+        # Add request headers, cookies, IP address and the authenticated user
+        # see https://docs.sentry.io/platforms/php/data-management/data-collected/ for more info
+        # send_default_pii: true
         options:
             ignore_exceptions:
                 - 'Symfony\Component\ErrorHandler\Error\FatalError'
