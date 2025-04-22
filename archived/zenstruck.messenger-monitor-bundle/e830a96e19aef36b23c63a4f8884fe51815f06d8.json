@@ -1,0 +1,87 @@
+{
+    "manifests": {
+        "zenstruck/messenger-monitor-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Zenstruck\\Messenger\\Monitor\\ZenstruckMessengerMonitorBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "post-install-output": [
+                    "* You're almost ready to use zenstruck/messenger-monitor-bundle!",
+                    "",
+                    "* First, create a migration with <comment>symfony console make:migration</comment>",
+                    "  and run it with <comment>symfony console doctrine:migrations:migrate</comment>.",
+                    "",
+                    "* Visit <comment>/admin/messenger</comment> as a user with <comment>ROLE_ADMIN</comment>",
+                    "  to see the Dashboard UI.",
+                    "",
+                    "* <fg=blue>Read</> the documentation at <comment>https://github.com/zenstruck/messenger-monitor-bundle</>"
+                ]
+            },
+            "files": {
+                "config/packages/zenstruck_messenger_monitor.yaml": {
+                    "contents": [
+                        "zenstruck_messenger_monitor:",
+                        "    storage:",
+                        "        orm:",
+                        "            entity_class: App\\Entity\\ProcessedMessage",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Controller/Admin/MessengerMonitorController.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Controller\\Admin;",
+                        "",
+                        "use Symfony\\Component\\Routing\\Attribute\\Route;",
+                        "use Symfony\\Component\\Security\\Http\\Attribute\\IsGranted;",
+                        "use Zenstruck\\Messenger\\Monitor\\Controller\\MessengerMonitorController as BaseMessengerMonitorController;",
+                        "",
+                        "#[Route('/admin/messenger')]",
+                        "#[IsGranted('ROLE_ADMIN')]",
+                        "class MessengerMonitorController extends BaseMessengerMonitorController",
+                        "{",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/ProcessedMessage.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Zenstruck\\Messenger\\Monitor\\History\\Model\\ProcessedMessage as BaseProcessedMessage;",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "",
+                        "#[ORM\\Entity(readOnly: true)]",
+                        "#[ORM\\Table('messenger_processed_messages')]",
+                        "class ProcessedMessage extends BaseProcessedMessage",
+                        "{",
+                        "    #[ORM\\Id]",
+                        "    #[ORM\\GeneratedValue]",
+                        "    #[ORM\\Column]",
+                        "    private ?int $id = null;",
+                        "",
+                        "    public function id(): ?int",
+                        "    {",
+                        "        return $this->id;",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e830a96e19aef36b23c63a4f8884fe51815f06d8"
+        }
+    }
+}

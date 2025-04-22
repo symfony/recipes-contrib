@@ -675,6 +675,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [ywh/doctrine-encryption-bundle](https://packagist.org/packages/ywh/doctrine-encryption-bundle) | [1.0](ywh/doctrine-encryption-bundle/1.0) |
 | [zemasterkrom/zmkr-cloudflare-turnstile-bundle](https://packagist.org/packages/zemasterkrom/zmkr-cloudflare-turnstile-bundle) | [0.1](zemasterkrom/zmkr-cloudflare-turnstile-bundle/0.1) |
 | [zendesk/zendesk_api_client_php](https://packagist.org/packages/zendesk/zendesk_api_client_php) | [2.2](zendesk/zendesk_api_client_php/2.2) |
+| [zenstruck/messenger-monitor-bundle](https://packagist.org/packages/zenstruck/messenger-monitor-bundle) | [0.5](zenstruck/messenger-monitor-bundle/0.5) |
 | [zenstruck/redis](https://packagist.org/packages/zenstruck/redis) | [0.1](zenstruck/redis/0.1) |
 | [zenstruck/signed-url-bundle](https://packagist.org/packages/zenstruck/signed-url-bundle) | [0.1](zenstruck/signed-url-bundle/0.1) |
 | [zenstruck/twig-service-bundle](https://packagist.org/packages/zenstruck/twig-service-bundle) | [0.2](zenstruck/twig-service-bundle/0.2) |
