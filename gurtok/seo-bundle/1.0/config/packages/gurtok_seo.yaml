@@ -1,0 +1,6 @@
+gurtok_seo:
+    allow_custom_meta: false
+    auto_inject_response: false
+    excluded_paths:
+#        - /admin
+#        - /api
