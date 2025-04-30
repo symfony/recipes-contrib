@@ -4,6 +4,7 @@
     },
     "env": {
         "ROSSEL_KAFKA_BROKER_URL": "broker:9092",
+        "ROSSEL_KAFKA_PRODUCER_APP_NAME": "ChangeMe!",
         "KAFKA_CONTAINER_CLUSTER_ID": "ChangeMe!",
         "KAFKA_CONTAINER_PORT": "9092",
         "KAFKA_CONTAINER_INTERNAL_PORT": "29092",
