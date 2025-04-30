@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Gurtok\\SeoBundle\\SeoBundle": ["all"]
+        "Gurtok\\SeoBundle\\GurtokSeoBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
