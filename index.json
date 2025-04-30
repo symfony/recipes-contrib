@@ -1832,7 +1832,8 @@
             "0.4"
         ],
         "storyblok/symfony-bundle": [
-            "0.1"
+            "0.1",
+            "1.2"
         ],
         "sulu/article-bundle": [
             "2.0"

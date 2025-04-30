@@ -1,0 +1,58 @@
+{
+    "manifests": {
+        "storyblok/symfony-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Storyblok\\Bundle\\StoryblokBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "STORYBLOK_API_BASE_URI": "https://api.storyblok.com",
+                    "STORYBLOK_API_TOKEN": "",
+                    "#1": "STORYBLOK_VERSION=",
+                    "#2": "STORYBLOK_ASSETS_API_TOKEN=",
+                    "#3": "STORYBLOK_WEBHOOK_SECRET="
+                }
+            },
+            "files": {
+                "config/packages/storyblok.yaml": {
+                    "contents": [
+                        "storyblok:",
+                        "    base_uri: '%env(STORYBLOK_API_BASE_URI)%'",
+                        "    token: '%env(STORYBLOK_API_TOKEN)%'",
+                        "    # version: '%env(STORYBLOK_VERSION)%'",
+                        "    # assets_token: '%env(STORYBLOK_ASSETS_API_TOKEN)%'",
+                        "    # webhook_secret: '%env(STORYBLOK_WEBHOOK_SECRET)%'",
+                        "    # auto_resolve_relations: true",
+                        "    # controller:",
+                        "    #     ascending_redirect_fallback: true",
+                        "",
+                        "when@prod:",
+                        "    storyblok:",
+                        "        controller:",
+                        "            cache:",
+                        "                public: true",
+                        "                max_age: 3600",
+                        "                smax_age: 3600",
+                        "                must_revalidate: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/storyblok.yaml": {
+                    "contents": [
+                        "storyblok:",
+                        "    resource: '@StoryblokBundle/config/routes.php'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "fd3add9160293d890cede7101d39afc4cf078960"
+        }
+    }
+}
