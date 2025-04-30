@@ -1,0 +1,15 @@
+{
+    "bundles": {
+        "Storyblok\\Bundle\\StoryblokBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "STORYBLOK_API_BASE_URI": "https://api.storyblok.com",
+        "STORYBLOK_API_TOKEN": "",
+        "#1": "STORYBLOK_VERSION=",
+        "#2": "STORYBLOK_ASSETS_API_TOKEN=",
+        "#3": "STORYBLOK_WEBHOOK_SECRET="
+    }
+}
