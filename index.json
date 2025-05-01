@@ -723,6 +723,9 @@
         "gpslab/pagination-bundle": [
             "1.2"
         ],
+        "gurtok/seo-bundle": [
+            "1.0"
+        ],
         "hans-peter-ording/nflfastr-symfony-bundle": [
             "0.9"
         ],
@@ -2204,6 +2207,12 @@
             "4.1": {
                 "doctrine/cache": "<1.11",
                 "symfony/framework-bundle": "<5.3"
+            }
+        },
+        "gurtok/seo-bundle": {
+            "1.0": {
+                "php": "<8.1",
+                "symfony/framework-bundle": "<6.0"
             }
         },
         "jane-php/json-schema": {

@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "gurtok/seo-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Gurtok\\SeoBundle\\GurtokSeoBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "conflict": {
+                    "php": "<8.1",
+                    "symfony/framework-bundle": "<6.0"
+                }
+            },
+            "files": {
+                "config/packages/gurtok_seo.yaml": {
+                    "contents": [
+                        "gurtok_seo:",
+                        "    # this switch off validation of meta tags (other case will be validated by MetaTag enum)",
+                        "    allow_custom_meta: false",
+                        "    # this switch on auto inject of meta tags in response",
+                        "    auto_inject_response: false",
+                        "    # this parameter is used to exclude some paths from auto inject of seo response",
+                        "    excluded_paths:",
+                        "#        - /admin",
+                        "#        - /api",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "93ab55f86453f83a321956096a0710f595254c95"
+        }
+    }
+}
