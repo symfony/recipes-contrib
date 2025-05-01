@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Gurtok\\SeoBundle\\GurtokSeoBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "conflict": {
+        "php": "<8.1",
+        "symfony/framework-bundle": "<6.0"
+    }
+}
