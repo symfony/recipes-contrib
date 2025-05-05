@@ -1,0 +1,10 @@
+{
+  "manifest": {
+    "copy-from-recipe": {
+      "config/": "%CONFIG_DIR%/"
+    }
+  },
+  "bundles": {
+    "KeronDigital\\AuthRedisStorageBundle\\KeronDigitalAuthRedisStorageBundle": ["all"]
+  }
+}
