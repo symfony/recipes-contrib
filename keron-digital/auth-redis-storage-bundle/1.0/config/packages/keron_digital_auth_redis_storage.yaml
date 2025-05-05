@@ -1,5 +1,5 @@
 # config/packages/keron_digital_auth_redis_storage.yaml
-# Copied by Symfony Flex recipe.
+# Copied by Symfony Flex recipe for keron-digital/auth-redis-storage-bundle.
 keron_digital_auth_redis_storage:
   # !!! REQUIRED: Specify your application's Redis client service ID below. !!!
   # Find the correct service ID using 'bin/console debug:container | grep Redis' or similar.
