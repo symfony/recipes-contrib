@@ -1,8 +1,4 @@
 {
-    "aliases": [
-        "cms-plugin",
-        "sylius-cms"
-    ],
     "bundles": {
         "Sylius\\CmsPlugin\\SyliusCmsPlugin": [
             "all"
