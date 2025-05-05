@@ -1,0 +1,23 @@
+{
+  "aliases": ["cms-plugin", "sylius-cms"],
+  "bundles": {
+    "Sylius\\CmsPlugin\\SyliusCmsPlugin": ["all"]
+  },
+  "copy-from-recipe": {
+    "config/": "%CONFIG_DIR%/"
+  },
+  "add-lines": [
+    {
+      "file": "assets/admin/entrypoint.js",
+      "content": "import '../../vendor/sylius/cms-plugin/assets/admin/entrypoint';",
+      "position": "bottom",
+      "warn_if_missing": true
+    },
+    {
+      "file": "assets/shop/entrypoint.js",
+      "content": "import '../../vendor/sylius/cms-plugin/assets/shop/entrypoint';",
+      "position": "bottom",
+      "warn_if_missing": true
+    }
+  ]
+}
