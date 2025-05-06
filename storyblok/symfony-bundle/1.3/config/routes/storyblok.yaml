@@ -1,0 +1,5 @@
+storyblok_content_type:
+    resource: '@StoryblokBundle/config/routes/content_type.php'
+
+storyblok_webhook:
+    resource: '@StoryblokBundle/config/routes/webhook.php'
