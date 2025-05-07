@@ -277,6 +277,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [jupi/prestashop-webservice-bundle](https://packagist.org/packages/jupi/prestashop-webservice-bundle) | [1.0](jupi/prestashop-webservice-bundle/1.0) |
 | [jurry/amqp-symfony-bundle](https://packagist.org/packages/jurry/amqp-symfony-bundle) | [1.0](jurry/amqp-symfony-bundle/1.0) |
 | [karser/karser-recaptcha3-bundle](https://packagist.org/packages/karser/karser-recaptcha3-bundle) | [0.1](karser/karser-recaptcha3-bundle/0.1) |
+| [keron-digital/auth-redis-storage-bundle](https://packagist.org/packages/keron-digital/auth-redis-storage-bundle) | [1.0](keron-digital/auth-redis-storage-bundle/1.0) |
 | [kerox/twig-image-placeholder-extension](https://packagist.org/packages/kerox/twig-image-placeholder-extension) | [1.0](kerox/twig-image-placeholder-extension/1.0) |
 | [kevinpapst/adminlte-bundle](https://packagist.org/packages/kevinpapst/adminlte-bundle) | [0.9](kevinpapst/adminlte-bundle/0.9) |
 | [kibatic/timezone-bundle](https://packagist.org/packages/kibatic/timezone-bundle) | [1.0](kibatic/timezone-bundle/1.0) |

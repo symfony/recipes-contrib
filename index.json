@@ -875,6 +875,9 @@
         "karser/karser-recaptcha3-bundle": [
             "0.1"
         ],
+        "keron-digital/auth-redis-storage-bundle": [
+            "1.0"
+        ],
         "kerox/twig-image-placeholder-extension": [
             "1.0"
         ],

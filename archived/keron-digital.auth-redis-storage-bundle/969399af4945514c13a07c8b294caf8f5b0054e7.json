@@ -1,0 +1,53 @@
+{
+    "manifests": {
+        "keron-digital/auth-redis-storage-bundle": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "bundles": {
+                    "KeronDigital\\AuthRedisStorageBundle\\KeronDigitalAuthRedisStorageBundle": [
+                        "all"
+                    ]
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white> KeronDigitalAuthRedisStorageBundle </>",
+                    "",
+                    "<fg=green>Bundle installed successfully!</>",
+                    "",
+                    "<fg=yellow>IMPORTANT:</> Please open the file <fg=cyan>config/packages/keron_digital_auth_redis_storage.yaml</>",
+                    "          and set the required <fg=cyan>redis_client_service_id</> option to point",
+                    "          to your application's Redis client service."
+                ]
+            },
+            "files": {
+                "config/packages/keron_digital_auth_redis_storage.yaml": {
+                    "contents": [
+                        "keron_digital_auth_redis_storage:",
+                        "    # !!! REQUIRED: Specify your application's Redis client service ID below. !!!",
+                        "    # Find the correct service ID using 'bin/console debug:container | grep Redis' or similar.",
+                        "    # Examples: 'snc_redis.default', 'cache.app.redis', '\\Redis', etc.",
+                        "    redis_client_service_id: 'CHANGE_ME_redis_service_id'",
+                        "",
+                        "    # --- Optional configuration with defaults ---",
+                        "    # Uncomment and change if needed:",
+                        "    #",
+                        "    # General prefix for all Redis keys used by the bundle",
+                        "    # key_prefix: 'auth:'",
+                        "    #",
+                        "    # Configuration for the blacklist service",
+                        "    # blacklist:",
+                        "    #     key_suffix: 'bl:' # Example key: auth:bl:<token_id>",
+                        "    #",
+                        "    # Configuration for the active token storage service",
+                        "    # active_token_storage:",
+                        "    #     key_suffix: 'active:' # Example key: auth:active:<token_id>",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "969399af4945514c13a07c8b294caf8f5b0054e7"
+        }
+    }
+}
