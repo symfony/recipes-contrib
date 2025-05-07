@@ -1,0 +1,19 @@
+keron_digital_auth_redis_storage:
+    # !!! REQUIRED: Specify your application's Redis client service ID below. !!!
+    # Find the correct service ID using 'bin/console debug:container | grep Redis' or similar.
+    # Examples: 'snc_redis.default', 'cache.app.redis', '\Redis', etc.
+    redis_client_service_id: 'CHANGE_ME_redis_service_id'
+
+    # --- Optional configuration with defaults ---
+    # Uncomment and change if needed:
+    #
+    # General prefix for all Redis keys used by the bundle
+    # key_prefix: 'auth:'
+    #
+    # Configuration for the blacklist service
+    # blacklist:
+    #     key_suffix: 'bl:' # Example key: auth:bl:<token_id>
+    #
+    # Configuration for the active token storage service
+    # active_token_storage:
+    #     key_suffix: 'active:' # Example key: auth:active:<token_id>

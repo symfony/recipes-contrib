@@ -1,0 +1,7 @@
+<bg=blue;fg=white> KeronDigitalAuthRedisStorageBundle </>
+
+<fg=green>Bundle installed successfully!</>
+
+<fg=yellow>IMPORTANT:</> Please open the file <fg=cyan>config/packages/keron_digital_auth_redis_storage.yaml</>
+          and set the required <fg=cyan>redis_client_service_id</> option to point
+          to your application's Redis client service.
