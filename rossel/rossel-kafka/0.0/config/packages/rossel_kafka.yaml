@@ -1,3 +1,4 @@
 rossel_kafka:
-    host: '%env(ROSSEL_KAFKA_HOST)%'
-    port: '%env(ROSSEL_KAFKA_PORT)%'
+    broker_url: '%env(ROSSEL_KAFKA_BROKER_URL)%'
+    producer:
+        app_name: '%env(ROSSEL_KAFKA_PRODUCER_APP_NAME)%'
