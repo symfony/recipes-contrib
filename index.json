@@ -1696,12 +1696,6 @@
         "siburuxue/doctrine-helper": [
             "1.0"
         ],
-        "siganushka/generic-bundle": [
-            "0.3"
-        ],
-        "siganushka/region-bundle": [
-            "0.1"
-        ],
         "silasjoisten/sonata-multiupload-bundle": [
             "2.1",
             "3.4"

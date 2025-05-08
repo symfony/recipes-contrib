@@ -531,8 +531,6 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sg/datatablesbundle](https://packagist.org/packages/sg/datatablesbundle) | [1.0](sg/datatablesbundle/1.0) |
 | [shopware/app-bundle](https://packagist.org/packages/shopware/app-bundle) | [4.0](shopware/app-bundle/4.0) |
 | [siburuxue/doctrine-helper](https://packagist.org/packages/siburuxue/doctrine-helper) | [1.0](siburuxue/doctrine-helper/1.0) |
-| [siganushka/generic-bundle](https://packagist.org/packages/siganushka/generic-bundle) | [0.3](siganushka/generic-bundle/0.3) |
-| [siganushka/region-bundle](https://packagist.org/packages/siganushka/region-bundle) | [0.1](siganushka/region-bundle/0.1) |
 | [silasjoisten/sonata-multiupload-bundle](https://packagist.org/packages/silasjoisten/sonata-multiupload-bundle) | [3.4](silasjoisten/sonata-multiupload-bundle/3.4) |
 | [simply-stream/twitch-api-bundle](https://packagist.org/packages/simply-stream/twitch-api-bundle) | [0.1](simply-stream/twitch-api-bundle/0.1) |
 | [skipthedragon/inertia-bundle](https://packagist.org/packages/skipthedragon/inertia-bundle) | [1.0](skipthedragon/inertia-bundle/1.0) |
