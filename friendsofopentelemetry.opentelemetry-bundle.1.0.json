@@ -1,0 +1,26 @@
+{
+    "manifests": {
+        "friendsofopentelemetry/opentelemetry-bundle": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/open_telemetry.yaml": {
+                    "contents": [
+                        "open_telemetry:",
+                        "    service:",
+                        "        namespace: 'FriendsOfOpenTelemetry'",
+                        "        name: 'Opentelemetry Bundle'",
+                        "        version: '0.0.0'",
+                        "        environment: '%kernel.environment%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "598c5163bd0bf01b5d15d3b0a042fc9b2c2d36ed"
+        }
+    }
+}
