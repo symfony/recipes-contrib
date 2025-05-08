@@ -1,2 +1,0 @@
-siganushka_region:
-    resource: "@SiganushkaRegionBundle/Resources/config/routing/routes.xml"
