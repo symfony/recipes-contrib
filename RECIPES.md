@@ -598,6 +598,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sylius/admin-order-creation-plugin](https://packagist.org/packages/sylius/admin-order-creation-plugin) | [0.6](sylius/admin-order-creation-plugin/0.6) |
 | [sylius/admin-ui](https://packagist.org/packages/sylius/admin-ui) | [0.4](sylius/admin-ui/0.4) |
 | [sylius/bootstrap-admin-ui](https://packagist.org/packages/sylius/bootstrap-admin-ui) | [0.4](sylius/bootstrap-admin-ui/0.4) |
+| [sylius/cms-plugin](https://packagist.org/packages/sylius/cms-plugin) | [1.0](sylius/cms-plugin/1.0) |
 | [sylius/customer-order-cancellation-plugin](https://packagist.org/packages/sylius/customer-order-cancellation-plugin) | [0.2](sylius/customer-order-cancellation-plugin/0.2) |
 | [sylius/customer-reorder-plugin](https://packagist.org/packages/sylius/customer-reorder-plugin) | [1.0](sylius/customer-reorder-plugin/1.0) |
 | [sylius/invoicing-plugin](https://packagist.org/packages/sylius/invoicing-plugin) | [1.0](sylius/invoicing-plugin/1.0) |

@@ -1911,6 +1911,9 @@
         "sylius/bootstrap-admin-ui": [
             "0.4"
         ],
+        "sylius/cms-plugin": [
+            "1.0"
+        ],
         "sylius/customer-order-cancellation-plugin": [
             "0.2"
         ],
