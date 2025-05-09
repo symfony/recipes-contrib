@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Setono\\SyliusToggleVatPlugin\\SetonoSyliusToggleVatPlugin": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

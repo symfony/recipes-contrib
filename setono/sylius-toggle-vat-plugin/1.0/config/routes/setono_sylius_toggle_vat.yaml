@@ -1,0 +1,5 @@
+setono_sylius_toggle_vat:
+    resource: "@SetonoSyliusToggleVatPlugin/Resources/config/routes.yaml"
+
+    # If your store doesn't use locales, use the following configuration file instead:
+    # resource: "@SetonoSyliusToggleVatPlugin/Resources/config/routes_no_locale.yaml"
