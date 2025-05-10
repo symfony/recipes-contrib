@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "setono/sylius-toggle-vat-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Setono\\SyliusToggleVatPlugin\\SetonoSyliusToggleVatPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/setono_sylius_toggle_vat.yaml": {
+                    "contents": [
+                        "setono_sylius_toggle_vat:",
+                        "    # Whether to display prices with VAT or not by default",
+                        "    display_with_vat: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/setono_sylius_toggle_vat.yaml": {
+                    "contents": [
+                        "setono_sylius_toggle_vat:",
+                        "    resource: \"@SetonoSyliusToggleVatPlugin/Resources/config/routes.yaml\"",
+                        "",
+                        "    # If your store doesn't use locales, use the following configuration file instead:",
+                        "    # resource: \"@SetonoSyliusToggleVatPlugin/Resources/config/routes_no_locale.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e5724c88e007991d3cb6a4e0819f38012b927fd3"
+        }
+    }
+}

@@ -528,6 +528,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sensiolabs/storybook-bundle](https://packagist.org/packages/sensiolabs/storybook-bundle) | [0.1](sensiolabs/storybook-bundle/0.1) |
 | [sentry/sentry-symfony](https://packagist.org/packages/sentry/sentry-symfony) | [5.0](sentry/sentry-symfony/5.0) |
 | [setono/google-analytics-bundle](https://packagist.org/packages/setono/google-analytics-bundle) | [1.0](setono/google-analytics-bundle/1.0) |
+| [setono/sylius-toggle-vat-plugin](https://packagist.org/packages/setono/sylius-toggle-vat-plugin) | [1.0](setono/sylius-toggle-vat-plugin/1.0) |
 | [sg/datatablesbundle](https://packagist.org/packages/sg/datatablesbundle) | [1.0](sg/datatablesbundle/1.0) |
 | [shopware/app-bundle](https://packagist.org/packages/shopware/app-bundle) | [4.0](shopware/app-bundle/4.0) |
 | [siburuxue/doctrine-helper](https://packagist.org/packages/siburuxue/doctrine-helper) | [1.0](siburuxue/doctrine-helper/1.0) |

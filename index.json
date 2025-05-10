@@ -1686,6 +1686,9 @@
         "setono/google-analytics-bundle": [
             "1.0"
         ],
+        "setono/sylius-toggle-vat-plugin": [
+            "1.0"
+        ],
         "sg/datatablesbundle": [
             "1.0"
         ],
