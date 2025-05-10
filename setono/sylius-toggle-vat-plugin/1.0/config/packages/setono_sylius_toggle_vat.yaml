@@ -1,0 +1,3 @@
+setono_sylius_toggle_vat:
+    # Whether to display prices with VAT or not by default
+    display_with_vat: true
