@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "AdrienLbt\\HexagonalMakerBundle\\HexagonalMakerBundle": ["dev"]
+    },
+    "composer-scripts": {
+        "make:hexagonal:autoload": "symfony-cmd"
+    },
+    "post-install-output": [
+        "🎉 Le bundle Hexagonal Maker has been installed."
+    ],
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
