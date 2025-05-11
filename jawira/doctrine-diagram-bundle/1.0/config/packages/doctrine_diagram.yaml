@@ -1,0 +1,24 @@
+# https://github.com/jawira/doctrine-diagram-bundle
+when@dev:
+    doctrine_diagram:
+        er:
+            filename: '%kernel.project_dir%/er'
+            size: midi
+        class:
+            filename: '%kernel.project_dir%/class'
+            size: midi
+        convert:
+            format: svg
+            converter: auto
+
+when@test:
+    doctrine_diagram:
+        er:
+            filename: '%kernel.project_dir%/er'
+            size: midi
+        class:
+            filename: '%kernel.project_dir%/class'
+            size: midi
+        convert:
+            format: svg
+            converter: auto
