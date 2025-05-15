@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "21torr/storyblok": {
+            "manifest": {
+                "bundles": {
+                    "Torr\\Storyblok\\TorrStoryblokBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "STORYBLOK_SPACE_ID": "",
+                    "STORYBLOK_MANAGEMENT_TOKEN": "",
+                    "STORYBLOK_CONTENT_TOKEN": ""
+                }
+            },
+            "files": {
+                "config/packages/storyblok.yaml": {
+                    "contents": [
+                        "storyblok:",
+                        "    space_id: \"%env(int:STORYBLOK_SPACE_ID)%\"",
+                        "    management_token: \"%env(STORYBLOK_MANAGEMENT_TOKEN)%\"",
+                        "    content_token: \"%env(STORYBLOK_CONTENT_TOKEN)%\"",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/storyblok.yaml": {
+                    "contents": [
+                        "storyblok:",
+                        "    prefix: /storyblok/",
+                        "    resource: '@TorrStoryblokBundle/config/routes.yaml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5b1917dd387f456e7c08c433b4922cf2db51ca1c"
+        }
+    }
+}
