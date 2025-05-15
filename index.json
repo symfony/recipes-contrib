@@ -290,7 +290,8 @@
             "1.0"
         ],
         "contao/core-bundle": [
-            "4.6"
+            "4.6",
+            "5.0"
         ],
         "contao/installation-bundle": [
             "4.6",

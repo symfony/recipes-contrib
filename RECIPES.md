@@ -96,7 +96,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [connectholland/cookie-consent-bundle](https://packagist.org/packages/connectholland/cookie-consent-bundle) | [0.4](connectholland/cookie-consent-bundle/0.4) |
 | [connectholland/timechimp-bundle](https://packagist.org/packages/connectholland/timechimp-bundle) | [1.0](connectholland/timechimp-bundle/1.0) |
 | [connectholland/uptime-robot-bundle](https://packagist.org/packages/connectholland/uptime-robot-bundle) | [1.0](connectholland/uptime-robot-bundle/1.0) |
-| [contao/core-bundle](https://packagist.org/packages/contao/core-bundle) | [4.6](contao/core-bundle/4.6) |
+| [contao/core-bundle](https://packagist.org/packages/contao/core-bundle) | [5.0](contao/core-bundle/5.0) |
 | [contao/installation-bundle](https://packagist.org/packages/contao/installation-bundle) | [4.10](contao/installation-bundle/4.10) |
 | [contentful/contentful-bundle](https://packagist.org/packages/contentful/contentful-bundle) | [4.0](contentful/contentful-bundle/4.0) |
 | [core23/facebook-bundle](https://packagist.org/packages/core23/facebook-bundle) | [0.4](core23/facebook-bundle/0.4) |
