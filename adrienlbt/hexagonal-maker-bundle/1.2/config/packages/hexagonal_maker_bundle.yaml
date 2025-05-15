@@ -1,4 +1,5 @@
-hexagonal_maker:
-    application_path: 'Application'
-    domain_path: 'Domain'
-    infrastructure_path: 'Infrastructure'
+when@dev:
+    hexagonal_maker:
+        application_path: 'Application'
+        domain_path: 'Domain'
+        infrastructure_path: 'Infrastructure'
