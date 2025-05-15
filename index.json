@@ -30,6 +30,9 @@
         "adlarge/fixtures-documentation-bundle": [
             "1.1"
         ],
+        "adrienlbt/hexagonal-maker-bundle": [
+            "1.2"
+        ],
         "agilelab-fr/captcha-bundle": [
             "1.0"
         ],
