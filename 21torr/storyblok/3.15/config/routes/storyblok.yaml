@@ -1,0 +1,3 @@
+storyblok:
+    prefix: /storyblok/
+    resource: '@TorrStoryblokBundle/config/routes.yaml'
