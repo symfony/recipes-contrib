@@ -832,7 +832,8 @@
             "0.0"
         ],
         "jawira/doctrine-diagram-bundle": [
-            "0.7"
+            "0.7",
+            "1.0"
         ],
         "jbtcd/fitbit-bundle": [
             "1.0"

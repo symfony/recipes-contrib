@@ -1,0 +1,50 @@
+{
+    "manifests": {
+        "jawira/doctrine-diagram-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Jawira\\DoctrineDiagramBundle\\DoctrineDiagramBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/doctrine_diagram.yaml": {
+                    "contents": [
+                        "# https://github.com/jawira/doctrine-diagram-bundle",
+                        "when@dev:",
+                        "    doctrine_diagram:",
+                        "        er:",
+                        "            filename: '%kernel.project_dir%/er'",
+                        "            size: midi",
+                        "        class:",
+                        "            filename: '%kernel.project_dir%/class'",
+                        "            size: midi",
+                        "        convert:",
+                        "            format: svg",
+                        "            converter: auto",
+                        "",
+                        "when@test:",
+                        "    doctrine_diagram:",
+                        "        er:",
+                        "            filename: '%kernel.project_dir%/er'",
+                        "            size: midi",
+                        "        class:",
+                        "            filename: '%kernel.project_dir%/class'",
+                        "            size: midi",
+                        "        convert:",
+                        "            format: svg",
+                        "            converter: auto",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "85fa28662e332ab5da7a48802517e8313500add5"
+        }
+    }
+}

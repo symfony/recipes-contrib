@@ -263,7 +263,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [jane-php/json-schema](https://packagist.org/packages/jane-php/json-schema) | [7.0](jane-php/json-schema/7.0) |
 | [jane-php/open-api-common](https://packagist.org/packages/jane-php/open-api-common) | [7.0](jane-php/open-api-common/7.0) |
 | [jawira/case-converter-twig](https://packagist.org/packages/jawira/case-converter-twig) | [0.0](jawira/case-converter-twig/0.0) |
-| [jawira/doctrine-diagram-bundle](https://packagist.org/packages/jawira/doctrine-diagram-bundle) | [0.7](jawira/doctrine-diagram-bundle/0.7) |
+| [jawira/doctrine-diagram-bundle](https://packagist.org/packages/jawira/doctrine-diagram-bundle) | [1.0](jawira/doctrine-diagram-bundle/1.0) |
 | [jbtcd/fitbit-bundle](https://packagist.org/packages/jbtcd/fitbit-bundle) | [1.0](jbtcd/fitbit-bundle/1.0) |
 | [jeandanyel/crud-bundle](https://packagist.org/packages/jeandanyel/crud-bundle) | [0.1](jeandanyel/crud-bundle/0.1) |
 | [jeandanyel/list-bundle](https://packagist.org/packages/jeandanyel/list-bundle) | [0.1](jeandanyel/list-bundle/0.1) |
