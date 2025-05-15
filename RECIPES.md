@@ -112,7 +112,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [cyberomulus/sitemap-generator-bundle](https://packagist.org/packages/cyberomulus/sitemap-generator-bundle) | [1.2](cyberomulus/sitemap-generator-bundle/1.2) |
 | [dahromy/glide-symfony](https://packagist.org/packages/dahromy/glide-symfony) | [1.0](dahromy/glide-symfony/1.0) |
 | [dahromy/mvola-bundle](https://packagist.org/packages/dahromy/mvola-bundle) | [1.0](dahromy/mvola-bundle/1.0) |
-| [dama/doctrine-test-bundle](https://packagist.org/packages/dama/doctrine-test-bundle) | [7.2](dama/doctrine-test-bundle/7.2) |
+| [dama/doctrine-test-bundle](https://packagist.org/packages/dama/doctrine-test-bundle) | [8.3](dama/doctrine-test-bundle/8.3) |
 | [damienharper/auditor-bundle](https://packagist.org/packages/damienharper/auditor-bundle) | [4.0](damienharper/auditor-bundle/4.0) |
 | [damienharper/doctrine-audit-bundle](https://packagist.org/packages/damienharper/doctrine-audit-bundle) | [1.0](damienharper/doctrine-audit-bundle/1.0) |
 | [datana-gmbh/datapool-api](https://packagist.org/packages/datana-gmbh/datapool-api) | [3.16](datana-gmbh/datapool-api/3.16) |

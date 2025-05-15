@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "dama/doctrine-test-bundle": {
+            "manifest": {
+                "bundles": {
+                    "DAMA\\DoctrineTestBundle\\DAMADoctrineTestBundle": [
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "add-lines": [
+                    {
+                        "file": "phpunit.xml.dist",
+                        "content": "        <bootstrap class=\"DAMA\\DoctrineTestBundle\\PHPUnit\\PHPUnitExtension\" />",
+                        "position": "after_target",
+                        "target": "<extensions>",
+                        "warn_if_missing": true
+                    }
+                ]
+            },
+            "files": {
+                "config/packages/dama_doctrine_test_bundle.yaml": {
+                    "contents": [
+                        "when@test:",
+                        "    dama_doctrine_test:",
+                        "        enable_static_connection: true",
+                        "        enable_static_meta_data_cache: true",
+                        "        enable_static_query_cache: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "dfc51177476fb39d014ed89944cde53dc3326d23"
+        }
+    }
+}
