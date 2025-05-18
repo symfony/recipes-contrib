@@ -1,0 +1,2 @@
+behat_redis_context:
+    dataFixturesPath: "PATH_TO_FIXTURES_FOLDER"
