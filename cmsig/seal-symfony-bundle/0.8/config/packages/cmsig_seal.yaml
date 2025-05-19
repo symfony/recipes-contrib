@@ -1,0 +1,12 @@
+cmsig_seal:
+    schemas:
+        default:
+            dir: '%kernel.project_dir%/config/schemas'
+            engine: default
+    engines:
+        default:
+            adapter: '%env(resolve:SEAL_DSN)%'
+
+when@test:
+    cmsig_seal:
+        index_name_prefix: 'test_%env(default::TEST_INDEX_PREFIX)%'
