@@ -1,0 +1,54 @@
+{
+    "manifests": {
+        "cmsig/seal-symfony-bundle": {
+            "manifest": {
+                "bundles": {
+                    "CmsIg\\Seal\\Integration\\Symfony\\SealBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Install one of the following adapters: https://php-cmsig.github.io/search/getting-started/index.html",
+                    "#2": "SEAL_DSN=\"meilisearch://127.0.0.1:7700\"",
+                    "#3": "SEAL_DSN=\"algolia://ALGOLIA_APPLICATION_ID:ALGOLIA_ADMIN_API_KEY\"",
+                    "#4": "SEAL_DSN=\"elasticsearch://127.0.0.1:9200\"",
+                    "#5": "SEAL_DSN=\"opensearch://127.0.0.1:9200\"",
+                    "#6": "SEAL_DSN=\"redis://127.0.0.1:6379\"",
+                    "#7": "SEAL_DSN=\"solr://127.0.0.1:8983\"",
+                    "#8": "SEAL_DSN=\"typesense://S3CR3T@127.0.0.1:8108\"",
+                    "SEAL_DSN": "loupe://%kernel.project_dir%/var/indexes"
+                }
+            },
+            "files": {
+                "config/packages/cmsig_seal.yaml": {
+                    "contents": [
+                        "cmsig_seal:\r",
+                        "    schemas:\r",
+                        "        default:\r",
+                        "            dir: '%kernel.project_dir%/config/schemas'\r",
+                        "            engine: default\r",
+                        "    engines:\r",
+                        "        default:\r",
+                        "            adapter: '%env(resolve:SEAL_DSN)%'\r",
+                        "\r",
+                        "when@test:\r",
+                        "    cmsig_seal:\r",
+                        "        index_name_prefix: 'test_%env(default::TEST_INDEX_PREFIX)%'\r",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/schemas/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5e5600f785174926f0afc6543bc7e5495aa21973"
+        }
+    }
+}

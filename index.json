@@ -232,6 +232,9 @@
         "ckrack/optimus-bundle": [
             "0.1"
         ],
+        "cmsig/seal-symfony-bundle": [
+            "0.8"
+        ],
         "codebuds/mattermost-publication-bundle": [
             "0.3"
         ],
