@@ -1,0 +1,2 @@
+sylius_wishlist_shop:
+    resource: "@SyliusWishlistPlugin/config/routes.yaml"
