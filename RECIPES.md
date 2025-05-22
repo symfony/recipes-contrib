@@ -610,6 +610,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sylius/twig-extra](https://packagist.org/packages/sylius/twig-extra) | [0.4](sylius/twig-extra/0.4) |
 | [sylius/twig-hooks](https://packagist.org/packages/sylius/twig-hooks) | [0.4](sylius/twig-hooks/0.4) |
 | [sylius/ui-translations](https://packagist.org/packages/sylius/ui-translations) | [0.4](sylius/ui-translations/0.4) |
+| [sylius/wishlist-plugin](https://packagist.org/packages/sylius/wishlist-plugin) | [1.0](sylius/wishlist-plugin/1.0) |
 | [symandy/makefile-maker-bundle](https://packagist.org/packages/symandy/makefile-maker-bundle) | [0.5](symandy/makefile-maker-bundle/0.5) |
 | [symfony-bundles/kafka-bundle](https://packagist.org/packages/symfony-bundles/kafka-bundle) | [1.0](symfony-bundles/kafka-bundle/1.0) |
 | [symfony-bundles/redis-bundle](https://packagist.org/packages/symfony-bundles/redis-bundle) | [2.0](symfony-bundles/redis-bundle/2.0) |

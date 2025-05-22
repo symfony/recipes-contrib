@@ -1957,6 +1957,9 @@
         "sylius/ui-translations": [
             "0.4"
         ],
+        "sylius/wishlist-plugin": [
+            "1.0"
+        ],
         "symandy/makefile-maker-bundle": [
             "0.5"
         ],

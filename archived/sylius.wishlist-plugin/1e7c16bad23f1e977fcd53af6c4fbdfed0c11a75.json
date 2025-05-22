@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "sylius/wishlist-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Sylius\\WishlistPlugin\\SyliusWishlistPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "add-lines": [
+                    {
+                        "file": "assets/admin/entrypoint.js",
+                        "content": "import '@vendor/sylius/wishlist-plugin/assets/admin/entrypoint';",
+                        "position": "bottom",
+                        "warn_if_missing": true
+                    },
+                    {
+                        "file": "assets/shop/entrypoint.js",
+                        "content": "import '@vendor/sylius/wishlist-plugin/assets/shop/entrypoint';",
+                        "position": "bottom",
+                        "warn_if_missing": true
+                    }
+                ]
+            },
+            "files": {
+                "config/packages/sylius_wishlist.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SyliusWishlistPlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sylius_wishlist.yaml": {
+                    "contents": [
+                        "sylius_wishlist_shop:",
+                        "    resource: \"@SyliusWishlistPlugin/config/routes.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "1e7c16bad23f1e977fcd53af6c4fbdfed0c11a75"
+        }
+    }
+}
