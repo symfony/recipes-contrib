@@ -1,0 +1,5 @@
+behat_doctrine_fixtures:
+    connections:
+        default:
+            database_fixtures_paths:
+                - "PATH_TO_FIXTURES_FOLDER"
