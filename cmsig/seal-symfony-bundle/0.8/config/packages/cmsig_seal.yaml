@@ -9,4 +9,5 @@ cmsig_seal:
 
 when@test:
     cmsig_seal:
-        index_name_prefix: 'test_%env(default::TEST_INDEX_PREFIX)%'
+        # "TEST_TOKEN" is typically set by ParaTest
+        index_name_prefix: 'test_%env(default::TEST_TOKEN)%'
