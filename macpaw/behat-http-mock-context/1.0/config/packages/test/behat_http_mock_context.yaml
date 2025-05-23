@@ -1,0 +1,10 @@
+services:
+    mock_http_client:
+        class: ExtendedMockHttpClient\ExtendedMockHttpClient
+        arguments:
+            - '%env(YOUR_SERVICE_URL)%'
+        tags: ['mock.http_client']
+
+    BehatHttpMockContext\Collection\ExtendedMockHttpClientCollection:
+        arguments:
+            - !tagged_iterator mock.http_client
