@@ -1,0 +1,22 @@
+{
+    "bundles": {
+        "Sylius\\MolliePlugin\\SyliusMolliePlugin": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "add-lines": [
+        {
+            "file": "assets/admin/entrypoint.js",
+            "content": "import '@vendor/sylius/mollie-plugin/assets/admin/entrypoint';",
+            "position": "bottom",
+            "warn_if_missing": true
+        },
+        {
+            "file": "assets/shop/entrypoint.js",
+            "content": "import '@vendor/sylius/mollie-plugin/assets/shop/entrypoint';",
+            "position": "bottom",
+            "warn_if_missing": true
+        }
+    ]
+}
