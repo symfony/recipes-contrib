@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "macpaw/behat-doctrine-fixtures": {
+            "manifest": {
+                "bundles": {
+                    "BehatDoctrineFixtures\\BehatDoctrineFixturesBundle": [
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<fg=blue>Read</> the documentation at <comment>https://github.com/MacPaw/behat-doctrine-fixtures</comment>",
+                    "BehatDoctrineFixtures is registered in the test environment.",
+                    "<fg=red>Add</> this to your behat.yml to finish setup:",
+                    "...",
+                    "contexts:",
+                    "  - BehatDoctrineFixtures\\Context\\DatabaseContext",
+                    "..."
+                ]
+            },
+            "files": {
+                "config/packages/test/behat_doctrine_fixtures.yaml": {
+                    "contents": [
+                        "behat_doctrine_fixtures:",
+                        "    connections:",
+                        "        default:",
+                        "            database_fixtures_paths:",
+                        "                - \"PATH_TO_FIXTURES_FOLDER\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c354cde7cb3f8c9812760cf0648c73dfe4962ace"
+        }
+    }
+}

@@ -1074,6 +1074,9 @@
         "machy8/webloader-bundle": [
             "1.1"
         ],
+        "macpaw/behat-doctrine-fixtures": [
+            "1.0"
+        ],
         "macpaw/behat-nelmio-describer": [
             "1.0"
         ],
