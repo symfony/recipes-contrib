@@ -1077,6 +1077,9 @@
         "macpaw/behat-nelmio-describer": [
             "1.0"
         ],
+        "macpaw/behat-redis-context": [
+            "1.0"
+        ],
         "macpaw/sentry-monolog-adapter": [
             "0.0"
         ],

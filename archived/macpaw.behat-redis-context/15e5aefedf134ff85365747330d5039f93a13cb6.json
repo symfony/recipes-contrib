@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "macpaw/behat-redis-context": {
+            "manifest": {
+                "bundles": {
+                    "BehatRedisContextBundle\\BehatRedisContextBundle": [
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<fg=blue>Read</> the documentation at <comment>https://github.com/MacPaw/behat-redis-context</comment>",
+                    "BehatRedisContextBundle is registered in the test environment.",
+                    "<fg=red>Add</> this to your behat.yml to finish setup:",
+                    "...",
+                    "contexts:",
+                    "  - BehatRedisContext\\Context\\RedisContext",
+                    "  - BehatRedisContext\\Context\\RedisFixturesContext",
+                    "..."
+                ]
+            },
+            "files": {
+                "config/packages/test/behat_redis_context.yaml": {
+                    "contents": [
+                        "behat_redis_context:",
+                        "    dataFixturesPath: \"PATH_TO_FIXTURES_FOLDER\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "15e5aefedf134ff85365747330d5039f93a13cb6"
+        }
+    }
+}
