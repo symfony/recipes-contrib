@@ -7,4 +7,4 @@
     2. Update your <comment>source.paths</> as needed;
     3. (Optional) Enable the <comment>linter</> as well.
 
-  * <fg=blue>Read</> full the documentation at <comment>https://mago.carthage.software/#/getting-started/configuration</>
+  * <fg=blue>Read</> the full the documentation at <comment>https://mago.carthage.software/#/getting-started/configuration</>
