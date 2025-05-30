@@ -1,0 +1,9 @@
+{
+    "aliases": "mago",
+    "copy-from-recipe": {
+        "mago.toml": "mago.toml"
+    },
+    "composer-commands": {
+        "format": "mago fmt"
+    }
+}
