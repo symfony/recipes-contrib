@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "sylius/mollie-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Sylius\\MolliePlugin\\SyliusMolliePlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "add-lines": [
+                    {
+                        "file": "assets/admin/entrypoint.js",
+                        "content": "import '@vendor/sylius/mollie-plugin/assets/admin/entrypoint';",
+                        "position": "bottom",
+                        "warn_if_missing": true
+                    },
+                    {
+                        "file": "assets/shop/entrypoint.js",
+                        "content": "import '@vendor/sylius/mollie-plugin/assets/shop/entrypoint';",
+                        "position": "bottom",
+                        "warn_if_missing": true
+                    }
+                ]
+            },
+            "files": {
+                "config/packages/sylius_mollie.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SyliusMolliePlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sylius_mollie.yaml": {
+                    "contents": [
+                        "sylius_mollie_plugin:",
+                        "    resource: \"@SyliusMolliePlugin/config/routes.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0d6cb3727d3319b0091cd9d57a08f3f28f179fa9"
+        }
+    }
+}
