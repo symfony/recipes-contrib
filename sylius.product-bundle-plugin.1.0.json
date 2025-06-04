@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "sylius/product-bundle-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Sylius\\ProductBundlePlugin\\SyliusProductBundlePlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "add-lines": [
+                    {
+                        "file": "assets/admin/entrypoint.js",
+                        "content": "import '@vendor/sylius/product-bundle-plugin/assets/admin/entrypoint';",
+                        "position": "bottom",
+                        "warn_if_missing": true
+                    },
+                    {
+                        "file": "assets/shop/entrypoint.js",
+                        "content": "import '@vendor/sylius/product-bundle-plugin/assets/shop/entrypoint';",
+                        "position": "bottom",
+                        "warn_if_missing": true
+                    }
+                ]
+            },
+            "files": {
+                "config/packages/sylius_product_bundle.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SyliusProductBundlePlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sylius_product_bundle.yaml": {
+                    "contents": [
+                        "sylius_product_bundle:",
+                        "    resource: \"@SyliusProductBundlePlugin/config/routes.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "19437b51c393256f8eef86a59b8378f2ee284bf8"
+        }
+    }
+}
