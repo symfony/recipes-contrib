@@ -1,0 +1,55 @@
+{
+    "manifests": {
+        "carthage-software/mago": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "mago.toml": "mago.toml"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>              </>",
+                    "<bg=blue;fg=white> What's next? </>",
+                    "<bg=blue;fg=white>              </>",
+                    "",
+                    "  * <fg=blue>Review</> your <comment>mago.toml</> file:",
+                    "    1. Set your exact <comment>php_version</>",
+                    "    2. Update your <comment>source.paths</> as needed;",
+                    "    3. (Optional) Enable the <comment>linter</> as well.",
+                    "",
+                    "  * <fg=blue>Read</> the full the documentation at <comment>https://mago.carthage.software/#/getting-started/configuration</>"
+                ]
+            },
+            "files": {
+                "mago.toml": {
+                    "contents": [
+                        "php_version = \"8.2\"",
+                        "",
+                        "[source]",
+                        "paths = [",
+                        "  \"src/\",",
+                        "  \"config/\",",
+                        "  \"bin/\",",
+                        "  # \"tests/\",",
+                        "  # \"importmap.php\",",
+                        "  # \"migrations/\",",
+                        "]",
+                        "includes = [\"vendor\"]",
+                        "excludes = []",
+                        "",
+                        "# See https://docs.rs/mago-formatter/latest/mago_formatter/settings/struct.FormatSettings.html",
+                        "[format]",
+                        "print_width = 120",
+                        "tab_width = 4",
+                        "use_tabs = false",
+                        "",
+                        "[linter]",
+                        "default_plugins = true",
+                        "plugins = [\"symfony\", \"php-unit\"]",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "948649c463e7f9da5429859b20873adea87bda98"
+        }
+    }
+}
