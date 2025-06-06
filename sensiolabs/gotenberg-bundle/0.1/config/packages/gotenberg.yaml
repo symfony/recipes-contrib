@@ -3,6 +3,8 @@ framework:
         scoped_clients:
             gotenberg.client:
                 base_uri: '%env(GOTENBERG_DSN)%'
+                # or you can leverage this endpoint for fast testing without Docker
+                # base_uri: 'https://demo.gotenberg.dev'
 
 sensiolabs_gotenberg:
     http_client: 'gotenberg.client'
