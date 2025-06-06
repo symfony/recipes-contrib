@@ -1,0 +1,4 @@
+fos_chat:
+    db_driver: orm
+    thread_class: App\Entity\ChatThread
+    message_class: App\Entity\ChatMessage
