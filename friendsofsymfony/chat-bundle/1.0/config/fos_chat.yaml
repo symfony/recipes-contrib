@@ -1,4 +1,5 @@
 fos_chat:
-    db_driver: orm
+    db_driver: #orm|mongodb
     thread_class: App\Entity\ChatThread
     message_class: App\Entity\ChatMessage
+    # spam_detection: false
