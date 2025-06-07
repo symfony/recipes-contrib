@@ -1,0 +1,24 @@
+{
+    "manifests": {
+        "friendsofsymfony/chat-bundle": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/fos_chat.yaml": {
+                    "contents": [
+                        "fos_chat:",
+                        "    db_driver: #orm|mongodb",
+                        "    thread_class: App\\Entity\\ChatThread",
+                        "    message_class: App\\Entity\\ChatMessage",
+                        "    # spam_detection: false"
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "63f9cd6b7cebfb62ae7c2d02ecd0ddd5bbf31f85"
+        }
+    }
+}
