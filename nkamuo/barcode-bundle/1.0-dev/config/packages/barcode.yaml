@@ -1,0 +1,3 @@
+barcode:
+    default_storage: 'in_memory'
+    enabled_formatters: ['qrcode', 'barcode']
