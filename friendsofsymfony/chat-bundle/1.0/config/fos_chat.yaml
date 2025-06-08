@@ -1,5 +1,5 @@
 fos_chat:
-    db_driver: #orm|mongodb
-    thread_class: App\Entity\ChatThread
-    message_class: App\Entity\ChatMessage
-    # spam_detection: false
+    db_driver: # orm | mongodb
+    thread_class: # App\Entity\ChatThread | App\Document\Thread
+    message_class: # App\Entity\ChatMessage | App\Document\Message
+    spam_detector: # akismet
