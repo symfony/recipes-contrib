@@ -1,0 +1,13 @@
+{
+    "manifests": {
+        "psys/order-invoice-manager-bundle": {
+            "manifest": {
+                "copy-from-package": {
+                    "migrations/": "migrations/"
+                }
+            },
+            "files": [],
+            "ref": "884f50eb4951ba1a892075f70fbb97872a4febd5"
+        }
+    }
+}
