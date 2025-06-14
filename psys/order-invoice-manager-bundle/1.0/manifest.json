@@ -1,5 +1,5 @@
 {
     "copy-from-package": {
-        "migrations/": "%MIGRATIONS_DIR%/VersionOimbInit.php"
+        "migrations/": "migrations/VersionOimbInit.php"
     }
 }
