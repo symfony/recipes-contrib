@@ -1,5 +1,10 @@
 {
+    "copy-from-recipe": 
+    {
+        "config/": "%CONFIG_DIR%/"
+    },
     "copy-from-package": {
-        "migrations/": "migrations/"
+        "migrations/": "migrations/",
+        "templates/": "templates/"
     }
 }
