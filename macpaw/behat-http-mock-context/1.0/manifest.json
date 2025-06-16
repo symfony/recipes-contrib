@@ -1,0 +1,17 @@
+{
+    "bundles": {
+        "BehatHttpMockContext\\BehatHttpMockContextBundle": ["test"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "post-install-output": [
+        "<fg=blue>Read</> the documentation at <comment>https://github.com/MacPaw/behat-http-mock-context</comment>",
+        "BehatHttpMockContextBundle is registered in the test environment.",
+        "<fg=red>Add</> this to your behat.yml to finish setup:",
+        "...",
+        "contexts:",
+        "  - BehatHttpMockContext\\Context\\MockContext",
+        "..."
+    ]
+}
