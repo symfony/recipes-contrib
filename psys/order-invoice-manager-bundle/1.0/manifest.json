@@ -1,7 +1,7 @@
 {
     "copy-from-recipe": 
     {
-        "config/": "%CONFIG_DIR%/"
+        "config/packages": "%CONFIG_DIR%/packages"
     },
     "copy-from-package": {
         "migrations/": "migrations/",
