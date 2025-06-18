@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Hakam\\MultiTenancyBundle\\HakamMultiTenancyBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "src/Entity/": "src/Entity/",
+        "migrations/": "migrations/"
+    }
+}
+
