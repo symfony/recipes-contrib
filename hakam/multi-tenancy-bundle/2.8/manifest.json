@@ -2,6 +2,9 @@
     "bundles": {
         "Hakam\\MultiTenancyBundle\\HakamMultiTenancyBundle": ["all"]
     },
+    "env": {
+        "TENANT_DEFAULT_DATABASE_URL": "postgresql://postgres:postgres@127.0.0.1:5432/postgres"
+    },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/",
         "src/Entity/": "src/Entity/",
