@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Psys\\OrderInvoiceBundle": ["all"]
+        "Psys\\OrderInvoiceBundle\\PsysOrderInvoiceBundle": ["all"]
     },
     "copy-from-recipe":
     {
