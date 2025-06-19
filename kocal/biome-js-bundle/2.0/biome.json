@@ -1,0 +1,15 @@
+{
+    "files": {
+        "includes": [
+            "**",
+            "!assets/vendor/*",
+            "!assets/controllers.json",
+            "!public/assets/*",
+            "!public/bundles/*",
+            "!var/*",
+            "!vendor/*",
+            "!composer.json",
+            "!package.json"
+        ]
+    }
+}
