@@ -496,6 +496,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [prooph/event-store-symfony-bundle](https://packagist.org/packages/prooph/event-store-symfony-bundle) | [0.10](prooph/event-store-symfony-bundle/0.10) |
 | [prooph/pdo-event-store](https://packagist.org/packages/prooph/pdo-event-store) | [1.15](prooph/pdo-event-store/1.15) |
 | [prooph/service-bus-symfony-bundle](https://packagist.org/packages/prooph/service-bus-symfony-bundle) | [0.6](prooph/service-bus-symfony-bundle/0.6) |
+| [psys/order-invoice-bundle](https://packagist.org/packages/psys/order-invoice-bundle) | [1.0](psys/order-invoice-bundle/1.0) |
 | [pugx/geo-form-bundle](https://packagist.org/packages/pugx/geo-form-bundle) | [0.2](pugx/geo-form-bundle/0.2) |
 | [pusher/pusher-php-server](https://packagist.org/packages/pusher/pusher-php-server) | [3.0](pusher/pusher-php-server/3.0) |
 | [qandidate/toggle-bundle](https://packagist.org/packages/qandidate/toggle-bundle) | [1.0](qandidate/toggle-bundle/1.0) |

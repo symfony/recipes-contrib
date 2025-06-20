@@ -1585,6 +1585,9 @@
         "prooph/service-bus-symfony-bundle": [
             "0.6"
         ],
+        "psys/order-invoice-bundle": [
+            "1.0"
+        ],
         "pugx/geo-form-bundle": [
             "0.2"
         ],
