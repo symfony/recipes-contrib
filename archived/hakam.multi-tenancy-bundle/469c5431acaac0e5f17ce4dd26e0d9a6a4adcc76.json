@@ -1,0 +1,68 @@
+{
+    "manifests": {
+        "hakam/multi-tenancy-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Hakam\\MultiTenancyBundle\\HakamMultiTenancyBundle": [
+                        "all"
+                    ]
+                },
+                "env": {
+                    "TENANT_DEFAULT_DATABASE_URL": "postgresql://postgres:postgres@127.0.0.1:5432/postgres"
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/",
+                    "migrations/": "migrations/"
+                }
+            },
+            "files": {
+                "config/packages/hakam_multi_tenancy.yaml": {
+                    "contents": [
+                        "hakam_multi_tenancy:",
+                        "    tenant_database_className: App\\Entity\\Main\\TenantDbConfig",
+                        "    tenant_database_identifier: id",
+                        "    tenant_connection:",
+                        "        url: \"%env(resolve:TENANT_DEFAULT_DATABASE_URL)%\"",
+                        "    tenant_migration:",
+                        "        tenant_migration_namespace: DoctrineMigrations\\Tenant",
+                        "        tenant_migration_path: migrations/Tenant",
+                        "    tenant_entity_manager:",
+                        "        mapping:",
+                        "            type: attribute",
+                        "            dir: \"%kernel.project_dir%/src/Entity/Tenant\"",
+                        "            prefix: App\\Entity\\Tenant",
+                        "            alias: Tenant",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "migrations/Main/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "migrations/Tenant/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/Main/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/Tenant/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "469c5431acaac0e5f17ce4dd26e0d9a6a4adcc76"
+        }
+    }
+}

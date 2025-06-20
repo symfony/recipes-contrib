@@ -735,6 +735,9 @@
         "gurtok/seo-bundle": [
             "1.0"
         ],
+        "hakam/multi-tenancy-bundle": [
+            "2.8"
+        ],
         "hans-peter-ording/nflfastr-symfony-bundle": [
             "0.9"
         ],

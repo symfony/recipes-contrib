@@ -233,6 +233,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [gpslab/geoip2](https://packagist.org/packages/gpslab/geoip2) | [2.0](gpslab/geoip2/2.0) |
 | [gpslab/pagination-bundle](https://packagist.org/packages/gpslab/pagination-bundle) | [1.2](gpslab/pagination-bundle/1.2) |
 | [gurtok/seo-bundle](https://packagist.org/packages/gurtok/seo-bundle) | [1.0](gurtok/seo-bundle/1.0) |
+| [hakam/multi-tenancy-bundle](https://packagist.org/packages/hakam/multi-tenancy-bundle) | [2.8](hakam/multi-tenancy-bundle/2.8) |
 | [hans-peter-ording/nflfastr-symfony-bundle](https://packagist.org/packages/hans-peter-ording/nflfastr-symfony-bundle) | [0.9](hans-peter-ording/nflfastr-symfony-bundle/0.9) |
 | [happyr/entity-exists-validation-constraint](https://packagist.org/packages/happyr/entity-exists-validation-constraint) | [1.0](happyr/entity-exists-validation-constraint/1.0) |
 | [happyr/json-api-response-factory](https://packagist.org/packages/happyr/json-api-response-factory) | [0.1](happyr/json-api-response-factory/0.1) |
