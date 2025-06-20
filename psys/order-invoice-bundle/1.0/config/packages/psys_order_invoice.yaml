@@ -1,0 +1,4 @@
+psys_order_invoice:
+    pdf_exporter:
+        engine: mpdf
+        template_path: invoice/oi_default.html.twig
