@@ -1,0 +1,17 @@
+{
+    "bundles": {
+        "Alengo\\Bundle\\AlengoWebspaceSettingsBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "post-install-output": [
+        "",
+        "🎉 AlengoWebspaceSettingsBundle is installed!",
+        "👉 Configure your types in:",
+        "   config/packages/alengo_webspace_settings.yaml",
+        "👉 Configure your blocks if needed in:",
+        "   config/templates/settings/webspace_settings_blocks.xml",
+        ""
+    ]
+}
