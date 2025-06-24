@@ -1,4 +1,4 @@
-* The <fg=green>AlengoWebspaceSettingsBundle</> for Sulu is almost ready:
+* The <fg=green>AlengoWebspaceSettingsBundle</> for Sulu CMS is almost ready:
     1. Configure your types in config/packages/alengo_webspace_settings.yaml
     2. Configure your blocks if needed in config/templates/settings/webspace_settings_blocks.xml.
 
