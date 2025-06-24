@@ -4,11 +4,7 @@
             xmlns:xi="http://www.w3.org/2001/XInclude"
             xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
 
-    <block name="dataBlocks" default-type="textEditor" minOccurs="0" visibleCondition="type == 'blocks'">
-        <meta>
-            <title>alengo_webspace_settings.blocks_mandatory</title>
-        </meta>
-
+    <block name="dataBlocks">
         <types>
             <type name="singleMediaSelection">
                 <meta>
