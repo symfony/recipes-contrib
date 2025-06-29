@@ -1082,7 +1082,7 @@
             "1.0"
         ],
         "macpaw/behat-http-mock-context": [
-            "1.0"
+            "2.0"
         ],
         "macpaw/behat-nelmio-describer": [
             "1.0"
