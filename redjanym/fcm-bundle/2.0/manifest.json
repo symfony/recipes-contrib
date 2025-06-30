@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "RedjanYm\\FCMBundle\\RedjanYmFCMBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "FCM_DEFAULT_SERVICE_ACCOUNT_FILE_PATH": "YOUR_FCM_SERVICE_ACCOUNT_FILE_ABSOLUTE_PATH"
+    }
+}
