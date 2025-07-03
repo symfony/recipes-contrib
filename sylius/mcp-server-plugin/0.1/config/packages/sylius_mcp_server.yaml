@@ -1,0 +1,2 @@
+imports:
+    - { resource: "@SyliusMcpServerPlugin/config/config.yaml" }
