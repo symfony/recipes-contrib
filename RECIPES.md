@@ -608,6 +608,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sylius/customer-order-cancellation-plugin](https://packagist.org/packages/sylius/customer-order-cancellation-plugin) | [0.2](sylius/customer-order-cancellation-plugin/0.2) |
 | [sylius/customer-reorder-plugin](https://packagist.org/packages/sylius/customer-reorder-plugin) | [1.0](sylius/customer-reorder-plugin/1.0) |
 | [sylius/invoicing-plugin](https://packagist.org/packages/sylius/invoicing-plugin) | [1.0](sylius/invoicing-plugin/1.0) |
+| [sylius/mcp-server-plugin](https://packagist.org/packages/sylius/mcp-server-plugin) | [0.1](sylius/mcp-server-plugin/0.1) |
 | [sylius/mollie-plugin](https://packagist.org/packages/sylius/mollie-plugin) | [3.0](sylius/mollie-plugin/3.0) |
 | [sylius/paypal-plugin](https://packagist.org/packages/sylius/paypal-plugin) | [2.0](sylius/paypal-plugin/2.0) |
 | [sylius/product-bundle-plugin](https://packagist.org/packages/sylius/product-bundle-plugin) | [1.0](sylius/product-bundle-plugin/1.0) |

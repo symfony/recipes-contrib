@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "sylius/mcp-server-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Sylius\\McpServerPlugin\\SyliusMcpServerPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sylius_mcp_server.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SyliusMcpServerPlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "125031aae2bdc7bdc24e9fc321dbfada3eebfac3"
+        }
+    }
+}
