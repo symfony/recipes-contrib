@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Alengo\\Bundle\\AlengoWebspaceSettingsBundle\\AlengoWebspaceSettingsBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
