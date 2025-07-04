@@ -1,6 +1,5 @@
 {
     "bundles": {
-        "Alengo\\Bundle\\AlengoWebspaceSettingsBundle": ["all"],
         "Alengo\\Bundle\\AlengoWebspaceSettingsBundle\\AlengoWebspaceSettingsBundle": ["all"]
     },
     "copy-from-recipe": {
