@@ -3,7 +3,8 @@
         "Storyblok\\Bundle\\StoryblokBundle": ["all"]
     },
     "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
+        "config/": "%CONFIG_DIR%/",
+        "templates/": "templates/"
     },
     "env": {
         "STORYBLOK_API_BASE_URI": "https://api.storyblok.com",
