@@ -1,0 +1,29 @@
+{
+    "manifests": {
+        "friendsofsymfony/chat-bundle": {
+            "manifest": {
+                "bundles": {
+                    "FOS\\ChatBundle\\FOSChatBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/fos_chat.yaml": {
+                    "contents": [
+                        "fos_chat:",
+                        "    db_driver: # orm | mongodb",
+                        "    thread_class: # e.g. App\\Entity\\ChatThread | App\\Document\\Thread",
+                        "    message_class: #e.g. App\\Entity\\ChatMessage | App\\Document\\Message",
+                        "    "
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6509e6272dc6c436c83748e6a123f50935002f94"
+        }
+    }
+}
