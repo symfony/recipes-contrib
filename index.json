@@ -48,6 +48,9 @@
         "akondas/symfony-consul-bundle": [
             "0.1"
         ],
+        "alengo/alengo-webspace-settings-bundle": [
+            "0.8"
+        ],
         "alexandret/evc-bundle": [
             "1.0"
         ],

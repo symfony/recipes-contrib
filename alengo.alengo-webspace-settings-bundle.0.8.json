@@ -1,0 +1,107 @@
+{
+    "manifests": {
+        "alengo/alengo-webspace-settings-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Alengo\\Bundle\\AlengoWebspaceSettingsBundle\\AlengoWebspaceSettingsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "* The <fg=green>AlengoWebspaceSettingsBundle</> for Sulu CMS is almost ready:",
+                    "    1. Configure your types in config/packages/alengo_webspace_settings.yaml",
+                    "    2. Configure your blocks if needed in config/templates/settings/webspace_settings_blocks.xml.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/alengodev/alengoWebspaceSettingsBundle/blob/main/README.md</>"
+                ]
+            },
+            "files": {
+                "config/packages/alengo_webspace_settings.yaml": {
+                    "contents": [
+                        "alengo_webspace_settings:",
+                        "    type_select:",
+                        "        - 'blocks'",
+                        "        - 'category'",
+                        "        - 'categories'",
+                        "        - 'collection'",
+                        "        - 'collections'",
+                        "        - 'contact'",
+                        "        - 'contacts'",
+                        "        - 'date'",
+                        "        - 'dateTime'",
+                        "        - 'event'",
+                        "        - 'media'",
+                        "        - 'medias'",
+                        "        - 'account'",
+                        "        - 'accounts'",
+                        "        - 'page'",
+                        "        - 'pages'",
+                        "        - 'snippet'",
+                        "        - 'snippets'",
+                        "        - 'string' # default type",
+                        "        - 'tags'",
+                        "        - 'time'",
+                        "        - 'textArea'",
+                        "        - 'textEditor'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/templates/settings/webspace_settings_blocks.xml": {
+                    "contents": [
+                        "<?xml version=\"1.0\" ?>",
+                        "<properties xmlns=\"http://schemas.sulu.io/template/template\"",
+                        "            xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"",
+                        "            xmlns:xi=\"http://www.w3.org/2001/XInclude\"",
+                        "            xsi:schemaLocation=\"http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd\">",
+                        "",
+                        "    <block name=\"dataBlocks\">",
+                        "        <types>",
+                        "            <type name=\"singleMediaSelection\">",
+                        "                <meta>",
+                        "                    <title>alengo_webspace_settings.media</title>",
+                        "                </meta>",
+                        "",
+                        "                <properties>",
+                        "                    <property name=\"singleMediaSelection\" type=\"single_media_selection\">",
+                        "                        <tag name=\"sulu.block_preview\" priority=\"512\"/>",
+                        "                    </property>",
+                        "                </properties>",
+                        "            </type>",
+                        "            <type name=\"mediaSelection\">",
+                        "                <meta>",
+                        "                    <title>alengo_webspace_settings.medias</title>",
+                        "                </meta>",
+                        "",
+                        "                <properties>",
+                        "                    <property name=\"mediaSelection\" type=\"media_selection\">",
+                        "                        <tag name=\"sulu.block_preview\" priority=\"512\"/>",
+                        "                    </property>",
+                        "                </properties>",
+                        "            </type>",
+                        "            <type name=\"textEditor\">",
+                        "                <meta>",
+                        "                    <title>alengo_webspace_settings.textEditor</title>",
+                        "                </meta>",
+                        "",
+                        "                <properties>",
+                        "                    <property name=\"textEditor\" type=\"text_editor\">",
+                        "                        <tag name=\"sulu.block_preview\" priority=\"1024\"/>",
+                        "                    </property>",
+                        "                </properties>",
+                        "            </type>",
+                        "        </types>",
+                        "    </block>",
+                        "",
+                        "</properties>"
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "68e58b326f21e522dc624c6be66d572c325ada3f"
+        }
+    }
+}
