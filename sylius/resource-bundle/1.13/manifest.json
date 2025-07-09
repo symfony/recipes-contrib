@@ -1,0 +1,12 @@
+{
+    "container": {
+        "locale": "en"
+    },
+    "bundles": {
+        "Sylius\\Bundle\\ResourceBundle\\SyliusResourceBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "src/": "%SRC_DIR%/"
+    }
+}
