@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Psys\\OrderInvoiceBundle\\PsysOrderInvoiceBundle": ["all"]
+    },
+    "copy-from-package": {
+        "migrations/": "migrations/",
+        "templates/": "templates/"
+    }
+}
