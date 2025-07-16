@@ -1,0 +1,17 @@
+{
+    "bundles": {
+        "Ehyiah\\ApiDocBundle\\EhyiahApiDocBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "copy-from-package": {
+        "src/Swagger/": "%SRC_DIR%/Swagger/"
+    },
+    "env": {
+        "#1": "List of URLs separated by a coma",
+        "SITE_URLS": "",
+        "SOURCE_PATH": "src/Swagger",
+        "DUMP_PATH": "dump"
+    }
+}
