@@ -1,0 +1,10 @@
+{
+    "manifest": {
+        "bundles": {
+            "Nkamuo\\Barcode\\BarcodeBundle": ["all"]
+        },
+        "copy-from-recipe": {
+            "config/": "%CONFIG_DIR%/"
+        }
+    }
+}
