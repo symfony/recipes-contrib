@@ -1,0 +1,4 @@
+ehyiah_api_doc:
+    site_urls: '%env(SITE_URLS)%'
+    source_path: '%env(SOURCE_PATH)%'
+    dump_path: '%env(DUMP_PATH)%'
