@@ -1,0 +1,18 @@
+{
+    "manifests": {
+        "psys/order-invoice-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Psys\\OrderInvoiceBundle\\PsysOrderInvoiceBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-package": {
+                    "templates/": "templates/"
+                }
+            },
+            "files": [],
+            "ref": "c054d5d58b23e00752d3e9c4a17f294318d5cd8c"
+        }
+    }
+}
