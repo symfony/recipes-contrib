@@ -1,0 +1,9 @@
+{
+    "ignorePatterns": [
+        "assets/vendor/**",
+        "public/assets/**",
+        "public/bundles/**",
+        "var/**",
+        "vendor/**"
+    ]
+}
