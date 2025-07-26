@@ -504,6 +504,9 @@
         "egeloen/ckeditor-bundle": [
             "5.0"
         ],
+        "ehyiah/apidoc-bundle": [
+            "0.3"
+        ],
         "eightpoints/guzzle-bundle": [
             "7.0"
         ],

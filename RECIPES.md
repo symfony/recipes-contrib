@@ -161,6 +161,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [ecphp/eu-login-bundle](https://packagist.org/packages/ecphp/eu-login-bundle) | [3.0](ecphp/eu-login-bundle/3.0) |
 | [eduandebruijne/admin-bundle](https://packagist.org/packages/eduandebruijne/admin-bundle) | [11.0](eduandebruijne/admin-bundle/11.0) |
 | [egeloen/ckeditor-bundle](https://packagist.org/packages/egeloen/ckeditor-bundle) | [5.0](egeloen/ckeditor-bundle/5.0) |
+| [ehyiah/apidoc-bundle](https://packagist.org/packages/ehyiah/apidoc-bundle) | [0.3](ehyiah/apidoc-bundle/0.3) |
 | [eightpoints/guzzle-bundle](https://packagist.org/packages/eightpoints/guzzle-bundle) | [7.0](eightpoints/guzzle-bundle/7.0) |
 | [ekino/newrelic-bundle](https://packagist.org/packages/ekino/newrelic-bundle) | [2.0](ekino/newrelic-bundle/2.0) |
 | [eko/feedbundle](https://packagist.org/packages/eko/feedbundle) | [1.2](eko/feedbundle/1.2) |
