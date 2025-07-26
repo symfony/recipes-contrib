@@ -1,0 +1,5 @@
+when@dev:
+    kocal_oxlint:
+        # The Oxlint binary version to use, that you can find at https://github.com/oxc-project/oxc/tags,
+        # it follows the pattern "oxlint_v<binary_version>"
+        binary_version: '1.8.0'

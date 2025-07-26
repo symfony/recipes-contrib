@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Kocal\\OxlintBundle\\KocalOxlintBundle": ["dev"]
+    },
+    "copy-from-recipe": {
+        ".oxlintrc.json": ".oxlintrc.json",
+        "config/": "%CONFIG_DIR%/"
+    },
+    "gitignore": [
+        "/%BIN_DIR%/oxlint"
+    ]
+}
