@@ -935,6 +935,9 @@
             "1.1",
             "2.0"
         ],
+        "kocal/oxlint-bundle": [
+            "1.0"
+        ],
         "koff/i18n-form-bundle": [
             "4.0"
         ],

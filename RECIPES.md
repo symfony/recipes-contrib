@@ -295,6 +295,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [knpuniversity/oauth2-client-bundle](https://packagist.org/packages/knpuniversity/oauth2-client-bundle) | [1.20](knpuniversity/oauth2-client-bundle/1.20) |
 | [knyk/mailbox-bundle](https://packagist.org/packages/knyk/mailbox-bundle) | [1.0](knyk/mailbox-bundle/1.0) |
 | [kocal/biome-js-bundle](https://packagist.org/packages/kocal/biome-js-bundle) | [2.0](kocal/biome-js-bundle/2.0) |
+| [kocal/oxlint-bundle](https://packagist.org/packages/kocal/oxlint-bundle) | [1.0](kocal/oxlint-bundle/1.0) |
 | [koff/i18n-form-bundle](https://packagist.org/packages/koff/i18n-form-bundle) | [4.0](koff/i18n-form-bundle/4.0) |
 | [kriswallsmith/buzz](https://packagist.org/packages/kriswallsmith/buzz) | [1.0](kriswallsmith/buzz/1.0) |
 | [kunicmarko/jms-messenger-adapter](https://packagist.org/packages/kunicmarko/jms-messenger-adapter) | [0.1](kunicmarko/jms-messenger-adapter/0.1) |

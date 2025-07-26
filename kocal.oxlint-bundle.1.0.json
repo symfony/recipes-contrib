@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "kocal/oxlint-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Kocal\\OxlintBundle\\KocalOxlintBundle": [
+                        "dev"
+                    ]
+                },
+                "copy-from-recipe": {
+                    ".oxlintrc.json": ".oxlintrc.json",
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "gitignore": [
+                    "/%BIN_DIR%/oxlint"
+                ]
+            },
+            "files": {
+                ".oxlintrc.json": {
+                    "contents": [
+                        "{",
+                        "    \"ignorePatterns\": [",
+                        "        \"assets/vendor/**\",",
+                        "        \"public/assets/**\",",
+                        "        \"public/bundles/**\",",
+                        "        \"var/**\",",
+                        "        \"vendor/**\"",
+                        "    ]",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/kocal_oxlint.yaml": {
+                    "contents": [
+                        "when@dev:",
+                        "    kocal_oxlint:",
+                        "        # The Oxlint binary version to use, that you can find at https://github.com/oxc-project/oxc/tags,",
+                        "        # it follows the pattern \"oxlint_v<binary_version>\"",
+                        "        binary_version: '1.8.0'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b18279c5d08603ee1bb6c4e71fc90720bcf9f6cd"
+        }
+    }
+}
