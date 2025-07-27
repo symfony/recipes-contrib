@@ -432,6 +432,9 @@
         "dekalee/pubsub-swarrot-bundle": [
             "1.0"
         ],
+        "deptrac/deptrac": [
+            "3.0"
+        ],
         "devzair/mail-logger-bundle": [
             "1.0"
         ],
