@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "talleu/trigger-mapping": {
+            "manifest": {
+                "bundles": {
+                    "Talleu\\TriggerMapping\\Bundle\\TriggerMappingBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "ca2abe4a7ccd883c3284ac28c515e189214c46ff"
+        }
+    }
+}

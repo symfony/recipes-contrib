@@ -2033,6 +2033,9 @@
         "talleu/php-redis-om": [
             "0.3"
         ],
+        "talleu/trigger-mapping": [
+            "0.1"
+        ],
         "tattali/calendar-bundle": [
             "1.1"
         ],
