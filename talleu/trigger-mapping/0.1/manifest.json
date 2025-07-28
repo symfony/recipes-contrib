@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "Talleu\\TriggerMapping\\Bundle\\TriggerMappingBundle": ["all"]
+    }
+}
