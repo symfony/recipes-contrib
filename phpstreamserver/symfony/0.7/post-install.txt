@@ -1,0 +1,11 @@
+* One more step to complete setup:
+  Set PHPStreamServerRuntime as the Application Runtime by either:
+   * setting env <comment>APP_RUNTIME="PHPStreamServer\Symfony\PHPStreamServerRuntime"</>
+   * adding <comment>extra.runtime.class</> to <fg=green>composer.json</>
+  Read more: <comment>https://phpstreamserver.dev/docs/integrations/symfony#runtime-configuration</>
+  If you edited <fg=green>composer.json</>, run <comment>composer dump-autoload</> to apply.
+
+* Your Symfony application is ready to run with PHPStreamServer.
+  Start the server with: <comment>bin/phpss start</>
+
+* Read the documentation at: <comment>https://phpstreamserver.dev/docs/general/</>
