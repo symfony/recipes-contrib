@@ -1,0 +1,15 @@
+{
+    "bundles": {
+        "Djdmg\\TransparentPixelBundle\\TransparentPixelBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "post-install-output": [
+        "TransparentPixelBundle ready.",
+        "Routes imported at config/routes/transparent_pixel.yaml",
+        "Next steps:",
+        "  - bin/console doctrine:migrations:diff",
+        "  - bin/console doctrine:migrations:migrate -n"
+    ]
+}

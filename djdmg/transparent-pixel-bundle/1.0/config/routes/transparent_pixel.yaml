@@ -1,0 +1,3 @@
+djdmg_transparent_pixel:
+    resource: '@TransparentPixelBundle/Controller/'
+    type: attribute
