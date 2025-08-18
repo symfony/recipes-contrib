@@ -12,10 +12,17 @@
                     "config/": "%CONFIG_DIR%/"
                 },
                 "post-install-output": [
-                    "* You're ready to run your Symfony application with PHPStreamServer!",
-                    "  Run <comment>bin/phpss start</> command to get started",
+                    "* One more step to complete setup:",
+                    "  Set PHPStreamServerRuntime as the Application Runtime by either:",
+                    "   * setting env <comment>APP_RUNTIME=\"PHPStreamServer\\Symfony\\PHPStreamServerRuntime\"</>",
+                    "   * adding <comment>extra.runtime.class</> to <fg=green>composer.json</>",
+                    "  Read more: <comment>https://phpstreamserver.dev/docs/integrations/symfony#runtime-configuration</>",
+                    "  If you edited <fg=green>composer.json</>, run <comment>composer dump-autoload</> to apply.",
                     "",
-                    "* <fg=blue>Read</> the documentation at <comment>https://phpstreamserver.dev/docs/general/</>"
+                    "* Your Symfony application is ready to run with PHPStreamServer.",
+                    "  Start the server with: <comment>bin/phpss start</>",
+                    "",
+                    "* Read the documentation at: <comment>https://phpstreamserver.dev/docs/general/</>"
                 ]
             },
             "files": {
@@ -25,15 +32,13 @@
                         "<?php",
                         "",
                         "use App\\Kernel;",
-                        "use PHPStreamServer\\Symfony\\PHPStreamServerRuntime;",
+                        "use PHPStreamServer\\Symfony\\ServerApplication;",
                         "",
-                        "$_SERVER['APP_RUNTIME'] = PHPStreamServerRuntime::class;",
+                        "require_once \\dirname(__DIR__) . '/vendor/autoload_runtime.php';",
                         "",
-                        "require_once \\dirname(__DIR__).'/vendor/autoload_runtime.php';",
-                        "",
-                        "return function (array $context) {",
+                        "return new ServerApplication(static function (array $context) {",
                         "    return new Kernel($context['APP_ENV'], (bool) $context['APP_DEBUG']);",
-                        "};",
+                        "});",
                         ""
                     ],
                     "executable": true
@@ -59,7 +64,7 @@
                     "executable": false
                 }
             },
-            "ref": "1b6f82bb07b647988aabe46f07074d672d237c5f"
+            "ref": "99f46b724b8df97501a970a2ad470cbbf8338dbc"
         }
     }
 }

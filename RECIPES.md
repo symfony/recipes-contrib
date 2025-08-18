@@ -475,7 +475,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [phpfastcache/phpfastcache-bundle](https://packagist.org/packages/phpfastcache/phpfastcache-bundle) | [3.0](phpfastcache/phpfastcache-bundle/3.0) |
 | [phpfastcgi/fastcgi-daemon](https://packagist.org/packages/phpfastcgi/fastcgi-daemon) | [0.11](phpfastcgi/fastcgi-daemon/0.11) |
 | [phpstan/phpstan](https://packagist.org/packages/phpstan/phpstan) | [1.0](phpstan/phpstan/1.0) |
-| [phpstreamserver/symfony](https://packagist.org/packages/phpstreamserver/symfony) | [0.4](phpstreamserver/symfony/0.4) |
+| [phpstreamserver/symfony](https://packagist.org/packages/phpstreamserver/symfony) | [0.7](phpstreamserver/symfony/0.7) |
 | [phpsword/sword-bundle](https://packagist.org/packages/phpsword/sword-bundle) | [1.0](phpsword/sword-bundle/1.0) |
 | [phpzlc/admin](https://packagist.org/packages/phpzlc/admin) | [1.0](phpzlc/admin/1.0) |
 | [phpzlc/admin-business](https://packagist.org/packages/phpzlc/admin-business) | [1.0](phpzlc/admin-business/1.0) |
