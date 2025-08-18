@@ -143,6 +143,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [devzair/mail-logger-bundle](https://packagist.org/packages/devzair/mail-logger-bundle) | [1.0](devzair/mail-logger-bundle/1.0) |
 | [disjfa/mozaic-bundle](https://packagist.org/packages/disjfa/mozaic-bundle) | [0.1](disjfa/mozaic-bundle/0.1) |
 | [disjfa/translation-bundle](https://packagist.org/packages/disjfa/translation-bundle) | [0.1](disjfa/translation-bundle/0.1) |
+| [djdmg/transparent-pixel-bundle](https://packagist.org/packages/djdmg/transparent-pixel-bundle) | [1.0](djdmg/transparent-pixel-bundle/1.0) |
 | [dobryprogramator/smartform-bundle](https://packagist.org/packages/dobryprogramator/smartform-bundle) | [1.0](dobryprogramator/smartform-bundle/1.0) |
 | [dockfony/dockfony](https://packagist.org/packages/dockfony/dockfony) | [5.0](dockfony/dockfony/5.0) |
 | [doctrine/mongodb-odm-bundle](https://packagist.org/packages/doctrine/mongodb-odm-bundle) | [5.0](doctrine/mongodb-odm-bundle/5.0) |

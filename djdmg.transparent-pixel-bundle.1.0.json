@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "djdmg/transparent-pixel-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Djdmg\\TransparentPixelBundle\\TransparentPixelBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "TransparentPixelBundle ready.",
+                    "Routes imported at config/routes/transparent_pixel.yaml",
+                    "Next steps:",
+                    "  - bin/console doctrine:migrations:diff",
+                    "  - bin/console doctrine:migrations:migrate -n"
+                ]
+            },
+            "files": {
+                "config/routes/transparent_pixel.yaml": {
+                    "contents": [
+                        "transparent_pixel_bundle:",
+                        "    resource: '@TransparentPixelBundle/Controller/'",
+                        "    type: attribute",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e23e5056a030420b0030477d5e469d97b00251f6"
+        }
+    }
+}
