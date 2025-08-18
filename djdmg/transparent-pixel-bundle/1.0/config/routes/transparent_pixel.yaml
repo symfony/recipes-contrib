@@ -1,0 +1,3 @@
+transparent_pixel_bundle:
+    resource: '@TransparentPixelBundle/Controller/'
+    type: attribute
