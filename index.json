@@ -1731,6 +1731,9 @@
         "sg/datatablesbundle": [
             "1.0"
         ],
+        "shipmonk/doctrine-entity-preloader": [
+            "1.0"
+        ],
         "shopware/app-bundle": [
             "1.0",
             "4.0"

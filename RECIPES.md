@@ -541,6 +541,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [setono/google-analytics-bundle](https://packagist.org/packages/setono/google-analytics-bundle) | [1.0](setono/google-analytics-bundle/1.0) |
 | [setono/sylius-toggle-vat-plugin](https://packagist.org/packages/setono/sylius-toggle-vat-plugin) | [1.0](setono/sylius-toggle-vat-plugin/1.0) |
 | [sg/datatablesbundle](https://packagist.org/packages/sg/datatablesbundle) | [1.0](sg/datatablesbundle/1.0) |
+| [shipmonk/doctrine-entity-preloader](https://packagist.org/packages/shipmonk/doctrine-entity-preloader) | [1.0](shipmonk/doctrine-entity-preloader/1.0) |
 | [shopware/app-bundle](https://packagist.org/packages/shopware/app-bundle) | [4.0](shopware/app-bundle/4.0) |
 | [siburuxue/doctrine-helper](https://packagist.org/packages/siburuxue/doctrine-helper) | [1.0](siburuxue/doctrine-helper/1.0) |
 | [silasjoisten/sonata-multiupload-bundle](https://packagist.org/packages/silasjoisten/sonata-multiupload-bundle) | [3.4](silasjoisten/sonata-multiupload-bundle/3.4) |

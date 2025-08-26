@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "shipmonk/doctrine-entity-preloader": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/doctrine_entity_preloader.yaml": {
+                    "contents": [
+                        "services:",
+                        "    ShipMonk\\DoctrineEntityPreloader\\EntityPreloader:",
+                        "        arguments: ['@doctrine.orm.entity_manager']",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6bee147a5ee0ca3cc07b24c1d3c28a67710d090c"
+        }
+    }
+}
