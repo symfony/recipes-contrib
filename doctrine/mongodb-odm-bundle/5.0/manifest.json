@@ -7,14 +7,14 @@
         "src/": "%SRC_DIR%/"
     },
     "container": {
-        "env(MONGODB_URL)": "",
+        "env(MONGODB_URI)": "",
         "env(MONGODB_DB)": ""
     },
     "env": {
         "#1": "Format described at https://www.mongodb.com/docs/php-library/current/connect/connection-options/",
-        "#2": "MONGODB_URL=\"mongodb://username:password@localhost:27017/?authSource=auth-db\"",
-        "#3": "MONGODB_URL=\"mongodb+srv://username:password@YOUR_CLUSTER_NAME.YOUR_HASH.mongodb.net/?retryWrites=true&w=majority\"",
-        "MONGODB_URL": "mongodb://localhost:27017",
+        "#2": "MONGODB_URI=\"mongodb://username:password@localhost:27017/?authSource=auth-db\"",
+        "#3": "MONGODB_URI=\"mongodb+srv://username:password@YOUR_CLUSTER_NAME.YOUR_HASH.mongodb.net/?retryWrites=true&w=majority\"",
+        "MONGODB_URI": "mongodb://localhost:27017",
         "MONGODB_DB": "symfony"
     },
     "dockerfile": [
