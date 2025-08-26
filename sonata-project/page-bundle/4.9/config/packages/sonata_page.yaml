@@ -1,0 +1,76 @@
+sonata_block:
+    default_contexts: [sonata_page_bundle]
+
+sonata_admin:
+    assets:
+        extra_javascripts:
+            - bundles/sonatapage/app.js
+        extra_stylesheets:
+            - bundles/sonatapage/app.css
+
+# https://docs.sonata-project.org/projects/SonataPageBundle/en/4.x/reference/advanced_configuration/
+sonata_page:
+    multisite: host
+    use_streamed_response: false
+
+    router_auto_register:
+        enabled: true
+        priority: 150
+    ignore_route_patterns:
+        - ^(.*)admin(.*)   # ignore admin route, ie route containing 'admin'
+        - ^_(.*)          # ignore symfony routes
+    ignore_routes:
+        - sonata_page_cache_esi
+        - sonata_page_cache_ssi
+        - sonata_page_js_sync_cache
+        - sonata_page_js_async_cache
+        - sonata_cache_esi
+        - sonata_cache_ssi
+        - sonata_cache_js_async
+        - sonata_cache_js_sync
+        - sonata_cache_apc
+    ignore_uri_patterns:
+        - ^/admin\/   # ignore admin route, ie route containing 'admin'
+
+    #https://docs.sonata-project.org/projects/SonataPageBundle/en/4.x/reference/page_composer/
+    default_template: default
+    templates:
+        default:
+            path: '@SonataPage/layout.html.twig'
+            name: 'default'
+            containers:
+                header:
+                    name: Header
+                content_top:
+                    name: Top content
+                content:
+                    name: Main content
+                content_bottom:
+                    name: Bottom content
+                footer:
+                    name: Footer
+            matrix:
+                layout: |
+                    HHHHHHHH
+                    HHHHHHHH
+                    TTTTTTTT
+                    TTTTTTTT
+                    CCCCCCCC
+                    CCCCCCCC
+                    BBBBBBBB
+                    BBBBBBBB
+                    FFFFFFFF
+                    FFFFFFFF
+
+                mapping:
+                    H: header
+                    T: content_top
+                    C: content
+                    B: content_bottom
+                    F: footer
+
+    direct_publication: '%kernel.debug%'
+
+    catch_exceptions:
+        not_found: [404]    # render 404 page with "not_found" key (name generated: _page_internal_error_{key})
+        fatal:     [500]    # so you can use the same page for different http errors or specify specific page for each error
