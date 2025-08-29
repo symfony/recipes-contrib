@@ -1,0 +1,63 @@
+{
+    "manifests": {
+        "sylius/resource-bundle": {
+            "manifest": {
+                "container": {
+                    "locale": "en"
+                },
+                "bundles": {
+                    "Sylius\\Bundle\\ResourceBundle\\SyliusResourceBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sylius_resource.yaml": {
+                    "contents": [
+                        "# @see https://docs.sylius.com/sylius-stack/resource/index",
+                        "sylius_resource:",
+                        "    # Override default settings",
+                        "    #settings:",
+                        "",
+                        "    # Configure the mapping for your resources",
+                        "    mapping:",
+                        "        paths:",
+                        "            - '%kernel.project_dir%/src/Entity'",
+                        "",
+                        "    # Configure your resources",
+                        "    resources:",
+                        "        #app.book:",
+                        "            #classes:",
+                        "                #model: App\\Entity\\Book",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sylius_resource.yaml": {
+                    "contents": [
+                        "sylius_crud_routes:",
+                        "    resource: 'sylius.routing.loader.crud_routes_attributes'",
+                        "    type: service",
+                        "",
+                        "sylius_routes:",
+                        "    resource: 'sylius.routing.loader.routes_attributes'",
+                        "    type: service",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "102a8c7dc7da14d7c44edab75c3ee35c4998a9a2"
+        }
+    }
+}
