@@ -1,0 +1,11 @@
+calliostro_last_fm_client:
+    # Get your API credentials from https://www.last.fm/api/account/create
+    api_key: '%env(LASTFM_API_KEY)%'
+    secret: '%env(LASTFM_SECRET)%'
+
+    # Optional: session key for user-specific actions (scrobbling, etc.)
+    # session: '%env(LASTFM_SESSION_KEY)%'
+
+    # Optional: HTTP client configuration
+    # http_client_options:
+    #     timeout: 30
