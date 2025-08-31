@@ -78,6 +78,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [byte-artist/menu-bundle](https://packagist.org/packages/byte-artist/menu-bundle) | [0.1](byte-artist/menu-bundle/0.1) |
 | [cache/adapter-bundle](https://packagist.org/packages/cache/adapter-bundle) | [1.1](cache/adapter-bundle/1.1) |
 | [cache/cache-bundle](https://packagist.org/packages/cache/cache-bundle) | [1.0](cache/cache-bundle/1.0) |
+| [calliostro/last-fm-client-bundle](https://packagist.org/packages/calliostro/last-fm-client-bundle) | [1.0](calliostro/last-fm-client-bundle/1.0) |
 | [ckrack/optimus-bundle](https://packagist.org/packages/ckrack/optimus-bundle) | [0.1](ckrack/optimus-bundle/0.1) |
 | [cmsig/seal-symfony-bundle](https://packagist.org/packages/cmsig/seal-symfony-bundle) | [0.8](cmsig/seal-symfony-bundle/0.8) |
 | [codebuds/mattermost-publication-bundle](https://packagist.org/packages/codebuds/mattermost-publication-bundle) | [0.3](codebuds/mattermost-publication-bundle/0.3) |
