@@ -39,12 +39,8 @@
                 },
                 "config/routes/sylius_resource.yaml": {
                     "contents": [
-                        "sylius_crud_routes:",
-                        "    resource: 'sylius.routing.loader.crud_routes_attributes'",
-                        "    type: service",
-                        "",
-                        "sylius_routes:",
-                        "    resource: 'sylius.routing.loader.routes_attributes'",
+                        "sylius_resource_loader:",
+                        "    resource: 'sylius.symfony.routing.loader.resource'",
                         "    type: service",
                         ""
                     ],
@@ -57,7 +53,7 @@
                     "executable": false
                 }
             },
-            "ref": "14f5b4ce9f7b17390563bec18170836d6d8bed78"
+            "ref": "44983507fd82e1b5ec6911cb7be8847064acd473"
         }
     }
 }

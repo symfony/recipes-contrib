@@ -1989,7 +1989,8 @@
         "sylius/resource-bundle": [
             "1.6",
             "1.9",
-            "1.12"
+            "1.12",
+            "1.13"
         ],
         "sylius/twig-extra": [
             "0.4"

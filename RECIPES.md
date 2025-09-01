@@ -619,7 +619,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sylius/paypal-plugin](https://packagist.org/packages/sylius/paypal-plugin) | [2.0](sylius/paypal-plugin/2.0) |
 | [sylius/product-bundle-plugin](https://packagist.org/packages/sylius/product-bundle-plugin) | [1.0](sylius/product-bundle-plugin/1.0) |
 | [sylius/refund-plugin](https://packagist.org/packages/sylius/refund-plugin) | [2.0](sylius/refund-plugin/2.0) |
-| [sylius/resource-bundle](https://packagist.org/packages/sylius/resource-bundle) | [1.12](sylius/resource-bundle/1.12) |
+| [sylius/resource-bundle](https://packagist.org/packages/sylius/resource-bundle) | [1.13](sylius/resource-bundle/1.13) |
 | [sylius/twig-extra](https://packagist.org/packages/sylius/twig-extra) | [0.4](sylius/twig-extra/0.4) |
 | [sylius/twig-hooks](https://packagist.org/packages/sylius/twig-hooks) | [0.4](sylius/twig-hooks/0.4) |
 | [sylius/ui-translations](https://packagist.org/packages/sylius/ui-translations) | [0.4](sylius/ui-translations/0.4) |
