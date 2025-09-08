@@ -1,0 +1,6 @@
+  <bg=blue;fg=white>                                                     </>
+  <bg=blue;fg=white>   Getting Started with </><bg=blue;fg=white;options=bold>spiriit/auth-log-bundle</><bg=blue;fg=white>   </>
+  <bg=blue;fg=white>                                                     </>
+
+  * <fg=blue>Configure</> transport sender email in <comment>config/packages/spiriit_auth_log.yaml</>
+  * <fg=blue>Read</> the complete documentation at <comment>https://github.com/SpiriitLabs/auth-log-bundle/</>
