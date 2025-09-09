@@ -1,0 +1,10 @@
+spiriit_auth_log:
+    # Email notification settings
+    transports:
+        sender_email: no-reply@yourdomain.com
+        sender_name: Your App Security
+
+#    location: # not required
+#        provider: 'ipApi' # geoip2
+
+#    messenger: 'messenger.default_bus'
