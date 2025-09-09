@@ -1,5 +1,4 @@
 {
-    "manifest_version": 1,
     "bundles": {
         "Spiriit\\Bundle\\AuthLogBundle\\SpiriitAuthLogBundle": ["all"]
     },
