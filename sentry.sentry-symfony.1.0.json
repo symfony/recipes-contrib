@@ -1,0 +1,44 @@
+{
+    "manifests": {
+        "sentry/sentry-symfony": {
+            "manifest": {
+                "bundles": {
+                    "Sentry\\SentryBundle\\SentryBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SENTRY_DSN": ""
+                }
+            },
+            "files": {
+                "config/packages/prod/sentry.yaml": {
+                    "contents": [
+                        "sentry:",
+                        "    dsn: '%env(SENTRY_DSN)%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/sentry.yaml": {
+                    "contents": [
+                        "sentry:",
+                        "    options:",
+                        "        curl_method: async",
+                        "",
+                        "#    skip_capture:  # To skip certain exceptions, specify a list below",
+                        "#      - 'Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException'",
+                        "#      - 'Symfony\\Component\\HttpKernel\\Exception\\BadRequestHttpException'",
+                        "#      - 'Symfony\\Component\\HttpKernel\\Exception\\AccessDeniedHttpException'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "fa1a2dfc020798cd7076b5419596e72dca07047a"
+        }
+    }
+}
