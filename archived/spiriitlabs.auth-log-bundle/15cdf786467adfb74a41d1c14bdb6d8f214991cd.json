@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "spiriitlabs/auth-log-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Spiriit\\Bundle\\AuthLogBundle\\SpiriitAuthLogBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  <bg=blue;fg=white>                                                     </>",
+                    "  <bg=blue;fg=white>   Getting Started with </><bg=blue;fg=white;options=bold>spiriit/auth-log-bundle</><bg=blue;fg=white>   </>",
+                    "  <bg=blue;fg=white>                                                     </>",
+                    "",
+                    "  * <fg=blue>Configure</> transport sender in <comment>config/packages/spiriit_auth_log.yaml</>",
+                    "  * <fg=blue>Read</> the complete documentation at <comment>https://github.com/SpiriitLabs/auth-log-bundle/</>"
+                ]
+            },
+            "files": {
+                "config/packages/spiriit_auth_log.yaml": {
+                    "contents": [
+                        "spiriit_auth_log:",
+                        "    # Email notification settings",
+                        "    transports:",
+                        "        sender_email: no-reply@yourdomain.com",
+                        "        sender_name: Your App Security",
+                        "",
+                        "#    location: # not required",
+                        "#        provider: 'ipApi' # geoip2",
+                        "",
+                        "#    messenger: 'messenger.default_bus'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "15cdf786467adfb74a41d1c14bdb6d8f214991cd"
+        }
+    }
+}

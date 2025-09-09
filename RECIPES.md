@@ -578,6 +578,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [spatie/symfony-ignition-bundle](https://packagist.org/packages/spatie/symfony-ignition-bundle) | [0.0](spatie/symfony-ignition-bundle/0.0) |
 | [specshaper/encrypt-bundle](https://packagist.org/packages/specshaper/encrypt-bundle) | [3.0](specshaper/encrypt-bundle/3.0) |
 | [spiechu/symfony-commons-bundle](https://packagist.org/packages/spiechu/symfony-commons-bundle) | [0.1](spiechu/symfony-commons-bundle/0.1) |
+| [spiriitlabs/auth-log-bundle](https://packagist.org/packages/spiriitlabs/auth-log-bundle) | [1.0](spiriitlabs/auth-log-bundle/1.0) |
 | [spomky-labs/jose-bundle](https://packagist.org/packages/spomky-labs/jose-bundle) | [2.2](spomky-labs/jose-bundle/2.2) |
 | [spomky-labs/lexik-jose-bridge](https://packagist.org/packages/spomky-labs/lexik-jose-bridge) | [2.0](spomky-labs/lexik-jose-bridge/2.0) |
 | [sprintechnology/firebase-cloud-messaging](https://packagist.org/packages/sprintechnology/firebase-cloud-messaging) | [1.0](sprintechnology/firebase-cloud-messaging/1.0) |
