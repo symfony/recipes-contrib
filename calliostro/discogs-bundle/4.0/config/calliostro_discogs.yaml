@@ -1,0 +1,17 @@
+calliostro_discogs:
+    # Recommended: Personal Access Token (get from https://www.discogs.com/settings/developers)
+    # personal_access_token: '%env(DISCOGS_PERSONAL_ACCESS_TOKEN)%'
+    
+    # Alternative: Consumer credentials for OAuth applications
+    # Get from https://www.discogs.com/applications
+    # consumer_key: '%env(DISCOGS_CONSUMER_KEY)%'
+    # consumer_secret: '%env(DISCOGS_CONSUMER_SECRET)%'
+    
+    # Optional: HTTP User-Agent header for API requests
+    # Default: 'DiscogsClient/4.0.0 (+https://github.com/calliostro/php-discogs-api)'
+    # user_agent: 'MyApp/1.0 +https://myapp.com'
+    
+    # Optional: Rate limiting configuration (default values shown)
+    # throttle:
+    #     enabled: true
+    #     microseconds: 1000000  # 1 second delay between requests
