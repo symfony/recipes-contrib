@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "byhaskell\\NovaPoshtaBundle\\NovaPoshtaBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "NP_API_KEY": ""
+    }
+}
