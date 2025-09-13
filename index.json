@@ -233,6 +233,9 @@
         "cache/cache-bundle": [
             "1.0"
         ],
+        "calliostro/discogs-bundle": [
+            "4.0"
+        ],
         "calliostro/last-fm-client-bundle": [
             "1.0"
         ],
