@@ -11,7 +11,5 @@ calliostro_discogs:
     # Default: 'DiscogsClient/4.0.0 (+https://github.com/calliostro/php-discogs-api)'
     # user_agent: 'MyApp/1.0 +https://myapp.com'
 
-    # Optional: Rate limiting configuration (default values shown)
-    # throttle:
-    #     enabled: true
-    #     microseconds: 1000000  # 1 second delay between requests
+    # Optional: Professional rate limiting (requires symfony/rate-limiter)
+    # rate_limiter: discogs_api       # Your configured RateLimiterFactory service
