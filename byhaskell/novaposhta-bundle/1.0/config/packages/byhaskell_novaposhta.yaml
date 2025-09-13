@@ -1,4 +1,4 @@
 novaposhta:
     # You can create one on the Nova Poshta website at:
-    # https://new.novaposhta.ua/dashboard/settings/developers 
+    # https://new.novaposhta.ua/dashboard/settings/developers
     api_key: '%env(NP_API_KEY)%'
