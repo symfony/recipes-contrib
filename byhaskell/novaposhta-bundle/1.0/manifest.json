@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "byhaskell\\NovaPoshtaBundle\\ByhaskellNovaposhtaBundle": ["all"]
+        "byhaskell\\NovaPoshtaBundle\\ByhaskellNovaPoshtaBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
