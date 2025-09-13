@@ -75,6 +75,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [bugsnag/bugsnag-symfony](https://packagist.org/packages/bugsnag/bugsnag-symfony) | [1.13](bugsnag/bugsnag-symfony/1.13) |
 | [bukashk0zzz/filter-bundle](https://packagist.org/packages/bukashk0zzz/filter-bundle) | [2.0](bukashk0zzz/filter-bundle/2.0) |
 | [bukashk0zzz/liip-imagine-serialization-bundle](https://packagist.org/packages/bukashk0zzz/liip-imagine-serialization-bundle) | [2.0](bukashk0zzz/liip-imagine-serialization-bundle/2.0) |
+| [byhaskell/novaposhta-bundle](https://packagist.org/packages/byhaskell/novaposhta-bundle) | [1.0](byhaskell/novaposhta-bundle/1.0) |
 | [byte-artist/menu-bundle](https://packagist.org/packages/byte-artist/menu-bundle) | [0.1](byte-artist/menu-bundle/0.1) |
 | [cache/adapter-bundle](https://packagist.org/packages/cache/adapter-bundle) | [1.1](cache/adapter-bundle/1.1) |
 | [cache/cache-bundle](https://packagist.org/packages/cache/cache-bundle) | [1.0](cache/cache-bundle/1.0) |

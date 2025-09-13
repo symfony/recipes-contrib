@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "byhaskell/novaposhta-bundle": {
+            "manifest": {
+                "bundles": {
+                    "byhaskell\\NovaPoshtaBundle\\NovaPoshtaBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "NP_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/byhaskell_novaposhta.yaml": {
+                    "contents": [
+                        "byhaskell_novaposhta:",
+                        "    # You can create one on the Nova Poshta website at:",
+                        "    # https://new.novaposhta.ua/dashboard/settings/developers ",
+                        "    api_key: '%env(NP_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c7206461d9ec2bdc940f38370e7a30adc1f5b392"
+        }
+    }
+}
