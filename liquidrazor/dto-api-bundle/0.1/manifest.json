@@ -1,8 +1,14 @@
 {
     "bundles": {
-        "LiquidRazor\\DtoApiBundle\\LiquidRazorDtoApiBundle": ["all"]
+        "LiquidRazor\\DtoApiBundle\\LiquidRazorDtoApiBundle": [
+            "all"
+        ]
     },
-    "aliases": ["dto-api", "dtoapi", "liquidrazor-dto"],
+    "aliases": [
+        "dto-api",
+        "dtoapi",
+        "liquidrazor-dto"
+    ],
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     },

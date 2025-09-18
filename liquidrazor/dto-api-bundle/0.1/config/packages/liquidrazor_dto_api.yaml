@@ -1,13 +1,13 @@
 # Default, safe config
 liquidrazor_dto_api:
-  normalizer_priority: 10
-  strict_types: true
-  # Use '3.0.3' if you need max Redoc OSS compatibility
-  openapi_version: '3.1.0'
-  default_responses:
-    422:
-      class: LiquidRazor\DtoApiBundle\Response\ValidationErrorResponse
-      description: 'Validation error'
-    500:
-      class: LiquidRazor\DtoApiBundle\Response\ErrorResponse
-      description: 'Server error'
+    normalizer_priority: 10
+    strict_types: true
+    # Use '3.0.3' if you need max Redoc OSS compatibility
+    openapi_version: '3.1.0'
+    default_responses:
+        422:
+            class: LiquidRazor\DtoApiBundle\Response\ValidationErrorResponse
+            description: 'Validation error'
+        500:
+            class: LiquidRazor\DtoApiBundle\Response\ErrorResponse
+            description: 'Server error'
