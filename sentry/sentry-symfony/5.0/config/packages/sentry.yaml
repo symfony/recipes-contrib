@@ -8,17 +8,29 @@ when@prod:
             ignore_exceptions:
                 - 'Symfony\Component\ErrorHandler\Error\FatalError'
                 - 'Symfony\Component\Debug\Exception\FatalErrorException'
-
-#        If you are using Monolog, you also need this additional configuration to log the errors correctly:
-#        https://docs.sentry.io/platforms/php/guides/symfony/#monolog-integration
+#
+#        # If you are using Monolog, you also need this additional configuration to log the errors correctly:
+#        # https://docs.sentry.io/platforms/php/guides/symfony/#monolog-integration
 #        register_error_listener: false
 #        register_error_handler: false
-
+#
 #    monolog:
 #        handlers:
+#            # Use this only if you don't want to use structured logging and instead receive
+#            # certain log levels as errors.  
 #            sentry:
 #                type: sentry
 #                level: !php/const Monolog\Logger::ERROR
 #                hub_id: Sentry\State\HubInterface
 #                fill_extra_context: true # Enables sending monolog context to Sentry
 #                process_psr_3_messages: false # Disables the resolution of PSR-3 placeholders
+#
+#            # Use this for structured log integration
+#            sentry_logs:
+#                type: service
+#                id: Sentry\SentryBundle\Monolog\LogsHandler
+#
+#    services:
+#        Sentry\SentryBundle\Monolog\LogsHandler:
+#            arguments:
+#                - !php/const Monolog\Logger::INFO
