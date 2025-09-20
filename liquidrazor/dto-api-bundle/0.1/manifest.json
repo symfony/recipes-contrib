@@ -1,0 +1,15 @@
+{
+    "bundles": {
+        "LiquidRazor\\DtoApiBundle\\LiquidRazorDtoApiBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "post-install-output": [
+        "✅ LiquidRazor DTO API bundle installed.",
+        "Docs: /_docs/swagger  •  /_docs/redoc",
+        "OpenAPI: /_schema/openapi.json",
+        "Config: config/packages/liquidrazor_dto_api.yaml (edit defaults as you wish).",
+        "Routes were added via config/routes/liquidrazor_dto_api.yaml."
+    ]
+}

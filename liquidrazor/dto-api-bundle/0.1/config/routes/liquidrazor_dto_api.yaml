@@ -1,0 +1,4 @@
+# Wire the auto-docs + schema + listener routes from the bundle
+liquidrazor_dto_api:
+    resource: '@LiquidRazorDtoApiBundle/Resources/config/routes.php'
+    prefix: /
