@@ -1,0 +1,32 @@
+php-version = "8.2"
+
+[source]
+paths = [
+  "src",
+  # "tests/",
+  # "importmap.php",
+  # "migrations/",
+]
+includes = ["vendor"]
+excludes = []
+
+[formatter]
+print-width = 120
+tab-width = 4
+use-tabs = false
+
+[linter]
+integrations = ["phpunit", "symfony"]
+
+[linter.rules]
+ambiguous-function-call = { enabled = false }
+literal-named-argument = { enabled = false }
+halstead = { effort-threshold = 7000 }
+
+[analyzer]
+find-unused-definitions = true
+find-unused-expressions = false
+analyze-dead-code = false
+check-throws = true
+allow-possibly-undefined-array-keys = true
+perform-heuristic-checks = true
