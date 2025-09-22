@@ -5,6 +5,6 @@
   * <fg=blue>Review</> your <comment>mago.toml</> file:
     1. Set your exact <comment>php_version</>
     2. Update your <comment>source.paths</> as needed;
-    3. (Optional) Enable the <comment>linter</> as well.
+    3. (Optional) Enable the <comment>linter</> and <comment>analyzer</> as well.
 
-  * <fg=blue>Read</> the full the documentation at <comment>https://mago.carthage.software/#/getting-started/configuration</>
+  * <fg=blue>Read</> the full the documentation at <comment>https://mago.carthage.software/guide/getting-started</>
