@@ -1838,7 +1838,8 @@
         ],
         "sonata-project/page-bundle": [
             "3.9",
-            "4.0"
+            "4.0",
+            "4.9"
         ],
         "sonata-project/translation-bundle": [
             "2.3"
