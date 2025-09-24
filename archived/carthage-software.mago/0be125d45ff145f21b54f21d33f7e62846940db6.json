@@ -1,0 +1,64 @@
+{
+    "manifests": {
+        "carthage-software/mago": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "mago.toml": "mago.toml"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>              </>",
+                    "<bg=blue;fg=white> What's next? </>",
+                    "<bg=blue;fg=white>              </>",
+                    "",
+                    "  * <fg=blue>Review</> your <comment>mago.toml</> file:",
+                    "    1. Set your exact <comment>php_version</>",
+                    "    2. Update your <comment>source.paths</> as needed;",
+                    "    3. (Optional) Enable the <comment>linter</> and <comment>analyzer</> as well.",
+                    "",
+                    "  * <fg=blue>Read</> the full the documentation at <comment>https://mago.carthage.software/guide/getting-started</>"
+                ]
+            },
+            "files": {
+                "mago.toml": {
+                    "contents": [
+                        "php-version = \"8.2\"",
+                        "",
+                        "[source]",
+                        "paths = [",
+                        "  \"src\",",
+                        "  # \"tests/\",",
+                        "  # \"importmap.php\",",
+                        "  # \"migrations/\",",
+                        "]",
+                        "includes = [\"vendor\"]",
+                        "excludes = []",
+                        "",
+                        "[formatter]",
+                        "print-width = 120",
+                        "tab-width = 4",
+                        "use-tabs = false",
+                        "",
+                        "[linter]",
+                        "integrations = [\"phpunit\", \"symfony\"]",
+                        "",
+                        "[linter.rules]",
+                        "ambiguous-function-call = { enabled = false }",
+                        "literal-named-argument = { enabled = false }",
+                        "halstead = { effort-threshold = 7000 }",
+                        "",
+                        "[analyzer]",
+                        "find-unused-definitions = true",
+                        "find-unused-expressions = false",
+                        "analyze-dead-code = false",
+                        "check-throws = true",
+                        "allow-possibly-undefined-array-keys = true",
+                        "perform-heuristic-checks = true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0be125d45ff145f21b54f21d33f7e62846940db6"
+        }
+    }
+}

@@ -242,6 +242,9 @@
         "calliostro/last-fm-client-bundle": [
             "1.0"
         ],
+        "carthage-software/mago": [
+            "1.0"
+        ],
         "ckrack/optimus-bundle": [
             "0.1"
         ],
