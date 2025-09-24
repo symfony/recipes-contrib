@@ -1,0 +1,5 @@
+{
+    "copy-from-recipe": {
+        "mago.toml": "mago.toml"
+    }
+}
