@@ -1,0 +1,8 @@
+altcha:
+    enable: true
+    hmacKey: '%env(ALTCHA_SECRET)%'
+    include_script: true
+
+when@test:
+    altcha:
+        enable: false
