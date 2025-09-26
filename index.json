@@ -1964,6 +1964,10 @@
         "sylius/admin-ui": [
             "0.4"
         ],
+        "sylius/adyen-plugin": [
+            "1.0",
+            "2.0"
+        ],
         "sylius/bootstrap-admin-ui": [
             "0.4"
         ],
