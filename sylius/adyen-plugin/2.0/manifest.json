@@ -1,0 +1,29 @@
+{
+    "bundles": {
+        "Sylius\\AdyenPlugin\\SyliusAdyenPlugin": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "add-lines": [
+        {
+            "file": "assets/admin/entrypoint.js",
+            "content": "import '../../vendor/sylius/adyen-plugin/assets/admin/entrypoint';",
+            "position": "bottom",
+            "warn_if_missing": true
+        },
+        {
+            "file": "assets/shop/entrypoint.js",
+            "content": "import '../../vendor/sylius/adyen-plugin/assets/shop/entrypoint';",
+            "position": "bottom",
+            "warn_if_missing": true
+        },
+        {
+            "file": "package.json",
+            "content": "        \"@adyen/adyen-web\": \"^6.22.0\",",
+            "position": "after_target",
+            "target": "\"dependencies\": {",
+            "warn_if_missing": true
+        }
+    ]
+}
