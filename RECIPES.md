@@ -662,6 +662,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [timiki/rpc-server-bundle](https://packagist.org/packages/timiki/rpc-server-bundle) | [5.0](timiki/rpc-server-bundle/5.0) |
 | [tiriel/firestore-odm-bundle](https://packagist.org/packages/tiriel/firestore-odm-bundle) | [0.2](tiriel/firestore-odm-bundle/0.2) |
 | [tiriel/firestore-security-bridge](https://packagist.org/packages/tiriel/firestore-security-bridge) | [0.2](tiriel/firestore-security-bridge/0.2) |
+| [tito10047/altcha-bundle](https://packagist.org/packages/tito10047/altcha-bundle) | [2.0](tito10047/altcha-bundle/2.0) |
 | [toiba/fullcalendar-bundle](https://packagist.org/packages/toiba/fullcalendar-bundle) | [6.2](toiba/fullcalendar-bundle/6.2) |
 | [trikoder/oauth2-bundle](https://packagist.org/packages/trikoder/oauth2-bundle) | [3.0](trikoder/oauth2-bundle/3.0) |
 | [troopers/alertify-bundle](https://packagist.org/packages/troopers/alertify-bundle) | [3.0](troopers/alertify-bundle/3.0) |

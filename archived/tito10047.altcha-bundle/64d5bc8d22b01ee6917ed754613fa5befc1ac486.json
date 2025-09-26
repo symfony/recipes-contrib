@@ -1,0 +1,44 @@
+{
+    "manifests": {
+        "tito10047/altcha-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Tito10047\\AltchaBundle\\AltchaBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "ALTCHA_SECRET": "%generate(secret)%"
+                }
+            },
+            "files": {
+                "config/packages/altcha.yaml": {
+                    "contents": [
+                        "altcha:",
+                        "    hmacKey: '%env(ALTCHA_SECRET)%'",
+                        "    enable: true",
+                        "    include_script: true",
+                        "",
+                        "when@test:",
+                        "    altcha:",
+                        "        enable: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/altcha.yaml": {
+                    "contents": [
+                        "altcha:",
+                        "    resource: '@AltchaBundle/config/routes.yml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "64d5bc8d22b01ee6917ed754613fa5befc1ac486"
+        }
+    }
+}
