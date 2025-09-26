@@ -1,0 +1,2 @@
+imports:
+    - { resource: "@SyliusAdyenPlugin/config/config.yaml" }
