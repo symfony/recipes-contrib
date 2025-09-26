@@ -1,0 +1,2 @@
+altcha:
+    resource: '@AltchaBundle/config/routes.yml'

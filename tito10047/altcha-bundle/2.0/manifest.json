@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Tito10047\\AltchaBundle\\AltchaBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "ALTCHA_SECRET": "%generate(secret)%"
+    }
+}
