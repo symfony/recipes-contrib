@@ -4,6 +4,6 @@ gtranslate:
     settings:
         default_language: 'en'
         languages: ['en','fr','it','es']
-        wrapper_selector: '.gtranslate_wrapper'
+        wrapper_selector: '.gtranslate_container'
         switcher_horizontal_position: 'right'
         switcher_vertical_position: 'top'
