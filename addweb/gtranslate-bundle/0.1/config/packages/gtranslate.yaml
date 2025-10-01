@@ -1,9 +1,9 @@
 gtranslate:
-  script_src: 'https://cdn.gtranslate.net/widgets/latest/dwf.js'
-  auto_wrapper: true
-  settings:
-    default_language: 'en'
-    languages: ['en','fr','it','es']
-    wrapper_selector: '.gtranslate_wrapper'
-    switcher_horizontal_position: 'right'
-    switcher_vertical_position: 'top'
+    script_src: 'https://cdn.gtranslate.net/widgets/latest/dwf.js'
+    auto_wrapper: true
+    settings:
+        default_language: 'en'
+        languages: ['en','fr','it','es']
+        wrapper_selector: '.gtranslate_wrapper'
+        switcher_horizontal_position: 'right'
+        switcher_vertical_position: 'top'
