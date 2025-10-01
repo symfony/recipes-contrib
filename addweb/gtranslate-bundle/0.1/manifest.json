@@ -1,9 +1,9 @@
 {
-    "bundles": {
-      "Addweb\\GtranslateBundle\\GtranslateBundle": [ "all" ]
-    },
-    "copy-from-recipe": {
-      "config/": "%CONFIG_DIR%/"
-    }
+  "bundles": {
+    "Addweb\\GtranslateBundle\\GtranslateBundle": [ "all" ]
+  },
+  "copy-from-recipe": {
+    "config/": "%CONFIG_DIR%/"
   }
+}
   
