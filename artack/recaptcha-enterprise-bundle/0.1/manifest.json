@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Artack\\RecaptchaEnterpriseBundle\\ArtackRecaptchaEnterpriseBundle": ["all"]
+    },
+    "env": {
+        "ARTACK_RECAPTCHA_ENTERPRISE_PROJECT_ID": "",
+        "ARTACK_RECAPTCHA_ENTERPRISE_SITE_KEY": "",
+        "ARTACK_RECAPTCHA_ENTERPRISE_API_KEY":  ""
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

@@ -1,0 +1,10 @@
+artack_recaptcha_enterprise:
+    enabled: true
+    project_id: '%env(ARTACK_RECAPTCHA_ENTERPRISE_PROJECT_ID)%'
+    site_key: '%env(ARTACK_RECAPTCHA_ENTERPRISE_SITE_KEY)%'
+    api_key: '%env(ARTACK_RECAPTCHA_ENTERPRISE_API_KEY)%'
+    min_score: 0.5
+
+#when@dev:
+#    artack_recaptcha_enterprise:
+#        enabled: false
