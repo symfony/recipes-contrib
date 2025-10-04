@@ -94,6 +94,9 @@
         "armin/scssphp-bundle": [
             "1.0"
         ],
+        "artack/recaptcha-enterprise-bundle": [
+            "0.1"
+        ],
         "artack/svg-inline-bundle": [
             "1.0"
         ],
