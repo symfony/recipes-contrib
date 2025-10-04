@@ -29,6 +29,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [ambient-link/ability-sdk](https://packagist.org/packages/ambient-link/ability-sdk) | [1.0](ambient-link/ability-sdk/1.0) |
 | [andchir/omnipay-bundle](https://packagist.org/packages/andchir/omnipay-bundle) | [1.0](andchir/omnipay-bundle/1.0) |
 | [andchir/shopkeeper4-comments](https://packagist.org/packages/andchir/shopkeeper4-comments) | [1.0](andchir/shopkeeper4-comments/1.0) |
+| [andrew-gos/telegram-bot-bundle](https://packagist.org/packages/andrew-gos/telegram-bot-bundle) | [1.0](andrew-gos/telegram-bot-bundle/1.0) |
 | [anezi/locale-extension](https://packagist.org/packages/anezi/locale-extension) | [1.0](anezi/locale-extension/1.0) |
 | [antishov/doctrine-extensions-bundle](https://packagist.org/packages/antishov/doctrine-extensions-bundle) | [1.4](antishov/doctrine-extensions-bundle/1.4) |
 | [anyx/login-gate-bundle](https://packagist.org/packages/anyx/login-gate-bundle) | [1.0](anyx/login-gate-bundle/1.0) |
