@@ -1,0 +1,20 @@
+{
+    "copy-from-recipe": {
+        "postcss.config.mjs": "postcss.config.mjs"
+    },
+    "add-lines": [
+        {
+            "file": "webpack.config.js",
+            "position": "after_target",
+            "warn_if_missing": true,
+            "target": "    .splitEntryChunks()",
+            "content": "  .enablePostCssLoader()"
+        },
+        {
+            "file": "assets/styles/app.css",
+            "position": "top",
+            "content": "@import \"tailwindcss\";\n@source not \"../../public\";\n",
+            "warn_if_missing": false
+        }
+    ]
+}
