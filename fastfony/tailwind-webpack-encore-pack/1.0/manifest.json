@@ -8,7 +8,7 @@
             "position": "after_target",
             "warn_if_missing": true,
             "target": "    .splitEntryChunks()",
-            "content": "  .enablePostCssLoader()"
+            "content": "    .enablePostCssLoader()"
         },
         {
             "file": "assets/styles/app.css",
