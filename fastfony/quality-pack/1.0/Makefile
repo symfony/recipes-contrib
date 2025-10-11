@@ -1,3 +1,5 @@
+.PHONY: quality
+
 quality:
 	composer audit
 	vendor/bin/php-cs-fixer fix
