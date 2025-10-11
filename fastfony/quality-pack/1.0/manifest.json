@@ -1,0 +1,6 @@
+{
+    "copy-from-package": {
+        ".twig-cs-fixer.dist.php": ".twig-cs-fixer.dist.php",
+        ".github/workflows/quality.yml": ".github/workflows/quality.yml"
+    }
+}
