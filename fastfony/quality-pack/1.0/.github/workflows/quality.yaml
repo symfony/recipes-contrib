@@ -1,48 +1,48 @@
 name: Quality Checks
 
 on:
-  push:
-    branches:
-      - '**'
-  pull_request:
-    branches:
-      - '**'
+    push:
+        branches:
+            - '**'
+    pull_request:
+        branches:
+            - '**'
 
 jobs:
-  security-check:
-    name: Security Check
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+    security-check:
+        name: Security Check
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Checkout code
+                uses: actions/checkout@v4
 
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.2'
-          coverage: none
+            -   name: Setup PHP
+                uses: shivammathur/setup-php@v2
+                with:
+                    php-version: '8.2'
+                    coverage: none
 
-      - name: Install dependencies
-        run: composer install --prefer-dist --no-progress
+            -   name: Install dependencies
+                run: composer install --prefer-dist --no-progress
 
-      - name: Run Composer Security Audit
-        run: composer audit
+            -   name: Run Composer Security Audit
+                run: composer audit
 
-  phpstan:
-    name: PHPStan Analysis
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+    phpstan:
+        name: PHPStan Analysis
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Checkout code
+                uses: actions/checkout@v4
 
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.2'
-          coverage: none
+            -   name: Setup PHP
+                uses: shivammathur/setup-php@v2
+                with:
+                    php-version: '8.2'
+                    coverage: none
 
-      - name: Install dependencies
-        run: composer install --prefer-dist --no-progress
+            -   name: Install dependencies
+                run: composer install --prefer-dist --no-progress
 
-      - name: Run PHPStan
-        run: vendor/bin/phpstan analyse src tests --no-progress --error-format=github
+            -   name: Run PHPStan
+                run: vendor/bin/phpstan analyse src tests --no-progress --error-format=github

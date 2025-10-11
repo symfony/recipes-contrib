@@ -1,6 +1,6 @@
 {
     "copy-from-recipe": {
         ".twig-cs-fixer.dist.php": ".twig-cs-fixer.dist.php",
-        ".github/workflows/quality.yaml": ".github/workflows/quality.yaml"
+        ".github/": ".github/"
     }
 }
