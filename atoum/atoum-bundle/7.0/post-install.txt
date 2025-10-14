@@ -1,0 +1,18 @@
+<bg=blue;fg=white>              </>
+<bg=blue;fg=white> What's next? </>
+<bg=blue;fg=white>              </>
+
+  * <fg=blue>✨ New in 3.0: Modern directory testing</> (no configuration needed!)
+    <comment>php bin/console atoum --directory=tests</>
+    <comment>php bin/console atoum --directory=src/Tests</>
+  
+  * <fg=blue>Create your first test</> extending <comment>atoum\AtoumBundle\Test\Units\Test</>
+  
+  * <fg=blue>Legacy bundle testing</> still works: <comment>php bin/console atoum YourBundle</>
+    Configure bundles in <comment>config/packages/test/atoum.yaml</> if needed
+  
+  * <fg=blue>For web tests</>, extend <comment>atoum\AtoumBundle\Test\Units\WebTestCase</>
+  
+  * <fg=blue>Read the upgrade guide</> at <comment>UPGRADE-3.0.md</>
+  
+  * <fg=blue>Documentation</> at <comment>https://github.com/atoum/AtoumBundle</>

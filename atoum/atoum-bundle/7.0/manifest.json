@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "atoum\\AtoumBundle\\AtoumAtoumBundle": ["dev", "test"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        ".atoum.php": ".atoum.php"
+    },
+    "gitignore": [
+        "/.atoum.php"
+    ]
+}
+
+

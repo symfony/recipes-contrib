@@ -1,0 +1,15 @@
+# Modern Symfony 7+ Approach (Recommended):
+# No configuration needed! Just use --directory option:
+#   bin/console atoum --directory=tests
+#   bin/console atoum --directory=src/Tests
+#   bin/console atoum --directory=tests/Unit --directory=tests/Integration
+
+# Legacy Bundle-based Approach (Still Supported):
+# Uncomment and configure if you need bundle-based testing:
+#atoum_atoum:
+#    bundles:
+#        YourVendor\YourBundle:
+#            directories:
+#                - Tests/Units
+#                - Tests/Controller
+#                - Tests/Functional
