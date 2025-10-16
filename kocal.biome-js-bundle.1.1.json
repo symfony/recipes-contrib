@@ -1,0 +1,52 @@
+{
+    "manifests": {
+        "kocal/biome-js-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Kocal\\BiomeJsBundle\\KocalBiomeJsBundle": [
+                        "dev"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "biome.json": "biome.json",
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "biome.json": {
+                    "contents": [
+                        "{",
+                        "    \"files\": {",
+                        "        \"ignore\": [",
+                        "            \"assets/vendor/*\",",
+                        "            \"assets/controllers.json\",",
+                        "            \"composer.json\",",
+                        "            \"public/assets/*\",",
+                        "            \"public/bundles/*\",",
+                        "            \"var/cache/*\",",
+                        "            \"vendor/*\"",
+                        "        ]",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/kocal_biome_js.yaml": {
+                    "contents": [
+                        "when@dev:",
+                        "    kocal_biome_js:",
+                        "        # Biome.js CLI version to use:",
+                        "        # - \"latest_stable\": use the latest stable version",
+                        "        # - \"latest_nightly\": use the latest nightly version",
+                        "        # - or a specific version, e.g. \"v1.9.4\", find available tags at https://github.com/biomejs/biome/tags",
+                        "        binary_version: 'v1.9.4'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "17bbb0a56ad6df5d58a0c8758403d25560206ecc"
+        }
+    }
+}

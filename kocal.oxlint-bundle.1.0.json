@@ -1,0 +1,53 @@
+{
+    "manifests": {
+        "kocal/oxlint-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Kocal\\OxlintBundle\\KocalOxlintBundle": [
+                        "dev"
+                    ]
+                },
+                "copy-from-recipe": {
+                    ".oxlintrc.json": ".oxlintrc.json",
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "gitignore": [
+                    "/%BIN_DIR%/oxlint"
+                ]
+            },
+            "files": {
+                ".oxlintrc.json": {
+                    "contents": [
+                        "{",
+                        "    \"ignorePatterns\": [",
+                        "        \"assets/vendor/**\",",
+                        "        \"assets/controllers.json\",",
+                        "        \"public/assets/**\",",
+                        "        \"public/bundles/**\",",
+                        "        \"tests/**\",",
+                        "        \"var/**\",",
+                        "        \"vendor/**\",",
+                        "        \"composer.json\",",
+                        "        \"package.json\"",
+                        "    ]",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/kocal_oxlint.yaml": {
+                    "contents": [
+                        "when@dev:",
+                        "    kocal_oxlint:",
+                        "        # The Oxlint binary version to use, that you can find at https://github.com/oxc-project/oxc/tags,",
+                        "        # it follows the pattern \"oxlint_v<binary_version>\"",
+                        "        binary_version: '1.8.0'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "4bbabde32f7e116ae3910cdb886113ca3c6488cd"
+        }
+    }
+}

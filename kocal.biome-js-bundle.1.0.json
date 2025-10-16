@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "kocal/biome-js-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Kocal\\BiomeJsBundle\\KocalBiomeJsBundle": [
+                        "dev"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "biome.json": "biome.json",
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "biome.json": {
+                    "contents": [
+                        "{",
+                        "    \"files\": {",
+                        "        \"ignore\": [",
+                        "            \"assets/vendor/*\",",
+                        "            \"assets/controllers.json\",",
+                        "            \"composer.json\",",
+                        "            \"public/assets/*\",",
+                        "            \"public/bundles/*\",",
+                        "            \"var/cache/*\",",
+                        "            \"vendor/*\"",
+                        "        ]",
+                        "    }",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/kocal_biome_js.yaml": {
+                    "contents": [
+                        "when@dev:",
+                        "    kocal_biome_js:",
+                        "        # Explicitly configure the version of Biome.js to use (https://github.com/biomejs/biome/tags), or null to use the latest version",
+                        "        binary_version: null",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "34d8d76c92e04138cf30650a95e7fa21e7be9edf"
+        }
+    }
+}
