@@ -207,6 +207,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [exercise/htmlpurifier-bundle](https://packagist.org/packages/exercise/htmlpurifier-bundle) | [3.0](exercise/htmlpurifier-bundle/3.0) |
 | [expertcoder/swiftmailer-send-grid-bundle](https://packagist.org/packages/expertcoder/swiftmailer-send-grid-bundle) | [2.0](expertcoder/swiftmailer-send-grid-bundle/2.0) |
 | [facile-it/mongodb-bundle](https://packagist.org/packages/facile-it/mongodb-bundle) | [0.6](facile-it/mongodb-bundle/0.6) |
+| [fastfony/quality-pack](https://packagist.org/packages/fastfony/quality-pack) | [1.0](fastfony/quality-pack/1.0) |
 | [fd6130/exabytes-sms-bundle](https://packagist.org/packages/fd6130/exabytes-sms-bundle) | [1.0](fd6130/exabytes-sms-bundle/1.0) |
 | [fdekker/log-viewer-bundle](https://packagist.org/packages/fdekker/log-viewer-bundle) | [1.0](fdekker/log-viewer-bundle/1.0) |
 | [felds/quick-mailer-bundle](https://packagist.org/packages/felds/quick-mailer-bundle) | [5.0](felds/quick-mailer-bundle/5.0) |

@@ -1,0 +1,96 @@
+{
+    "manifests": {
+        "fastfony/quality-pack": {
+            "manifest": {
+                "copy-from-recipe": {
+                    ".twig-cs-fixer.dist.php": ".twig-cs-fixer.dist.php",
+                    ".github/": ".github/"
+                },
+                "makefile": [
+                    ".PHONY: quality",
+                    "",
+                    "quality:",
+                    "\tcomposer audit",
+                    "\tvendor/bin/php-cs-fixer fix",
+                    "\tvendor/bin/twig-cs-fixer lint --fix templates/",
+                    "\tvendor/bin/phpstan analyse src tests"
+                ]
+            },
+            "files": {
+                ".github/workflows/quality.yaml": {
+                    "contents": [
+                        "name: Quality Checks",
+                        "",
+                        "on:",
+                        "    push:",
+                        "        branches:",
+                        "            - '**'",
+                        "    pull_request:",
+                        "        branches:",
+                        "            - '**'",
+                        "",
+                        "jobs:",
+                        "    security-check:",
+                        "        name: Security Check",
+                        "        runs-on: ubuntu-latest",
+                        "        steps:",
+                        "            -   name: Checkout code",
+                        "                uses: actions/checkout@v4",
+                        "",
+                        "            -   name: Setup PHP",
+                        "                uses: shivammathur/setup-php@v2",
+                        "                with:",
+                        "                    php-version: '8.2'",
+                        "                    coverage: none",
+                        "",
+                        "            -   name: Install dependencies",
+                        "                run: composer install --prefer-dist --no-progress",
+                        "",
+                        "            -   name: Run Composer Security Audit",
+                        "                run: composer audit",
+                        "",
+                        "    phpstan:",
+                        "        name: PHPStan Analysis",
+                        "        runs-on: ubuntu-latest",
+                        "        steps:",
+                        "            -   name: Checkout code",
+                        "                uses: actions/checkout@v4",
+                        "",
+                        "            -   name: Setup PHP",
+                        "                uses: shivammathur/setup-php@v2",
+                        "                with:",
+                        "                    php-version: '8.2'",
+                        "                    coverage: none",
+                        "",
+                        "            -   name: Install dependencies",
+                        "                run: composer install --prefer-dist --no-progress",
+                        "",
+                        "            -   name: Run PHPStan",
+                        "                run: vendor/bin/phpstan analyse src tests --no-progress --error-format=github",
+                        ""
+                    ],
+                    "executable": false
+                },
+                ".twig-cs-fixer.dist.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "use TwigCsFixer\\Config\\Config;",
+                        "use TwigCsFixer\\Ruleset\\Ruleset;",
+                        "",
+                        "$ruleset = new Ruleset();",
+                        "$ruleset->addStandard(new \\TwigCsFixer\\Standard\\TwigCsFixer());",
+                        "",
+                        "$config = new Config();",
+                        "$config->setRuleset($ruleset);",
+                        "",
+                        "return $config;",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "20bd3e46539bd63f63e7ffc482412e319c46646f"
+        }
+    }
+}

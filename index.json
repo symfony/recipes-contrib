@@ -651,6 +651,9 @@
         "facile-it/mongodb-bundle": [
             "0.6"
         ],
+        "fastfony/quality-pack": [
+            "1.0"
+        ],
         "fd6130/exabytes-sms-bundle": [
             "1.0"
         ],
