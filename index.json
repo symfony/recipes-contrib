@@ -654,6 +654,9 @@
         "fastfony/quality-pack": [
             "1.0"
         ],
+        "fastfony/tailwind-webpack-encore-pack": [
+            "1.0"
+        ],
         "fd6130/exabytes-sms-bundle": [
             "1.0"
         ],
