@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "ApexToolbox\\Symfony\\ApexToolboxBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "APEX_TOOLBOX_TOKEN": "your_token_here"
+    }
+}
