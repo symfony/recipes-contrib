@@ -1,0 +1,48 @@
+{
+    "manifests": {
+        "spomky-labs/pwa-bundle": {
+            "manifest": {
+                "bundles": {
+                    "SpomkyLabs\\PwaBundle\\SpomkyLabsPwaBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%"
+                },
+                "add-lines": [
+                    {
+                        "file": "templates/base.html.twig",
+                        "content": "        {{ pwa() }}",
+                        "position": "after_target",
+                        "target": "</title>",
+                        "warn_if_missing": true
+                    }
+                ],
+                "gitignore": [
+                    "/public/idb",
+                    "/public/pwa",
+                    "/public/workbox",
+                    "/public/favicon.ico",
+                    "/public/site.webmanifest",
+                    "/public/site.*.webmanifest",
+                    "/public/sw.js"
+                ]
+            },
+            "files": {
+                "config/packages/pwa.yaml": {
+                    "contents": [
+                        "# Documentation available at https://pwa.spomky-labs.com/",
+                        "## Please add the favicons, manifest or serviceworker sections depending on your needs.",
+                        "pwa:",
+                        "    asset_compiler: false # Default to true. Will change to false in 2.0.0.",
+                        "    #image_processor: 'pwa.image_processor.imagick' # Or 'pwa.image_processor.gd'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ac33d9498ab25856f16d1d7df9ad4b9b0cad066d"
+        }
+    }
+}

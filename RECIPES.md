@@ -588,6 +588,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [spiriitlabs/auth-log-bundle](https://packagist.org/packages/spiriitlabs/auth-log-bundle) | [1.0](spiriitlabs/auth-log-bundle/1.0) |
 | [spomky-labs/jose-bundle](https://packagist.org/packages/spomky-labs/jose-bundle) | [2.2](spomky-labs/jose-bundle/2.2) |
 | [spomky-labs/lexik-jose-bridge](https://packagist.org/packages/spomky-labs/lexik-jose-bridge) | [2.0](spomky-labs/lexik-jose-bridge/2.0) |
+| [spomky-labs/pwa-bundle](https://packagist.org/packages/spomky-labs/pwa-bundle) | [1.3](spomky-labs/pwa-bundle/1.3) |
 | [sprintechnology/firebase-cloud-messaging](https://packagist.org/packages/sprintechnology/firebase-cloud-messaging) | [1.0](sprintechnology/firebase-cloud-messaging/1.0) |
 | [squizlabs/php_codesniffer](https://packagist.org/packages/squizlabs/php_codesniffer) | [3.6](squizlabs/php_codesniffer/3.6) |
 | [sroze/messenger-enqueue-transport](https://packagist.org/packages/sroze/messenger-enqueue-transport) | [0.1](sroze/messenger-enqueue-transport/0.1) |
