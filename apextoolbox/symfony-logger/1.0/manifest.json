@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "ApexToolbox\\Symfony\\ApexToolboxBundle": ["all"]
+        "ApexToolbox\\SymfonyLogger\\ApexToolboxBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
