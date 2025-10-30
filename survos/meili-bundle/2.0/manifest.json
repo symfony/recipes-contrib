@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Survos\\MeiliBundle\\SurvosMeiliBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "MEILI_SERVER": "127.0.0.1:7700",
+        "MEILI_API_KEY": "",
+        "MEILI_SEARCH_KEY": ""
+    }
+}
