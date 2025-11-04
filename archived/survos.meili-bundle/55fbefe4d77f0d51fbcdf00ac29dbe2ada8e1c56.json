@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "survos/meili-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Survos\\MeiliBundle\\SurvosMeiliBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "MEILI_SERVER": "127.0.0.1:7700",
+                    "MEILI_API_KEY": "",
+                    "MEILI_SEARCH_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/survos_meili.yaml": {
+                    "contents": [
+                        "survos_meili:",
+                        "    host: '%env(default::MEILI_SERVER)%'",
+                        "    apiKey: '%env(default::MEILI_API_KEY)%'",
+                        "    searchKey: '%env(default::MEILI_SEARCH_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/survos_meili.yaml": {
+                    "contents": [
+                        "survos_meili:",
+                        "    resource: '@SurvosMeiliBundle/config/routes.yaml'",
+                        "    prefix: '/meili'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "55fbefe4d77f0d51fbcdf00ac29dbe2ada8e1c56"
+        }
+    }
+}

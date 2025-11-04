@@ -609,6 +609,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [survos/bunny-bundle](https://packagist.org/packages/survos/bunny-bundle) | [1.5](survos/bunny-bundle/1.5) |
 | [survos/command-bundle](https://packagist.org/packages/survos/command-bundle) | [1.5](survos/command-bundle/1.5) |
 | [survos/crawler-bundle](https://packagist.org/packages/survos/crawler-bundle) | [1.5](survos/crawler-bundle/1.5) |
+| [survos/meili-bundle](https://packagist.org/packages/survos/meili-bundle) | [2.0](survos/meili-bundle/2.0) |
 | [svc/contactform-bundle](https://packagist.org/packages/svc/contactform-bundle) | [1.0](svc/contactform-bundle/1.0) |
 | [svc/param-bundle](https://packagist.org/packages/svc/param-bundle) | [1.0](svc/param-bundle/1.0) |
 | [svc/util-bundle](https://packagist.org/packages/svc/util-bundle) | [1.0](svc/util-bundle/1.0) |
