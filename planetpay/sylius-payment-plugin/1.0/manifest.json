@@ -1,0 +1,8 @@
+{
+  "bundles": {
+    "PlanetPay\\SyliusPaymentPlugin\\PlanetPaySyliusPaymentPlugin": ["all"]
+  },
+  "copy-from-recipe": {
+    "config/": "%CONFIG_DIR%/"
+  }
+}
