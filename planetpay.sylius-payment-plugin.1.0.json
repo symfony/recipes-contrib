@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "planetpay/sylius-payment-plugin": {
+            "manifest": {
+                "bundles": {
+                    "PlanetPay\\SyliusPaymentPlugin\\PlanetPaySyliusPaymentPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/planetpay_sylius.yaml": {
+                    "contents": [
+                        "imports:",
+                        "  - { resource: \"@PlanetPaySyliusPaymentPlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sylius_planetpay.yaml": {
+                    "contents": [
+                        "sylius_planetpay:",
+                        "    resource: \"@PlanetPaySyliusPaymentPlugin/config/routes.yaml\""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "82b75ab9129a27e24199469d7030bdcd0400a3ca"
+        }
+    }
+}
