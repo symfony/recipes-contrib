@@ -1,0 +1,79 @@
+## BitBag Elasticsearch Plugin for Sylius
+
+### Requirements
+* Elasticsearch server 7.x or higher must be running
+* PHP ^8.2 or ^8.3
+* Sylius ^2.0
+
+### Next steps:
+
+1. Update your ProductVariant entity to use the plugin's trait and interface:
+
+   src/Entity/Product/ProductVariant.php:
+   ```php
+   use BitBag\SyliusElasticsearchPlugin\Model\ProductVariantInterface;
+   use BitBag\SyliusElasticsearchPlugin\Model\ProductVariantTrait;
+
+   class ProductVariant extends BaseProductVariant implements ProductVariantInterface
+   {
+       use ProductVariantTrait;
+   }
+   ```
+
+2. Configure Webpack (webpack.config.js):
+   ```js
+   const [ bitbagElasticSearchShop ] = require('./vendor/bitbag/elasticsearch-plugin/webpack.config.js');
+   module.exports = [..., bitbagElasticSearchShop];
+   ```
+
+3. Add asset configuration (config/packages/assets.yaml):
+   ```yaml
+   framework:
+       assets:
+           packages:
+               elasticsearch_shop:
+                   json_manifest_path: '%kernel.project_dir%/public/build/bitbag/elasticsearch/shop/manifest.json'
+   ```
+
+4. Add webpack encore configuration (config/packages/webpack_encore.yaml):
+   ```yaml
+   webpack_encore:
+       builds:
+           elasticsearch_shop: '%kernel.project_dir%/public/build/bitbag/elasticsearch/shop'
+   ```
+
+5. Add encore functions to your templates:
+   ```twig
+   {# templates/bundles/SyliusShopBundle/_javascripts.html.twig #}
+   {{ encore_entry_script_tags('bitbag-elasticsearch-shop', null, 'elasticsearch_shop') }}
+
+   {# templates/bundles/SyliusShopBundle/_stylesheets.html.twig #}
+   {{ encore_entry_link_tags('bitbag-elasticsearch-shop', null, 'elasticsearch_shop') }}
+   ```
+
+6. Configure Elasticsearch connection in .env:
+   ```
+   ELASTICSEARCH_URL=http://localhost:9200/
+   ```
+
+7. Remove default FOSElasticaBundle index from config/packages/fos_elastica.yaml:
+   ```yaml
+   fos_elastica:
+       clients:
+           default: { url: '%env(ELASTICSEARCH_URL)%' }
+   ```
+
+8. Install assets and build frontend:
+   ```
+   bin/console assets:install
+   yarn install
+   yarn encore dev
+   ```
+
+9. Clear cache and populate Elasticsearch:
+   ```
+   bin/console cache:clear
+   bin/console fos:elastica:populate
+   ```
+
+For more information, visit: https://github.com/BitBagCommerce/SyliusElasticsearchPlugin
