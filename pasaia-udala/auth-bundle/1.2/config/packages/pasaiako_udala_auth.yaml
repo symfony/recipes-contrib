@@ -2,7 +2,7 @@ pasaiako_udala_auth:
     server:
         host: '%env(LDAP_HOST)%'
         port: '%env(int:LDAP_PORT)%'
-        encryption: '%env(default:encryption_default:LDAP_ENCRYPTION)%'
+        encryption: 'none'
         base_dn: '%env(LDAP_BASE_DN)%'
         user_dn_pattern: '%env(LDAP_USER_DN_PATTERN)%'
         bind_dn: '%env(default::LDAP_BIND_DN)%'
@@ -21,6 +21,3 @@ pasaiako_udala_auth:
         base_dn: null
         filter: '(member={user_dn})'
         recursive: true
-
-parameters:
-    encryption_default: 'none'

@@ -8,7 +8,6 @@
     "env": {
         "LDAP_HOST": "ldap.example.com",
         "LDAP_PORT": "389",
-        "LDAP_ENCRYPTION": "none",
         "LDAP_BASE_DN": "dc=example,dc=com",
         "LDAP_USER_DN_PATTERN": "uid={username},ou=users,dc=example,dc=com",
         "LDAP_BIND_DN": "",
