@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Luzrain\\TelegramBotBundle\\TelegramBotBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "TELEGRAM_API_TOKEN": ""
+    }
+}
