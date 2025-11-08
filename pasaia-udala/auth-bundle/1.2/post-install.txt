@@ -1,0 +1,42 @@
+# PasaiakoUdalaAuthBundle - Instalazio osteko mezua
+
+## Konfigurazioa osatu da
+
+**PasaiakoUdalaAuthBundle** bundle-a ondo instalatu da.
+
+### Hurrengo pausoak:
+
+1. **Ingurune aldagaiak konfiguratu** zure `.env` fitxategian:
+   - Eguneratu `LDAP_HOST`, `LDAP_BASE_DN`, `LDAP_USER_DN_PATTERN`, etab. balioak.
+   - Konfiguratu `LDAP_BIND_DN` eta `LDAP_BIND_PASSWORD` zure LDAP zerbitzariak bilaketarako autentifikazioa eskatzen badu.
+
+2. **Berrikusi konfigurazioa** `config/packages/pasaiako_udala_auth.yaml` fitxategian:
+   - Egokitu LDAP rolen mapaketa Symfony roletara `role_mapping` atalean.
+   - Egiaztatu LDAP zerbitzariaren parametroak zure azpiegiturarako.
+
+3. **Konfiguratu Security** `config/packages/security.yaml` fitxategian:
+   - Iruzkindurik dagoen adibide bat gehitu da behar den konfigurazioarekin.
+   - Desiruzkindu eta egokitu atalak zure beharraren arabera (provider, firewall, authenticators).
+   - **GARRANTZITSUA**: Authenticator anitz erabiltzen badituzu, definitu `entry_point: PasaiaUdala\AuthBundle\Security\LdapAuthenticator`.
+
+4. **Sortu kontroladoreak** (existitzen ez badira):
+   - `SecurityController` LDAP login-a eta autentifikazio hautatzailea kudeatzeko.
+   - `OAuth2Controller` ziurtagiri bidezko autentifikazioa (Izenpe) erabiliko baduzu.
+   - Kontsultatu dokumentazioa `vendor/pasaia-udala/auth-bundle/docs/INSTALLATION.md` fitxategian.
+
+5. **Egiaztatu instalazioa**:
+   ```bash
+   php bin/console debug:container | grep -i ldap
+   php bin/console debug:config pasaiako_udala_auth
+   ```
+
+### Dokumentazio gehigarria:
+
+- Instalazio osoa: `vendor/pasaia-udala/auth-bundle/docs/INSTALLATION.md`
+- LDAP konfigurazio aurreratua: `vendor/pasaia-udala/auth-bundle/docs/LDAP.md`
+- Izenpe/OAuth2 konfigurazioa: `vendor/pasaia-udala/auth-bundle/docs/IZENPE.md`
+- Txantiloiak pertsonalizatzea: `vendor/pasaia-udala/auth-bundle/docs/TEMPLATES.md`
+- Arazoen konponketa: `vendor/pasaia-udala/auth-bundle/docs/TROUBLESHOOTING.md`
+
+Eskerrik asko!
+

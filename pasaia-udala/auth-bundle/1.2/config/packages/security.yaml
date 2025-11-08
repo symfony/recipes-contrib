@@ -1,0 +1,28 @@
+security:
+    # Descomentar y configurar si vas a usar el bundle de autenticación LDAP
+    # providers:
+    #     ldap_user_provider:
+    #         id: PasaiaUdala\AuthBundle\Security\LdapUserProvider
+
+    # firewalls:
+    #     main:
+    #         lazy: true
+    #         provider: ldap_user_provider
+    #         
+    #         # IMPORTANTE: cuando usas múltiples authenticators, define entry_point
+    #         entry_point: PasaiaUdala\AuthBundle\Security\LdapAuthenticator
+    #         
+    #         custom_authenticators:
+    #             - PasaiaUdala\AuthBundle\Security\LdapAuthenticator
+    #             # Descomentar si también usas autenticación por certificado (OAuth2/Izenpe):
+    #             # - PasaiaUdala\AuthBundle\Security\CertificateAuthenticator
+    #         
+    #         logout:
+    #             path: app_logout
+    #             target: /
+    #
+    # access_control:
+    #     - { path: ^/login, roles: PUBLIC_ACCESS }
+    #     - { path: ^/auth-selector, roles: PUBLIC_ACCESS }
+    #     - { path: ^/oauth, roles: PUBLIC_ACCESS }
+    #     - { path: ^/, roles: ROLE_USER }

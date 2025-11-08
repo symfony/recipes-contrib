@@ -1,0 +1,23 @@
+pasaiako_udala_auth:
+    server:
+        host: '%env(LDAP_HOST)%'
+        port: '%env(int:LDAP_PORT)%'
+        encryption: '%env(LDAP_ENCRYPTION)%'
+        base_dn: '%env(LDAP_BASE_DN)%'
+        user_dn_pattern: '%env(LDAP_USER_DN_PATTERN)%'
+        bind_dn: '%env(LDAP_BIND_DN)%'
+        bind_password: '%env(LDAP_BIND_PASSWORD)%'
+    
+    role_mapping:
+        # Mapea tus grupos LDAP a roles de Symfony
+        # Ejemplo:
+        # informatika: ROLE_ADMIN
+        # langilea: ROLE_USER
+    
+    default_role: ROLE_USER
+    
+    group_search:
+        enabled: true
+        base_dn: null
+        filter: '(member={user_dn})'
+        recursive: true
