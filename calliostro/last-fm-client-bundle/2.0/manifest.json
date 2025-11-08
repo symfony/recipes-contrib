@@ -1,6 +1,6 @@
 {
     "bundles": {
-        "Calliostro\\LastFmClientBundle\\CalliostroLastFmClientBundle": ["all"]
+        "Calliostro\\LastfmBundle\\CalliostroLastfmBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
