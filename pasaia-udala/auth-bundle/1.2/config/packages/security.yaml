@@ -14,7 +14,7 @@ security:
             custom_authenticators:
                 - PasaiaUdala\AuthBundle\Security\LdapAuthenticator
                 - PasaiaUdala\AuthBundle\Security\CertificateAuthenticator
-            
+
             logout:
                 path: app_logout
                 target: app_auth_selector
