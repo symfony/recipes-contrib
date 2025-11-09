@@ -62,6 +62,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [beelab/test-bundle](https://packagist.org/packages/beelab/test-bundle) | [2.0](beelab/test-bundle/2.0) |
 | [birkof/netopia-mobilpay-bundle](https://packagist.org/packages/birkof/netopia-mobilpay-bundle) | [1.0](birkof/netopia-mobilpay-bundle/1.0) |
 | [bitbag/cms-plugin](https://packagist.org/packages/bitbag/cms-plugin) | [3.0](bitbag/cms-plugin/3.0) |
+| [bitbag/elasticsearch-plugin](https://packagist.org/packages/bitbag/elasticsearch-plugin) | [5.0](bitbag/elasticsearch-plugin/5.0) |
 | [bitbag/mailchimp-plugin](https://packagist.org/packages/bitbag/mailchimp-plugin) | [1.2](bitbag/mailchimp-plugin/1.2) |
 | [bitbag/product-bundle-plugin](https://packagist.org/packages/bitbag/product-bundle-plugin) | [1.2](bitbag/product-bundle-plugin/1.2) |
 | [bitbag/shipping-export-plugin](https://packagist.org/packages/bitbag/shipping-export-plugin) | [1.0](bitbag/shipping-export-plugin/1.0) |

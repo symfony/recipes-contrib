@@ -183,6 +183,9 @@
         "bitbag/cms-plugin": [
             "3.0"
         ],
+        "bitbag/elasticsearch-plugin": [
+            "5.0"
+        ],
         "bitbag/mailchimp-plugin": [
             "1.2"
         ],
