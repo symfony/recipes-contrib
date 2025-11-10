@@ -348,6 +348,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [loophp/psr17](https://packagist.org/packages/loophp/psr17) | [1.0](loophp/psr17/1.0) |
 | [loophp/repository-monadic-helper](https://packagist.org/packages/loophp/repository-monadic-helper) | [1.0](loophp/repository-monadic-helper/1.0) |
 | [lox24eu/lox24_api_client_bundle](https://packagist.org/packages/lox24eu/lox24_api_client_bundle) | [0.3](lox24eu/lox24_api_client_bundle/0.3) |
+| [luzrain/telegram-bot-bundle](https://packagist.org/packages/luzrain/telegram-bot-bundle) | [2.1](luzrain/telegram-bot-bundle/2.1) |
 | [luzrain/workerman-bundle](https://packagist.org/packages/luzrain/workerman-bundle) | [0.1](luzrain/workerman-bundle/0.1) |
 | [m-adamski/symfony-mailer-bundle](https://packagist.org/packages/m-adamski/symfony-mailer-bundle) | [1.0](m-adamski/symfony-mailer-bundle/1.0) |
 | [m-adamski/symfony-schedule-bundle](https://packagist.org/packages/m-adamski/symfony-schedule-bundle) | [1.0](m-adamski/symfony-schedule-bundle/1.0) |

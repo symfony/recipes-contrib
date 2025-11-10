@@ -1107,6 +1107,9 @@
         "lox24eu/lox24_api_client_bundle": [
             "0.3"
         ],
+        "luzrain/telegram-bot-bundle": [
+            "2.1"
+        ],
         "luzrain/workerman-bundle": [
             "0.1"
         ],

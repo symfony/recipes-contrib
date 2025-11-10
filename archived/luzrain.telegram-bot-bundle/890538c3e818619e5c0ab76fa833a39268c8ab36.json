@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "luzrain/telegram-bot-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Luzrain\\TelegramBotBundle\\TelegramBotBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "TELEGRAM_API_TOKEN": ""
+                }
+            },
+            "files": {
+                "config/packages/telegram_bot.yaml": {
+                    "contents": [
+                        "telegram_bot:",
+                        "    api_token: '%env(resolve:TELEGRAM_API_TOKEN)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "890538c3e818619e5c0ab76fa833a39268c8ab36"
+        }
+    }
+}
