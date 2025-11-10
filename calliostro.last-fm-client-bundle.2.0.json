@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "calliostro/last-fm-client-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Calliostro\\LastfmBundle\\CalliostroLastfmBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "LASTFM_API_KEY": "",
+                    "LASTFM_SECRET": ""
+                }
+            },
+            "files": {
+                "config/calliostro_lastfm.yaml": {
+                    "contents": [
+                        "calliostro_lastfm:",
+                        "    # Required: API Key (get from https://www.last.fm/api/account/create)",
+                        "    api_key: '%env(LASTFM_API_KEY)%'",
+                        "",
+                        "    # Required for write operations: API Secret  ",
+                        "    api_secret: '%env(LASTFM_SECRET)%'",
+                        "",
+                        "    # Optional: HTTP User-Agent header for API requests",
+                        "    # user_agent: 'MyApp/1.0 +https://myapp.com'",
+                        "",
+                        "    # Optional: Professional rate limiting (requires symfony/rate-limiter)",
+                        "    # rate_limiter: lastfm_api       # Your configured RateLimiterFactory service",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "15674e4f3d6b6f90ee007dbb38f2e06171c68a13"
+        }
+    }
+}

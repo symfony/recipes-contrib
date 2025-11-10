@@ -249,7 +249,8 @@
             "4.0"
         ],
         "calliostro/last-fm-client-bundle": [
-            "1.0"
+            "1.0",
+            "2.0"
         ],
         "carthage-software/mago": [
             "1.0"
