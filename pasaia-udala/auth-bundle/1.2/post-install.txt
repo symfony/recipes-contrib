@@ -1,42 +1,69 @@
-# PasaiakoUdalaAuthBundle - Instalazio osteko mezua
+# PasaiakoUdalaAuthBundle - Post-install message
 
-## Konfigurazioa osatu da
+## Configuration completed
 
-**PasaiakoUdalaAuthBundle** bundle-a ondo instalatu da.
+The **PasaiakoUdalaAuthBundle** has been installed successfully.
 
-### Hurrengo pausoak:
+### Next steps
 
-1. **Ingurune aldagaiak konfiguratu** zure `.env` fitxategian:
-   - Eguneratu `LDAP_HOST`, `LDAP_BASE_DN`, `LDAP_USER_DN_PATTERN`, etab. balioak.
-   - Konfiguratu `LDAP_BIND_DN` eta `LDAP_BIND_PASSWORD` zure LDAP zerbitzariak bilaketarako autentifikazioa eskatzen badu.
+1. **Configure environment variables** in your `.env` file:
+   - Update values for `LDAP_HOST`, `LDAP_BASE_DN`, `LDAP_USER_DN_PATTERN`, etc.
+   - Set `LDAP_BIND_DN` and `LDAP_BIND_PASSWORD` if your LDAP server requires a service account for searches.
 
-2. **Berrikusi konfigurazioa** `config/packages/pasaiako_udala_auth.yaml` fitxategian:
-   - Egokitu LDAP rolen mapaketa Symfony roletara `role_mapping` atalean.
-   - Egiaztatu LDAP zerbitzariaren parametroak zure azpiegiturarako.
+2. **Review the configuration** in `config/packages/pasaiako_udala_auth.yaml`:
+   - Adjust LDAP-to-Symfony role mapping under the `role_mapping` section.
+   - Verify the LDAP server parameters match your infrastructure.
 
-3. **Konfiguratu Security** `config/packages/security.yaml` fitxategian:
-   - Iruzkindurik dagoen adibide bat gehitu da behar den konfigurazioarekin.
-   - Desiruzkindu eta egokitu atalak zure beharraren arabera (provider, firewall, authenticators).
-   - **GARRANTZITSUA**: Authenticator anitz erabiltzen badituzu, definitu `entry_point: PasaiaUdala\AuthBundle\Security\LdapAuthenticator`.
+3. **Configure Symfony Security** in `config/packages/security.yaml`.
+   
+   Add this configuration to your `config/packages/security.yaml` file:
 
-4. **Sortu kontroladoreak** (existitzen ez badira):
-   - `SecurityController` LDAP login-a eta autentifikazio hautatzailea kudeatzeko.
-   - `OAuth2Controller` ziurtagiri bidezko autentifikazioa (Izenpe) erabiliko baduzu.
-   - Kontsultatu dokumentazioa `vendor/pasaia-udala/auth-bundle/docs/INSTALLATION.md` fitxategian.
+   ```yaml
+   security:
+       providers:
+           ldap_user_provider:
+               id: PasaiaUdala\AuthBundle\Security\LdapUserProvider
 
-5. **Egiaztatu instalazioa**:
+       firewalls:
+           main:
+               lazy: true
+               provider: ldap_user_provider
+               entry_point: PasaiaUdala\AuthBundle\Security\LdapAuthenticator
+               
+               custom_authenticators:
+                   - PasaiaUdala\AuthBundle\Security\LdapAuthenticator
+                   - PasaiaUdala\AuthBundle\Security\CertificateAuthenticator
+               
+               logout:
+                   path: app_logout
+                   target: app_auth_selector
+
+       access_control:
+           - { path: ^/login, roles: PUBLIC_ACCESS }
+           - { path: ^/oauth, roles: PUBLIC_ACCESS }
+           - { path: ^/auth-selector, roles: PUBLIC_ACCESS }
+           - { path: ^/, roles: ROLE_USER }
+   ```
+
+   **IMPORTANT**: If you use multiple authenticators, define the `entry_point`.
+
+4. **Create controllers** if they do not exist:
+   - `SecurityController` to handle LDAP login and the auth selector.
+   - `OAuth2Controller` if you use certificate-based (Izenpe) authentication.
+   - See the bundle documentation at `vendor/pasaia-udala/auth-bundle/docs/INSTALLATION.md` for details.
+
+5. **Verify the installation**:
    ```bash
    php bin/console debug:container | grep -i ldap
    php bin/console debug:config pasaiako_udala_auth
    ```
 
-### Dokumentazio gehigarria:
+### Additional documentation
 
-- Instalazio osoa: `vendor/pasaia-udala/auth-bundle/docs/INSTALLATION.md`
-- LDAP konfigurazio aurreratua: `vendor/pasaia-udala/auth-bundle/docs/LDAP.md`
-- Izenpe/OAuth2 konfigurazioa: `vendor/pasaia-udala/auth-bundle/docs/IZENPE.md`
-- Txantiloiak pertsonalizatzea: `vendor/pasaia-udala/auth-bundle/docs/TEMPLATES.md`
-- Arazoen konponketa: `vendor/pasaia-udala/auth-bundle/docs/TROUBLESHOOTING.md`
+- Full installation guide: `vendor/pasaia-udala/auth-bundle/docs/INSTALLATION.md`
+- Advanced LDAP configuration: `vendor/pasaia-udala/auth-bundle/docs/LDAP.md`
+- Izenpe / OAuth2 configuration: `vendor/pasaia-udala/auth-bundle/docs/IZENPE.md`
+- Customizing templates: `vendor/pasaia-udala/auth-bundle/docs/TEMPLATES.md`
+- Troubleshooting: `vendor/pasaia-udala/auth-bundle/docs/TROUBLESHOOTING.md`
 
-Eskerrik asko!
-
+Thank you!
