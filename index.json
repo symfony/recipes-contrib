@@ -36,6 +36,9 @@
         "agilelab-fr/captcha-bundle": [
             "1.0"
         ],
+        "ahmed-bhs/doctrine-doctor": [
+            "0.1"
+        ],
         "ajardin/blizzard-sdk-bundle": [
             "1.0"
         ],

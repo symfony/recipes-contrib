@@ -15,6 +15,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [adlarge/fixtures-documentation-bundle](https://packagist.org/packages/adlarge/fixtures-documentation-bundle) | [1.1](adlarge/fixtures-documentation-bundle/1.1) |
 | [adrienlbt/hexagonal-maker-bundle](https://packagist.org/packages/adrienlbt/hexagonal-maker-bundle) | [1.2](adrienlbt/hexagonal-maker-bundle/1.2) |
 | [agilelab-fr/captcha-bundle](https://packagist.org/packages/agilelab-fr/captcha-bundle) | [1.0](agilelab-fr/captcha-bundle/1.0) |
+| [ahmed-bhs/doctrine-doctor](https://packagist.org/packages/ahmed-bhs/doctrine-doctor) | [0.1](ahmed-bhs/doctrine-doctor/0.1) |
 | [ajardin/blizzard-sdk-bundle](https://packagist.org/packages/ajardin/blizzard-sdk-bundle) | [1.0](ajardin/blizzard-sdk-bundle/1.0) |
 | [ajardin/docker-symfony](https://packagist.org/packages/ajardin/docker-symfony) | [0.2](ajardin/docker-symfony/0.2) |
 | [ajgl/breakpoint-twig-extension](https://packagist.org/packages/ajgl/breakpoint-twig-extension) | [0.3](ajgl/breakpoint-twig-extension/0.3) |
