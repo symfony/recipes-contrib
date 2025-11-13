@@ -1,0 +1,69 @@
+# PasaiakoUdalaAuthBundle - Post-install message
+
+## Configuration completed
+
+The **PasaiakoUdalaAuthBundle** has been installed successfully.
+
+### Next steps
+
+1. **Configure environment variables** in your `.env` file:
+   - Update values for `LDAP_HOST`, `LDAP_BASE_DN`, `LDAP_USER_DN_PATTERN`, etc.
+   - Set `LDAP_BIND_DN` and `LDAP_BIND_PASSWORD` if your LDAP server requires a service account for searches.
+
+2. **Review the configuration** in `config/packages/pasaiako_udala_auth.yaml`:
+   - Adjust LDAP-to-Symfony role mapping under the `role_mapping` section.
+   - Verify the LDAP server parameters match your infrastructure.
+
+3. **Configure Symfony Security** in `config/packages/security.yaml`.
+   
+   Add this configuration to your `config/packages/security.yaml` file:
+
+   ```yaml
+   security:
+       providers:
+           ldap_user_provider:
+               id: PasaiaUdala\AuthBundle\Security\LdapUserProvider
+
+       firewalls:
+           main:
+               lazy: true
+               provider: ldap_user_provider
+               entry_point: PasaiaUdala\AuthBundle\Security\LdapAuthenticator
+               
+               custom_authenticators:
+                   - PasaiaUdala\AuthBundle\Security\LdapAuthenticator
+                   - PasaiaUdala\AuthBundle\Security\CertificateAuthenticator
+               
+               logout:
+                   path: app_logout
+                   target: app_auth_selector
+
+       access_control:
+           - { path: ^/login, roles: PUBLIC_ACCESS }
+           - { path: ^/oauth, roles: PUBLIC_ACCESS }
+           - { path: ^/auth-selector, roles: PUBLIC_ACCESS }
+           - { path: ^/, roles: ROLE_USER }
+   ```
+
+   **IMPORTANT**: If you use multiple authenticators, define the `entry_point`.
+
+4. **Create controllers** if they do not exist:
+   - `SecurityController` to handle LDAP login and the auth selector.
+   - `OAuth2Controller` if you use certificate-based (Izenpe) authentication.
+   - See the bundle documentation at `vendor/pasaia-udala/auth-bundle/docs/INSTALLATION.md` for details.
+
+5. **Verify the installation**:
+   ```bash
+   php bin/console debug:container | grep -i ldap
+   php bin/console debug:config pasaiako_udala_auth
+   ```
+
+### Additional documentation
+
+- Full installation guide: `vendor/pasaia-udala/auth-bundle/docs/INSTALLATION.md`
+- Advanced LDAP configuration: `vendor/pasaia-udala/auth-bundle/docs/LDAP.md`
+- Izenpe / OAuth2 configuration: `vendor/pasaia-udala/auth-bundle/docs/IZENPE.md`
+- Customizing templates: `vendor/pasaia-udala/auth-bundle/docs/TEMPLATES.md`
+- Troubleshooting: `vendor/pasaia-udala/auth-bundle/docs/TROUBLESHOOTING.md`
+
+Thank you!
