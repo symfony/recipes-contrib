@@ -1504,8 +1504,8 @@
         "pablok/supercache-bundle": [
             "0.5"
         ],
-        "pasaiakoudala/authbundle": [
-            "0.1"
+        "pasaia-udala/auth-bundle": [
+            "1.2"
         ],
         "patchlevel/event-sourcing-bundle": [
             "1.0",
