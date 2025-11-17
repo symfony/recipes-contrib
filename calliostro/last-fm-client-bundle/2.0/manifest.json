@@ -3,10 +3,11 @@
         "Calliostro\\LastfmBundle\\CalliostroLastfmBundle": ["all"]
     },
     "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
+        "config/": "%CONFIG_DIR%/packages/"
     },
     "env": {
         "LASTFM_API_KEY": "",
-        "LASTFM_SECRET": ""
+        "LASTFM_SECRET": "",
+        "#LASTFM_SESSION": ""
     }
 }

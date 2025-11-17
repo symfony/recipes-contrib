@@ -1,9 +1,13 @@
 calliostro_lastfm:
-    # Required: API Key (get from https://www.last.fm/api/account/create)
+    # Required: API Key for all practical operations (get from https://www.last.fm/api/account/create)
     api_key: '%env(LASTFM_API_KEY)%'
 
-    # Required for write operations: API Secret  
+    # Required for authenticated operations: API Secret
     api_secret: '%env(LASTFM_SECRET)%'
+
+    # Optional: Session key for scrobbling and user operations
+    # Get this via Last.fm OAuth flow or use a pre-generated session key
+    # session_key: '%env(LASTFM_SESSION)%'
 
     # Optional: HTTP User-Agent header for API requests
     # user_agent: 'MyApp/1.0 +https://myapp.com'
