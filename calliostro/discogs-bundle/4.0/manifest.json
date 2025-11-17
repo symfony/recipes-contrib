@@ -3,7 +3,7 @@
         "Calliostro\\DiscogsBundle\\CalliostroDiscogsBundle": ["all"]
     },
     "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/packages/"
+        "config/": "%CONFIG_DIR%/"
     },
     "env": {
         "#DISCOGS_PERSONAL_ACCESS_TOKEN": "",
