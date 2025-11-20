@@ -7,7 +7,7 @@ calliostro_lastfm:
 
     # Optional: Session key for scrobbling and user operations
     # Get this via Last.fm OAuth flow or use a pre-generated session key
-    # session_key: '%env(LASTFM_SESSION)%'
+    # session_key: '%env(LASTFM_SESSION_KEY)%'
 
     # Optional: HTTP User-Agent header for API requests
     # user_agent: 'MyApp/1.0 +https://myapp.com'
