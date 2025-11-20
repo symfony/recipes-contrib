@@ -7,6 +7,7 @@
     },
     "env": {
         "LASTFM_API_KEY": "",
-        "LASTFM_SECRET": ""
+        "LASTFM_SECRET": "",
+        "#LASTFM_SESSION": ""
     }
 }
