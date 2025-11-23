@@ -1,0 +1,2 @@
+symfonycasts_object_translation:
+    translation_class: App\Entity\Translation

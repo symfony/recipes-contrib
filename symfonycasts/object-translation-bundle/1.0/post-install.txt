@@ -1,0 +1,6 @@
+* You're almost ready to use symfonycasts/object-translation-bundle!
+
+* First, create a migration with <comment>symfony console make:migration</comment>
+  and run it with <comment>symfony console doctrine:migrations:migrate</comment>.
+
+* <fg=blue>Read</> the documentation at <comment>https://github.com/SymfonyCasts/object-translation-bundle</>
