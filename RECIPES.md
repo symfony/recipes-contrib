@@ -288,6 +288,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [jms/serializer-bundle](https://packagist.org/packages/jms/serializer-bundle) | [4.0](jms/serializer-bundle/4.0) |
 | [jolicode/gif-exception-bundle](https://packagist.org/packages/jolicode/gif-exception-bundle) | [1.0](jolicode/gif-exception-bundle/1.0) |
 | [jolicode/jolitypo](https://packagist.org/packages/jolicode/jolitypo) | [1.0](jolicode/jolitypo/1.0) |
+| [jolicode/media-bundle](https://packagist.org/packages/jolicode/media-bundle) | [0.1](jolicode/media-bundle/0.1) |
 | [jonathankablan/fast-entity-bundle](https://packagist.org/packages/jonathankablan/fast-entity-bundle) | [2.0](jonathankablan/fast-entity-bundle/2.0) |
 | [jrmgx/interactive-bundle](https://packagist.org/packages/jrmgx/interactive-bundle) | [1.0](jrmgx/interactive-bundle/1.0) |
 | [jsor/doctrine-postgis](https://packagist.org/packages/jsor/doctrine-postgis) | [1.7](jsor/doctrine-postgis/1.7) |

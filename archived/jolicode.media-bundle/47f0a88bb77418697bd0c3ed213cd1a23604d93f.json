@@ -1,0 +1,73 @@
+{
+    "manifests": {
+        "jolicode/media-bundle": {
+            "manifest": {
+                "bundles": {
+                    "JoliCode\\MediaBundle\\JoliMediaBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * JoliMediaBundle has been successfully installed! Complete the configuration:",
+                    "    1. <fg=blue>Configure</> your media library storage in <comment>%CONFIG_DIR%/packages/joli_media.yaml</>",
+                    "    2. <fg=blue>Read</> the documentation options at <comment>https://mediabundle.jolicode.com/getting-started/configuration/</>",
+                    "",
+                    "  * Learn how to install the required processors at <comment>https://mediabundle.jolicode.com/getting-started/dependencies-and-tooling/</>",
+                    "",
+                    "  * To enable an admin bridge, follow the instructions at <comment>https://mediabundle.jolicode.com/bridges/</>"
+                ]
+            },
+            "files": {
+                "config/packages/joli_media.yaml": {
+                    "contents": [
+                        "# See the documentation for all available configuration options",
+                        "joli_media:",
+                        "    # Configure a media library below. See the documentation for all available options",
+                        "    # at https://mediabundle.jolicode.com/getting-started/configuration/#configuration",
+                        "",
+                        "    # libraries:",
+                        "    #     default:",
+                        "    #         original:",
+                        "    #             flysystem: \"filesystem.original.storage\"",
+                        "    #             url_generator:",
+                        "    #                 strategy: folder",
+                        "    #                 path: /media/original/",
+                        "    #         cache:",
+                        "    #             flysystem: \"filesystem.cache.storage\"",
+                        "    #             must_store_when_generating_url: false",
+                        "    #             url_generator:",
+                        "    #                 strategy: folder",
+                        "    #                 path: /media/cache/",
+                        "",
+                        "    pre_processors:",
+                        "        - JoliCode\\MediaBundle\\PreProcessor\\ExifRemovalPreProcessor",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/joli_media.yaml": {
+                    "contents": [
+                        "_joli_media:",
+                        "    resource: \"@JoliMediaBundle/config/routes.php\"",
+                        "",
+                        "# Uncomment the following lines to enable the EasyAdmin bridge routes",
+                        "# _joli_media_easy_admin:",
+                        "#     resource: \"@JoliMediaEasyAdminBundle/src/Controller/\"",
+                        "#     prefix: /admin/media",
+                        "",
+                        "# Uncomment the following lines to enable the Sonata Admin bridge routes",
+                        "# _joli_media_sonata_admin:",
+                        "#     resource: \"@JoliMediaSonataAdminBundle/src/Controller/\"",
+                        "#     prefix: /admin/media",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "47f0a88bb77418697bd0c3ed213cd1a23604d93f"
+        }
+    }
+}
