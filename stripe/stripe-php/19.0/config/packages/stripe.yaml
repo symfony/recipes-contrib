@@ -1,0 +1,7 @@
+services:
+    stripe.client:
+        class: 'Stripe\StripeClient'
+        arguments:
+            - '%env(STRIPE_SECRET_KEY)%'
+
+    Stripe\StripeClient: '@stripe.client'
