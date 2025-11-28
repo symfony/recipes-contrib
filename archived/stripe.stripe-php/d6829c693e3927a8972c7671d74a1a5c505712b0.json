@@ -1,0 +1,30 @@
+{
+    "manifests": {
+        "stripe/stripe-php": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "STRIPE_SECRET_KEY": "sk_test_***"
+                }
+            },
+            "files": {
+                "config/packages/stripe.yaml": {
+                    "contents": [
+                        "services:",
+                        "    stripe.client:",
+                        "        class: 'Stripe\\StripeClient'",
+                        "        arguments:",
+                        "            - '%env(STRIPE_SECRET_KEY)%'",
+                        "",
+                        "    Stripe\\StripeClient: '@stripe.client'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d6829c693e3927a8972c7671d74a1a5c505712b0"
+        }
+    }
+}
