@@ -2069,7 +2069,7 @@
         ],
         "symfonycorp/connect": [
             "7.0",
-            "8.0"
+            "8.2"
         ],
         "symfonycorp/connect-bundle": [
             "5.0"

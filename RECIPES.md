@@ -644,7 +644,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [symfony-bundles/kafka-bundle](https://packagist.org/packages/symfony-bundles/kafka-bundle) | [1.0](symfony-bundles/kafka-bundle/1.0) |
 | [symfony-bundles/redis-bundle](https://packagist.org/packages/symfony-bundles/redis-bundle) | [2.0](symfony-bundles/redis-bundle/2.0) |
 | [symfony/apache-pack](https://packagist.org/packages/symfony/apache-pack) | [1.0](symfony/apache-pack/1.0) |
-| [symfonycorp/connect](https://packagist.org/packages/symfonycorp/connect) | [8.0](symfonycorp/connect/8.0) |
+| [symfonycorp/connect](https://packagist.org/packages/symfonycorp/connect) | [8.2](symfonycorp/connect/8.2) |
 | [symfonycorp/connect-bundle](https://packagist.org/packages/symfonycorp/connect-bundle) | [5.0](symfonycorp/connect-bundle/5.0) |
 | [synolia/sylius-mail-tester-plugin](https://packagist.org/packages/synolia/sylius-mail-tester-plugin) | [3.0](synolia/sylius-mail-tester-plugin/3.0) |
 | [synolia/sylius-scheduler-command-plugin](https://packagist.org/packages/synolia/sylius-scheduler-command-plugin) | [4.0](synolia/sylius-scheduler-command-plugin/4.0) |
