@@ -10,4 +10,4 @@ tests/Acceptance.suite.yml written  <- Acceptance test suite configuration
 1. Edit <options=bold>tests/Functional.suite.yml</> to enable the Doctrine module if needed
 2. Create your first functional test using <comment>vendor/bin/codecept generate:cest Functional First</>
 3. Write your first test in <options=bold>tests/Functional/FirstCest.php</>
-4. Run tests using: <comment>vendor/bin/codecept run</>
+4. Run tests with: <comment>vendor/bin/codecept run</>
