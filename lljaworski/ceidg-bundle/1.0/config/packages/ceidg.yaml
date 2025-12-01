@@ -1,0 +1,3 @@
+ceidg:
+    api_url: '%env(CEIDG_API_URL)%'
+    api_key: '%env(CEIDG_API_KEY)%'
