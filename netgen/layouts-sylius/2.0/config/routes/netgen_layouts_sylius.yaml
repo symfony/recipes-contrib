@@ -1,0 +1,2 @@
+netgen_layouts_sylius:
+    resource: "@NetgenLayoutsSyliusBundle/Resources/config/routing.yaml"
