@@ -3,8 +3,7 @@
         "LukaszJaworski\\CeidgBundle\\CeidgBundle": ["all"]
     },
     "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/",
-        ".env": "%ROOT_DIR%/.env"
+        "config/": "%CONFIG_DIR%/"
     },
     "env": {
         "CEIDG_API_URL": "https://dane.biznes.gov.pl/api/ceidg/v2",
