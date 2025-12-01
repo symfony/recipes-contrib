@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "netgen/content-browser": {
+            "manifest": {
+                "bundles": {
+                    "Netgen\\Bundle\\ContentBrowserBundle\\NetgenContentBrowserBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * Learn how to integrate Content Browser into your CMS backend by reading",
+                    "    the documentation located at: <comment>https://docs.netgen.io/projects/cb/en/latest/</>"
+                ]
+            },
+            "files": {
+                "config/routes/netgen_content_browser.yaml": {
+                    "contents": [
+                        "netgen_content_browser:",
+                        "    resource: \"@NetgenContentBrowserBundle/Resources/config/routing.yml\"",
+                        "    prefix: \"%netgen_content_browser.route_prefix%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "24cb1c72a375ac7d62a4d18961cf06a9879a442c"
+        }
+    }
+}

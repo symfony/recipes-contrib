@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "netgen/layouts-contentful": {
+            "manifest": {
+                "bundles": {
+                    "Netgen\\Bundle\\LayoutsContentfulBundle\\NetgenLayoutsContentfulBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/netgen_layouts_contentful.yaml": {
+                    "contents": [
+                        "netgen_layouts_contentful:",
+                        "    resource: \"@NetgenLayoutsContentfulBundle/Resources/config/routing.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "96f3065f3b1ec4116a7f535343fffb68756f05c8"
+        }
+    }
+}

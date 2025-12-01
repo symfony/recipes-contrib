@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "netgen/layouts-core": {
+            "manifest": {
+                "bundles": {
+                    "Netgen\\Bundle\\LayoutsBundle\\NetgenLayoutsBundle": [
+                        "all"
+                    ],
+                    "Netgen\\Bundle\\LayoutsAdminBundle\\NetgenLayoutsAdminBundle": [
+                        "all"
+                    ],
+                    "Netgen\\Bundle\\LayoutsDebugBundle\\NetgenLayoutsDebugBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * For Netgen Layouts to function, you need to import the database tables",
+                    "    into your database. Currently, only MySQL is supported. To import the tables,",
+                    "    use the following command from your project root:",
+                    "",
+                    "    <fg=green>php bin/console doctrine:migrations:migrate --configuration=vendor/netgen/layouts-core/migrations/doctrine.yml</>",
+                    "",
+                    "  * Enable ESI and fragments support in the <fg=green>config/packages/framework.yaml</> file.",
+                    "",
+                    "  * Complete the installation procedure by following instructions detailed at",
+                    "    <comment>https://docs.netgen.io/projects/layouts/en/latest/getting_started/install_existing_project.html</>",
+                    "",
+                    "Documentation: <comment>https://docs.netgen.io/projects/layouts/en/latest/</>"
+                ]
+            },
+            "files": {
+                "config/routes/netgen_layouts.yaml": {
+                    "contents": [
+                        "netgen_layouts:",
+                        "    resource: \"@NetgenLayoutsBundle/Resources/config/routing.yml\"",
+                        "    prefix: \"%netgen_layouts.route_prefix%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "04428c25df562ffad615d338704213bbabdc3d2e"
+        }
+    }
+}

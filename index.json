@@ -1,0 +1,31 @@
+{
+    "aliases": [],
+    "recipes": {
+        "netgen/content-browser": [
+            "1.0",
+            "2.0"
+        ],
+        "netgen/layouts-contentful": [
+            "2.0"
+        ],
+        "netgen/layouts-core": [
+            "1.0",
+            "2.0"
+        ],
+        "netgen/layouts-sylius": [
+            "2.0"
+        ]
+    },
+    "recipe-conflicts": [],
+    "versions": [],
+    "branch": "main",
+    "is_contrib": true,
+    "_links": {
+        "repository": "github.com/symfony/recipes-contrib",
+        "origin_template": "{package}:{version}@github.com/symfony/recipes-contrib:main",
+        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes-contrib/flex/pull-1895/{package_dotted}.{version}.json",
+        "recipe_template_relative": "{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes-contrib/flex/pull-1895/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
+    }
+}

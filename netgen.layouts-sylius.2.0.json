@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "netgen/layouts-sylius": {
+            "manifest": {
+                "bundles": {
+                    "Netgen\\Bundle\\LayoutsSyliusBundle\\NetgenLayoutsSyliusBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/netgen_layouts_sylius.yaml": {
+                    "contents": [
+                        "netgen_layouts_sylius:",
+                        "    resource: \"@NetgenLayoutsSyliusBundle/Resources/config/routing.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e62d35cd76a589e81672689ab3d38ebe6976371d"
+        }
+    }
+}
