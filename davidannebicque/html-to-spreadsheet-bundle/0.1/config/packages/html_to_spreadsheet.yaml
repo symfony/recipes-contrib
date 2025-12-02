@@ -1,14 +1,14 @@
 html_to_spreadsheet:
-    #Activer le mode strict pour la validation HTML
+    #Enable strict mode for HTML validation
     strict: true
 
-    #Inclure les styles prédéfinis (th, money, date, etc.)
+    #Include built-in styles (th, money, date, etc.)
     include_builtins: true
 
-    #Répertoire temporaire (optionnel)
+    #Temporary directory (optional)
     #temp_dir: '%kernel.cache_dir%/html_to_spreadsheet'
 
-    #Styles personnalisés (exemples)
+    #Custom styles (examples)
     #default_styles:
     #    custom_header:
     #        font:
