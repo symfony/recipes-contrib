@@ -4,3 +4,4 @@
 
     * Configure the bundle in <comment>config/packages/html_to_spreadsheet.yaml</comment>
     * Documentation: <comment>https://github.com/davidannebicque/html-to-spreadsheet-bundle</comment>
+    
