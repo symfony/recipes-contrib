@@ -6,14 +6,14 @@ html_to_spreadsheet:
     include_builtins: true
     
     # Répertoire temporaire (optionnel)
-    # temp_dir: '%kernel.cache_dir%/html_to_spreadsheet'
+    #temp_dir: '%kernel.cache_dir%/html_to_spreadsheet'
     
     # Styles personnalisés (exemples)
-    # default_styles:
-    #     custom_header:
-    #         font:
-    #             bold: true
-    #             color: 'FFFFFF'
-    #         fill:
-    #             fillType: 'solid'
-    #             color: '4472C4'
+    #default_styles:
+    #    custom_header:
+    #        font:
+    #            bold: true
+    #            color: 'FFFFFF'
+    #        fill:
+    #            fillType: 'solid'
+    #            color: '4472C4'

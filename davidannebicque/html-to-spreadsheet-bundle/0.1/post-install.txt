@@ -1,6 +1,5 @@
 <bg=blue;fg=white>                                      </>
 <bg=blue;fg=white> HTML to Spreadsheet Bundle installed successfully! </>
 <bg=blue;fg=white>                                      </>
-
     * Configure the bundle in <comment>config/packages/html_to_spreadsheet.yaml</comment>
     * Documentation: <comment>https://github.com/davidannebicque/html-to-spreadsheet-bundle</comment>
