@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Davidannebicque\\HtmlToSpreadsheetBundle\\HtmlToSpreadsheetBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
