@@ -432,6 +432,9 @@
         "datana-gmbh/zendesk-api": [
             "1.0"
         ],
+        "davidannebicque/html-to-spreadsheet-bundle": [
+            "0.1"
+        ],
         "deamon/logger-extra-bundle": [
             "4.0"
         ],

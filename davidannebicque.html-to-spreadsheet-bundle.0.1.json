@@ -1,0 +1,51 @@
+{
+    "manifests": {
+        "davidannebicque/html-to-spreadsheet-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Davidannebicque\\HtmlToSpreadsheetBundle\\HtmlToSpreadsheetBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                                      </>",
+                    "<bg=blue;fg=white> HTML to Spreadsheet Bundle installed successfully! </>",
+                    "<bg=blue;fg=white>                                      </>",
+                    "    * Configure the bundle in <comment>config/packages/html_to_spreadsheet.yaml</comment>",
+                    "    * Documentation: <comment>https://github.com/davidannebicque/html-to-spreadsheet-bundle</comment>"
+                ]
+            },
+            "files": {
+                "config/packages/html_to_spreadsheet.yaml": {
+                    "contents": [
+                        "html_to_spreadsheet:",
+                        "    #Enable strict mode for HTML validation",
+                        "    strict: true",
+                        "",
+                        "    #Include built-in styles (th, money, date, etc.)",
+                        "    include_builtins: true",
+                        "",
+                        "    #Temporary directory (optional)",
+                        "    #temp_dir: '%kernel.cache_dir%/html_to_spreadsheet'",
+                        "",
+                        "    #Custom styles (examples)",
+                        "    #default_styles:",
+                        "    #    custom_header:",
+                        "    #        font:",
+                        "    #            bold: true",
+                        "    #            color: 'FFFFFF'",
+                        "    #        fill:",
+                        "    #            fillType: 'solid'",
+                        "    #            color: '4472D4'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f054008082babf0f3e5e26d34eade43a74af5ede"
+        }
+    }
+}
