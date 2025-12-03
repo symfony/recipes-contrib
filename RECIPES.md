@@ -208,6 +208,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [excelwebzone/recaptcha-bundle](https://packagist.org/packages/excelwebzone/recaptcha-bundle) | [1.5](excelwebzone/recaptcha-bundle/1.5) |
 | [exercise/htmlpurifier-bundle](https://packagist.org/packages/exercise/htmlpurifier-bundle) | [3.0](exercise/htmlpurifier-bundle/3.0) |
 | [expertcoder/swiftmailer-send-grid-bundle](https://packagist.org/packages/expertcoder/swiftmailer-send-grid-bundle) | [2.0](expertcoder/swiftmailer-send-grid-bundle/2.0) |
+| [explicatis/dynamics-api-bundle](https://packagist.org/packages/explicatis/dynamics-api-bundle) | [0.1](explicatis/dynamics-api-bundle/0.1) |
 | [facile-it/mongodb-bundle](https://packagist.org/packages/facile-it/mongodb-bundle) | [0.6](facile-it/mongodb-bundle/0.6) |
 | [fastfony/quality-pack](https://packagist.org/packages/fastfony/quality-pack) | [1.0](fastfony/quality-pack/1.0) |
 | [fastfony/tailwind-webpack-encore-pack](https://packagist.org/packages/fastfony/tailwind-webpack-encore-pack) | [1.0](fastfony/tailwind-webpack-encore-pack/1.0) |

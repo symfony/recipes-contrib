@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "explicatis/dynamics-api-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Explicatis\\DynamicsApiBundle\\DynamicsApiBundle": [
+                        "all"
+                    ]
+                },
+                "env": {
+                    "DYNAMICS_AUTH_BASE_URL": "https://login.microsoftonline.com/",
+                    "DYNAMICS_API_BASE_URL": "",
+                    "DYNAMICS_TENANT_ID": "",
+                    "DYNAMICS_APP_ID": "",
+                    "DYNAMICS_CLIENT_KEY": ""
+                }
+            },
+            "files": [],
+            "ref": "eeb9f5fb164168b27d5feeec0d7e04c49835fc51"
+        }
+    }
+}

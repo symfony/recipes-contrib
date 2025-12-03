@@ -655,6 +655,9 @@
         "expertcoder/swiftmailer-send-grid-bundle": [
             "2.0"
         ],
+        "explicatis/dynamics-api-bundle": [
+            "0.1"
+        ],
         "facile-it/mongodb-bundle": [
             "0.6"
         ],
