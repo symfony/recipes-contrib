@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "lljaworski/ceidg-bundle": {
+            "manifest": {
+                "bundles": {
+                    "LukaszJaworski\\CeidgBundle\\CeidgBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "CEIDG_API_URL": "https://dane.biznes.gov.pl/api/ceidg/v2",
+                    "CEIDG_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/ceidg.yaml": {
+                    "contents": [
+                        "ceidg:",
+                        "    api_url: '%env(CEIDG_API_URL)%'",
+                        "    api_key: '%env(CEIDG_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a314c4e3b3dc1d079d255541cbe455ac179dac07"
+        }
+    }
+}

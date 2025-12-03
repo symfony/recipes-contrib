@@ -1098,6 +1098,9 @@
         "liuggio/statsd-client-bundle": [
             "1.6"
         ],
+        "lljaworski/ceidg-bundle": [
+            "1.0"
+        ],
         "lolautruche/payline-bundle": [
             "2.0"
         ],

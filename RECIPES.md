@@ -345,6 +345,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [liip/monitor-bundle](https://packagist.org/packages/liip/monitor-bundle) | [3.0](liip/monitor-bundle/3.0) |
 | [lireincore/imgcache-bundle](https://packagist.org/packages/lireincore/imgcache-bundle) | [0.1](lireincore/imgcache-bundle/0.1) |
 | [liuggio/statsd-client-bundle](https://packagist.org/packages/liuggio/statsd-client-bundle) | [1.6](liuggio/statsd-client-bundle/1.6) |
+| [lljaworski/ceidg-bundle](https://packagist.org/packages/lljaworski/ceidg-bundle) | [1.0](lljaworski/ceidg-bundle/1.0) |
 | [lolautruche/payline-bundle](https://packagist.org/packages/lolautruche/payline-bundle) | [2.0](lolautruche/payline-bundle/2.0) |
 | [long-running/long-running](https://packagist.org/packages/long-running/long-running) | [0.1](long-running/long-running/0.1) |
 | [longitude-one/meta-bundle](https://packagist.org/packages/longitude-one/meta-bundle) | [1.0](longitude-one/meta-bundle/1.0) |
