@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "LukaszJaworski\\CeidgBundle\\CeidgBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "CEIDG_API_URL": "https://dane.biznes.gov.pl/api/ceidg/v2",
+        "CEIDG_API_KEY": ""
+    }
+}
