@@ -1,0 +1,2 @@
+netgen_layouts_contentful:
+    resource: "@NetgenLayoutsContentfulBundle/Resources/config/routing.yaml"
