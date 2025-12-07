@@ -1390,10 +1390,18 @@
             "1.0"
         ],
         "netgen/content-browser": [
-            "1.0"
+            "1.0",
+            "2.0"
+        ],
+        "netgen/layouts-contentful": [
+            "2.0"
         ],
         "netgen/layouts-core": [
-            "1.0"
+            "1.0",
+            "2.0"
+        ],
+        "netgen/layouts-sylius": [
+            "2.0"
         ],
         "networking/init-cms-bundle": [
             "4.0",

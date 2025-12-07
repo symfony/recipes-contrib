@@ -437,8 +437,10 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [nelmio/solarium-bundle](https://packagist.org/packages/nelmio/solarium-bundle) | [5.0](nelmio/solarium-bundle/5.0) |
 | [neo4j/neo4j-bundle](https://packagist.org/packages/neo4j/neo4j-bundle) | [1.0](neo4j/neo4j-bundle/1.0) |
 | [netbull/security-bundle](https://packagist.org/packages/netbull/security-bundle) | [1.0](netbull/security-bundle/1.0) |
-| [netgen/content-browser](https://packagist.org/packages/netgen/content-browser) | [1.0](netgen/content-browser/1.0) |
-| [netgen/layouts-core](https://packagist.org/packages/netgen/layouts-core) | [1.0](netgen/layouts-core/1.0) |
+| [netgen/content-browser](https://packagist.org/packages/netgen/content-browser) | [2.0](netgen/content-browser/2.0) |
+| [netgen/layouts-contentful](https://packagist.org/packages/netgen/layouts-contentful) | [2.0](netgen/layouts-contentful/2.0) |
+| [netgen/layouts-core](https://packagist.org/packages/netgen/layouts-core) | [2.0](netgen/layouts-core/2.0) |
+| [netgen/layouts-sylius](https://packagist.org/packages/netgen/layouts-sylius) | [2.0](netgen/layouts-sylius/2.0) |
 | [networking/init-cms-bundle](https://packagist.org/packages/networking/init-cms-bundle) | [4.4](networking/init-cms-bundle/4.4) |
 | [nicohaase/twig-isbn-formatter](https://packagist.org/packages/nicohaase/twig-isbn-formatter) | [0.1](nicohaase/twig-isbn-formatter/0.1) |
 | [nordeus/crowd-user-bundle](https://packagist.org/packages/nordeus/crowd-user-bundle) | [2.0](nordeus/crowd-user-bundle/2.0) |
