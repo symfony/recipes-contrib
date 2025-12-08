@@ -1,0 +1,3 @@
+AmzsRandomBundle:
+    resource: "@AmzsRandomBundle/Resources/config/routing.yaml"
+    prefix:   admin/menu
