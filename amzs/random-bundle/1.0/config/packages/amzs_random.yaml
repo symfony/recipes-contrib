@@ -1,3 +1,4 @@
 amzs_random:
     auto_connect: true
     default_connection: mysql
+    
