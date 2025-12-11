@@ -1,0 +1,44 @@
+{
+    "bundles": {
+        "Patchlevel\\EventSourcingBundle\\PatchlevelEventSourcingBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "migrations/": "migrations/"
+    },
+    "env": {
+        "#1": "Format described at https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html#connecting-using-a-url",
+        "#3": "",
+        "#4": "EVENTSTORE_URL=\"pdo-sqlite:///%kernel.project_dir%/var/data.db\"",
+        "#5": "EVENTSTORE_URL=\"pdo-mysql://app:!ChangeMe!@127.0.0.1:3306/app?serverVersion=8.2\"",
+        "EVENTSTORE_URL": "pdo-pgsql://app:!ChangeMe!@127.0.0.1:5432/app?serverVersion=16&charset=utf8"
+    },
+    "dockerfile": [
+        "RUN install-php-extensions pdo_pgsql"
+    ],
+    "docker-compose": {
+        "docker-compose.yml": {
+            "services": [
+                "eventstore:",
+                "  image: postgres:${POSTGRES_VERSION:-16}-alpine",
+                "  environment:",
+                "    POSTGRES_DB: ${POSTGRES_DB:-app}",
+                "    # You should definitely change the password in production",
+                "    POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-!ChangeMe!}",
+                "    POSTGRES_USER: ${POSTGRES_USER:-app}",
+                "  volumes:",
+                "    - eventstore_data:/var/lib/postgresql/data:rw",
+                "    # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!",
+                "    # - ./docker/db/data:/var/lib/postgresql/data:rw"
+            ],
+            "volumes": ["eventstore_data:"]
+        },
+        "docker-compose.override.yml": {
+            "services": [
+                "eventstore:",
+                "  ports:",
+                "    - \"5432\""
+            ]
+        }
+    }
+}
