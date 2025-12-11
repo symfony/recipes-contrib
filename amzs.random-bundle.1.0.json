@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "amzs/random-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Amzs\\RandomBundle\\AmzsRandomBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/amzs_random.yaml": {
+                    "contents": [
+                        "amzs_random:",
+                        "    auto_connect: true",
+                        "    default_connection: mysql",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/amzs_random_bundle.yaml": {
+                    "contents": [
+                        "_admin_amzs_random_bundle:",
+                        "    resource: \"@AmzsRandomBundle/Resources/config/routing.yaml\"",
+                        "    prefix:   admin/menu",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ca3f0c9b6b83182c1f2c3d24f7cd5044705998b1"
+        }
+    }
+}

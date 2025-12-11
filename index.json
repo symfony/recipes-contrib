@@ -76,6 +76,9 @@
         "ambient-link/ability-sdk": [
             "1.0"
         ],
+        "amzs/random-bundle": [
+            "1.0"
+        ],
         "andchir/omnipay-bundle": [
             "1.0"
         ],
