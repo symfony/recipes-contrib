@@ -1,0 +1,45 @@
+{
+    "manifests": {
+        "patchlevel/event-sourcing-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Patchlevel\\EventSourcingBundle\\PatchlevelEventSourcingBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Format described at https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html#connecting-using-a-url",
+                    "#3": "",
+                    "#4": "EVENTSTORE_URL=\"sqlite:///%kernel.project_dir%/var/data.db\"",
+                    "#5": "EVENTSTORE_URL=\"mysql://db_user:db_password@127.0.0.1:3306/db_name?serverVersion=5.7\"",
+                    "EVENTSTORE_URL": "postgresql://symfony:ChangeMe@127.0.0.1:5432/app?serverVersion=13&charset=utf8"
+                }
+            },
+            "files": {
+                "config/packages/dev/patchlevel_event_sourcing.yaml": {
+                    "contents": [
+                        "patchlevel_event_sourcing:",
+                        "    watch_server:",
+                        "        enabled: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/patchlevel_event_sourcing.yaml": {
+                    "contents": [
+                        "patchlevel_event_sourcing:",
+                        "    aggregates_paths: '%kernel.project_dir%/src'",
+                        "    connection:",
+                        "        url: '%env(EVENTSTORE_URL)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "cb9d8c5600c431a4ca17c86804163624015a4559"
+        }
+    }
+}
