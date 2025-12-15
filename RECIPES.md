@@ -481,7 +481,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [overblog/graphql-bundle](https://packagist.org/packages/overblog/graphql-bundle) | [0.12](overblog/graphql-bundle/0.12) |
 | [pablok/supercache-bundle](https://packagist.org/packages/pablok/supercache-bundle) | [0.5](pablok/supercache-bundle/0.5) |
 | [pasaia-udala/auth-bundle](https://packagist.org/packages/pasaia-udala/auth-bundle) | [1.2](pasaia-udala/auth-bundle/1.2) |
-| [patchlevel/event-sourcing-bundle](https://packagist.org/packages/patchlevel/event-sourcing-bundle) | [3.6](patchlevel/event-sourcing-bundle/3.6) |
+| [patchlevel/event-sourcing-bundle](https://packagist.org/packages/patchlevel/event-sourcing-bundle) | [3.14](patchlevel/event-sourcing-bundle/3.14) |
 | [payplug/sylius-payplug-plugin](https://packagist.org/packages/payplug/sylius-payplug-plugin) | [0.2](payplug/sylius-payplug-plugin/0.2) |
 | [payum/payum-bundle](https://packagist.org/packages/payum/payum-bundle) | [2.4](payum/payum-bundle/2.4) |
 | [pentatrion/upload-bundle](https://packagist.org/packages/pentatrion/upload-bundle) | [0.2](pentatrion/upload-bundle/0.2) |
