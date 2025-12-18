@@ -19,10 +19,10 @@ when@prod:
 #            # Use this only if you don't want to use structured logging and instead receive
 #            # certain log levels as errors.  
 #            sentry:
-#                type: sentry
-#                level: !php/const Monolog\Logger::ERROR
-#                hub_id: Sentry\State\HubInterface
-#                fill_extra_context: true # Enables sending monolog context to Sentry
+#                type: service
+#                level: error
+#                id: Sentry\Monolog\Handler
+#                include_extra: true # Enables sending monolog context to Sentry
 #                process_psr_3_messages: false # Disables the resolution of PSR-3 placeholders
 #
 #            # Use this for structured log integration
@@ -31,6 +31,7 @@ when@prod:
 #                id: Sentry\SentryBundle\Monolog\LogsHandler
 #
 #    services:
-#        Sentry\SentryBundle\Monolog\LogsHandler:
+#        Sentry\Monolog\Handler:
 #            arguments:
+#                - '@Sentry\State\HubInterface'
 #                - !php/const Monolog\Logger::INFO
