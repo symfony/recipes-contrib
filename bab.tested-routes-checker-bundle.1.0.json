@@ -1,0 +1,16 @@
+{
+    "manifests": {
+        "bab/tested-routes-checker-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Bab\\TestedRoutesCheckerBundle\\BabTestedRoutesCheckerBundle": [
+                        "dev",
+                        "test"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "ce7a2e9e267d87d9b3c223ea037155f5ffb2a92b"
+        }
+    }
+}

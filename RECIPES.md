@@ -50,6 +50,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [aws/aws-sdk-php-symfony](https://packagist.org/packages/aws/aws-sdk-php-symfony) | [1.3](aws/aws-sdk-php-symfony/1.3) |
 | [aziz403/ux-datatable](https://packagist.org/packages/aziz403/ux-datatable) | [1.0](aziz403/ux-datatable/1.0) |
 | [aziz403/ux-zoom](https://packagist.org/packages/aziz403/ux-zoom) | [1.0](aziz403/ux-zoom/1.0) |
+| [bab/tested-routes-checker-bundle](https://packagist.org/packages/bab/tested-routes-checker-bundle) | [1.0](bab/tested-routes-checker-bundle/1.0) |
 | [backup-manager/symfony](https://packagist.org/packages/backup-manager/symfony) | [2.1](backup-manager/symfony/2.1) |
 | [baldinof/roadrunner-bundle](https://packagist.org/packages/baldinof/roadrunner-bundle) | [3.0](baldinof/roadrunner-bundle/3.0) |
 | [basster/lazy-response-bundle](https://packagist.org/packages/basster/lazy-response-bundle) | [1.0](basster/lazy-response-bundle/1.0) |
