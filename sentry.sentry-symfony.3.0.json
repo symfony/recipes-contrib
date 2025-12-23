@@ -1,0 +1,59 @@
+{
+    "manifests": {
+        "sentry/sentry-symfony": {
+            "manifest": {
+                "bundles": {
+                    "Sentry\\SentryBundle\\SentryBundle": [
+                        "prod"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SENTRY_DSN": ""
+                }
+            },
+            "files": {
+                "config/packages/prod/sentry.yaml": {
+                    "contents": [
+                        "sentry:",
+                        "    dsn: '%env(SENTRY_DSN)%'",
+                        "    options:",
+                        "        excluded_exceptions:",
+                        "            - Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
+                        "            - Symfony\\Component\\Security\\Core\\Exception\\AccessDeniedException",
+                        "",
+                        "#    If you are using Monolog, you also need this additional configuration to log the errors correctly:",
+                        "#    https://docs.sentry.io/platforms/php/guides/symfony/#monolog-integration",
+                        "#    register_error_listener: false",
+                        "",
+                        "# monolog:",
+                        "#     handlers:",
+                        "#         sentry:",
+                        "#             type: sentry",
+                        "#             level: !php/const Monolog\\Logger::ERROR",
+                        "#             hub_id: Sentry\\State\\HubInterface",
+                        "",
+                        "# If you are using MonologBundle prior to v3.7, you need to configure the handler as a service instead:",
+                        "",
+                        "# monolog:",
+                        "#     handlers:",
+                        "#         sentry:",
+                        "#             type: service",
+                        "#             id: Sentry\\Monolog\\Handler",
+                        "",
+                        "# services:",
+                        "#     Sentry\\Monolog\\Handler:",
+                        "#         arguments:",
+                        "#             $hub: '@Sentry\\State\\HubInterface'",
+                        "#             $level: !php/const Monolog\\Logger::ERROR",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "31024cb40a800443dc032ce8b463b73879a7942a"
+        }
+    }
+}

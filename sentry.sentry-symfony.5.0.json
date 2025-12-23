@@ -1,0 +1,71 @@
+{
+    "manifests": {
+        "sentry/sentry-symfony": {
+            "manifest": {
+                "bundles": {
+                    "Sentry\\SentryBundle\\SentryBundle": [
+                        "prod"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SENTRY_DSN": ""
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<5.4",
+                    "symfony/monolog-bundle": "<3.7"
+                }
+            },
+            "files": {
+                "config/packages/sentry.yaml": {
+                    "contents": [
+                        "when@prod:",
+                        "    sentry:",
+                        "        dsn: '%env(SENTRY_DSN)%'",
+                        "        options:",
+                        "            # Add request headers, cookies, IP address and the authenticated user",
+                        "            # see https://docs.sentry.io/platforms/php/data-management/data-collected/ for more info",
+                        "            # send_default_pii: true",
+                        "            ignore_exceptions:",
+                        "                - 'Symfony\\Component\\ErrorHandler\\Error\\FatalError'",
+                        "                - 'Symfony\\Component\\Debug\\Exception\\FatalErrorException'",
+                        "#",
+                        "#        # If you are using Monolog, you also need this additional configuration to log the errors correctly:",
+                        "#        # https://docs.sentry.io/platforms/php/guides/symfony/#monolog-integration",
+                        "#        register_error_listener: false",
+                        "#        register_error_handler: false",
+                        "#",
+                        "#    monolog:",
+                        "#        handlers:",
+                        "#            # Use this only if you don't want to use structured logging and instead receive",
+                        "#            # certain log levels as errors.  ",
+                        "#            sentry:",
+                        "#                type: service",
+                        "#                id: Sentry\\Monolog\\Handler",
+                        "#",
+                        "#            # Use this for structured log integration",
+                        "#            sentry_logs:",
+                        "#                type: service",
+                        "#                id: Sentry\\SentryBundle\\Monolog\\LogsHandler",
+                        "#",
+                        "#    # Enable one of the two services below, depending on your choice above",
+                        "#    services:",
+                        "#        Sentry\\Monolog\\Handler:",
+                        "#            arguments:",
+                        "#                $hub: '@Sentry\\State\\HubInterface'",
+                        "#                $level: !php/const Monolog\\Logger::ERROR",
+                        "#                $fillExtraContext: true # Enables sending monolog context to Sentry",
+                        "#        Sentry\\SentryBundle\\Monolog\\LogsHandler:",
+                        "#            arguments:",
+                        "#                - !php/const Monolog\\Logger::INFO",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b01478ecd8dc691c7b11e88dc39c1de1148d1b51"
+        }
+    }
+}
