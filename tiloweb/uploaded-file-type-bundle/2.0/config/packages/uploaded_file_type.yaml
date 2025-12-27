@@ -1,0 +1,16 @@
+# UploadedFileType Bundle Configuration
+# Documentation: https://github.com/Tiloweb/uploaded-file-type-bundle
+
+uploaded_file_type:
+    configurations:
+        # Example configuration - customize for your needs
+        default:
+            # The Flysystem filesystem service ID
+            # See: https://github.com/1up-lab/OneupFlysystemBundle
+            filesystem: 'oneup_flysystem.default_filesystem'
+            
+            # The base URL to access uploaded files
+            base_uri: '%env(UPLOAD_BASE_URI)%'
+            
+            # The subdirectory path within the filesystem
+            path: '/uploads'
