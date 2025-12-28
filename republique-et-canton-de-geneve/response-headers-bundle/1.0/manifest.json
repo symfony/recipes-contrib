@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "EtatGeneve\\ResponseHeadersBundle\\ResponseHeadersBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "aliases": ["headers", "response-header", "response-headers-bundle"],
+    "copy-from-package": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
