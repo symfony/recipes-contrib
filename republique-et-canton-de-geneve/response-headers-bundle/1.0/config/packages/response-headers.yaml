@@ -1,0 +1,11 @@
+---
+# config/packages/response-headers.yaml
+# https://github.com/republique-et-canton-de-geneve/response-headers-bundle/blob/main/config.md
+
+response_headers:
+  headers:
+#    Cache-Control : max-age=0, must-revalidate, no-cache, no-store, private"
+#    Referrer-Policy: strict-origin
+#    X-Content-Type-Options: nosniff
+#    X-XSS-Protection: 1; mode=block
+...

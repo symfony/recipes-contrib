@@ -2,7 +2,7 @@
     "bundles": {
         "EtatGeneve\\ResponseHeadersBundle\\ResponseHeadersBundle": ["all"]
     },
-    "copy-from-package": {
+    "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     }
 }
