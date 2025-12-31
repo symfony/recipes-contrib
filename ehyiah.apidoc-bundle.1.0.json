@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "ehyiah/apidoc-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Ehyiah\\ApiDocBundle\\EhyiahApiDocBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "copy-from-package": {
+                    "src/Swagger/": "%SRC_DIR%/Swagger/"
+                },
+                "env": {
+                    "#1": "Directory where the source api doc should be living",
+                    "SOURCE_PATH": "/src/Swagger",
+                    "#2": "The bundle will create a dump folder inside SOURCE_PATH Directory when you use the dump command",
+                    "DUMP_PATH": "dump"
+                }
+            },
+            "files": {
+                "config/packages/ehyiah_api_doc.yaml": {
+                    "contents": [
+                        "ehyiah_api_doc:",
+                        "    source_path: '%env(SOURCE_PATH)%'",
+                        "    dump_path: '%env(DUMP_PATH)%'",
+                        "    ui: swagger",
+                        "    scan_directories:",
+                        "        - 'src/Entity'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/ehyiah_api_doc.yaml": {
+                    "contents": [
+                        "ehyiah_api_doc_index:",
+                        "    path: /ehyiah/api/doc",
+                        "    controller: Ehyiah\\ApiDocBundle\\Controller\\ApiDocController::index",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b8c08ffd8621e945387293b211c97361b57a4240"
+        }
+    }
+}

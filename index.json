@@ -546,7 +546,8 @@
             "5.0"
         ],
         "ehyiah/apidoc-bundle": [
-            "0.3"
+            "0.3",
+            "1.0"
         ],
         "eightpoints/guzzle-bundle": [
             "7.0"
