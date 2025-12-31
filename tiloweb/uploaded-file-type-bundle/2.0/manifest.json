@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Tiloweb\\UploadedFileTypeBundle\\UploadedFileTypeBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "UPLOAD_BASE_URI": "https://cdn.example.com"
+    }
+}
