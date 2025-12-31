@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "republique-et-canton-de-geneve/response-headers-bundle": {
+            "manifest": {
+                "bundles": {
+                    "EtatGeneve\\ResponseHeadersBundle\\ResponseHeadersBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * Edit the <comment>config/package/response-headers.yaml</comment> file to configure http response header."
+                ]
+            },
+            "files": {
+                "config/packages/response_headers.yaml": {
+                    "contents": [
+                        "# config/packages/response_headers.yaml",
+                        "# https://github.com/republique-et-canton-de-geneve/response-headers-bundle/blob/main/config.md",
+                        "",
+                        "response_headers:",
+                        "    headers:",
+                        "#        Cache-Control : max-age=0, must-revalidate, no-cache, no-store, private\"",
+                        "#        Referrer-Policy: strict-origin",
+                        "#        X-Content-Type-Options: nosniff",
+                        "#        X-XSS-Protection: 1; mode=block",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "679ab0d915c7476ecea7c4d3eeb433d1bcf47cad"
+        }
+    }
+}

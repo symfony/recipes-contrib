@@ -1707,6 +1707,9 @@
         "rekalogika/temporary-url-bundle": [
             "1.0"
         ],
+        "republique-et-canton-de-geneve/response-headers-bundle": [
+            "1.0"
+        ],
         "request-tracing/request-tracing-bundle": [
             "0.1"
         ],
