@@ -1,0 +1,6 @@
+ehyiah_api_doc:
+    source_path: '%env(SOURCE_PATH)%'
+    dump_path: '%env(DUMP_PATH)%'
+    ui: swagger
+    scan_directories:
+        - 'src/Entity'
