@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "tiloweb/uploaded-file-type-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Tiloweb\\UploadedFileTypeBundle\\UploadedFileTypeBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "UPLOAD_BASE_URI": "https://cdn.example.com"
+                }
+            },
+            "files": {
+                "config/packages/uploaded_file_type.yaml": {
+                    "contents": [
+                        "# Read the documentation: https://github.com/Tiloweb/uploaded-file-type-bundle",
+                        "uploaded_file_type:",
+                        "    configurations:",
+                        "        default:",
+                        "            filesystem: 'oneup_flysystem.default_filesystem'",
+                        "            base_uri: '%env(UPLOAD_BASE_URI)%'",
+                        "            path: '/uploads'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "1edf7dd81cee2cdc0f6f6758f41f603a8df2a6c7"
+        }
+    }
+}

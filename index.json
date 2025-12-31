@@ -2183,6 +2183,9 @@
         "tilleuls/url-signer-bundle": [
             "1.0"
         ],
+        "tiloweb/uploaded-file-type-bundle": [
+            "2.0"
+        ],
         "timiki/rpc-client-bundle": [
             "4.0"
         ],

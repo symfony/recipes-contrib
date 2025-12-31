@@ -678,6 +678,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [tilleuls/migration-bundle](https://packagist.org/packages/tilleuls/migration-bundle) | [1.1](tilleuls/migration-bundle/1.1) |
 | [tilleuls/sylius-quick-import-plugin](https://packagist.org/packages/tilleuls/sylius-quick-import-plugin) | [0.1](tilleuls/sylius-quick-import-plugin/0.1) |
 | [tilleuls/url-signer-bundle](https://packagist.org/packages/tilleuls/url-signer-bundle) | [1.0](tilleuls/url-signer-bundle/1.0) |
+| [tiloweb/uploaded-file-type-bundle](https://packagist.org/packages/tiloweb/uploaded-file-type-bundle) | [2.0](tiloweb/uploaded-file-type-bundle/2.0) |
 | [timiki/rpc-client-bundle](https://packagist.org/packages/timiki/rpc-client-bundle) | [4.0](timiki/rpc-client-bundle/4.0) |
 | [timiki/rpc-server-bundle](https://packagist.org/packages/timiki/rpc-server-bundle) | [5.0](timiki/rpc-server-bundle/5.0) |
 | [tiriel/firestore-odm-bundle](https://packagist.org/packages/tiriel/firestore-odm-bundle) | [0.2](tiriel/firestore-odm-bundle/0.2) |
