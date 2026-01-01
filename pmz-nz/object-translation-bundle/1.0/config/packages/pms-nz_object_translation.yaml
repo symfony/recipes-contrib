@@ -1,0 +1,4 @@
+pms-nz_object_translation:
+  # Change the following class name to that of your entity which stores your translations
+  translation_class: App\Entity\Translation
+
