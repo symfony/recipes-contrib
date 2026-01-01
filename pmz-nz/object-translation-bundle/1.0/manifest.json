@@ -3,6 +3,6 @@
         "PmsNz\\ObjectTranslationBundle\\ObjectTranslationBundle": ["all"]
     },
     "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/",
+        "config/": "%CONFIG_DIR%/"
     }
 }
