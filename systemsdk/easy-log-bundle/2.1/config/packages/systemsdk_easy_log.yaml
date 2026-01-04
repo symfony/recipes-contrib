@@ -1,0 +1,23 @@
+when@dev:
+    monolog:
+        handlers:
+            buffered:
+                type: buffer
+                handler: easylog
+                level: debug
+                channels: [ '!event' ]
+            easylog:
+                type: service
+                id: easy_log.handler
+    easy_log:
+        log_path: '%kernel.logs_dir%/%kernel.environment%-readable.log'
+        max_line_length: 120
+        prefix_length: 4
+        ignored_routes: [ '_wdt', '_profiler' ]
+
+when@test:
+    easy_log:
+        log_path: '%kernel.logs_dir%/%kernel.environment%-readable.log'
+        max_line_length: 120
+        prefix_length: 4
+        ignored_routes: [ '_wdt', '_profiler' ]
