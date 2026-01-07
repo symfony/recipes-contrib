@@ -1,0 +1,10 @@
+* You're almost ready to use pms-nz/object-translation-bundle!
+
+* First, use the console command <comment>make:entity</comment> create a new entity which where your translations will be stored, e.g. Translation.
+
+* Next, extend this class with <comment>PmsNz\ObjectTranslationBundle\Model\AbstractTranslation</comment>.
+
+* Next, use the console commands <comment>make:migration</comment> and <comment>doctrine:migrations:migrate</comment> to create a table in your database where translation will be stored.
+
+* Next,
+* <fg=blue>Read</> the documentation at <comment>https://github.com/pms-nz/object-translation-bundle</>
