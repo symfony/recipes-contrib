@@ -657,7 +657,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [symfonycorp/connect-bundle](https://packagist.org/packages/symfonycorp/connect-bundle) | [5.0](symfonycorp/connect-bundle/5.0) |
 | [synolia/sylius-mail-tester-plugin](https://packagist.org/packages/synolia/sylius-mail-tester-plugin) | [3.0](synolia/sylius-mail-tester-plugin/3.0) |
 | [synolia/sylius-scheduler-command-plugin](https://packagist.org/packages/synolia/sylius-scheduler-command-plugin) | [4.0](synolia/sylius-scheduler-command-plugin/4.0) |
-| [systemsdk/easy-log-bundle](https://packagist.org/packages/systemsdk/easy-log-bundle) | [1.10](systemsdk/easy-log-bundle/1.10) |
+| [systemsdk/easy-log-bundle](https://packagist.org/packages/systemsdk/easy-log-bundle) | [2.1](systemsdk/easy-log-bundle/2.1) |
 | [tales-from-a-dev/flowbite-bundle](https://packagist.org/packages/tales-from-a-dev/flowbite-bundle) | [0.4](tales-from-a-dev/flowbite-bundle/0.4) |
 | [tales-from-a-dev/twig-tailwind-extra](https://packagist.org/packages/tales-from-a-dev/twig-tailwind-extra) | [0.2](tales-from-a-dev/twig-tailwind-extra/0.2) |
 | [talleu/php-redis-om](https://packagist.org/packages/talleu/php-redis-om) | [0.3](talleu/php-redis-om/0.3) |

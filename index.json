@@ -2115,7 +2115,8 @@
             "4.0"
         ],
         "systemsdk/easy-log-bundle": [
-            "1.10"
+            "1.10",
+            "2.1"
         ],
         "tales-from-a-dev/flowbite-bundle": [
             "0.4"
