@@ -1640,6 +1640,9 @@
         "player259/graphql-bundle": [
             "1.0"
         ],
+        "pms-nz/object-translation-bundle": [
+            "1.0"
+        ],
         "pomm-project/pomm-bundle": [
             "2.3"
         ],

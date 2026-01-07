@@ -513,6 +513,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [piou-piou/ribs-cron-bundle](https://packagist.org/packages/piou-piou/ribs-cron-bundle) | [1.0](piou-piou/ribs-cron-bundle/1.0) |
 | [pixelopen/cloudflare-turnstile-bundle](https://packagist.org/packages/pixelopen/cloudflare-turnstile-bundle) | [0.1](pixelopen/cloudflare-turnstile-bundle/0.1) |
 | [player259/graphql-bundle](https://packagist.org/packages/player259/graphql-bundle) | [1.0](player259/graphql-bundle/1.0) |
+| [pms-nz/object-translation-bundle](https://packagist.org/packages/pms-nz/object-translation-bundle) | [1.0](pms-nz/object-translation-bundle/1.0) |
 | [pomm-project/pomm-bundle](https://packagist.org/packages/pomm-project/pomm-bundle) | [2.3](pomm-project/pomm-bundle/2.3) |
 | [pond5/async-request-bundle](https://packagist.org/packages/pond5/async-request-bundle) | [1.1](pond5/async-request-bundle/1.1) |
 | [prolix/maintenance-bundle](https://packagist.org/packages/prolix/maintenance-bundle) | [2.1](prolix/maintenance-bundle/2.1) |
