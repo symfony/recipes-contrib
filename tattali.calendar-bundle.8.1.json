@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "tattali/calendar-bundle": {
+            "manifest": {
+                "bundles": {
+                    "CalendarBundle\\CalendarBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/calendar.yaml": {
+                    "contents": [
+                        "calendar:",
+                        "    cache_max_age: 300    # HTTP cache (0 to disable)",
+                        "    json_max_depth: 4     # JSON nesting limit for filters",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/calendar.yaml": {
+                    "contents": [
+                        "calendar:",
+                        "    resource: \"@CalendarBundle/config/routing.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5cd0d27ab839ae430c3ae78df7534fa492b713f5"
+        }
+    }
+}

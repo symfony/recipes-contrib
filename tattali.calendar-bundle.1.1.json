@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "tattali/calendar-bundle": {
+            "manifest": {
+                "bundles": {
+                    "CalendarBundle\\CalendarBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/calendar.yaml": {
+                    "contents": [
+                        "calendar:",
+                        "    resource: \"@CalendarBundle/Resources/config/routing.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0c643e17b5340747b35c2c75e11727fa31bfa9bb"
+        }
+    }
+}
