@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "friendsofsymfony/jsrouting-bundle": {
+            "manifest": {
+                "bundles": {
+                    "FOS\\JsRoutingBundle\\FOSJsRoutingBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/fos_js_routing.yaml": {
+                    "contents": [
+                        "fos_js_routing:",
+                        "    resource: \"@FOSJsRoutingBundle/Resources/config/routing/routing.php\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "03986bbad9dcc3e367036a6b4f48ec469a4b1bf4"
+        }
+    }
+}
