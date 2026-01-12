@@ -230,7 +230,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [friends-of-behat/symfony-extension](https://packagist.org/packages/friends-of-behat/symfony-extension) | [2.0](friends-of-behat/symfony-extension/2.0) |
 | [friendsofsymfony/ckeditor-bundle](https://packagist.org/packages/friendsofsymfony/ckeditor-bundle) | [2.0](friendsofsymfony/ckeditor-bundle/2.0) |
 | [friendsofsymfony/elastica-bundle](https://packagist.org/packages/friendsofsymfony/elastica-bundle) | [5.0](friendsofsymfony/elastica-bundle/5.0) |
-| [friendsofsymfony/jsrouting-bundle](https://packagist.org/packages/friendsofsymfony/jsrouting-bundle) | [2.3](friendsofsymfony/jsrouting-bundle/2.3) |
+| [friendsofsymfony/jsrouting-bundle](https://packagist.org/packages/friendsofsymfony/jsrouting-bundle) | [3.0](friendsofsymfony/jsrouting-bundle/3.0) |
 | [friendsofsymfony/oauth-server-bundle](https://packagist.org/packages/friendsofsymfony/oauth-server-bundle) | [1.6](friendsofsymfony/oauth-server-bundle/1.6) |
 | [friendsofsymfony/rest-bundle](https://packagist.org/packages/friendsofsymfony/rest-bundle) | [3.0](friendsofsymfony/rest-bundle/3.0) |
 | [fsi/files](https://packagist.org/packages/fsi/files) | [1.5](fsi/files/1.5) |
