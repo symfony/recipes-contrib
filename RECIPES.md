@@ -662,7 +662,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [tales-from-a-dev/twig-tailwind-extra](https://packagist.org/packages/tales-from-a-dev/twig-tailwind-extra) | [0.2](tales-from-a-dev/twig-tailwind-extra/0.2) |
 | [talleu/php-redis-om](https://packagist.org/packages/talleu/php-redis-om) | [0.3](talleu/php-redis-om/0.3) |
 | [talleu/trigger-mapping](https://packagist.org/packages/talleu/trigger-mapping) | [0.1](talleu/trigger-mapping/0.1) |
-| [tattali/calendar-bundle](https://packagist.org/packages/tattali/calendar-bundle) | [1.1](tattali/calendar-bundle/1.1) |
+| [tattali/calendar-bundle](https://packagist.org/packages/tattali/calendar-bundle) | [8.1](tattali/calendar-bundle/8.1) |
 | [tbbc/money-bundle](https://packagist.org/packages/tbbc/money-bundle) | [4.0](tbbc/money-bundle/4.0) |
 | [tbmatuka/editorjs-bundle](https://packagist.org/packages/tbmatuka/editorjs-bundle) | [0.1](tbmatuka/editorjs-bundle/0.1) |
 | [teebbstudios/tuieditor-bundle](https://packagist.org/packages/teebbstudios/tuieditor-bundle) | [1.0](teebbstudios/tuieditor-bundle/1.0) |
