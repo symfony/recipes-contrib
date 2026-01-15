@@ -1,0 +1,77 @@
+{
+    "manifests": {
+        "shopware/app-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Shopware\\AppBundle\\ShopwareAppBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "env": {
+                    "SHOPWARE_APP_NAME": "TestApp",
+                    "SHOPWARE_APP_SECRET": "MySecret"
+                },
+                "post-install-output": [
+                    "  * <fg=yellow>Warning</> the shopware/app-bundle uses by default a in-memory database. You should use doctrine or dynamodb",
+                    "",
+                    "    For doctrine install the following packages: composer require doctrine/orm symfony/doctrine-bridge",
+                    "    For dynamodb install the following packages: composer require async-aws/async-aws-bundle async-aws/dynamo-db",
+                    "",
+                    "    Make sure to configure the correct storage after installing the packages in config/packages/shopware_app.yaml"
+                ]
+            },
+            "files": {
+                "config/packages/shopware_app.yaml": {
+                    "contents": [
+                        "shopware_app:",
+                        "    name: '%env(SHOPWARE_APP_NAME)%'",
+                        "    secret: '%env(SHOPWARE_APP_SECRET)%'",
+                        "    # You should specify a specific storage like: dynamodb or doctrine",
+                        "    storage: 'auto'",
+                        "    doctrine:",
+                        "        shop_class: App\\Entity\\Shop",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/shopware_app.yaml": {
+                    "contents": [
+                        "shopware_app_lifecycle:",
+                        "    resource: '@ShopwareAppBundle/Resources/config/routing/lifecycle.php'",
+                        "    prefix: /app",
+                        "",
+                        "shopware_app_webhook:",
+                        "    resource: '@ShopwareAppBundle/Resources/config/routing/webhook.php'",
+                        "    prefix: /app",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/Shop.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping\\Entity;",
+                        "use Shopware\\AppBundle\\Entity\\AbstractShop;",
+                        "",
+                        "#[Entity]",
+                        "class Shop extends AbstractShop",
+                        "{",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a18d9df13cae546fdd9812fb1318f96a3aef1096"
+        }
+    }
+}
