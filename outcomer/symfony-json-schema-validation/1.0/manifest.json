@@ -1,13 +1,15 @@
 {
-    "require": {
-        "php": ">=8.2",
-        "symfony/framework-bundle": ">=7.4"
-    },
     "bundles": {
         "Outcomer\\ValidationBundle\\OutcomerValidationBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": true,
+            "require": "^7.4"
+        }
     },
     "post-install-output": [
         "<bg=blue;fg=white>              </>",
