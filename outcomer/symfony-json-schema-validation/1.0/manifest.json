@@ -5,12 +5,6 @@
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     },
-    "extra": {
-        "symfony": {
-            "allow-contrib": true,
-            "require": "^7.4"
-        }
-    },
     "post-install-output": [
         "<bg=blue;fg=white>              </>",
         "<bg=blue;fg=white> What's next? </>",
