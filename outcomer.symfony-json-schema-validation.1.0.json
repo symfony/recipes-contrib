@@ -1,0 +1,46 @@
+{
+    "manifests": {
+        "outcomer/symfony-json-schema-validation": {
+            "manifest": {
+                "bundles": {
+                    "Outcomer\\ValidationBundle\\OutcomerValidationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>              </>",
+                    "<bg=blue;fg=white> What's next? </>",
+                    "<bg=blue;fg=white>              </>",
+                    "",
+                    "  * <fg=blue>Configure</> your JSON Schema validation in <comment>config/packages/outcomer_validation.yaml</>",
+                    "  * <fg=blue>Create</> your first schema in <comment>config/validation/schemas/</>",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/outcomer/symfony-json-schema-validation</>"
+                ]
+            },
+            "files": {
+                "config/packages/outcomer_validation.yaml": {
+                    "contents": [
+                        "outcomer_validation:",
+                        "    # Path to your JSON Schema files",
+                        "    schemas_path: '%kernel.project_dir%/config/validation/schemas'",
+                        "",
+                        "    # Base domain for auto-generated schema IDs",
+                        "    schema_domain: 'https://example.com'",
+                        "",
+                        "    # Custom filters (optional)",
+                        "    # Uncomment and add your custom filters here",
+                        "    #filters:",
+                        "    #    uuid: App\\Validation\\Filter\\UuidFilter",
+                        "    #    date: App\\Validation\\Filter\\DateFilter",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "36a335e3a139ff6bdd33cad99c5f8d42b572a6d9"
+        }
+    }
+}
