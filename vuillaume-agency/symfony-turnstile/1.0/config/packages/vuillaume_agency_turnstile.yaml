@@ -1,0 +1,5 @@
+vuillaume_agency_turnstile:
+    key: '%env(TURNSTILE_KEY)%'
+    secret: '%env(TURNSTILE_SECRET)%'
+    enable: true
+    disable_submit_until_verified: false
