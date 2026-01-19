@@ -2246,6 +2246,9 @@
             "0.6",
             "3.0"
         ],
+        "vuillaume-agency/symfony-turnstile": [
+            "1.0"
+        ],
         "wandi/easyadmin-plus-bundle": [
             "0.1",
             "0.3"

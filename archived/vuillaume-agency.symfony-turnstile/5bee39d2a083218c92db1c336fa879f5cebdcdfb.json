@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "vuillaume-agency/symfony-turnstile": {
+            "manifest": {
+                "bundles": {
+                    "VuillaumeAgency\\TurnstileBundle\\VuillaumeAgencyTurnstileBundle": [
+                        "all"
+                    ]
+                },
+                "env": {
+                    "TURNSTILE_KEY": "your-site-key",
+                    "TURNSTILE_SECRET": "your-secret-key"
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/vuillaume_agency_turnstile.yaml": {
+                    "contents": [
+                        "vuillaume_agency_turnstile:",
+                        "    key: '%env(TURNSTILE_KEY)%'",
+                        "    secret: '%env(TURNSTILE_SECRET)%'",
+                        "    enable: true",
+                        "    disable_submit_until_verified: false",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5bee39d2a083218c92db1c336fa879f5cebdcdfb"
+        }
+    }
+}
