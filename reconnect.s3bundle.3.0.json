@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "reconnect/s3bundle": {
+            "manifest": {
+                "bundles": {
+                    "Reconnect\\S3Bundle\\ReconnectS3Bundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "BUCKET_HOST": "",
+                    "BUCKET_NAME": "",
+                    "BUCKET_KEY": "",
+                    "BUCKET_SECRET": ""
+                }
+            },
+            "files": {
+                "config/packages/reconnect_s3.yaml": {
+                    "contents": [
+                        "reconnect_s3:",
+                        "    bucketHost: '%env(BUCKET_HOST)%'",
+                        "    bucketName: '%env(BUCKET_NAME)%'",
+                        "    bucketKey: '%env(BUCKET_KEY)%'",
+                        "    bucketSecret: '%env(BUCKET_SECRET)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "867831742cead3a64e5dea03d736417bf3ebd092"
+        }
+    }
+}

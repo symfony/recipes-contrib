@@ -1696,7 +1696,8 @@
             "3.0"
         ],
         "reconnect/s3bundle": [
-            "0.1"
+            "0.1",
+            "3.0"
         ],
         "redirectionio/proxy-symfony": [
             "0.1",
