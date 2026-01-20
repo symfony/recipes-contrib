@@ -1,0 +1,12 @@
+outcomer_validation:
+    # Path to your JSON Schema files
+    schemas_path: '%kernel.project_dir%/config/validation/schemas'
+
+    # Base domain for auto-generated schema IDs
+    schema_domain: 'https://example.com'
+
+    # Custom filters (optional)
+    # Uncomment and add your custom filters here
+    #filters:
+    #    uuid: App\Validation\Filter\UuidFilter
+    #    date: App\Validation\Filter\DateFilter
