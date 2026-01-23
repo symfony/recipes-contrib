@@ -12,7 +12,7 @@ storyblok:
     cdn:
       storage:
         type: filesystem
-        path: '%env(resolve:STORYBLOK_CDN_FILE_STORAGE_PATH)%'
+        path: '%env(resolve:STORYBLOK_CDN_STORAGE_PATH)%'
 
 when@prod:
     storyblok:

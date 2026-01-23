@@ -12,6 +12,6 @@
         "STORYBLOK_VERSION": "draft",
         "#1": "STORYBLOK_ASSETS_API_TOKEN=",
         "#2": "STORYBLOK_WEBHOOK_SECRET=",
-        "STORYBLOK_CDN_FILE_STORAGE_PATH=": "%kernel.project_dir%/var/cdn"
+        "STORYBLOK_CDN_STORAGE_PATH": "%kernel.project_dir%/var/cdn"
     }
 }
