@@ -10,9 +10,9 @@ storyblok:
     #     ascending_redirect_fallback: true
 
     cdn:
-      storage:
-        type: filesystem
-        path: '%env(resolve:STORYBLOK_CDN_STORAGE_PATH)%'
+        storage:
+            type: filesystem
+            path: '%env(resolve:STORYBLOK_CDN_STORAGE_PATH)%'
 
 when@prod:
     storyblok:
@@ -24,7 +24,7 @@ when@prod:
                 must_revalidate: true
 
         cdn:
-          cache:
-            public: true
-            max_age: 604800
-            smax_age: 604800
+            cache:
+                public: true
+                max_age: 604800
+                smax_age: 604800
