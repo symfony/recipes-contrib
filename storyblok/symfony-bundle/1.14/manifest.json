@@ -10,8 +10,8 @@
         "STORYBLOK_API_BASE_URI": "https://api.storyblok.com",
         "STORYBLOK_API_TOKEN": "",
         "STORYBLOK_VERSION": "draft",
+        "STORYBLOK_CDN_STORAGE_PATH": "%kernel.project_dir%/var/cdn",
         "#1": "STORYBLOK_ASSETS_API_TOKEN=",
-        "#2": "STORYBLOK_WEBHOOK_SECRET=",
-        "STORYBLOK_CDN_STORAGE_PATH": "%kernel.project_dir%/var/cdn"
+        "#2": "STORYBLOK_WEBHOOK_SECRET="
     }
 }
