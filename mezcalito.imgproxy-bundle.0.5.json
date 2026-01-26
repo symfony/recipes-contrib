@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "mezcalito/imgproxy-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Mezcalito\\ImgproxyBundle\\ImgproxyBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Configure the key and salt for your imgproxy instance (https://docs.imgproxy.net/signing_the_url)",
+                    "#2": "IMGPROXY_HOST=http://localhost",
+                    "#3": "IMGPROXY_KEY=",
+                    "#4": "IMGPROXY_SALT="
+                }
+            },
+            "files": {
+                "config/packages/imgproxy.yaml": {
+                    "contents": [
+                        "imgproxy:",
+                        "    host: '%env(IMGPROXY_HOST)%'",
+                        "    signature:",
+                        "        key: '%env(IMGPROXY_KEY)%'",
+                        "        salt: '%env(IMGPROXY_SALT)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "4edbd0003f8f68eaa8e995b9221aaae992d60f6a"
+        }
+    }
+}
