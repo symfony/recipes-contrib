@@ -1,0 +1,23 @@
+{
+    "bundles": {
+        "Rcsofttech\\AuditTrailBundle\\AuditTrailBundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "AUDIT_TRAIL_INTEGRITY_SECRET": "generate(32)"
+    },
+    "post-install-output": [
+        "<bg=blue;fg=white>                    </>",
+        "<bg=blue;fg=white> AuditTrailBundle   </>",
+        "<bg=blue;fg=white>                    </>",
+        "",
+        "  * Check <comment>config/packages/audit_trail.yaml</> and customize it",
+        "  * Run <comment>php bin/console doctrine:migrations:migrate</> to apply the changes",
+        "",
+        "  * Read the documentation at <comment>https://github.com/rcsofttech85/AuditTrailBundle</>"
+    ]
+}

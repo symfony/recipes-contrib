@@ -1,0 +1,63 @@
+audit_trail:
+    # Enable or disable the audit trail bundle globally
+    enabled: true
+
+    # Database table customization
+    # table_prefix: ''
+    # table_suffix: ''
+
+    # Timezone for audit logs (default: UTC)
+    # timezone: UTC
+
+    # Number of days to keep audit logs before they are eligible for cleanup
+    # retention_days: 365
+
+    # Tracking options
+    # track_ip_address: true
+    # track_user_agent: true
+
+    # Soft delete handling
+    # enable_soft_delete: true
+    # soft_delete_field: deletedAt
+
+    # Hard delete handling
+    # enable_hard_delete: true
+
+    # Transport behavior
+    # defer_transport_until_commit: true
+    # fail_on_transport_error: false
+    # fallback_to_database: true
+
+    # Properties to ignore globally for all entities
+    ignored_properties:
+        - updatedAt
+        - updated_at
+
+    # Entities to ignore globally
+    # ignored_entities: []
+
+    # Transport configuration
+    transports:
+        # Save audit logs to the local database via Doctrine
+        doctrine: true
+
+        # Send audit logs to a remote HTTP endpoint
+        # http:
+        #     enabled: false
+        #     endpoint: 'https://api.example.com/audit'
+        #     headers: []
+        #     timeout: 5
+
+        # Dispatch audit logs via Symfony Messenger
+        # queue:
+        #     enabled: false
+        #     bus: null
+        #     api_key: null
+
+    # Integrity check for audit logs (HMAC signature)
+    integrity:
+        enabled: false
+        # The secret key used for HMAC signature. 
+        # It's recommended to use the generated environment variable.
+        secret: '%env(AUDIT_TRAIL_INTEGRITY_SECRET)%'
+        algorithm: sha256
