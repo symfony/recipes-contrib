@@ -2057,7 +2057,8 @@
             "1.0"
         ],
         "sylius/mcp-server-plugin": [
-            "0.1"
+            "0.1",
+            "0.2"
         ],
         "sylius/mollie-plugin": [
             "1.0",
