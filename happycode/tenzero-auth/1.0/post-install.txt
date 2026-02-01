@@ -8,9 +8,9 @@ Next steps (recommended):
 
    Minimal example:
 
-     happycode_tenzero_auth:
-       user_class: App\Entity\User
-       user_field: email
+    happycode_tenzero_auth:
+        user_class: App\Entity\User
+        user_field: email
 
    Notes:
    - user_class must be your Doctrine User entity class.
