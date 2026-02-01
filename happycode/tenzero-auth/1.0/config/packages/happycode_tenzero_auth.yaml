@@ -1,6 +1,6 @@
 happycode_tenzero_auth:
   # The class that will be used to authenticate user.
-  user_class: ~ # Required, Example: \App\Entity\User
+  # user_class: 'App\Entity\User'
 
   # The field that will be used to identify the user.
-  user_field: ~ # Required, Example: 'username | email'
+  # user_field: 'email'
