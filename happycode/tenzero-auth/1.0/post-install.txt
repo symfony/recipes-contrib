@@ -20,7 +20,7 @@ Next steps (recommended):
    Your App\Entity\User should extend the bundle base user model provided by TenZeroAuth.
    If you haven’t created your User entity yet, generate it (or update it) accordingly
 
-3) JWT keys / env vars
+3) JWT keys / ENV vars
    This bundle expects JWT configuration via environment variables.
    Add these to your .env.local (values are placeholders):
 
