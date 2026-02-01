@@ -14,7 +14,7 @@ Next steps (recommended):
 
    Notes:
    - user_class must be your Doctrine User entity class.
-   - user_field is the identifier field used for login (e.g. "email" or "username")
+   - user_field is the identifier field used for login (e.g. "email" or "username").
 
 2) Ensure your User entity is compatible
    Your App\Entity\User should extend the bundle base user model provided by TenZeroAuth.
