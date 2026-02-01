@@ -18,7 +18,7 @@ Next steps (recommended):
 
 2) Ensure your User entity is compatible
    Your App\Entity\User should extend the bundle base user model provided by TenZeroAuth.
-   If you haven’t created your User entity yet, generate it (or update it) accordingly.
+   If you haven’t created your User entity yet, generate it (or update it) accordingly
 
 3) JWT keys / env vars
    This bundle expects JWT configuration via environment variables.
