@@ -1,0 +1,37 @@
+security:
+    providers:
+        fastfony_identity_user_provider:
+            entity:
+                class: Fastfony\IdentityBundle\Entity\Identity\User
+                property: email
+
+    firewalls:
+        fastfony_identity:
+            lazy: true
+            provider: fastfony_identity_user_provider
+            user_checker: Fastfony\IdentityBundle\Security\UserChecker
+            form_login:
+                login_path: form_login
+                check_path: form_login
+                enable_csrf: true
+                csrf_token_id: login
+                form_only: true
+            login_link:
+                check_route: login_check
+                signature_properties: [ id, email ]
+                max_uses: 3
+            entry_point: Fastfony\IdentityBundle\Security\CustomEntryPoint
+            remember_me:
+                always_remember_me: true
+                signature_properties: [ 'id', 'email', 'password' ]
+            switch_user: true
+            login_throttling:
+                max_attempts: 3
+            logout:
+                path: /logout
+                clear_site_data:
+                    - cookies
+                    - storage
+
+    access_control:
+        - { path: ^/secure-area/, roles: ROLE_USER }

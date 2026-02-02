@@ -1,0 +1,20 @@
+<info>To finish the installation, follow these steps:</info>
+
+1. A <fg=yellow>config/routes/fastfony_identity.yaml</> file has been created for you.
+
+2. Merge the content of <fg=yellow>config/packages/security.yaml.dist</> into your <fg=yellow>config/packages/security.yaml</> file.
+
+3. Merge the content of <fg=yellow>config/packages/mailer.yaml.dist</> into your <fg=yellow>config/packages/mailer.yaml</> file and set your <fg=yellow>MAILER_DSN</> environment variable if it is not already done.
+
+4. Verify that you have timestampable extension enabled in <fg=yellow>config/packages/stof_doctrine_extensions.yaml.dist</>.
+
+5. Create the database schema:
+
+<fg=green>php bin/console doctrine:migrations:diff
+php bin/console doctrine:migrations:migrate</>
+
+or without migrations :
+
+<fg=green>php bin/console doctrine:schema:update --force</>
+
+<info>Done!</info>
