@@ -1,0 +1,57 @@
+Thanks for installing Happycode TenZeroAuth!
+
+Next steps (recommended):
+
+1) Configure the bundle
+   Add a config file (or edit your existing one):
+     config/packages/happycode_tenzero_auth.yaml
+
+   Minimal example:
+
+    happycode_tenzero_auth:
+        user_class: App\Entity\User
+        user_field: email
+
+   Notes:
+   - user_class must be your Doctrine User entity class.
+   - user_field is the identifier field used for login (e.g. "email" or "username").
+
+2) Ensure your User entity is compatible
+   Your App\Entity\User should extend the bundle base user model provided by TenZeroAuth.
+   If you haven’t created your User entity yet, generate it (or update it) accordingly
+
+3) JWT keys / ENV vars
+   This bundle expects JWT configuration via environment variables.
+   Add these to your .env.local (values are placeholders):
+
+     JWT_SECRET_KEY="[%PROJECT_DIR%]/config/jwt/private.pem"
+     JWT_PUBLIC_KEY="[%PROJECT_DIR%]/config/jwt/public.pem"
+     JWT_PASSPHRASE="<your-passphrase>"
+
+   Then generate the keypair (if you haven’t already), e.g. using the tooling recommended
+   by your JWT bundle, and ensure the files exist at the configured paths.
+
+4) Database / migrations
+   If this recipe adds entities or mapping, generate & run migrations:
+
+     php bin/console doctrine:migrations:diff
+     php bin/console doctrine:migrations:migrate
+
+5) Routes / UI
+   After install, you should have auth endpoints available (login/logout, and optionally register).
+   Start your server and verify the auth screens load correctly.
+
+6) Optional: customize
+   You can override defaults such as:
+   - theme
+   - app_name / app_description
+   - enable_register
+   - login_redirect_url / logout_redirect_url
+   - token_ttl, reset_password_link_ttl
+   - access_control overrides (advanced)
+
+If something doesn’t work, double-check:
+- Your user_class exists and autoloads
+- Your user_class is the expected base type for this bundle
+- Your user_field exists on the user (property or getter)
+- JWT keys and passphrase are correct
