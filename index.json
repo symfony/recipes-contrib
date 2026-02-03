@@ -1698,6 +1698,9 @@
         "ravenflux/sort-functions": [
             "3.0"
         ],
+        "rcsofttech/audit-trail-bundle": [
+            "1.9"
+        ],
         "reconnect/s3bundle": [
             "0.1",
             "3.0"

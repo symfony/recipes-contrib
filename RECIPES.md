@@ -531,6 +531,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [ramsey/uuid-doctrine](https://packagist.org/packages/ramsey/uuid-doctrine) | [1.3](ramsey/uuid-doctrine/1.3) |
 | [ravenflux/php-functions](https://packagist.org/packages/ravenflux/php-functions) | [3.0](ravenflux/php-functions/3.0) |
 | [ravenflux/sort-functions](https://packagist.org/packages/ravenflux/sort-functions) | [3.0](ravenflux/sort-functions/3.0) |
+| [rcsofttech/audit-trail-bundle](https://packagist.org/packages/rcsofttech/audit-trail-bundle) | [1.9](rcsofttech/audit-trail-bundle/1.9) |
 | [reconnect/s3bundle](https://packagist.org/packages/reconnect/s3bundle) | [3.0](reconnect/s3bundle/3.0) |
 | [redirectionio/proxy-symfony](https://packagist.org/packages/redirectionio/proxy-symfony) | [0.2](redirectionio/proxy-symfony/0.2) |
 | [redjanym/fcm-bundle](https://packagist.org/packages/redjanym/fcm-bundle) | [1.1](redjanym/fcm-bundle/1.1) |
