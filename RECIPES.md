@@ -253,6 +253,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [gurtok/seo-bundle](https://packagist.org/packages/gurtok/seo-bundle) | [1.0](gurtok/seo-bundle/1.0) |
 | [hakam/multi-tenancy-bundle](https://packagist.org/packages/hakam/multi-tenancy-bundle) | [2.8](hakam/multi-tenancy-bundle/2.8) |
 | [hans-peter-ording/nflfastr-symfony-bundle](https://packagist.org/packages/hans-peter-ording/nflfastr-symfony-bundle) | [0.9](hans-peter-ording/nflfastr-symfony-bundle/0.9) |
+| [happycode/tenzero-auth](https://packagist.org/packages/happycode/tenzero-auth) | [1.1](happycode/tenzero-auth/1.1) |
 | [happyr/entity-exists-validation-constraint](https://packagist.org/packages/happyr/entity-exists-validation-constraint) | [1.0](happyr/entity-exists-validation-constraint/1.0) |
 | [happyr/json-api-response-factory](https://packagist.org/packages/happyr/json-api-response-factory) | [0.1](happyr/json-api-response-factory/0.1) |
 | [happyr/linkedin-api-client](https://packagist.org/packages/happyr/linkedin-api-client) | [1.0](happyr/linkedin-api-client/1.0) |

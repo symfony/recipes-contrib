@@ -799,6 +799,9 @@
         "hans-peter-ording/nflfastr-symfony-bundle": [
             "0.9"
         ],
+        "happycode/tenzero-auth": [
+            "1.1"
+        ],
         "happyr/entity-exists-validation-constraint": [
             "1.0"
         ],
