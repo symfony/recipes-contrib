@@ -1230,6 +1230,9 @@
         "meteo-concept/hcaptcha-bundle": [
             "1.0"
         ],
+        "mezcalito/imgproxy-bundle": [
+            "0.5"
+        ],
         "mezcalito/ux-filemanager": [
             "0.1"
         ],

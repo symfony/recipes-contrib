@@ -388,6 +388,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [mercuryseries/inertia-bundle](https://packagist.org/packages/mercuryseries/inertia-bundle) | [0.1](mercuryseries/inertia-bundle/0.1) |
 | [meritoo/common-bundle](https://packagist.org/packages/meritoo/common-bundle) | [0.1](meritoo/common-bundle/0.1) |
 | [meteo-concept/hcaptcha-bundle](https://packagist.org/packages/meteo-concept/hcaptcha-bundle) | [1.0](meteo-concept/hcaptcha-bundle/1.0) |
+| [mezcalito/imgproxy-bundle](https://packagist.org/packages/mezcalito/imgproxy-bundle) | [0.5](mezcalito/imgproxy-bundle/0.5) |
 | [mezcalito/ux-filemanager](https://packagist.org/packages/mezcalito/ux-filemanager) | [0.1](mezcalito/ux-filemanager/0.1) |
 | [mezcalito/ux-search](https://packagist.org/packages/mezcalito/ux-search) | [0.1](mezcalito/ux-search/0.1) |
 | [mgdsoft/stackdriver-bundle](https://packagist.org/packages/mgdsoft/stackdriver-bundle) | [0.1](mgdsoft/stackdriver-bundle/0.1) |
