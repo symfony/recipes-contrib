@@ -1,0 +1,13 @@
+{
+    "ignorePatterns": [
+        "assets/vendor/**",
+        "assets/controllers.json",
+        "public/assets/**",
+        "public/bundles/**",
+        "tests/**",
+        "var/**",
+        "vendor/**",
+        "composer.json",
+        "package.json"
+    ]
+}
