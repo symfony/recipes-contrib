@@ -1,0 +1,2 @@
+sylius_lyra:
+  resource: "@LyranetworkLyraPlugin/Resources/config/routing.yaml"
