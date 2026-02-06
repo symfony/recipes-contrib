@@ -1,0 +1,36 @@
+includes:
+    - vendor/kocal/phpstan-symfony-ux/extension.neon
+    - vendor/phpstan/phpstan-symfony/extension.neon
+    - vendor/phpstan/phpstan-doctrine/extension.neon
+    - tools/phpstan/symfony-configuration.php
+
+parameters:
+    level: 9
+    paths:
+        - bin/
+        - config/
+        - public/
+        - src/
+        - tools/
+        - tests/
+    excludePaths:
+        - config/reference.php
+        - tools/.cache
+
+    tmpDir: tools/.cache/phpstan
+
+    symfony:
+        consoleApplicationLoader: tools/phpstan/console-application.php
+
+    doctrine:
+        objectManagerLoader: tools/phpstan/object-manager.php
+
+rules:
+    - Kocal\PHPStanSymfonyUX\Rules\TwigComponent\ClassMustBeFinalRule
+    - Kocal\PHPStanSymfonyUX\Rules\TwigComponent\ClassNameMustNotEndWithComponentRule
+    - Kocal\PHPStanSymfonyUX\Rules\TwigComponent\ForbiddenAttributesPropertyRule
+    - Kocal\PHPStanSymfonyUX\Rules\TwigComponent\ForbiddenClassPropertyRule
+    - Kocal\PHPStanSymfonyUX\Rules\TwigComponent\MethodsVisibilityRule
+    - Kocal\PHPStanSymfonyUX\Rules\TwigComponent\PostMountMethodSignatureRule
+    - Kocal\PHPStanSymfonyUX\Rules\TwigComponent\PreMountMethodSignatureRule
+    - Kocal\PHPStanSymfonyUX\Rules\TwigComponent\PublicPropertiesMustBeCamelCaseRule
