@@ -2,7 +2,7 @@
 
 1. A <fg=yellow>config/packages/fastfony_identity.yaml</> and a <fg=yellow>config/routes/fastfony_identity.yaml</> file has been created for you.
 
-2. The <fg=yellow>config/packages/security.yaml</> and <fg=yellow>config/packages/stof_doctrine_extensions.yaml</> file have been edited for you.
+2. The <fg=yellow>config/packages/security.yaml</> and <fg=yellow>config/packages/stof_doctrine_extensions.yaml</> files have been edited for you.
 
 3. Merge the content of <fg=yellow>config/packages/mailer.yaml.dist</> into your <fg=yellow>config/packages/mailer.yaml</> file and set your <fg=yellow>MAILER_DSN</> environment variable if it is not already done.
 
@@ -17,4 +17,4 @@
 
     <fg=green>php bin/console doctrine:schema:update --force</>
 
-<info>Enjoy! (you can also read the documentation in <comment>docs/</comment> for more information)</info>
+<info>Enjoy!</info>
