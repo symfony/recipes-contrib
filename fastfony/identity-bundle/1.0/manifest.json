@@ -10,7 +10,7 @@
             "file": "config/packages/stof_doctrine_extensions.yaml",
             "content": "    orm:\n        default:\n            timestampable: true\n",
             "position": "after_target",
-            "target": "    default_locale: en_US",
+            "target": "stof_doctrine_extensions:",
             "warn_if_missing": true
         },
         {
