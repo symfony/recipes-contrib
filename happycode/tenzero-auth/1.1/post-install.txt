@@ -3,6 +3,7 @@ Thanks for installing Happycode TenZeroAuth!
 Next steps (recommended):
 
 1) Configure the bundle
+   During install, you will be prompted for your User entity FQCN.
    Add a config file (or edit your existing one):
      config/packages/happycode_tenzero_auth.yaml
 

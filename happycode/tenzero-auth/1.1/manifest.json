@@ -2,6 +2,16 @@
     "bundles": {
         "Happycode\\TenZeroAuth\\TenZeroAuthBundle": ["all"]
     },
+    "extra": {
+        "symfony": {
+            "vars": {
+                "user_class": {
+                    "value": "App\\Entity\\User",
+                    "prompt": "User entity FQCN (must extend Happycode\\TenZeroAuth\\Model\\TenZeroUser)"
+                }
+            }
+        }
+    },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     }

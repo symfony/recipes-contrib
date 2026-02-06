@@ -6,7 +6,7 @@ happycode_tenzero_auth:
     app_description: "Built in authentication for TenZero."
 
     # The class that will be used to authenticate user.
-    user_class: 'App\Entity\User'
+    user_class: '%user_class%'
 
     # The field that will be used to identify the user.
     user_field: "email"
