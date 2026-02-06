@@ -1,9 +1,38 @@
 {
     "bundles": {
-        "Fastfony\\IdentityBundle\\FastfonyIdentityBundle": ["all"],
-        "Stof\\DoctrineExtensionsBundle\\StofDoctrineExtensionsBundle": ["all"]
+        "Fastfony\\IdentityBundle\\FastfonyIdentityBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
-    }
+    },
+    "add-lines": [
+        {
+            "file": "config/packages/stof_doctrine_extensions.yaml",
+            "position": "after_target",
+            "target": "    default_locale: en_US",
+            "content": "    orm:\n        default:\n            timestampable: true\n",
+            "warn_if_missing": true
+        },
+        {
+            "file": "config/packages/security.yaml",
+            "position": "after_target",
+            "target": "    providers:",
+            "content": "    fastfony_identity_user_provider:\n        entity:\n            class: Fastfony\\IdentityBundle\\Entity\\Identity\\User # if you extend the User class, change this to your class\n            property: email\n\n",
+            "warn_if_missing": true
+        },
+        {
+            "file": "config/packages/security.yaml",
+            "position": "before_target",
+            "target": "        main:",
+            "content": "\n    fastfony_identity:\n        lazy: true\n        provider: fastfony_identity_user_provider\n        user_checker: Fastfony\\IdentityBundle\\Security\\UserChecker\n        form_login:\n            login_path: form_login\n            check_path: form_login\n            enable_csrf: true\n            csrf_token_id: login\n            form_only: true\n        login_link:\n            check_route: login_check\n            signature_properties: [ id, email ]\n            max_uses: 3\n        entry_point: Fastfony\\IdentityBundle\\Security\\CustomEntryPoint\n        remember_me:\n            always_remember_me: true\n            signature_properties: [ 'id', 'email', 'password' ]\n        switch_user: true\n        login_throttling:\n            max_attempts: 3\n        logout:\n            path: /logout\n            clear_site_data:\n                - cookies\n                - storage\n\n",
+            "warn_if_missing": true
+        },
+        {
+            "file": "config/packages/security.yaml",
+            "position": "after_target",
+            "target": "    access_control:",
+            "content": "        - { path: ^/secure-area/, roles: ROLE_USER } # Adjust as needed\n",
+            "warn_if_missing": true
+        }
+    ]
 }

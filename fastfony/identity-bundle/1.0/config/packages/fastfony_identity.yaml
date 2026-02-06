@@ -1,0 +1,27 @@
+fastfony_identity:
+    user:
+        # Your custom User entity class extends Fastfony\IdentityBundle\Entity\Identity\User (optional)
+        #class: 'App\Entity\User'
+        #require_email_verification: true  # Require email verification for new users (default: false)
+    role:
+        # Your custom Role entity class extends Fastfony\IdentityBundle\Entity\Identity\Role (optional)
+        #class: 'App\Entity\Role'
+        # Default role assigned to new users (if you want to assign one different from ROLE_USER)
+        #default_role: 'ROLE_ADMIN'
+    group:
+        # Your custom Group entity class extends Fastfony\IdentityBundle\Entity\Identity\Group (optional)
+        #class: 'App\Entity\Group'
+    login:
+        #default_method: 'login_link' # Default login method: 'form_login' or 'login_link' (default: 'form_login')
+    registration:
+        #enabled: true  # Enable or disable user registration (default: false)
+    login_link:
+        #enabled: false  # Enable or disable login via email link (default: true)
+        #email_subject: 'Your login link' # Subject of the email sent with the login link (text or translation key)
+        #limit_max_ask_by_minute: 3  # Maximum number of login link requests in one minute
+    request_password:
+        #email_subject: 'Reset your password' # Subject of the email sent with the password reset link (text or translation key)
+        #email_content: 'Click on the button below to reset your password.' # Content of the email sent with the password reset link (text or translation key)
+        #email_action_text: 'Reset my password' # Text of the action button in the email sent with the password reset link (text or translation key)
+        #lifetime: 900  # Lifetime of the password reset token in seconds (default: 900 seconds = 15 minutes)
+        #redirect_route: 'app_homepage' # Route to redirect to after a successful password reset
