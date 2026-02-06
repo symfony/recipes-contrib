@@ -15,7 +15,7 @@
         },
         {
             "file": "config/packages/security.yaml",
-            "content": "    fastfony_identity_user_provider:\n        entity:\n            class: Fastfony\\IdentityBundle\\Entity\\Identity\\User # if you extend the User class, change this to your class\n            property: email\n\n",
+            "content": "        fastfony_identity_user_provider:\n            entity:\n                class: Fastfony\\IdentityBundle\\Entity\\Identity\\User # if you extend the User class, change this to your class\n                property: email\n\n",
             "position": "after_target",
             "target": "    providers:",
             "warn_if_missing": true
