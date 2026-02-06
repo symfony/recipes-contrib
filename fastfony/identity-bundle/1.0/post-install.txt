@@ -13,7 +13,7 @@
     <fg=green>php bin/console doctrine:migrations:diff
     php bin/console doctrine:migrations:migrate</>
 
-    Option 2 - Or without migrations ,you can create the schema directly :
+    Option 2 - Or without migrations, you can create the schema directly :
 
     <fg=green>php bin/console doctrine:schema:update --force</>
 
