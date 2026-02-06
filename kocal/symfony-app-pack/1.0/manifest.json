@@ -4,7 +4,6 @@
         "tools/": "tools/",
         ".twig-cs-fixer.php": ".twig-cs-fixer.php",
         "ecs.php": "ecs.php",
-        "Makefile": "Makefile",
         "Makefile.local": "Makefile.local",
         "php.ini": "php.ini",
         "phpstan.dist.neon": "phpstan.dist.neon",
