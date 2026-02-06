@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "Mezcalito\\ImgproxyBundle\\ImgproxyBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "Configure the key and salt for your imgproxy instance (https://docs.imgproxy.net/signing_the_url)",
+        "#2": "IMGPROXY_HOST=http://localhost",
+        "#3": "IMGPROXY_KEY=",
+        "#4": "IMGPROXY_SALT="
+    }
+}
