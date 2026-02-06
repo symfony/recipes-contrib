@@ -25,3 +25,4 @@ fastfony_identity:
         #email_action_text: 'Reset my password' # Text of the action button in the email sent with the password reset link (text or translation key)
         #lifetime: 900  # Lifetime of the password reset token in seconds (default: 900 seconds = 15 minutes)
         #redirect_route: 'app_homepage' # Route to redirect to after a successful password reset
+
