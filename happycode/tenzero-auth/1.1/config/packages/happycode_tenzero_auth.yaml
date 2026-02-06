@@ -1,12 +1,12 @@
 happycode_tenzero_auth:
-  # Optional app name displayed in the auth layout.
-  app_name: "TenZero"
+    # Optional app name displayed in the auth layout.
+    app_name: "TenZero"
 
-  # Optional app description displayed in the auth layout.
-  app_description: "Built in authentication for TenZero."
+    # Optional app description displayed in the auth layout.
+    app_description: "Built in authentication for TenZero."
 
-  # The class that will be used to authenticate user.
-  user_class: 'App\Entity\User'
+    # The class that will be used to authenticate user.
+    user_class: 'App\Entity\User'
 
-  # The field that will be used to identify the user.
-  user_field: "email"
+    # The field that will be used to identify the user.
+    user_field: "email"
