@@ -5,9 +5,5 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
-    },
-    "post-install": [
-        "---",
-        "output-from-recipe"
-    ]
+    }
 }
