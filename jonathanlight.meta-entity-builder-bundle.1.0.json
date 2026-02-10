@@ -1,0 +1,40 @@
+{
+    "manifests": {
+        "jonathanlight/meta-entity-builder-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Meta\\EntityBuilderBundle\\MetaEntityBuilderBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/meta_entity_builder.yaml": {
+                    "contents": [
+                        "meta_entity_builder:",
+                        "    # Path to YAML schema file defining your entities",
+                        "    schema_path: '%kernel.project_dir%/config/entities.yaml'",
+                        "",
+                        "    # Directory where generated entities will be saved",
+                        "    entity_directory: '%kernel.project_dir%/src/Entity'",
+                        "",
+                        "    # Namespace for generated entities",
+                        "    entity_namespace: 'App\\Entity'",
+                        "",
+                        "    # Create backup before updating existing entities",
+                        "    backup_enabled: true",
+                        "",
+                        "    # Backup directory (relative to project root)",
+                        "    backup_directory: '%kernel.project_dir%/var/backups/entities'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d592556059a6d31b7881706079ad1b698126f807"
+        }
+    }
+}
