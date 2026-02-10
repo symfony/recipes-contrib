@@ -1989,7 +1989,8 @@
             "0.1"
         ],
         "sulu/redirect-bundle": [
-            "2.0"
+            "2.0",
+            "3.0"
         ],
         "sulu/sylius-consumer-bundle": [
             "0.4"

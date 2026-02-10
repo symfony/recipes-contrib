@@ -618,7 +618,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sulu/article-bundle](https://packagist.org/packages/sulu/article-bundle) | [2.0](sulu/article-bundle/2.0) |
 | [sulu/form-bundle](https://packagist.org/packages/sulu/form-bundle) | [2.4](sulu/form-bundle/2.4) |
 | [sulu/headless-bundle](https://packagist.org/packages/sulu/headless-bundle) | [0.1](sulu/headless-bundle/0.1) |
-| [sulu/redirect-bundle](https://packagist.org/packages/sulu/redirect-bundle) | [2.0](sulu/redirect-bundle/2.0) |
+| [sulu/redirect-bundle](https://packagist.org/packages/sulu/redirect-bundle) | [3.0](sulu/redirect-bundle/3.0) |
 | [sulu/sylius-consumer-bundle](https://packagist.org/packages/sulu/sylius-consumer-bundle) | [0.4](sulu/sylius-consumer-bundle/0.4) |
 | [sulu/sylius-producer-plugin](https://packagist.org/packages/sulu/sylius-producer-plugin) | [0.2](sulu/sylius-producer-plugin/0.2) |
 | [sulu/webpack-encore](https://packagist.org/packages/sulu/webpack-encore) | [1.0](sulu/webpack-encore/1.0) |
