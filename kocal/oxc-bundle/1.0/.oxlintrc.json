@@ -1,0 +1,20 @@
+{
+    "plugins": null,
+    "categories": {},
+    "rules": {},
+    "env": {
+        "builtin": true
+    },
+    "globals": {},
+    "ignorePatterns": [
+        "assets/vendor/**",
+        "assets/controllers.json",
+        "public/assets/**",
+        "public/bundles/**",
+        "tests/**",
+        "var/**",
+        "vendor/**",
+        "composer.json",
+        "package.json"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "Kocal\\OxcBundle\\KocalOxcBundle": ["dev"]
+    },
+    "copy-from-recipe": {
+        ".oxfmtrc.json": ".oxfmtrc.json",
+        ".oxlintrc.json": ".oxlintrc.json",
+        "config/": "%CONFIG_DIR%/"
+    },
+    "gitignore": [
+        "/%BIN_DIR%/oxfmt*",
+        "/%BIN_DIR%/oxlint*"
+    ]
+}
