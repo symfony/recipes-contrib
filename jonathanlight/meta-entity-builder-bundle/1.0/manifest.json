@@ -1,0 +1,9 @@
+{
+    "bundles": {
+        "Meta\\EntityBuilderBundle\\MetaEntityBuilderBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "aliases": ["meta-entity-builder", "entity-builder"]
+}
