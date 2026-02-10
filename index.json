@@ -1983,7 +1983,8 @@
         "sulu/form-bundle": [
             "2.0",
             "2.2",
-            "2.4"
+            "2.4",
+            "3.0"
         ],
         "sulu/headless-bundle": [
             "0.1"
