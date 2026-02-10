@@ -1002,6 +1002,9 @@
         "kocal/oxlint-bundle": [
             "1.0"
         ],
+        "kocal/symfony-app-pack": [
+            "1.0"
+        ],
         "koff/i18n-form-bundle": [
             "4.0"
         ],
