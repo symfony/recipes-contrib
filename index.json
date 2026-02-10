@@ -996,6 +996,9 @@
             "1.1",
             "2.0"
         ],
+        "kocal/oxc-bundle": [
+            "1.0"
+        ],
         "kocal/oxlint-bundle": [
             "1.0"
         ],

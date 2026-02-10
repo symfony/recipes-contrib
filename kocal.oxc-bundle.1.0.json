@@ -1,0 +1,81 @@
+{
+    "manifests": {
+        "kocal/oxc-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Kocal\\OxcBundle\\KocalOxcBundle": [
+                        "dev"
+                    ]
+                },
+                "copy-from-recipe": {
+                    ".oxfmtrc.json": ".oxfmtrc.json",
+                    ".oxlintrc.json": ".oxlintrc.json",
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "gitignore": [
+                    "/%BIN_DIR%/oxfmt*",
+                    "/%BIN_DIR%/oxlint*"
+                ]
+            },
+            "files": {
+                ".oxfmtrc.json": {
+                    "contents": [
+                        "{",
+                        "    \"ignorePatterns\": [",
+                        "        \"assets/vendor/**\",",
+                        "        \"assets/controllers.json\",",
+                        "        \"public/assets/**\",",
+                        "        \"public/bundles/**\",",
+                        "        \"tests/**\",",
+                        "        \"var/**\",",
+                        "        \"vendor/**\",",
+                        "        \"composer.json\",",
+                        "        \"package.json\"",
+                        "    ]",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                ".oxlintrc.json": {
+                    "contents": [
+                        "{",
+                        "    \"plugins\": null,",
+                        "    \"categories\": {},",
+                        "    \"rules\": {},",
+                        "    \"env\": {",
+                        "        \"builtin\": true",
+                        "    },",
+                        "    \"globals\": {},",
+                        "    \"ignorePatterns\": [",
+                        "        \"assets/vendor/**\",",
+                        "        \"assets/controllers.json\",",
+                        "        \"public/assets/**\",",
+                        "        \"public/bundles/**\",",
+                        "        \"tests/**\",",
+                        "        \"var/**\",",
+                        "        \"vendor/**\",",
+                        "        \"composer.json\",",
+                        "        \"package.json\"",
+                        "    ]",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/kocal_oxc.yaml": {
+                    "contents": [
+                        "when@dev:",
+                        "    kocal_oxc:",
+                        "        # The Oxc apps version to use, that you can find at https://github.com/oxc-project/oxc/tags,",
+                        "        # it follows the pattern \"apps_v<apps_version>\"",
+                        "        apps_version: '1.43.0'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "4a5a3ebd063e17d018d6399e59131d568e8c114f"
+        }
+    }
+}
