@@ -1987,6 +1987,9 @@
         "sulu/article-bundle": [
             "2.0"
         ],
+        "sulu/automation-bundle": [
+            "2.0"
+        ],
         "sulu/form-bundle": [
             "2.0",
             "2.2",
