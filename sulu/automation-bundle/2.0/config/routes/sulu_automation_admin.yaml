@@ -1,0 +1,7 @@
+sulu_automation_api:
+    resource: "@SuluAutomationBundle/Resources/config/routing_api.yml"
+    prefix: /admin/api
+
+sulu_automation:
+    resource: "@SuluAutomationBundle/Resources/config/routing.yml"
+    prefix: /admin/automation

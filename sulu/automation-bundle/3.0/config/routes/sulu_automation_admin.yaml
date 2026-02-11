@@ -1,7 +1,0 @@
-sulu_redirect_api:
-    resource: "@SuluAutomationBundle/Resources/config/routing_api.yaml"
-    prefix: /admin/api
-
-sulu_redirect:
-    resource: "@SuluAutomationBundle/Resources/config/routing.yaml"
-    prefix: /admin/redirects
