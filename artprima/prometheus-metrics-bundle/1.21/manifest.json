@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Artprima\\PrometheusMetricsBundle\\ArtprimaPrometheusMetricsBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "PROM_METRICS_DSN": "apcu"
+    }
+}
