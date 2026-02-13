@@ -1,0 +1,2 @@
+imports:
+  - { resource: "@PlanetPaySyliusPaymentPlugin/config/config.yaml" }
