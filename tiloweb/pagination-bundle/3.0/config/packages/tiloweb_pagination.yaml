@@ -7,4 +7,4 @@ tiloweb_pagination:
     # page_range: 4
     
     # Default number of items per page
-    # default_items_per_page: 10
+    default_items_per_page: 10
