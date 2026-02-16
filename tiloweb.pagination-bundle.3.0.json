@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "tiloweb/pagination-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Tiloweb\\PaginationBundle\\TilowebPaginationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/tiloweb_pagination.yaml": {
+                    "contents": [
+                        "# Read the documentation: https://github.com/Tiloweb/SymfonyPaginationBundle",
+                        "tiloweb_pagination:",
+                        "    # The Twig template used to render the pagination",
+                        "    # template: '@TilowebPagination/pagination.html.twig'",
+                        "    ",
+                        "    # Number of page links to show before and after the current page",
+                        "    # page_range: 4",
+                        "    ",
+                        "    # Default number of items per page",
+                        "    default_items_per_page: 10",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8d95417cd932f96694ba8a7c9115ad5569ef0910"
+        }
+    }
+}
