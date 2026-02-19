@@ -1,0 +1,4 @@
+framework:
+    mailer:
+        envelope:
+            sender: 'noreply@your-website.com'
