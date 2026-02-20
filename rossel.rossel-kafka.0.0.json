@@ -1,0 +1,72 @@
+{
+    "manifests": {
+        "rossel/rossel-kafka": {
+            "manifest": {
+                "bundles": {
+                    "Rossel\\RosselKafka\\RosselKafkaBundle": [
+                        "all"
+                    ]
+                },
+                "env": {
+                    "ROSSEL_KAFKA_BROKER_URL": "broker:9092",
+                    "ROSSEL_KAFKA_PRODUCER_APP_NAME": "ChangeMe!",
+                    "KAFKA_CONTAINER_CLUSTER_ID": "ChangeMe!",
+                    "KAFKA_CONTAINER_PORT": "9092",
+                    "KAFKA_CONTAINER_INTERNAL_PORT": "29092",
+                    "KAFKA_CONTAINER_ADVERTISED_HOST": "kafka",
+                    "KAFKA_CONTAINER_QUORUM_VOTERS": "1@kafka:9093",
+                    "KAFKA_CONTAINER_BROKER_ID": "-1",
+                    "KAFKA_CONTAINER_NODE_ID": "-1"
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "compose.kafka.yaml": "compose.kafka.yaml"
+                }
+            },
+            "files": {
+                "compose.kafka.yaml": {
+                    "contents": [
+                        "services:",
+                        "    kafka:",
+                        "        image: apache/kafka:4.0.0",
+                        "        hostname: ${KAFKA_HOSTNAME:-kafka}",
+                        "        container_name: ${KAFKA_CONTAINER_NAME:-kafka}",
+                        "        ports:",
+                        "            - \"${KAFKA_CONTAINER_PORT:-9092}:9092\"",
+                        "            - \"${KAFKA_CONTAINER_INTERNAL_PORT:-29092}:29092\"",
+                        "        networks:",
+                        "            - ${KAFKA_NETWORK:-default}",
+                        "        environment:",
+                        "            KAFKA_BROKER_ID: ${KAFKA_CONTAINER_BROKER_ID:-1}",
+                        "            KAFKA_NODE_ID: ${KAFKA_CONTAINER_NODE_ID:-1}",
+                        "            KAFKA_PROCESS_ROLES: \"broker,controller\"",
+                        "            KAFKA_CONTROLLER_QUORUM_VOTERS: \"${KAFKA_CONTAINER_QUORUM_VOTERS:-1@kafka:9093}\"",
+                        "            KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,CONTROLLER:PLAINTEXT",
+                        "            KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093",
+                        "            KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://${KAFKA_CONTAINER_ADVERTISED_HOST:-kafka}:9092",
+                        "            KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT",
+                        "            KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER",
+                        "            KAFKA_LOG_DIRS: /tmp/kraft-combined-logs",
+                        "            KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1",
+                        "            KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1",
+                        "            KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1",
+                        "            CLUSTER_ID: ${KAFKA_CONTAINER_CLUSTER_ID}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/rossel_kafka.yaml": {
+                    "contents": [
+                        "rossel_kafka:",
+                        "    broker_url: '%env(ROSSEL_KAFKA_BROKER_URL)%'",
+                        "    producer:",
+                        "        app_name: '%env(ROSSEL_KAFKA_PRODUCER_APP_NAME)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "fa74aa5736c989a79979d76b71e97538bab7211a"
+        }
+    }
+}
