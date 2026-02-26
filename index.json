@@ -2221,6 +2221,9 @@
         "tiloweb/uploaded-file-type-bundle": [
             "2.0"
         ],
+        "timble-one/backend-bundle": [
+            "0.1"
+        ],
         "timiki/rpc-client-bundle": [
             "4.0"
         ],
