@@ -1,0 +1,2 @@
+imports:
+    - { resource: "@LyranetworkLyraPlugin/Resources/config/config.yaml" }
