@@ -1,0 +1,2 @@
+fastfony_identity:
+    resource: "@FastfonyIdentityBundle/config/routes/all.yaml"
