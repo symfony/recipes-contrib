@@ -360,6 +360,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [lox24eu/lox24_api_client_bundle](https://packagist.org/packages/lox24eu/lox24_api_client_bundle) | [0.3](lox24eu/lox24_api_client_bundle/0.3) |
 | [luzrain/telegram-bot-bundle](https://packagist.org/packages/luzrain/telegram-bot-bundle) | [2.1](luzrain/telegram-bot-bundle/2.1) |
 | [luzrain/workerman-bundle](https://packagist.org/packages/luzrain/workerman-bundle) | [0.1](luzrain/workerman-bundle/0.1) |
+| [lyranetwork/sylius-lyranetwork-plugin](https://packagist.org/packages/lyranetwork/sylius-lyranetwork-plugin) | [3.0](lyranetwork/sylius-lyranetwork-plugin/3.0) |
 | [m-adamski/symfony-mailer-bundle](https://packagist.org/packages/m-adamski/symfony-mailer-bundle) | [1.0](m-adamski/symfony-mailer-bundle/1.0) |
 | [m-adamski/symfony-schedule-bundle](https://packagist.org/packages/m-adamski/symfony-schedule-bundle) | [1.0](m-adamski/symfony-schedule-bundle/1.0) |
 | [maba/webpack-bundle](https://packagist.org/packages/maba/webpack-bundle) | [1.0](maba/webpack-bundle/1.0) |

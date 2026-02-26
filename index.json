@@ -1145,6 +1145,9 @@
         "luzrain/workerman-bundle": [
             "0.1"
         ],
+        "lyranetwork/sylius-lyranetwork-plugin": [
+            "3.0"
+        ],
         "m-adamski/symfony-mailer-bundle": [
             "1.0"
         ],

@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "lyranetwork/sylius-lyranetwork-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Lyranetwork\\Lyra\\LyranetworkLyraPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/lyranetwork_sylius.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@LyranetworkLyraPlugin/Resources/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/lyranetwork_sylius.yaml": {
+                    "contents": [
+                        "sylius_lyra:",
+                        "    resource: \"@LyranetworkLyraPlugin/Resources/config/routing.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c34a303c6e99976b6561629c0c115c190ff4b2de"
+        }
+    }
+}
