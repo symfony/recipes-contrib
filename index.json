@@ -2221,6 +2221,9 @@
         "tilleuls/url-signer-bundle": [
             "1.0"
         ],
+        "tiloweb/pagination-bundle": [
+            "3.0"
+        ],
         "tiloweb/uploaded-file-type-bundle": [
             "2.0"
         ],
