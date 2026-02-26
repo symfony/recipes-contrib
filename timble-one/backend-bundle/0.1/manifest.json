@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "TimbleOne\\BackendBundle\\BackendBundle": ["all"]
+    },
+    "dockerfile": [
+        "RUN install-php-extensions gd exif"
+    ]
+}
