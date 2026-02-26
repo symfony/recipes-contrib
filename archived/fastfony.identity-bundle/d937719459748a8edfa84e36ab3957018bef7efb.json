@@ -1,0 +1,123 @@
+{
+    "manifests": {
+        "fastfony/identity-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Fastfony\\IdentityBundle\\FastfonyIdentityBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "add-lines": [
+                    {
+                        "file": "config/packages/stof_doctrine_extensions.yaml",
+                        "content": "    orm:\n        default:\n            timestampable: true\n",
+                        "position": "after_target",
+                        "target": "stof_doctrine_extensions:",
+                        "warn_if_missing": true
+                    },
+                    {
+                        "file": "config/packages/security.yaml",
+                        "content": "        fastfony_identity_user_provider:\n            entity:\n                class: Fastfony\\IdentityBundle\\Entity\\Identity\\User # if you extend the User class, change this to your class\n                property: email\n\n",
+                        "position": "after_target",
+                        "target": "    providers:",
+                        "warn_if_missing": true
+                    },
+                    {
+                        "file": "config/packages/security.yaml",
+                        "content": "\n        fastfony_identity:\n            lazy: true\n            provider: fastfony_identity_user_provider\n            user_checker: Fastfony\\IdentityBundle\\Security\\UserChecker\n            form_login:\n                login_path: form_login\n                check_path: form_login\n                enable_csrf: true\n                csrf_token_id: login\n                form_only: true\n            login_link:\n                check_route: login_check\n                signature_properties: [ id, email ]\n                max_uses: 3\n            entry_point: Fastfony\\IdentityBundle\\Security\\CustomEntryPoint\n            remember_me:\n                always_remember_me: true\n                signature_properties: [ 'id', 'email', 'password' ]\n            switch_user: true\n            login_throttling:\n                max_attempts: 3\n            logout:\n                path: /logout\n                clear_site_data:\n                    - cookies\n                    - storage\n\n",
+                        "position": "after_target",
+                        "target": "            security: false",
+                        "warn_if_missing": true
+                    },
+                    {
+                        "file": "config/packages/security.yaml",
+                        "content": "        - { path: ^/secure-area/, roles: ROLE_USER } # Adjust as needed\n",
+                        "position": "after_target",
+                        "target": "    access_control:",
+                        "warn_if_missing": true
+                    }
+                ],
+                "post-install-output": [
+                    "<info>Fastfony/IdentityBundle is almost ready:</info>",
+                    "",
+                    "1. A <fg=yellow>config/packages/fastfony_identity.yaml</> and a <fg=yellow>config/routes/fastfony_identity.yaml</> file has been created for you.",
+                    "",
+                    "2. The <fg=yellow>config/packages/security.yaml</> and <fg=yellow>config/packages/stof_doctrine_extensions.yaml</> files have been updated where the expected configuration lines were found; please verify these changes.",
+                    "",
+                    "3. Merge the content of <fg=yellow>config/packages/mailer.yaml.dist</> into your <fg=yellow>config/packages/mailer.yaml</> file and set your <fg=yellow>MAILER_DSN</> environment variable if it is not already done.",
+                    "",
+                    "4. Create the database schema:",
+                    "",
+                    "    Option 1 - Generate and run migrations to create the database tables:",
+                    "",
+                    "    <fg=green>php bin/console doctrine:migrations:diff",
+                    "    php bin/console doctrine:migrations:migrate</>",
+                    "",
+                    "    Option 2 - Or without migrations, you can create the schema directly:",
+                    "",
+                    "    <fg=green>php bin/console doctrine:schema:update --force</>",
+                    "",
+                    "<info>Enjoy!</info>"
+                ]
+            },
+            "files": {
+                "config/packages/fastfony_identity.yaml": {
+                    "contents": [
+                        "fastfony_identity:",
+                        "    user:",
+                        "        # Your custom User entity class extends Fastfony\\IdentityBundle\\Entity\\Identity\\User (optional)",
+                        "        #class: 'App\\Entity\\User'",
+                        "        #require_email_verification: true  # Require email verification for new users (default: false)",
+                        "    role:",
+                        "        # Your custom Role entity class extends Fastfony\\IdentityBundle\\Entity\\Identity\\Role (optional)",
+                        "        #class: 'App\\Entity\\Role'",
+                        "        # Default role assigned to new users (if you want to assign one different from ROLE_USER)",
+                        "        #default_role: 'ROLE_ADMIN'",
+                        "    group:",
+                        "        # Your custom Group entity class extends Fastfony\\IdentityBundle\\Entity\\Identity\\Group (optional)",
+                        "        #class: 'App\\Entity\\Group'",
+                        "    login:",
+                        "        #default_method: 'login_link' # Default login method: 'form_login' or 'login_link' (default: 'form_login')",
+                        "    registration:",
+                        "        #enabled: true  # Enable or disable user registration (default: false)",
+                        "    login_link:",
+                        "        #enabled: false  # Enable or disable login via email link (default: true)",
+                        "        #email_subject: 'Your login link' # Subject of the email sent with the login link (text or translation key)",
+                        "        #limit_max_ask_by_minute: 3  # Maximum number of login link requests in one minute",
+                        "    request_password:",
+                        "        #email_subject: 'Reset your password' # Subject of the email sent with the password reset link (text or translation key)",
+                        "        #email_content: 'Click on the button below to reset your password.' # Content of the email sent with the password reset link (text or translation key)",
+                        "        #email_action_text: 'Reset my password' # Text of the action button in the email sent with the password reset link (text or translation key)",
+                        "        #lifetime: 900  # Lifetime of the password reset token in seconds (default: 900 seconds = 15 minutes)",
+                        "        #redirect_route: 'app_homepage' # Route to redirect to after a successful password reset",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/mailer.yaml.dist": {
+                    "contents": [
+                        "framework:",
+                        "    mailer:",
+                        "        envelope:",
+                        "            sender: 'noreply@your-website.com'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/fastfony_identity.yaml": {
+                    "contents": [
+                        "fastfony_identity:",
+                        "    resource: \"@FastfonyIdentityBundle/config/routes/all.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d937719459748a8edfa84e36ab3957018bef7efb"
+        }
+    }
+}

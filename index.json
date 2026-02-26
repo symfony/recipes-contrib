@@ -671,6 +671,9 @@
         "facile-it/mongodb-bundle": [
             "0.6"
         ],
+        "fastfony/identity-bundle": [
+            "1.0"
+        ],
         "fastfony/quality-pack": [
             "1.0"
         ],
