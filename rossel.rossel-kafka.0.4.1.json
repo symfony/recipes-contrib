@@ -1,0 +1,125 @@
+{
+    "manifests": {
+        "rossel/rossel-kafka": {
+            "manifest": {
+                "bundles": {
+                    "Rossel\\RosselKafka\\RosselKafkaBundle": [
+                        "all"
+                    ]
+                },
+                "env": {
+                    "KAFKA_BROKER_URL": "broker:9092",
+                    "KAFKA_PRODUCER_APP_NAME": "ChangeMe!",
+                    "KAFKA_CONTAINER_CLUSTER_ID": "ChangeMe!",
+                    "KAFKA_CONTAINER_PORT": "9092",
+                    "KAFKA_CONTAINER_INTERNAL_PORT": "29092",
+                    "KAFKA_CONTAINER_ADVERTISED_HOST": "kafka",
+                    "KAFKA_CONTAINER_QUORUM_VOTERS": "1@kafka:9093",
+                    "KAFKA_CONTAINER_BROKER_ID": "-1",
+                    "KAFKA_CONTAINER_NODE_ID": "-1",
+                    "KAFKA_TOPIC_ACCOUNT_API_PUBLIC_LOG_OUTPUT_V1_JSON_DELETE": "public.dev.b2c.b2c-services.account-api.log.output.v1.json.delete",
+                    "KAFKA_TOPIC_AUTHENTICATION_API_PUBLIC_LOG_OUTPUT_V1_JSON_DELETE": "public.dev.b2c.b2c-services.authentication-api.log.output.v1.json.delete",
+                    "KAFKA_TOPIC_PUBLIC_DEAD_LETTER_INOUT_V1_JSON_DELETE_D30": "public.dev.b2c.b2c-services.dead-letter.inout.v1.json.delete",
+                    "KAFKA_TOPIC_ERP_SUBSCRIPTION_API_PUBLIC_LOG_OUTPUT_V1_JSON_DELETE": "public.dev.b2c.b2c-services.erp-subscription-api.log.output.v1.json.delete",
+                    "KAFKA_TOPIC_PUBLIC_INHERITANCE_OUTPUT_V1_JSON_DELETE": "public.dev.b2c.b2c-services.inheritance.output.v1.json.delete",
+                    "KAFKA_TOPIC_INHERITANCE_API_PUBLIC_LOG_OUTPUT_V1_JSON_DELETE": "public.dev.b2c.b2c-services.inheritance-api.log.output.v1.json.delete",
+                    "KAFKA_TOPIC_NOTIFICATION_API_PUBLIC_LOG_OUTPUT_V1_JSON_DELETE": "public.dev.b2c.b2c-services.notification-api.log.output.v1.json.delete",
+                    "KAFKA_TOPIC_PUBLIC_NOTIFICATION_INPUT_V1_JSON_DELETE": "public.dev.b2c.b2c-services.notification.output.v1.json.delete",
+                    "KAFKA_TOPIC_OFFER_API_PUBLIC_LOG_OUTPUT_V1_JSON_DELETE": "public.dev.b2c.b2c-services.offer-api.log.output.v1.json.delete",
+                    "KAFKA_TOPIC_PUBLIC_OFFER_OUTPUT_V1_JSON_DELETE": "public.dev.b2c.b2c-services.offer.output.v1.json.delete",
+                    "KAFKA_TOPIC_PROFILE_API_PUBLIC_LOG_OUTPUT_V1_JSON_DELETE": "public.dev.b2c.b2c-services.profile-api.log.output.v1.json.delete",
+                    "KAFKA_TOPIC_PURCHASE_API_PUBLIC_LOG_OUTPUT_V1_JSON_DELETE": "public.dev.b2c.b2c-services.purchase-api.log.output.v1.json.delete",
+                    "KAFKA_TOPIC_PUBLIC_LOG_OUTPUT_V1_JSON_DELETE": "public.dev.bo.erp-adapter.log.output.v1.json.delete",
+                    "KAFKA_TOPIC_PUBLIC_OFFER_INPUT_V1_JSON_DELETE": "public.dev.bo.erp-adapter.offer.input.v1.json.delete",
+                    "KAFKA_TOPIC_PUBLIC_SUBSCRIPTION_INPUT_V1_JSON_DELETE": "public.dev.bo.erp-adapter.subscription.input.v1.json.delete",
+                    "KAFKA_TOPIC_PUBLIC_SUBSCRIPTION_OUTPUT_V1_JSON_DELETE": "public.dev.bo.erp-adapter.subscription.output.v1.json.delete",
+                    "KAFKA_TOPIC_PUBLIC_CONTACT_INPUT_V1_JSON_DELETE": "public.dev.data.cdp.contact.input.v1.json.delete",
+                    "KAFKA_TOPIC_INPUT_API_PUBLIC_LOG_OUTPUT_V1_JSON_DELETE": "public.dev.data.cdp.input-api.log.output.v1.json.delete",
+                    "KAFKA_TOPIC_OUTPUT_API_PUBLIC_LOG_OUTPUT_V1_JSON_DELETE": "public.dev.data.cdp.output-api.log.output.v1.json.delete",
+                    "KAFKA_TOPIC_PUBLIC_PROFILE_OUTPUT_V1_JSON_DELETE": "public.dev.data.cdp.profile.output.v1.json.delete"
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "compose.kafka.yaml": "compose.kafka.yaml"
+                }
+            },
+            "files": {
+                "compose.kafka.yaml": {
+                    "contents": [
+                        "services:",
+                        "    kafka:",
+                        "        image: apache/kafka:4.0.0",
+                        "        hostname: ${KAFKA_HOSTNAME:-kafka}",
+                        "        container_name: ${KAFKA_CONTAINER_NAME:-kafka}",
+                        "        ports:",
+                        "            - \"${KAFKA_CONTAINER_PORT:-9092}:9092\"",
+                        "            - \"${KAFKA_CONTAINER_INTERNAL_PORT:-29092}:29092\"",
+                        "        networks:",
+                        "            - ${KAFKA_NETWORK:-default}",
+                        "        environment:",
+                        "            KAFKA_BROKER_ID: ${KAFKA_CONTAINER_BROKER_ID:-1}",
+                        "            KAFKA_NODE_ID: ${KAFKA_CONTAINER_NODE_ID:-1}",
+                        "            KAFKA_PROCESS_ROLES: \"broker,controller\"",
+                        "            KAFKA_CONTROLLER_QUORUM_VOTERS: \"${KAFKA_CONTAINER_QUORUM_VOTERS:-1@kafka:9093}\"",
+                        "            KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,CONTROLLER:PLAINTEXT",
+                        "            KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093",
+                        "            KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://${KAFKA_CONTAINER_ADVERTISED_HOST:-kafka}:9092",
+                        "            KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT",
+                        "            KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER",
+                        "            KAFKA_LOG_DIRS: /tmp/kraft-combined-logs",
+                        "            KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1",
+                        "            KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1",
+                        "            KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1",
+                        "            CLUSTER_ID: ${KAFKA_CONTAINER_CLUSTER_ID}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/rossel_kafka.yaml": {
+                    "contents": [
+                        "rossel_kafka:",
+                        "    broker:",
+                        "        url: '%env(ROSSEL_KAFKA_BROKER_URL)%'",
+                        "",
+                        "    # SASL authentication (optional \u2014 leave unset for unauthenticated connections)",
+                        "    sasl_username: '%env(default::ROSSEL_KAFKA_BROKER_SASL_USERNAME)%'",
+                        "    sasl_password: '%env(default::ROSSEL_KAFKA_BROKER_SASL_PASSWORD)%'",
+                        "    sasl_mechanism: '%env(default::ROSSEL_KAFKA_BROKER_SASL_MECHANISM)%'",
+                        "",
+                        "    # SSL CA certificate (optional \u2014 provide url OR path, path takes priority)",
+                        "    ssl_ca_certificate_url: '%env(default::ROSSEL_KAFKA_BROKER_SSL_CERTIFICATE_URL)%'",
+                        "    ssl_ca_certificate_path: '%env(default::ROSSEL_KAFKA_BROKER_SSL_CERTIFICATE_PATH)%'",
+                        "",
+                        "    topics:",
+                        "        account_api_public_log_output_v1_json_delete: '%env(ACCOUNT_API_PUBLIC_LOG_OUTPUT_V1_JSON_DELETE)%'",
+                        "        authentication_api_public_log_output_v1_json_delete: '%env(AUTHENTICATION_API_PUBLIC_LOG_OUTPUT_V1_JSON_DELETE)%'",
+                        "        public_dead_letter_inout_v1_json_delete_d30: '%env(PUBLIC_DEAD_LETTER_INOUT_V1_JSON_DELETE_D30)%'",
+                        "        erp_subscription_api_public_log_output_v1_json_delete: '%env(ERP_SUBSCRIPTION_API_PUBLIC_LOG_OUTPUT_V1_JSON_DELETE)%'",
+                        "        public_inheritance_output_v1_json_delete: '%env(PUBLIC_INHERITANCE_OUTPUT_V1_JSON_DELETE)%'",
+                        "        inheritance_api_public_log_output_v1_json_delete: '%env(INHERITANCE_API_PUBLIC_LOG_OUTPUT_V1_JSON_DELETE)%'",
+                        "        notification_api_public_log_output_v1_json_delete: '%env(NOTIFICATION_API_PUBLIC_LOG_OUTPUT_V1_JSON_DELETE)%'",
+                        "        public_notification_input_v1_json_delete: '%env(PUBLIC_NOTIFICATION_INPUT_V1_JSON_DELETE)%'",
+                        "        offer_api_public_log_output_v1_json_delete: '%env(OFFER_API_PUBLIC_LOG_OUTPUT_V1_JSON_DELETE)%'",
+                        "        public_offer_output_v1_json_delete: '%env(PUBLIC_OFFER_OUTPUT_V1_JSON_DELETE)%'",
+                        "        profile_api_public_log_output_v1_json_delete: '%env(PROFILE_API_PUBLIC_LOG_OUTPUT_V1_JSON_DELETE)%'",
+                        "        purchase_api_public_log_output_v1_json_delete: '%env(PURCHASE_API_PUBLIC_LOG_OUTPUT_V1_JSON_DELETE)%'",
+                        "        public_log_output_v1_json_delete: '%env(PUBLIC_LOG_OUTPUT_V1_JSON_DELETE)%'",
+                        "        public_offer_input_v1_json_delete: '%env(PUBLIC_OFFER_INPUT_V1_JSON_DELETE)%'",
+                        "        public_subscription_input_v1_json_delete: '%env(PUBLIC_SUBSCRIPTION_INPUT_V1_JSON_DELETE)%'",
+                        "        public_subscription_output_v1_json_delete: '%env(PUBLIC_SUBSCRIPTION_OUTPUT_V1_JSON_DELETE)%'",
+                        "        public_contact_input_v1_json_delete: '%env(PUBLIC_CONTACT_INPUT_V1_JSON_DELETE)%'",
+                        "        input_api_public_log_output_v1_json_delete: '%env(INPUT_API_PUBLIC_LOG_OUTPUT_V1_JSON_DELETE)%'",
+                        "        output_api_public_log_output_v1_json_delete: '%env(OUTPUT_API_PUBLIC_LOG_OUTPUT_V1_JSON_DELETE)%'",
+                        "        public_profile_output_v1_json_delete: '%env(PUBLIC_PROFILE_OUTPUT_V1_JSON_DELETE)%'",
+                        "",
+                        "    producer:",
+                        "        app_name: '%env(ROSSEL_KAFKA_PRODUCER_APP_NAME)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "1c32e02846572807603c3ec9b38b04b1dfe8a9d9"
+        }
+    }
+}
