@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "bulatronic/api-kit": {
+            "manifest": {
+                "bundles": {
+                    "ApiKit\\ApiKitBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/api_kit.yaml": {
+                    "contents": [
+                        "api_kit:",
+                        "    response:",
+                        "        include_timestamp: true",
+                        "        pretty_print: '%kernel.debug%'",
+                        "    validation:",
+                        "        translate_messages: true",
+                        "    exception_handling:",
+                        "        log_errors: true",
+                        "        show_trace: '%kernel.debug%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7de3c25425a76b74a2bd0db55a634b0c96f498aa"
+        }
+    }
+}
