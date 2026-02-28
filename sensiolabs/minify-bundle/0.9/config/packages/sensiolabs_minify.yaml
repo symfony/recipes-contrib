@@ -6,10 +6,10 @@ sensiolabs_minify:
             - '*.min.css'
     minify:
         # Use local binary if available
-        # binary_path: 'auto'
+        # local_binary: 'auto'
 
         # Specify local binary path
-        # binary_path: '/usr/bin/minify'
+        # local_binary: '/usr/bin/minify'
 
         # Download binary from GitHub
         download_binary: true
