@@ -1,0 +1,71 @@
+{
+    "manifests": {
+        "yiggle/form-wizard-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Yiggle\\FormWizardBundle\\YiggleFormWizardBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                                              </>",
+                    "<bg=blue;fg=white>   Yiggle Form Wizard Bundle Installed! \ud83e\uddd9   </>",
+                    "<bg=blue;fg=white>                                              </>",
+                    "",
+                    "Next steps:",
+                    "  1. Run database migrations:",
+                    "     php bin/console doctrine:migrations:diff",
+                    "     php bin/console doctrine:migrations:migrate",
+                    "",
+                    "  2. Configure your bundle in config/packages/yiggle_form_wizard.yaml:",
+                    "     - Set your default_from_email",
+                    "     - Enable Mollie payments if needed",
+                    "",
+                    "  3. (Optional) Enable the Stimulus controller in assets/controllers.json",
+                    "     for multi-step AJAX UX with Turbo frames.",
+                    "",
+                    "Read the documentation at https://github.com/Predjee/form-wizard-bundle"
+                ]
+            },
+            "files": {
+                "config/packages/yiggle_form_wizard.yaml": {
+                    "contents": [
+                        "yiggle_form_wizard:",
+                        "    notifiers:",
+                        "        email:",
+                        "            default_from_email: 'noreply@example.com'",
+                        "            default_from_name: 'Form Wizard'",
+                        "    payment:",
+                        "        mollie:",
+                        "            enabled: false",
+                        "            api_key: null",
+                        "            webhook_url_base: null",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/yiggle_form_wizard_admin.yaml": {
+                    "contents": [
+                        "yiggle_form_wizard_admin:",
+                        "    resource: '@YiggleFormWizardBundle/config/routes/admin.yaml'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/yiggle_form_wizard_website.yaml": {
+                    "contents": [
+                        "yiggle_form_wizard:",
+                        "    resource: '@YiggleFormWizardBundle/config/routes/website.yaml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a388560afcf950edf063672a31c313bbde6f8ef8"
+        }
+    }
+}
