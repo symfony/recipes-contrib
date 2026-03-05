@@ -1,0 +1,17 @@
+<bg=blue;fg=white>                                              </>
+<bg=blue;fg=white>   Yiggle Form Wizard Bundle Installed! 🧙   </>
+<bg=blue;fg=white>                                              </>
+
+Next steps:
+  1. Run database migrations:
+     php bin/console doctrine:migrations:diff
+     php bin/console doctrine:migrations:migrate
+
+  2. Configure your bundle in config/packages/yiggle_form_wizard.yaml:
+     - Set your default_from_email
+     - Enable Mollie payments if needed
+
+  3. (Optional) Enable the Stimulus controller in assets/controllers.json
+     for multi-step AJAX UX with Turbo frames.
+
+Read the documentation at https://github.com/Predjee/form-wizard-bundle

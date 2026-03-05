@@ -1,0 +1,2 @@
+yiggle_form_wizard_admin:
+    resource: '@YiggleFormWizardBundle/config/routes/admin.yaml'
