@@ -2362,7 +2362,8 @@
             "1.0"
         ],
         "yiggle/form-wizard-bundle": [
-            "0.1"
+            "0.1",
+            "0.2"
         ],
         "youritservices/mock-server-bundle": [
             "1.0"

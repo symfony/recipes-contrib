@@ -1,0 +1,87 @@
+{
+    "manifests": {
+        "yiggle/form-wizard-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Yiggle\\FormWizardBundle\\YiggleFormWizardBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                                                </>",
+                    "<bg=blue;fg=white>   Yiggle Form Wizard Bundle Installed! \ud83e\uddd9\u200d\u2642\ufe0f      </>",
+                    "<bg=blue;fg=white>                                                </>",
+                    "",
+                    "<fg=cyan>Next steps:</>",
+                    "",
+                    "  <fg=yellow>1.</> Import the admin integration in your Sulu admin app",
+                    "",
+                    "     import 'yiggle-form-wizard-bundle';",
+                    "",
+                    "  <fg=yellow>2.</> Rebuild the Sulu admin assets",
+                    "",
+                    "     bin/adminconsole sulu:admin:update-build",
+                    "",
+                    "",
+                    "<fg=cyan>Optional styling:</>",
+                    "",
+                    "  import 'yiggle-form-wizard-bundle/assets/styles/form_wizard.css';",
+                    "",
+                    "",
+                    "<fg=cyan>Database:</>",
+                    "",
+                    "  bin/console doctrine:migrations:migrate",
+                    "",
+                    "",
+                    "<fg=cyan>Configuration:</>",
+                    "",
+                    "  config/packages/yiggle_form_wizard.yaml",
+                    "",
+                    "",
+                    "<fg=green>You're ready to start building form wizards! \u2728</>",
+                    "<fg=gray>Docs: https://github.com/yiggle/form-wizard-bundle</>"
+                ]
+            },
+            "files": {
+                "config/packages/yiggle_form_wizard.yaml": {
+                    "contents": [
+                        "yiggle_form_wizard:",
+                        "    notifiers:",
+                        "        email:",
+                        "            default_from_email: '%env(default::YIGGLE_FORM_WIZARD_DEFAULT_FROM_EMAIL)%'",
+                        "            default_from_name: '%env(default::YIGGLE_FORM_WIZARD_DEFAULT_FROM_NAME)%'",
+                        "",
+                        "        payment:",
+                        "            mollie:",
+                        "                enabled: '%env(bool:default::YIGGLE_FORM_WIZARD_MOLLIE_ENABLED)%'",
+                        "                api_key: '%env(default::YIGGLE_FORM_WIZARD_MOLLIE_API_KEY)%'",
+                        "                webhook_url_base: '%env(default::YIGGLE_FORM_WIZARD_MOLLIE_WEBHOOK_URL_BASE)%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/yiggle_form_wizard.yaml": {
+                    "contents": [
+                        "yiggle_form_wizard:",
+                        "    resource: '@YiggleFormWizardBundle/config/routes/website.yaml'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/yiggle_form_wizard_admin.yaml": {
+                    "contents": [
+                        "yiggle_form_wizard_admin:",
+                        "    resource: '@YiggleFormWizardBundle/config/routes/admin.yaml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0a476726b27a0e65e67575517d63113b6c693d82"
+        }
+    }
+}

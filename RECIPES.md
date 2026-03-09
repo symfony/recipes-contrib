@@ -729,7 +729,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [xcore/inline-editing-bundle](https://packagist.org/packages/xcore/inline-editing-bundle) | [1.2](xcore/inline-editing-bundle/1.2) |
 | [xiidea/easy-audit](https://packagist.org/packages/xiidea/easy-audit) | [2.0](xiidea/easy-audit/2.0) |
 | [yamilovs/sms-bundle](https://packagist.org/packages/yamilovs/sms-bundle) | [1.0](yamilovs/sms-bundle/1.0) |
-| [yiggle/form-wizard-bundle](https://packagist.org/packages/yiggle/form-wizard-bundle) | [0.1](yiggle/form-wizard-bundle/0.1) |
+| [yiggle/form-wizard-bundle](https://packagist.org/packages/yiggle/form-wizard-bundle) | [0.2](yiggle/form-wizard-bundle/0.2) |
 | [youritservices/mock-server-bundle](https://packagist.org/packages/youritservices/mock-server-bundle) | [1.0](youritservices/mock-server-bundle/1.0) |
 | [yousign/zdd-message-bundle](https://packagist.org/packages/yousign/zdd-message-bundle) | [2.0](yousign/zdd-message-bundle/2.0) |
 | [ywh/cvss-bundle](https://packagist.org/packages/ywh/cvss-bundle) | [1.0](ywh/cvss-bundle/1.0) |
