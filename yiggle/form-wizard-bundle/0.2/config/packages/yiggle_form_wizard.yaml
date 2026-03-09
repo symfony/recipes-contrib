@@ -1,0 +1,11 @@
+yiggle_form_wizard:
+    notifiers:
+        email:
+            default_from_email: '%env(default::YIGGLE_FORM_WIZARD_DEFAULT_FROM_EMAIL)%'
+            default_from_name: '%env(default::YIGGLE_FORM_WIZARD_DEFAULT_FROM_NAME)%'
+
+        payment:
+            mollie:
+                enabled: '%env(bool:default::YIGGLE_FORM_WIZARD_MOLLIE_ENABLED)%'
+                api_key: '%env(default::YIGGLE_FORM_WIZARD_MOLLIE_API_KEY)%'
+                webhook_url_base: '%env(default::YIGGLE_FORM_WIZARD_MOLLIE_WEBHOOK_URL_BASE)%'
