@@ -2361,6 +2361,9 @@
         "yamilovs/sms-bundle": [
             "1.0"
         ],
+        "yiggle/form-wizard-bundle": [
+            "0.1"
+        ],
         "youritservices/mock-server-bundle": [
             "1.0"
         ],
