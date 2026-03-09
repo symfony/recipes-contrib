@@ -1,0 +1,10 @@
+yiggle_form_wizard:
+    notifiers:
+        email:
+            default_from_email: 'noreply@example.com'
+            default_from_name: 'Form Wizard'
+    payment:
+        mollie:
+            enabled: false
+            api_key: null
+            webhook_url_base: null
