@@ -1,0 +1,74 @@
+{
+    "manifests": {
+        "rcsofttech/audit-trail-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Rcsofttech\\AuditTrailBundle\\AuditTrailBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "AUDIT_TRAIL_INTEGRITY_SECRET": "generate(32)"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                    </>",
+                    "<bg=blue;fg=white> AuditTrailBundle   </>",
+                    "<bg=blue;fg=white>                    </>",
+                    "",
+                    "  * Check <comment>config/packages/audit_trail.yaml</> and customize it",
+                    "  * Run <comment>php bin/console doctrine:migrations:migrate</> to apply the changes",
+                    "",
+                    "  * Read the documentation at <comment>https://github.com/rcsofttech85/AuditTrailBundle</>"
+                ]
+            },
+            "files": {
+                "config/packages/audit_trail.yaml": {
+                    "contents": [
+                        "audit_trail:",
+                        "    enabled: true",
+                        "    ignored_properties:",
+                        "        - password",
+                        "        - salt",
+                        "        - updatedAt",
+                        "    ignored_entities: {  }",
+                        "    # integrity:",
+                        "    #     enabled: true",
+                        "    #     secret: 92e6112673ffcde6e16be9995c3b5c413fb4a74d895fab58dec65db4e04d341f",
+                        "    #     algorithm: sha256",
+                        "",
+                        "",
+                        "",
+                        "    # collection_serialization_mode: ids_only",
+                        "",
+                        "",
+                        "    transports:",
+                        "        database:",
+                        "            enabled: true",
+                        "            # async: true",
+                        "        # http:",
+                        "        #     enabled: false",
+                        "        #     endpoint: 'http://host.docker.internal/api/ingest'",
+                        "        #     headers:",
+                        "        #         X_API_KEY: dfebeb903c180b5ffe2ceac733b9f10b52296a3d2cba35fb0eff61e32778af6a",
+                        "        #     timeout: 5",
+                        "        # queue:",
+                        "        #     enabled: false",
+                        "        #     api_key: 99cae1bd2da3d0caecb232c45f417c953b9d1a848c8f7743764a7cb8d0ded74c",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "    # cache_pool: redis_cache",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "56e48d63a33502ad38b17c987151a1adcc7fb465"
+        }
+    }
+}
