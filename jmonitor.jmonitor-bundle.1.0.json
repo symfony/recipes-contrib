@@ -1,0 +1,80 @@
+{
+    "manifests": {
+        "jmonitor/jmonitor-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Jmonitor\\JmonitorBundle\\JmonitorBundle": [
+                        "dev",
+                        "prod"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "JMONITOR_API_KEY": ""
+                },
+                "dotenv": {
+                    "prod": {
+                        "JMONITOR_API_KEY": ""
+                    }
+                }
+            },
+            "files": {
+                "config/packages/jmonitor.yaml": {
+                    "contents": [
+                        "jmonitor:",
+                        "    # project_api_key can be empty to disable sending data to Jmonitor",
+                        "    # useful for testing pourposes in non-production environments",
+                        "    project_api_key: '%env(JMONITOR_API_KEY)%'",
+                        "",
+                        "    # Optional (recommended): use a specific logger service (Symfony's default is \"logger\").",
+                        "    logger: 'logger'",
+                        "",
+                        "    # Optional: provide a custom HTTP client service",
+                        "    # http_client: 'http_client'",
+                        "",
+                        "when@dev:",
+                        "    jmonitor:",
+                        "        collectors:",
+                        "            # Start with a basic collector for testing purposes",
+                        "            # On non-linux OS, you can use RandomAdapter for testing purposes",
+                        "            # system:",
+                        "            #     enabled: true",
+                        "            #     adapter: \"Jmonitor\\\\Collector\\\\System\\\\Adapter\\\\RandomAdapter\"",
+                        "            system:",
+                        "                enabled: true",
+                        "",
+                        "when@prod:",
+                        "    jmonitor:",
+                        "        # Add collectors configured for production here",
+                        "        # Refer to the package documentation for all available collectors: https://github.com/jmonitor/jmonitor-bundle",
+                        "        collectors:",
+                        "            system:",
+                        "                enabled: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/jmonitor.yaml": {
+                    "contents": [
+                        "jmonitor_expose_php_metrics:",
+                        "    path: '/jmonitor/php-metrics'",
+                        "    controller: Jmonitor\\JmonitorBundle\\Controller\\JmonitorPhpController",
+                        "",
+                        "# Secured route in production with localhost host restriction",
+                        "# Refer to symfony docs for more information about security",
+                        "when@prod:",
+                        "    jmonitor_expose_php_metrics:",
+                        "        path: '/jmonitor/php-metrics'",
+                        "        controller: Jmonitor\\JmonitorBundle\\Controller\\JmonitorPhpController",
+                        "        host: localhost",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a0d9fd41d51a86345bee3f4ed5205c6351217f73"
+        }
+    }
+}
