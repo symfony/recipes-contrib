@@ -1,0 +1,16 @@
+{
+    "bundles": {
+        "Jmonitor\\JmonitorBundle\\JmonitorBundle": ["dev", "prod"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "JMONITOR_API_KEY": ""
+    },
+    "dotenv": {
+        "prod": {
+            "JMONITOR_API_KEY": ""
+        }
+    }
+}
