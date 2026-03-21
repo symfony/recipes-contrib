@@ -1,0 +1,29 @@
+jmonitor:
+    # project_api_key can be empty to disable sending data to Jmonitor
+    # useful for testing pourposes in non-production environments
+    project_api_key: '%env(JMONITOR_API_KEY)%'
+
+    # Optional (recommended): use a specific logger service (Symfony's default is "logger").
+    logger: 'logger'
+
+    # Optional: provide a custom HTTP client service
+    # http_client: 'http_client'
+
+when@dev:
+    jmonitor:
+        collectors:
+            # Start with a basic collector for testing purposes
+            # On non-linux OS, you can use RandomAdapter for testing purposes
+            # system:
+            #     enabled: true
+            #     adapter: "Jmonitor\\Collector\\System\\Adapter\\RandomAdapter"
+            system:
+                enabled: true
+
+when@prod:
+    jmonitor:
+        # Add collectors configured for production here
+        # Refer to the package documentation for all available collectors: https://github.com/jmonitor/jmonitor-bundle
+        collectors:
+            system:
+                enabled: true
