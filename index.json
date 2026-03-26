@@ -1388,6 +1388,9 @@
             "1.1",
             "2.0"
         ],
+        "nalabdou/algebra-symfony": [
+            "1.1"
+        ],
         "nbgrp/env-bundle": [
             "1.0"
         ],

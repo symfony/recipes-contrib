@@ -1,0 +1,46 @@
+{
+    "manifests": {
+        "nalabdou/algebra-symfony": {
+            "manifest": {
+                "bundles": {
+                    "Nalabdou\\Algebra\\Symfony\\AlgebraBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "\u2705 AlgebraBundle has been installed successfully!",
+                    "",
+                    "Your Symfony project is now ready to use AlgebraBundle.",
+                    "",
+                    "Next steps:",
+                    "",
+                    "1. Review the default configuration:",
+                    "   - Located at: config/packages/algebra.yaml",
+                    "   - Adjust setting `strict_mode` as needed.",
+                    "",
+                    "2. Use AlgebraBundle features in your services and controllers:",
+                    "   - Check the documentation: https://github.com/nalabdou/algebra-symfony",
+                    "",
+                    "3. Development tips:",
+                    "   - Use strict_mode to catch invalid expressions early.",
+                    "",
+                    "Enjoy algebraic coding! \ud83d\ude80"
+                ]
+            },
+            "files": {
+                "config/packages/algebra.yaml": {
+                    "contents": [
+                        "algebra:",
+                        "    strict_mode: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6153dec3a1b95fe33b5d78ea99b67d7b3a9a50c3"
+        }
+    }
+}

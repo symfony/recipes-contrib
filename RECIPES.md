@@ -437,6 +437,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [mtarld/symbok-bundle](https://packagist.org/packages/mtarld/symbok-bundle) | [2.0](mtarld/symbok-bundle/2.0) |
 | [mukadi/wallet-bundle](https://packagist.org/packages/mukadi/wallet-bundle) | [1.0](mukadi/wallet-bundle/1.0) |
 | [mukadi/wordpress-bundle](https://packagist.org/packages/mukadi/wordpress-bundle) | [2.0](mukadi/wordpress-bundle/2.0) |
+| [nalabdou/algebra-symfony](https://packagist.org/packages/nalabdou/algebra-symfony) | [1.1](nalabdou/algebra-symfony/1.1) |
 | [nbgrp/env-bundle](https://packagist.org/packages/nbgrp/env-bundle) | [1.0](nbgrp/env-bundle/1.0) |
 | [nedac/sylius-minimum-order-value-plugin](https://packagist.org/packages/nedac/sylius-minimum-order-value-plugin) | [1.0](nedac/sylius-minimum-order-value-plugin/1.0) |
 | [nedac/sylius-order-now-plugin](https://packagist.org/packages/nedac/sylius-order-now-plugin) | [1.0](nedac/sylius-order-now-plugin/1.0) |
