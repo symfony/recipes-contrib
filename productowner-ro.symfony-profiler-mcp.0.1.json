@@ -1,0 +1,40 @@
+{
+    "manifests": {
+        "productowner-ro/symfony-profiler-mcp": {
+            "manifest": {
+                "bundles": {
+                    "ProductOwner\\SymfonyProfilerMcp\\SymfonyProfilerMcpBundle": [
+                        "dev"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/symfony_profiler_mcp.yaml": {
+                    "contents": [
+                        "when@dev:",
+                        "    mcp:",
+                        "        client_transports:",
+                        "            stdio: true",
+                        "            http: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/symfony_profiler_mcp.yaml": {
+                    "contents": [
+                        "when@dev:",
+                        "    mcp:",
+                        "        resource: .",
+                        "        type: mcp",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ce020b35a6c21ebdadeec67353908003405422b9"
+        }
+    }
+}
