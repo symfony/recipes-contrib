@@ -1,0 +1,4 @@
+when@dev:
+    mcp:
+        resource: .
+        type: mcp
