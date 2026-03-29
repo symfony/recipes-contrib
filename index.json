@@ -2295,6 +2295,9 @@
             "0.6",
             "3.0"
         ],
+        "void/og-image": [
+            "1.0"
+        ],
         "vuillaume-agency/symfony-turnstile": [
             "1.0"
         ],

@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "void/og-image": {
+            "manifest": {
+                "bundles": {
+                    "Void\\OgImage\\Symfony\\OgImageBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/og_image.yaml": {
+                    "contents": [
+                        "og_image:",
+                        "    driver: imagick",
+                        "    storage_dir: \"%kernel.project_dir%/public/og-images\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "502f70a7528e307c82ceb31aab62f643d09f4767"
+        }
+    }
+}
