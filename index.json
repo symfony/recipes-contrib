@@ -923,6 +923,9 @@
         "jeandanyel/list-bundle": [
             "0.1"
         ],
+        "jmonitor/jmonitor-bundle": [
+            "1.0"
+        ],
         "jmose/command-scheduler-bundle": [
             "2.0"
         ],

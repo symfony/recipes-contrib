@@ -291,6 +291,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [jbtcd/fitbit-bundle](https://packagist.org/packages/jbtcd/fitbit-bundle) | [1.0](../../../tree/main/jbtcd/fitbit-bundle/1.0) |
 | [jeandanyel/crud-bundle](https://packagist.org/packages/jeandanyel/crud-bundle) | [0.1](../../../tree/main/jeandanyel/crud-bundle/0.1) |
 | [jeandanyel/list-bundle](https://packagist.org/packages/jeandanyel/list-bundle) | [0.1](../../../tree/main/jeandanyel/list-bundle/0.1) |
+| [jmonitor/jmonitor-bundle](https://packagist.org/packages/jmonitor/jmonitor-bundle) | [1.0](../../../tree/main/jmonitor/jmonitor-bundle/1.0) |
 | [jmose/command-scheduler-bundle](https://packagist.org/packages/jmose/command-scheduler-bundle) | [2.0](../../../tree/main/jmose/command-scheduler-bundle/2.0) |
 | [jms/serializer-bundle](https://packagist.org/packages/jms/serializer-bundle) | [4.0](../../../tree/main/jms/serializer-bundle/4.0) |
 | [jolicode/gif-exception-bundle](https://packagist.org/packages/jolicode/gif-exception-bundle) | [1.0](../../../tree/main/jolicode/gif-exception-bundle/1.0) |
