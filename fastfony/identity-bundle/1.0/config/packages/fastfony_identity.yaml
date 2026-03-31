@@ -14,7 +14,7 @@ fastfony_identity:
     login:
         #default_method: 'login_link' # Default login method: 'form_login' or 'login_link' (default: 'form_login')
     registration:
-        #enabled: true  # Enable or disable user registration (default: false)
+        enabled: true  # Enable or disable user registration (default: false)
     login_link:
         #enabled: false  # Enable or disable login via email link (default: true)
         #email_subject: 'Your login link' # Subject of the email sent with the login link (text or translation key)
