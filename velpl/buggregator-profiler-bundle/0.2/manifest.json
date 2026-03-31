@@ -1,0 +1,34 @@
+{
+    "bundles": {
+        "Velpl\\BuggregatorProfilerBundle\\BuggregatorProfilerBundle": [
+        "all"
+        ]
+    },
+    "env": {
+        "BUGGREGATOR_PROFILER_PORT" : "${BUGGREGATOR_PROFILER_PORT:-8000}",
+        "BUGGREGATOR_PROFILER_URL" : "${BUGGREGATOR_PROFILER_URL:-http://127.0.0.1}",
+        "BUGGREGATOR_BUNDLE_PROFILER_URL" : "${BUGGREGATOR_PROFILER_URL}:${BUGGREGATOR_PROFILER_PORT}",
+        "BUGGREGATOR_BUNDLE_SMTP_PORT" : "${BUGGREGATOR_BUNDLE_SMTP_PORT:-1025}",
+        "BUGGREGATOR_BUNDLE_VARDUMPER_PORT" : "${BUGGREGATOR_BUNDLE_VARDUMPER_PORT:-9912}",
+        "BUGGREGATOR_BUNDLE_MONOLOG_PORT" : "${BUGGREGATOR_BUNDLE_MONOLOG_PORT:-9913}",
+        "BUGGREGATOR_BUNDLE_CONTAINER_NAME" : "",
+        "BUGGREGATOR_BUNDLE_IMAGE_TAG" : ""
+    },
+    "docker-compose": {
+        "compose.yaml": {
+            "services": {
+                "buggregator-profiler": {
+                    "image": " ghcr.io/buggregator/server:${BUGGREGATOR_BUNDLE_IMAGE_TAG:-latest}",
+                    "container_name": " ${BUGGREGATOR_BUNDLE_CONTAINER_NAME:-buggregator-profiler}",
+                    "ports": [
+                        "- \"${BUGGREGATOR_PROFILER_PORT}:8000\"",
+                        "- \"${BUGGREGATOR_BUNDLE_SMTP_PORT}:1025\"",
+                        "- \"${BUGGREGATOR_BUNDLE_VARDUMPER_PORT}:9912\"",
+                        "- \"${BUGGREGATOR_BUNDLE_MONOLOG_PORT}:9913\""
+                    ],
+                    "restart": " unless-stopped"
+                }
+            }
+        }
+    }
+}

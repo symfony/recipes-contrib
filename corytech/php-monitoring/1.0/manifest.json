@@ -18,5 +18,8 @@
                 "    - ${STATSD_EXPORTER_WEB_MACHINE_PORT:-9102}:9102"
             ]
         }
-    }
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }    
 }
