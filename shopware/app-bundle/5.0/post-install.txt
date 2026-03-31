@@ -1,0 +1,6 @@
+  * <fg=yellow>Warning</> the shopware/app-bundle uses by default a in-memory database. You should use doctrine or dynamodb
+
+    For doctrine install the following packages: composer require doctrine/orm symfony/doctrine-bridge
+    For dynamodb install the following packages: composer require async-aws/async-aws-bundle async-aws/dynamo-db
+
+    Make sure to configure the correct storage after installing the packages in config/packages/shopware_app.yaml

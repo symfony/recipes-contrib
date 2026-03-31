@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Netgen\\Bundle\\ContentBrowserBundle\\NetgenContentBrowserBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

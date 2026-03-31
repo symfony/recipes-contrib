@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "SymfonyCorp\\Connect\\SymfonyConnectBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%"
+    },
+    "env": {
+        "SYMFONY_CONNECT_APP_ID": "",
+        "SYMFONY_CONNECT_APP_SECRET": ""
+    }
+}

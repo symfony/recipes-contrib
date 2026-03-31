@@ -1,0 +1,5 @@
+# Documentation available at https://pwa.spomky-labs.com/
+## Please add the favicons, manifest or serviceworker sections depending on your needs.
+pwa:
+    asset_compiler: false # Default to true. Will change to false in 2.0.0.
+    #image_processor: 'pwa.image_processor.imagick' # Or 'pwa.image_processor.gd'

@@ -1,0 +1,23 @@
+# Rutas del bundle de autenticación (ejemplo - personalizar según necesidad)
+# Descomentar y adaptar según tu aplicación
+
+# app_auth_selector:
+#     path: /auth-selector
+#     controller: App\Controller\SecurityController::authSelector
+
+# app_login_ldap:
+#     path: /login/ldap
+#     controller: App\Controller\SecurityController::loginLdap
+
+# app_logout:
+#     path: /logout
+#     methods: GET
+
+# OAuth2 routes (si usas autenticación por certificado)
+# app_oauth_connect:
+#     path: /oauth/connect
+#     controller: App\Controller\OAuth2Controller::connect
+
+# app_oauth_check:
+#     path: /oauth/check
+#     controller: App\Controller\OAuth2Controller::check

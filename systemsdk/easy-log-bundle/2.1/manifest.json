@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Systemsdk\\Bundle\\EasyLogBundle\\EasyLogBundle": ["dev", "test"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

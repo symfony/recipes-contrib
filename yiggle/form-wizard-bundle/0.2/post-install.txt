@@ -1,0 +1,32 @@
+<bg=blue;fg=white>                                                </>
+<bg=blue;fg=white>   Yiggle Form Wizard Bundle Installed! 🧙‍♂️      </>
+<bg=blue;fg=white>                                                </>
+
+<fg=cyan>Next steps:</>
+
+  <fg=yellow>1.</> Import the admin integration in your Sulu admin app
+
+     import 'yiggle-form-wizard-bundle';
+
+  <fg=yellow>2.</> Rebuild the Sulu admin assets
+
+     bin/adminconsole sulu:admin:update-build
+
+
+<fg=cyan>Optional styling:</>
+
+  import 'yiggle-form-wizard-bundle/assets/styles/form_wizard.css';
+
+
+<fg=cyan>Database:</>
+
+  bin/console doctrine:migrations:migrate
+
+
+<fg=cyan>Configuration:</>
+
+  config/packages/yiggle_form_wizard.yaml
+
+
+<fg=green>You're ready to start building form wizards! ✨</>
+<fg=gray>Docs: https://github.com/yiggle/form-wizard-bundle</>

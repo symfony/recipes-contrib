@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "Bab\\TestedRoutesCheckerBundle\\BabTestedRoutesCheckerBundle": ["dev", "test"]
+    }
+}

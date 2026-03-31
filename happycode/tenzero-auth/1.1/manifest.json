@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Happycode\\TenZeroAuth\\TenZeroAuthBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

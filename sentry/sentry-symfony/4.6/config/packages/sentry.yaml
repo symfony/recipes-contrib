@@ -8,7 +8,7 @@ when@prod:
             enabled: false
 
 #        If you are using Monolog, you also need this additional configuration to log the errors correctly:
-#        https://docs.sentry.io/platforms/php/guides/symfony/#monolog-integration
+#        https://docs.sentry.io/platforms/php/guides/symfony/integrations/monolog/
 #        register_error_listener: false
 #        register_error_handler: false
 

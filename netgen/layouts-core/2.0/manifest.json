@@ -1,0 +1,10 @@
+{
+    "bundles": {
+        "Netgen\\Bundle\\LayoutsBundle\\NetgenLayoutsBundle": ["all"],
+        "Netgen\\Bundle\\LayoutsAdminBundle\\NetgenLayoutsAdminBundle": ["all"],
+        "Netgen\\Bundle\\LayoutsDebugBundle\\NetgenLayoutsDebugBundle": ["dev", "test"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

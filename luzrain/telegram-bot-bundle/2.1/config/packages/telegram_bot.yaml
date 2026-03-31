@@ -1,0 +1,2 @@
+telegram_bot:
+    api_token: '%env(resolve:TELEGRAM_API_TOKEN)%'

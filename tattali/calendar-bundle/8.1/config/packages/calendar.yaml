@@ -1,0 +1,3 @@
+calendar:
+    cache_max_age: 300    # HTTP cache (0 to disable)
+    json_max_depth: 4     # JSON nesting limit for filters

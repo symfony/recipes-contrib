@@ -1,0 +1,3 @@
+og_image:
+    driver: imagick
+    storage_dir: "%kernel.project_dir%/public/og-images"

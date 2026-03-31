@@ -6,7 +6,7 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "#DISCOGS_PERSONAL_ACCESS_TOKEN": "",
+        "DISCOGS_PERSONAL_ACCESS_TOKEN": "",
         "#DISCOGS_CONSUMER_KEY": "",
         "#DISCOGS_CONSUMER_SECRET": ""
     }

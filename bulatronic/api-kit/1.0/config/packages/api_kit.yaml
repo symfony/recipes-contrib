@@ -1,0 +1,9 @@
+api_kit:
+    response:
+        include_timestamp: true
+        pretty_print: '%kernel.debug%'
+    validation:
+        translate_messages: true
+    exception_handling:
+        log_errors: true
+        show_trace: '%kernel.debug%'

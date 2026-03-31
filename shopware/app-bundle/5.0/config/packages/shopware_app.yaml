@@ -1,0 +1,7 @@
+shopware_app:
+    name: '%env(SHOPWARE_APP_NAME)%'
+    secret: '%env(SHOPWARE_APP_SECRET)%'
+    # You should specify a specific storage like: dynamodb or doctrine
+    storage: 'auto'
+    doctrine:
+        shop_class: App\Entity\Shop

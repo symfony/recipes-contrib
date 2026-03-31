@@ -1,0 +1,7 @@
+# Read the documentation: https://github.com/Tiloweb/uploaded-file-type-bundle
+uploaded_file_type:
+    configurations:
+        default:
+            filesystem: 'oneup_flysystem.default_filesystem'
+            base_uri: '%env(UPLOAD_BASE_URI)%'
+            path: '/uploads'

@@ -1,0 +1,3 @@
+netgen_content_browser:
+    resource: "@NetgenContentBrowserBundle/Resources/config/routing.yaml"
+    prefix: "%netgen_content_browser.route_prefix%"

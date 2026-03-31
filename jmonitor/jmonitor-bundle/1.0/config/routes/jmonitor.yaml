@@ -1,0 +1,11 @@
+jmonitor_expose_php_metrics:
+    path: '/jmonitor/php-metrics'
+    controller: Jmonitor\JmonitorBundle\Controller\JmonitorPhpController
+
+# Secured route in production with localhost host restriction
+# Refer to symfony docs for more information about security
+when@prod:
+    jmonitor_expose_php_metrics:
+        path: '/jmonitor/php-metrics'
+        controller: Jmonitor\JmonitorBundle\Controller\JmonitorPhpController
+        host: localhost

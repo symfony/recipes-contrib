@@ -1,0 +1,14 @@
+  <fg=blue;options=bold>Doctrine Doctor</> has been successfully installed!
+
+  Runtime analysis for Doctrine ORM - integrated into the Symfony Web Profiler.
+
+  <options=bold>Next steps:</>
+    1. Browse your application to trigger database queries
+    2. Open the Web Profiler and click the <comment>Doctrine Doctor</> panel
+
+  Customize analyzer thresholds in <comment>%CONFIG_DIR%/packages/doctrine_doctor.yaml</>
+
+  Documentation: https://github.com/ahmed-bhs/doctrine-doctor
+
+  Happy debugging! 🚀
+

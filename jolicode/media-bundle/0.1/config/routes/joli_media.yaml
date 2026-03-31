@@ -1,0 +1,12 @@
+_joli_media:
+    resource: "@JoliMediaBundle/config/routes.php"
+
+# Uncomment the following lines to enable the EasyAdmin bridge routes
+# _joli_media_easy_admin:
+#     resource: "@JoliMediaEasyAdminBundle/src/Controller/"
+#     prefix: /admin/media
+
+# Uncomment the following lines to enable the Sonata Admin bridge routes
+# _joli_media_sonata_admin:
+#     resource: "@JoliMediaSonataAdminBundle/src/Controller/"
+#     prefix: /admin/media

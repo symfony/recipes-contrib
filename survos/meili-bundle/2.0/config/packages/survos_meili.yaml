@@ -1,0 +1,4 @@
+survos_meili:
+    host: '%env(default::MEILI_SERVER)%'
+    apiKey: '%env(default::MEILI_API_KEY)%'
+    searchKey: '%env(default::MEILI_SEARCH_KEY)%'

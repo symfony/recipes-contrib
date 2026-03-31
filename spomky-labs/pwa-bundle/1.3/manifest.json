@@ -1,0 +1,26 @@
+{
+    "bundles": {
+        "SpomkyLabs\\PwaBundle\\SpomkyLabsPwaBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%"
+    },
+    "add-lines": [
+        {
+            "file": "templates/base.html.twig",
+            "content": "        {{ pwa() }}",
+            "position": "after_target",
+            "target": "</title>",
+            "warn_if_missing": true
+        }
+    ],
+    "gitignore": [
+        "/public/idb",
+        "/public/pwa",
+        "/public/workbox",
+        "/public/favicon.ico",
+        "/public/site.webmanifest",
+        "/public/site.*.webmanifest",
+        "/public/sw.js"
+    ]
+}

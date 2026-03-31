@@ -1,0 +1,1 @@
+  * Edit the <comment>config/package/response-headers.yaml</comment> file to configure http response header.

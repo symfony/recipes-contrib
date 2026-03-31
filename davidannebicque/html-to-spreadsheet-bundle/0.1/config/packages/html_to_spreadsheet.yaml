@@ -1,0 +1,19 @@
+html_to_spreadsheet:
+    #Enable strict mode for HTML validation
+    strict: true
+
+    #Include built-in styles (th, money, date, etc.)
+    include_builtins: true
+
+    #Temporary directory (optional)
+    #temp_dir: '%kernel.cache_dir%/html_to_spreadsheet'
+
+    #Custom styles (examples)
+    #default_styles:
+    #    custom_header:
+    #        font:
+    #            bold: true
+    #            color: 'FFFFFF'
+    #        fill:
+    #            fillType: 'solid'
+    #            color: '4472D4'

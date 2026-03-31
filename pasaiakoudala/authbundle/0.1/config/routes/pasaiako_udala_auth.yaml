@@ -1,3 +1,0 @@
-pasaiako_udala_auth:
-    resource: '@PasaiakoUdalaAuthBundle/Resources/config/routes.xml'
-    prefix: /

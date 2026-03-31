@@ -1,0 +1,16 @@
+<bg=blue;fg=white>                         </>
+<bg=blue;fg=white> TimbleOne BackendBundle </>
+<bg=blue;fg=white>                         </>
+
+This bundle requires the PHP extensions <comment>gd</> and <comment>exif</>.
+
+If your project uses Symfony Docker and has a root <comment>Dockerfile</> with:
+  <comment>###> recipes ###</>
+  <comment>###< recipes ###</>
+then Symfony Flex will add:
+  <comment>RUN install-php-extensions gd exif</>
+
+If you don't use Docker, install these PHP extensions on your machine/server
+and restart PHP-FPM / your web server afterwards.
+
+Composer will fail with a clear error until <comment>ext-gd</> and <comment>ext-exif</> are available.

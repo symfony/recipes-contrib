@@ -1,0 +1,3 @@
+sulu_form_api:
+    resource: "@SuluFormBundle/Resources/config/routing_api.yaml"
+    prefix: /admin/api

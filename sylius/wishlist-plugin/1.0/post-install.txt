@@ -1,0 +1,5 @@
+* Run: bin/console assets:install public && yarn install && yarn encore dev
+* Run: bin/console doctrine:migrations:migrate
+* Run: bin/console cache:clear
+* Using async Messenger? Wishlist commands must run synchronously:
+  https://docs.sylius.com/wishlist-plugin/configuration/configuring-messenger

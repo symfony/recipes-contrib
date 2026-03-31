@@ -1,0 +1,7 @@
+shopware_app_lifecycle:
+    resource: '@ShopwareAppBundle/Resources/config/routing/lifecycle.php'
+    prefix: /app
+
+shopware_app_webhook:
+    resource: '@ShopwareAppBundle/Resources/config/routing/webhook.php'
+    prefix: /app

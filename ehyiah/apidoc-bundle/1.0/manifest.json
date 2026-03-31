@@ -1,0 +1,17 @@
+{
+    "bundles": {
+        "Ehyiah\\ApiDocBundle\\EhyiahApiDocBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "copy-from-package": {
+        "src/Swagger/": "%SRC_DIR%/Swagger/"
+    },
+    "env": {
+        "#1": "Directory where the source api doc should be living",
+        "SOURCE_PATH": "/src/Swagger",
+        "#2": "The bundle will create a dump folder inside SOURCE_PATH Directory when you use the dump command",
+        "DUMP_PATH": "dump"
+    }
+}

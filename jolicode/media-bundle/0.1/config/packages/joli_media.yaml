@@ -1,0 +1,21 @@
+# See the documentation for all available configuration options
+joli_media:
+    # Configure a media library below. See the documentation for all available options
+    # at https://mediabundle.jolicode.com/getting-started/configuration/#configuration
+
+    # libraries:
+    #     default:
+    #         original:
+    #             flysystem: "filesystem.original.storage"
+    #             url_generator:
+    #                 strategy: folder
+    #                 path: /media/original/
+    #         cache:
+    #             flysystem: "filesystem.cache.storage"
+    #             must_store_when_generating_url: false
+    #             url_generator:
+    #                 strategy: folder
+    #                 path: /media/cache/
+
+    pre_processors:
+        - JoliCode\MediaBundle\PreProcessor\ExifRemovalPreProcessor

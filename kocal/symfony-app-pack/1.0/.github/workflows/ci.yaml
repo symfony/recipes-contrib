@@ -1,0 +1,41 @@
+name: CI
+
+defaults:
+    run:
+        shell: bash
+
+on:
+    pull_request:
+        types: [ opened, synchronize, reopened, ready_for_review ]
+    push:
+        branches:
+            - main
+
+concurrency:
+    group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+    cancel-in-progress: true
+
+jobs:
+    qa:
+        if: ${{ ! github.event.pull_request.draft }}
+        name: Quality Assurance
+        timeout-minutes: 10
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Checkout
+                uses: actions/checkout@v4
+
+            -   name: Setup PHP
+                uses: shivammathur/setup-php@v2
+                with:
+                    extensions: ctype, iconv, mbstring
+                    tools: symfony
+
+            -   name: Start Docker containers
+                run: docker compose up -d --wait
+
+            -   name: Install project
+                run: make app.install
+
+            -   name: QA
+                run: make qa

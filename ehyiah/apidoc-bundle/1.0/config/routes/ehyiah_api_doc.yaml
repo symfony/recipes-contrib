@@ -1,0 +1,3 @@
+ehyiah_api_doc_index:
+    path: /ehyiah/api/doc
+    controller: Ehyiah\ApiDocBundle\Controller\ApiDocController::index

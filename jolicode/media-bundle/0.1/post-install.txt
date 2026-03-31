@@ -1,0 +1,7 @@
+  * JoliMediaBundle has been successfully installed! Complete the configuration:
+    1. <fg=blue>Configure</> your media library storage in <comment>%CONFIG_DIR%/packages/joli_media.yaml</>
+    2. <fg=blue>Read</> the documentation options at <comment>https://mediabundle.jolicode.com/getting-started/configuration/</>
+
+  * Learn how to install the required processors at <comment>https://mediabundle.jolicode.com/getting-started/dependencies-and-tooling/</>
+
+  * To enable an admin bridge, follow the instructions at <comment>https://mediabundle.jolicode.com/bridges/</>

@@ -2,11 +2,15 @@
     "bundles": {
         "ACSEO\\TypesenseBundle\\ACSEOTypesenseBundle": ["all"]
     },
+    "container": {
+        "typesense_url": "%env(TYPESENSE_URL)%",
+        "typesense_key": "%env(TYPESENSE_KEY)%"
+    },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
         "TYPESENSE_URL": "http://localhost:8108",
-        "TYPESENSE_KEY" : "123"
+        "TYPESENSE_KEY": "123"
     }
 }

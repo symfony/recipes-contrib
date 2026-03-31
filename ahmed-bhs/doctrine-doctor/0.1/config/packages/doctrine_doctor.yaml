@@ -1,0 +1,151 @@
+# Doctrine Doctor - Runtime Analysis for Doctrine ORM
+# Full documentation: https://github.com/ahmed-bhs/doctrine-doctor/blob/main/docs/CONFIGURATION.md
+
+doctrine_doctor:
+    # Enable Doctrine Doctor (automatically enabled in dev/test environments)
+    enabled: '%kernel.debug%'
+
+#    # Web Profiler integration
+#    profiler:
+#        show_in_toolbar: true
+#        show_debug_info: false
+#
+#    # Performance Analyzers (all enabled by default with production-ready thresholds)
+#    analyzers:
+#        # Detect N+1 query problems (most common performance issue)
+#        n_plus_one:
+#            enabled: true
+#            threshold: 5  # Trigger when 5+ similar queries are detected
+#
+#        # Detect slow queries
+#        slow_query:
+#            enabled: true
+#            threshold: 100  # milliseconds
+#
+#        # Detect missing database indexes
+#        missing_index:
+#            enabled: true
+#            slow_query_threshold: 50  # Only EXPLAIN queries slower than 50ms
+#            explain_queries: true
+#            min_rows_scanned: 1000  # Suggest index when 1000+ rows scanned
+#
+#        # Analyze hydration performance
+#        hydration:
+#            enabled: true
+#            row_threshold: 99  # Warning when hydrating 100+ objects
+#            critical_threshold: 999  # Critical when hydrating 1000+ objects
+#
+#        # Detect excessive JOINs
+#        eager_loading:
+#            enabled: true
+#            join_threshold: 4  # Warning with 4+ JOINs
+#            critical_join_threshold: 7  # Critical with 7+ JOINs
+#
+#        # Detect findAll() without limits
+#        find_all:
+#            enabled: true
+#            threshold: 99  # Warning when findAll() returns 100+ rows
+#
+#        # Detect batch operations without EntityManager::clear()
+#        entity_manager_clear:
+#            enabled: true
+#            batch_size_threshold: 20  # Suggest clear() after 20+ operations
+#
+#        # Suggest getReference() for simple ID lookups
+#        get_reference:
+#            enabled: true
+#            threshold: 2  # Suggest after 2+ simple SELECT by ID
+#
+#        # Detect flush() in loops (anti-pattern)
+#        flush_in_loop:
+#            enabled: true
+#            flush_count_threshold: 5  # Trigger after 5+ flush calls
+#            time_window_ms: 1000  # Within 1 second window
+#
+#        # Detect lazy loading in loops
+#        lazy_loading:
+#            enabled: true
+#            threshold: 10  # Trigger with 10+ lazy load queries
+#
+#        # Suggest bulk operations for mass updates/deletes
+#        bulk_operation:
+#            enabled: true
+#            threshold: 20  # Suggest DQL UPDATE/DELETE for 20+ operations
+#
+#        # Optimize JOIN usage
+#        join_optimization:
+#            enabled: true
+#            max_joins_recommended: 5  # Warning threshold
+#            max_joins_critical: 8  # Critical threshold
+#
+#        # Suggest partial objects when loading full entities unnecessarily
+#        partial_object:
+#            enabled: true
+#            threshold: 5  # Trigger after 5+ queries
+#
+#        # Suggest DTO hydration for aggregation queries
+#        dto_hydration:
+#            enabled: true
+#
+#        # Security Analyzers
+#        dql_injection:
+#            enabled: true  # Detect DQL/SQL injection vulnerabilities
+#
+#        sql_injection_raw_queries:
+#            enabled: true  # Detect SQL injection in raw queries
+#
+#        sensitive_data_exposure:
+#            enabled: true  # Detect sensitive data in serialization
+#
+#        insecure_random:
+#            enabled: true  # Detect insecure random generators
+#
+#        # Code Quality Analyzers
+#        collection_initialization:
+#            enabled: true  # Detect uninitialized collections
+#
+#        cascade_configuration:
+#            enabled: true  # Analyze cascade configurations
+#
+#        cascade_all:
+#            enabled: true  # Detect dangerous cascade="all"
+#
+#        cascade_persist_independent:
+#            enabled: true  # Detect cascade="persist" risks
+#
+#        missing_orphan_removal:
+#            enabled: true  # Detect missing orphanRemoval
+#
+#        cascade_remove_independent:
+#            enabled: true  # Detect cascade="remove" risks
+#
+#        bidirectional_consistency:
+#            enabled: true  # Check bidirectional associations
+#
+#        orphan_removal_no_cascade:
+#            enabled: true  # Detect orphanRemoval without cascade
+#
+#        ondelete_mismatch:
+#            enabled: true  # Check ORM vs DB cascade consistency
+#
+#        foreign_key_mapping:
+#            enabled: true  # Detect FKs as primitives instead of relations
+#
+#        # Configuration Analyzers
+#        strict_mode:
+#            enabled: true  # Check MySQL/MariaDB strict mode
+#
+#        charset:
+#            enabled: true  # Check database charset (utf8mb4 recommended)
+#
+#        innodb_engine:
+#            enabled: true  # Check if InnoDB is used
+#
+#        connection_pooling:
+#            enabled: true  # Analyze connection pool config
+#
+#        doctrine_cache:
+#            enabled: true  # Detect ArrayCache in production
+#
+#        naming_convention:
+#            enabled: true  # Check snake_case naming

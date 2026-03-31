@@ -1,0 +1,17 @@
+✅ AlgebraBundle has been installed successfully!
+
+Your Symfony project is now ready to use AlgebraBundle.
+
+Next steps:
+
+1. Review the default configuration:
+   - Located at: config/packages/algebra.yaml
+   - Adjust setting `strict_mode` as needed.
+
+2. Use AlgebraBundle features in your services and controllers:
+   - Check the documentation: https://github.com/nalabdou/algebra-symfony
+
+3. Development tips:
+   - Use strict_mode to catch invalid expressions early.
+
+Enjoy algebraic coding! 🚀
