@@ -1,0 +1,9 @@
+buggregator_profiler:
+    enabled: false
+    application_name: 'Symfony App'
+    profiler_url: '%env(string:BUGGREGATOR_BUNDLE_PROFILER_URL)%'
+
+when@dev:
+    buggregator_profiler:
+        enabled: true
+        profiler_url: '%env(string:BUGGREGATOR_BUNDLE_PROFILER_URL)%'
