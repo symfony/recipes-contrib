@@ -2,7 +2,7 @@
 
 1. The <comment>config/packages/security.yaml</comment> and <comment>config/packages/stof_doctrine_extensions.yaml</comment> files have been updated where the expected configuration lines were found; please verify these changes.
 
-2. Merge the content of <comment>config/packages/mailer.yaml.dist</comment>  into your <comment>config/packages/mailer.yaml</comment> file and set your <comment>MAILER_DSN</comment> environment variable if it is not already done.
+2. Merge the content of <comment>config/packages/mailer.yaml.dist</comment> into your <comment>config/packages/mailer.yaml</comment> file and set your <comment>MAILER_DSN</comment> environment variable if it is not already done.
 
 3. Create the database schema:
 
@@ -15,6 +15,14 @@
 
     <fg=green>php bin/console doctrine:schema:update --force</>
 
-4. Go to the /register route in order to create the first account : please <fg=yellow>be sure that your MAILER_DSN is correctly configure and sending messages async is disabled (or your messages consumer command is running) for receive the login link e-mail</>.
+4. Use the bundle:
+
+    Option 1 - Create an user with command:
+
+    <fg=green>php bin/console fastfony:user:create</>
+
+    Option 2 - Create an user on browser (if registration is enabled):
+
+    Go to the <comment>/register</comment> route. Please be sure that your MAILER_DSN is correctly configure and sending messages async is disabled (or your messages consumer command is running) for receive the login link e-mail.
 
 <info>By default, routes behind /secure-area require the user logged in.</info>

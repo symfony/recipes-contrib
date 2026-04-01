@@ -1,16 +1,9 @@
 fastfony_identity:
     user:
-        # Your custom User entity class extends Fastfony\IdentityBundle\Entity\Identity\User (optional)
-        #class: 'App\Entity\User'
         #require_email_verification: true  # Require email verification for new users (default: false)
     role:
-        # Your custom Role entity class extends Fastfony\IdentityBundle\Entity\Identity\Role (optional)
-        #class: 'App\Entity\Role'
         # Default role assigned to new users (if you want to assign one different from ROLE_USER)
         #default_role: 'ROLE_ADMIN'
-    group:
-        # Your custom Group entity class extends Fastfony\IdentityBundle\Entity\Identity\Group (optional)
-        #class: 'App\Entity\Group'
     login:
         #default_method: 'login_link' # Default login method: 'form_login' or 'login_link' (default: 'form_login')
     registration:
