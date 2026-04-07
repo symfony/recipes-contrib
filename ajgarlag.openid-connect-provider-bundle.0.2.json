@@ -1,0 +1,42 @@
+{
+    "manifests": {
+        "ajgarlag/openid-connect-provider-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Ajgarlag\\Bundle\\OpenIDConnectProviderBundle\\AjgarlagOpenIDConnectProviderBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/ajgarlag_openid_connect_provider.yaml": {
+                    "contents": [
+                        "ajgarlag_openid_connect_provider:",
+                        "    discovery:",
+                        "        authorization_endpoint_route: 'oauth2_authorize'",
+                        "        token_endpoint_route: 'oauth2_token'",
+                        "        jwks_endpoint_route: 'openid_connect_jwks'",
+                        "        end_session_endpoint_route: 'openid_connect_end_session'",
+                        "    end_session:",
+                        "        cancel_logout_default_path: '/'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/ajgarlag_openid_connect_provider.yaml": {
+                    "contents": [
+                        "ajgarlag_openid_connect_provider:",
+                        "    resource: '@AjgarlagOpenIDConnectProviderBundle/config/routes.php'",
+                        "    type: php",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "300ec317b0195614ab63278a8c6ecc1fddfd803c"
+        }
+    }
+}

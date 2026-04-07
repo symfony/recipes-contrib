@@ -18,6 +18,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [ahmed-bhs/doctrine-doctor](https://packagist.org/packages/ahmed-bhs/doctrine-doctor) | [0.1](../../../tree/main/ahmed-bhs/doctrine-doctor/0.1) |
 | [ajardin/blizzard-sdk-bundle](https://packagist.org/packages/ajardin/blizzard-sdk-bundle) | [1.0](../../../tree/main/ajardin/blizzard-sdk-bundle/1.0) |
 | [ajardin/docker-symfony](https://packagist.org/packages/ajardin/docker-symfony) | [0.2](../../../tree/main/ajardin/docker-symfony/0.2) |
+| [ajgarlag/openid-connect-provider-bundle](https://packagist.org/packages/ajgarlag/openid-connect-provider-bundle) | [0.2](../../../tree/main/ajgarlag/openid-connect-provider-bundle/0.2) |
 | [ajgl/breakpoint-twig-extension](https://packagist.org/packages/ajgl/breakpoint-twig-extension) | [0.3](../../../tree/main/ajgl/breakpoint-twig-extension/0.3) |
 | [akondas/symfony-consul-bundle](https://packagist.org/packages/akondas/symfony-consul-bundle) | [0.1](../../../tree/main/akondas/symfony-consul-bundle/0.1) |
 | [alengo/alengo-webspace-settings-bundle](https://packagist.org/packages/alengo/alengo-webspace-settings-bundle) | [0.9](../../../tree/main/alengo/alengo-webspace-settings-bundle/0.9) |

@@ -45,6 +45,9 @@
         "ajardin/docker-symfony": [
             "0.2"
         ],
+        "ajgarlag/openid-connect-provider-bundle": [
+            "0.2"
+        ],
         "ajgl/breakpoint-twig-extension": [
             "0.3"
         ],
