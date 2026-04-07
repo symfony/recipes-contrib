@@ -1,0 +1,3 @@
+ajgarlag_openid_connect_provider:
+    resource: '@AjgarlagOpenIDConnectProviderBundle/config/routes.php'
+    type: php
