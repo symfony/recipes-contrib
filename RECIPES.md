@@ -43,7 +43,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [artox-lab/clarc-bundle](https://packagist.org/packages/artox-lab/clarc-bundle) | [0.1](../../../tree/main/artox-lab/clarc-bundle/0.1) |
 | [artox-lab/clarc-message-bus-bundle](https://packagist.org/packages/artox-lab/clarc-message-bus-bundle) | [1.0](../../../tree/main/artox-lab/clarc-message-bus-bundle/1.0) |
 | [artox-lab/sms-bundle](https://packagist.org/packages/artox-lab/sms-bundle) | [1.0](../../../tree/main/artox-lab/sms-bundle/1.0) |
-| [artprima/prometheus-metrics-bundle](https://packagist.org/packages/artprima/prometheus-metrics-bundle) | [1.14](../../../tree/main/artprima/prometheus-metrics-bundle/1.14) |
+| [artprima/prometheus-metrics-bundle](https://packagist.org/packages/artprima/prometheus-metrics-bundle) | [1.21](../../../tree/main/artprima/prometheus-metrics-bundle/1.21) |
 | [artyuum/request-dto-mapper-bundle](https://packagist.org/packages/artyuum/request-dto-mapper-bundle) | [1.0](../../../tree/main/artyuum/request-dto-mapper-bundle/1.0) |
 | [assoconnect/mjml-bundle](https://packagist.org/packages/assoconnect/mjml-bundle) | [1.0](../../../tree/main/assoconnect/mjml-bundle/1.0) |
 | [async-aws/async-aws-bundle](https://packagist.org/packages/async-aws/async-aws-bundle) | [1.0](../../../tree/main/async-aws/async-aws-bundle/1.0) |
