@@ -1,0 +1,5 @@
+when@dev:
+    mcp:
+        client_transports:
+            stdio: true
+            http: true
