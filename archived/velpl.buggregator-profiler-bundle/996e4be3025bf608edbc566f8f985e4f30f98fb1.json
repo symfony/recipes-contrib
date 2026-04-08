@@ -1,0 +1,61 @@
+{
+    "manifests": {
+        "velpl/buggregator-profiler-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Velpl\\BuggregatorProfilerBundle\\BuggregatorProfilerBundle": [
+                        "all"
+                    ]
+                },
+                "env": {
+                    "BUGGREGATOR_PROFILER_PORT": "",
+                    "BUGGREGATOR_PROFILER_URL": "",
+                    "BUGGREGATOR_BUNDLE_PROFILER_URL": "${BUGGREGATOR_PROFILER_URL:-http://127.0.0.1}:${BUGGREGATOR_PROFILER_PORT:-8000}",
+                    "BUGGREGATOR_BUNDLE_SMTP_PORT": "${BUGGREGATOR_BUNDLE_SMTP_PORT:-1025}",
+                    "BUGGREGATOR_BUNDLE_VARDUMPER_PORT": "${BUGGREGATOR_BUNDLE_VARDUMPER_PORT:-9912}",
+                    "BUGGREGATOR_BUNDLE_MONOLOG_PORT": "${BUGGREGATOR_BUNDLE_MONOLOG_PORT:-9913}",
+                    "BUGGREGATOR_BUNDLE_CONTAINER_NAME": "",
+                    "BUGGREGATOR_BUNDLE_IMAGE_TAG": ""
+                },
+                "docker-compose": {
+                    "compose.yaml": {
+                        "services": {
+                            "buggregator-profiler": {
+                                "image": " ghcr.io/buggregator/server:${BUGGREGATOR_BUNDLE_IMAGE_TAG:-latest}",
+                                "container_name": " ${BUGGREGATOR_BUNDLE_CONTAINER_NAME:-buggregator-profiler}",
+                                "ports": [
+                                    "- \"${BUGGREGATOR_PROFILER_PORT}:8000\"",
+                                    "- \"${BUGGREGATOR_BUNDLE_SMTP_PORT}:1025\"",
+                                    "- \"${BUGGREGATOR_BUNDLE_VARDUMPER_PORT}:9912\"",
+                                    "- \"${BUGGREGATOR_BUNDLE_MONOLOG_PORT}:9913\""
+                                ],
+                                "restart": " unless-stopped"
+                            }
+                        }
+                    }
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/buggregator_profiler.yaml": {
+                    "contents": [
+                        "buggregator_profiler:",
+                        "    enabled: false",
+                        "    application_name: 'Symfony App'",
+                        "    profiler_url: '%env(string:BUGGREGATOR_BUNDLE_PROFILER_URL)%'",
+                        "",
+                        "when@dev:",
+                        "    buggregator_profiler:",
+                        "        enabled: true",
+                        "        profiler_url: '%env(string:BUGGREGATOR_BUNDLE_PROFILER_URL)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "996e4be3025bf608edbc566f8f985e4f30f98fb1"
+        }
+    }
+}

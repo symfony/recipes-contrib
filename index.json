@@ -2290,6 +2290,9 @@
         "velhron/dadata-bundle": [
             "1.0"
         ],
+        "velpl/buggregator-profiler-bundle": [
+            "0.2"
+        ],
         "verschoof/transip-api-bundle": [
             "1.2"
         ],
