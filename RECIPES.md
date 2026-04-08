@@ -529,6 +529,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [pms-nz/object-translation-bundle](https://packagist.org/packages/pms-nz/object-translation-bundle) | [1.0](../../../tree/main/pms-nz/object-translation-bundle/1.0) |
 | [pomm-project/pomm-bundle](https://packagist.org/packages/pomm-project/pomm-bundle) | [2.3](../../../tree/main/pomm-project/pomm-bundle/2.3) |
 | [pond5/async-request-bundle](https://packagist.org/packages/pond5/async-request-bundle) | [1.1](../../../tree/main/pond5/async-request-bundle/1.1) |
+| [productowner-ro/symfony-profiler-mcp](https://packagist.org/packages/productowner-ro/symfony-profiler-mcp) | [0.1](../../../tree/main/productowner-ro/symfony-profiler-mcp/0.1) |
 | [prolix/maintenance-bundle](https://packagist.org/packages/prolix/maintenance-bundle) | [2.1](../../../tree/main/prolix/maintenance-bundle/2.1) |
 | [prooph/event-store-bus-bridge](https://packagist.org/packages/prooph/event-store-bus-bridge) | [3.1](../../../tree/main/prooph/event-store-bus-bridge/3.1) |
 | [prooph/event-store-symfony-bundle](https://packagist.org/packages/prooph/event-store-symfony-bundle) | [0.10](../../../tree/main/prooph/event-store-symfony-bundle/0.10) |

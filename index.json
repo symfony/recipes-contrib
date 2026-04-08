@@ -1690,6 +1690,9 @@
         "pond5/async-request-bundle": [
             "1.1"
         ],
+        "productowner-ro/symfony-profiler-mcp": [
+            "0.1"
+        ],
         "prolix/maintenance-bundle": [
             "2.1"
         ],
