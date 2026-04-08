@@ -1,0 +1,64 @@
+{
+    "manifests": {
+        "nytodev/inertia-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Nytodev\\InertiaBundle\\InertiaBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "add-lines": [
+                    {
+                        "file": "templates/base.html.twig",
+                        "content": "        {{ inertiaHead(page) }}",
+                        "position": "after_target",
+                        "target": "{% block javascripts %}",
+                        "warn_if_missing": true
+                    },
+                    {
+                        "file": "templates/base.html.twig",
+                        "content": "        {{ inertia(page) }}",
+                        "position": "after_target",
+                        "target": "{% block body %}",
+                        "warn_if_missing": true
+                    }
+                ],
+                "post-install-output": [
+                    "  <bg=blue;fg=white>                                                         </>",
+                    "  <bg=blue;fg=white>        Welcome to <options=bold>nytodev/inertia-bundle</>         <bg=blue;fg=white>  </>",
+                    "  <bg=blue;fg=white>                                                         </>",
+                    "",
+                    "  <fg=blue;options=bold>Next steps:</>",
+                    "",
+                    "    1. Install your frontend stack (React, Vue or Svelte):",
+                    "       <comment>npm install @inertiajs/react</>  (or vue / svelte)",
+                    "",
+                    "    2. Adjust <comment>config/packages/inertia.yaml</> to match your setup.",
+                    "",
+                    "    3. Read the documentation:",
+                    "       <comment>https://github.com/nytodev/inertia-bundle</>"
+                ]
+            },
+            "files": {
+                "config/packages/inertia.yaml": {
+                    "contents": [
+                        "inertia:",
+                        "    # The root Twig template used to render the full HTML page on first visit.",
+                        "    root_view: 'base.html.twig'",
+                        "",
+                        "    # Enable Server-Side Rendering via an external Node.js SSR server.",
+                        "    # Requires symfony/http-client: composer require symfony/http-client",
+                        "    ssr_enabled: false",
+                        "    ssr_url: 'http://127.0.0.1:13714'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "dd21b7ae89da2606f2d4686057033ddb89f6b237"
+        }
+    }
+}

@@ -1478,6 +1478,9 @@
         "nyholm/sunflower": [
             "0.2"
         ],
+        "nytodev/inertia-bundle": [
+            "2.0"
+        ],
         "nzo/url-encryptor-bundle": [
             "6.0"
         ],
