@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "ajgarlag/openid-connect-provider-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Ajgarlag\\Bundle\\OpenIDConnectProviderBundle\\AjgarlagOpenIDConnectProviderBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/ajgarlag_openid_connect_provider.yaml": {
+                    "contents": [
+                        "ajgarlag_openid_connect_provider:",
+                        "    resource: '@AjgarlagOpenIDConnectProviderBundle/config/routes.php'",
+                        "    type: php",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7e2e3ab48563d12810a7d6e5fdf7c0fdb29b0bce"
+        }
+    }
+}
