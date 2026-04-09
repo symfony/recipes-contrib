@@ -1,0 +1,7 @@
+  * The Anotterweb UX Location bundle has been configured.
+
+  * <bg=yellow>Action required:</>
+    Open your .env file and set your Mapbox access token:
+    <fg=green>MAPBOX_ACCESS_TOKEN=your_token_here</>
+
+  * Read the documentation at https://github.com/anotterweb/ux-location
