@@ -8,6 +8,5 @@
     "env": {
         "#1": "Get your Mapbox access token at https://account.mapbox.com/access-tokens/",
         "MAPBOX_ACCESS_TOKEN": ""
-    },
-    "aliases": ["ux-location", "anotterweb/ux-location"]
+    }
 }
