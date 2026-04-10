@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Anotterweb\\UxLocation\\AnotterwebUxLocationBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "Get your Mapbox access token at https://account.mapbox.com/access-tokens/",
+        "MAPBOX_ACCESS_TOKEN": ""
+    }
+}

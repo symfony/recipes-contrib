@@ -1,0 +1,9 @@
+anotterweb_ux_location:
+    mapbox_access_token: '%env(string:MAPBOX_ACCESS_TOKEN)%'
+
+    # Optional configuration:
+    # default_map_style: 'mapbox://styles/mapbox/standard'
+    # default_zoom: 4
+    # default_lat: 48.8566
+    # default_lng: 2.3522
+    # default_map_height: '300px'
