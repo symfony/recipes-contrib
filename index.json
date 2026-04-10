@@ -94,6 +94,9 @@
         "anezi/locale-extension": [
             "1.0"
         ],
+        "anotterweb/ux-location": [
+            "1.0"
+        ],
         "antishov/doctrine-extensions-bundle": [
             "1.4"
         ],

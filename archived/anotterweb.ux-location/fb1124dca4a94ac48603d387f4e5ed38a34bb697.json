@@ -1,0 +1,47 @@
+{
+    "manifests": {
+        "anotterweb/ux-location": {
+            "manifest": {
+                "bundles": {
+                    "Anotterweb\\UxLocation\\AnotterwebUxLocationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Get your Mapbox access token at https://account.mapbox.com/access-tokens/",
+                    "MAPBOX_ACCESS_TOKEN": ""
+                },
+                "post-install-output": [
+                    "  * The Anotterweb UX Location bundle has been configured.",
+                    "",
+                    "  * <bg=yellow>Action required:</>",
+                    "    Open your .env file and set your Mapbox access token:",
+                    "    <fg=green>MAPBOX_ACCESS_TOKEN=your_token_here</>",
+                    "",
+                    "  * Read the documentation at https://github.com/anotterweb/ux-location"
+                ]
+            },
+            "files": {
+                "config/packages/anotterweb_ux_location.yaml": {
+                    "contents": [
+                        "anotterweb_ux_location:",
+                        "    mapbox_access_token: '%env(string:MAPBOX_ACCESS_TOKEN)%'",
+                        "",
+                        "    # Optional configuration:",
+                        "    # default_map_style: 'mapbox://styles/mapbox/standard'",
+                        "    # default_zoom: 4",
+                        "    # default_lat: 48.8566",
+                        "    # default_lng: 2.3522",
+                        "    # default_map_height: '300px'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "fb1124dca4a94ac48603d387f4e5ed38a34bb697"
+        }
+    }
+}

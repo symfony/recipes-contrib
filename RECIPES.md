@@ -34,6 +34,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [andchir/shopkeeper4-comments](https://packagist.org/packages/andchir/shopkeeper4-comments) | [1.0](../../../tree/main/andchir/shopkeeper4-comments/1.0) |
 | [andrew-gos/telegram-bot-bundle](https://packagist.org/packages/andrew-gos/telegram-bot-bundle) | [1.0](../../../tree/main/andrew-gos/telegram-bot-bundle/1.0) |
 | [anezi/locale-extension](https://packagist.org/packages/anezi/locale-extension) | [1.0](../../../tree/main/anezi/locale-extension/1.0) |
+| [anotterweb/ux-location](https://packagist.org/packages/anotterweb/ux-location) | [1.0](../../../tree/main/anotterweb/ux-location/1.0) |
 | [antishov/doctrine-extensions-bundle](https://packagist.org/packages/antishov/doctrine-extensions-bundle) | [1.4](../../../tree/main/antishov/doctrine-extensions-bundle/1.4) |
 | [anyx/login-gate-bundle](https://packagist.org/packages/anyx/login-gate-bundle) | [1.0](../../../tree/main/anyx/login-gate-bundle/1.0) |
 | [arad021/entity-already-exists-validation-constraint](https://packagist.org/packages/arad021/entity-already-exists-validation-constraint) | [1.0](../../../tree/main/arad021/entity-already-exists-validation-constraint/1.0) |
