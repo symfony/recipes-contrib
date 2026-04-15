@@ -4,8 +4,23 @@
             "all"
         ]
     },
+    "env": {
+        "UMAMI_TRACKER_SCRIPT_URL": "",
+        "UMAMI_TRACKER_WEBSITE_ID": "",
+        "UMAMI_BASE_URL": "",
+        "UMAMI_TRACKER_HOST_URL": "",
+        "UMAMI_TRACKER_AUTO_TRACK": "true",
+        "UMAMI_TRACKER_DO_NOT_TRACK": "false",
+        "UMAMI_TRACKER_DOMAINS": "",
+        "UMAMI_TRACKER_TAG": "",
+        "UMAMI_TRACKER_CACHE": "false",
+        "UMAMI_API_BASE_URL": "",
+        "UMAMI_API_USERNAME": "",
+        "UMAMI_API_PASSWORD": "",
+        "UMAMI_API_KEY": "",
+        "UMAMI_API_CACHE_POOL": "cache.app"
+    },
     "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/",
-        ".env": "%PROJECT_DIR%/.env"
+        "config/": "%CONFIG_DIR%/"
     }
 }
