@@ -1,0 +1,21 @@
+umami:
+    mode: self_hosted
+
+    tracker:
+        enabled: false
+        script_url: '%env(string:UMAMI_TRACKER_SCRIPT_URL)%'
+        website_id: '%env(string:UMAMI_TRACKER_WEBSITE_ID)%'
+        host_url: '%env(string:UMAMI_TRACKER_HOST_URL)%'
+        auto_track: '%env(bool:UMAMI_TRACKER_AUTO_TRACK)%'
+        do_not_track: '%env(bool:UMAMI_TRACKER_DO_NOT_TRACK)%'
+        domains: '%env(string:UMAMI_TRACKER_DOMAINS)%'
+        tag: '%env(string:UMAMI_TRACKER_TAG)%'
+        cache: '%env(bool:UMAMI_TRACKER_CACHE)%'
+
+    api:
+        enabled: false
+        base_url: ''
+        username: null
+        password: null
+        api_key: null
+        cache_pool: null
