@@ -1,0 +1,3 @@
+  * Configure which commands to expose in <fg=yellow>config/packages/symfony_command_ui.yaml</>
+  * Open <fg=yellow>/symfony-console/</> in your browser to see the dashboard
+  * Docs: <fg=yellow>https://github.com/pascualmg/symfony-command-ui</>
