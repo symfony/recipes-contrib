@@ -1,0 +1,3 @@
+symfony_command_ui:
+    resource: '@SymfonyCommandUIBundle/Resources/config/routes.yaml'
+    prefix: /symfony-console
