@@ -1,0 +1,13 @@
+  <bg=blue;fg=white>                                                         </>
+  <bg=blue;fg=white>        Welcome to <options=bold>nytodev/inertia-bundle</>         <bg=blue;fg=white>  </>
+  <bg=blue;fg=white>                                                         </>
+
+  <fg=blue;options=bold>Next steps:</>
+
+    1. Install your frontend stack (React, Vue or Svelte):
+       <comment>npm install @inertiajs/react</>  (or vue / svelte)
+
+    2. Adjust <comment>config/packages/inertia.yaml</> to match your setup.
+
+    3. Read the documentation:
+       <comment>https://github.com/nytodev/inertia-bundle</>
