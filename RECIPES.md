@@ -466,7 +466,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [nucleos/user-bundle](https://packagist.org/packages/nucleos/user-bundle) | [1.1](../../../tree/main/nucleos/user-bundle/1.1) |
 | [numberninecms/cms](https://packagist.org/packages/numberninecms/cms) | [0.2](../../../tree/main/numberninecms/cms/0.2) |
 | [nyholm/sunflower](https://packagist.org/packages/nyholm/sunflower) | [0.2](../../../tree/main/nyholm/sunflower/0.2) |
-| [nytodev/inertia-bundle](https://packagist.org/packages/nytodev/inertia-bundle) | [2.0](../../../tree/main/nytodev/inertia-bundle/2.0) |
+| [nytodev/inertia-bundle](https://packagist.org/packages/nytodev/inertia-bundle) | [3.0](../../../tree/main/nytodev/inertia-bundle/3.0) |
 | [nzo/url-encryptor-bundle](https://packagist.org/packages/nzo/url-encryptor-bundle) | [6.0](../../../tree/main/nzo/url-encryptor-bundle/6.0) |
 | [oat-sa/bundle-health-check](https://packagist.org/packages/oat-sa/bundle-health-check) | [1.0](../../../tree/main/oat-sa/bundle-health-check/1.0) |
 | [oat-sa/bundle-lti1p3](https://packagist.org/packages/oat-sa/bundle-lti1p3) | [3.0](../../../tree/main/oat-sa/bundle-lti1p3/3.0) |
