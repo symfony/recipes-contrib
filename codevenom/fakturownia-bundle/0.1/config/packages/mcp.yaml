@@ -1,16 +1,16 @@
 mcp:
-  app: 'codevenom-fakturownia'
-  version: '1.0.0'
-  instructions: 'MCP server exposing Fakturownia tools.'
-  client_transports:
-    http: true
-  http:
-    path: '/_mcp'
-    session:
-      store: 'file'
-      directory: '%kernel.cache_dir%/mcp-sessions'
-      ttl: 3600
-  discovery:
-    scan_dirs:
-      - '%kernel.project_dir%/src'
-      - '%kernel.project_dir%/vendor/codevenom/fakturownia-bundle'
+    app: 'codevenom-fakturownia'
+    version: '1.0.0'
+    instructions: 'MCP server exposing Fakturownia tools.'
+    client_transports:
+        http: true
+    http:
+        path: '/_mcp'
+        session:
+            store: 'file'
+            directory: '%kernel.cache_dir%/mcp-sessions'
+            ttl: 3600
+    discovery:
+        scan_dirs:
+            - '%kernel.project_dir%/src'
+            - '%kernel.project_dir%/vendor/codevenom/fakturownia-bundle'
