@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "Codevenom\\FakturowniaBundle\\CodevenomFakturowniaBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "FAKTUROWNIA_BASE_URL": "https://app.fakturownia.pl",
+        "FAKTUROWNIA_API_TOKEN": "",
+        "FAKTUROWNIA_SELLER_NAME": "",
+        "FAKTUROWNIA_SELLER_TAX_ID": ""
+    }
+}
