@@ -1,7 +1,8 @@
 codevenom_fakturownia:
-  base_url: '%env(FAKTUROWNIA_BASE_URL)%'
-  api_token: '%env(FAKTUROWNIA_API_TOKEN)%'
-  seller_name: '%env(default::FAKTUROWNIA_SELLER_NAME)%'
-  seller_tax_id: '%env(default::FAKTUROWNIA_SELLER_TAX_ID)%'
-  downloads_path: '%kernel.project_dir%/var/fakturownia'
-  timeout: 10
+    base_url: '%env(FAKTUROWNIA_BASE_URL)%'
+    api_token: '%env(FAKTUROWNIA_API_TOKEN)%'
+    seller_name: '%env(default::FAKTUROWNIA_SELLER_NAME)%'
+    seller_tax_id: '%env(default::FAKTUROWNIA_SELLER_TAX_ID)%'
+    downloads_path: '%kernel.project_dir%/var/fakturownia'
+    timeout: 10
+
