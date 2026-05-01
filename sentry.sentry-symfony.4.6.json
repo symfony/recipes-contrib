@@ -1,0 +1,54 @@
+{
+    "manifests": {
+        "sentry/sentry-symfony": {
+            "manifest": {
+                "bundles": {
+                    "Sentry\\SentryBundle\\SentryBundle": [
+                        "prod"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SENTRY_DSN": ""
+                },
+                "conflict": {
+                    "symfony/framework-bundle": "<5.4",
+                    "symfony/monolog-bundle": "<3.7"
+                }
+            },
+            "files": {
+                "config/packages/sentry.yaml": {
+                    "contents": [
+                        "when@prod:",
+                        "    sentry:",
+                        "        dsn: '%env(SENTRY_DSN)%'",
+                        "        # this hooks into critical paths of the framework (and vendors) to perform",
+                        "        # automatic instrumentation (there might be some performance penalty)",
+                        "        # https://docs.sentry.io/platforms/php/guides/symfony/performance/instrumentation/automatic-instrumentation/",
+                        "        tracing:",
+                        "            enabled: false",
+                        "",
+                        "#        If you are using Monolog, you also need this additional configuration to log the errors correctly:",
+                        "#        https://docs.sentry.io/platforms/php/guides/symfony/integrations/monolog/",
+                        "#        register_error_listener: false",
+                        "#        register_error_handler: false",
+                        "",
+                        "#    monolog:",
+                        "#        handlers:",
+                        "#            sentry:",
+                        "#                type: sentry",
+                        "#                level: !php/const Monolog\\Logger::ERROR",
+                        "#                hub_id: Sentry\\State\\HubInterface",
+                        "#                fill_extra_context: true # Enables sending monolog context to Sentry",
+                        "#                process_psr_3_messages: false # Disables the resolution of PSR-3 placeholders",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9ce177d985f35c9d2a29478fa1de79b7749ee3bf"
+        }
+    }
+}
