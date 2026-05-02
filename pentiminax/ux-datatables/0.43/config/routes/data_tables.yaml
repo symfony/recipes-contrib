@@ -1,0 +1,2 @@
+datatables:
+    resource: '@DataTablesBundle/config/routes.php'
