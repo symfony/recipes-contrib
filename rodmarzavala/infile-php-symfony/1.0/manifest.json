@@ -11,6 +11,5 @@
         "FEL_SIGN_KEY": "",
         "FEL_API_USER": "",
         "FEL_API_KEY": ""
-    },
-    "aliases": ["infile-php", "fel"]
+    }
 }
