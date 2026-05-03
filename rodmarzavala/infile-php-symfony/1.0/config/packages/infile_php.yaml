@@ -1,0 +1,6 @@
+infile_php:
+    credentials:
+        sign_user: '%env(FEL_SIGN_USER)%'
+        sign_key: '%env(FEL_SIGN_KEY)%'
+        api_user: '%env(FEL_API_USER)%'
+        api_key: '%env(FEL_API_KEY)%'
