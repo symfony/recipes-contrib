@@ -11,5 +11,10 @@
         "FEL_SIGN_KEY": "",
         "FEL_API_USER": "",
         "FEL_API_KEY": ""
+    },
+    "conflict": {
+        "php": "<8.2",
+        "symfony/framework-bundle": "<6.4",
+        "symfony/symfony": ">=8.0"
     }
 }
