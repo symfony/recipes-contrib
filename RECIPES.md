@@ -555,6 +555,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [request-tracing/request-tracing-bundle](https://packagist.org/packages/request-tracing/request-tracing-bundle) | [0.1](../../../tree/main/request-tracing/request-tracing-bundle/0.1) |
 | [rikudou/psr6-dynamo-db-bundle](https://packagist.org/packages/rikudou/psr6-dynamo-db-bundle) | [2.0](../../../tree/main/rikudou/psr6-dynamo-db-bundle/2.0) |
 | [ro0nl/http-responder](https://packagist.org/packages/ro0nl/http-responder) | [0.1](../../../tree/main/ro0nl/http-responder/0.1) |
+| [rodmarzavala/infile-php-symfony](https://packagist.org/packages/rodmarzavala/infile-php-symfony) | [1.0](../../../tree/main/rodmarzavala/infile-php-symfony/1.0) |
 | [rokka/client-bundle](https://packagist.org/packages/rokka/client-bundle) | [1.0](../../../tree/main/rokka/client-bundle/1.0) |
 | [rossel/mwu-sdk](https://packagist.org/packages/rossel/mwu-sdk) | [0.1](../../../tree/main/rossel/mwu-sdk/0.1) |
 | [rossel/rossel-kafka](https://packagist.org/packages/rossel/rossel-kafka) | [0.0](../../../tree/main/rossel/rossel-kafka/0.0) |

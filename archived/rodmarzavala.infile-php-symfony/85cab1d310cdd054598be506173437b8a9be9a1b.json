@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "rodmarzavala/infile-php-symfony": {
+            "manifest": {
+                "bundles": {
+                    "InfilePhp\\Symfony\\InfilePhpBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Infile FEL API credentials",
+                    "FEL_SIGN_USER": "",
+                    "FEL_SIGN_KEY": "",
+                    "FEL_API_USER": "",
+                    "FEL_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/infile_php.yaml": {
+                    "contents": [
+                        "infile_php:",
+                        "    credentials:",
+                        "        sign_user: '%env(FEL_SIGN_USER)%'",
+                        "        sign_key: '%env(FEL_SIGN_KEY)%'",
+                        "        api_user: '%env(FEL_API_USER)%'",
+                        "        api_key: '%env(FEL_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "85cab1d310cdd054598be506173437b8a9be9a1b"
+        }
+    }
+}

@@ -1775,6 +1775,9 @@
         "ro0nl/http-responder": [
             "0.1"
         ],
+        "rodmarzavala/infile-php-symfony": [
+            "1.0"
+        ],
         "rokka/client-bundle": [
             "1.0"
         ],
