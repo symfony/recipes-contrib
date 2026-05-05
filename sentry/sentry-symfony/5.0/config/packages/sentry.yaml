@@ -17,7 +17,7 @@ when@prod:
 #    monolog:
 #        handlers:
 #            # Use this only if you don't want to use structured logging and instead receive
-#            # certain log levels as errors.  
+#            # certain log levels as errors.
 #            sentry:
 #                type: service
 #                id: Sentry\Monolog\Handler
