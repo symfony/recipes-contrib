@@ -1,0 +1,15 @@
+{
+    "bundles": {
+        "InfilePhp\\Symfony\\InfilePhpBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "Infile FEL API credentials",
+        "FEL_SIGN_USER": "",
+        "FEL_SIGN_KEY": "",
+        "FEL_API_USER": "",
+        "FEL_API_KEY": ""
+    }
+}
