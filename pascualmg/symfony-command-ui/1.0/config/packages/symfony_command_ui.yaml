@@ -1,0 +1,3 @@
+symfony_command_ui:
+    route_prefix: /symfony-console
+    collapsed_by_default: true
