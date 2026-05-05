@@ -497,6 +497,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [overblog/graphql-bundle](https://packagist.org/packages/overblog/graphql-bundle) | [0.12](../../../tree/main/overblog/graphql-bundle/0.12) |
 | [pablok/supercache-bundle](https://packagist.org/packages/pablok/supercache-bundle) | [0.5](../../../tree/main/pablok/supercache-bundle/0.5) |
 | [pasaia-udala/auth-bundle](https://packagist.org/packages/pasaia-udala/auth-bundle) | [1.2](../../../tree/main/pasaia-udala/auth-bundle/1.2) |
+| [pascualmg/symfony-command-ui](https://packagist.org/packages/pascualmg/symfony-command-ui) | [1.0](../../../tree/main/pascualmg/symfony-command-ui/1.0) |
 | [patchlevel/event-sourcing-bundle](https://packagist.org/packages/patchlevel/event-sourcing-bundle) | [3.14](../../../tree/main/patchlevel/event-sourcing-bundle/3.14) |
 | [payplug/sylius-payplug-plugin](https://packagist.org/packages/payplug/sylius-payplug-plugin) | [2.0](../../../tree/main/payplug/sylius-payplug-plugin/2.0) |
 | [payum/payum-bundle](https://packagist.org/packages/payum/payum-bundle) | [2.4](../../../tree/main/payum/payum-bundle/2.4) |

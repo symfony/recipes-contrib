@@ -1582,6 +1582,9 @@
         "pasaia-udala/auth-bundle": [
             "1.2"
         ],
+        "pascualmg/symfony-command-ui": [
+            "1.0"
+        ],
         "patchlevel/event-sourcing-bundle": [
             "1.0",
             "1.2",

@@ -1,0 +1,42 @@
+{
+    "manifests": {
+        "pascualmg/symfony-command-ui": {
+            "manifest": {
+                "bundles": {
+                    "Pascualmg\\SymfonyCommandUI\\SymfonyCommandUIBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * Configure which commands to expose in <fg=yellow>config/packages/symfony_command_ui.yaml</>",
+                    "  * Open <fg=yellow>/symfony-console/</> in your browser to see the dashboard",
+                    "  * Docs: <fg=yellow>https://github.com/pascualmg/symfony-command-ui</>"
+                ]
+            },
+            "files": {
+                "config/packages/symfony_command_ui.yaml": {
+                    "contents": [
+                        "symfony_command_ui:",
+                        "    route_prefix: /symfony-console",
+                        "    collapsed_by_default: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/symfony_command_ui.yaml": {
+                    "contents": [
+                        "symfony_command_ui:",
+                        "    resource: '@SymfonyCommandUIBundle/Resources/config/routes.yaml'",
+                        "    prefix: /symfony-console",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7717416508461f040d3a8065bbb87a084d8a8120"
+        }
+    }
+}
