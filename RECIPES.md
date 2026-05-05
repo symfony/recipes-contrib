@@ -501,6 +501,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [payum/payum-bundle](https://packagist.org/packages/payum/payum-bundle) | [2.4](../../../tree/main/payum/payum-bundle/2.4) |
 | [pentatrion/upload-bundle](https://packagist.org/packages/pentatrion/upload-bundle) | [0.2](../../../tree/main/pentatrion/upload-bundle/0.2) |
 | [pentatrion/vite-bundle](https://packagist.org/packages/pentatrion/vite-bundle) | [6.5](../../../tree/main/pentatrion/vite-bundle/6.5) |
+| [pentiminax/ux-datatables](https://packagist.org/packages/pentiminax/ux-datatables) | [0.43](../../../tree/main/pentiminax/ux-datatables/0.43) |
 | [php-amqplib/rabbitmq-bundle](https://packagist.org/packages/php-amqplib/rabbitmq-bundle) | [1.12](../../../tree/main/php-amqplib/rabbitmq-bundle/1.12) |
 | [php-http/httplug-bundle](https://packagist.org/packages/php-http/httplug-bundle) | [1.6](../../../tree/main/php-http/httplug-bundle/1.6) |
 | [php-llm/llm-chain-bundle](https://packagist.org/packages/php-llm/llm-chain-bundle) | [0.19](../../../tree/main/php-llm/llm-chain-bundle/0.19) |

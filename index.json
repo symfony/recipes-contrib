@@ -1603,6 +1603,9 @@
             "1.0",
             "6.5"
         ],
+        "pentiminax/ux-datatables": [
+            "0.43"
+        ],
         "php-amqplib/rabbitmq-bundle": [
             "1.12"
         ],
