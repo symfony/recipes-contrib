@@ -287,6 +287,9 @@
             "2.3",
             "5.0"
         ],
+        "codevenom/fakturownia-bundle": [
+            "0.1"
+        ],
         "coka/api-bundle": [
             "3.0",
             "4.0"

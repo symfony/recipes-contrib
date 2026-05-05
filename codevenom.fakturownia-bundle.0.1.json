@@ -1,0 +1,72 @@
+{
+    "manifests": {
+        "codevenom/fakturownia-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Codevenom\\FakturowniaBundle\\CodevenomFakturowniaBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "FAKTUROWNIA_BASE_URL": "https://app.fakturownia.pl",
+                    "FAKTUROWNIA_API_TOKEN": "",
+                    "FAKTUROWNIA_SELLER_NAME": "",
+                    "FAKTUROWNIA_SELLER_TAX_ID": ""
+                }
+            },
+            "files": {
+                "config/packages/codevenom_fakturownia.yaml": {
+                    "contents": [
+                        "codevenom_fakturownia:",
+                        "    base_url: '%env(FAKTUROWNIA_BASE_URL)%'",
+                        "    api_token: '%env(FAKTUROWNIA_API_TOKEN)%'",
+                        "    seller_name: '%env(default::FAKTUROWNIA_SELLER_NAME)%'",
+                        "    seller_tax_id: '%env(default::FAKTUROWNIA_SELLER_TAX_ID)%'",
+                        "    downloads_path: '%kernel.project_dir%/var/fakturownia'",
+                        "    timeout: 10",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/mcp.yaml": {
+                    "contents": [
+                        "mcp:",
+                        "    app: 'codevenom-fakturownia'",
+                        "    version: '1.0.0'",
+                        "    instructions: 'MCP server exposing Fakturownia tools.'",
+                        "    client_transports:",
+                        "        http: true",
+                        "    http:",
+                        "        path: '/_mcp'",
+                        "        session:",
+                        "            store: 'file'",
+                        "            directory: '%kernel.cache_dir%/mcp-sessions'",
+                        "            ttl: 3600",
+                        "    discovery:",
+                        "        scan_dirs:",
+                        "            - '%kernel.project_dir%/src'",
+                        "            - '%kernel.project_dir%/vendor/codevenom/fakturownia-bundle'",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/codevenom_fakturownia_mcp.yaml": {
+                    "contents": [
+                        "mcp:",
+                        "    resource: .",
+                        "    type: mcp",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9603e0805b8ff6f2785bdd0793332fdf7cd1fc2b"
+        }
+    }
+}
