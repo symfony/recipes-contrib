@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "Lubomirfiala\\SuluPreviewNav\\SuluPreviewNavBundle": ["all"]
+    }
+}
