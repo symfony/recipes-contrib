@@ -1770,7 +1770,8 @@
             "1.0"
         ],
         "rekalogika/temporary-url-bundle": [
-            "1.0"
+            "1.0",
+            "1.8"
         ],
         "republique-et-canton-de-geneve/response-headers-bundle": [
             "1.0"

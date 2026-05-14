@@ -553,7 +553,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [redjanym/fcm-bundle](https://packagist.org/packages/redjanym/fcm-bundle) | [1.1](../../../tree/main/redjanym/fcm-bundle/1.1) |
 | [redrat/api-helper-bundle](https://packagist.org/packages/redrat/api-helper-bundle) | [0.1](../../../tree/main/redrat/api-helper-bundle/0.1) |
 | [rekalogika/gotenberg-pdf-bundle](https://packagist.org/packages/rekalogika/gotenberg-pdf-bundle) | [1.0](../../../tree/main/rekalogika/gotenberg-pdf-bundle/1.0) |
-| [rekalogika/temporary-url-bundle](https://packagist.org/packages/rekalogika/temporary-url-bundle) | [1.0](../../../tree/main/rekalogika/temporary-url-bundle/1.0) |
+| [rekalogika/temporary-url-bundle](https://packagist.org/packages/rekalogika/temporary-url-bundle) | [1.8](../../../tree/main/rekalogika/temporary-url-bundle/1.8) |
 | [republique-et-canton-de-geneve/response-headers-bundle](https://packagist.org/packages/republique-et-canton-de-geneve/response-headers-bundle) | [1.0](../../../tree/main/republique-et-canton-de-geneve/response-headers-bundle/1.0) |
 | [request-tracing/request-tracing-bundle](https://packagist.org/packages/request-tracing/request-tracing-bundle) | [0.1](../../../tree/main/request-tracing/request-tracing-bundle/0.1) |
 | [rikudou/psr6-dynamo-db-bundle](https://packagist.org/packages/rikudou/psr6-dynamo-db-bundle) | [2.0](../../../tree/main/rikudou/psr6-dynamo-db-bundle/2.0) |

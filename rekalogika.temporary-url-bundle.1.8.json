@@ -1,0 +1,28 @@
+{
+    "manifests": {
+        "rekalogika/temporary-url-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Rekalogika\\TemporaryUrl\\RekalogikaTemporaryUrlBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/rekalogika_temporary_url.yaml": {
+                    "contents": [
+                        "rekalogika_temporary_url:",
+                        "    resource: '@RekalogikaTemporaryUrlBundle/config/routes.php'",
+                        "    prefix: /_temporary",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "156ced700842c2a91e61679932d9c4ada5b296e0"
+        }
+    }
+}
