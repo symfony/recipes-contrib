@@ -161,7 +161,6 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [djdmg/transparent-pixel-bundle](https://packagist.org/packages/djdmg/transparent-pixel-bundle) | [1.0](../../../tree/main/djdmg/transparent-pixel-bundle/1.0) |
 | [dobryprogramator/smartform-bundle](https://packagist.org/packages/dobryprogramator/smartform-bundle) | [1.0](../../../tree/main/dobryprogramator/smartform-bundle/1.0) |
 | [dockfony/dockfony](https://packagist.org/packages/dockfony/dockfony) | [5.0](../../../tree/main/dockfony/dockfony/5.0) |
-| [doctrine/mongodb-odm-bundle](https://packagist.org/packages/doctrine/mongodb-odm-bundle) | [5.0](../../../tree/main/doctrine/mongodb-odm-bundle/5.0) |
 | [doctrine/phpcr-bundle](https://packagist.org/packages/doctrine/phpcr-bundle) | [2.0](../../../tree/main/doctrine/phpcr-bundle/2.0) |
 | [doctrine/phpcr-dbal-symfony-pack](https://packagist.org/packages/doctrine/phpcr-dbal-symfony-pack) | [1.0](../../../tree/main/doctrine/phpcr-dbal-symfony-pack/1.0) |
 | [drenso/symfony-oidc-bundle](https://packagist.org/packages/drenso/symfony-oidc-bundle) | [2.0](../../../tree/main/drenso/symfony-oidc-bundle/2.0) |

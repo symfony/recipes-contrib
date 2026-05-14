@@ -500,12 +500,6 @@
         "dockfony/dockfony": [
             "5.0"
         ],
-        "doctrine/mongodb-odm-bundle": [
-            "3.3",
-            "4.1",
-            "4.4",
-            "5.0"
-        ],
         "doctrine/phpcr-bundle": [
             "2.0"
         ],
@@ -2451,12 +2445,6 @@
         "dahromy/glide-symfony": {
             "1.0": {
                 "php": "<8.0"
-            }
-        },
-        "doctrine/mongodb-odm-bundle": {
-            "4.1": {
-                "doctrine/cache": "<1.11",
-                "symfony/framework-bundle": "<5.3"
             }
         },
         "gurtok/seo-bundle": {
