@@ -291,7 +291,6 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [jane-php/open-api-common](https://packagist.org/packages/jane-php/open-api-common) | [7.0](../../../tree/main/jane-php/open-api-common/7.0) |
 | [jawira/case-converter-twig](https://packagist.org/packages/jawira/case-converter-twig) | [0.0](../../../tree/main/jawira/case-converter-twig/0.0) |
 | [jawira/doctrine-diagram-bundle](https://packagist.org/packages/jawira/doctrine-diagram-bundle) | [1.0](../../../tree/main/jawira/doctrine-diagram-bundle/1.0) |
-| [jbtcd/fitbit-bundle](https://packagist.org/packages/jbtcd/fitbit-bundle) | [1.0](../../../tree/main/jbtcd/fitbit-bundle/1.0) |
 | [jeandanyel/crud-bundle](https://packagist.org/packages/jeandanyel/crud-bundle) | [0.1](../../../tree/main/jeandanyel/crud-bundle/0.1) |
 | [jeandanyel/list-bundle](https://packagist.org/packages/jeandanyel/list-bundle) | [0.1](../../../tree/main/jeandanyel/list-bundle/0.1) |
 | [jmonitor/jmonitor-bundle](https://packagist.org/packages/jmonitor/jmonitor-bundle) | [1.0](../../../tree/main/jmonitor/jmonitor-bundle/1.0) |
