@@ -1,0 +1,45 @@
+{
+    "manifests": {
+        "squizlabs/php_codesniffer": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "phpcs.xml.dist": "phpcs.xml.dist"
+                },
+                "gitignore": [
+                    "/.phpcs-cache",
+                    "/phpcs.xml"
+                ]
+            },
+            "files": {
+                "phpcs.xml.dist": {
+                    "contents": [
+                        "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+                        "",
+                        "<ruleset xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"",
+                        "         xsi:noNamespaceSchemaLocation=\"vendor/squizlabs/php_codesniffer/phpcs.xsd\">",
+                        "",
+                        "    <arg name=\"basepath\" value=\".\"/>",
+                        "    <arg name=\"cache\" value=\".phpcs-cache\"/>",
+                        "    <arg name=\"colors\"/>",
+                        "    <arg name=\"extensions\" value=\"php\"/>",
+                        "",
+                        "    <rule ref=\"PSR12\"/>",
+                        "",
+                        "    <file>bin/</file>",
+                        "    <file>config/</file>",
+                        "    <file>public/</file>",
+                        "    <file>src/</file>",
+                        "    <file>tests/</file>",
+                        "",
+                        "    <exclude-pattern>config/reference.php</exclude-pattern>",
+                        "",
+                        "</ruleset>",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e9e61f3ebabcada8e40dea179042d7ae059ad7a4"
+        }
+    }
+}
