@@ -16,4 +16,6 @@
     <file>src/</file>
     <file>tests/</file>
 
+    <exclude-pattern>config/reference.php</exclude-pattern>
+
 </ruleset>
