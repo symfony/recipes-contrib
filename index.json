@@ -942,7 +942,8 @@
             "1.0"
         ],
         "jolicode/media-bundle": [
-            "0.1"
+            "0.1",
+            "0.4"
         ],
         "jonathankablan/fast-entity-bundle": [
             "2.0"
