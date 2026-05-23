@@ -1,0 +1,18 @@
+{
+    "bundles": {
+        "Corvet\\LightFieldBundle\\CorvetLightFieldBundle": [
+            "all"
+        ]
+    },
+    "importmap": {
+        "flatpickr": {
+            "version": "4.6.13"
+        },
+        "inputmask": {
+            "version": "5.0.9"
+        }
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
