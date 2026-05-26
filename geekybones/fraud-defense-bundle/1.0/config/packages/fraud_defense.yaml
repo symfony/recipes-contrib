@@ -1,0 +1,14 @@
+fraud_defense:
+    project_id: '%env(FRAUD_DEFENSE_PROJECT_ID)%'
+    api_key:    '%env(FRAUD_DEFENSE_API_KEY)%'
+    site_key:   '%env(FRAUD_DEFENSE_SITE_KEY)%'
+    min_score:  0.5
+    fail_on_api_error: true
+    # checkbox_site_key: '%env(FRAUD_DEFENSE_CHECKBOX_SITE_KEY)%'
+    # expected_hostname: 'www.example.com'
+    # transaction_defense:
+    #     enabled: true
+    #     max_transaction_risk: 0.7
+    # sms_defense:
+    #     enabled: true
+    #     max_sms_risk: 0.5
