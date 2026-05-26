@@ -1,0 +1,2 @@
+sylius_stripe_shop_express_checkout:
+    resource: "@FluxSESyliusStripePlugin/config/routes/shop_express_checkout.yaml"
