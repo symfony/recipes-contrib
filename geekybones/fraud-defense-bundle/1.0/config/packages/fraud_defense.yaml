@@ -1,10 +1,11 @@
 fraud_defense:
     project_id: '%env(FRAUD_DEFENSE_PROJECT_ID)%'
     api_key:    '%env(FRAUD_DEFENSE_API_KEY)%'
-    site_key:   '%env(FRAUD_DEFENSE_SITE_KEY)%'
+    # At least one of site_key / checkbox_site_key is required.
+    site_key:          '%env(FRAUD_DEFENSE_SITE_KEY)%'
+    # checkbox_site_key: '%env(FRAUD_DEFENSE_CHECKBOX_SITE_KEY)%'
     min_score:  0.5
     fail_on_api_error: true
-    # checkbox_site_key: '%env(FRAUD_DEFENSE_CHECKBOX_SITE_KEY)%'
     # expected_hostname: 'www.example.com'
     # transaction_defense:
     #     enabled: true
