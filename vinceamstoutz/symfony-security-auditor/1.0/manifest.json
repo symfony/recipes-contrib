@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "VinceAmstoutz\\SymfonySecurityAuditor\\SymfonySecurityAuditorBundle": ["dev", "test"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

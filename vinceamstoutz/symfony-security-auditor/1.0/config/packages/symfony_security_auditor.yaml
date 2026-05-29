@@ -1,0 +1,10 @@
+# Full configuration reference (models, scan, audit loop, rate limits, caching):
+# https://github.com/vinceamstoutz/symfony-security-auditor/blob/main/docs/configuration.md
+#
+when@dev: &symfony_security_auditor
+    symfony_security_auditor:
+        model: 'claude-opus-4-8' # Model for both the Attacker and Reviewer roles. Bundle default: claude-opus-4-7.
+        # attacker_model: 'claude-opus-4-7' # Dedicated model for the Attacker role. Falls back to `model` when unset.
+        # reviewer_model: 'claude-haiku-4-5-20251001' # Lighter model for the Reviewer role. Falls back to `model` when unset.
+
+when@test: *symfony_security_auditor
