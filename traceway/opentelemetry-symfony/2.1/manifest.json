@@ -16,6 +16,5 @@
         "OTEL_EXPORTER_OTLP_ENDPOINT": "http://localhost:4318",
         "#5": "Protocol: http/json | http/protobuf | grpc — use http/json unless ext-protobuf is installed",
         "OTEL_EXPORTER_OTLP_PROTOCOL": "http/json"
-    },
-    "aliases": ["otel", "opentelemetry"]
+    }
 }
