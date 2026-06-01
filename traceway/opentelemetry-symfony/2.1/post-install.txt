@@ -1,0 +1,12 @@
+
+  * <fg=blue>OpenTelemetry Symfony Bundle</> is wired and ready to trace your app.
+
+  * Verify your wiring:
+
+      <comment>$ bin/console traceway:doctor</comment>
+
+  * Override <comment>OTEL_*</> environment variables in <comment>.env.local</> to point at your backend.
+
+  * Documentation:
+
+      <comment>https://github.com/tracewayapp/opentelemetry-symfony-bundle</>

@@ -1,0 +1,21 @@
+{
+    "bundles": {
+        "Traceway\\OpenTelemetryBundle\\OpenTelemetryBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "OpenTelemetry SDK auto-initialization",
+        "OTEL_PHP_AUTOLOAD_ENABLED": "true",
+        "#2": "Service identity (shown in your backend)",
+        "OTEL_SERVICE_NAME": "%project_name%",
+        "#3": "Traces exporter: otlp | zipkin | console | none",
+        "OTEL_TRACES_EXPORTER": "otlp",
+        "#4": "Collector or backend endpoint",
+        "OTEL_EXPORTER_OTLP_ENDPOINT": "http://localhost:4318",
+        "#5": "Protocol: http/json | http/protobuf | grpc — use http/json unless ext-protobuf is installed",
+        "OTEL_EXPORTER_OTLP_PROTOCOL": "http/json"
+    },
+    "aliases": ["otel", "opentelemetry"]
+}
