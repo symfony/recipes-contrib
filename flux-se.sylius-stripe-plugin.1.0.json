@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "flux-se/sylius-stripe-plugin": {
+            "manifest": {
+                "bundles": {
+                    "FluxSE\\SyliusStripePlugin\\FluxSESyliusStripePlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "add-lines": [
+                    {
+                        "file": "assets/admin/entrypoint.js",
+                        "content": "import '../../vendor/flux-se/sylius-stripe-plugin/assets/admin/entrypoint';",
+                        "position": "bottom",
+                        "warn_if_missing": true
+                    },
+                    {
+                        "file": "assets/shop/entrypoint.js",
+                        "content": "import '../../vendor/flux-se/sylius-stripe-plugin/assets/shop/entrypoint';",
+                        "position": "bottom",
+                        "warn_if_missing": true
+                    }
+                ]
+            },
+            "files": {
+                "config/packages/sylius_stripe.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@FluxSESyliusStripePlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "2dd2498b504978c9ade500bc07f9603bc023af9d"
+        }
+    }
+}
