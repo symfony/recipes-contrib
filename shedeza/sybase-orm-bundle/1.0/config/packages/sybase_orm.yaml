@@ -1,0 +1,9 @@
+sybase_orm:
+    connection:
+        url: '%env(DATABASE_URL)%'
+    entity_directories:
+        - '%kernel.project_dir%/src/Entity'
+    proxy_directory: '%kernel.cache_dir%/sybase_orm/proxies'
+    migrations_directory: '%kernel.project_dir%/sybase_ase/migrations'
+    cache:
+        enabled: false

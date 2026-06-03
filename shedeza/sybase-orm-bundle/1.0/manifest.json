@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "SybaseORM\\Bundle\\SybaseORMBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "DATABASE_URL": "sybase://sa:!ChangeMe!@127.0.0.1:5000/app?charset=UTF-8"
+    }
+}
