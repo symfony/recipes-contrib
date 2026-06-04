@@ -7,4 +7,12 @@ when@dev: &symfony_security_auditor
         # attacker_model: 'claude-opus-4-8' # Dedicated model for the Attacker role. Falls back to `model` when unset.
         # reviewer_model: 'claude-haiku-4-5-20251001' # Lighter model for the Reviewer role. Falls back to `model` when unset.
 
+        # Proactive rate limiting — adjust the values to your provider plan.
+        # Any single dimension enables it: https://github.com/vinceamstoutz/symfony-security-auditor/blob/main/docs/configuration.md#auditrate_limit--proactive-throttling
+        # audit:
+        #     rate_limit: # Example: Anthropic Tier 1 quotas for Claude Opus 4.x (https://platform.claude.com/docs/en/api/rate-limits)
+        #         requests_per_minute: 50
+        #         input_tokens_per_minute: 500000 # Cached input tokens don't count toward Anthropic's limit.
+        #         output_tokens_per_minute: 80000
+
 when@test: *symfony_security_auditor
