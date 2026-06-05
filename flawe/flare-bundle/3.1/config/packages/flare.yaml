@@ -1,0 +1,5 @@
+flare:
+    key: '%env(string:FLARE_KEY)%'
+    use_defaults: true
+    application:
+        stage: '%env(string:APP_ENV)%'
