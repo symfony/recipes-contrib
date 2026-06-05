@@ -1,0 +1,20 @@
+<bg=blue;fg=white>                            </>
+<bg=blue;fg=white>  NetBull MediaBundle        </>
+<bg=blue;fg=white>                            </>
+
+  * A starter configuration was created at <comment>config/packages/netbull_media.yaml</comment>.
+    Review <comment>default_context</comment>, your contexts and their thumbnail formats.
+
+  * The view/download routes were imported via <comment>config/routes/netbull_media.yaml</comment>
+    (<comment>/media/view/{id}/{format}</comment> and <comment>/media/download/{id}/{format}</comment>).
+
+  * Uploads are stored under <comment>public/uploads/media</comment> by default. For production,
+    configure S3 under <comment>netbull_media.filesystem.s3</comment> and point the providers at
+    <comment>netbull_media.filesystem.s3</comment>.
+
+  * Asynchronous thumbnails are optional: run <comment>composer require symfony/messenger</comment>
+    and set <comment>netbull_media.thumbnail.async: true</comment> to offload resizing to a worker.
+
+  * Ensure Doctrine maps the bundle's <comment>Media</comment> entity and run your migrations.
+
+  Reference: <fg=blue>https://packagist.org/packages/netbull/media-bundle</fg=blue>
