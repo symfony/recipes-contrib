@@ -1,0 +1,27 @@
+netbull_media:
+    default_context: 'default'
+
+    # Uploads are stored on the local filesystem by default. For production, configure
+    # "filesystem.s3" instead and point the providers at "netbull_media.filesystem.s3".
+    filesystem:
+        local:
+            directory: '%kernel.project_dir%/public/uploads/media'
+            create: true
+
+    providers:
+        image:
+            filesystem: netbull_media.filesystem.local
+
+    # Thumbnails are generated in-process by default. Set this to true to offload resizing to a
+    # Symfony Messenger worker (requires "composer require symfony/messenger").
+    thumbnail:
+        async: false
+
+    # A context groups one or more providers with the thumbnail formats generated for them.
+    contexts:
+        default:
+            providers:
+                - netbull_media.provider.image
+            formats:
+                thumb: { width: 150, height: 150, quality: 80 }
+                normal: { width: 600, quality: 85 }

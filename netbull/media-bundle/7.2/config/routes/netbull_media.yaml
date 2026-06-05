@@ -1,0 +1,2 @@
+netbull_media:
+    resource: '@NetBullMediaBundle/config/routes.yaml'

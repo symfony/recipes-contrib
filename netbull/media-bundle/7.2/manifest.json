@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "NetBull\\MediaBundle\\NetBullMediaBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "gitignore": [
+        "/public/uploads/media/"
+    ]
+}
