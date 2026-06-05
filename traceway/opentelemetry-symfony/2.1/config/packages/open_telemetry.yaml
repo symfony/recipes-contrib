@@ -1,0 +1,15 @@
+open_telemetry:
+    traces:
+        excluded_paths: ['/_profiler', '/_wdt', '/health']
+
+when@test:
+    open_telemetry:
+        traces:
+            enabled: false
+        metrics:
+            enabled: false
+        logs:
+            correlation:
+                enabled: false
+            export:
+                enabled: false
