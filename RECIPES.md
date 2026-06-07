@@ -452,6 +452,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [nelmio/api-doc-bundle](https://packagist.org/packages/nelmio/api-doc-bundle) | [3.0](../../../tree/main/nelmio/api-doc-bundle/3.0) |
 | [nelmio/solarium-bundle](https://packagist.org/packages/nelmio/solarium-bundle) | [5.0](../../../tree/main/nelmio/solarium-bundle/5.0) |
 | [neo4j/neo4j-bundle](https://packagist.org/packages/neo4j/neo4j-bundle) | [1.0](../../../tree/main/neo4j/neo4j-bundle/1.0) |
+| [netbull/media-bundle](https://packagist.org/packages/netbull/media-bundle) | [7.2](../../../tree/main/netbull/media-bundle/7.2) |
 | [netbull/security-bundle](https://packagist.org/packages/netbull/security-bundle) | [1.0](../../../tree/main/netbull/security-bundle/1.0) |
 | [netgen/content-browser](https://packagist.org/packages/netgen/content-browser) | [2.0](../../../tree/main/netgen/content-browser/2.0) |
 | [netgen/layouts-contentful](https://packagist.org/packages/netgen/layouts-contentful) | [2.0](../../../tree/main/netgen/layouts-contentful/2.0) |

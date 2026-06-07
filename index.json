@@ -1436,6 +1436,9 @@
             "0.4",
             "1.0"
         ],
+        "netbull/media-bundle": [
+            "7.2"
+        ],
         "netbull/security-bundle": [
             "1.0"
         ],
