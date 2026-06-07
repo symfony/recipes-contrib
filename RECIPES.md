@@ -224,8 +224,10 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [felds/quick-mailer-bundle](https://packagist.org/packages/felds/quick-mailer-bundle) | [5.0](../../../tree/main/felds/quick-mailer-bundle/5.0) |
 | [ferror/phpscan](https://packagist.org/packages/ferror/phpscan) | [1.0](../../../tree/main/ferror/phpscan/1.0) |
 | [flagception/flagception-bundle](https://packagist.org/packages/flagception/flagception-bundle) | [3.0](../../../tree/main/flagception/flagception-bundle/3.0) |
+| [flawe/flare-bundle](https://packagist.org/packages/flawe/flare-bundle) | [3.1](../../../tree/main/flawe/flare-bundle/3.1) |
 | [fluffydiscord/roadrunner-symfony-bundle](https://packagist.org/packages/fluffydiscord/roadrunner-symfony-bundle) | [3.0](../../../tree/main/fluffydiscord/roadrunner-symfony-bundle/3.0) |
 | [flux-se/sylius-payum-stripe-plugin](https://packagist.org/packages/flux-se/sylius-payum-stripe-plugin) | [2.0](../../../tree/main/flux-se/sylius-payum-stripe-plugin/2.0) |
+| [flux-se/sylius-stripe-plugin](https://packagist.org/packages/flux-se/sylius-stripe-plugin) | [2.0](../../../tree/main/flux-se/sylius-stripe-plugin/2.0) |
 | [fluxter/saas-provider-bundle](https://packagist.org/packages/fluxter/saas-provider-bundle) | [2.0](../../../tree/main/fluxter/saas-provider-bundle/2.0) |
 | [formatz/fz-hosting-symfony-bundle](https://packagist.org/packages/formatz/fz-hosting-symfony-bundle) | [1.0](../../../tree/main/formatz/fz-hosting-symfony-bundle/1.0) |
 | [fpt/stripe-bundle](https://packagist.org/packages/fpt/stripe-bundle) | [0.5](../../../tree/main/fpt/stripe-bundle/0.5) |
@@ -580,6 +582,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [setono/google-analytics-bundle](https://packagist.org/packages/setono/google-analytics-bundle) | [1.0](../../../tree/main/setono/google-analytics-bundle/1.0) |
 | [setono/sylius-toggle-vat-plugin](https://packagist.org/packages/setono/sylius-toggle-vat-plugin) | [1.0](../../../tree/main/setono/sylius-toggle-vat-plugin/1.0) |
 | [sg/datatablesbundle](https://packagist.org/packages/sg/datatablesbundle) | [1.0](../../../tree/main/sg/datatablesbundle/1.0) |
+| [shedeza/sybase-orm-bundle](https://packagist.org/packages/shedeza/sybase-orm-bundle) | [1.0](../../../tree/main/shedeza/sybase-orm-bundle/1.0) |
 | [shipmonk/doctrine-entity-preloader](https://packagist.org/packages/shipmonk/doctrine-entity-preloader) | [1.0](../../../tree/main/shipmonk/doctrine-entity-preloader/1.0) |
 | [shopware/app-bundle](https://packagist.org/packages/shopware/app-bundle) | [5.0](../../../tree/main/shopware/app-bundle/5.0) |
 | [siburuxue/doctrine-helper](https://packagist.org/packages/siburuxue/doctrine-helper) | [1.0](../../../tree/main/siburuxue/doctrine-helper/1.0) |
@@ -600,7 +603,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [softspring/user-bundle](https://packagist.org/packages/softspring/user-bundle) | [5.2](../../../tree/main/softspring/user-bundle/5.2) |
 | [soljian/steam-authentication-bundle](https://packagist.org/packages/soljian/steam-authentication-bundle) | [1.0](../../../tree/main/soljian/steam-authentication-bundle/1.0) |
 | [solvrtech/symfony-logbook](https://packagist.org/packages/solvrtech/symfony-logbook) | [1.0](../../../tree/main/solvrtech/symfony-logbook/1.0) |
-| [sonata-project/admin-bundle](https://packagist.org/packages/sonata-project/admin-bundle) | [4.0](../../../tree/main/sonata-project/admin-bundle/4.0) |
+| [sonata-project/admin-bundle](https://packagist.org/packages/sonata-project/admin-bundle) | [4.39](../../../tree/main/sonata-project/admin-bundle/4.39) |
 | [sonata-project/block-bundle](https://packagist.org/packages/sonata-project/block-bundle) | [4.11](../../../tree/main/sonata-project/block-bundle/4.11) |
 | [sonata-project/classification-bundle](https://packagist.org/packages/sonata-project/classification-bundle) | [3.7](../../../tree/main/sonata-project/classification-bundle/3.7) |
 | [sonata-project/core-bundle](https://packagist.org/packages/sonata-project/core-bundle) | [3.9](../../../tree/main/sonata-project/core-bundle/3.9) |
@@ -630,9 +633,9 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [storyblok/symfony-bundle](https://packagist.org/packages/storyblok/symfony-bundle) | [1.16](../../../tree/main/storyblok/symfony-bundle/1.16) |
 | [stripe/stripe-php](https://packagist.org/packages/stripe/stripe-php) | [19.0](../../../tree/main/stripe/stripe-php/19.0) |
 | [sulu/article-bundle](https://packagist.org/packages/sulu/article-bundle) | [2.0](../../../tree/main/sulu/article-bundle/2.0) |
-| [sulu/automation-bundle](https://packagist.org/packages/sulu/automation-bundle) | [2.0](../../../tree/main/sulu/automation-bundle/2.0) |
+| [sulu/automation-bundle](https://packagist.org/packages/sulu/automation-bundle) | [2.2](../../../tree/main/sulu/automation-bundle/2.2) |
 | [sulu/form-bundle](https://packagist.org/packages/sulu/form-bundle) | [3.0](../../../tree/main/sulu/form-bundle/3.0) |
-| [sulu/headless-bundle](https://packagist.org/packages/sulu/headless-bundle) | [0.1](../../../tree/main/sulu/headless-bundle/0.1) |
+| [sulu/headless-bundle](https://packagist.org/packages/sulu/headless-bundle) | [3.0](../../../tree/main/sulu/headless-bundle/3.0) |
 | [sulu/redirect-bundle](https://packagist.org/packages/sulu/redirect-bundle) | [3.0](../../../tree/main/sulu/redirect-bundle/3.0) |
 | [sulu/sylius-consumer-bundle](https://packagist.org/packages/sulu/sylius-consumer-bundle) | [0.4](../../../tree/main/sulu/sylius-consumer-bundle/0.4) |
 | [sulu/sylius-producer-plugin](https://packagist.org/packages/sulu/sylius-producer-plugin) | [0.2](../../../tree/main/sulu/sylius-producer-plugin/0.2) |
@@ -708,6 +711,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [tito10047/altcha-bundle](https://packagist.org/packages/tito10047/altcha-bundle) | [2.0](../../../tree/main/tito10047/altcha-bundle/2.0) |
 | [tlb/umami-bundle](https://packagist.org/packages/tlb/umami-bundle) | [0.1](../../../tree/main/tlb/umami-bundle/0.1) |
 | [toiba/fullcalendar-bundle](https://packagist.org/packages/toiba/fullcalendar-bundle) | [6.2](../../../tree/main/toiba/fullcalendar-bundle/6.2) |
+| [traceway/opentelemetry-symfony](https://packagist.org/packages/traceway/opentelemetry-symfony) | [2.1](../../../tree/main/traceway/opentelemetry-symfony/2.1) |
 | [trikoder/oauth2-bundle](https://packagist.org/packages/trikoder/oauth2-bundle) | [3.0](../../../tree/main/trikoder/oauth2-bundle/3.0) |
 | [troopers/alertify-bundle](https://packagist.org/packages/troopers/alertify-bundle) | [3.0](../../../tree/main/troopers/alertify-bundle/3.0) |
 | [troopers/mangopay-bundle](https://packagist.org/packages/troopers/mangopay-bundle) | [3.0](../../../tree/main/troopers/mangopay-bundle/3.0) |
@@ -717,6 +721,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [verschoof/transip-api-bundle](https://packagist.org/packages/verschoof/transip-api-bundle) | [1.2](../../../tree/main/verschoof/transip-api-bundle/1.2) |
 | [vich/uploader-bundle](https://packagist.org/packages/vich/uploader-bundle) | [1.13](../../../tree/main/vich/uploader-bundle/1.13) |
 | [victor-prdh/recaptcha-bundle](https://packagist.org/packages/victor-prdh/recaptcha-bundle) | [1.5](../../../tree/main/victor-prdh/recaptcha-bundle/1.5) |
+| [vinceamstoutz/symfony-security-auditor](https://packagist.org/packages/vinceamstoutz/symfony-security-auditor) | [1.0](../../../tree/main/vinceamstoutz/symfony-security-auditor/1.0) |
 | [vincentchalamon/nav-bundle](https://packagist.org/packages/vincentchalamon/nav-bundle) | [1.0](../../../tree/main/vincentchalamon/nav-bundle/1.0) |
 | [vincentlanglet/twig-cs-fixer](https://packagist.org/packages/vincentlanglet/twig-cs-fixer) | [3.0](../../../tree/main/vincentlanglet/twig-cs-fixer/3.0) |
 | [void/og-image](https://packagist.org/packages/void/og-image) | [1.0](../../../tree/main/void/og-image/1.0) |

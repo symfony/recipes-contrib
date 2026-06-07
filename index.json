@@ -702,12 +702,19 @@
         "flagception/flagception-bundle": [
             "3.0"
         ],
+        "flawe/flare-bundle": [
+            "3.1"
+        ],
         "fluffydiscord/roadrunner-symfony-bundle": [
             "2.3",
             "3.0"
         ],
         "flux-se/sylius-payum-stripe-plugin": [
             "1.2",
+            "2.0"
+        ],
+        "flux-se/sylius-stripe-plugin": [
+            "1.0",
             "2.0"
         ],
         "fluxter/saas-provider-bundle": [
@@ -1857,6 +1864,9 @@
         "sg/datatablesbundle": [
             "1.0"
         ],
+        "shedeza/sybase-orm-bundle": [
+            "1.0"
+        ],
         "shipmonk/doctrine-entity-preloader": [
             "1.0"
         ],
@@ -1923,7 +1933,8 @@
         "sonata-project/admin-bundle": [
             "3.31",
             "3.64",
-            "4.0"
+            "4.0",
+            "4.39"
         ],
         "sonata-project/block-bundle": [
             "4.11"
@@ -2025,7 +2036,8 @@
             "2.0"
         ],
         "sulu/automation-bundle": [
-            "2.0"
+            "2.0",
+            "2.2"
         ],
         "sulu/form-bundle": [
             "2.0",
@@ -2034,7 +2046,8 @@
             "3.0"
         ],
         "sulu/headless-bundle": [
-            "0.1"
+            "0.1",
+            "3.0"
         ],
         "sulu/redirect-bundle": [
             "2.0",
@@ -2287,6 +2300,9 @@
         "toiba/fullcalendar-bundle": [
             "6.2"
         ],
+        "traceway/opentelemetry-symfony": [
+            "2.1"
+        ],
         "trikoder/oauth2-bundle": [
             "2.0",
             "3.0"
@@ -2315,6 +2331,9 @@
         ],
         "victor-prdh/recaptcha-bundle": [
             "1.5"
+        ],
+        "vinceamstoutz/symfony-security-auditor": [
+            "1.0"
         ],
         "vincentchalamon/nav-bundle": [
             "1.0"

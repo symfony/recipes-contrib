@@ -1,0 +1,33 @@
+{
+    "manifests": {
+        "flawe/flare-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Flawe\\FlareBundle\\FlareBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "FLARE_KEY": "your-flare-key"
+                }
+            },
+            "files": {
+                "config/packages/flare.yaml": {
+                    "contents": [
+                        "flare:",
+                        "    key: '%env(string:FLARE_KEY)%'",
+                        "    use_defaults: true",
+                        "    application:",
+                        "        stage: '%env(string:APP_ENV)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d4c12e34855a93ebce25e87b897dcfc6d3eadc38"
+        }
+    }
+}

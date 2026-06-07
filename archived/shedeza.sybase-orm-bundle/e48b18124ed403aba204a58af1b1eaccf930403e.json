@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "shedeza/sybase-orm-bundle": {
+            "manifest": {
+                "bundles": {
+                    "SybaseORM\\Bundle\\SybaseORMBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "DATABASE_URL": "sybase://sa:!ChangeMe!@127.0.0.1:5000/app?charset=UTF-8"
+                }
+            },
+            "files": {
+                "config/packages/sybase_orm.yaml": {
+                    "contents": [
+                        "sybase_orm:",
+                        "    connection:",
+                        "        url: '%env(DATABASE_URL)%'",
+                        "    entity_directories:",
+                        "        - '%kernel.project_dir%/src/Entity'",
+                        "    proxy_directory: '%kernel.cache_dir%/sybase_orm/proxies'",
+                        "    migrations_directory: '%kernel.project_dir%/sybase_ase/migrations'",
+                        "    cache:",
+                        "        enabled: false",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e48b18124ed403aba204a58af1b1eaccf930403e"
+        }
+    }
+}

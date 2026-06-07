@@ -1,0 +1,66 @@
+{
+    "manifests": {
+        "traceway/opentelemetry-symfony": {
+            "manifest": {
+                "bundles": {
+                    "Traceway\\OpenTelemetryBundle\\OpenTelemetryBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "OpenTelemetry SDK auto-initialization",
+                    "OTEL_PHP_AUTOLOAD_ENABLED": "true",
+                    "#2": "Service identity (shown in your backend)",
+                    "OTEL_SERVICE_NAME": "%project_name%",
+                    "#3": "Traces exporter: otlp | zipkin | console | none",
+                    "OTEL_TRACES_EXPORTER": "otlp",
+                    "#4": "Collector or backend endpoint",
+                    "OTEL_EXPORTER_OTLP_ENDPOINT": "http://localhost:4318",
+                    "#5": "Protocol: http/json | http/protobuf | grpc \u2014 use http/json unless ext-protobuf is installed",
+                    "OTEL_EXPORTER_OTLP_PROTOCOL": "http/json"
+                },
+                "post-install-output": [
+                    "",
+                    "  * <fg=blue>OpenTelemetry Symfony Bundle</> is wired and ready to trace your app.",
+                    "",
+                    "  * Verify your wiring:",
+                    "",
+                    "      <comment>$ bin/console traceway:doctor</comment>",
+                    "",
+                    "  * Override <comment>OTEL_*</> environment variables in <comment>.env.local</> to point at your backend.",
+                    "",
+                    "  * Documentation:",
+                    "",
+                    "      <comment>https://github.com/tracewayapp/opentelemetry-symfony-bundle</>"
+                ]
+            },
+            "files": {
+                "config/packages/open_telemetry.yaml": {
+                    "contents": [
+                        "open_telemetry:",
+                        "    traces:",
+                        "        excluded_paths: ['/_profiler', '/_wdt', '/health']",
+                        "",
+                        "when@test:",
+                        "    open_telemetry:",
+                        "        traces:",
+                        "            enabled: false",
+                        "        metrics:",
+                        "            enabled: false",
+                        "        logs:",
+                        "            correlation:",
+                        "                enabled: false",
+                        "            export:",
+                        "                enabled: false",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6f6a343b626a4b2dbfcbc0c8e9ae9e467e3058c7"
+        }
+    }
+}
