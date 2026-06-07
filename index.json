@@ -756,6 +756,9 @@
         "fsi/files": [
             "1.5"
         ],
+        "geekybones/fraud-defense-bundle": [
+            "1.0"
+        ],
         "geosocio/http-serializer-bundle": [
             "2.0"
         ],

@@ -1,0 +1,46 @@
+{
+    "manifests": {
+        "geekybones/fraud-defense-bundle": {
+            "manifest": {
+                "bundles": {
+                    "GeekyBones\\FraudDefenseBundle\\FraudDefenseBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "FRAUD_DEFENSE_PROJECT_ID": "project-id",
+                    "FRAUD_DEFENSE_SITE_KEY": "site-key",
+                    "FRAUD_DEFENSE_API_KEY": "google-cloud-api-key",
+                    "FRAUD_DEFENSE_CHECKBOX_SITE_KEY": "checkbox-site-key"
+                }
+            },
+            "files": {
+                "config/packages/fraud_defense.yaml": {
+                    "contents": [
+                        "fraud_defense:",
+                        "    project_id: '%env(FRAUD_DEFENSE_PROJECT_ID)%'",
+                        "    api_key:    '%env(FRAUD_DEFENSE_API_KEY)%'",
+                        "    # At least one of site_key / checkbox_site_key is required.",
+                        "    site_key:          '%env(FRAUD_DEFENSE_SITE_KEY)%'",
+                        "    # checkbox_site_key: '%env(FRAUD_DEFENSE_CHECKBOX_SITE_KEY)%'",
+                        "    min_score:  0.5",
+                        "    fail_on_api_error: true",
+                        "    # expected_hostname: 'www.example.com'",
+                        "    # transaction_defense:",
+                        "    #     enabled: true",
+                        "    #     max_transaction_risk: 0.7",
+                        "    # sms_defense:",
+                        "    #     enabled: true",
+                        "    #     max_sms_risk: 0.5",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3c2f8b7e4f89464735588918d8dccde54a99ac22"
+        }
+    }
+}

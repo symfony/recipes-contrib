@@ -240,6 +240,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [friendsofsymfony/oauth-server-bundle](https://packagist.org/packages/friendsofsymfony/oauth-server-bundle) | [1.6](../../../tree/main/friendsofsymfony/oauth-server-bundle/1.6) |
 | [friendsofsymfony/rest-bundle](https://packagist.org/packages/friendsofsymfony/rest-bundle) | [3.0](../../../tree/main/friendsofsymfony/rest-bundle/3.0) |
 | [fsi/files](https://packagist.org/packages/fsi/files) | [1.5](../../../tree/main/fsi/files/1.5) |
+| [geekybones/fraud-defense-bundle](https://packagist.org/packages/geekybones/fraud-defense-bundle) | [1.0](../../../tree/main/geekybones/fraud-defense-bundle/1.0) |
 | [geosocio/http-serializer-bundle](https://packagist.org/packages/geosocio/http-serializer-bundle) | [2.0](../../../tree/main/geosocio/http-serializer-bundle/2.0) |
 | [gesdinet/jwt-refresh-token-bundle](https://packagist.org/packages/gesdinet/jwt-refresh-token-bundle) | [1.0](../../../tree/main/gesdinet/jwt-refresh-token-bundle/1.0) |
 | [gheb/configuration-converter-bundle](https://packagist.org/packages/gheb/configuration-converter-bundle) | [0.5](../../../tree/main/gheb/configuration-converter-bundle/0.5) |
