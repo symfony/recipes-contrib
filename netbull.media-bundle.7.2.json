@@ -1,0 +1,85 @@
+{
+    "manifests": {
+        "netbull/media-bundle": {
+            "manifest": {
+                "bundles": {
+                    "NetBull\\MediaBundle\\NetBullMediaBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "gitignore": [
+                    "/public/uploads/media/"
+                ],
+                "post-install-output": [
+                    "<bg=blue;fg=white>                            </>",
+                    "<bg=blue;fg=white>  NetBull MediaBundle        </>",
+                    "<bg=blue;fg=white>                            </>",
+                    "",
+                    "  * A starter configuration was created at <comment>config/packages/netbull_media.yaml</comment>.",
+                    "    Review <comment>default_context</comment>, your contexts and their thumbnail formats.",
+                    "",
+                    "  * The view/download routes were imported via <comment>config/routes/netbull_media.yaml</comment>",
+                    "    (<comment>/media/view/{id}/{format}</comment> and <comment>/media/download/{id}/{format}</comment>).",
+                    "",
+                    "  * Uploads are stored under <comment>public/uploads/media</comment> by default. For production,",
+                    "    configure S3 under <comment>netbull_media.filesystem.s3</comment> and point the providers at",
+                    "    <comment>netbull_media.filesystem.s3</comment>.",
+                    "",
+                    "  * Asynchronous thumbnails are optional: run <comment>composer require symfony/messenger</comment>",
+                    "    and set <comment>netbull_media.thumbnail.async: true</comment> to offload resizing to a worker.",
+                    "",
+                    "  * Ensure Doctrine maps the bundle's <comment>Media</comment> entity and run your migrations.",
+                    "",
+                    "  Reference: <fg=blue>https://packagist.org/packages/netbull/media-bundle</fg=blue>"
+                ]
+            },
+            "files": {
+                "config/packages/netbull_media.yaml": {
+                    "contents": [
+                        "netbull_media:",
+                        "    default_context: 'default'",
+                        "",
+                        "    # Uploads are stored on the local filesystem by default. For production, configure",
+                        "    # \"filesystem.s3\" instead and point the providers at \"netbull_media.filesystem.s3\".",
+                        "    filesystem:",
+                        "        local:",
+                        "            directory: '%kernel.project_dir%/public/uploads/media'",
+                        "            create: true",
+                        "",
+                        "    providers:",
+                        "        image:",
+                        "            filesystem: netbull_media.filesystem.local",
+                        "",
+                        "    # Thumbnails are generated in-process by default. Set this to true to offload resizing to a",
+                        "    # Symfony Messenger worker (requires \"composer require symfony/messenger\").",
+                        "    thumbnail:",
+                        "        async: false",
+                        "",
+                        "    # A context groups one or more providers with the thumbnail formats generated for them.",
+                        "    contexts:",
+                        "        default:",
+                        "            providers:",
+                        "                - netbull_media.provider.image",
+                        "            formats:",
+                        "                thumb: { width: 150, height: 150, quality: 80 }",
+                        "                normal: { width: 600, quality: 85 }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/netbull_media.yaml": {
+                    "contents": [
+                        "netbull_media:",
+                        "    resource: '@NetBullMediaBundle/config/routes.yaml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "17dca4ab01d8373a0d4cf33aa694765ad903b1d6"
+        }
+    }
+}
