@@ -1,0 +1,21 @@
+{
+    "manifests": {
+        "corvet/light-field-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Corvet\\LightFieldBundle\\CorvetLightFieldBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "composer-scripts": {
+                    "corvet:install": "symfony-cmd"
+                }
+            },
+            "files": [],
+            "ref": "85be3321fc7bb3e6eca40cfa62be7b2d21860bd1"
+        }
+    }
+}
