@@ -1,8 +1,6 @@
 {
     "bundles": {
-        "Corvet\\LightFieldBundle\\CorvetLightFieldBundle": [
-            "all"
-        ]
+        "Corvet\\LightFieldBundle\\CorvetLightFieldBundle": ["all"]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
