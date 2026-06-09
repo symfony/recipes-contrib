@@ -1,0 +1,24 @@
+letkode_form_schema:
+    default_locale: es
+    available_locales:
+        - es
+    entity_namespace: App\Entity
+    table_prefix: ''
+    table_names:
+        form: ~
+        form_section: ~
+        form_group: ~
+        form_field: ~
+        form_option_general: ~
+        form_option_general_value: ~
+    cache:
+        enabled: false
+        pool: cache.app
+        ttl: 3600
+        key_prefix: fsb
+        auto_invalidate: true
+    disabled_field_types: []
+    disabled_options_sources: []
+    disabled_form_renders: []
+    disabled_section_renders: []
+    disabled_group_renders: []
