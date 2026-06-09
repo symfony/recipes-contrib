@@ -7,7 +7,6 @@
     },
     "env": {
         "LKA_DEFAULT_LOCALE": "es",
-        "LKA_AVAILABLE_LOCALES": "es,en,pt",
         "LKA_FORM_SCHEMA_CACHE": "false"
     }
 }
