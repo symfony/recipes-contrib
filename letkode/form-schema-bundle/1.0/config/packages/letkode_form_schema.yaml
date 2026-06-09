@@ -10,8 +10,8 @@ letkode_form_schema:
         form_section: null
         form_group: null
         form_field: null
-        form_option_general: null
-        form_option_general_value: null
+        form_option: null
+        form_option_value: null
     cache:
         enabled: false
         pool: cache.app
