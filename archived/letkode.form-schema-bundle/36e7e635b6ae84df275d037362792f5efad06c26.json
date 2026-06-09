@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "letkode/form-schema-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Letkode\\FormSchemaBundle\\LetkodeFormSchemaBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/letkode_form_schema.yaml": {
+                    "contents": [
+                        "letkode_form_schema:",
+                        "    default_locale: es",
+                        "    available_locales:",
+                        "        - es",
+                        "    entity_namespace: App\\Entity",
+                        "    table_prefix: ''",
+                        "    table_names:",
+                        "        form: null",
+                        "        form_section: null",
+                        "        form_group: null",
+                        "        form_field: null",
+                        "        form_option_general: null",
+                        "        form_option_general_value: null",
+                        "    cache:",
+                        "        enabled: false",
+                        "        pool: cache.app",
+                        "        ttl: 3600",
+                        "        key_prefix: fsb",
+                        "        auto_invalidate: true",
+                        "    disabled_field_types: []",
+                        "    disabled_options_sources: []",
+                        "    disabled_form_renders: []",
+                        "    disabled_section_renders: []",
+                        "    disabled_group_renders: []",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "36e7e635b6ae84df275d037362792f5efad06c26"
+        }
+    }
+}

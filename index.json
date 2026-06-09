@@ -1126,6 +1126,9 @@
         "lepiaf/sapient-bundle": [
             "0.1"
         ],
+        "letkode/form-schema-bundle": [
+            "1.0"
+        ],
         "lexik/cron-file-generator-bundle": [
             "1.0"
         ],

@@ -354,6 +354,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [leapt/im-bundle](https://packagist.org/packages/leapt/im-bundle) | [5.0](../../../tree/main/leapt/im-bundle/5.0) |
 | [leogout/seo-bundle](https://packagist.org/packages/leogout/seo-bundle) | [1.0](../../../tree/main/leogout/seo-bundle/1.0) |
 | [lepiaf/sapient-bundle](https://packagist.org/packages/lepiaf/sapient-bundle) | [0.1](../../../tree/main/lepiaf/sapient-bundle/0.1) |
+| [letkode/form-schema-bundle](https://packagist.org/packages/letkode/form-schema-bundle) | [1.0](../../../tree/main/letkode/form-schema-bundle/1.0) |
 | [lexik/cron-file-generator-bundle](https://packagist.org/packages/lexik/cron-file-generator-bundle) | [1.0](../../../tree/main/lexik/cron-file-generator-bundle/1.0) |
 | [lexik/maintenance-bundle](https://packagist.org/packages/lexik/maintenance-bundle) | [2.1](../../../tree/main/lexik/maintenance-bundle/2.1) |
 | [liip/imagine-bundle](https://packagist.org/packages/liip/imagine-bundle) | [1.8](../../../tree/main/liip/imagine-bundle/1.8) |
