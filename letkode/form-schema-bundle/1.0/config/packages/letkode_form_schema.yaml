@@ -1,9 +1,6 @@
 letkode_form_schema:
-    default_locale: es
-    available_locales:
-        - es
-        - en
-        - pt
+    default_locale: '%env(LKA_DEFAULT_LOCALE)%'
+    available_locales: '%env(csv:LKA_AVAILABLE_LOCALES)%'
     entity_namespace: App\Entity
     table_prefix: ''
     seeds_path: '%kernel.project_dir%/config/seeds/form_schema'
@@ -15,7 +12,7 @@ letkode_form_schema:
         form_option: null
         form_option_value: null
     cache:
-        enabled: false
+        enabled: '%env(bool:LKA_FORM_SCHEMA_CACHE)%'
         pool: cache.app
         ttl: 3600
         key_prefix: fsb
