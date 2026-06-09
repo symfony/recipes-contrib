@@ -2,6 +2,8 @@ letkode_form_schema:
     default_locale: es
     available_locales:
         - es
+        - en
+        - pt
     entity_namespace: App\Entity
     table_prefix: ''
     seeds_path: '%kernel.project_dir%/config/seeds/form_schema'
