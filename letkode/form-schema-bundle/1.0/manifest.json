@@ -3,6 +3,8 @@
         "Letkode\\FormSchemaBundle\\LetkodeFormSchemaBundle": ["all"]
     },
     "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    }
+        "config/packages/": "%CONFIG_DIR%/packages/",
+        "config/seeds/": "%CONFIG_DIR%/seeds/"
+    },
+    "gitignore": []
 }

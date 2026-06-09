@@ -4,6 +4,7 @@ letkode_form_schema:
         - es
     entity_namespace: App\Entity
     table_prefix: ''
+    seeds_path: '%kernel.project_dir%/config/seeds/form-schema'
     table_names:
         form: null
         form_section: null
