@@ -5,12 +5,12 @@ letkode_form_schema:
     entity_namespace: App\Entity
     table_prefix: ''
     table_names:
-        form: ~
-        form_section: ~
-        form_group: ~
-        form_field: ~
-        form_option_general: ~
-        form_option_general_value: ~
+        form: null
+        form_section: null
+        form_group: null
+        form_field: null
+        form_option_general: null
+        form_option_general_value: null
     cache:
         enabled: false
         pool: cache.app
