@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Treblle\\Symfony\\TreblleBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "TREBLLE_SDK_TOKEN": "",
+        "TREBLLE_API_KEY": ""
+    }
+}

@@ -1,0 +1,3 @@
+treblle:
+    sdk_token: '%env(TREBLLE_SDK_TOKEN)%'
+    api_key: '%env(TREBLLE_API_KEY)%'
