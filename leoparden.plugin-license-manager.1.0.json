@@ -1,0 +1,19 @@
+{
+    "manifests": {
+        "leoparden/plugin-license-manager": {
+            "manifest": {
+                "bundles": {
+                    "Leoparden\\PluginLicenseManager\\PluginLicenseManager": [
+                        "all"
+                    ]
+                },
+                "env": {
+                    "#1": "Platform identifier reported to the hub's /lifecycle/{platform}/{extension} endpoint.",
+                    "LEOPARDEN_LICENSE_PLATFORM": "shopware"
+                }
+            },
+            "files": [],
+            "ref": "ef89fa64ea79eedcdc533b9682de0cbf6554d5fb"
+        }
+    }
+}
