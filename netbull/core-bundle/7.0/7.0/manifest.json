@@ -1,8 +1,0 @@
-{
-    "bundles": {
-        "NetBull\\CoreBundle\\NetBullCoreBundle": ["all"]
-    },
-    "copy-from-recipe": {
-        "config/": "%CONFIG_DIR%/"
-    }
-}

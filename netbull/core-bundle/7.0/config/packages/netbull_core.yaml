@@ -26,4 +26,3 @@ netbull_core:
                 desc: 'fa fa-sort-down'
             active_class: 'text-success'
             not_active_class: 'text-primary'
-
