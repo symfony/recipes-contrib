@@ -1,6 +1,4 @@
 netbull_core:
-    # Everything below is optional — the bundle works with an empty config.
-
     # Where "bin/console netbull:core:js-routing" dumps the routes for the frontend,
     # relative to the project directory. Only routes marked with
     # "options: { expose: true }" are exported.
@@ -10,21 +8,22 @@ netbull_core:
     # js_type: 'es6'
 
     # Defaults applied to the AjaxType / Select2Type form types (select2-based widgets).
-    # form_types:
-    #     ajax:
-    #         minimum_input_length: 1
-    #         page_limit: 10
-    #         allow_clear: false
-    #         delay: 250
-    #         language: 'en'
-    #         cache: true
+    form_types:
+        ajax:
+            minimum_input_length: 1
+            page_limit: 10
+            allow_clear: false
+            delay: 250
+            language: 'en'
+            cache: true
 
     # CSS classes / icons used by the pagination_sortable() Twig function.
-    # paginator:
-    #     sortable:
-    #         icons:
-    #             none: 'fa fa-sort'
-    #             asc: 'fa fa-sort-up'
-    #             desc: 'fa fa-sort-down'
-    #         active_class: 'text-success'
-    #         not_active_class: 'text-primary'
+    paginator:
+        sortable:
+            icons:
+                none: 'fa fa-sort'
+                asc: 'fa fa-sort-up'
+                desc: 'fa fa-sort-down'
+            active_class: 'text-success'
+            not_active_class: 'text-primary'
+
