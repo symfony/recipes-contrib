@@ -1,0 +1,71 @@
+{
+    "manifests": {
+        "netbull/core-bundle": {
+            "manifest": {
+                "bundles": {
+                    "NetBull\\CoreBundle\\NetBullCoreBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                            </>",
+                    "<bg=blue;fg=white>  NetBull CoreBundle        </>",
+                    "<bg=blue;fg=white>                            </>",
+                    "",
+                    "  * A starter configuration was created at <comment>config/packages/netbull_core.yaml</comment>.",
+                    "    All options are optional \u2014 uncomment what you need.",
+                    "",
+                    "  * Doctrine column types (spatial, phone number, range) must be registered in",
+                    "    <comment>doctrine.dbal.types</comment> before use; the DQL function GREATEST under",
+                    "    <comment>doctrine.orm.dql.numeric_functions</comment>. See the README for the snippet.",
+                    "",
+                    "  * To export routes to the frontend, mark them with <comment>options: { expose: true }</comment>,",
+                    "    set <comment>netbull_core.js_routes_path</comment> and run",
+                    "    <comment>bin/console netbull:core:js-routing</comment>.",
+                    "",
+                    "  Reference: <fg=blue>https://packagist.org/packages/netbull/core-bundle</fg=blue>"
+                ]
+            },
+            "files": {
+                "config/packages/netbull_core.yaml": {
+                    "contents": [
+                        "netbull_core:",
+                        "    # Where \"bin/console netbull:core:js-routing\" dumps the routes for the frontend,",
+                        "    # relative to the project directory. Only routes marked with",
+                        "    # \"options: { expose: true }\" are exported.",
+                        "    # js_routes_path: 'assets/js/router.js'",
+                        "",
+                        "    # Flavor of the generated router file: \"js\" or \"es6\".",
+                        "    # js_type: 'es6'",
+                        "",
+                        "    # Defaults applied to the AjaxType / Select2Type form types (select2-based widgets).",
+                        "    form_types:",
+                        "        ajax:",
+                        "            minimum_input_length: 1",
+                        "            page_limit: 10",
+                        "            allow_clear: false",
+                        "            delay: 250",
+                        "            language: 'en'",
+                        "            cache: true",
+                        "",
+                        "    # CSS classes / icons used by the pagination_sortable() Twig function.",
+                        "    paginator:",
+                        "        sortable:",
+                        "            icons:",
+                        "                none: 'fa fa-sort'",
+                        "                asc: 'fa fa-sort-up'",
+                        "                desc: 'fa fa-sort-down'",
+                        "            active_class: 'text-success'",
+                        "            not_active_class: 'text-primary'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d0f83c14f30d1e552dc64a07e5ec54f29e4c95be"
+        }
+    }
+}
