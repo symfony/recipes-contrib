@@ -1442,6 +1442,9 @@
             "0.4",
             "1.0"
         ],
+        "netbull/core-bundle": [
+            "7.0"
+        ],
         "netbull/media-bundle": [
             "7.2"
         ],
