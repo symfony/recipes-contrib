@@ -1,0 +1,20 @@
+# Pickle Panther — YAML-driven E2E testing on top of Symfony Panther.
+#
+# Loaded in the "test" environment only: the bundle is registered for "test" in
+# config/bundles.php, so a root-level config/packages/ file would also load in
+# prod (where the bundle is absent) and Symfony would fail to boot.
+#
+# Every option below has a sensible default — uncomment only what you override.
+# Full reference: https://github.com/Amoifr/PicklePantherBundle
+pickle_panther:
+    #locale: fr                          # default DSL language (fr|en) — matching is bilingual anyway
+    #scenarios_dir: '%kernel.project_dir%/tests/E2E/Scenario'
+    #report:
+    #    output_dir: '%kernel.project_dir%/var/pickle-panther'
+
+    # Opt-in form-login authenticator. Keep credentials out of the repository:
+    #auth:
+    #    login_path: /login
+    #    roles:
+    #        admin: { email: '%env(E2E_ADMIN_EMAIL)%', password: '%env(E2E_ADMIN_PASSWORD)%' }
+    #        user:  { email: '%env(E2E_USER_EMAIL)%',  password: '%env(E2E_USER_PASSWORD)%' }
