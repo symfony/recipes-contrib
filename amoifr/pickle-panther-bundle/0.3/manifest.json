@@ -1,0 +1,18 @@
+{
+    "bundles": {
+        "Amoifr\\PicklePantherBundle\\PicklePantherBundle": ["test"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "post-install-output": [
+        "  * The bundle is enabled in the <comment>test</> environment only.",
+        "    Tune <comment>config/packages/test/pickle_panther.yaml</> as needed (every key is optional).",
+        "",
+        "  * <comment>To actually run E2E scenarios you need a chromedriver</>",
+        "    (<comment>composer require --dev dbrekelmans/bdi && vendor/bin/bdi detect drivers</>)",
+        "    <comment>or a browser provided via Docker.</>",
+        "",
+        "  * Docs: <href=https://github.com/Amoifr/PicklePantherBundle>https://github.com/Amoifr/PicklePantherBundle</>"
+    ]
+}
