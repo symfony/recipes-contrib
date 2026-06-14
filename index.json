@@ -79,6 +79,9 @@
         "ambient-link/ability-sdk": [
             "1.0"
         ],
+        "amoifr/pickle-panther-bundle": [
+            "0.3"
+        ],
         "amzs/random-bundle": [
             "1.0"
         ],

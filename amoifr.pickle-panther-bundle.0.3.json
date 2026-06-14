@@ -1,0 +1,77 @@
+{
+    "manifests": {
+        "amoifr/pickle-panther-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Amoifr\\PicklePantherBundle\\PicklePantherBundle": [
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * The bundle is enabled in the <comment>test</> environment only.",
+                    "    Tune <comment>config/packages/test/pickle_panther.yaml</> as needed (every key is optional).",
+                    "",
+                    "  * <comment>To actually run E2E scenarios you need a chromedriver</>",
+                    "    (<comment>composer require --dev dbrekelmans/bdi && vendor/bin/bdi detect drivers</>)",
+                    "    <comment>or a browser provided via Docker.</>",
+                    "",
+                    "  * Docs: <href=https://github.com/Amoifr/PicklePantherBundle>https://github.com/Amoifr/PicklePantherBundle</>"
+                ]
+            },
+            "files": {
+                "config/packages/test/pickle_panther.yaml": {
+                    "contents": [
+                        "# Pickle Panther \u2014 YAML-driven E2E testing on top of Symfony Panther.",
+                        "#",
+                        "# Loaded in the \"test\" environment only: the bundle is registered for \"test\" in",
+                        "# config/bundles.php, so a root-level config/packages/ file would also load in",
+                        "# prod (where the bundle is absent) and Symfony would fail to boot.",
+                        "#",
+                        "# Every key below is OPTIONAL and shown with its default value \u2014 edit in place,",
+                        "# or delete what you keep at the default. Full reference & docs:",
+                        "# https://github.com/Amoifr/PicklePantherBundle",
+                        "pickle_panther:",
+                        "    locale: fr                         # default DSL language (fr|en) \u2014 matching is bilingual anyway",
+                        "    debug: false                       # true => a screenshot after every step (= E2E_DEBUG=1)",
+                        "    scenarios_dir: '%kernel.project_dir%/tests/E2E/Scenario'",
+                        "    report:",
+                        "        enabled: true",
+                        "        output_dir: '%kernel.project_dir%/var/pickle-panther'",
+                        "    browser:",
+                        "        headless: true",
+                        "        chrome_args: []                # extra Chrome args appended to the defaults",
+                        "        desktop:",
+                        "            width: 1920",
+                        "            height: 1080",
+                        "            user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'",
+                        "        mobile:",
+                        "            width: 375",
+                        "            height: 812",
+                        "            pixel_ratio: 3.0",
+                        "            user_agent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1'",
+                        "",
+                        "    # Optional built-in form-login authenticator. Uncomment to enable it; leave",
+                        "    # commented if your app has a custom login flow (define your own service",
+                        "    # aliased to Amoifr\\PicklePantherBundle\\Auth\\AuthenticatorInterface instead).",
+                        "    # Keep credentials out of the repository \u2014 read them from environment variables.",
+                        "    #auth:",
+                        "    #    login_path: /login",
+                        "    #    logout_path: /logout",
+                        "    #    form_selector: 'form'",
+                        "    #    email_field: '_username'",
+                        "    #    password_field: '_password'",
+                        "    #    roles:                         # map a scenario role name to its credentials",
+                        "    #        admin: { email: '%env(E2E_ADMIN_EMAIL)%', password: '%env(E2E_ADMIN_PASSWORD)%' }",
+                        "    #        user:  { email: '%env(E2E_USER_EMAIL)%',  password: '%env(E2E_USER_PASSWORD)%' }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a45c7990a5f8cf860b96fb0f2dbfefaaab003b32"
+        }
+    }
+}

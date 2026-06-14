@@ -29,6 +29,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [alms/cycle-bundle](https://packagist.org/packages/alms/cycle-bundle) | [0.1](../../../tree/main/alms/cycle-bundle/0.1) |
 | [alteis/hagreed-bundle](https://packagist.org/packages/alteis/hagreed-bundle) | [1.0](../../../tree/main/alteis/hagreed-bundle/1.0) |
 | [ambient-link/ability-sdk](https://packagist.org/packages/ambient-link/ability-sdk) | [1.0](../../../tree/main/ambient-link/ability-sdk/1.0) |
+| [amoifr/pickle-panther-bundle](https://packagist.org/packages/amoifr/pickle-panther-bundle) | [0.3](../../../tree/main/amoifr/pickle-panther-bundle/0.3) |
 | [amzs/random-bundle](https://packagist.org/packages/amzs/random-bundle) | [1.0](../../../tree/main/amzs/random-bundle/1.0) |
 | [andchir/omnipay-bundle](https://packagist.org/packages/andchir/omnipay-bundle) | [1.0](../../../tree/main/andchir/omnipay-bundle/1.0) |
 | [andchir/shopkeeper4-comments](https://packagist.org/packages/andchir/shopkeeper4-comments) | [1.0](../../../tree/main/andchir/shopkeeper4-comments/1.0) |
