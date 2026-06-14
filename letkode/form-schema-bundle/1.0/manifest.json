@@ -4,5 +4,9 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "LKA_DEFAULT_LOCALE": "es",
+        "LKA_FORM_SCHEMA_CACHE": "false"
     }
 }
