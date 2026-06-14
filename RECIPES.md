@@ -719,6 +719,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [tlb/umami-bundle](https://packagist.org/packages/tlb/umami-bundle) | [0.1](../../../tree/main/tlb/umami-bundle/0.1) |
 | [toiba/fullcalendar-bundle](https://packagist.org/packages/toiba/fullcalendar-bundle) | [6.2](../../../tree/main/toiba/fullcalendar-bundle/6.2) |
 | [traceway/opentelemetry-symfony](https://packagist.org/packages/traceway/opentelemetry-symfony) | [2.1](../../../tree/main/traceway/opentelemetry-symfony/2.1) |
+| [treblle/treblle-symfony](https://packagist.org/packages/treblle/treblle-symfony) | [4.0](../../../tree/main/treblle/treblle-symfony/4.0) |
 | [trikoder/oauth2-bundle](https://packagist.org/packages/trikoder/oauth2-bundle) | [3.0](../../../tree/main/trikoder/oauth2-bundle/3.0) |
 | [troopers/alertify-bundle](https://packagist.org/packages/troopers/alertify-bundle) | [3.0](../../../tree/main/troopers/alertify-bundle/3.0) |
 | [troopers/mangopay-bundle](https://packagist.org/packages/troopers/mangopay-bundle) | [3.0](../../../tree/main/troopers/mangopay-bundle/3.0) |

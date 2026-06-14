@@ -2324,6 +2324,9 @@
         "traceway/opentelemetry-symfony": [
             "2.1"
         ],
+        "treblle/treblle-symfony": [
+            "4.0"
+        ],
         "trikoder/oauth2-bundle": [
             "2.0",
             "3.0"

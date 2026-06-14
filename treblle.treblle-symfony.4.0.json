@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "treblle/treblle-symfony": {
+            "manifest": {
+                "bundles": {
+                    "Treblle\\Symfony\\TreblleBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "TREBLLE_SDK_TOKEN": "",
+                    "TREBLLE_API_KEY": ""
+                }
+            },
+            "files": {
+                "config/packages/treblle.yaml": {
+                    "contents": [
+                        "treblle:",
+                        "    sdk_token: '%env(TREBLLE_SDK_TOKEN)%'",
+                        "    api_key: '%env(TREBLLE_API_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6bad1c7d45c4834b7370a3c89a6481e48f17a82b"
+        }
+    }
+}
