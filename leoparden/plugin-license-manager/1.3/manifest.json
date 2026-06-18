@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Leoparden\\PluginLicenseManager\\PluginLicenseManager": ["all"]
+    },
+    "composer-scripts": {
+        "leoparden:license:sync": "symfony-cmd"
+    }
+}
