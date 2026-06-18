@@ -1,0 +1,18 @@
+{
+    "manifests": {
+        "leoparden/plugin-license-manager": {
+            "manifest": {
+                "bundles": {
+                    "Leoparden\\PluginLicenseManager\\PluginLicenseManager": [
+                        "all"
+                    ]
+                },
+                "composer-scripts": {
+                    "leoparden:license:sync": "symfony-cmd"
+                }
+            },
+            "files": [],
+            "ref": "fb112a51bc46e270d7d37b57f7e380589df9e12c"
+        }
+    }
+}
