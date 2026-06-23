@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Piairre\\Skuse\\PiairreSkuseBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
