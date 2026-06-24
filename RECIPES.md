@@ -532,6 +532,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [phpzlc/rbac-business](https://packagist.org/packages/phpzlc/rbac-business) | [1.0](../../../tree/main/phpzlc/rbac-business/1.0) |
 | [phpzlc/snapshot-business](https://packagist.org/packages/phpzlc/snapshot-business) | [1.0](../../../tree/main/phpzlc/snapshot-business/1.0) |
 | [phpzlc/upload-business](https://packagist.org/packages/phpzlc/upload-business) | [2.0](../../../tree/main/phpzlc/upload-business/2.0) |
+| [piairre/skuse](https://packagist.org/packages/piairre/skuse) | [0.1](../../../tree/main/piairre/skuse/0.1) |
 | [picoss/yousign-bundle](https://packagist.org/packages/picoss/yousign-bundle) | [2.2](../../../tree/main/picoss/yousign-bundle/2.2) |
 | [pierstoval/character-manager](https://packagist.org/packages/pierstoval/character-manager) | [0.5](../../../tree/main/pierstoval/character-manager/0.5) |
 | [piou-piou/ribs-cron-bundle](https://packagist.org/packages/piou-piou/ribs-cron-bundle) | [1.0](../../../tree/main/piou-piou/ribs-cron-bundle/1.0) |

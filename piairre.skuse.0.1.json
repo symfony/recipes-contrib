@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "piairre/skuse": {
+            "manifest": {
+                "bundles": {
+                    "Piairre\\Skuse\\PiairreSkuseBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/piairre_skuse.yaml": {
+                    "contents": [
+                        "piairre_skuse:",
+                        "    open_api_url: '/api/docs.json'",
+                        "    # theme: 'system' # light, dark, system",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/piairre_skuse.yaml": {
+                    "contents": [
+                        "piairre_skuse:",
+                        "    resource: '@PiairreSkuseBundle/config/routes.yaml'",
+                        "    prefix: /skuse # URL where the documentation is served",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9ed74ced3a44044c698c5df2a30edcd2316763bc"
+        }
+    }
+}
