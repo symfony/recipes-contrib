@@ -1,0 +1,3 @@
+piairre_skuse:
+    resource: '@PiairreSkuseBundle/config/routes.yaml'
+    prefix: /skuse # URL where the documentation is served
