@@ -1,3 +1,5 @@
+# $schema: https://raw.githubusercontent.com/vinceamstoutz/symfony-security-auditor/main/resources/schema.json
+
 # Full configuration reference (models, scan, audit loop, rate limits, caching):
 # https://github.com/vinceamstoutz/symfony-security-auditor/blob/main/docs/configuration.md
 #
