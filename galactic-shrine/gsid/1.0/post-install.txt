@@ -1,0 +1,5 @@
+<bg=blue;fg=white> GsId </>
+
+  * The GsId bundle was enabled in config/bundles.php.
+  * A default configuration file was created at config/packages/gsid.yaml.
+  * For GsId 1.x, declare the Doctrine DBAL type manually if your installed 1.x version does not register it automatically.

@@ -1,0 +1,6 @@
+gsid:
+    default_case: Lower
+    default_text_format: N
+    default_json_format: D
+    default_database_format: N
+    lock: true
