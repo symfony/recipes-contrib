@@ -1,0 +1,103 @@
+{
+    "manifests": {
+        "storyblok/symfony-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Storyblok\\Bundle\\StoryblokBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "templates/": "templates/"
+                },
+                "env": {
+                    "STORYBLOK_API_BASE_URI": "https://api.storyblok.com",
+                    "STORYBLOK_API_TOKEN": "",
+                    "STORYBLOK_VERSION": "draft",
+                    "STORYBLOK_CDN_STORAGE_PATH": "%kernel.project_dir%/var/cdn",
+                    "#1": "STORYBLOK_ASSETS_API_TOKEN=",
+                    "#2": "STORYBLOK_WEBHOOK_SECRET="
+                }
+            },
+            "files": {
+                "config/packages/storyblok.yaml": {
+                    "contents": [
+                        "storyblok:",
+                        "    base_uri: '%env(STORYBLOK_API_BASE_URI)%'",
+                        "    token: '%env(STORYBLOK_API_TOKEN)%'",
+                        "    version: '%env(STORYBLOK_VERSION)%'",
+                        "    # assets_token: '%env(STORYBLOK_ASSETS_API_TOKEN)%'",
+                        "    # webhook_secret: '%env(STORYBLOK_WEBHOOK_SECRET)%'",
+                        "    # auto_resolve_relations: true",
+                        "    # auto_resolve_links: true",
+                        "    # controller:",
+                        "    #     ascending_redirect_fallback: true",
+                        "",
+                        "    cdn:",
+                        "        storage:",
+                        "            type: filesystem",
+                        "            path: '%env(resolve:STORYBLOK_CDN_STORAGE_PATH)%'",
+                        "",
+                        "when@prod:",
+                        "    storyblok:",
+                        "        controller:",
+                        "            cache:",
+                        "                public: true",
+                        "                max_age: 3600",
+                        "                smax_age: 3600",
+                        "                must_revalidate: true",
+                        "",
+                        "        cdn:",
+                        "            cache:",
+                        "                public: true",
+                        "                max_age: 604800",
+                        "                smax_age: 604800",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/storyblok.yaml": {
+                    "contents": [
+                        "storyblok_webhook:",
+                        "    resource: '@StoryblokBundle/config/routes/webhook.php'",
+                        "",
+                        "storyblok_content_type:",
+                        "    resource: '@StoryblokBundle/config/routes/content_type.php'",
+                        "",
+                        "storyblok_cdn:",
+                        "    resource: '@StoryblokBundle/config/routes/cdn.php'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "templates/base.html.twig": {
+                    "contents": [
+                        "<!DOCTYPE html>",
+                        "<html>",
+                        "<head>",
+                        "    <meta charset=\"UTF-8\">",
+                        "    <title>{% block title %}Welcome!{% endblock %}</title>",
+                        "    <link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>\u26ab\ufe0f</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>\">",
+                        "    {% block stylesheets %}",
+                        "    {% endblock %}",
+                        "",
+                        "    {% block javascripts %}",
+                        "    {% endblock %}",
+                        "</head>",
+                        "<body>",
+                        "{% block body %}{% endblock %}",
+                        "{% block storyblok_scripts %}",
+                        "    {{ storyblok_js_bridge_scripts() }}",
+                        "{% endblock %}",
+                        "</body>",
+                        "</html>",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5d8341ecc0b8e3c69f6a343252ba7ada144af127"
+        }
+    }
+}
