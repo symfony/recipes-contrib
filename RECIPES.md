@@ -638,7 +638,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [stefandoorn/sitemap-plugin](https://packagist.org/packages/stefandoorn/sitemap-plugin) | [2.0](../../../tree/main/stefandoorn/sitemap-plugin/2.0) |
 | [stof/doctrine-extensions-bundle](https://packagist.org/packages/stof/doctrine-extensions-bundle) | [1.2](../../../tree/main/stof/doctrine-extensions-bundle/1.2) |
 | [stogon/unleash-bundle](https://packagist.org/packages/stogon/unleash-bundle) | [0.4](../../../tree/main/stogon/unleash-bundle/0.4) |
-| [storyblok/symfony-bundle](https://packagist.org/packages/storyblok/symfony-bundle) | [1.16](../../../tree/main/storyblok/symfony-bundle/1.16) |
+| [storyblok/symfony-bundle](https://packagist.org/packages/storyblok/symfony-bundle) | [1.18](../../../tree/main/storyblok/symfony-bundle/1.18) |
 | [stripe/stripe-php](https://packagist.org/packages/stripe/stripe-php) | [19.0](../../../tree/main/stripe/stripe-php/19.0) |
 | [sulu/article-bundle](https://packagist.org/packages/sulu/article-bundle) | [2.0](../../../tree/main/sulu/article-bundle/2.0) |
 | [sulu/automation-bundle](https://packagist.org/packages/sulu/automation-bundle) | [2.2](../../../tree/main/sulu/automation-bundle/2.2) |
