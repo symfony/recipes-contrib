@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "galactic-shrine/gsid": {
+            "manifest": {
+                "bundles": {
+                    "GalacticShrine\\GsId\\Symfony\\GsIdBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white> GsId </>",
+                    "",
+                    "  * The GsId bundle was enabled in config/bundles.php.",
+                    "  * A default configuration file was created at config/packages/gsid.yaml.",
+                    "  * For GsId 1.x, declare the Doctrine DBAL type manually if your installed 1.x version does not register it automatically."
+                ]
+            },
+            "files": {
+                "config/packages/gsid.yaml": {
+                    "contents": [
+                        "gsid:",
+                        "    default_case: Lower",
+                        "    default_text_format: N",
+                        "    default_json_format: D",
+                        "    default_database_format: N",
+                        "    lock: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5c0d87cb84031fca7c414ce778e291991fde0514"
+        }
+    }
+}

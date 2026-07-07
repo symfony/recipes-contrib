@@ -762,6 +762,10 @@
         "fsi/files": [
             "1.5"
         ],
+        "galactic-shrine/gsid": [
+            "1.0",
+            "2.0"
+        ],
         "geekybones/fraud-defense-bundle": [
             "1.0"
         ],
