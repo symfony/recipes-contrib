@@ -1,0 +1,18 @@
+# RussianTextBundle configuration
+# See https://github.com/alexivanou/russian-text-bundle for documentation
+russian_text:
+    # All services are enabled by default.
+    # Set any to false to disable unused functionality.
+    enable_pluralizer: true
+    enable_number_speller: true
+    enable_money_speller: true
+    enable_name_inflector: true
+    enable_noun_decliner: true
+    enable_adjective_decliner: true
+    enable_geo_inflector: true
+    enable_time_speller: true
+    enable_twig_plural: true
+    enable_twig_numeral: true
+    enable_twig_name: true
+    enable_twig_declension: true
+    enable_twig_time: true

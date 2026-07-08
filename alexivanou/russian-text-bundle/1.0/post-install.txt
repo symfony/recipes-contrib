@@ -1,0 +1,6 @@
+RussianTextBundle installed!
+
+Available Twig filters: pluralize, cardinal, ordinal, spell_money, inflect_name, noun_case, noun_plural, adj_case, geo_case, time_ago, distance_of_time
+Available Twig functions: name_cases, detect_gender
+
+See README for usage examples.
