@@ -1,0 +1,51 @@
+{
+    "manifests": {
+        "alexivanou/russian-text-bundle": {
+            "manifest": {
+                "bundles": {
+                    "AlexIvanou\\RussianTextBundle\\AlexIvanouRussianTextBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "RussianTextBundle installed!",
+                    "",
+                    "Available Twig filters: pluralize, cardinal, ordinal, spell_money, inflect_name, noun_case, noun_plural, adj_case, geo_case, time_ago, distance_of_time",
+                    "Available Twig functions: name_cases, detect_gender",
+                    "",
+                    "See README for usage examples."
+                ]
+            },
+            "files": {
+                "config/packages/russian_text.yaml": {
+                    "contents": [
+                        "# RussianTextBundle configuration",
+                        "# See https://github.com/alexivanou/russian-text-bundle for documentation",
+                        "russian_text:",
+                        "    # All services are enabled by default.",
+                        "    # Set any to false to disable unused functionality.",
+                        "    enable_pluralizer: true",
+                        "    enable_number_speller: true",
+                        "    enable_money_speller: true",
+                        "    enable_name_inflector: true",
+                        "    enable_noun_decliner: true",
+                        "    enable_adjective_decliner: true",
+                        "    enable_geo_inflector: true",
+                        "    enable_time_speller: true",
+                        "    enable_twig_plural: true",
+                        "    enable_twig_numeral: true",
+                        "    enable_twig_name: true",
+                        "    enable_twig_declension: true",
+                        "    enable_twig_time: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "63ca2e4d27ef49ecc1ab2dd66e70b3a15e57e22a"
+        }
+    }
+}

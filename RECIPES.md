@@ -24,6 +24,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [alengo/alengo-webspace-settings-bundle](https://packagist.org/packages/alengo/alengo-webspace-settings-bundle) | [0.9](../../../tree/main/alengo/alengo-webspace-settings-bundle/0.9) |
 | [alexandret/evc-bundle](https://packagist.org/packages/alexandret/evc-bundle) | [1.0](../../../tree/main/alexandret/evc-bundle/1.0) |
 | [alexgeno/phone-verification-bundle](https://packagist.org/packages/alexgeno/phone-verification-bundle) | [1.0](../../../tree/main/alexgeno/phone-verification-bundle/1.0) |
+| [alexivanou/russian-text-bundle](https://packagist.org/packages/alexivanou/russian-text-bundle) | [1.0](../../../tree/main/alexivanou/russian-text-bundle/1.0) |
 | [algolia/algolia-search-bundle](https://packagist.org/packages/algolia/algolia-search-bundle) | [2.2](../../../tree/main/algolia/algolia-search-bundle/2.2) |
 | [algolia/search-bundle](https://packagist.org/packages/algolia/search-bundle) | [3.0](../../../tree/main/algolia/search-bundle/3.0) |
 | [alms/cycle-bundle](https://packagist.org/packages/alms/cycle-bundle) | [0.1](../../../tree/main/alms/cycle-bundle/0.1) |

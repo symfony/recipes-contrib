@@ -64,6 +64,9 @@
         "alexgeno/phone-verification-bundle": [
             "1.0"
         ],
+        "alexivanou/russian-text-bundle": [
+            "1.0"
+        ],
         "algolia/algolia-search-bundle": [
             "2.2"
         ],
