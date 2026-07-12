@@ -10,5 +10,3 @@ AXIUM_CLIENT_SECRET=your-client-secret
 
 Documentation:
 https://github.com/BenjaminYAO/axium-identity
-
-
