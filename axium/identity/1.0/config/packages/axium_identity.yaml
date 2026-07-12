@@ -3,3 +3,5 @@ axium_identity:
     client_id: '%env(AXIUM_CLIENT_ID)%'
     client_secret: '%env(AXIUM_CLIENT_SECRET)%'
     verify_ssl: false
+
+
