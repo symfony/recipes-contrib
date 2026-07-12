@@ -1,0 +1,10 @@
+{
+    "bundles": {
+        "Axium\\Identity\\AxiumIdentityBundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/packages/axium_identity.yaml": "%CONFIG_DIR%/packages/axium_identity.yaml"
+    }
+}
