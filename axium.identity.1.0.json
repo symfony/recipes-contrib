@@ -1,0 +1,64 @@
+{
+    "manifests": {
+        "axium/identity": {
+            "manifest": {
+                "bundles": {
+                    "Axium\\Identity\\AxiumIdentityBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "AXIUM_IDENTITY_URL": "https://identity.example.com",
+                    "AXIUM_CLIENT_ID": "your-client-id",
+                    "AXIUM_CLIENT_SECRET": "your-client-secret"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white> AXIUM Identity Bundle </>",
+                    "",
+                    "Le bundle a \u00e9t\u00e9 install\u00e9 avec succ\u00e8s.",
+                    "",
+                    "Ajoutez les variables d'environnement suivantes \u00e0 votre fichier .env :",
+                    "",
+                    "AXIUM_IDENTITY_URL=https://identity.example.com",
+                    "AXIUM_CLIENT_ID=your-client-id",
+                    "AXIUM_CLIENT_SECRET=your-client-secret",
+                    "",
+                    "Documentation:",
+                    "https://github.com/BenjaminYAO/axium-identity"
+                ]
+            },
+            "files": {
+                "config/packages/axium_identity.yaml": {
+                    "contents": [
+                        "axium_identity:",
+                        "    url: '%env(AXIUM_IDENTITY_URL)%'",
+                        "    client_id: '%env(AXIUM_CLIENT_ID)%'",
+                        "    client_secret: '%env(AXIUM_CLIENT_SECRET)%'",
+                        "    verify_ssl: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/axium_identity.yaml": {
+                    "contents": [
+                        "axium_identity_login:",
+                        "    path: /login",
+                        "    controller: Axium\\Identity\\Controller\\SecurityController::login",
+                        "    methods: [GET, POST]",
+                        "",
+                        "axium_identity_logout:",
+                        "    path: /logout",
+                        "    controller: Axium\\Identity\\Controller\\SecurityController::logout",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "37d5f5a6b1cb522f38f888ecbeb736b3fae1a886"
+        }
+    }
+}
