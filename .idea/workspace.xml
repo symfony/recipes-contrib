@@ -1,13 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f82ec2eb-84cd-4445-94bc-ab163947acde" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.341684346163556" />
+      <entry key="MS500" value="2.584321084997576" />
+      <entry key="S2" value="4.264762882251665" />
+      <entry key="S5" value="5.50345582465774" />
+      <entry key="S10" value="6.15691053557371" />
+      <entry key="S30" value="6.694349189005533" />
+      <entry key="S60" value="6.843843349574907" />
+      <entry key="M2" value="6.921068509178463" />
+      <entry key="M5" value="6.968219979390481" />
+      <entry key="M10" value="6.984075194423628" />
+      <entry key="M15" value="6.98937571394207" />
+      <entry key="M30" value="6.994683978277672" />
+      <entry key="H1" value="6.997341018679077" />
+      <entry key="H2" value="6.998670266626224" />
+      <entry key="H4" value="6.9993350726224834" />
+      <entry key="D1" value="6.999889170340115" />
+      <entry key="W1" value="6.999984166984976" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.3159119820156047" />
+      <entry key="MS500" value="2.5636665159024576" />
+      <entry key="S2" value="4.177587086099288" />
+      <entry key="S5" value="5.432292274449125" />
+      <entry key="S10" value="6.111615272746574" />
+      <entry key="S30" value="6.676601182204908" />
+      <entry key="S60" value="6.834602494450012" />
+      <entry key="M2" value="6.9163534852256285" />
+      <entry key="M5" value="6.966310888276329" />
+      <entry key="M10" value="6.983116770015139" />
+      <entry key="M15" value="6.988735899990036" />
+      <entry key="M30" value="6.9943636385322465" />
+      <entry key="H1" value="6.99718074050209" />
+      <entry key="H2" value="6.998590100447661" />
+      <entry key="H4" value="6.999294982758931" />
+      <entry key="D1" value="6.999882487755172" />
+      <entry key="W1" value="6.999983212306937" />
+    </decayedShown>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/opt/homebrew/bin/php" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3GP9VeGWal9jy2KLjCbDQSYqT6Q" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{}</component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "axium-identity-final",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/ben/Documents/SIFO GROUP PROJETS/PACKAGE/recipes-contrib",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-php-predefined-a98d8de5180a-6bbb74dbab74-com.jetbrains.php.sharedIndexes-PS-261.25134.104" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f82ec2eb-84cd-4445-94bc-ab163947acde" name="Changes" comment="" />
+      <created>1783862361392</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1783862361392</updated>
+      <workItem from="1783862364665" duration="5839000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
 </project>
