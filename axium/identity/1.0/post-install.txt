@@ -1,0 +1,12 @@
+<bg=blue;fg=white> AXIUM Identity Bundle </>
+
+The bundle has been installed successfully.
+
+Add the following environment variables to your .env.local:
+
+AXIUM_IDENTITY_URL=https://identity.example.com
+AXIUM_CLIENT_ID=your-client-id
+AXIUM_CLIENT_SECRET=your-client-secret
+
+Documentation:
+https://github.com/BenjaminYAO/axium-identity
