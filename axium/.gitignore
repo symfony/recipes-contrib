@@ -1,2 +1,11 @@
+# macOS
 .DS_Store
 
+# IntelliJ / PhpStorm
+.idea/
+
+# Optionnel : tous les fichiers .idea où qu'ils soient
+**/.idea/
+
+# Optionnel : tous les .DS_Store où qu'ils soient
+**/.DS_Store
