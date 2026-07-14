@@ -7,6 +7,9 @@
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     },
+    "configurators": [
+        "Axium\\Identity\\Recipe\\SecurityConfigurator"
+    ],
     "env": {
         "AXIUM_IDENTITY_URL": "https://identity.example.com",
         "AXIUM_CLIENT_ID": "your-client-id",
