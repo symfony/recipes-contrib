@@ -9,4 +9,4 @@ AXIUM_CLIENT_ID=your-client-id
 AXIUM_CLIENT_SECRET=your-client-secret
 
 Documentation:
-https://github.com/BenjaminYAO/axium-identity
+https://gitlab.com/BenjaminYAO/axium-identity

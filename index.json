@@ -1,9 +1,0 @@
-{
-    "recipes": {
-        "axium/identity": {
-            "1.0": {
-                "recipe": "axium/identity/1.0"
-            }
-        }
-    }
-}

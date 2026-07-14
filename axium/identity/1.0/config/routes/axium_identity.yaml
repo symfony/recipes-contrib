@@ -1,9 +1,0 @@
-axium_identity_login:
-    path: /login
-    controller: Axium\Identity\Controller\SecurityController::login
-    methods: [GET, POST]
-
-axium_identity_logout:
-    path: /logout
-    controller: Axium\Identity\Controller\SecurityController::logout
-
