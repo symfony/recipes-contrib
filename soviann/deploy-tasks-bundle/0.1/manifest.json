@@ -1,0 +1,17 @@
+{
+    "bundles": {
+        "Soviann\\DeployTasksBundle\\SoviannDeployTasksBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "deploy/": "deploy/"
+    },
+    "copy-from-package": {
+        "bin/deploy-tasks-host.sh.dist": "%BIN_DIR%/deploy-tasks-host.sh"
+    },
+    "gitignore": [
+        "/.deploy-tasks-host.log",
+        "/.deploy-tasks-host.lock",
+        "/deploy-tasks-host.local.sh"
+    ]
+}
