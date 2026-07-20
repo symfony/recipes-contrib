@@ -627,6 +627,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sonata-project/page-bundle](https://packagist.org/packages/sonata-project/page-bundle) | [4.9](../../../tree/main/sonata-project/page-bundle/4.9) |
 | [sonata-project/translation-bundle](https://packagist.org/packages/sonata-project/translation-bundle) | [2.3](../../../tree/main/sonata-project/translation-bundle/2.3) |
 | [sonata-project/twig-extensions](https://packagist.org/packages/sonata-project/twig-extensions) | [1.2](../../../tree/main/sonata-project/twig-extensions/1.2) |
+| [soviann/deploy-tasks-bundle](https://packagist.org/packages/soviann/deploy-tasks-bundle) | [0.1](../../../tree/main/soviann/deploy-tasks-bundle/0.1) |
 | [spatie/symfony-ignition-bundle](https://packagist.org/packages/spatie/symfony-ignition-bundle) | [0.0](../../../tree/main/spatie/symfony-ignition-bundle/0.0) |
 | [specshaper/encrypt-bundle](https://packagist.org/packages/specshaper/encrypt-bundle) | [3.0](../../../tree/main/specshaper/encrypt-bundle/3.0) |
 | [spiechu/symfony-commons-bundle](https://packagist.org/packages/spiechu/symfony-commons-bundle) | [0.1](../../../tree/main/spiechu/symfony-commons-bundle/0.1) |

@@ -2011,6 +2011,9 @@
         "sonata-project/twig-extensions": [
             "1.2"
         ],
+        "soviann/deploy-tasks-bundle": [
+            "0.1"
+        ],
         "spatie/symfony-ignition-bundle": [
             "0.0"
         ],
