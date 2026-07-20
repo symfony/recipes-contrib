@@ -1,0 +1,5 @@
+axium_identity:
+    url: '%env(AXIUM_IDENTITY_URL)%'
+    client_id: '%env(AXIUM_CLIENT_ID)%'
+    client_secret: '%env(AXIUM_CLIENT_SECRET)%'
+    verify_ssl: false

@@ -1,0 +1,21 @@
+<bg=blue;fg=white> AXIUM Identity Bundle </>
+
+Le bundle a été installé avec succès.
+Ajoutez les variables d'environnement suivantes dans votre fichier `.env` :
+
+```env
+AXIUM_IDENTITY_URL=https://identity.example.com
+AXIUM_CLIENT_ID=your-client-id
+AXIUM_CLIENT_SECRET=your-client-secret
+
+## Configuration de sécurité
+
+Copiez le fichier d'exemple de configuration de sécurité :
+
+```bash
+cp config/packages/axium_identity_security.yaml.dist config/packages/security.yaml
+
+Puis adaptez la configuration selon les besoins de votre projet.
+
+Documentation:
+https://gitlab.com/BenjaminYAO/axium-identity

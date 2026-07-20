@@ -1,0 +1,26 @@
+security:
+    password_hashers:
+        Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: 'auto'
+
+    providers:
+        app_user_provider:
+            entity:
+                class: App\Entity\User
+                property: email
+
+    firewalls:
+        dev:
+            pattern: ^/(_profiler|_wdt|assets|build)/
+            security: false
+
+        main:
+            lazy: true
+            provider: app_user_provider
+            custom_authenticator:
+                - Axium\Identity\Security\IdentityAuthenticator
+            logout:
+                path: app_logout
+                target: app_login
+
+    access_control:
+        - { path: ^/dashboard, roles: ROLE_USER }

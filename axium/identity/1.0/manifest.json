@@ -1,0 +1,16 @@
+{
+    "bundles": {
+        "Axium\\Identity\\AxiumIdentityBundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "AXIUM_IDENTITY_URL": "https://identity.example.com",
+        "AXIUM_CLIENT_ID": "your-client-id",
+        "AXIUM_CLIENT_SECRET": "your-client-secret"
+    }
+}
+
