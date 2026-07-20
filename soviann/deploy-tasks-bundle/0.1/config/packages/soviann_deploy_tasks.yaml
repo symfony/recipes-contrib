@@ -1,0 +1,7 @@
+soviann_deploy_tasks:
+    storage:
+        type: filesystem
+        filesystem:
+            path: '%kernel.project_dir%/var/deploy-tasks'
+
+    # Full reference: vendor/soviann/deploy-tasks-bundle/docs/
