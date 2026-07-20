@@ -151,6 +151,9 @@
         "aws/aws-sdk-php-symfony": [
             "1.3"
         ],
+        "axium/identity": [
+            "1.0"
+        ],
         "aziz403/ux-datatable": [
             "1.0"
         ],

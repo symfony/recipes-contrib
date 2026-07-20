@@ -52,6 +52,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [async-aws/async-aws-bundle](https://packagist.org/packages/async-aws/async-aws-bundle) | [1.0](../../../tree/main/async-aws/async-aws-bundle/1.0) |
 | [atlas/symfony](https://packagist.org/packages/atlas/symfony) | [1.0](../../../tree/main/atlas/symfony/1.0) |
 | [aws/aws-sdk-php-symfony](https://packagist.org/packages/aws/aws-sdk-php-symfony) | [1.3](../../../tree/main/aws/aws-sdk-php-symfony/1.3) |
+| [axium/identity](https://packagist.org/packages/axium/identity) | [1.0](../../../tree/main/axium/identity/1.0) |
 | [aziz403/ux-datatable](https://packagist.org/packages/aziz403/ux-datatable) | [1.0](../../../tree/main/aziz403/ux-datatable/1.0) |
 | [aziz403/ux-zoom](https://packagist.org/packages/aziz403/ux-zoom) | [1.0](../../../tree/main/aziz403/ux-zoom/1.0) |
 | [bab/tested-routes-checker-bundle](https://packagist.org/packages/bab/tested-routes-checker-bundle) | [1.0](../../../tree/main/bab/tested-routes-checker-bundle/1.0) |
