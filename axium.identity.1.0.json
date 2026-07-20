@@ -1,0 +1,90 @@
+{
+    "manifests": {
+        "axium/identity": {
+            "manifest": {
+                "bundles": {
+                    "Axium\\Identity\\AxiumIdentityBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "AXIUM_IDENTITY_URL": "https://identity.example.com",
+                    "AXIUM_CLIENT_ID": "your-client-id",
+                    "AXIUM_CLIENT_SECRET": "your-client-secret"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white> AXIUM Identity Bundle </>",
+                    "",
+                    "Le bundle a \u00e9t\u00e9 install\u00e9 avec succ\u00e8s.",
+                    "Ajoutez les variables d'environnement suivantes dans votre fichier `.env` :",
+                    "",
+                    "```env",
+                    "AXIUM_IDENTITY_URL=https://identity.example.com",
+                    "AXIUM_CLIENT_ID=your-client-id",
+                    "AXIUM_CLIENT_SECRET=your-client-secret",
+                    "",
+                    "## Configuration de s\u00e9curit\u00e9",
+                    "",
+                    "Copiez le fichier d'exemple de configuration de s\u00e9curit\u00e9 :",
+                    "",
+                    "```bash",
+                    "cp config/packages/axium_identity_security.yaml.dist config/packages/security.yaml",
+                    "",
+                    "Puis adaptez la configuration selon les besoins de votre projet.",
+                    "",
+                    "Documentation:",
+                    "https://gitlab.com/BenjaminYAO/axium-identity"
+                ]
+            },
+            "files": {
+                "config/packages/axium_identity.yaml": {
+                    "contents": [
+                        "axium_identity:",
+                        "    url: '%env(AXIUM_IDENTITY_URL)%'",
+                        "    client_id: '%env(AXIUM_CLIENT_ID)%'",
+                        "    client_secret: '%env(AXIUM_CLIENT_SECRET)%'",
+                        "    verify_ssl: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/axium_identity_security.yaml.dist": {
+                    "contents": [
+                        "security:",
+                        "    password_hashers:",
+                        "        Symfony\\Component\\Security\\Core\\User\\PasswordAuthenticatedUserInterface: 'auto'",
+                        "",
+                        "    providers:",
+                        "        app_user_provider:",
+                        "            entity:",
+                        "                class: App\\Entity\\User",
+                        "                property: email",
+                        "",
+                        "    firewalls:",
+                        "        dev:",
+                        "            pattern: ^/(_profiler|_wdt|assets|build)/",
+                        "            security: false",
+                        "",
+                        "        main:",
+                        "            lazy: true",
+                        "            provider: app_user_provider",
+                        "            custom_authenticator:",
+                        "                - Axium\\Identity\\Security\\IdentityAuthenticator",
+                        "            logout:",
+                        "                path: app_logout",
+                        "                target: app_login",
+                        "",
+                        "    access_control:",
+                        "        - { path: ^/dashboard, roles: ROLE_USER }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7120857f6e8e23a61f13ef48c8e1bf14af99ccb3"
+        }
+    }
+}
