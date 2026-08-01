@@ -1,0 +1,6 @@
+# Get your project's url and api_key from your Monitoring Webowi project's ingestion-key page
+# (GET /api/v1/projects/{uuid}/ingestion-key).
+symfony_monitoring:
+    url: '%env(MONITORING_WEBOWI_URL)%'
+    api_key: '%env(MONITORING_WEBOWI_API_KEY)%'
+    level: error

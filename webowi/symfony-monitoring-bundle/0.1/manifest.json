@@ -1,0 +1,26 @@
+{
+    "bundles": {
+        "Webowi\\SymfonyMonitoringBundle\\SymfonyMonitoringBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "MONITORING_WEBOWI_URL": "",
+        "MONITORING_WEBOWI_API_KEY": ""
+    },
+    "post-install-output": [
+        "A config/packages/symfony_monitoring.yaml file has been added with placeholder values.",
+        "",
+        "Set the MONITORING_WEBOWI_URL and MONITORING_WEBOWI_API_KEY environment variables,",
+        "or edit the file directly, using the url and api_key from your Monitoring Webowi",
+        "project's ingestion-key page (GET /api/v1/projects/{uuid}/ingestion-key).",
+        "",
+        "Running this app in Docker? 'localhost' inside your app's container does not reach",
+        "a Monitoring Webowi instance running in a sibling container/stack. Use",
+        "http://host.docker.internal:<port>/... (Docker Desktop on Mac/Windows) instead,",
+        "or the instance's container/service name if both stacks share a Docker network.",
+        "",
+        "No further wiring is needed — this bundle registers its own Monolog handler chain."
+    ]
+}
