@@ -1,0 +1,16 @@
+{
+    "manifests": {
+        "igor-php/igor-php": {
+            "manifest": {
+                "bundles": {
+                    "IgorPhp\\IgorBundle\\IgorPhpBundle": [
+                        "dev",
+                        "test"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "f4c5fd0eebb894d18a71e8ad14b7322c83a3436e"
+        }
+    }
+}
