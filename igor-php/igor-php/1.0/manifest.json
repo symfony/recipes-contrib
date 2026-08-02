@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "IgorPhp\\IgorBundle\\IgorPhpBundle": ["dev", "test"]
+    }
+}
