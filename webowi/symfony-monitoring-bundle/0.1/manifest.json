@@ -18,7 +18,7 @@
         "",
         "Running this app in Docker? 'localhost' inside your app's container does not reach",
         "a Monitoring Webowi instance running in a sibling container/stack. Use",
-        "http://host.docker.internal:<port>/... (Docker Desktop on Windows/Mac) instead,",
+        "http://host.docker.internal:<port>/... (Docker Desktop on Mac/Windows) instead,",
         "or the instance's container/service name if both stacks share a Docker network.",
         "",
         "No further wiring is needed — this bundle registers its own Monolog handler chain."
