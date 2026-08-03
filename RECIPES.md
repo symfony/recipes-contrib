@@ -743,6 +743,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [wandi/mailer-bundle](https://packagist.org/packages/wandi/mailer-bundle) | [1.0](../../../tree/main/wandi/mailer-bundle/1.0) |
 | [web-auth/webauthn-symfony-bundle](https://packagist.org/packages/web-auth/webauthn-symfony-bundle) | [3.0](../../../tree/main/web-auth/webauthn-symfony-bundle/3.0) |
 | [webinarium/symfony-lazysec](https://packagist.org/packages/webinarium/symfony-lazysec) | [2.3](../../../tree/main/webinarium/symfony-lazysec/2.3) |
+| [webowi/symfony-monitoring-bundle](https://packagist.org/packages/webowi/symfony-monitoring-bundle) | [0.1](../../../tree/main/webowi/symfony-monitoring-bundle/0.1) |
 | [webylum/puppeteer-server-client-bundle](https://packagist.org/packages/webylum/puppeteer-server-client-bundle) | [1.2](../../../tree/main/webylum/puppeteer-server-client-bundle/1.2) |
 | [wedrix/watchtower-bundle](https://packagist.org/packages/wedrix/watchtower-bundle) | [2.0](../../../tree/main/wedrix/watchtower-bundle/2.0) |
 | [weglot/translate-bundle](https://packagist.org/packages/weglot/translate-bundle) | [0.6](../../../tree/main/weglot/translate-bundle/0.6) |

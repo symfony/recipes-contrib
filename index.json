@@ -2405,6 +2405,9 @@
             "2.1",
             "2.3"
         ],
+        "webowi/symfony-monitoring-bundle": [
+            "0.1"
+        ],
         "webylum/puppeteer-server-client-bundle": [
             "1.2"
         ],
