@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Siganushka\RegionBundle\Entity\AbstractRegion;
+use Siganushka\RegionBundle\Entity\Region as AbstractRegion;
 
 #[ORM\Entity]
 class Region extends AbstractRegion
