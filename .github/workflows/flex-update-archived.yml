@@ -4,4 +4,4 @@ on: [workflow_dispatch]
 
 jobs:
     call-flex-update:
-        uses: symfony/recipes/.github/workflows/callable-flex-update-archived.yml@main
+        uses: symfony/recipes/.github/workflows/callable-flex-update-archived.yml@a0f880a116fad71183707149d747cbde9ec89593 # main (2026-07-28)

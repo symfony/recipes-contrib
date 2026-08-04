@@ -10,4 +10,4 @@ defaults:
 
 jobs:
     call-flex-cleanup:
-        uses: symfony/recipes/.github/workflows/callable-flex-cleanup.yml@main
+        uses: symfony/recipes/.github/workflows/callable-flex-cleanup.yml@a0f880a116fad71183707149d747cbde9ec89593 # main (2026-07-28)
