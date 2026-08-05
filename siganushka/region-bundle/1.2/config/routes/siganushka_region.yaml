@@ -1,0 +1,3 @@
+siganushka_region:
+    resource: "@SiganushkaRegionBundle/config/routes.php"
+    stateless: true
