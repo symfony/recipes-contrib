@@ -2144,6 +2144,9 @@
         "swarrot/swarrot-bundle": [
             "1.6"
         ],
+        "sylius/admin-mcp-server-plugin": [
+            "0.1"
+        ],
         "sylius/admin-order-creation-plugin": [
             "0.6"
         ],

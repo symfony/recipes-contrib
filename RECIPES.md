@@ -666,6 +666,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [swag-industries/doctrine-domain-events](https://packagist.org/packages/swag-industries/doctrine-domain-events) | [3.1](../../../tree/main/swag-industries/doctrine-domain-events/3.1) |
 | [swag-industries/melodiia](https://packagist.org/packages/swag-industries/melodiia) | [0.7](../../../tree/main/swag-industries/melodiia/0.7) |
 | [swarrot/swarrot-bundle](https://packagist.org/packages/swarrot/swarrot-bundle) | [1.6](../../../tree/main/swarrot/swarrot-bundle/1.6) |
+| [sylius/admin-mcp-server-plugin](https://packagist.org/packages/sylius/admin-mcp-server-plugin) | [0.1](../../../tree/main/sylius/admin-mcp-server-plugin/0.1) |
 | [sylius/admin-order-creation-plugin](https://packagist.org/packages/sylius/admin-order-creation-plugin) | [0.6](../../../tree/main/sylius/admin-order-creation-plugin/0.6) |
 | [sylius/admin-ui](https://packagist.org/packages/sylius/admin-ui) | [0.4](../../../tree/main/sylius/admin-ui/0.4) |
 | [sylius/adyen-plugin](https://packagist.org/packages/sylius/adyen-plugin) | [2.0](../../../tree/main/sylius/adyen-plugin/2.0) |
