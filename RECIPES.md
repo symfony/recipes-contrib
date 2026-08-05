@@ -597,6 +597,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [shipmonk/doctrine-entity-preloader](https://packagist.org/packages/shipmonk/doctrine-entity-preloader) | [1.0](../../../tree/main/shipmonk/doctrine-entity-preloader/1.0) |
 | [shopware/app-bundle](https://packagist.org/packages/shopware/app-bundle) | [5.0](../../../tree/main/shopware/app-bundle/5.0) |
 | [siburuxue/doctrine-helper](https://packagist.org/packages/siburuxue/doctrine-helper) | [1.0](../../../tree/main/siburuxue/doctrine-helper/1.0) |
+| [siganushka/region-bundle](https://packagist.org/packages/siganushka/region-bundle) | [1.2](../../../tree/main/siganushka/region-bundle/1.2) |
 | [silasjoisten/sonata-multiupload-bundle](https://packagist.org/packages/silasjoisten/sonata-multiupload-bundle) | [3.4](../../../tree/main/silasjoisten/sonata-multiupload-bundle/3.4) |
 | [simply-stream/twitch-api-bundle](https://packagist.org/packages/simply-stream/twitch-api-bundle) | [0.1](../../../tree/main/simply-stream/twitch-api-bundle/0.1) |
 | [skipthedragon/inertia-bundle](https://packagist.org/packages/skipthedragon/inertia-bundle) | [1.0](../../../tree/main/skipthedragon/inertia-bundle/1.0) |
