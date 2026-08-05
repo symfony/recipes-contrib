@@ -1,0 +1,52 @@
+{
+    "manifests": {
+        "sylius/admin-mcp-server-plugin": {
+            "manifest": {
+                "bundles": {
+                    "League\\Bundle\\OAuth2ServerBundle\\LeagueOAuth2ServerBundle": [
+                        "all"
+                    ],
+                    "Symfony\\AI\\McpBundle\\McpBundle": [
+                        "all"
+                    ],
+                    "Sylius\\AdminMcpServerPlugin\\SyliusAdminMcpServerPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SYLIUS_ADMIN_MCP_SERVER_API_URL": "https://your-domain.com/api/v2/admin/",
+                    "SYLIUS_ADMIN_MCP_SERVER_API_EMAIL": "api@example.com",
+                    "SYLIUS_ADMIN_MCP_SERVER_API_PASSWORD": "your-api-password",
+                    "SYLIUS_ADMIN_MCP_SERVER_VERIFY_SSL": "true",
+                    "SYLIUS_ADMIN_MCP_SERVER_OAUTH_PRIVATE_KEY": "%kernel.project_dir%/config/jwt/mcp_private.pem",
+                    "SYLIUS_ADMIN_MCP_SERVER_OAUTH_PUBLIC_KEY": "%kernel.project_dir%/config/jwt/mcp_public.pem",
+                    "SYLIUS_ADMIN_MCP_SERVER_OAUTH_PASSPHRASE": "",
+                    "SYLIUS_ADMIN_MCP_SERVER_OAUTH_ENCRYPTION_KEY": "your-32-byte-hex-key-here"
+                }
+            },
+            "files": {
+                "config/packages/sylius_admin_mcp_server.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SyliusAdminMcpServerPlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sylius_admin_mcp_server.yaml": {
+                    "contents": [
+                        "sylius_admin_mcp_server:",
+                        "    resource: \"@SyliusAdminMcpServerPlugin/config/routes.yaml\"",
+                        "    type: yaml",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "49dd24b24c7bc34dc224ad3086d15497ee144a21"
+        }
+    }
+}
