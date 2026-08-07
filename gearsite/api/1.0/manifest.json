@@ -1,5 +1,5 @@
 {
     "bundles": {
-        "Gearsite\\Api\\GearsiteJSONAPIBundle": ["all"]
+        "Gearsite\\Api\\GearsiteJSONAPIBundle":["all"]
     }
 }
