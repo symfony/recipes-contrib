@@ -245,6 +245,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [friendsofsymfony/rest-bundle](https://packagist.org/packages/friendsofsymfony/rest-bundle) | [3.0](../../../tree/main/friendsofsymfony/rest-bundle/3.0) |
 | [fsi/files](https://packagist.org/packages/fsi/files) | [1.5](../../../tree/main/fsi/files/1.5) |
 | [galactic-shrine/gsid](https://packagist.org/packages/galactic-shrine/gsid) | [2.0](../../../tree/main/galactic-shrine/gsid/2.0) |
+| [gearsite/api](https://packagist.org/packages/gearsite/api) | [1.0](../../../tree/main/gearsite/api/1.0) |
 | [geekybones/fraud-defense-bundle](https://packagist.org/packages/geekybones/fraud-defense-bundle) | [1.0](../../../tree/main/geekybones/fraud-defense-bundle/1.0) |
 | [geosocio/http-serializer-bundle](https://packagist.org/packages/geosocio/http-serializer-bundle) | [2.0](../../../tree/main/geosocio/http-serializer-bundle/2.0) |
 | [gesdinet/jwt-refresh-token-bundle](https://packagist.org/packages/gesdinet/jwt-refresh-token-bundle) | [1.0](../../../tree/main/gesdinet/jwt-refresh-token-bundle/1.0) |

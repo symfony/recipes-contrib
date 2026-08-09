@@ -772,6 +772,9 @@
             "1.0",
             "2.0"
         ],
+        "gearsite/api": [
+            "1.0"
+        ],
         "geekybones/fraud-defense-bundle": [
             "1.0"
         ],

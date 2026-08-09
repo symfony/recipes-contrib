@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "gearsite/api": {
+            "manifest": {
+                "bundles": {
+                    "Gearsite\\Api\\GearsiteJSONAPIBundle": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "d27f1cf8c9cb809589701bb7fae533b8f6293c77"
+        }
+    }
+}
