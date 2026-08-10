@@ -1,0 +1,2 @@
+cyllene_digital_sylius_axepta_shop:
+    resource: "@CylleneDigitalSyliusAxeptaPlugin/config/routes/shop.yaml"
