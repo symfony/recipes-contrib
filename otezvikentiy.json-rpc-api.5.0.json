@@ -1,0 +1,68 @@
+{
+    "manifests": {
+        "otezvikentiy/json-rpc-api": {
+            "manifest": {
+                "bundles": {
+                    "OV\\JsonRPCAPIBundle\\OVJsonRPCAPIBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "composer-scripts": {
+                    "cache:clear": "symfony-cmd"
+                },
+                "env": {
+                    "OV_JSON_RPC_API_SWAGGER_PATH": "%PUBLIC_DIR%/openapi/",
+                    "OV_JSON_RPC_API_BASE_URL": "http://localhost",
+                    "OV_JSON_RPC_API_TEST_URL": "http://localhost",
+                    "OV_JSON_RPC_API_AUTH_TOKEN": ""
+                }
+            },
+            "files": {
+                "config/packages/ov_json_rpc_api.yaml": {
+                    "contents": [
+                        "ov_json_rpc_api:",
+                        "    # CORS whitelist. Empty by default: cross-origin browser requests receive",
+                        "    # no Access-Control-Allow-Origin header until you list your origins here.",
+                        "    # Use ['*'] only if the API is deliberately public.",
+                        "    # access_control_allow_origin_list:",
+                        "    #     - 'https://app.example.com'",
+                        "",
+                        "    swagger:",
+                        "        api_v1:",
+                        "            api_version: '1'",
+                        "            base_path: '%env(string:OV_JSON_RPC_API_BASE_URL)%'",
+                        "            base_path_description: 'Production server'",
+                        "            test_path: '%env(string:OV_JSON_RPC_API_TEST_URL)%'",
+                        "            test_path_description: 'Sandbox server'",
+                        "            auth_token_name: 'X-AUTH-TOKEN'",
+                        "            auth_token_test_value: '%env(string:OV_JSON_RPC_API_AUTH_TOKEN)%' # set blank for prod environment",
+                        "            info:",
+                        "                title: 'My API'",
+                        "                description: 'JSON-RPC 2.0 API'",
+                        "                terms_of_service_url: 'https://example.com/tos'",
+                        "                contact:",
+                        "                    name: 'Support'",
+                        "                    url: 'https://example.com'",
+                        "                    email: 'support@example.com'",
+                        "                license: 'MIT'",
+                        "                licenseUrl: 'https://opensource.org/licenses/MIT'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/ov_json_rpc_api.yaml": {
+                    "contents": [
+                        "ov_json_rpc_api:",
+                        "    resource: '@OVJsonRPCAPIBundle/config/routes/routes.yaml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "7991443b77b76ff0a9e72d6f4050c364041d317e"
+        }
+    }
+}
