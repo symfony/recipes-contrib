@@ -131,6 +131,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [crayner/authenticate-bundle](https://packagist.org/packages/crayner/authenticate-bundle) | [1.0](../../../tree/main/crayner/authenticate-bundle/1.0) |
 | [csa/guzzle-bundle](https://packagist.org/packages/csa/guzzle-bundle) | [3.0](../../../tree/main/csa/guzzle-bundle/3.0) |
 | [cyberomulus/sitemap-generator-bundle](https://packagist.org/packages/cyberomulus/sitemap-generator-bundle) | [1.2](../../../tree/main/cyberomulus/sitemap-generator-bundle/1.2) |
+| [cyllene-digital/sylius-axepta-plugin](https://packagist.org/packages/cyllene-digital/sylius-axepta-plugin) | [1.0](../../../tree/main/cyllene-digital/sylius-axepta-plugin/1.0) |
 | [dahromy/glide-symfony](https://packagist.org/packages/dahromy/glide-symfony) | [1.0](../../../tree/main/dahromy/glide-symfony/1.0) |
 | [dahromy/mvola-bundle](https://packagist.org/packages/dahromy/mvola-bundle) | [1.0](../../../tree/main/dahromy/mvola-bundle/1.0) |
 | [dama/doctrine-test-bundle](https://packagist.org/packages/dama/doctrine-test-bundle) | [8.3](../../../tree/main/dama/doctrine-test-bundle/8.3) |

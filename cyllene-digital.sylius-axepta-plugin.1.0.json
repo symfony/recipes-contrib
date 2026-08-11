@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "cyllene-digital/sylius-axepta-plugin": {
+            "manifest": {
+                "bundles": {
+                    "CylleneDigital\\SyliusAxeptaPlugin\\CylleneDigitalSyliusAxeptaPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  <fg=blue;options=bold>Sylius Axepta BNP Paribas Plugin</> is installed.",
+                    "",
+                    "  <options=bold>Two steps are left, and skipping either breaks payments without an error message:</>",
+                    "",
+                    "    1. Generate the payment encryption key, unless your project already has one:",
+                    "",
+                    "       <comment>bin/console sylius:payment:generate-key</>",
+                    "",
+                    "       Back that key up separately from the database: together they protect nothing, and losing it",
+                    "       makes the configuration of your payment methods unrecoverable.",
+                    "",
+                    "    2. Declare your trusted proxies in <comment>%CONFIG_DIR%/packages/framework.yaml</>, including",
+                    "       <comment>x-forwarded-host</>. Symfony does not trust that header by default, and it is the",
+                    "       only one carrying the public domain. Without it you hand the bank URLs it cannot reach, the",
+                    "       notification never arrives, and the order stays unpaid although the customer has paid.",
+                    "",
+                    "  Then create the payment method: <comment>Configuration > Payment methods > Create</>, gateway",
+                    "  \"Axepta - BNP Paribas\".",
+                    "",
+                    "  Documentation: https://github.com/CylleneDigital/SyliusAxeptaPlugin/blob/main/docs/installation.md"
+                ]
+            },
+            "files": {
+                "config/routes/cyllene_digital_sylius_axepta.yaml": {
+                    "contents": [
+                        "cyllene_digital_sylius_axepta_shop:",
+                        "    resource: \"@CylleneDigitalSyliusAxeptaPlugin/config/routes/shop.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "bb18902db5534be33006e7f18a339595a62ee43b"
+        }
+    }
+}
