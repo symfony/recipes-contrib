@@ -1,0 +1,2 @@
+siganushka_region:
+    region_class: App\Entity\Region
