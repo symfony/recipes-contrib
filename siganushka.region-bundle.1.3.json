@@ -1,0 +1,47 @@
+{
+    "manifests": {
+        "siganushka/region-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Siganushka\\RegionBundle\\SiganushkaRegionBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/siganushka_region.yaml": {
+                    "contents": [
+                        "siganushka_region:",
+                        "    region_class: App\\Entity\\Region",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Entity/Region.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "declare(strict_types=1);",
+                        "",
+                        "namespace App\\Entity;",
+                        "",
+                        "use Doctrine\\ORM\\Mapping as ORM;",
+                        "use Siganushka\\RegionBundle\\Entity\\AbstractRegion;",
+                        "",
+                        "#[ORM\\Entity]",
+                        "class Region extends AbstractRegion",
+                        "{",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0c4ac10cc4ec60a49dfbbe235145b16c8727f26c"
+        }
+    }
+}
