@@ -1599,7 +1599,8 @@
             "0.1"
         ],
         "otezvikentiy/json-rpc-api": [
-            "1.7"
+            "1.7",
+            "5.0"
         ],
         "otobul/epaybg-bundle": [
             "1.0"

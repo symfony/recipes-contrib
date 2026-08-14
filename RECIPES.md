@@ -502,7 +502,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [oskarstark/no-floc-listener](https://packagist.org/packages/oskarstark/no-floc-listener) | [0.1](../../../tree/main/oskarstark/no-floc-listener/0.1) |
 | [oskarstark/readable-filesize-extension](https://packagist.org/packages/oskarstark/readable-filesize-extension) | [0.1](../../../tree/main/oskarstark/readable-filesize-extension/0.1) |
 | [oskarstark/symfony-http-responder](https://packagist.org/packages/oskarstark/symfony-http-responder) | [0.1](../../../tree/main/oskarstark/symfony-http-responder/0.1) |
-| [otezvikentiy/json-rpc-api](https://packagist.org/packages/otezvikentiy/json-rpc-api) | [1.7](../../../tree/main/otezvikentiy/json-rpc-api/1.7) |
+| [otezvikentiy/json-rpc-api](https://packagist.org/packages/otezvikentiy/json-rpc-api) | [5.0](../../../tree/main/otezvikentiy/json-rpc-api/5.0) |
 | [otobul/epaybg-bundle](https://packagist.org/packages/otobul/epaybg-bundle) | [1.0](../../../tree/main/otobul/epaybg-bundle/1.0) |
 | [outcomer/symfony-json-schema-validation](https://packagist.org/packages/outcomer/symfony-json-schema-validation) | [1.0](../../../tree/main/outcomer/symfony-json-schema-validation/1.0) |
 | [overblog/graphiql-bundle](https://packagist.org/packages/overblog/graphiql-bundle) | [0.1](../../../tree/main/overblog/graphiql-bundle/0.1) |
