@@ -722,7 +722,9 @@
         ],
         "fluffydiscord/roadrunner-symfony-bundle": [
             "2.3",
-            "3.0"
+            "3.0",
+            "7.0",
+            "7.1"
         ],
         "flux-se/sylius-payum-stripe-plugin": [
             "1.2",
