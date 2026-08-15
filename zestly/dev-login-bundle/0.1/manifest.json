@@ -1,0 +1,26 @@
+{
+    "bundles": {
+        "Zestly\\DevLoginBundle\\ZestlyDevLoginBundle": ["dev"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "post-install-output": [
+        "  * Dev login is ready. Start your server and open:",
+        "",
+        "      <fg=yellow>/_dev/login</>              list the identities you can become",
+        "      <fg=yellow>/_dev/login/{identifier}</> log in as one of them, no password",
+        "",
+        "  * List them from the console instead:",
+        "",
+        "      <fg=yellow>php bin/console dev:login</>",
+        "",
+        "  * Declare who shows up in that list in <comment>config/packages/dev/zestly_dev_login.yaml</>.",
+        "",
+        "  * This grants password-free login to any account your user provider accepts.",
+        "    It registers no services outside the dev environment, and its routes live in",
+        "    <comment>config/routes/dev/</> so they do not exist in a production router.",
+        "",
+        "  * Docs: <comment>https://github.com/ZestlyDigital/dev-login-bundle</>"
+    ]
+}
