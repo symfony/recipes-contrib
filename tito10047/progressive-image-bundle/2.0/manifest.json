@@ -15,7 +15,7 @@
         {
             "file": "assets/app.js",
             "content": "import './styles/progressive-image-custom.css';",
-            "position": "before_target",
+            "position": "after_target",
             "target": "import './styles/app.css';",
             "warn_if_missing": true
         }
