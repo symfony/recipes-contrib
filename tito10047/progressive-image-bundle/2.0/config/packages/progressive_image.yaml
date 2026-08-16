@@ -1,0 +1,40 @@
+# Documentation: https://pgi.blue/guide/getting-started
+progressive_image:
+    resolvers:
+        default:
+            type: chain
+            # If your project does NOT use Symfony UX AssetMapper (e.g. Webpack Encore),
+            # remove "asset_mapper_resolver" below and from this chain.
+            resolvers: ['asset_mapper_resolver', 'filesystem_resolver']
+        asset_mapper_resolver:
+            type: asset_mapper
+        filesystem_resolver:
+            type: filesystem
+            roots: ['%kernel.project_dir%/public']
+            allowUnresolvable: true
+
+    responsive_strategy:
+        grid:
+            framework: tailwind # or bootstrap, or custom
+        ratios:
+            landscape: '16/9'
+            portrait: '3/4'
+            square: '1/1'
+
+    generation:
+        # Switch to "async" once you've wired up a Messenger transport for it.
+        strategy: sync
+
+    variant_store:
+        storage: progressive_image.variant_storage
+
+services:
+    progressive_image.variant_storage.adapter:
+        class: League\Flysystem\Local\LocalFilesystemAdapter
+        arguments:
+            - '%kernel.project_dir%/public/media/pgi'
+
+    progressive_image.variant_storage:
+        class: League\Flysystem\Filesystem
+        arguments:
+            - '@progressive_image.variant_storage.adapter'

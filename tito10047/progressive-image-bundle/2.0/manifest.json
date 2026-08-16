@@ -1,0 +1,23 @@
+{
+    "bundles": {
+        "Tito10047\\ProgressiveImageBundle\\ProgressiveImageBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "gitignore": [
+        "/%PUBLIC_DIR%/media/pgi/"
+    ],
+    "composer-scripts": {
+        "progressive-image:generate-custom-css": "symfony-cmd"
+    },
+    "add-lines": [
+        {
+            "file": "assets/app.js",
+            "content": "import './styles/progressive-image-custom.css';",
+            "position": "before_target",
+            "target": "import './styles/app.css';",
+            "warn_if_missing": true
+        }
+    ]
+}

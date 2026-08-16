@@ -1,0 +1,12 @@
+  <fg=blue;options=bold>Progressive Image Bundle</> <fg=blue>is ready to use.</>
+    - The responsive breakpoint stylesheet was generated and imported into
+      <comment>assets/app.js</comment> automatically. Re-run
+      <comment>bin/console progressive-image:generate-custom-css</comment> whenever you
+      change <comment>responsive_strategy</comment>.
+    - Render your first image:
+      <comment><twig:pgi:Image src="{{ asset('images/hero.jpg') }}" alt="Hero" /></comment>
+    - If your project does <options=bold>not</> use Symfony UX AssetMapper (e.g. Webpack
+      Encore), remove <comment>asset_mapper_resolver</comment> from
+      <comment>%CONFIG_DIR%/packages/progressive_image.yaml</comment> and from the
+      <comment>default</comment> resolver chain.
+    - Full docs: <comment>https://pgi.blue/guide/getting-started</comment>
