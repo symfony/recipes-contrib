@@ -7,5 +7,9 @@
     },
     "env": {
         "SMS_TOOLS_DSN": "smstools://CLIENT_ID:CLIENT_SECRET@default?from=MyApp"
+    },
+    "conflict": {
+        "php": "<8.2",
+        "symfony/framework-bundle": "<7.4"
     }
 }
