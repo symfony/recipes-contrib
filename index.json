@@ -1,0 +1,27 @@
+{
+    "aliases": [],
+    "recipes": {
+        "gijsrommers/smstools-notifier": [
+            "0.2"
+        ]
+    },
+    "recipe-conflicts": {
+        "gijsrommers/smstools-notifier": {
+            "0.2": {
+                "php": "<8.1",
+                "symfony/framework-bundle": "<6.4"
+            }
+        }
+    },
+    "versions": [],
+    "branch": "main",
+    "is_contrib": true,
+    "_links": {
+        "repository": "github.com/symfony/recipes-contrib",
+        "origin_template": "{package}:{version}@github.com/symfony/recipes-contrib:main",
+        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes-contrib/flex/pull-2028/{package_dotted}.{version}.json",
+        "recipe_template_relative": "{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes-contrib/flex/pull-2028/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
+    }
+}
