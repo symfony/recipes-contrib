@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "GijsRommers\\SmstoolsNotifier\\SmstoolsNotifierBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "SMS_TOOLS_DSN": "smstools://CLIENT_ID:CLIENT_SECRET@default?from=MyApp"
+    }
+}
