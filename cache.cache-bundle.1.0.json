@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "cache/cache-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Cache\\CacheBundle\\CacheBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SESSION_CACHE_ENABLED": "true",
+                    "ROUTER_CACHE_ENABLED": "false"
+                }
+            },
+            "files": {
+                "config/packages/cache.yaml": {
+                    "contents": [
+                        "cache:",
+                        "    session:",
+                        "        enabled: \"%env(bool:SESSION_CACHE_ENABLED)%\"",
+                        "        service_id: \"cache.provider.default\"",
+                        "        use_tagging: true",
+                        "        ttl: 7200",
+                        "    router:",
+                        "        enabled: \"%env(bool:ROUTER_CACHE_ENABLED)%\"",
+                        "        service_id: \"cache.provider.default\"",
+                        "        ttl: 86400",
+                        "    logging:",
+                        "        enabled: \"%env(bool:APP_DEBUG)%\"",
+                        "        logger: \"logger\"",
+                        "        level: \"info\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "817d06a0a3bea320ef72beb249285c7988ee9566"
+        }
+    }
+}
