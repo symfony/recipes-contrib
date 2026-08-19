@@ -15,11 +15,11 @@
         "",
         "      <fg=yellow>php bin/console dev:login</>",
         "",
-        "  * Declare who shows up in that list in <comment>config/packages/dev/zestly_dev_login.yaml</>.",
+        "  * Declare who shows up in that list in <comment>config/packages/zestly_dev_login.yaml</>.",
         "",
         "  * This grants password-free login to any account your user provider accepts.",
-        "    It registers no services outside the dev environment, and its routes live in",
-        "    <comment>config/routes/dev/</> so they do not exist in a production router.",
+        "    It registers no services outside the dev environment, and its routes are imported",
+        "    under <comment>when@dev:</> so they do not exist in a production router.",
         "",
         "  * Docs: <comment>https://github.com/ZestlyDigital/dev-login-bundle</>"
     ]
