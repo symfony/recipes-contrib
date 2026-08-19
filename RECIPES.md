@@ -253,6 +253,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [gheb/configuration-converter-bundle](https://packagist.org/packages/gheb/configuration-converter-bundle) | [0.5](../../../tree/main/gheb/configuration-converter-bundle/0.5) |
 | [gheb/data-migrations-bundle](https://packagist.org/packages/gheb/data-migrations-bundle) | [1.3](../../../tree/main/gheb/data-migrations-bundle/1.3) |
 | [gheb/docusign-bundle](https://packagist.org/packages/gheb/docusign-bundle) | [5.0](../../../tree/main/gheb/docusign-bundle/5.0) |
+| [gijsrommers/smstools-notifier](https://packagist.org/packages/gijsrommers/smstools-notifier) | [0.2](../../../tree/main/gijsrommers/smstools-notifier/0.2) |
 | [goetas/twital-bundle](https://packagist.org/packages/goetas/twital-bundle) | [1.3](../../../tree/main/goetas/twital-bundle/1.3) |
 | [goksagun/scheduler-bundle](https://packagist.org/packages/goksagun/scheduler-bundle) | [1.0](../../../tree/main/goksagun/scheduler-bundle/1.0) |
 | [gonzakpo/websocket-bundle](https://packagist.org/packages/gonzakpo/websocket-bundle) | [1.0](../../../tree/main/gonzakpo/websocket-bundle/1.0) |

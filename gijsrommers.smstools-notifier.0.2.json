@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "gijsrommers/smstools-notifier": {
+            "manifest": {
+                "bundles": {
+                    "GijsRommers\\SmstoolsNotifier\\SmstoolsNotifierBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SMS_TOOLS_DSN": "smstools://CLIENT_ID:CLIENT_SECRET@default?from=MyApp"
+                },
+                "conflict": {
+                    "php": "<8.1",
+                    "symfony/framework-bundle": "<6.4"
+                }
+            },
+            "files": {
+                "config/packages/smstools_notifier.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    notifier:",
+                        "        texter_transports:",
+                        "            smstools: '%env(SMS_TOOLS_DSN)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9c2926c0715a90b4f02ad7bf1d23248d34b82a33"
+        }
+    }
+}
