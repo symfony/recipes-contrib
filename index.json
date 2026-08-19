@@ -2512,6 +2512,9 @@
         "zephyr/allmysms-bundle": [
             "1.0"
         ],
+        "zestly/dev-login-bundle": [
+            "0.1"
+        ],
         "zim32/symfony-tracing-core": [
             "1.0"
         ],

@@ -1,0 +1,70 @@
+{
+    "manifests": {
+        "zestly/dev-login-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Zestly\\DevLoginBundle\\ZestlyDevLoginBundle": [
+                        "dev"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * Dev login is ready. Start your server and open:",
+                    "",
+                    "      <fg=yellow>/_dev/login</>              list the identities you can become",
+                    "      <fg=yellow>/_dev/login/{identifier}</> log in as one of them, no password",
+                    "",
+                    "  * List them from the console instead:",
+                    "",
+                    "      <fg=yellow>php bin/console dev:login</>",
+                    "",
+                    "  * Declare who shows up in that list in <comment>config/packages/dev/zestly_dev_login.yaml</>.",
+                    "",
+                    "  * This grants password-free login to any account your user provider accepts.",
+                    "    It registers no services outside the dev environment, and its routes live in",
+                    "    <comment>config/routes/dev/</> so they do not exist in a production router.",
+                    "",
+                    "  * Docs: <comment>https://github.com/ZestlyDigital/dev-login-bundle</>"
+                ]
+            },
+            "files": {
+                "config/packages/dev/zestly_dev_login.yaml": {
+                    "contents": [
+                        "zestly_dev_login:",
+                        "    # The identities offered by GET /_dev/login and `bin/console dev:login`.",
+                        "    #",
+                        "    # There is no sensible default for this \u2014 it depends entirely on your fixtures \u2014 which is",
+                        "    # why it is the one setting this recipe writes. Everything else the bundle exposes already",
+                        "    # has a working default and is documented in the README.",
+                        "    #",
+                        "    # This is a convenience menu, not a whitelist: any identifier your application's user",
+                        "    # provider accepts will work, and listing one here grants nothing on its own.",
+                        "    #",
+                        "    # To build the list from your fixtures, a repository, or per-subdomain in a multi-tenant",
+                        "    # app, implement Zestly\\DevLoginBundle\\Identity\\IdentityProviderInterface and alias it \u2014",
+                        "    # it receives the current Request.",
+                        "    identities: []",
+                        "        # - { identifier: 'admin@example.com', label: 'Admin', roles: ['ROLE_ADMIN'] }",
+                        "        # - { identifier: 'user@example.com',  label: 'Regular user' }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/dev/zestly_dev_login.yaml": {
+                    "contents": [
+                        "# Dev login endpoints. Loaded only because this file lives in config/routes/dev/ \u2014 that is",
+                        "# one of the bundle's safety gates, so a production router never learns these paths exist.",
+                        "# If you move this file out of a dev-scoped directory, you remove that gate.",
+                        "zestly_dev_login:",
+                        "    resource: '@ZestlyDevLoginBundle/config/routes.php'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9d5bc77ad365e45a5f93a8520aad6ca8b4a976d1"
+        }
+    }
+}

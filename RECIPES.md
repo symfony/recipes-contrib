@@ -775,6 +775,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [zenstruck/signed-url-bundle](https://packagist.org/packages/zenstruck/signed-url-bundle) | [0.1](../../../tree/main/zenstruck/signed-url-bundle/0.1) |
 | [zenstruck/twig-service-bundle](https://packagist.org/packages/zenstruck/twig-service-bundle) | [0.2](../../../tree/main/zenstruck/twig-service-bundle/0.2) |
 | [zephyr/allmysms-bundle](https://packagist.org/packages/zephyr/allmysms-bundle) | [1.0](../../../tree/main/zephyr/allmysms-bundle/1.0) |
+| [zestly/dev-login-bundle](https://packagist.org/packages/zestly/dev-login-bundle) | [0.1](../../../tree/main/zestly/dev-login-bundle/0.1) |
 | [zim32/symfony-tracing-core](https://packagist.org/packages/zim32/symfony-tracing-core) | [1.0](../../../tree/main/zim32/symfony-tracing-core/1.0) |
 | [zim32/symfony-tracing-http-client](https://packagist.org/packages/zim32/symfony-tracing-http-client) | [1.0](../../../tree/main/zim32/symfony-tracing-http-client/1.0) |
 | [zim32/symfony-tracing-orm](https://packagist.org/packages/zim32/symfony-tracing-orm) | [1.0](../../../tree/main/zim32/symfony-tracing-orm/1.0) |
