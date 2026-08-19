@@ -1,0 +1,5 @@
+# Dev login endpoints. The `when@dev:` guard is one of the bundle's safety gates — a production
+# router never learns these paths exist. Drop the guard and you drop that gate.
+when@dev:
+    zestly_dev_login:
+        resource: '@ZestlyDevLoginBundle/config/routes.php'

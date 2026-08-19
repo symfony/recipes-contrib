@@ -1,5 +1,0 @@
-# Dev login endpoints. Loaded only because this file lives in config/routes/dev/ — that is
-# one of the bundle's safety gates, so a production router never learns these paths exist.
-# If you move this file out of a dev-scoped directory, you remove that gate.
-zestly_dev_login:
-    resource: '@ZestlyDevLoginBundle/config/routes.php'
