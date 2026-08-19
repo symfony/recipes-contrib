@@ -1,0 +1,102 @@
+{
+    "manifests": {
+        "tito10047/progressive-image-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Tito10047\\ProgressiveImageBundle\\ProgressiveImageBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "gitignore": [
+                    "/%PUBLIC_DIR%/media/pgi/"
+                ],
+                "composer-scripts": {
+                    "progressive-image:generate-custom-css": "symfony-cmd"
+                },
+                "add-lines": [
+                    {
+                        "file": "assets/app.js",
+                        "content": "import './styles/progressive-image-custom.css';",
+                        "position": "after_target",
+                        "target": "import './styles/app.css';",
+                        "warn_if_missing": true
+                    }
+                ],
+                "post-install-output": [
+                    "  <fg=blue;options=bold>Progressive Image Bundle</> <fg=blue>is ready to use.</>",
+                    "    - The responsive breakpoint stylesheet was generated and imported into",
+                    "      <comment>assets/app.js</comment> automatically. Re-run",
+                    "      <comment>bin/console progressive-image:generate-custom-css</comment> whenever you",
+                    "      change <comment>responsive_strategy</comment>.",
+                    "    - Render your first image:",
+                    "      <comment><twig:pgi:Image src=\"{{ asset('images/hero.jpg') }}\" alt=\"Hero\" /></comment>",
+                    "    - If your project does <options=bold>not</> use Symfony UX AssetMapper (e.g. Webpack",
+                    "      Encore), remove <comment>asset_mapper_resolver</comment> from",
+                    "      <comment>%CONFIG_DIR%/packages/progressive_image.yaml</comment> and from the",
+                    "      <comment>default</comment> resolver chain.",
+                    "    - Full docs: <comment>https://pgi.blue/guide/getting-started</comment>"
+                ]
+            },
+            "files": {
+                "config/packages/progressive_image.yaml": {
+                    "contents": [
+                        "# Documentation: https://pgi.blue/guide/getting-started",
+                        "progressive_image:",
+                        "    resolvers:",
+                        "        default:",
+                        "            type: chain",
+                        "            # If your project does NOT use Symfony UX AssetMapper (e.g. Webpack Encore),",
+                        "            # remove \"asset_mapper_resolver\" below and from this chain.",
+                        "            resolvers: ['asset_mapper_resolver', 'filesystem_resolver']",
+                        "        asset_mapper_resolver:",
+                        "            type: asset_mapper",
+                        "        filesystem_resolver:",
+                        "            type: filesystem",
+                        "            roots: ['%kernel.project_dir%/public']",
+                        "            allowUnresolvable: true",
+                        "",
+                        "    responsive_strategy:",
+                        "        grid:",
+                        "            framework: tailwind # or bootstrap, or custom",
+                        "        ratios:",
+                        "            landscape: '16/9'",
+                        "            portrait: '3/4'",
+                        "            square: '1/1'",
+                        "",
+                        "    generation:",
+                        "        # Switch to \"async\" once you've wired up a Messenger transport for it.",
+                        "        strategy: sync",
+                        "",
+                        "    variant_store:",
+                        "        storage: progressive_image.variant_storage",
+                        "",
+                        "services:",
+                        "    progressive_image.variant_storage.adapter:",
+                        "        class: League\\Flysystem\\Local\\LocalFilesystemAdapter",
+                        "        arguments:",
+                        "            - '%kernel.project_dir%/public/media/pgi'",
+                        "",
+                        "    progressive_image.variant_storage:",
+                        "        class: League\\Flysystem\\Filesystem",
+                        "        arguments:",
+                        "            - '@progressive_image.variant_storage.adapter'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/progressive_image.yaml": {
+                    "contents": [
+                        "progressive_image:",
+                        "    resource: \"@ProgressiveImageBundle/config/routes.php\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "65d38320c72068a8ecad71db6de32ec08691835c"
+        }
+    }
+}
