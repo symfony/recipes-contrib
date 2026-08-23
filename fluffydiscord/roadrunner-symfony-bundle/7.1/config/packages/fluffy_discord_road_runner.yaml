@@ -94,3 +94,12 @@ fluffy_discord_road_runner:
         # for end-to-end encryption. "sodium" php extension is required.
         # https://docs.roadrunner.dev/key-value/overview-kv#end-to-end-value-encryption
         keypair_path: bin/keypair.key
+
+when@dev:
+    fluffy_discord_road_runner:
+        # The shipped .rr.yaml runs the pool with "debug: true" (a fresh PHP process per request).
+        # Since v7.1.2 the bundle detects that and skips warmup by itself; this keeps it explicit.
+        # Warming a throwaway process only adds boot latency, and replaying compiled Twig templates
+        # early-binds their classes, so Twig would keep serving a template you just edited.
+        warmup:
+            enabled: false
