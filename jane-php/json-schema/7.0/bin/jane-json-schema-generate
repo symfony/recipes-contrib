@@ -6,10 +6,18 @@ require __DIR__ . '/../vendor/autoload.php';
 use Jane\Component\JsonSchema\Console\Command\GenerateCommand;
 use Jane\Component\JsonSchema\Console\Loader\ConfigLoader;
 use Jane\Component\JsonSchema\Console\Loader\SchemaLoader;
+use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Input\ArrayInput;
-use Symfony\Component\Console\Output\NullOutput;
+use Symfony\Component\Console\Output\ConsoleOutput;
 
 $command = new GenerateCommand(new ConfigLoader(), new SchemaLoader());
 $inputArray = new ArrayInput(['--config-file' => __DIR__ . '/../config/jane/json_schema.php'], $command->getDefinition());
+$output = new ConsoleOutput();
 
-$command->execute($inputArray, new NullOutput());
+try {
+    exit($command->execute($inputArray, $output));
+} catch (\Throwable $throwable) {
+    (new Application())->renderThrowable($throwable, $output->getErrorOutput());
+
+    exit(1);
+}
