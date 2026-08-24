@@ -1,0 +1,89 @@
+{
+    "manifests": {
+        "jane-php/json-schema": {
+            "manifest": {
+                "copy-from-recipe": {
+                    "bin/": "%BIN_DIR%/",
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Finish</> package configuration:",
+                    "    1. Configure <comment>config/jane/config.php</> with your specification details",
+                    "    2. Run <comment>bin/jane-generate</>",
+                    "    3. Add <comment>generated/</> directory to your composer autoload definition (eg. <comment>\"MyApp\\\\Library\\\\Generated\\\\\": \"generated/\"</>)",
+                    "    4. Open <comment>config/packages/jane.yaml</> and replace <comment>MyApp\\Library\\Generated\\Normalizer\\JaneObjectNormalizer</> class with your generated normalizer.",
+                    "    5. Then remove line comments",
+                    "",
+                    "Documentation: https://jane.readthedocs.io/en/latest/"
+                ]
+            },
+            "files": {
+                "bin/jane-generate": {
+                    "contents": [
+                        "#!/usr/bin/env php",
+                        "<?php",
+                        "",
+                        "require __DIR__ . '/../vendor/autoload.php';",
+                        "",
+                        "use Jane\\JsonSchema\\Command\\GenerateCommand;",
+                        "use Symfony\\Component\\Console\\Input\\ArrayInput;",
+                        "use Symfony\\Component\\Console\\Output\\NullOutput;",
+                        "",
+                        "$command = new GenerateCommand();",
+                        "$inputArray = new ArrayInput(['--config-file' => __DIR__ . '/../config/jane/config.php'], $command->getDefinition());",
+                        "",
+                        "$command->execute($inputArray, new NullOutput());",
+                        ""
+                    ],
+                    "executable": true
+                },
+                "config/jane/config.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "return [",
+                        "    'json-schema-file' => __DIR__ . '/json-schema.json',",
+                        "    'root-class' => 'MyModel',",
+                        "    'namespace' => 'MyApp\\Library\\Generated',",
+                        "    'directory' => __DIR__ . '/../../generated',",
+                        "];",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/jane.yaml": {
+                    "contents": [
+                        "services:",
+                        "    jane.serializer.json_encode:",
+                        "        class: Symfony\\Component\\Serializer\\Encoder\\JsonEncode",
+                        "        arguments:",
+                        "            - { json_encode_options: 64 } # \\JSON_UNESCAPED_SLASHES",
+                        "",
+                        "    jane.serializer.json_decode:",
+                        "        class: Symfony\\Component\\Serializer\\Encoder\\JsonDecode",
+                        "        arguments:",
+                        "            - { json_decode_associative: false }",
+                        "",
+                        "    jane.serializer.json_encoder:",
+                        "        class: Symfony\\Component\\Serializer\\Encoder\\JsonEncoder",
+                        "        arguments:",
+                        "            - '@jane.serializer.json_encode'",
+                        "            - '@jane.serializer.json_decode'",
+                        "",
+                        "#    jane.serializer.object:",
+                        "#        class: MyApp\\Library\\Generated\\Normalizer\\JaneObjectNormalizer",
+                        "#",
+                        "#    jane.serializer:",
+                        "#        class: Symfony\\Component\\Serializer\\Serializer",
+                        "#        arguments:",
+                        "#            - ['@serializer.denormalizer.array', '@jane.serializer.object']",
+                        "#            - ['@jane.serializer.json_encoder']",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3767579880e8b47f87deb6256339291e25a90378"
+        }
+    }
+}

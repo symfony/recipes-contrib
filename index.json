@@ -1,0 +1,43 @@
+{
+    "aliases": [],
+    "recipes": {
+        "jane-php/json-schema": [
+            "5.0",
+            "6.0",
+            "7.0"
+        ],
+        "jane-php/open-api-common": [
+            "6.0",
+            "7.0"
+        ]
+    },
+    "recipe-conflicts": {
+        "jane-php/json-schema": {
+            "6.0": {
+                "symfony/symfony": "<5.0"
+            },
+            "7.0": {
+                "symfony/symfony": "<5.0"
+            }
+        },
+        "jane-php/open-api-common": {
+            "6.0": {
+                "symfony/symfony": "<5.0"
+            },
+            "7.0": {
+                "symfony/symfony": "<5.0"
+            }
+        }
+    },
+    "versions": [],
+    "branch": "main",
+    "is_contrib": true,
+    "_links": {
+        "repository": "github.com/symfony/recipes-contrib",
+        "origin_template": "{package}:{version}@github.com/symfony/recipes-contrib:main",
+        "recipe_template": "https://raw.githubusercontent.com/symfony/recipes-contrib/flex/pull-2033/{package_dotted}.{version}.json",
+        "recipe_template_relative": "{package_dotted}.{version}.json",
+        "archived_recipes_template": "https://raw.githubusercontent.com/symfony/recipes-contrib/flex/pull-2033/archived/{package_dotted}/{ref}.json",
+        "archived_recipes_template_relative": "archived/{package_dotted}/{ref}.json"
+    }
+}
