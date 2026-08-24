@@ -5,4 +5,4 @@
     4. Run <comment>bin/jane-open-api-generate</>
     5. Once generation succeeded, uncomment the service in <comment>config/packages/jane.yaml</> to enable autowiring of the generated normalizer
 
-Documentation: https://jane.readthedocs.io/en/latest/
+Documentation: https://jane.jolicode.com/latest/

@@ -11,7 +11,7 @@
  *   PSR-4 mapping you add to your composer.json autoload section.
  * - "directory": target directory for the generated files.
  *
- * See https://jane.readthedocs.io/en/latest/ for all available options.
+ * See https://jane.jolicode.com/latest/ for all available options.
  */
 
 return [
