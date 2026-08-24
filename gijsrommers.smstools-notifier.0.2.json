@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "gijsrommers/smstools-notifier": {
+            "manifest": {
+                "bundles": {
+                    "GijsRommers\\SmstoolsNotifier\\SmstoolsNotifierBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SMS_TOOLS_DSN": "smstools://CLIENT_ID:CLIENT_SECRET@default?from=MyApp"
+                }
+            },
+            "files": {
+                "config/packages/smstools_notifier.yaml": {
+                    "contents": [
+                        "framework:",
+                        "    notifier:",
+                        "        texter_transports:",
+                        "            smstools: '%env(SMS_TOOLS_DSN)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3f7c371c92f9f08c8aabd620899290f6291089ec"
+        }
+    }
+}
