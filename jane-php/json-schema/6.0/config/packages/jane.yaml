@@ -3,4 +3,7 @@ services:
         autowire: true
         autoconfigure: true
 
+    # Uncomment the line below once you have generated your code to autowire
+    # the generated normalizers (and the models using them). The namespace
+    # must match the "namespace" key of your config/jane/*.php config file.
 #    MyApp\Library\Generated\Normalizer\JaneObjectNormalizer: null

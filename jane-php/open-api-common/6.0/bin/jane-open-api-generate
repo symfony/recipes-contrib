@@ -4,13 +4,21 @@
 require __DIR__ . '/../vendor/autoload.php';
 
 use Jane\OpenApiCommon\Console\Command\GenerateCommand;
-use Symfony\Component\Console\Input\ArrayInput;
-use Symfony\Component\Console\Output\NullOutput;
 use Jane\OpenApiCommon\Console\Loader\ConfigLoader;
 use Jane\OpenApiCommon\Console\Loader\OpenApiMatcher;
 use Jane\OpenApiCommon\Console\Loader\SchemaLoader;
+use Symfony\Component\Console\Application;
+use Symfony\Component\Console\Input\ArrayInput;
+use Symfony\Component\Console\Output\ConsoleOutput;
 
 $command = new GenerateCommand(new ConfigLoader(), new SchemaLoader(), new OpenApiMatcher());
 $inputArray = new ArrayInput(['--config-file' => __DIR__ . '/../config/jane/open_api.php'], $command->getDefinition());
+$output = new ConsoleOutput();
 
-$command->execute($inputArray, new NullOutput());
+try {
+    exit($command->execute($inputArray, $output));
+} catch (\Throwable $throwable) {
+    (new Application())->renderThrowable($throwable, $output->getErrorOutput());
+
+    exit(1);
+}
