@@ -2,3 +2,27 @@ sulu_mcp:
     # Publicly reachable base URL of this Sulu installation. Together with mcp_path
     # it forms the OAuth issuer and the resource identifier of the discovery documents.
     server_url: '%env(SULU_MCP_SERVER_URL)%'
+
+# The two sections below configure other bundles. They live in this file rather than in
+# their own so they merge with whatever those bundles' recipes wrote, instead of taking
+# ownership of a file that is not ours.
+
+mcp:
+    http:
+        # DNS rebinding protection. Left unset it accepts localhost only, so a server
+        # reachable under its own domain answers every request with "403 Forbidden:
+        # Invalid Host header." after the OAuth handshake already succeeded, and without
+        # writing anything to the log. Hosts carry no port.
+        allowed_hosts:
+            - '%env(key:host:url:SULU_MCP_SERVER_URL)%'
+            - localhost
+            - 127.0.0.1
+            - '[::1]'
+
+league_oauth2_server:
+    scopes:
+        # `available` is contributed by SuluMcpBundle. `default` applies to clients that
+        # request no scope of their own, and league leaves it to the project. Scope lists
+        # are appended across files, so the entries the league recipe wrote stay; drop
+        # them there if the project does not use them.
+        default: ['mcp:tools', 'mcp:resources']
