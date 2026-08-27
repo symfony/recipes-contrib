@@ -1,0 +1,137 @@
+{
+    "manifests": {
+        "sulu/mcp-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Symfony\\AI\\McpBundle\\McpBundle": [
+                        "all"
+                    ],
+                    "Sulu\\Mcp\\Infrastructure\\Symfony\\HttpKernel\\SuluMcpBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SULU_MCP_SERVER_URL": "https://localhost"
+                },
+                "gitignore": [
+                    "/config/jwt/*.pem"
+                ],
+                "post-install-output": [
+                    "  <bg=blue;fg=white>              </>",
+                    "  <bg=blue;fg=white> What's next? </>",
+                    "  <bg=blue;fg=white>              </>",
+                    "",
+                    "  * Set <comment>SULU_MCP_SERVER_URL</> in <comment>.env.local</> to the public base URL of this installation.",
+                    "",
+                    "  * Generate the RSA key pair league/oauth2-server-bundle signs its tokens with,",
+                    "    and point the OAUTH_* variables at it. Without it every MCP request fails with",
+                    "    \"Invalid key supplied\":",
+                    "",
+                    "      mkdir -p config/jwt",
+                    "      openssl genrsa -aes128 -out config/jwt/private.pem 4096",
+                    "      openssl rsa -in config/jwt/private.pem -pubout -out config/jwt/public.pem",
+                    "",
+                    "  * The password and implicit grants of <comment>league/oauth2-server-bundle</> are deprecated while unset",
+                    "    and MCP does not use them. Turn them off in <comment>config/packages/league_oauth2_server.yaml</>:",
+                    "",
+                    "      league_oauth2_server:",
+                    "          authorization_server:",
+                    "              enable_password_grant: false",
+                    "              enable_implicit_grant: false",
+                    "",
+                    "  * Create the OAuth tables: <comment>bin/console doctrine:migrations:diff</> and <comment>migrate</>",
+                    "",
+                    "  * Declare the MCP firewall in <comment>config/packages/security.yaml</> BEFORE the admin firewall.",
+                    "    Both patterns match /admin/mcp and Symfony applies the first one in declaration order:",
+                    "",
+                    "      firewalls:",
+                    "          mcp:",
+                    "              pattern: ^/admin/mcp/?$",
+                    "              provider: sulu",
+                    "              stateless: true",
+                    "              entry_point: sulu_mcp.authentication_entry_point",
+                    "              oauth2: true",
+                    "          admin:",
+                    "              pattern: ^/admin(\\/|$)",
+                    "              # ...existing admin firewall...",
+                    "",
+                    "    The pattern is anchored on purpose: /admin/mcp/authorize and /admin/mcp/consent/...",
+                    "    need the logged-in Sulu user and must fall through to the admin firewall.",
+                    "    Let the client-authenticated endpoints through in <comment>access_control</>:",
+                    "",
+                    "      - { path: ^/\\.well-known/oauth-, roles: PUBLIC_ACCESS }",
+                    "      - { path: ^/admin/mcp/register$, roles: PUBLIC_ACCESS }",
+                    "      - { path: ^/admin/mcp/token$, roles: PUBLIC_ACCESS }",
+                    "      - { path: ^/admin/mcp/?$, roles: IS_AUTHENTICATED_FULLY }",
+                    "",
+                    "  * Create an OAuth client for hosted clients such as Claude.ai or ChatGPT:",
+                    "    <comment>bin/console sulu:mcp:create-client \"Claude.ai Production\"</>",
+                    "    Claude Code registers itself dynamically and needs no client up front.",
+                    "",
+                    "  * Full guide: <comment>https://github.com/sulu/SuluMcpBundle/blob/1.0/docs/configuration.md</>"
+                ]
+            },
+            "files": {
+                "config/packages/sulu_mcp.yaml": {
+                    "contents": [
+                        "sulu_mcp:",
+                        "    # Publicly reachable base URL of this Sulu installation. Together with mcp_path",
+                        "    # it forms the OAuth issuer and the resource identifier of the discovery documents.",
+                        "    server_url: '%env(SULU_MCP_SERVER_URL)%'",
+                        "",
+                        "# The two sections below configure other bundles. They live in this file rather than in",
+                        "# their own so they merge with whatever those bundles' recipes wrote, instead of taking",
+                        "# ownership of a file that is not ours.",
+                        "",
+                        "mcp:",
+                        "    http:",
+                        "        # DNS rebinding protection. Left unset it accepts localhost only, so a server",
+                        "        # reachable under its own domain answers every request with \"403 Forbidden:",
+                        "        # Invalid Host header.\" after the OAuth handshake already succeeded, and without",
+                        "        # writing anything to the log. Hosts carry no port.",
+                        "        allowed_hosts:",
+                        "            - '%env(key:host:url:SULU_MCP_SERVER_URL)%'",
+                        "            - localhost",
+                        "            - 127.0.0.1",
+                        "            - '[::1]'",
+                        "",
+                        "league_oauth2_server:",
+                        "    scopes:",
+                        "        # `available` is contributed by SuluMcpBundle. `default` applies to clients that",
+                        "        # request no scope of their own, and league leaves it to the project. Scope lists",
+                        "        # are appended across files, so the entries the league recipe wrote stay; drop",
+                        "        # them there if the project does not use them.",
+                        "        default: ['mcp:tools', 'mcp:resources']",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sulu_mcp.yaml": {
+                    "contents": [
+                        "# MCP transport endpoint, registered by symfony/mcp-bundle at the path configured",
+                        "# in config/packages/sulu_mcp.yaml. Declare it only once - a second \"type: mcp\"",
+                        "# entry makes the route loader fail.",
+                        "mcp:",
+                        "    resource: .",
+                        "    type: mcp",
+                        "",
+                        "# OAuth endpoints behind the admin prefix. The prefix must match mcp_path.",
+                        "sulu_mcp_admin:",
+                        "    resource: '@SuluMcpBundle/config/routing_admin.yaml'",
+                        "    prefix: /admin",
+                        "",
+                        "# RFC 8414 / RFC 9728 discovery documents, unprefixed in the host's /.well-known/ namespace.",
+                        "sulu_mcp_website:",
+                        "    resource: '@SuluMcpBundle/config/routing_website.yaml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "82ffa93812d4dff9e9d5673751749ddc8f65b46c"
+        }
+    }
+}
