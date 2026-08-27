@@ -1,0 +1,4 @@
+sulu_mcp:
+    # Publicly reachable base URL of this Sulu installation. Together with mcp_path
+    # it forms the OAuth issuer and the resource identifier of the discovery documents.
+    server_url: '%env(SULU_MCP_SERVER_URL)%'
