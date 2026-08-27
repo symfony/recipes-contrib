@@ -1,7 +1,11 @@
 {
     "bundles": {
-        "Symfony\\AI\\McpBundle\\McpBundle": ["all"],
-        "Sulu\\Mcp\\Infrastructure\\Symfony\\HttpKernel\\SuluMcpBundle": ["all"]
+        "Symfony\\AI\\McpBundle\\McpBundle": [
+            "all"
+        ],
+        "Sulu\\Mcp\\Infrastructure\\Symfony\\HttpKernel\\SuluMcpBundle": [
+            "all"
+        ]
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
@@ -40,6 +44,20 @@
         "              default: ['mcp:tools', 'mcp:resources']",
         "          persistence:",
         "              doctrine: ~",
+        "",
+        "  * If this installation is reachable under its own domain rather than localhost, name that",
+        "    host in <comment>config/packages/mcp.yaml</>. symfony/mcp-bundle keeps the MCP SDK's DNS rebinding",
+        "    protection, which accepts localhost only, so the server answers every request with",
+        "    \"403 Forbidden: Invalid Host header.\" after a successful OAuth handshake, and writes nothing",
+        "    to the log. Requires symfony/mcp-bundle 0.11 or higher:",
+        "",
+        "      mcp:",
+        "          http:",
+        "              allowed_hosts:",
+        "                  - '%env(key:host:url:SULU_MCP_SERVER_URL)%'",
+        "                  - localhost",
+        "                  - 127.0.0.1",
+        "                  - '[::1]'",
         "",
         "  * Create the OAuth tables: <comment>bin/console doctrine:migrations:diff</> and <comment>migrate</>",
         "",
