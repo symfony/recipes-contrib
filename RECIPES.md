@@ -652,6 +652,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sulu/automation-bundle](https://packagist.org/packages/sulu/automation-bundle) | [2.2](../../../tree/main/sulu/automation-bundle/2.2) |
 | [sulu/form-bundle](https://packagist.org/packages/sulu/form-bundle) | [3.0](../../../tree/main/sulu/form-bundle/3.0) |
 | [sulu/headless-bundle](https://packagist.org/packages/sulu/headless-bundle) | [3.0](../../../tree/main/sulu/headless-bundle/3.0) |
+| [sulu/mcp-bundle](https://packagist.org/packages/sulu/mcp-bundle) | [1.0](../../../tree/main/sulu/mcp-bundle/1.0) |
 | [sulu/redirect-bundle](https://packagist.org/packages/sulu/redirect-bundle) | [3.0](../../../tree/main/sulu/redirect-bundle/3.0) |
 | [sulu/sylius-consumer-bundle](https://packagist.org/packages/sulu/sylius-consumer-bundle) | [0.4](../../../tree/main/sulu/sylius-consumer-bundle/0.4) |
 | [sulu/sylius-producer-plugin](https://packagist.org/packages/sulu/sylius-producer-plugin) | [0.2](../../../tree/main/sulu/sylius-producer-plugin/0.2) |
