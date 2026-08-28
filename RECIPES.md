@@ -365,6 +365,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [letkode/form-schema-bundle](https://packagist.org/packages/letkode/form-schema-bundle) | [1.0](../../../tree/main/letkode/form-schema-bundle/1.0) |
 | [lexik/cron-file-generator-bundle](https://packagist.org/packages/lexik/cron-file-generator-bundle) | [1.0](../../../tree/main/lexik/cron-file-generator-bundle/1.0) |
 | [lexik/maintenance-bundle](https://packagist.org/packages/lexik/maintenance-bundle) | [2.1](../../../tree/main/lexik/maintenance-bundle/2.1) |
+| [lgarret/health-check-bundle](https://packagist.org/packages/lgarret/health-check-bundle) | [1.0](../../../tree/main/lgarret/health-check-bundle/1.0) |
 | [liip/imagine-bundle](https://packagist.org/packages/liip/imagine-bundle) | [1.8](../../../tree/main/liip/imagine-bundle/1.8) |
 | [liip/monitor-bundle](https://packagist.org/packages/liip/monitor-bundle) | [3.0](../../../tree/main/liip/monitor-bundle/3.0) |
 | [lireincore/imgcache-bundle](https://packagist.org/packages/lireincore/imgcache-bundle) | [0.1](../../../tree/main/lireincore/imgcache-bundle/0.1) |

@@ -1163,6 +1163,9 @@
         "lexik/maintenance-bundle": [
             "2.1"
         ],
+        "lgarret/health-check-bundle": [
+            "1.0"
+        ],
         "liip/imagine-bundle": [
             "1.8"
         ],

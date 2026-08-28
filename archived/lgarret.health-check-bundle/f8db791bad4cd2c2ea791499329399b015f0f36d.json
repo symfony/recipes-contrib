@@ -1,0 +1,63 @@
+{
+    "manifests": {
+        "lgarret/health-check-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Lgarret\\HealthCheckBundle\\HealthCheckBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "HEALTH_CHECK_SECRET": "!ChangeMe!"
+                },
+                "post-install-output": [
+                    "  * The health check endpoint is exposed at <fg=green>/health</>.",
+                    "",
+                    "  * Replace the <comment>HEALTH_CHECK_SECRET</> placeholder in <comment>.env</> with a real value.",
+                    "    Callers sending it in the <comment>Authorization</> header get the detailed check results;",
+                    "    everyone else only sees the global status.",
+                    "",
+                    "  * If your firewall covers every path, grant it anonymous access in <comment>config/packages/security.yaml</>:",
+                    "        <comment>access_control:</>",
+                    "            <comment>- { path: ^/health$, roles: PUBLIC_ACCESS }</>",
+                    "",
+                    "  * Enable, disable and tune the checks in <comment>config/packages/health_check.yaml</>.",
+                    "",
+                    "  * Docs: <comment>https://github.com/LouisGarret/health-check-bundle</>"
+                ]
+            },
+            "files": {
+                "config/packages/health_check.yaml": {
+                    "contents": [
+                        "health_check:",
+                        "    path: '/health'",
+                        "    secret: '%env(HEALTH_CHECK_SECRET)%'",
+                        "    header: 'Authorization'",
+                        "    timeout: 5",
+                        "    cache:",
+                        "        enabled: true",
+                        "        ttl: 300",
+                        "    checks:",
+                        "        doctrine: true",
+                        "        asset_mapper: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/health_check.yaml": {
+                    "contents": [
+                        "health_check:",
+                        "    resource: .",
+                        "    type: health_check",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f8db791bad4cd2c2ea791499329399b015f0f36d"
+        }
+    }
+}
