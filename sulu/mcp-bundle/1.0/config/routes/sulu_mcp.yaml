@@ -1,0 +1,15 @@
+# MCP transport endpoint, registered by symfony/mcp-bundle at the path configured
+# in config/packages/sulu_mcp.yaml. Declare it only once - a second "type: mcp"
+# entry makes the route loader fail.
+mcp:
+    resource: .
+    type: mcp
+
+# OAuth endpoints behind the admin prefix. The prefix must match mcp_path.
+sulu_mcp_admin:
+    resource: '@SuluMcpBundle/config/routing_admin.yaml'
+    prefix: /admin
+
+# RFC 8414 / RFC 9728 discovery documents, unprefixed in the host's /.well-known/ namespace.
+sulu_mcp_website:
+    resource: '@SuluMcpBundle/config/routing_website.yaml'
