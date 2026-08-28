@@ -1,0 +1,11 @@
+health_check:
+    path: '/health'
+    secret: '%env(HEALTH_CHECK_SECRET)%'
+    header: 'Authorization'
+    timeout: 5
+    cache:
+        enabled: true
+        ttl: 300
+    checks:
+        doctrine: true
+        asset_mapper: true
