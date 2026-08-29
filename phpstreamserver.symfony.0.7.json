@@ -1,0 +1,70 @@
+{
+    "manifests": {
+        "phpstreamserver/symfony": {
+            "manifest": {
+                "bundles": {
+                    "PHPStreamServer\\Symfony\\PHPStreamServerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "bin/": "%BIN_DIR%/",
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "* One more step to complete setup:",
+                    "  Set PHPStreamServerRuntime as the Application Runtime by either:",
+                    "   * setting env <comment>APP_RUNTIME=\"PHPStreamServer\\Symfony\\PHPStreamServerRuntime\"</>",
+                    "   * adding <comment>extra.runtime.class</> to <fg=green>composer.json</>",
+                    "  Read more: <comment>https://phpstreamserver.dev/docs/integrations/symfony#runtime-configuration</>",
+                    "  If you edited <fg=green>composer.json</>, run <comment>composer dump-autoload</> to apply.",
+                    "",
+                    "* Your Symfony application is ready to run with PHPStreamServer.",
+                    "  Start the server with: <comment>bin/phpss start</>",
+                    "",
+                    "* Read the documentation at: <comment>https://phpstreamserver.dev/docs/general/</>"
+                ]
+            },
+            "files": {
+                "bin/phpss": {
+                    "contents": [
+                        "#!/usr/bin/env php",
+                        "<?php",
+                        "",
+                        "use App\\Kernel;",
+                        "use PHPStreamServer\\Symfony\\ServerApplication;",
+                        "",
+                        "require_once \\dirname(__DIR__) . '/vendor/autoload_runtime.php';",
+                        "",
+                        "return new ServerApplication(static function (array $context) {",
+                        "    return new Kernel($context['APP_ENV'], (bool) $context['APP_DEBUG']);",
+                        "});",
+                        ""
+                    ],
+                    "executable": true
+                },
+                "config/phpss.config.php": {
+                    "contents": [
+                        "<?php",
+                        "",
+                        "use PHPStreamServer\\Core\\ReloadStrategy\\ExceptionReloadStrategy;",
+                        "use PHPStreamServer\\Core\\Server;",
+                        "use PHPStreamServer\\Symfony\\Worker\\SymfonyHttpServerProcess;",
+                        "",
+                        "return static function (Server $server): void {",
+                        "    $server->addWorker(new SymfonyHttpServerProcess(",
+                        "        listen: '0.0.0.0:8080',",
+                        "        reloadStrategies: [",
+                        "            new ExceptionReloadStrategy(),",
+                        "        ],",
+                        "    ));",
+                        "};",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "99f46b724b8df97501a970a2ad470cbbf8338dbc"
+        }
+    }
+}
