@@ -1,0 +1,5 @@
+# The challenge endpoint (and the health routes) are auto-registered on
+# a fresh app that never configured framework.router itself. When your
+# app owns its router resource, import the bundle routes explicitly.
+kiwi_captcha:
+    resource: '@KiwiCaptchaBundle/Resources/config/routes.php'
