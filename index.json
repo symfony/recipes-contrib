@@ -1685,7 +1685,8 @@
             "1.0"
         ],
         "phpstreamserver/symfony": [
-            "0.7"
+            "0.7",
+            "0.9"
         ],
         "phpsword/sword-bundle": [
             "1.0"

@@ -526,7 +526,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [phpfastcache/phpfastcache-bundle](https://packagist.org/packages/phpfastcache/phpfastcache-bundle) | [3.0](../../../tree/main/phpfastcache/phpfastcache-bundle/3.0) |
 | [phpfastcgi/fastcgi-daemon](https://packagist.org/packages/phpfastcgi/fastcgi-daemon) | [0.11](../../../tree/main/phpfastcgi/fastcgi-daemon/0.11) |
 | [phpstan/phpstan](https://packagist.org/packages/phpstan/phpstan) | [1.0](../../../tree/main/phpstan/phpstan/1.0) |
-| [phpstreamserver/symfony](https://packagist.org/packages/phpstreamserver/symfony) | [0.7](../../../tree/main/phpstreamserver/symfony/0.7) |
+| [phpstreamserver/symfony](https://packagist.org/packages/phpstreamserver/symfony) | [0.9](../../../tree/main/phpstreamserver/symfony/0.9) |
 | [phpsword/sword-bundle](https://packagist.org/packages/phpsword/sword-bundle) | [1.0](../../../tree/main/phpsword/sword-bundle/1.0) |
 | [phpzlc/admin](https://packagist.org/packages/phpzlc/admin) | [1.0](../../../tree/main/phpzlc/admin/1.0) |
 | [phpzlc/admin-business](https://packagist.org/packages/phpzlc/admin-business) | [1.0](../../../tree/main/phpzlc/admin-business/1.0) |
