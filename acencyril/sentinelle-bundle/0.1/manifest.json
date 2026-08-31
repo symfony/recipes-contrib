@@ -1,0 +1,39 @@
+{
+    "bundles": {
+        "Acencyril\\SentinelleBundle\\SentinelleBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "L'adresse qui recevra les alertes de securite.",
+        "SENTINELLE_ALERTE_EMAIL": "admin@example.com",
+        "#2": "IP ou CIDR separes par des virgules, jamais bloques.",
+        "#3": "⚠ Y METTRE TON ADRESSE DE SORTIE avant la mise en production :",
+        "#4": "sans elle, un blocage automatique peut te fermer ton propre site.",
+        "SENTINELLE_ALLOWLIST": ""
+    },
+    "post-install-output": [
+        "  <bg=blue;fg=white>Sentinelle est installee.</> Trois choses avant la mise en production :",
+        "",
+        "  * Renseigne <comment>SENTINELLE_ALLOWLIST</comment> dans ton <comment>.env</comment> — au minimum",
+        "    ton adresse de sortie. Sans elle, un blocage automatique peut te fermer",
+        "    ton propre site.",
+        "",
+        "  * Cree le schema :",
+        "      <comment>php bin/console doctrine:migrations:diff</comment>",
+        "      <comment>php bin/console doctrine:migrations:migrate</comment>",
+        "",
+        "  * Verifie que tout est en etat :",
+        "      <comment>php bin/console sentinelle:verifier</comment>",
+        "",
+        "  Sentinelle demarre en <comment>mode d'essai</comment> : elle detecte, journalise et",
+        "  alerte, mais ne bloque rien. Regarde <comment>/admin/activite</comment> quelques jours,",
+        "  puis passe <comment>sentinelle.essai</comment> a <comment>false</comment>.",
+        "",
+        "  Et planifie la purge, sans laquelle les recidives ne se reinitialisent",
+        "  jamais :  <comment>0 4 * * * php bin/console sentinelle:purger</comment>",
+        ""
+    ],
+    "aliases": ["sentinelle"]
+}

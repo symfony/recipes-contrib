@@ -1,0 +1,31 @@
+sentinelle:
+    # ⚠ ON DEMARRE EN MODE D'ESSAI. Sentinelle detecte, journalise et alerte,
+    # mais ne bloque RIEN. Personne ne branche un blocage automatique sur un site
+    # en production sans savoir ce qu'il va fermer : regarde le tableau de bord
+    # quelques jours, demande-toi « aurais-je voulu bloquer celle-ci ? », puis
+    # bascule.
+    essai: true
+
+    alerte:
+        destinataire: '%env(SENTINELLE_ALERTE_EMAIL)%'
+        # expediteur:   'no-reply@mon-site.fr'
+        # nom_du_site:  'Mon Site'
+
+    acces:
+        role: ROLE_ADMIN
+        # Le gabarit dont herite la page d'activite, et la route du bouton retour.
+        # gabarit_parent: 'base.html.twig'
+        # route_retour:   'tableau_de_bord'
+
+    jamais_bloquer:
+        # ⚠ AU MINIMUM TON ADRESSE DE SORTIE. Les plages privees sont protegees
+        # d'office, mais pas la tienne : une fausse manoeuvre te ferme la porte.
+        ips: '%env(default::SENTINELLE_ALLOWLIST)%'
+
+        # Tes webhooks. Un 401 y est un incident de configuration, pas une
+        # attaque — le temps qu'une cle de signature arrive, par exemple.
+        # chemins: ['/api/webhook/', '/stripe/callback']
+
+        # Tes prestataires, EN PLUS de ceux que le bundle connait deja.
+        # Les y mettre evite de couper une fonction du site en bloquant a la main.
+        # prestataires: ['.mon-prestataire.com']

@@ -1,0 +1,3 @@
+sentinelle:
+    resource: '@SentinelleBundle/config/routes.php'
+    type: php
