@@ -8,16 +8,19 @@ sulu_mcp:
 # ownership of a file that is not ours.
 
 mcp:
-    http:
-        # DNS rebinding protection. Left unset it accepts localhost only, so a server
-        # reachable under its own domain answers every request with "403 Forbidden:
-        # Invalid Host header." after the OAuth handshake already succeeded, and without
-        # writing anything to the log. Hosts carry no port.
-        allowed_hosts:
-            - '%env(key:host:url:SULU_MCP_SERVER_URL)%'
-            - localhost
-            - 127.0.0.1
-            - '[::1]'
+    servers:
+        # The server SuluMcpBundle prepends; its remaining options are set there.
+        sulu:
+            http:
+                # DNS rebinding protection. Left unset it accepts localhost only, so a server
+                # reachable under its own domain answers every request with "403 Forbidden:
+                # Invalid Host header." after the OAuth handshake already succeeded, and without
+                # writing anything to the log. Hosts carry no port.
+                allowed_hosts:
+                    - '%env(key:host:url:SULU_MCP_SERVER_URL)%'
+                    - localhost
+                    - 127.0.0.1
+                    - '[::1]'
 
 league_oauth2_server:
     scopes:
