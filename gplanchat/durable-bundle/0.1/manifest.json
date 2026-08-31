@@ -1,0 +1,27 @@
+{
+    "bundles": {
+        "Gplanchat\\Durable\\Bundle\\DurableBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "Where workflow resumes and activity runs are queued.",
+        "#2": "sync:// handles them in the same process, which matches the in_memory",
+        "#3": "backend the config starts from. Point them at a real transport",
+        "#4": "(doctrine://, amqp://, redis://) when you move the journal off memory.",
+        "MESSENGER_DURABLE_WORKFLOW_DSN": "sync://",
+        "MESSENGER_DURABLE_ACTIVITY_DSN": "sync://"
+    },
+    "post-install-output": [
+        "  * Durable starts on the <comment>in_memory</comment> backend: workflows run, and are lost with the process.",
+        "    Set <comment>event_store.type</comment> and <comment>workflow_metadata.type</comment> to <comment>dbal</comment> in",
+        "    <comment>config/packages/durable.yaml</comment> to keep the journal in your database, and point the two",
+        "    <comment>MESSENGER_DURABLE_*_DSN</comment> variables at a real transport.",
+        "",
+        "  * Then run the workers:",
+        "    <comment>php bin/console messenger:consume durable_workflows durable_activities</comment>",
+        "",
+        "  * Documentation: <comment>https://durable.rocks/docs/getting-started/</comment>"
+    ]
+}
