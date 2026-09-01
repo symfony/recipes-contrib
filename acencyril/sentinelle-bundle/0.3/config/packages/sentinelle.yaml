@@ -1,14 +1,14 @@
 sentinelle:
-  # Dry-run: Sentinelle detects, logs and alerts, but blocks NOTHING.
-  # Nobody wires automatic blocking into a production site without knowing
-  # what it will shut out. Watch the dashboard for a few days, ask yourself
-  # "would I have wanted to block that one?", then switch it off.
-  dry_run: true
-  alert:
-    recipient: '%env(SENTINELLE_ALERT_EMAIL)%'
-  access:
-    role: ROLE_ADMIN
-  never_block:
-    # AT MINIMUM YOUR OWN OUTBOUND ADDRESS. Private ranges are protected
-    # by default, but yours is not: one wrong move locks you out.
-    ips: '%env(default::SENTINELLE_ALLOWLIST)%'
+    # Dry-run: Sentinelle detects, logs and alerts, but blocks NOTHING.
+    # Nobody wires automatic blocking into a production site without knowing
+    # what it will shut out. Watch the dashboard for a few days, ask yourself
+    # "would I have wanted to block that one?", then switch it off.
+    dry_run: true
+    alert:
+        recipient: '%env(SENTINELLE_ALERT_EMAIL)%'
+    access:
+        role: ROLE_ADMIN
+    never_block:
+        # At minimum your own outbound address. Private ranges are protected
+        # by default, but yours is not: one wrong move locks you out.
+        ips: '%env(default::SENTINELLE_ALLOWLIST)%'
