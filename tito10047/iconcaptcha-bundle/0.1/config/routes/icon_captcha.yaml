@@ -1,0 +1,3 @@
+icon_captcha:
+    resource: '@IconcaptchaBundle/config/routes.php'
+    type: php

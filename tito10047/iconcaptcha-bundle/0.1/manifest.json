@@ -1,0 +1,36 @@
+{
+    "bundles": {
+        "Tito10047\\IconcaptchaBundle\\IconcaptchaBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "add-lines": [
+        {
+            "file": "assets/app.js",
+            "content": [
+                "import '@fabianwennink/iconcaptcha/css/iconcaptcha.min.css';"
+            ],
+            "position": "top",
+            "requires": "symfony/asset-mapper",
+            "warn_if_missing": true
+        }
+    ],
+    "post-install-output": [
+        "  <bg=blue;fg=white>              </>",
+        "  <bg=blue;fg=white> What's next? </>",
+        "  <bg=blue;fg=white>              </>",
+        "",
+        "  * The captcha needs a session: make sure <comment>framework.session</> is enabled.",
+        "",
+        "  * <fg=blue>Add</> the widget to a form:",
+        "    <comment>$builder->add('captcha', Tito10047\\IconcaptchaBundle\\Type\\IconCaptchaType::class);</>",
+        "",
+        "  * <fg=blue>Serve</> the client assets. With AssetMapper they were just declared in",
+        "    <comment>importmap.php</>; without it, run <comment>php bin/console iconcaptcha:install-assets</>",
+        "    once and after every update of <comment>fabianwennink/iconcaptcha</>.",
+        "",
+        "  * <fg=blue>Read</> the documentation at <comment>https://github.com/tito10047/IconCaptchaBundle</>",
+        ""
+    ]
+}

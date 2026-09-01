@@ -1,0 +1,9 @@
+icon_captcha:
+    theme: light
+
+# A test cannot solve a challenge, so the protected form has to stay submittable.
+# "enable: false" switches both ends at once: nothing is rendered and the
+# constraint always passes.
+when@test:
+    icon_captcha:
+        enable: false
