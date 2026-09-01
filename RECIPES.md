@@ -728,6 +728,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [tiriel/firestore-odm-bundle](https://packagist.org/packages/tiriel/firestore-odm-bundle) | [0.2](../../../tree/main/tiriel/firestore-odm-bundle/0.2) |
 | [tiriel/firestore-security-bridge](https://packagist.org/packages/tiriel/firestore-security-bridge) | [0.2](../../../tree/main/tiriel/firestore-security-bridge/0.2) |
 | [tito10047/altcha-bundle](https://packagist.org/packages/tito10047/altcha-bundle) | [2.0](../../../tree/main/tito10047/altcha-bundle/2.0) |
+| [tito10047/iconcaptcha-bundle](https://packagist.org/packages/tito10047/iconcaptcha-bundle) | [0.1](../../../tree/main/tito10047/iconcaptcha-bundle/0.1) |
 | [tito10047/progressive-image-bundle](https://packagist.org/packages/tito10047/progressive-image-bundle) | [2.0](../../../tree/main/tito10047/progressive-image-bundle/2.0) |
 | [tlb/umami-bundle](https://packagist.org/packages/tlb/umami-bundle) | [0.1](../../../tree/main/tlb/umami-bundle/0.1) |
 | [toiba/fullcalendar-bundle](https://packagist.org/packages/toiba/fullcalendar-bundle) | [6.2](../../../tree/main/toiba/fullcalendar-bundle/6.2) |
