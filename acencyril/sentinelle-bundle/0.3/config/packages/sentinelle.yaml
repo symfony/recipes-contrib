@@ -4,27 +4,11 @@ sentinelle:
   # what it will shut out. Watch the dashboard for a few days, ask yourself
   # "would I have wanted to block that one?", then switch it off.
   dry_run: true
-
   alert:
     recipient: '%env(SENTINELLE_ALERT_EMAIL)%'
-    # sender:    'no-reply@example.com'
-    # site_name: 'My Site'
-
   access:
     role: ROLE_ADMIN
-    # The template the activity page extends, and the back-link route.
-    # parent_template: 'base.html.twig'
-    # back_route:      'dashboard'
-
   never_block:
-    # ⚠ AT MINIMUM YOUR OWN OUTBOUND ADDRESS. Private ranges are protected
+    # AT MINIMUM YOUR OWN OUTBOUND ADDRESS. Private ranges are protected
     # by default, but yours is not: one wrong move locks you out.
     ips: '%env(default::SENTINELLE_ALLOWLIST)%'
-
-    # Your webhooks. A 401 there is a configuration incident, not an attack
-    # — a signing key that has not landed yet, for instance.
-    # paths: ['/api/webhook/', '/stripe/callback']
-
-    # Your providers, IN ADDITION to the ones the bundle already knows.
-    # Listing them avoids breaking a working part of the site by hand.
-    # providers: ['.my-provider.com']
