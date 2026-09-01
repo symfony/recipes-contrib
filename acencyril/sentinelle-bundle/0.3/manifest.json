@@ -1,0 +1,38 @@
+{
+    "bundles": {
+        "Acencyril\\SentinelleBundle\\SentinelleBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "Where security alerts are sent.",
+        "SENTINELLE_ALERT_EMAIL": "admin@example.com",
+        "#2": "IPs or CIDRs, comma separated, that must never be blocked.",
+        "#3": "PUT YOUR OWN OUTBOUND ADDRESS HERE before going live:",
+        "#4": "without it, an automatic block can lock you out of your own site.",
+        "SENTINELLE_ALLOWLIST": ""
+    },
+    "post-install-output": [
+        "  <bg=blue;fg=white>Sentinelle is installed.</> Three things before going live:",
+        "",
+        "  * Set <comment>SENTINELLE_ALLOWLIST</comment> in your <comment>.env</comment> — at minimum your own",
+        "    outbound address. Without it, an automatic block can lock you out of",
+        "    your own site.",
+        "",
+        "  * Create the schema:",
+        "      <comment>php bin/console doctrine:migrations:diff</comment>",
+        "      <comment>php bin/console doctrine:migrations:migrate</comment>",
+        "",
+        "  * Check it can do its job:",
+        "      <comment>php bin/console sentinelle:check</comment>",
+        "",
+        "  Sentinelle starts in <comment>dry-run</comment>: it detects, logs and alerts, but blocks",
+        "  nothing. Watch <comment>/admin/activity</comment> for a few days, then set",
+        "  <comment>sentinelle.dry_run</comment> to <comment>false</comment>.",
+        "",
+        "  And schedule the purge, without which strike counters never reset:",
+        "      <comment>0 4 * * * php bin/console sentinelle:purge</comment>",
+        ""
+    ]
+}
