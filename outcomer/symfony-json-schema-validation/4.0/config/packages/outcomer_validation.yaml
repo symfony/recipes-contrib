@@ -1,9 +1,8 @@
 outcomer_validation:
-    # Path to your JSON Schema files
-    schemas_path: '%kernel.project_dir%/config/validation/schemas'
-
-    # Base domain for auto-generated schema IDs
-    schema_domain: 'https://example.com'
+    # Path/domain pairs for your JSON Schema files
+    schemas:
+        - path: '%kernel.project_dir%/config/validation/schemas'
+          domain: 'https://example.com'
 
     # Automatically cast numeric/boolean strings before validation
     auto_cast_query: true
