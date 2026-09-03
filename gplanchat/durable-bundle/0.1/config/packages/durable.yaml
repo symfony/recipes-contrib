@@ -1,0 +1,23 @@
+durable:
+    # in_memory keeps the journal in the PHP process: right for tests, lost on restart.
+    # Use dbal to keep it in your database, or set temporal.dsn to reach a Temporal cluster.
+    event_store:
+        type: in_memory
+    workflow_metadata:
+        type: in_memory
+    activity_transport:
+        type: messenger
+        transport_name: durable_activities
+
+framework:
+    messenger:
+        transports:
+            durable_workflows: '%env(MESSENGER_DURABLE_WORKFLOW_DSN)%'
+            durable_activities: '%env(MESSENGER_DURABLE_ACTIVITY_DSN)%'
+
+        routing:
+            Gplanchat\Durable\Transport\ResumeWorkflowMessage: durable_workflows
+            Gplanchat\Durable\Transport\ActivityMessage: durable_activities
+            Gplanchat\Durable\Transport\FireWorkflowTimersMessage: sync
+            Gplanchat\Durable\Transport\DeliverWorkflowSignalMessage: sync
+            Gplanchat\Durable\Transport\DeliverWorkflowUpdateMessage: sync
