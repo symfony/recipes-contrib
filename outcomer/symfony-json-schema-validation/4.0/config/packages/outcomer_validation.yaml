@@ -1,0 +1,16 @@
+outcomer_validation:
+    # Path/domain pairs for your JSON Schema files
+    schemas:
+        -
+            path: '%kernel.project_dir%/config/validation/schemas'
+            domain: 'https://example.com'
+
+    # Automatically cast numeric/boolean strings before validation
+    auto_cast_query: true
+    auto_cast_path: true
+
+    # Custom filters (optional)
+    # Uncomment and add your custom filters here
+    #filters:
+    #    uuid: App\Validation\Filter\UuidFilter
+    #    date: App\Validation\Filter\DateFilter
