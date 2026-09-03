@@ -260,6 +260,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [google/apiclient](https://packagist.org/packages/google/apiclient) | [2.10](../../../tree/main/google/apiclient/2.10) |
 | [google/recaptcha](https://packagist.org/packages/google/recaptcha) | [1.1](../../../tree/main/google/recaptcha/1.1) |
 | [googlechromelabs/ise-web-security-bundle](https://packagist.org/packages/googlechromelabs/ise-web-security-bundle) | [1.0](../../../tree/main/googlechromelabs/ise-web-security-bundle/1.0) |
+| [gplanchat/durable-bundle](https://packagist.org/packages/gplanchat/durable-bundle) | [0.1](../../../tree/main/gplanchat/durable-bundle/0.1) |
 | [gponty/symfony-idloom-api-bundle](https://packagist.org/packages/gponty/symfony-idloom-api-bundle) | [1.0](../../../tree/main/gponty/symfony-idloom-api-bundle/1.0) |
 | [gponty/symfony-monday-api-bundle](https://packagist.org/packages/gponty/symfony-monday-api-bundle) | [1.0](../../../tree/main/gponty/symfony-monday-api-bundle/1.0) |
 | [gpslab/domain-event-bundle](https://packagist.org/packages/gpslab/domain-event-bundle) | [2.2](../../../tree/main/gpslab/domain-event-bundle/2.2) |

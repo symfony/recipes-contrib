@@ -821,6 +821,9 @@
         "googlechromelabs/ise-web-security-bundle": [
             "1.0"
         ],
+        "gplanchat/durable-bundle": [
+            "0.1"
+        ],
         "gponty/symfony-idloom-api-bundle": [
             "1.0"
         ],
