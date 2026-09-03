@@ -444,6 +444,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [monsieurbiz/sylius-settings-plugin](https://packagist.org/packages/monsieurbiz/sylius-settings-plugin) | [1.0](../../../tree/main/monsieurbiz/sylius-settings-plugin/1.0) |
 | [monsieurbiz/sylius-shipping-slot-plugin](https://packagist.org/packages/monsieurbiz/sylius-shipping-slot-plugin) | [1.0](../../../tree/main/monsieurbiz/sylius-shipping-slot-plugin/1.0) |
 | [monsieursloop/woleet-bundle](https://packagist.org/packages/monsieursloop/woleet-bundle) | [1.2](../../../tree/main/monsieursloop/woleet-bundle/1.2) |
+| [mosl/opensign-bridge-bundle](https://packagist.org/packages/mosl/opensign-bridge-bundle) | [0.6](../../../tree/main/mosl/opensign-bridge-bundle/0.6) |
 | [mp3000mp/tos-bundle](https://packagist.org/packages/mp3000mp/tos-bundle) | [0.1](../../../tree/main/mp3000mp/tos-bundle/0.1) |
 | [msalsas/gdpr-consent-banner-bundle](https://packagist.org/packages/msalsas/gdpr-consent-banner-bundle) | [1.0](../../../tree/main/msalsas/gdpr-consent-banner-bundle/1.0) |
 | [msalsas/voting-bundle](https://packagist.org/packages/msalsas/voting-bundle) | [1.0](../../../tree/main/msalsas/voting-bundle/1.0) |

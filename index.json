@@ -1411,6 +1411,9 @@
             "1.0",
             "1.2"
         ],
+        "mosl/opensign-bridge-bundle": [
+            "0.6"
+        ],
         "mp3000mp/tos-bundle": [
             "0.1"
         ],

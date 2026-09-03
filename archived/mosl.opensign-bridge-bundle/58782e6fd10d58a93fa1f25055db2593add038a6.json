@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "mosl/opensign-bridge-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Mosl\\OpenSignBridgeBundle\\OpenSignBridgeBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Configure your OpenSign connection in</> <comment>config/packages/opensign_bridge.yaml</>",
+                    "    and set the required env vars: OPENSIGN_APP_ID, OPENSIGN_MASTER_KEY, OPENSIGN_API_URL,",
+                    "    OPENSIGN_USER_ID, OPENSIGN_SESSION_TOKEN. See:",
+                    "    <comment>https://github.com/imdela/OpenSignBridgeBundle#-installation-in-a-host-app</>",
+                    "",
+                    "  * <fg=blue>Deploy a self-hosted OpenSign server (Docker) yourself</> \u2014 this bundle only",
+                    "    provides the PHP client/integration layer, not the OpenSign server itself."
+                ]
+            },
+            "files": {
+                "config/packages/opensign_bridge.yaml": {
+                    "contents": [
+                        "open_sign_bridge:",
+                        "    opensign:",
+                        "        app_id: '%env(OPENSIGN_APP_ID)%'",
+                        "        master_key: '%env(OPENSIGN_MASTER_KEY)%'",
+                        "        api_url: '%env(OPENSIGN_API_URL)%'",
+                        "        user_id: '%env(OPENSIGN_USER_ID)%'",
+                        "        session_token: '%env(OPENSIGN_SESSION_TOKEN)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "58782e6fd10d58a93fa1f25055db2593add038a6"
+        }
+    }
+}
