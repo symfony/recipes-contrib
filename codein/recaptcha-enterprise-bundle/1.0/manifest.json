@@ -1,0 +1,16 @@
+{
+    "bundles": {
+        "Codein\\RecaptchaEnterpriseBundle\\CodeinRecaptchaEnterpriseBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "Create the key and read the project id in the reCAPTCHA Enterprise console:",
+        "#2": "https://console.cloud.google.com/security/recaptcha",
+        "#3": "The score and checkbox challenges each need their own kind of site key.",
+        "CODEIN_RECAPTCHA_ENTERPRISE_PROJECT_ID": "",
+        "CODEIN_RECAPTCHA_ENTERPRISE_SITE_KEY": "",
+        "CODEIN_RECAPTCHA_ENTERPRISE_API_KEY": ""
+    }
+}
