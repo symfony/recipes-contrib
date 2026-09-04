@@ -1553,6 +1553,9 @@
         "octopouce-mu/admin-bundle": [
             "1.0"
         ],
+        "odiseoteam/sylius-rbac-plugin": [
+            "3.0"
+        ],
         "odiseoteam/sylius-vendor-plugin": [
             "1.2",
             "1.4",
