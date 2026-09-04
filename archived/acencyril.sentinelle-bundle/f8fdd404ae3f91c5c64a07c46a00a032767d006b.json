@@ -1,0 +1,78 @@
+{
+    "manifests": {
+        "acencyril/sentinelle-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Acencyril\\SentinelleBundle\\SentinelleBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Where security alerts are sent.",
+                    "SENTINELLE_ALERT_EMAIL": "admin@example.com",
+                    "#2": "IPs or CIDRs, comma separated, that must never be blocked.",
+                    "#3": "PUT YOUR OWN OUTBOUND ADDRESS HERE before going live:",
+                    "#4": "without it, an automatic block can lock you out of your own site.",
+                    "SENTINELLE_ALLOWLIST": ""
+                },
+                "post-install-output": [
+                    "  <bg=blue;fg=white>Sentinelle is installed.</> Three things before going live:",
+                    "",
+                    "  * Set <comment>SENTINELLE_ALLOWLIST</comment> in your <comment>.env</comment> \u2014 at minimum your own",
+                    "    outbound address. Without it, an automatic block can lock you out of",
+                    "    your own site.",
+                    "",
+                    "  * Create the schema:",
+                    "      <comment>php bin/console doctrine:migrations:diff</comment>",
+                    "      <comment>php bin/console doctrine:migrations:migrate</comment>",
+                    "",
+                    "  * Check it can do its job:",
+                    "      <comment>php bin/console sentinelle:check</comment>",
+                    "",
+                    "  Sentinelle starts in <comment>dry-run</comment>: it detects, logs and alerts, but blocks",
+                    "  nothing. Watch <comment>/admin/activity</comment> for a few days, then set",
+                    "  <comment>sentinelle.dry_run</comment> to <comment>false</comment>.",
+                    "",
+                    "  And schedule the purge, without which strike counters never reset:",
+                    "      <comment>0 4 * * * php bin/console sentinelle:purge</comment>",
+                    ""
+                ]
+            },
+            "files": {
+                "config/packages/sentinelle.yaml": {
+                    "contents": [
+                        "sentinelle:",
+                        "    # Dry-run: Sentinelle detects, logs and alerts, but blocks NOTHING.",
+                        "    # Nobody wires automatic blocking into a production site without knowing",
+                        "    # what it will shut out. Watch the dashboard for a few days, ask yourself",
+                        "    # \"would I have wanted to block that one?\", then switch it off.",
+                        "    dry_run: true",
+                        "    alert:",
+                        "        recipient: '%env(SENTINELLE_ALERT_EMAIL)%'",
+                        "    access:",
+                        "        role: ROLE_ADMIN",
+                        "    never_block:",
+                        "        # At minimum your own outbound address. Private ranges are protected",
+                        "        # by default, but yours is not: one wrong move locks you out.",
+                        "        ips: '%env(default::SENTINELLE_ALLOWLIST)%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sentinelle.yaml": {
+                    "contents": [
+                        "sentinelle:",
+                        "    resource: '@SentinelleBundle/config/routes.php'",
+                        "    type: php",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f8fdd404ae3f91c5c64a07c46a00a032767d006b"
+        }
+    }
+}

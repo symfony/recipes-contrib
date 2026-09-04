@@ -18,6 +18,9 @@
         "ablaise/meteion-bundle": [
             "1.0"
         ],
+        "acencyril/sentinelle-bundle": [
+            "0.3"
+        ],
         "acseo/typesense-bundle": [
             "0.7"
         ],
