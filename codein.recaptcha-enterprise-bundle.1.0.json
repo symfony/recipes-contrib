@@ -1,0 +1,63 @@
+{
+    "manifests": {
+        "codein/recaptcha-enterprise-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Codein\\RecaptchaEnterpriseBundle\\CodeinRecaptchaEnterpriseBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Create the key and read the project id in the reCAPTCHA Enterprise console:",
+                    "#2": "https://console.cloud.google.com/security/recaptcha",
+                    "#3": "The score and checkbox challenges each need their own kind of site key.",
+                    "CODEIN_RECAPTCHA_ENTERPRISE_PROJECT_ID": "",
+                    "CODEIN_RECAPTCHA_ENTERPRISE_SITE_KEY": "",
+                    "CODEIN_RECAPTCHA_ENTERPRISE_API_KEY": ""
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Set</> the <comment>CODEIN_RECAPTCHA_ENTERPRISE_*</> variables in <comment>.env.local</>",
+                    "",
+                    "  * <fg=blue>Add</> <comment>two script tags</> to your layout \u2014 the bundle adds neither. Without them every",
+                    "    submission is refused as <comment>MISSING</>:",
+                    "    <comment>{{ asset('bundles/codeinrecaptchaenterprise/recaptcha-enterprise.js') }}</>, and Google's",
+                    "    <comment>enterprise.js</>, the latter only <comment>after the visitor has consented</>:",
+                    "    <comment>https://github.com/Codein-Labs/recaptcha-enterprise-bundle#adding-the-scripts-to-your-layout</>",
+                    "",
+                    "  * <fg=blue>Read</> <comment>Choosing the challenge</> before creating the site key: the score and checkbox",
+                    "    challenges need different key types",
+                    "",
+                    "  * Assessments are <comment>disabled in the test environment</>, where no browser can solve the challenge"
+                ]
+            },
+            "files": {
+                "config/packages/codein_recaptcha_enterprise.yaml": {
+                    "contents": [
+                        "codein_recaptcha_enterprise:",
+                        "    project_id: '%env(CODEIN_RECAPTCHA_ENTERPRISE_PROJECT_ID)%'",
+                        "    site_key: '%env(CODEIN_RECAPTCHA_ENTERPRISE_SITE_KEY)%'",
+                        "    api_key: '%env(CODEIN_RECAPTCHA_ENTERPRISE_API_KEY)%'",
+                        "    #challenge: checkbox # score (default) or checkbox, each needs its own kind of site key",
+                        "    #min_score: 0        # 0 disables the score check, which is what the checkbox challenge wants",
+                        "    #on_error: allow     # deny (default) refuses the token when Google cannot be reached",
+                        "",
+                        "# A test run has no browser to solve the challenge, so every submission would be refused.",
+                        "when@test:",
+                        "    codein_recaptcha_enterprise:",
+                        "        enabled: false",
+                        "",
+                        "#when@dev:",
+                        "#    codein_recaptcha_enterprise:",
+                        "#        enabled: false",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3e258fc4d39c26c29f42366af814e902418daf71"
+        }
+    }
+}
