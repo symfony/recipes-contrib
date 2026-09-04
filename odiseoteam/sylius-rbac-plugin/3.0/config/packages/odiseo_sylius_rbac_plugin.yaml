@@ -1,0 +1,2 @@
+imports:
+    - { resource: "@OdiseoSyliusRbacPlugin/config/config.yaml" }
