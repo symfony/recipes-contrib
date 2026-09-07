@@ -299,6 +299,9 @@
             "2.3",
             "5.0"
         ],
+        "codein/recaptcha-enterprise-bundle": [
+            "1.0"
+        ],
         "codevenom/fakturownia-bundle": [
             "0.1"
         ],

@@ -99,6 +99,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [cmsig/seal-symfony-bundle](https://packagist.org/packages/cmsig/seal-symfony-bundle) | [0.8](../../../tree/main/cmsig/seal-symfony-bundle/0.8) |
 | [codebuds/mattermost-publication-bundle](https://packagist.org/packages/codebuds/mattermost-publication-bundle) | [0.3](../../../tree/main/codebuds/mattermost-publication-bundle/0.3) |
 | [codeception/codeception](https://packagist.org/packages/codeception/codeception) | [5.0](../../../tree/main/codeception/codeception/5.0) |
+| [codein/recaptcha-enterprise-bundle](https://packagist.org/packages/codein/recaptcha-enterprise-bundle) | [1.0](../../../tree/main/codein/recaptcha-enterprise-bundle/1.0) |
 | [codevenom/fakturownia-bundle](https://packagist.org/packages/codevenom/fakturownia-bundle) | [0.1](../../../tree/main/codevenom/fakturownia-bundle/0.1) |
 | [coka/api-bundle](https://packagist.org/packages/coka/api-bundle) | [4.0](../../../tree/main/coka/api-bundle/4.0) |
 | [coka/cors-bundle](https://packagist.org/packages/coka/cors-bundle) | [1.0](../../../tree/main/coka/cors-bundle/1.0) |
