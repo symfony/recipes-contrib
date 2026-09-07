@@ -1,0 +1,12 @@
+  * <fg=blue>Set</> the <comment>CODEIN_RECAPTCHA_ENTERPRISE_*</> variables in <comment>.env.local</>
+
+  * <fg=blue>Add</> <comment>two script tags</> to your layout — the bundle adds neither. Without them every
+    submission is refused as <comment>MISSING</>:
+    <comment>{{ asset('bundles/codeinrecaptchaenterprise/recaptcha-enterprise.js') }}</>, and Google's
+    <comment>enterprise.js</>, the latter only <comment>after the visitor has consented</>:
+    <comment>https://github.com/Codein-Labs/recaptcha-enterprise-bundle#adding-the-scripts-to-your-layout</>
+
+  * <fg=blue>Read</> <comment>Choosing the challenge</> before creating the site key: the score and checkbox
+    challenges need different key types
+
+  * Assessments are <comment>disabled in the test environment</>, where no browser can solve the challenge
