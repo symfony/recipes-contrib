@@ -1,0 +1,48 @@
+{
+    "manifests": {
+        "odiseoteam/sylius-rbac-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Odiseo\\SyliusRbacPlugin\\OdiseoSyliusRbacPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  <bg=blue;fg=white>              </>",
+                    "  <bg=blue;fg=white> What's next? </>",
+                    "  <bg=blue;fg=white>              </>",
+                    "",
+                    "  * <fg=blue>Read</> the full installation guide at",
+                    "    <comment>https://github.com/odiseoteam/SyliusRbacPlugin/blob/master/doc/installation.md</>",
+                    "",
+                    "  * <fg=blue>Grant</> yourself access. A fresh install denies every administrator",
+                    "    everything, including the screen that assigns roles:",
+                    "    <comment>bin/console odiseo:rbac:grant <username-or-email> super_admin --create</>"
+                ]
+            },
+            "files": {
+                "config/packages/odiseo_sylius_rbac_plugin.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@OdiseoSyliusRbacPlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/odiseo_sylius_rbac_plugin.yaml": {
+                    "contents": [
+                        "odiseo_sylius_rbac_admin:",
+                        "    resource: \"@OdiseoSyliusRbacPlugin/config/routes/admin.yaml\"",
+                        "    prefix: '/%sylius_admin.path_name%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f2bb4d7451052362ab1c0cee03d3fc604258fb2b"
+        }
+    }
+}
