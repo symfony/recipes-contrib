@@ -1,0 +1,44 @@
+kiwi_captcha:
+    # Policy-level posture preset: balanced | privacy_strict | high_abuse |
+    # compatibility. The profile is the LOWEST-precedence configuration
+    # layer: it fills safe derived defaults for the safety-relevant knobs,
+    # and an explicit value in ANY config file always wins. An explicit
+    # `protection_profile: null` in a later layer (e.g. a prod overlay)
+    # clears the profile again. See docs/configuration.md "Protection
+    # profiles".
+    protection_profile: balanced
+
+    # Required, min 16 bytes. The manifest writes the generated value
+    # into .env; replace it with `openssl rand -hex 32`.
+    secret_key: '%env(KIWI_SECRET_KEY)%'
+
+    # Canonical public origin (required in production; the same-origin
+    # check compares against this value, never the Host header). The
+    # manifest declares the KIWI_PUBLIC_URL default in .env; credentials
+    # and environment-specific origins belong in your environment, never
+    # in source-controlled YAML. A literal override in this file is still
+    # possible (a clean https URL, no path, no credentials).
+    public_base_url: '%env(KIWI_PUBLIC_URL)%'
+
+    # High-level Redis connection setting: when set, the bundle
+    # constructs the Redis-backed services itself from this DSN — the
+    # challenge storage (RedisStorage), the distributed issuance rate
+    # limiter, the Argon2id admission semaphore and (when risk is
+    # enabled) the risk state store. The client is built as a
+    # Predis\Client, so predis/predis must be installed:
+    #   composer require predis/predis
+    # Twelve-factor form: the DSN (credentials, private hosts, TLS, db
+    # selection) belongs in the environment — the manifest declares the
+    # KIWI_REDIS_DSN localhost default in .env. The bundle validates the
+    # resolved value when the client is constructed (redis:// or
+    # rediss:// with a host, fail-closed). A literal override in this
+    # file is still possible, e.g.
+    # redis://user:pass@host:port/0?prefix=kiwi.
+    redis_dsn: '%env(KIWI_REDIS_DSN)%'
+
+    # Advanced escape hatch: an explicit service id always wins over the
+    # DSN for its knob. Define the service in config/services.yaml and
+    # uncomment to replace the DSN-built storage/client:
+    # storage: kiwicaptcha.storage.redis          # a custom StorageInterface service
+    # redis_service: kiwicaptcha.redis_client     # a custom \Redis|Predis\Client
+    # risk.redis_service: ...                     # a custom Predis\Client for the risk state
