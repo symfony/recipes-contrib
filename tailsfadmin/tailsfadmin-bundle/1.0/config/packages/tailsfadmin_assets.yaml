@@ -1,9 +1,10 @@
-# Path AssetMapper des contrôleurs Stimulus du bundle (recette Flex, US-029).
+# AssetMapper path for the bundle's Stimulus controllers (Flex recipe).
 #
-# Le prepend() du bundle ne survit pas au merge Flex : on déclare ici, côté hôte,
-# le path des contrôleurs (et du shim vendor-src FullCalendar). Fichier SÉPARÉ
-# exprès — Symfony fusionne framework.asset_mapper.paths de tous les fichiers de
-# config/packages/, donc ceci s'ajoute à votre asset_mapper.yaml sans l'écraser.
+# The bundle's prepend() does not survive the Flex config merge, so the controllers
+# path (and the FullCalendar vendor-src shim) is declared here, on the host side.
+# Kept in a SEPARATE file on purpose: Symfony merges framework.asset_mapper.paths
+# from every config/packages/ file, so this adds to your asset_mapper.yaml
+# without overwriting it.
 framework:
     asset_mapper:
         paths:
