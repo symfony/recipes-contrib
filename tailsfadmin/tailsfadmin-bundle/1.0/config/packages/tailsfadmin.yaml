@@ -1,6 +1,6 @@
-# Configuration par défaut du thème tailsfadmin (recette Flex, US-029).
-# Éditez le menu selon votre application ; les `label` sont des clés de traduction
-# (i18n) ou des libellés bruts. Voir le README du bundle.
+# Default configuration for the tailsfadmin admin theme (Flex recipe).
+# Adjust the menu to your application; `label` values are translation keys (i18n)
+# or raw labels. See the bundle README.
 tailsfadmin:
     default_locale: fr
     locales: ['fr', 'en', 'ar', 'es', 'de']
