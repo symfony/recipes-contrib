@@ -1,0 +1,15 @@
+{
+    "bundles": {
+        "IndexNowKit\\SymfonyBundle\\IndexNowKitBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "The IndexNow key, served at /<key>.txt. Generate one into .env.local: bin/console indexnow:key:generate --write-env",
+        "#2": "Empty outside production = dry run (nothing is sent); empty in production = a configuration error indexnow:check explains",
+        "INDEXNOW_KEY": "",
+        "#3": "The public URL of the site (console commands and Messenger workers have no request to read it from)",
+        "INDEXNOW_BASE_URL": "https://www.example.com"
+    }
+}

@@ -1,0 +1,2 @@
+indexnowkit:
+    resource: '@IndexNowKitBundle/config/routes.php'
