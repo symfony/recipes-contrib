@@ -6,6 +6,7 @@ tailsfadmin:
     locales: ['fr', 'en', 'ar', 'es', 'de']
     rtl_locales: ['ar']
     menu:
-        - group: menu.groups.menu
-          items:
-              - { label: menu.dashboard, path: /, icon: dashboard }
+        -
+            group: menu.groups.menu
+            items:
+                - { label: menu.dashboard, path: /, icon: dashboard }

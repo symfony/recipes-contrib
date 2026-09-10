@@ -5,7 +5,6 @@
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
     },
-    "aliases": ["tailsfadmin"],
     "post-install-output": [
         "<bg=blue;fg=white> tailsfadmin </> admin theme installed.",
         "",
