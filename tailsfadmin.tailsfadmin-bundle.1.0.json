@@ -1,0 +1,72 @@
+{
+    "manifests": {
+        "tailsfadmin/tailsfadmin-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Tailsfadmin\\TailsfadminBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white> tailsfadmin </> admin theme installed.",
+                    "",
+                    "  The bundle ships no CDN dependency \u2014 two steps for the assets:",
+                    "",
+                    "  1. Vendor the components' third-party JS libs (ApexCharts, flatpickr, Dropzone, \u2026):",
+                    "     <comment>php bin/console tailsfadmin:assets:install</comment>",
+                    "",
+                    "  2. Import the theme into your Tailwind entrypoint (assets/styles/app.css):",
+                    "     <comment>@import \"tailwindcss\";</comment>",
+                    "     <comment>@import \"../../vendor/tailsfadmin/tailsfadmin-bundle/assets/styles/theme.css\";</comment>",
+                    "",
+                    "  Then compile: <comment>php bin/console tailwind:build && php bin/console asset-map:compile</comment>",
+                    "",
+                    "  The controllers' AssetMapper path is already set (config/packages/tailsfadmin_assets.yaml).",
+                    "  Documentation: <comment>https://github.com/thibmonier/tailsfadmin#readme</comment>"
+                ]
+            },
+            "files": {
+                "config/packages/tailsfadmin.yaml": {
+                    "contents": [
+                        "# Default configuration for the tailsfadmin admin theme (Flex recipe).",
+                        "# Adjust the menu to your application; `label` values are translation keys (i18n)",
+                        "# or raw labels. See the bundle README.",
+                        "tailsfadmin:",
+                        "    default_locale: fr",
+                        "    locales: ['fr', 'en', 'ar', 'es', 'de']",
+                        "    rtl_locales: ['ar']",
+                        "    menu:",
+                        "        -",
+                        "            group: menu.groups.menu",
+                        "            items:",
+                        "                - { label: menu.dashboard, path: /, icon: dashboard }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/tailsfadmin_assets.yaml": {
+                    "contents": [
+                        "# AssetMapper path for the bundle's Stimulus controllers (Flex recipe).",
+                        "#",
+                        "# The bundle's prepend() does not survive the Flex config merge, so the controllers",
+                        "# path (and the FullCalendar vendor-src shim) is declared here, on the host side.",
+                        "# Kept in a SEPARATE file on purpose: Symfony merges framework.asset_mapper.paths",
+                        "# from every config/packages/ file, so this adds to your asset_mapper.yaml",
+                        "# without overwriting it.",
+                        "framework:",
+                        "    asset_mapper:",
+                        "        paths:",
+                        "            'vendor/tailsfadmin/tailsfadmin-bundle/assets/controllers': 'bundles/tailsfadmin'",
+                        "            'vendor/tailsfadmin/tailsfadmin-bundle/assets/vendor-src': 'bundles/tailsfadmin-vendor'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "37aa5c1b2213c3051ea88e7c0c4dc3b970302dd9"
+        }
+    }
+}
