@@ -1,0 +1,9 @@
+  <fg=blue;options=bold>IndexNow</> is installed: search engines (Yandex, Bing, Naver, Seznam, ...) get told which pages changed.
+
+  <options=bold>Next steps:</>
+    1. Run <comment>bin/console indexnow:key:generate --write-env</> — writes <comment>INDEXNOW_KEY</> to <comment>.env.local</>
+    2. Set <comment>INDEXNOW_BASE_URL</> to the public URL of the site
+    3. Add <comment>#[IndexNow(route: '...')]</> to the entities that have a public page (needs <comment>indexnowkit/doctrine</>)
+    4. Run <comment>bin/console indexnow:check</> — it verifies the key file, the transport and the configuration
+
+  Documentation: https://github.com/indexnowkit/php/tree/main/packages/symfony-bundle

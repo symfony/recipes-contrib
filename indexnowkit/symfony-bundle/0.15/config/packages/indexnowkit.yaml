@@ -1,0 +1,3 @@
+indexnowkit:
+    key: '%env(INDEXNOW_KEY)%'
+    base_url: '%env(INDEXNOW_BASE_URL)%'
