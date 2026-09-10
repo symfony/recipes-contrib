@@ -1,0 +1,54 @@
+{
+    "manifests": {
+        "indexnowkit/symfony-bundle": {
+            "manifest": {
+                "bundles": {
+                    "IndexNowKit\\SymfonyBundle\\IndexNowKitBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "The IndexNow key, served at /<key>.txt. Generate one into .env.local: bin/console indexnow:key:generate --write-env",
+                    "#2": "Empty outside production = dry run (nothing is sent); empty in production = a configuration error indexnow:check explains",
+                    "INDEXNOW_KEY": "",
+                    "#3": "The public URL of the site (console commands and Messenger workers have no request to read it from)",
+                    "INDEXNOW_BASE_URL": "https://www.example.com"
+                },
+                "post-install-output": [
+                    "  <fg=blue;options=bold>IndexNow</> is installed: search engines (Yandex, Bing, Naver, Seznam, ...) get told which pages changed.",
+                    "",
+                    "  <options=bold>Next steps:</>",
+                    "    1. Run <comment>bin/console indexnow:key:generate --write-env</> \u2014 writes <comment>INDEXNOW_KEY</> to <comment>.env.local</>",
+                    "    2. Set <comment>INDEXNOW_BASE_URL</> to the public URL of the site",
+                    "    3. Add <comment>#[IndexNow(route: '...')]</> to the entities that have a public page (needs <comment>indexnowkit/doctrine</>)",
+                    "    4. Run <comment>bin/console indexnow:check</> \u2014 it verifies the key file, the transport and the configuration",
+                    "",
+                    "  Documentation: https://github.com/indexnowkit/php/tree/main/packages/symfony-bundle"
+                ]
+            },
+            "files": {
+                "config/packages/indexnowkit.yaml": {
+                    "contents": [
+                        "indexnowkit:",
+                        "    key: '%env(INDEXNOW_KEY)%'",
+                        "    base_url: '%env(INDEXNOW_BASE_URL)%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/indexnowkit.yaml": {
+                    "contents": [
+                        "indexnowkit:",
+                        "    resource: '@IndexNowKitBundle/config/routes.php'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "269a7a203ca9a6b9eacadb8f4bc621b1e1481e59"
+        }
+    }
+}

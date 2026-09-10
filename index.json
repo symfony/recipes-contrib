@@ -918,6 +918,9 @@
         "imper86/supervisor-bundle": [
             "2.2"
         ],
+        "indexnowkit/symfony-bundle": [
+            "0.15"
+        ],
         "indragunawan/api-rate-limit-bundle": [
             "0.2"
         ],

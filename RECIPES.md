@@ -291,6 +291,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [imper86/allegro-api-bundle](https://packagist.org/packages/imper86/allegro-api-bundle) | [3.0](../../../tree/main/imper86/allegro-api-bundle/3.0) |
 | [imper86/jobby-cron-bundle](https://packagist.org/packages/imper86/jobby-cron-bundle) | [1.0](../../../tree/main/imper86/jobby-cron-bundle/1.0) |
 | [imper86/supervisor-bundle](https://packagist.org/packages/imper86/supervisor-bundle) | [2.2](../../../tree/main/imper86/supervisor-bundle/2.2) |
+| [indexnowkit/symfony-bundle](https://packagist.org/packages/indexnowkit/symfony-bundle) | [0.15](../../../tree/main/indexnowkit/symfony-bundle/0.15) |
 | [indragunawan/api-rate-limit-bundle](https://packagist.org/packages/indragunawan/api-rate-limit-bundle) | [0.2](../../../tree/main/indragunawan/api-rate-limit-bundle/0.2) |
 | [infifni/euplatesc-plugin](https://packagist.org/packages/infifni/euplatesc-plugin) | [1.0](../../../tree/main/infifni/euplatesc-plugin/1.0) |
 | [insidestyles/json-rpc-bundle](https://packagist.org/packages/insidestyles/json-rpc-bundle) | [2.0](../../../tree/main/insidestyles/json-rpc-bundle/2.0) |
