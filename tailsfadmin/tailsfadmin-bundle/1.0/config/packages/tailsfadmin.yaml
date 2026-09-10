@@ -1,0 +1,12 @@
+# Default configuration for the tailsfadmin admin theme (Flex recipe).
+# Adjust the menu to your application; `label` values are translation keys (i18n)
+# or raw labels. See the bundle README.
+tailsfadmin:
+    default_locale: fr
+    locales: ['fr', 'en', 'ar', 'es', 'de']
+    rtl_locales: ['ar']
+    menu:
+        -
+            group: menu.groups.menu
+            items:
+                - { label: menu.dashboard, path: /, icon: dashboard }
