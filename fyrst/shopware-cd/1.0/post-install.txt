@@ -16,4 +16,4 @@
     to <comment>.gitlab-ci.yaml</comment> (or copy/symlink that name).
 
     Refresh later with <comment>composer recipes:update fyrst/shopware-cd</comment>.
-    See https://github.com/fyrst-dev/shopware-cd-template
+    See https://github.com/fyrst-dev/shopware-cd
