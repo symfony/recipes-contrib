@@ -23,7 +23,7 @@ x-shopware: &shopware
     image: ${IMAGE:?Set IMAGE in .env}:${IMAGE_TAG:-latest}
     build:
         context: .
-        dockerfile: ${DOCKERFILE:-Dockerfile}
+        dockerfile: ${DOCKERFILE:-docker/Dockerfile}
         args:
             PHP_VERSION: ${PHP_VERSION:-8.3}
     env_file:

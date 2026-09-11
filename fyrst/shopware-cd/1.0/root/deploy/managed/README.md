@@ -1,6 +1,6 @@
 # Optional deploy: managed container host
 
-Same Shopware **image** as the Compose/VPS path. Do **not** add a second Dockerfile.
+Same Shopware **image** as the Compose/VPS path. Use `docker/Dockerfile` from `shopware/docker`. Do **not** add another Dockerfile.
 
 Locked process: [Shopware Create & Continuous Deploy](https://app.clickup.com/90151931897/docs/2kyqjkzt-915)
 
@@ -8,7 +8,7 @@ Locked process: [Shopware Create & Continuous Deploy](https://app.clickup.com/90
 
 The platform starts/restarts containers for you (managed Kubernetes-like runtimes, PaaS-style hosts, mittwald-style container hosting, etc.). CI still:
 
-1. Builds with `shopware-cli project ci` in the multi-stage Dockerfile
+1. Builds with `shopware-cli project ci` in the multi-stage `docker/Dockerfile`
 2. Pushes `:sha` / `:latest` / `:semver`
 3. Runs Deployment Helper as a one-shot/setup job against that image
 
@@ -52,7 +52,7 @@ The managed jobs in `.github/workflows/cd.yaml` and `.gitlab-ci.yaml` are **stub
 
 ## Keep identical across hosts
 
-- Dockerfile / `PHP_VERSION=8.3`
+- `docker/Dockerfile` / `PHP_VERSION=8.3`
 - `.shopware-project.yaml`
 - Image naming and tags
 - Setup command (deployment helper + skip flags)

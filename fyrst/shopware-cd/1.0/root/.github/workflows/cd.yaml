@@ -1,7 +1,7 @@
 # fyrst.dev Shopware CD — GitHub Actions
 #
 # Stages (same as .gitlab-ci.yaml): build → push extra tags → deploy.
-# shopware-cli runs only inside the Dockerfile (shopware-cli image), not on the runner.
+# shopware-cli runs only inside docker/Dockerfile (shopware-cli image), not on the runner.
 #
 # Copied into shops by the Symfony Flex recipe (`copy-from-recipe` → shop root).
 # Preflight runs CD only for a real Shopware shop (bin/console / shopware/*),
@@ -19,7 +19,7 @@
 # Optional variables (not secrets):
 #   REGISTRY                  default ghcr.io
 #   REGISTRY_IMAGE            default ghcr.io/<owner>/<repo>
-#   DOCKERFILE                default Dockerfile  (set docker/Dockerfile for Flex)
+#   DOCKERFILE                default docker/Dockerfile (from shopware/docker)
 #
 # Compose / VPS deploy (DEPLOY_TARGET empty or "compose"):
 #   SSH_PRIVATE_KEY          deploy key (no passphrase)
@@ -61,7 +61,7 @@ permissions:
 env:
     REGISTRY: ${{ vars.REGISTRY != '' && vars.REGISTRY || 'ghcr.io' }}
     IMAGE: ${{ vars.REGISTRY_IMAGE != '' && vars.REGISTRY_IMAGE || format('ghcr.io/{0}', github.repository) }}
-    DOCKERFILE: ${{ vars.DOCKERFILE != '' && vars.DOCKERFILE || 'Dockerfile' }}
+    DOCKERFILE: ${{ vars.DOCKERFILE != '' && vars.DOCKERFILE || 'docker/Dockerfile' }}
     PHP_VERSION: "8.3"
 
 jobs:
