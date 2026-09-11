@@ -11,6 +11,9 @@
 #   SMOKE_URL         HTTP URL to probe after up (e.g. http://127.0.0.1:8000)
 #
 # CI-exported IMAGE / IMAGE_TAG always win over .env (which often has IMAGE_TAG=latest).
+#
+# Compose files (shop root as --project-directory):
+#   deploy/compose.yaml, deploy/compose.prod.yaml, deploy/compose.vps.yaml
 
 set -euo pipefail
 
@@ -47,10 +50,13 @@ export IMAGE IMAGE_TAG
 
 touch .env.prod
 
-COMPOSE=(docker compose -f compose.yaml -f compose.prod.yaml)
-if [[ -f deploy/compose.vps.yaml ]]; then
-  COMPOSE+=(-f deploy/compose.vps.yaml)
-fi
+COMPOSE=(
+  docker compose
+  --project-directory "$COMPOSE_DIR"
+  -f deploy/compose.yaml
+  -f deploy/compose.prod.yaml
+  -f deploy/compose.vps.yaml
+)
 
 PROFILE_ARGS=()
 IFS=',' read -ra RAW_PROFILES <<< "${COMPOSE_PROFILES:-}"

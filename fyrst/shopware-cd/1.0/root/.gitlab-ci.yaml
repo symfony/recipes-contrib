@@ -31,6 +31,8 @@
 #   VPS_PATH
 #   SSH_KNOWN_HOSTS          recommended
 #   VPS_SSH_PORT             optional, default 22
+#   Compose files (via deploy/vps-release.sh, --project-directory = shop root):
+#     deploy/compose.yaml, deploy/compose.prod.yaml, deploy/compose.vps.yaml
 #
 # Optional:
 #   DEPLOY_TARGET             "managed" skips SSH Compose (see deploy/managed/README.md)

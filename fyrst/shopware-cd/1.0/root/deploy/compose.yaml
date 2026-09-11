@@ -1,9 +1,14 @@
-# Shared Compose stack for fyrst.dev Shopware shops (local + VPS).
-# Production overrides: compose.prod.yaml
+# CD Compose stack for fyrst.dev Shopware shops (VPS).
+# shopware-cli project create owns shop-root compose.yaml (local).
+# Production overrides: deploy/compose.prod.yaml
 # VPS pull/no-build:    deploy/compose.vps.yaml
-# Local-only tweaks:    compose.override.yaml (do not commit secrets)
+# Local-only tweaks:    compose.override.yaml at the shop root (do not commit secrets)
 #
-# Copy .env.example → .env and fill values. No real secrets belong here.
+# Copy .env.example → .env at the shop root and fill values. No real secrets belong here.
+#
+# From the shop root:
+#   docker compose --project-directory . \
+#     -f deploy/compose.yaml -f deploy/compose.prod.yaml -f deploy/compose.vps.yaml ...
 #
 # Bundled MySQL: service name `mysql` (DATABASE_URL host = mysql).
 # External DB:   set DATABASE_URL to the DBaaS DSN, delete or comment out

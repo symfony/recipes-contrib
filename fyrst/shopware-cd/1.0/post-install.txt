@@ -1,15 +1,24 @@
   * <fg=blue>fyrst/shopware-cd</>
-    Flex copied CI, Compose, and deploy files into the shop root.
+    Flex copied CI, <comment>.env.example</comment>, <comment>.dockerignore</comment>,
+    and <comment>deploy/</comment> (CD Compose + VPS helpers) into the shop root.
 
     This recipe requires <comment>shopware/docker</comment>, which copies
     <comment>docker/Dockerfile</comment>. CI and Compose default to that file
     (<comment>DOCKERFILE=docker/Dockerfile</comment>).
 
+    It does not copy shop-root <comment>compose.yaml</comment>, <comment>.gitignore</comment>,
+    or <comment>.shopware-project.yaml</comment> — those come from
+    <comment>shopware-cli project create</comment>.
+
+    CD Compose files live under <comment>deploy/</comment>:
+    <comment>deploy/compose.yaml</comment>, <comment>deploy/compose.prod.yaml</comment>,
+    <comment>deploy/compose.vps.yaml</comment>. From the shop root:
+    <comment>docker compose --project-directory . -f deploy/compose.yaml -f deploy/compose.prod.yaml -f deploy/compose.vps.yaml</comment>
+
     Copy <comment>.env.example</comment> → <comment>.env</comment> yourself (Flex never writes <comment>.env</comment>).
     Commit the copied files; <comment>vendor/</comment> is gitignored.
 
-    shopware-cli loads <comment>.shopware-project.yaml</comment> (and still accepts
-    <comment>.shopware-project.yml</comment>). GitHub Actions picks up
+    GitHub Actions picks up
     <comment>.github/workflows/cd.yaml</comment>. GitLab still defaults to
     <comment>.gitlab-ci.yml</comment>: set Settings → CI/CD → CI/CD configuration file
     to <comment>.gitlab-ci.yaml</comment> (or copy/symlink that name).

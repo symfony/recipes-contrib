@@ -1,5 +1,6 @@
 # Production / VPS overrides. Used as:
-#   docker compose -f compose.yaml -f compose.prod.yaml -f deploy/compose.vps.yaml ...
+#   docker compose --project-directory . \
+#     -f deploy/compose.yaml -f deploy/compose.prod.yaml -f deploy/compose.vps.yaml ...
 #
 # Put secrets in `.env` (required) and optional extra keys in `.env.prod`.
 # Create an empty `.env.prod` on the VPS if you do not need overrides.

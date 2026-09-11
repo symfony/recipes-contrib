@@ -16,7 +16,7 @@
 2. Checkout this shop repo (read-only deploy key) to a path such as `/opt/shopware/<shop>`.
    That path is `VPS_PATH` in CI.
 3. Copy `.env.example` → `.env` and fill runtime secrets. `chmod 600 .env`.
-4. Create `.env.prod` (may be empty) so `compose.prod.yaml` can mount it.
+4. Create `.env.prod` (may be empty) so `deploy/compose.prod.yaml` can mount it.
 5. Set `IMAGE` to the registry repository CI pushes (example: `ghcr.io/fyrst-dev/shop-name`).
 6. `docker login` to that registry on the VPS (or use a credential helper / `~/.docker/config.json`).
 7. Put a reverse proxy in front of `HTTP_PORT` (TLS). Do not expose MySQL.
@@ -54,11 +54,13 @@ git checkout --quiet "$IMAGE_TAG"
 bash ./deploy/vps-release.sh
 ```
 
-Compose files used:
+Compose files used (from the shop root, with `--project-directory .`):
 
-- `compose.yaml`
-- `compose.prod.yaml`
+- `deploy/compose.yaml`
+- `deploy/compose.prod.yaml`
 - `deploy/compose.vps.yaml`
+
+shopware-cli project create owns shop-root `compose.yaml` (local). Do not point CD at that file.
 
 ## Why skip theme/assets on deploy
 

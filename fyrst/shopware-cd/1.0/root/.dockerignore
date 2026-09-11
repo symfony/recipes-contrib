@@ -39,6 +39,7 @@ Thumbs.db
 *.bak
 
 # Overlay docs and VPS helpers are not needed inside the image
+# (CD Compose lives under /deploy; shop-root compose.yaml is from project create)
 *.md
 /deploy
 compose.yaml
@@ -49,7 +50,7 @@ docker-compose*.yml
 docker-compose*.yaml
 Makefile
 
-# Tests (also list extra cleanup in .shopware-project.yaml if needed)
+# Tests (also list extra cleanup in shop-root .shopware-project.yaml if needed)
 /tests
 .phpunit.result.cache
 .php-cs-fixer.cache

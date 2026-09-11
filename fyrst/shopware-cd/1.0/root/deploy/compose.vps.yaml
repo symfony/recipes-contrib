@@ -1,8 +1,10 @@
 # VPS-only Compose overlay. CI / deploy/vps-release.sh adds this file so the
 # host never rebuilds the image (assets were compiled in CI).
 #
-#   docker compose -f compose.yaml -f compose.prod.yaml -f deploy/compose.vps.yaml pull
-#   docker compose -f compose.yaml -f compose.prod.yaml -f deploy/compose.vps.yaml up -d --no-build
+#   docker compose --project-directory . \
+#     -f deploy/compose.yaml -f deploy/compose.prod.yaml -f deploy/compose.vps.yaml pull
+#   docker compose --project-directory . \
+#     -f deploy/compose.yaml -f deploy/compose.prod.yaml -f deploy/compose.vps.yaml up -d --no-build
 
 services:
     web:
