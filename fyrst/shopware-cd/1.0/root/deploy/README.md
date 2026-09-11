@@ -60,7 +60,8 @@ Compose files used (from the shop root, with `--project-directory .`):
 - `deploy/compose.yaml`
 - `deploy/compose.prod.yaml`
 - `deploy/compose.vps.yaml`
-- `deploy/sync-runtime.sh` / `deploy/sync.env.example` / `deploy/sync-runtime.md` — live → lower runtime copy (no S3)
+- `deploy/sync-runtime.sh` / `deploy/sync.env.example` / `deploy/sync-runtime.md` — live → lower VPS runtime copy (no S3)
+- `deploy/sync-runtime-local.sh` — live `SHOPWARE_DATA_ROOT` → local `project dev` paths (rsync)
 
 shopware-cli project create owns shop-root `compose.yaml` (local). Do not point CD at that file.
 
@@ -125,6 +126,18 @@ bash deploy/sync-runtime.sh restore --snapshot <id> --data all
 ```
 
 After a live DB lands on staging, `.env` is left alone. Optional `SYNC_REWRITE_FROM_URL` / `SYNC_REWRITE_TO_URL` rewrites `sales_channel_domain.url`. Then set staging `APP_URL` as usual.
+
+## Local laptop (`shopware-cli project dev`)
+
+VPS bind mounts are **not** the local CLI paths (the whole project is mounted). Pull live trees into the checkout:
+
+```bash
+bash deploy/sync-runtime-local.sh --from live --data all
+# optional: --delete  --dry-run
+shopware-cli project console cache:clear
+```
+
+`--from live` is an SSH host (often `Host live` in `~/.ssh/config`). Map: `media` → `public/media/`, `files` → `files/`, plus thumbnail/theme/sitemap. This is **not** `deploy/sync-runtime.sh`.
 
 ## Required CI secrets (Compose path)
 

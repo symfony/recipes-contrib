@@ -84,3 +84,23 @@ Overlapping runs are blocked with `flock`.
 ## Named-volume leftover
 
 If a host still has `shopware_media` (etc.) from an older recipe and the bind-mount directory is missing, snapshot/export will tar that named volume once. New stacks use bind mounts only; do not add `files`/`media`/… back as named volumes in `deploy/compose.yaml`.
+
+## Local `project dev` (laptop)
+
+Do **not** run `deploy/sync-runtime.sh` on a laptop. Local CLI compose bind-mounts the shop tree, not `SHOPWARE_DATA_ROOT`.
+
+```bash
+bash deploy/sync-runtime-local.sh --from live --data all
+# optional: --delete  --dry-run
+shopware-cli project console cache:clear
+```
+
+| Live VPS (`SHOPWARE_DATA_ROOT`, default `/var/lib/shopware/data`) | Local project |
+| --- | --- |
+| `.../files` | `files/` |
+| `.../media` | `public/media/` |
+| `.../thumbnail` | `public/thumbnail/` |
+| `.../theme` | `public/theme/` |
+| `.../sitemap` | `public/sitemap/` |
+
+`--from` defaults the SSH host to that alias (`Host live` in `~/.ssh/config`). Optional `deploy/sync.env` / `SYNC_LIVE_*` / `SYNC_REMOTE_DATA_ROOT` match `sync-runtime.sh`. `--delete` is off unless passed (keeps local-only uploads). Database copy is out of scope here.
