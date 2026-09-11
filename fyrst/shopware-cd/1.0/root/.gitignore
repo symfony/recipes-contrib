@@ -1,0 +1,50 @@
+# Secrets, local env, and Shopware-generated paths for shops that merge this overlay.
+# Merge with the gitignore from `shopware-cli project create`.
+
+# Environment and credentials — never commit filled copies
+.env
+.env.*
+!.env.example
+.env.prod
+.env.local
+auth.json
+*.pem
+*.key
+id_rsa
+id_ed25519
+id_ed25519.pub
+
+# Local CLI / profiler credentials
+.shopware-project.local.yml
+compose.override.yaml
+compose.override.yml
+
+# Dependencies (installed in Docker / in the image build)
+/vendor
+/node_modules
+
+# Shopware generated + writable volumes
+/var
+/files
+/public/bundles
+/public/theme
+/public/media
+/public/thumbnail
+/public/sitemap
+/public/recovery
+/config/jwt/*.pem
+
+# Build / deploy leftovers
+/sbom.cdx.json
+.deployed-tag
+.previous-tag
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.bak
+.phpunit.result.cache
+.php-cs-fixer.cache

@@ -1,0 +1,161 @@
+# Shared Compose stack for fyrst.dev Shopware shops (local + VPS).
+# Production overrides: compose.prod.yaml
+# VPS pull/no-build:    deploy/compose.vps.yaml
+# Local-only tweaks:    compose.override.yaml (do not commit secrets)
+#
+# Copy .env.example → .env and fill values. No real secrets belong here.
+#
+# Bundled MySQL: service name `mysql` (DATABASE_URL host = mysql).
+# External DB:   set DATABASE_URL to the DBaaS DSN, delete or comment out
+#                the `mysql` service, and drop it from depends_on.
+#
+# Optional profiles:
+#   redis      — Redis 7
+#   setup      — one-shot shopware-deployment-helper (CD / first install)
+#   worker     — messenger:consume
+#   scheduler  — scheduled-task:run
+#
+# TODO: set `name:` per shop if several stacks share a Docker host.
+
+name: shopware
+
+x-shopware: &shopware
+  image: ${IMAGE:?Set IMAGE in .env}:${IMAGE_TAG:-latest}
+  build:
+    context: .
+    dockerfile: ${DOCKERFILE:-Dockerfile}
+    args:
+      PHP_VERSION: ${PHP_VERSION:-8.3}
+  env_file:
+    - .env
+  volumes:
+    - files:/var/www/html/files
+    - theme:/var/www/html/public/theme
+    - media:/var/www/html/public/media
+    - thumbnail:/var/www/html/public/thumbnail
+    - sitemap:/var/www/html/public/sitemap
+
+services:
+  web:
+    <<: *shopware
+    ports:
+      - "${HTTP_PORT:-8000}:8000"
+    depends_on:
+      mysql:
+        condition: service_healthy
+        required: false
+    healthcheck:
+      test: ["CMD-SHELL", "php -r 'exit(0);'"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+
+  # One-shot install/update. Never compiles themes/assets (those are in the image).
+  #   docker compose --profile setup run --rm setup
+  setup:
+    <<: *shopware
+    profiles: ["setup"]
+    restart: "no"
+    depends_on:
+      mysql:
+        condition: service_healthy
+        required: false
+      init-perm:
+        condition: service_completed_successfully
+        required: false
+    entrypoint:
+      [
+        "php",
+        "vendor/bin/shopware-deployment-helper",
+        "run",
+        "--skip-theme-compile",
+        "--skip-assets-install",
+      ]
+
+  # Volume ownership for uid 82 (www-data in docker-base). Same profile as setup.
+  init-perm:
+    <<: *shopware
+    profiles: ["setup"]
+    user: "root"
+    restart: "no"
+    entrypoint:
+      [
+        "chown",
+        "82:82",
+        "/var/www/html/files",
+        "/var/www/html/public/theme",
+        "/var/www/html/public/media",
+        "/var/www/html/public/thumbnail",
+        "/var/www/html/public/sitemap",
+      ]
+
+  mysql:
+    image: mysql:8.4
+    # Shopware docs often use mariadb:11.4 — swap the image if you prefer MariaDB.
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    env_file:
+      - .env
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-shopware}
+      MYSQL_USER: ${MYSQL_USER:?Set MYSQL_USER in .env}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?Set MYSQL_PASSWORD in .env}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:?Set MYSQL_ROOT_PASSWORD in .env}
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
+
+  redis:
+    image: redis:7-alpine
+    profiles: ["redis"]
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  worker:
+    <<: *shopware
+    profiles: ["worker"]
+    depends_on:
+      mysql:
+        condition: service_healthy
+        required: false
+    entrypoint:
+      [
+        "php",
+        "bin/console",
+        "messenger:consume",
+        "async",
+        "low_priority",
+        "--time-limit=300",
+        "--memory-limit=512M",
+      ]
+
+  scheduler:
+    <<: *shopware
+    profiles: ["scheduler"]
+    depends_on:
+      mysql:
+        condition: service_healthy
+        required: false
+    entrypoint: ["php", "bin/console", "scheduled-task:run"]
+
+volumes:
+  files:
+  theme:
+  media:
+  thumbnail:
+  sitemap:
+  mysql_data:
+  redis_data:

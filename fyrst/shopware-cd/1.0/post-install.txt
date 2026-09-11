@@ -1,0 +1,13 @@
+  * <fg=blue>fyrst/shopware-cd</>
+    Flex copied CI, Compose, and deploy files into the shop root
+    (same idea as <comment>shopware/docker</comment> copying <comment>docker/Dockerfile</comment>).
+
+    Prefer the Flex Dockerfile at <comment>docker/Dockerfile</comment> when you also required
+    <comment>shopware/docker</comment>. Point CI at it with <comment>DOCKERFILE=docker/Dockerfile</comment>.
+    The root <comment>Dockerfile</comment> from this recipe is a fallback only.
+
+    Copy <comment>.env.example</comment> → <comment>.env</comment> yourself (Flex never writes <comment>.env</comment>).
+    Commit the copied files; <comment>vendor/</comment> is gitignored.
+
+    Refresh later with <comment>composer recipes:update fyrst/shopware-cd</comment>.
+    See https://github.com/fyrst-dev/shopware-cd-template
