@@ -3,16 +3,17 @@
 # Never builds the image and never compiles themes/assets.
 #
 # Required env:
-#   IMAGE       registry/repo (e.g. ghcr.io/fyrst-dev/shop-name) — no real defaults
-#   IMAGE_TAG   full git SHA (or a rollback tag)
+#   IMAGE                  registry/repo (e.g. ghcr.io/fyrst-dev/shop-name) — no real defaults
+#   IMAGE_TAG              full git SHA (or a rollback tag)
+#   SHOPWARE_SHOP_ID       stable shop slug (same on live + staging)
+#   SHOPWARE_DEPLOY_ENV    this stack: live | staging | playground | …
 # Optional:
 #   COMPOSE_DIR            shop checkout (default: repository root next to deploy/)
 #   COMPOSE_PROFILES       comma-separated: redis,worker,scheduler  (never include "setup")
 #   SMOKE_URL              HTTP URL to probe after up (e.g. http://127.0.0.1:8000)
-#   SHOPWARE_SHOP_ID       stable shop slug (same on live + staging)
-#   SHOPWARE_DEPLOY_ENV   this stack: live | staging | playground | …
-#   COMPOSE_PROJECT_NAME  Docker uniqueness (default: ${SHOPWARE_SHOP_ID}-${SHOPWARE_DEPLOY_ENV})
-#   SHOPWARE_DATA_ROOT     bind-mount root (default: /var/lib/shopware/data/<shop>/<env>)
+#   COMPOSE_PROJECT_NAME   Docker uniqueness (default: ${SHOPWARE_SHOP_ID}-${SHOPWARE_DEPLOY_ENV})
+#   SHOPWARE_DATA_BASE     bind-mount prefix (default: /var/lib/shopware/data)
+#   SHOPWARE_DATA_ROOT     bind-mount root (default: ${SHOPWARE_DATA_BASE}/<shop>/<env>)
 #
 # CI-exported IMAGE / IMAGE_TAG always win over .env (which often has IMAGE_TAG=latest).
 #
@@ -47,21 +48,29 @@ IMAGE_TAG="${CI_IMAGE_TAG:-${IMAGE_TAG:-}}"
 SMOKE_URL="${CI_SMOKE_URL:-${SMOKE_URL:-}}"
 COMPOSE_PROFILES="${CI_PROFILES:-${COMPOSE_PROFILES:-}}"
 
-# COMPOSE_PROJECT_NAME / SHOPWARE_DATA_ROOT from .env. Derive when only
-# SHOPWARE_SHOP_ID + SHOPWARE_DEPLOY_ENV are set (Compose does not nest expansions).
-if [[ -z "${COMPOSE_PROJECT_NAME:-}" && -n "${SHOPWARE_SHOP_ID:-}" && -n "${SHOPWARE_DEPLOY_ENV:-}" ]]; then
+# Compose interpolates SHOPWARE_SHOP_ID + SHOPWARE_DEPLOY_ENV from .env
+# (optional SHOPWARE_DATA_BASE). Derive COMPOSE_PROJECT_NAME / SHOPWARE_DATA_ROOT
+# for scripts when only shop id + deploy env are set.
+: "${SHOPWARE_SHOP_ID:?Set SHOPWARE_SHOP_ID in .env (stable shop slug, same on live/staging/laptop)}"
+: "${SHOPWARE_DEPLOY_ENV:?Set SHOPWARE_DEPLOY_ENV in .env (live|staging|playground|dev)}"
+SHOPWARE_DATA_BASE="${SHOPWARE_DATA_BASE:-/var/lib/shopware/data}"
+if [[ -z "${COMPOSE_PROJECT_NAME:-}" ]]; then
   COMPOSE_PROJECT_NAME="${SHOPWARE_SHOP_ID}-${SHOPWARE_DEPLOY_ENV}"
 fi
-if [[ -z "${SHOPWARE_DATA_ROOT:-}" && -n "${SHOPWARE_SHOP_ID:-}" && -n "${SHOPWARE_DEPLOY_ENV:-}" ]]; then
-  SHOPWARE_DATA_ROOT="/var/lib/shopware/data/${SHOPWARE_SHOP_ID}/${SHOPWARE_DEPLOY_ENV}"
+if [[ -z "${SHOPWARE_DATA_ROOT:-}" ]]; then
+  SHOPWARE_DATA_ROOT="${SHOPWARE_DATA_BASE}/${SHOPWARE_SHOP_ID}/${SHOPWARE_DEPLOY_ENV}"
 fi
 
 : "${IMAGE:?Set IMAGE to the registry repository}"
 : "${IMAGE_TAG:?Set IMAGE_TAG to the git SHA (or previous tag for rollback)}"
-: "${SHOPWARE_DATA_ROOT:?Set SHOPWARE_DATA_ROOT in .env (e.g. /var/lib/shopware/data/<shop>/<env>)}"
-: "${COMPOSE_PROJECT_NAME:?Set COMPOSE_PROJECT_NAME in .env (e.g. <shop>-<env>)}"
 
-export IMAGE IMAGE_TAG COMPOSE_PROJECT_NAME SHOPWARE_DATA_ROOT
+export IMAGE IMAGE_TAG SHOPWARE_SHOP_ID SHOPWARE_DEPLOY_ENV SHOPWARE_DATA_BASE
+if [[ -n "${COMPOSE_PROJECT_NAME:-}" ]]; then
+  export COMPOSE_PROJECT_NAME
+fi
+if [[ -n "${SHOPWARE_DATA_ROOT:-}" ]]; then
+  export SHOPWARE_DATA_ROOT
+fi
 
 touch .env.prod
 

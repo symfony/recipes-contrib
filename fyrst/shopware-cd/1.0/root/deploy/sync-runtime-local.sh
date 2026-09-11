@@ -29,7 +29,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 COMPOSE_DIR="${COMPOSE_DIR:-$(cd "${SCRIPT_DIR}/.." && pwd)}"
 
 DEFAULT_DATA="files,media,thumbnail,theme,sitemap"
-SHOPWARE_DATA_ROOT_BASE="/var/lib/shopware/data"
+SHOPWARE_DATA_BASE="${SHOPWARE_DATA_BASE:-/var/lib/shopware/data}"
 
 FROM=""
 DATA_SPEC="all"
@@ -175,14 +175,15 @@ load_env_file() {
 
 load_env_file .env
 load_env_file deploy/sync.env
+SHOPWARE_DATA_BASE="${SHOPWARE_DATA_BASE:-/var/lib/shopware/data}"
 
 derived_remote_data_root() {
   local shop="${SHOPWARE_SHOP_ID:-}"
   local envn="${1:-${FROM_LC:-live}}"
   if [[ -n "$shop" ]]; then
-    printf '%s' "${SHOPWARE_DATA_ROOT_BASE}/${shop}/${envn}"
+    printf '%s' "${SHOPWARE_DATA_BASE}/${shop}/${envn}"
   else
-    printf '%s' "$SHOPWARE_DATA_ROOT_BASE"
+    printf '%s' "$SHOPWARE_DATA_BASE"
   fi
 }
 

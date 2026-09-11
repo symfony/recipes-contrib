@@ -18,11 +18,11 @@
     VPS runtime copy (no S3): <comment>deploy/sync-runtime.sh</comment> plus
     <comment>deploy/sync.env.example</comment> (see <comment>deploy/sync-runtime.md</comment>).
     Bind-mounted host dirs default to
-    <comment>/var/lib/shopware/data/${SHOPWARE_SHOP_ID}/${SHOPWARE_DEPLOY_ENV}/{files,media,thumbnail,theme,sitemap}</comment>
-    (<comment>SHOPWARE_SHOP_ID</comment>, <comment>SHOPWARE_DEPLOY_ENV</comment>,
-    <comment>COMPOSE_PROJECT_NAME</comment>, <comment>SHOPWARE_DATA_ROOT</comment> in <comment>.env</comment>).
-    Set the last two explicitly (Compose does not nest expansions); sync scripts
-    derive them when unset. On staging, copy to
+    <comment>${SHOPWARE_DATA_BASE:-/var/lib/shopware/data}/${SHOPWARE_SHOP_ID}/${SHOPWARE_DEPLOY_ENV}/{files,media,thumbnail,theme,sitemap}</comment>
+    (<comment>SHOPWARE_SHOP_ID</comment> and <comment>SHOPWARE_DEPLOY_ENV</comment> in <comment>.env</comment>;
+    optional <comment>SHOPWARE_DATA_BASE</comment>). Compose does not require
+    <comment>COMPOSE_PROJECT_NAME</comment> or <comment>SHOPWARE_DATA_ROOT</comment>.
+    On staging, copy to
     <comment>deploy/sync.env</comment> and pull live → lower.
 
     Local <comment>project dev</comment> (laptop): rsync those VPS trees into the

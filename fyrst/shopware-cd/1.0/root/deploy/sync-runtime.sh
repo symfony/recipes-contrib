@@ -6,11 +6,9 @@
 # Never auto-pushes into live.
 #
 # Shopware files live on the host under
-# ${SHOPWARE_DATA_ROOT}/{files,media,thumbnail,theme,sitemap} (compose bind mounts).
-# Default SHOPWARE_DATA_ROOT is
-# /var/lib/shopware/data/${SHOPWARE_SHOP_ID}/${SHOPWARE_DEPLOY_ENV}
-# (derived when unset). mysql_data / redis_data stay named volumes and are not
-# copied here (DB is mysqldump).
+# ${SHOPWARE_DATA_BASE:-/var/lib/shopware/data}/${SHOPWARE_SHOP_ID}/${SHOPWARE_DEPLOY_ENV}/{files,media,thumbnail,theme,sitemap}
+# (compose bind mounts). Optional SHOPWARE_DATA_ROOT is derived when unset.
+# mysql_data / redis_data stay named volumes and are not copied here (DB is mysqldump).
 #
 # Copy deploy/sync.env.example → deploy/sync.env on the consumer and fill SYNC_SSH_*.
 #
@@ -153,11 +151,11 @@ if [[ -f "$SYNC_ENV_FILE" ]]; then
   set +a
 fi
 
-SHOPWARE_DATA_ROOT_BASE="/var/lib/shopware/data"
+SHOPWARE_DATA_BASE="${SHOPWARE_DATA_BASE:-/var/lib/shopware/data}"
 
 # SHOPWARE_SHOP_ID + SHOPWARE_DEPLOY_ENV (or SYNC_ENV) → project name / data root.
-# Compose does not nest expansions; .env should set these explicitly. Scripts fill
-# the formula when they are empty so live/staging on one host stay isolated.
+# Compose interpolates those two (+ optional SHOPWARE_DATA_BASE) itself.
+# Scripts fill COMPOSE_PROJECT_NAME / SHOPWARE_DATA_ROOT when they are empty.
 if [[ -z "${SHOPWARE_DEPLOY_ENV:-}" && -n "${SYNC_ENV:-}" ]]; then
   SHOPWARE_DEPLOY_ENV="${SYNC_ENV}"
 fi
@@ -168,7 +166,7 @@ if [[ -z "${COMPOSE_PROJECT_NAME:-}" && -n "${SHOPWARE_SHOP_ID:-}" && -n "${SHOP
   COMPOSE_PROJECT_NAME="${SHOPWARE_SHOP_ID}-${SHOPWARE_DEPLOY_ENV}"
 fi
 if [[ -z "${SHOPWARE_DATA_ROOT:-}" && -n "${SHOPWARE_SHOP_ID:-}" && -n "${SHOPWARE_DEPLOY_ENV:-}" ]]; then
-  SHOPWARE_DATA_ROOT="${SHOPWARE_DATA_ROOT_BASE}/${SHOPWARE_SHOP_ID}/${SHOPWARE_DEPLOY_ENV}"
+  SHOPWARE_DATA_ROOT="${SHOPWARE_DATA_BASE}/${SHOPWARE_SHOP_ID}/${SHOPWARE_DEPLOY_ENV}"
 fi
 if [[ -n "${COMPOSE_PROJECT_NAME:-}" ]]; then
   export COMPOSE_PROJECT_NAME
@@ -586,10 +584,10 @@ from_data_root() {
     return
   fi
   if [[ -n "${SHOPWARE_SHOP_ID:-}" ]]; then
-    printf '%s\n' "${SHOPWARE_DATA_ROOT_BASE}/${SHOPWARE_SHOP_ID}/$1"
+    printf '%s\n' "${SHOPWARE_DATA_BASE}/${SHOPWARE_SHOP_ID}/$1"
     return
   fi
-  printf '%s\n' "$SHOPWARE_DATA_ROOT_BASE"
+  printf '%s\n' "$SHOPWARE_DATA_BASE"
 }
 
 ssh_rsh() {

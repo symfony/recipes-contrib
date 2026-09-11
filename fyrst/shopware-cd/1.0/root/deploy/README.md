@@ -9,7 +9,7 @@
 - **setup** — one-shot `shopware-deployment-helper` (profile `setup`)
 - **mysql** — bundled in Compose, or delete the service and point `DATABASE_URL` at DBaaS
 - **redis** / **worker** / **scheduler** — optional Compose profiles
-- **identity** — `SHOPWARE_SHOP_ID` + `SHOPWARE_DEPLOY_ENV` → `COMPOSE_PROJECT_NAME` + `SHOPWARE_DATA_ROOT=/var/lib/shopware/data/<shop>/<env>` (no hardcoded Compose `name: shopware`)
+- **identity** — Compose `name: ${SHOPWARE_SHOP_ID}-${SHOPWARE_DEPLOY_ENV}` and bind mounts under `${SHOPWARE_DATA_BASE:-/var/lib/shopware/data}/${SHOPWARE_SHOP_ID}/${SHOPWARE_DEPLOY_ENV}` (no `COMPOSE_PROJECT_NAME` / `SHOPWARE_DATA_ROOT` required, no hardcoded `name: shopware`)
 
 ## One-time VPS bootstrap
 
@@ -22,10 +22,11 @@
 6. `docker login` to that registry on the VPS (or use a credential helper / `~/.docker/config.json`).
 7. Put a reverse proxy in front of `HTTP_PORT` (TLS). Do not expose MySQL.
 8. Store the previous image tag for rollback (the release script writes `.deployed-tag` / `.previous-tag`).
-9. Runtime media/files bind-mount from `SHOPWARE_DATA_ROOT`. Set identity in shop-root `.env`:
-   `SHOPWARE_SHOP_ID` (same on live + staging), `SHOPWARE_DEPLOY_ENV`, then **explicit**
-   `COMPOSE_PROJECT_NAME=${SHOPWARE_SHOP_ID}-${SHOPWARE_DEPLOY_ENV}` and
-   `SHOPWARE_DATA_ROOT=/var/lib/shopware/data/${SHOPWARE_SHOP_ID}/${SHOPWARE_DEPLOY_ENV}`.
+9. Runtime media/files bind-mount from
+   `${SHOPWARE_DATA_BASE:-/var/lib/shopware/data}/${SHOPWARE_SHOP_ID}/${SHOPWARE_DEPLOY_ENV}`.
+   Set `SHOPWARE_SHOP_ID` (same on live + staging) and `SHOPWARE_DEPLOY_ENV` in shop-root `.env`.
+   Optional `SHOPWARE_DATA_BASE` (default `/var/lib/shopware/data`). Compose does not require
+   `COMPOSE_PROJECT_NAME` or `SHOPWARE_DATA_ROOT`.
    Docker creates `{files,media,thumbnail,theme,sitemap}` on first up; `init-perm` chowns those dirs to uid 82.
    Do not hardcode Compose `name: shopware`.
 
@@ -99,7 +100,7 @@ DB + media/files are **not** in git and **not** in the app image. They live in M
 /var/lib/shopware/data/${SHOPWARE_SHOP_ID}/${SHOPWARE_DEPLOY_ENV}/{files,media,thumbnail,theme,sitemap}
 ```
 
-Set `SHOPWARE_SHOP_ID` + `SHOPWARE_DEPLOY_ENV` in shop-root `.env`, and write `COMPOSE_PROJECT_NAME` / `SHOPWARE_DATA_ROOT` explicitly (Compose does not nest expansions). Sync scripts derive that formula when the two derived vars are unset. `mysql_data` / `redis_data` stay named volumes (copy the database with mysqldump, not `mysql_data`).
+Set `SHOPWARE_SHOP_ID` + `SHOPWARE_DEPLOY_ENV` in shop-root `.env`. Compose interpolates the project name and bind-mount paths from those two (plus optional `SHOPWARE_DATA_BASE`). Sync scripts still derive `COMPOSE_PROJECT_NAME` / `SHOPWARE_DATA_ROOT` when those helpers are unset. `mysql_data` / `redis_data` stay named volumes (copy the database with mysqldump, not `mysql_data`).
 
 `deploy/sync-runtime.sh` copies that runtime data **live → lower** (staging / playground / dev) with **SSH + mysqldump + rsync of those host dirs**. Volume tars are only a fallback (no rsync, or a leftover named volume). There is no S3/MinIO path in this recipe.
 
@@ -117,8 +118,6 @@ See **[sync-runtime.md](sync-runtime.md)** for flags, cron, and safety.
 # on staging
 cd /opt/shopware/acme-staging
 # .env: SHOPWARE_SHOP_ID=acme SHOPWARE_DEPLOY_ENV=staging
-#       COMPOSE_PROJECT_NAME=acme-staging
-#       SHOPWARE_DATA_ROOT=/var/lib/shopware/data/acme/staging
 cp deploy/sync.env.example deploy/sync.env   # set SYNC_SSH_* , SYNC_ENV=staging
 chmod 600 deploy/sync.env
 
