@@ -9,5 +9,11 @@
     Copy <comment>.env.example</comment> → <comment>.env</comment> yourself (Flex never writes <comment>.env</comment>).
     Commit the copied files; <comment>vendor/</comment> is gitignored.
 
+    shopware-cli loads <comment>.shopware-project.yaml</comment> (and still accepts
+    <comment>.shopware-project.yml</comment>). GitHub Actions picks up
+    <comment>.github/workflows/cd.yaml</comment>. GitLab still defaults to
+    <comment>.gitlab-ci.yml</comment>: set Settings → CI/CD → CI/CD configuration file
+    to <comment>.gitlab-ci.yaml</comment> (or copy/symlink that name).
+
     Refresh later with <comment>composer recipes:update fyrst/shopware-cd</comment>.
     See https://github.com/fyrst-dev/shopware-cd-template

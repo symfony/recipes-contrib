@@ -5,6 +5,7 @@
 .gitattributes
 .github
 .gitlab-ci.yml
+.gitlab-ci.yaml
 .gitignore
 
 # Local / prod env and Composer auth (passed as BuildKit secrets instead)
@@ -48,7 +49,7 @@ docker-compose*.yml
 docker-compose*.yaml
 Makefile
 
-# Tests (also list extra cleanup in .shopware-project.yml if needed)
+# Tests (also list extra cleanup in .shopware-project.yaml if needed)
 /tests
 .phpunit.result.cache
 .php-cs-fixer.cache

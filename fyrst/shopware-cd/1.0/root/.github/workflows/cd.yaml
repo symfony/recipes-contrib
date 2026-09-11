@@ -1,0 +1,256 @@
+# fyrst.dev Shopware CD — GitHub Actions
+#
+# Stages (same as .gitlab-ci.yaml): build → push extra tags → deploy.
+# shopware-cli runs only inside the Dockerfile (shopware-cli image), not on the runner.
+#
+# Copied into shops by the Symfony Flex recipe (`copy-from-recipe` → shop root).
+# Preflight runs CD only for a real Shopware shop (bin/console / shopware/*),
+# never for the fyrst/shopware-cd Packagist library itself.
+#
+# ---------------------------------------------------------------------------
+# Required secrets (Settings → Secrets and variables → Actions)
+# ---------------------------------------------------------------------------
+#   SHOPWARE_PACKAGES_TOKEN   packages.shopware.com (BuildKit secret packages_token)
+#   COMPOSER_AUTH             optional JSON object for private Composer repos
+#
+# Registry — GHCR default (GITHUB_TOKEN). For another registry set:
+#   REGISTRY_USERNAME
+#   REGISTRY_PASSWORD
+# Optional variables (not secrets):
+#   REGISTRY                  default ghcr.io
+#   REGISTRY_IMAGE            default ghcr.io/<owner>/<repo>
+#   DOCKERFILE                default Dockerfile  (set docker/Dockerfile for Flex)
+#
+# Compose / VPS deploy (DEPLOY_TARGET empty or "compose"):
+#   SSH_PRIVATE_KEY          deploy key (no passphrase)
+#   VPS_HOST                  hostname or IP — set per shop, do not hardcode here
+#   VPS_USER
+#   VPS_PATH                  absolute checkout path on the VPS
+#   SSH_KNOWN_HOSTS          recommended (ssh-keyscan output). If unset, keyscan is used.
+#   VPS_SSH_PORT              optional, default 22 (repository variable)
+#
+# Optional:
+#   DEPLOY_TARGET             repository variable: "managed" skips SSH Compose
+#                             (see deploy/managed/README.md)
+#   SMOKE_URL                 public URL CI can GET after deploy
+#
+# Never put real tokens, keys, or hostnames in this file.
+
+name: CD
+
+on:
+    push:
+        branches: [main]
+        tags: ["v*"]
+    pull_request:
+        branches: [main]
+    workflow_dispatch:
+        inputs:
+            image_tag:
+                description: "Override IMAGE_TAG (default: github.sha)"
+                required: false
+
+concurrency:
+    group: cd-${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: ${{ github.ref_name != 'main' }}
+
+permissions:
+    contents: read
+    packages: write
+
+env:
+    REGISTRY: ${{ vars.REGISTRY != '' && vars.REGISTRY || 'ghcr.io' }}
+    IMAGE: ${{ vars.REGISTRY_IMAGE != '' && vars.REGISTRY_IMAGE || format('ghcr.io/{0}', github.repository) }}
+    DOCKERFILE: ${{ vars.DOCKERFILE != '' && vars.DOCKERFILE || 'Dockerfile' }}
+    PHP_VERSION: "8.3"
+
+jobs:
+    preflight:
+        name: Preflight
+        runs-on: ubuntu-latest
+        outputs:
+            is_shop: ${{ steps.check.outputs.is_shop }}
+        steps:
+            -   uses: actions/checkout@v4
+            -   id: check
+                run: |
+                    set -euo pipefail
+                    is_shop=false
+                    if [ -f composer.json ] && grep -q '"name": *"fyrst/shopware-cd"' composer.json; then
+                        echo "fyrst/shopware-cd package — skip shop CD."
+                    elif [ -f bin/console ]; then
+                        is_shop=true
+                    elif [ -f composer.json ] && grep -Eq '"shopware/' composer.json; then
+                        is_shop=true
+                    else
+                        echo "Not a Shopware shop — skip CD."
+                    fi
+                    echo "is_shop=${is_shop}" >> "$GITHUB_OUTPUT"
+
+    build:
+        name: Build
+        needs: [preflight]
+        if: needs.preflight.outputs.is_shop == 'true'
+        runs-on: ubuntu-latest
+        timeout-minutes: 60
+        steps:
+            -   name: Checkout
+                uses: actions/checkout@v4
+
+            -   name: Set up Docker Buildx
+                uses: docker/setup-buildx-action@v3
+
+            -   name: Log in to registry
+                if: github.event_name != 'pull_request'
+                uses: docker/login-action@v3
+                with:
+                    registry: ${{ env.REGISTRY }}
+                    username: ${{ secrets.REGISTRY_USERNAME || github.actor }}
+                    password: ${{ secrets.REGISTRY_PASSWORD || secrets.GITHUB_TOKEN }}
+
+            -   name: Write Composer auth.json
+                env:
+                    COMPOSER_AUTH: ${{ secrets.COMPOSER_AUTH }}
+                run: |
+                    if [ -n "$COMPOSER_AUTH" ]; then
+                        printf '%s\n' "$COMPOSER_AUTH" > auth.json
+                    else
+                        printf '%s\n' '{}' > auth.json
+                    fi
+
+            -   name: Build and push :sha
+                uses: docker/build-push-action@v6
+                with:
+                    context: .
+                    file: ${{ env.DOCKERFILE }}
+                    push: ${{ github.event_name != 'pull_request' }}
+                    tags: ${{ env.IMAGE }}:${{ github.sha }}
+                    platforms: linux/amd64
+                    provenance: false
+                    build-args: |
+                        PHP_VERSION=${{ env.PHP_VERSION }}
+                    secrets: |
+                        packages_token=${{ secrets.SHOPWARE_PACKAGES_TOKEN }}
+                    secret-files: |
+                        composer_auth=auth.json
+                    cache-from: type=gha
+                    cache-to: type=gha,mode=max
+
+    push:
+        name: Push
+        needs: [preflight, build]
+        if: needs.preflight.outputs.is_shop == 'true' && github.event_name != 'pull_request'
+        runs-on: ubuntu-latest
+        timeout-minutes: 15
+        steps:
+            -   name: Log in to registry
+                uses: docker/login-action@v3
+                with:
+                    registry: ${{ env.REGISTRY }}
+                    username: ${{ secrets.REGISTRY_USERNAME || github.actor }}
+                    password: ${{ secrets.REGISTRY_PASSWORD || secrets.GITHUB_TOKEN }}
+
+            -   name: Set up Docker Buildx
+                uses: docker/setup-buildx-action@v3
+
+            -   name: Tag :latest on main
+                if: github.ref == 'refs/heads/main'
+                run: docker buildx imagetools create -t "${IMAGE}:latest" "${IMAGE}:${GITHUB_SHA}"
+
+            -   name: Tag :semver on v* tags
+                if: startsWith(github.ref, 'refs/tags/v')
+                run: |
+                    set -euo pipefail
+                    VERSION="${GITHUB_REF_NAME#v}"
+                    docker buildx imagetools create -t "${IMAGE}:${VERSION}" "${IMAGE}:${GITHUB_SHA}"
+                    MAJOR_MINOR="${VERSION%.*}"
+                    docker buildx imagetools create -t "${IMAGE}:${MAJOR_MINOR}" "${IMAGE}:${GITHUB_SHA}"
+
+    deploy:
+        name: Deploy (Compose / VPS)
+        needs: [preflight, push]
+        if: >
+            needs.preflight.outputs.is_shop == 'true' &&
+            github.event_name != 'pull_request' &&
+            (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v')) &&
+            vars.DEPLOY_TARGET != 'managed'
+        runs-on: ubuntu-latest
+        timeout-minutes: 30
+        # TODO: rename or remove if the shop does not use GitHub Environments
+        environment: production
+        env:
+            IMAGE_TAG: ${{ github.event.inputs.image_tag || github.sha }}
+            VPS_HOST: ${{ secrets.VPS_HOST }}
+            VPS_USER: ${{ secrets.VPS_USER }}
+            VPS_PATH: ${{ secrets.VPS_PATH }}
+            VPS_SSH_PORT: ${{ vars.VPS_SSH_PORT != '' && vars.VPS_SSH_PORT || '22' }}
+            SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
+            SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+            SMOKE_URL: ${{ secrets.SMOKE_URL }}
+        steps:
+            -   name: Deploy over SSH
+                run: |
+                    set -euo pipefail
+                    : "${VPS_HOST:?Set secret VPS_HOST}"
+                    : "${VPS_USER:?Set secret VPS_USER}"
+                    : "${VPS_PATH:?Set secret VPS_PATH}"
+                    : "${SSH_PRIVATE_KEY:?Set secret SSH_PRIVATE_KEY}"
+
+                    mkdir -p ~/.ssh
+                    chmod 700 ~/.ssh
+                    printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/id_deploy
+                    chmod 600 ~/.ssh/id_deploy
+
+                    if [ -n "${SSH_KNOWN_HOSTS:-}" ]; then
+                        printf '%s\n' "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+                        chmod 600 ~/.ssh/known_hosts
+                    else
+                        echo "SSH_KNOWN_HOSTS unset; using ssh-keyscan (TODO: pin known_hosts)" >&2
+                        ssh-keyscan -p "$VPS_SSH_PORT" -H "$VPS_HOST" >> ~/.ssh/known_hosts
+                    fi
+
+                    ssh -i ~/.ssh/id_deploy -p "$VPS_SSH_PORT" -o IdentitiesOnly=yes \
+                        "${VPS_USER}@${VPS_HOST}" \
+                        "set -euo pipefail
+                            cd '${VPS_PATH}'
+                            git fetch --quiet origin
+                            git checkout --detach '${IMAGE_TAG}'
+                            export IMAGE='${IMAGE}' IMAGE_TAG='${IMAGE_TAG}' COMPOSE_DIR='${VPS_PATH}' SMOKE_URL='${SMOKE_URL:-}'
+                            bash ./deploy/vps-release.sh"
+
+            -   name: Optional CI-side smoke
+                if: env.SMOKE_URL != ''
+                run: |
+                    set -euo pipefail
+                    for i in $(seq 1 20); do
+                        if curl -fsS "$SMOKE_URL" >/dev/null; then
+                            echo "Smoke OK"
+                            exit 0
+                        fi
+                        sleep 3
+                    done
+                    echo "Smoke check failed for ${SMOKE_URL}" >&2
+                    exit 1
+
+    deploy_managed:
+        name: Deploy (managed host)
+        needs: [preflight, push]
+        if: >
+            needs.preflight.outputs.is_shop == 'true' &&
+            github.event_name != 'pull_request' &&
+            (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v')) &&
+            vars.DEPLOY_TARGET == 'managed'
+        runs-on: ubuntu-latest
+        timeout-minutes: 15
+        environment: production
+        steps:
+            -   name: Managed deploy stub
+                env:
+                    IMAGE_TAG: ${{ github.event.inputs.image_tag || github.sha }}
+                run: |
+                    echo "DEPLOY_TARGET=managed — same image, different last mile."
+                    echo "Image: ${IMAGE}:${IMAGE_TAG}"
+                    echo "Replace this job with the host CLI/API. See deploy/managed/README.md."
+                    echo "Setup command stays:"
+                    echo "  vendor/bin/shopware-deployment-helper run --skip-theme-compile --skip-assets-install"
+                    exit 1

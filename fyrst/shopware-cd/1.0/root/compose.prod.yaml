@@ -6,72 +6,72 @@
 # Never commit filled env files.
 
 services:
-  web:
-    restart: unless-stopped
-    env_file:
-      - .env
-      - .env.prod
-    ports:
-      # TODO: publish 8000 only on localhost and terminate TLS on a reverse proxy.
-      - "${HTTP_PORT:-8000}:8000"
-    deploy:
-      resources:
-        limits:
-          cpus: "2"
-          memory: 1G
-        reservations:
-          cpus: "0.50"
-          memory: 512M
-    logging:
-      driver: json-file
-      options:
-        max-size: "10m"
-        max-file: "5"
+    web:
+        restart: unless-stopped
+        env_file:
+            -   .env
+            -   .env.prod
+        ports:
+            # TODO: publish 8000 only on localhost and terminate TLS on a reverse proxy.
+            -   "${HTTP_PORT:-8000}:8000"
+        deploy:
+            resources:
+                limits:
+                    cpus: "2"
+                    memory: 1G
+                reservations:
+                    cpus: "0.50"
+                    memory: 512M
+        logging:
+            driver: json-file
+            options:
+                max-size: "10m"
+                max-file: "5"
 
-  mysql:
-    restart: unless-stopped
-    env_file:
-      - .env
-      - .env.prod
-    # Do not publish 3306 on a public interface.
-    ports: []
-    deploy:
-      resources:
-        limits:
-          cpus: "1"
-          memory: 1G
-        reservations:
-          memory: 256M
+    mysql:
+        restart: unless-stopped
+        env_file:
+            -   .env
+            -   .env.prod
+        # Do not publish 3306 on a public interface.
+        ports: []
+        deploy:
+            resources:
+                limits:
+                    cpus: "1"
+                    memory: 1G
+                reservations:
+                    memory: 256M
 
-  redis:
-    restart: unless-stopped
-    deploy:
-      resources:
-        limits:
-          memory: 256M
+    redis:
+        restart: unless-stopped
+        deploy:
+            resources:
+                limits:
+                    memory: 256M
 
-  worker:
-    restart: unless-stopped
-    env_file:
-      - .env
-      - .env.prod
-    deploy:
-      replicas: 1
-      resources:
-        limits:
-          memory: 512M
+    worker:
+        restart: unless-stopped
+        env_file:
+            -   .env
+            -   .env.prod
+        deploy:
+            replicas: 1
+            resources:
+                limits:
+                    memory: 512M
 
-  scheduler:
-    restart: unless-stopped
-    env_file:
-      - .env
-      - .env.prod
+    scheduler:
+        restart: unless-stopped
+        env_file:
+            -   .env
+            -   .env.prod
 
-  setup:
-    env_file:
-      - .env
-      - .env.prod
-    restart: "no"
+    setup:
+        env_file:
+            -   .env
+            -   .env.prod
+        restart: "no"
 
-  init-perm:
-    restart: "no"
+    init-perm:
+        restart: "no"

@@ -48,12 +48,12 @@ GitHub: Actions variable `DEPLOY_TARGET`. GitLab: CI/CD variable `DEPLOY_TARGET`
 - [ ] Health/smoke URL after rollout
 - [ ] Rollback: redeploy the previous `:sha` tag
 
-The managed jobs in `.github/workflows/cd.yml` and `.gitlab-ci.yml` are **stubs**: they fail with a clear message until you replace the script with the host’s CLI. That is intentional — do not copy a fake happy-path.
+The managed jobs in `.github/workflows/cd.yaml` and `.gitlab-ci.yaml` are **stubs**: they fail with a clear message until you replace the script with the host’s CLI. That is intentional — do not copy a fake happy-path.
 
 ## Keep identical across hosts
 
 - Dockerfile / `PHP_VERSION=8.3`
-- `.shopware-project.yml`
+- `.shopware-project.yaml`
 - Image naming and tags
 - Setup command (deployment helper + skip flags)
 - Build-time secrets (`SHOPWARE_PACKAGES_TOKEN`, Composer auth)

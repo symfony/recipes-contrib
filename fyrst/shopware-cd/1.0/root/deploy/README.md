@@ -82,6 +82,6 @@ Keep the previous image physically on the host (`docker image prune` with care).
 
 ## Required CI secrets (Compose path)
 
-See comments at the top of `.github/workflows/cd.yml` and `.gitlab-ci.yml`.
+See comments at the top of `.github/workflows/cd.yaml` and `.gitlab-ci.yaml`.
 
 Typical: `SSH_PRIVATE_KEY`, `VPS_HOST`, `VPS_USER`, `VPS_PATH`, `SSH_KNOWN_HOSTS`.

@@ -5,22 +5,22 @@
 #   docker compose -f compose.yaml -f compose.prod.yaml -f deploy/compose.vps.yaml up -d --no-build
 
 services:
-  web:
-    image: ${IMAGE:?Set IMAGE}:${IMAGE_TAG:?Set IMAGE_TAG to the git SHA}
-    pull_policy: always
+    web:
+        image: ${IMAGE:?Set IMAGE}:${IMAGE_TAG:?Set IMAGE_TAG to the git SHA}
+        pull_policy: always
 
-  setup:
-    image: ${IMAGE}:${IMAGE_TAG}
-    pull_policy: always
+    setup:
+        image: ${IMAGE}:${IMAGE_TAG}
+        pull_policy: always
 
-  init-perm:
-    image: ${IMAGE}:${IMAGE_TAG}
-    pull_policy: always
+    init-perm:
+        image: ${IMAGE}:${IMAGE_TAG}
+        pull_policy: always
 
-  worker:
-    image: ${IMAGE}:${IMAGE_TAG}
-    pull_policy: always
+    worker:
+        image: ${IMAGE}:${IMAGE_TAG}
+        pull_policy: always
 
-  scheduler:
-    image: ${IMAGE}:${IMAGE_TAG}
-    pull_policy: always
+    scheduler:
+        image: ${IMAGE}:${IMAGE_TAG}
+        pull_policy: always

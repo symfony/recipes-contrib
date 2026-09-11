@@ -16,6 +16,7 @@ id_ed25519.pub
 
 # Local CLI / profiler credentials
 .shopware-project.local.yml
+.shopware-project.local.yaml
 compose.override.yaml
 compose.override.yml
 
