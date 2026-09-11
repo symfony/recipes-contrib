@@ -18,13 +18,17 @@
     VPS runtime copy (no S3): <comment>deploy/sync-runtime.sh</comment> plus
     <comment>deploy/sync.env.example</comment> (see <comment>deploy/sync-runtime.md</comment>).
     Bind-mounted host dirs default to
-    <comment>/var/lib/shopware/data/{files,media,thumbnail,theme,sitemap}</comment>
-    (<comment>SHOPWARE_DATA_ROOT</comment> in <comment>.env</comment>). On staging, copy to
+    <comment>/var/lib/shopware/data/${SHOPWARE_SHOP_ID}/${SHOPWARE_DEPLOY_ENV}/{files,media,thumbnail,theme,sitemap}</comment>
+    (<comment>SHOPWARE_SHOP_ID</comment>, <comment>SHOPWARE_DEPLOY_ENV</comment>,
+    <comment>COMPOSE_PROJECT_NAME</comment>, <comment>SHOPWARE_DATA_ROOT</comment> in <comment>.env</comment>).
+    Set the last two explicitly (Compose does not nest expansions); sync scripts
+    derive them when unset. On staging, copy to
     <comment>deploy/sync.env</comment> and pull live → lower.
 
     Local <comment>project dev</comment> (laptop): rsync those VPS trees into the
     project with <comment>deploy/sync-runtime-local.sh --from live --data all</comment>
-    — not <comment>deploy/sync-runtime.sh</comment>.
+    — not <comment>deploy/sync-runtime.sh</comment>. Laptop <comment>.env</comment> needs
+    <comment>SHOPWARE_SHOP_ID</comment> (same as live).
 
     Copy <comment>.env.example</comment> → <comment>.env</comment> yourself (Flex never writes <comment>.env</comment>).
     Commit the copied files; <comment>vendor/</comment> is gitignored.

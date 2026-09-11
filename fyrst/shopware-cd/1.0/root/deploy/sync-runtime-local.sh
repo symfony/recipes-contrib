@@ -2,8 +2,12 @@
 # Pull live VPS SHOPWARE_DATA_ROOT trees into local `shopware-cli project dev` paths.
 #
 # Local CLI compose bind-mounts the whole project, so destinations are the shop
-# tree (files/, public/media/, …) — not VPS /var/lib/shopware/data.
+# tree (files/, public/media/, …) — not VPS /var/lib/shopware/data/<shop>/<env>.
 # VPS → VPS copy stays deploy/sync-runtime.sh on the consumer.
+#
+# Remote default (when unset / unprobed):
+#   /var/lib/shopware/data/${SHOPWARE_SHOP_ID}/${--from env}
+# Laptop .env needs at least SHOPWARE_SHOP_ID (same as live).
 #
 #   bash deploy/sync-runtime-local.sh --from live --data all
 #   bash deploy/sync-runtime-local.sh --from live --data all --delete --dry-run
@@ -25,7 +29,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 COMPOSE_DIR="${COMPOSE_DIR:-$(cd "${SCRIPT_DIR}/.." && pwd)}"
 
 DEFAULT_DATA="files,media,thumbnail,theme,sitemap"
-DEFAULT_DATA_ROOT="/var/lib/shopware/data"
+SHOPWARE_DATA_ROOT_BASE="/var/lib/shopware/data"
 
 FROM=""
 DATA_SPEC="all"
@@ -54,6 +58,10 @@ this shop checkout for `shopware-cli project dev`.
   live $SHOPWARE_DATA_ROOT/theme       →  ./public/theme/
   live $SHOPWARE_DATA_ROOT/sitemap     →  ./public/sitemap/
 
+Remote SHOPWARE_DATA_ROOT defaults to
+/var/lib/shopware/data/${SHOPWARE_SHOP_ID}/<from-env> (usually live).
+Set SHOPWARE_SHOP_ID in laptop .env (same slug as the VPS).
+
 This is not deploy/sync-runtime.sh (that script targets VPS SHOPWARE_DATA_ROOT
 + deploy Compose). Database dumps are out of scope here.
 
@@ -74,7 +82,8 @@ Environment (optional; deploy/sync.env is sourced when present):
   SYNC_REMOTE_PATH       Shop checkout on the source (optional; used to
                         probe SHOPWARE_DATA_ROOT from the remote .env).
                         SYNC_SSH_PATH / SYNC_LIVE_PATH also accepted.
-  SYNC_REMOTE_DATA_ROOT  Bind-mount root on the source
+  SYNC_REMOTE_DATA_ROOT  Bind-mount root on the source (overrides derivation)
+  SHOPWARE_SHOP_ID       Same slug as live; used to derive the remote root
   SHOPWARE_DATA_ROOT     Unused as a local destination (project-dev paths)
 
 Per-alias overrides (example --from live): SYNC_LIVE_SSH_HOST,
@@ -166,6 +175,16 @@ load_env_file() {
 
 load_env_file .env
 load_env_file deploy/sync.env
+
+derived_remote_data_root() {
+  local shop="${SHOPWARE_SHOP_ID:-}"
+  local envn="${1:-${FROM_LC:-live}}"
+  if [[ -n "$shop" ]]; then
+    printf '%s' "${SHOPWARE_DATA_ROOT_BASE}/${shop}/${envn}"
+  else
+    printf '%s' "$SHOPWARE_DATA_ROOT_BASE"
+  fi
+}
 
 split_csv() {
   local csv=$1
@@ -334,22 +353,27 @@ resolve_remote_data_root() {
   if [[ -n "${REMOTE_DATA_ROOT}" ]]; then
     return
   fi
+  local fallback
+  fallback="$(derived_remote_data_root "$FROM_LC")"
+  if [[ -z "${SHOPWARE_SHOP_ID:-}" && -z "${REMOTE_DATA_ROOT}" ]]; then
+    log "SHOPWARE_SHOP_ID unset; remote root fallback ${fallback}. Set SHOPWARE_SHOP_ID in .env (same as live)."
+  fi
   if [[ "$DRY_RUN" -eq 1 ]]; then
-    REMOTE_DATA_ROOT=$DEFAULT_DATA_ROOT
+    REMOTE_DATA_ROOT=$fallback
     log "DRY-RUN remote SHOPWARE_DATA_ROOT default ${REMOTE_DATA_ROOT} (probe skipped)"
     return
   fi
   local probed="" remote_printf
   if [[ -n "${REMOTE_PATH}" ]]; then
     # shellcheck disable=SC2016
-    remote_printf='printf %s "${SYNC_DATA_ROOT:-${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}}"'
+    remote_printf='printf %s "${SYNC_DATA_ROOT:-${SHOPWARE_DATA_ROOT:-}}"'
     probed="$(remote_bash "$remote_printf" || true)"
     probed="$(printf '%s' "$probed" | tr -d '\r' | tail -n 1)"
   fi
   if [[ -n "$probed" ]]; then
     REMOTE_DATA_ROOT=$probed
   else
-    REMOTE_DATA_ROOT=$DEFAULT_DATA_ROOT
+    REMOTE_DATA_ROOT=$fallback
   fi
   log "Remote bind-mount root: ${REMOTE_DATA_ROOT}"
 }

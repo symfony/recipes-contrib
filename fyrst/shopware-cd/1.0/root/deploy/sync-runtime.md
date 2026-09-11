@@ -13,11 +13,17 @@ Default `--data all` (same as omitting `--data`):
 | Item | Mechanism |
 | --- | --- |
 | `db` | Logical SQL dump from the bundled compose `mysql` service (or `DATABASE_URL`) |
-| `media` `files` `thumbnail` `theme` `sitemap` | Bind mounts under `${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/<name>` |
+| `media` `files` `thumbnail` `theme` `sitemap` | Bind mounts under `${SHOPWARE_DATA_ROOT}/<name>` |
+
+Default `SHOPWARE_DATA_ROOT` (when unset, derived by this script):
+
+```text
+/var/lib/shopware/data/${SHOPWARE_SHOP_ID}/${SHOPWARE_DEPLOY_ENV}
+```
+
+Set `SHOPWARE_SHOP_ID` (same slug on live + staging) and `SHOPWARE_DEPLOY_ENV` in shop-root `.env`, plus explicit `COMPOSE_PROJECT_NAME` and `SHOPWARE_DATA_ROOT` for Compose interpolation. If the **source** uses a non-derived root, set `SYNC_REMOTE_DATA_ROOT` or `SYNC_LIVE_DATA_ROOT` in `deploy/sync.env`. Otherwise the source path is `/var/lib/shopware/data/${SHOPWARE_SHOP_ID}/<from-env>`.
 
 Not copied: `mysql_data` / `redis_data` named volumes (use `db` for SQL; Redis is ephemeral for this recipe). Do not put dumps in git.
-
-Set `SHOPWARE_DATA_ROOT` in shop-root `.env` when several shops share a host. If the **source** uses a non-default root, set `SYNC_REMOTE_DATA_ROOT` or `SYNC_LIVE_DATA_ROOT` in `deploy/sync.env`.
 
 ## Host packages
 
@@ -39,7 +45,7 @@ On staging (or playground/dev), not on live:
 2. Set `SYNC_ENV=staging` (or `playground` / `dev`). **Never** set `SYNC_ENV=live` on a host you restore onto.
 3. Fill `SYNC_SSH_*` and `SYNC_SSH_PATH` for the source (live checkout, e.g. `/opt/shopware/live`).
 4. Install an SSH key that can log in to live **without a passphrase** (cron). Pin `known_hosts`.
-5. Confirm shop-root `.env` has `IMAGE` and `SHOPWARE_DATA_ROOT` (compose interpolation). Sync does not read secrets from the script itself.
+5. Confirm shop-root `.env` has `IMAGE`, `SHOPWARE_SHOP_ID`, `SHOPWARE_DEPLOY_ENV`, `COMPOSE_PROJECT_NAME`, and `SHOPWARE_DATA_ROOT` (compose interpolation). Sync derives the last two from shop id + deploy env when they are empty. Sync does not read secrets from the script itself.
 
 Do not commit `deploy/sync.env` (add it to the shop `.gitignore`; that file is owned by `shopware-cli project create`).
 
@@ -64,7 +70,7 @@ bash deploy/sync-runtime.sh restore --snapshot <id> --data all
 ### Cron (consumer)
 
 ```cron
-15 2 * * * cd /opt/shopware/staging && bash deploy/sync-runtime.sh sync --from live --data all
+15 2 * * * cd /opt/shopware/acme-staging && bash deploy/sync-runtime.sh sync --from live --data all
 ```
 
 Overlapping runs are blocked with `flock`.
@@ -83,7 +89,7 @@ Overlapping runs are blocked with `flock`.
 
 ## Named-volume leftover
 
-If a host still has `shopware_media` (etc.) from an older recipe and the bind-mount directory is missing, snapshot/export will tar that named volume once. New stacks use bind mounts only; do not add `files`/`media`/… back as named volumes in `deploy/compose.yaml`.
+If a host still has `<project>_media` (etc.) from an older recipe and the bind-mount directory is missing, snapshot/export will tar that named volume once. New stacks use bind mounts only; do not add `files`/`media`/… back as named volumes in `deploy/compose.yaml`. Compose project name is `COMPOSE_PROJECT_NAME` from `.env`, not a hardcoded `shopware`.
 
 ## Local `project dev` (laptop)
 
@@ -95,7 +101,7 @@ bash deploy/sync-runtime-local.sh --from live --data all
 shopware-cli project console cache:clear
 ```
 
-| Live VPS (`SHOPWARE_DATA_ROOT`, default `/var/lib/shopware/data`) | Local project |
+| Live VPS (`SHOPWARE_DATA_ROOT`, default `/var/lib/shopware/data/${SHOPWARE_SHOP_ID}/live`) | Local project |
 | --- | --- |
 | `.../files` | `files/` |
 | `.../media` | `public/media/` |
@@ -103,4 +109,4 @@ shopware-cli project console cache:clear
 | `.../theme` | `public/theme/` |
 | `.../sitemap` | `public/sitemap/` |
 
-`--from` defaults the SSH host to that alias (`Host live` in `~/.ssh/config`). Optional `deploy/sync.env` / `SYNC_LIVE_*` / `SYNC_REMOTE_DATA_ROOT` match `sync-runtime.sh`. `--delete` is off unless passed (keeps local-only uploads). Database copy is out of scope here.
+`--from` defaults the SSH host to that alias (`Host live` in `~/.ssh/config`). Laptop `.env` needs `SHOPWARE_SHOP_ID` (same as live). Optional `deploy/sync.env` / `SYNC_LIVE_*` / `SYNC_REMOTE_DATA_ROOT` match `sync-runtime.sh`. `--delete` is off unless passed (keeps local-only uploads). Database copy is out of scope here.

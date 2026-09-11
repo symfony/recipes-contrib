@@ -6,8 +6,10 @@
 # Never auto-pushes into live.
 #
 # Shopware files live on the host under
-# ${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/{files,media,thumbnail,theme,sitemap}
-# (compose bind mounts). mysql_data / redis_data stay named volumes and are not
+# ${SHOPWARE_DATA_ROOT}/{files,media,thumbnail,theme,sitemap} (compose bind mounts).
+# Default SHOPWARE_DATA_ROOT is
+# /var/lib/shopware/data/${SHOPWARE_SHOP_ID}/${SHOPWARE_DEPLOY_ENV}
+# (derived when unset). mysql_data / redis_data stay named volumes and are not
 # copied here (DB is mysqldump).
 #
 # Copy deploy/sync.env.example → deploy/sync.env on the consumer and fill SYNC_SSH_*.
@@ -112,6 +114,12 @@ esac
 want_db() { [[ "$DATA" == all || "$DATA" == db ]]; }
 want_volumes() { [[ "$DATA" == all || "$DATA" == volumes ]]; }
 
+ensure_data_root() {
+  if want_volumes && [[ -z "${SHOPWARE_DATA_ROOT:-}" ]]; then
+    die "Set SHOPWARE_DATA_ROOT or SHOPWARE_SHOP_ID+SHOPWARE_DEPLOY_ENV in .env"
+  fi
+}
+
 COMPOSE_DIR="${COMPOSE_DIR:-$(cd "$(dirname "$0")/.." && pwd)}"
 cd "$COMPOSE_DIR"
 
@@ -145,13 +153,39 @@ if [[ -f "$SYNC_ENV_FILE" ]]; then
   set +a
 fi
 
-SYNC_COMPOSE_PROJECT="${SYNC_COMPOSE_PROJECT:-shopware}"
+SHOPWARE_DATA_ROOT_BASE="/var/lib/shopware/data"
+
+# SHOPWARE_SHOP_ID + SHOPWARE_DEPLOY_ENV (or SYNC_ENV) → project name / data root.
+# Compose does not nest expansions; .env should set these explicitly. Scripts fill
+# the formula when they are empty so live/staging on one host stay isolated.
+if [[ -z "${SHOPWARE_DEPLOY_ENV:-}" && -n "${SYNC_ENV:-}" ]]; then
+  SHOPWARE_DEPLOY_ENV="${SYNC_ENV}"
+fi
+if [[ -z "${SYNC_ENV:-}" && -n "${SHOPWARE_DEPLOY_ENV:-}" ]]; then
+  SYNC_ENV="${SHOPWARE_DEPLOY_ENV}"
+fi
+if [[ -z "${COMPOSE_PROJECT_NAME:-}" && -n "${SHOPWARE_SHOP_ID:-}" && -n "${SHOPWARE_DEPLOY_ENV:-}" ]]; then
+  COMPOSE_PROJECT_NAME="${SHOPWARE_SHOP_ID}-${SHOPWARE_DEPLOY_ENV}"
+fi
+if [[ -z "${SHOPWARE_DATA_ROOT:-}" && -n "${SHOPWARE_SHOP_ID:-}" && -n "${SHOPWARE_DEPLOY_ENV:-}" ]]; then
+  SHOPWARE_DATA_ROOT="${SHOPWARE_DATA_ROOT_BASE}/${SHOPWARE_SHOP_ID}/${SHOPWARE_DEPLOY_ENV}"
+fi
+if [[ -n "${COMPOSE_PROJECT_NAME:-}" ]]; then
+  export COMPOSE_PROJECT_NAME
+fi
+if [[ -n "${SHOPWARE_DATA_ROOT:-}" ]]; then
+  export SHOPWARE_DATA_ROOT
+fi
+
+SYNC_COMPOSE_PROJECT="${SYNC_COMPOSE_PROJECT:-${COMPOSE_PROJECT_NAME:-}}"
 SYNC_VOLUMES="${SYNC_VOLUMES:-files,media,thumbnail,theme,sitemap}"
-SHOPWARE_DATA_ROOT="${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}"
-SYNC_REMOTE_DATA_ROOT="${SYNC_REMOTE_DATA_ROOT:-/var/lib/shopware/data}"
 SYNC_SNAPSHOT_DIR="${SYNC_SNAPSHOT_DIR:-$COMPOSE_DIR/.runtime-snapshots}"
 SYNC_KEEP_SNAPSHOTS="${SYNC_KEEP_SNAPSHOTS:-5}"
 SYNC_SSH_PORT="${SYNC_SSH_PORT:-22}"
+
+if [[ "$COMMAND" != "export" && -n "${COMPOSE_PROJECT_NAME:-}${SHOPWARE_DATA_ROOT:-}" ]]; then
+  log "Identity shop=${SHOPWARE_SHOP_ID:-?} env=${SHOPWARE_DEPLOY_ENV:-?} project=${COMPOSE_PROJECT_NAME:-?} data_root=${SHOPWARE_DATA_ROOT:-?}"
+fi
 
 COMPOSE=(
   docker compose
@@ -182,7 +216,9 @@ project_name() {
   local n
   n="$("${COMPOSE[@]}" config 2>/dev/null | sed -n 's/^name:[[:space:]]*//p' | head -n1 || true)"
   n="${n:-$SYNC_COMPOSE_PROJECT}"
-  printf '%s\n' "${n:-shopware}"
+  n="${n:-$COMPOSE_PROJECT_NAME}"
+  [[ -n "$n" ]] || die "Set COMPOSE_PROJECT_NAME in .env (e.g. \${SHOPWARE_SHOP_ID}-\${SHOPWARE_DEPLOY_ENV})"
+  printf '%s\n' "$n"
 }
 
 volume_list() {
@@ -238,7 +274,7 @@ confirm() {
 }
 
 acquire_lock() {
-  local lock="/tmp/shopware-sync-runtime.lock"
+  local lock="/tmp/shopware-sync-runtime-${COMPOSE_PROJECT_NAME:-default}.lock"
   if command -v flock >/dev/null 2>&1; then
     exec 9>"$lock"
     if ! flock -n 9; then
@@ -539,8 +575,21 @@ from_ssh_path() {
   printf '%s\n' "${!var:-${SYNC_SSH_PATH:-}}"
 }
 from_data_root() {
-  local var="SYNC_$(env_upper "$1")_DATA_ROOT"
-  printf '%s\n' "${!var:-${SYNC_REMOTE_DATA_ROOT:-/var/lib/shopware/data}}"
+  local var
+  var="SYNC_$(env_upper "$1")_DATA_ROOT"
+  if [[ -n "${!var:-}" ]]; then
+    printf '%s\n' "${!var}"
+    return
+  fi
+  if [[ -n "${SYNC_REMOTE_DATA_ROOT:-}" ]]; then
+    printf '%s\n' "$SYNC_REMOTE_DATA_ROOT"
+    return
+  fi
+  if [[ -n "${SHOPWARE_SHOP_ID:-}" ]]; then
+    printf '%s\n' "${SHOPWARE_DATA_ROOT_BASE}/${SHOPWARE_SHOP_ID}/$1"
+    return
+  fi
+  printf '%s\n' "$SHOPWARE_DATA_ROOT_BASE"
 }
 
 ssh_rsh() {
@@ -603,6 +652,7 @@ remote_export() {
 }
 
 cmd_export() {
+  ensure_data_root
   case "$DATA" in
     db)
       dump_sql
@@ -619,6 +669,7 @@ cmd_export() {
 
 cmd_snapshot() {
   acquire_lock
+  ensure_data_root
   mkdir -p "$SYNC_SNAPSHOT_DIR"
   local id ts envn
   ts="$(date -u +%Y%m%dT%H%M%SZ)"
@@ -652,6 +703,7 @@ cmd_snapshot() {
 
 cmd_restore() {
   acquire_lock
+  ensure_data_root
   if [[ -z "$SNAPSHOT_ID" ]]; then
     log "Available snapshots in $SYNC_SNAPSHOT_DIR:"
     snapshot_ids || true
@@ -688,6 +740,7 @@ cmd_restore() {
 
 cmd_sync() {
   acquire_lock
+  ensure_data_root
   [[ -n "$FROM_ENV" ]] || die "sync requires --from <env> (e.g. --from live)"
   [[ -n "${SYNC_ENV:-}" ]] || die "Set SYNC_ENV in deploy/sync.env (this host, e.g. staging)"
   if is_live_env "$SYNC_ENV"; then

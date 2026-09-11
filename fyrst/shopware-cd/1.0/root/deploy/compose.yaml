@@ -11,9 +11,11 @@
 #     -f deploy/compose.yaml -f deploy/compose.prod.yaml -f deploy/compose.vps.yaml ...
 #
 # Runtime files (media, theme, …) are bind-mounted from
-# ${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/{files,media,thumbnail,theme,sitemap}.
-# mysql_data / redis_data stay named volumes. Set SHOPWARE_DATA_ROOT per shop if
-# several stacks share a Docker host.
+# ${SHOPWARE_DATA_ROOT}/{files,media,thumbnail,theme,sitemap}.
+# Set SHOPWARE_DATA_ROOT and COMPOSE_PROJECT_NAME in shop-root .env (Compose does
+# not nest expansions). Default formula:
+#   /var/lib/shopware/data/${SHOPWARE_SHOP_ID}/${SHOPWARE_DEPLOY_ENV}
+# mysql_data / redis_data stay named volumes, scoped by COMPOSE_PROJECT_NAME.
 #
 # Bundled MySQL: service name `mysql` (DATABASE_URL host = mysql).
 # External DB:   set DATABASE_URL to the DBaaS DSN, delete or comment out
@@ -26,9 +28,10 @@
 #   scheduler  — scheduled-task:run
 #
 # Flex recipes cannot use YAML anchors; app services repeat image/build/mounts.
-# TODO: set `name:` per shop if several stacks share a Docker host.
+# Project name comes from COMPOSE_PROJECT_NAME in shop-root .env (e.g. acme-live).
+# Do not hardcode `name: shopware` — several shops and live+staging share a host.
 
-name: shopware
+name: ${COMPOSE_PROJECT_NAME:?Set COMPOSE_PROJECT_NAME in .env}
 
 services:
     web:
@@ -41,11 +44,11 @@ services:
         env_file:
             -   .env
         volumes:
-            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/files:/var/www/html/files"
-            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/theme:/var/www/html/public/theme"
-            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/media:/var/www/html/public/media"
-            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/thumbnail:/var/www/html/public/thumbnail"
-            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/sitemap:/var/www/html/public/sitemap"
+            -   "${SHOPWARE_DATA_ROOT:?Set SHOPWARE_DATA_ROOT in .env}/files:/var/www/html/files"
+            -   "${SHOPWARE_DATA_ROOT:?Set SHOPWARE_DATA_ROOT in .env}/theme:/var/www/html/public/theme"
+            -   "${SHOPWARE_DATA_ROOT:?Set SHOPWARE_DATA_ROOT in .env}/media:/var/www/html/public/media"
+            -   "${SHOPWARE_DATA_ROOT:?Set SHOPWARE_DATA_ROOT in .env}/thumbnail:/var/www/html/public/thumbnail"
+            -   "${SHOPWARE_DATA_ROOT:?Set SHOPWARE_DATA_ROOT in .env}/sitemap:/var/www/html/public/sitemap"
         ports:
             -   "${HTTP_PORT:-8000}:8000"
         depends_on:
@@ -71,11 +74,11 @@ services:
         env_file:
             -   .env
         volumes:
-            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/files:/var/www/html/files"
-            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/theme:/var/www/html/public/theme"
-            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/media:/var/www/html/public/media"
-            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/thumbnail:/var/www/html/public/thumbnail"
-            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/sitemap:/var/www/html/public/sitemap"
+            -   "${SHOPWARE_DATA_ROOT:?Set SHOPWARE_DATA_ROOT in .env}/files:/var/www/html/files"
+            -   "${SHOPWARE_DATA_ROOT:?Set SHOPWARE_DATA_ROOT in .env}/theme:/var/www/html/public/theme"
+            -   "${SHOPWARE_DATA_ROOT:?Set SHOPWARE_DATA_ROOT in .env}/media:/var/www/html/public/media"
+            -   "${SHOPWARE_DATA_ROOT:?Set SHOPWARE_DATA_ROOT in .env}/thumbnail:/var/www/html/public/thumbnail"
+            -   "${SHOPWARE_DATA_ROOT:?Set SHOPWARE_DATA_ROOT in .env}/sitemap:/var/www/html/public/sitemap"
         profiles: ["setup"]
         restart: "no"
         depends_on:
@@ -105,11 +108,11 @@ services:
         env_file:
             -   .env
         volumes:
-            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/files:/var/www/html/files"
-            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/theme:/var/www/html/public/theme"
-            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/media:/var/www/html/public/media"
-            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/thumbnail:/var/www/html/public/thumbnail"
-            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/sitemap:/var/www/html/public/sitemap"
+            -   "${SHOPWARE_DATA_ROOT:?Set SHOPWARE_DATA_ROOT in .env}/files:/var/www/html/files"
+            -   "${SHOPWARE_DATA_ROOT:?Set SHOPWARE_DATA_ROOT in .env}/theme:/var/www/html/public/theme"
+            -   "${SHOPWARE_DATA_ROOT:?Set SHOPWARE_DATA_ROOT in .env}/media:/var/www/html/public/media"
+            -   "${SHOPWARE_DATA_ROOT:?Set SHOPWARE_DATA_ROOT in .env}/thumbnail:/var/www/html/public/thumbnail"
+            -   "${SHOPWARE_DATA_ROOT:?Set SHOPWARE_DATA_ROOT in .env}/sitemap:/var/www/html/public/sitemap"
         profiles: ["setup"]
         user: "root"
         restart: "no"
@@ -168,11 +171,11 @@ services:
         env_file:
             -   .env
         volumes:
-            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/files:/var/www/html/files"
-            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/theme:/var/www/html/public/theme"
-            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/media:/var/www/html/public/media"
-            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/thumbnail:/var/www/html/public/thumbnail"
-            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/sitemap:/var/www/html/public/sitemap"
+            -   "${SHOPWARE_DATA_ROOT:?Set SHOPWARE_DATA_ROOT in .env}/files:/var/www/html/files"
+            -   "${SHOPWARE_DATA_ROOT:?Set SHOPWARE_DATA_ROOT in .env}/theme:/var/www/html/public/theme"
+            -   "${SHOPWARE_DATA_ROOT:?Set SHOPWARE_DATA_ROOT in .env}/media:/var/www/html/public/media"
+            -   "${SHOPWARE_DATA_ROOT:?Set SHOPWARE_DATA_ROOT in .env}/thumbnail:/var/www/html/public/thumbnail"
+            -   "${SHOPWARE_DATA_ROOT:?Set SHOPWARE_DATA_ROOT in .env}/sitemap:/var/www/html/public/sitemap"
         profiles: ["worker"]
         depends_on:
             mysql:
@@ -199,11 +202,11 @@ services:
         env_file:
             -   .env
         volumes:
-            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/files:/var/www/html/files"
-            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/theme:/var/www/html/public/theme"
-            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/media:/var/www/html/public/media"
-            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/thumbnail:/var/www/html/public/thumbnail"
-            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/sitemap:/var/www/html/public/sitemap"
+            -   "${SHOPWARE_DATA_ROOT:?Set SHOPWARE_DATA_ROOT in .env}/files:/var/www/html/files"
+            -   "${SHOPWARE_DATA_ROOT:?Set SHOPWARE_DATA_ROOT in .env}/theme:/var/www/html/public/theme"
+            -   "${SHOPWARE_DATA_ROOT:?Set SHOPWARE_DATA_ROOT in .env}/media:/var/www/html/public/media"
+            -   "${SHOPWARE_DATA_ROOT:?Set SHOPWARE_DATA_ROOT in .env}/thumbnail:/var/www/html/public/thumbnail"
+            -   "${SHOPWARE_DATA_ROOT:?Set SHOPWARE_DATA_ROOT in .env}/sitemap:/var/www/html/public/sitemap"
         profiles: ["scheduler"]
         depends_on:
             mysql:
