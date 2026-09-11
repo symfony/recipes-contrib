@@ -1,0 +1,18 @@
+jpm_martin_sylius_nmi_shop:
+    resource: "@JpmMartinSyliusNmiPlugin/config/routes/shop.yaml"
+
+jpm_martin_sylius_nmi_admin:
+    resource: "@JpmMartinSyliusNmiPlugin/config/routes/admin.yaml"
+    prefix: /%sylius_admin.path_name%
+
+# Required if you want NMI to tell your store what it did. Without it there is no endpoint and
+# nothing arrives. No prefix: not the locale, not the admin path. See the README's "Webhooks".
+jpm_martin_sylius_nmi_webhook:
+    resource: "@JpmMartinSyliusNmiPlugin/config/routes/webhook.yaml"
+
+# Required if you turn saved cards on, and harmless if you do not. See the README's "Saved cards".
+jpm_martin_sylius_nmi_shop_account:
+    resource: "@JpmMartinSyliusNmiPlugin/config/routes/shop_account.yaml"
+    prefix: /{_locale}/account
+    requirements:
+        _locale: ^[A-Za-z]{2,4}(_([A-Za-z]{4}|[0-9]{3}))?(_([A-Za-z]{2}|[0-9]{3}))?$
