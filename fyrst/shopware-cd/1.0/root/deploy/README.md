@@ -59,6 +59,7 @@ Compose files used (from the shop root, with `--project-directory .`):
 - `deploy/compose.yaml`
 - `deploy/compose.prod.yaml`
 - `deploy/compose.vps.yaml`
+- `deploy/sync-runtime.sh` / `deploy/sync.env.example` — live → lower runtime copy (no S3)
 
 shopware-cli project create owns shop-root `compose.yaml` (local). Do not point CD at that file.
 
@@ -81,6 +82,46 @@ bash ./deploy/vps-release.sh
 ```
 
 Keep the previous image physically on the host (`docker image prune` with care).
+
+## Runtime data sync (VPS, no S3)
+
+DB + media/files are **not** in git and **not** in the app image. They live in MySQL and in Docker named volumes on the VPS (`files`, `media`, `thumbnail`, `theme`, `sitemap`).
+
+`deploy/sync-runtime.sh` copies that runtime data **live → lower** (staging / playground / dev) with **SSH + mysqldump + volume tars**. There is no S3/MinIO path in this recipe.
+
+| Command | What it does |
+| --- | --- |
+| `sync --from live` | Pull dump + volumes from a higher env onto **this** host |
+| `snapshot` | Write a local snapshot under `SYNC_SNAPSHOT_DIR` |
+| `restore --snapshot <id>` | Restore a local snapshot onto this host |
+
+**Direction:** run `sync` on the consumer (cron on staging). Never auto-push into live. `SYNC_ENV=live` refuses `sync`.
+
+```bash
+# on staging
+cd /opt/shopware/<shop>
+cp deploy/sync.env.example deploy/sync.env   # set SYNC_SSH_* , SYNC_ENV=staging
+chmod 600 deploy/sync.env
+
+bash deploy/sync-runtime.sh sync --from live --data all
+```
+
+`--data all` (default) is DB + volumes; use `db` or `volumes` to limit. Both shops need this script in `deploy/` (Flex-update live as well as staging).
+
+Cron (staging):
+
+```cron
+15 2 * * * cd /opt/shopware/staging && bash deploy/sync-runtime.sh sync --from live --data all
+```
+
+Local snapshot / restore (same host, still no S3):
+
+```bash
+bash deploy/sync-runtime.sh snapshot --data all
+bash deploy/sync-runtime.sh restore --snapshot <id> --data all
+```
+
+After a live DB lands on staging, `.env` is left alone. Optional `SYNC_REWRITE_FROM_URL` / `SYNC_REWRITE_TO_URL` rewrites `sales_channel_domain.url`. Then set staging `APP_URL` as usual.
 
 ## Required CI secrets (Compose path)
 
