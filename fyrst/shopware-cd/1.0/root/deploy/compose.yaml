@@ -10,6 +10,11 @@
 #   docker compose --project-directory . \
 #     -f deploy/compose.yaml -f deploy/compose.prod.yaml -f deploy/compose.vps.yaml ...
 #
+# Runtime files (media, theme, …) are bind-mounted from
+# ${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/{files,media,thumbnail,theme,sitemap}.
+# mysql_data / redis_data stay named volumes. Set SHOPWARE_DATA_ROOT per shop if
+# several stacks share a Docker host.
+#
 # Bundled MySQL: service name `mysql` (DATABASE_URL host = mysql).
 # External DB:   set DATABASE_URL to the DBaaS DSN, delete or comment out
 #                the `mysql` service, and drop it from depends_on.
@@ -20,29 +25,27 @@
 #   worker     — messenger:consume
 #   scheduler  — scheduled-task:run
 #
+# Flex recipes cannot use YAML anchors; app services repeat image/build/mounts.
 # TODO: set `name:` per shop if several stacks share a Docker host.
 
 name: shopware
 
-x-shopware: &shopware
-    image: ${IMAGE:?Set IMAGE in .env}:${IMAGE_TAG:-latest}
-    build:
-        context: .
-        dockerfile: ${DOCKERFILE:-docker/Dockerfile}
-        args:
-            PHP_VERSION: ${PHP_VERSION:-8.3}
-    env_file:
-        -   .env
-    volumes:
-        -   files:/var/www/html/files
-        -   theme:/var/www/html/public/theme
-        -   media:/var/www/html/public/media
-        -   thumbnail:/var/www/html/public/thumbnail
-        -   sitemap:/var/www/html/public/sitemap
-
 services:
     web:
-        <<: *shopware
+        image: ${IMAGE:?Set IMAGE in .env}:${IMAGE_TAG:-latest}
+        build:
+            context: .
+            dockerfile: ${DOCKERFILE:-docker/Dockerfile}
+            args:
+                PHP_VERSION: ${PHP_VERSION:-8.3}
+        env_file:
+            -   .env
+        volumes:
+            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/files:/var/www/html/files"
+            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/theme:/var/www/html/public/theme"
+            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/media:/var/www/html/public/media"
+            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/thumbnail:/var/www/html/public/thumbnail"
+            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/sitemap:/var/www/html/public/sitemap"
         ports:
             -   "${HTTP_PORT:-8000}:8000"
         depends_on:
@@ -59,7 +62,20 @@ services:
     # One-shot install/update. Never compiles themes/assets (those are in the image).
     #   docker compose --profile setup run --rm setup
     setup:
-        <<: *shopware
+        image: ${IMAGE:?Set IMAGE in .env}:${IMAGE_TAG:-latest}
+        build:
+            context: .
+            dockerfile: ${DOCKERFILE:-docker/Dockerfile}
+            args:
+                PHP_VERSION: ${PHP_VERSION:-8.3}
+        env_file:
+            -   .env
+        volumes:
+            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/files:/var/www/html/files"
+            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/theme:/var/www/html/public/theme"
+            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/media:/var/www/html/public/media"
+            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/thumbnail:/var/www/html/public/thumbnail"
+            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/sitemap:/var/www/html/public/sitemap"
         profiles: ["setup"]
         restart: "no"
         depends_on:
@@ -78,9 +94,22 @@ services:
                 "--skip-assets-install",
             ]
 
-    # Volume ownership for uid 82 (www-data in docker-base). Same profile as setup.
+    # Directory ownership for uid 82 (www-data in docker-base). Same profile as setup.
     init-perm:
-        <<: *shopware
+        image: ${IMAGE:?Set IMAGE in .env}:${IMAGE_TAG:-latest}
+        build:
+            context: .
+            dockerfile: ${DOCKERFILE:-docker/Dockerfile}
+            args:
+                PHP_VERSION: ${PHP_VERSION:-8.3}
+        env_file:
+            -   .env
+        volumes:
+            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/files:/var/www/html/files"
+            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/theme:/var/www/html/public/theme"
+            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/media:/var/www/html/public/media"
+            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/thumbnail:/var/www/html/public/thumbnail"
+            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/sitemap:/var/www/html/public/sitemap"
         profiles: ["setup"]
         user: "root"
         restart: "no"
@@ -130,7 +159,20 @@ services:
             retries: 10
 
     worker:
-        <<: *shopware
+        image: ${IMAGE:?Set IMAGE in .env}:${IMAGE_TAG:-latest}
+        build:
+            context: .
+            dockerfile: ${DOCKERFILE:-docker/Dockerfile}
+            args:
+                PHP_VERSION: ${PHP_VERSION:-8.3}
+        env_file:
+            -   .env
+        volumes:
+            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/files:/var/www/html/files"
+            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/theme:/var/www/html/public/theme"
+            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/media:/var/www/html/public/media"
+            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/thumbnail:/var/www/html/public/thumbnail"
+            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/sitemap:/var/www/html/public/sitemap"
         profiles: ["worker"]
         depends_on:
             mysql:
@@ -148,7 +190,20 @@ services:
             ]
 
     scheduler:
-        <<: *shopware
+        image: ${IMAGE:?Set IMAGE in .env}:${IMAGE_TAG:-latest}
+        build:
+            context: .
+            dockerfile: ${DOCKERFILE:-docker/Dockerfile}
+            args:
+                PHP_VERSION: ${PHP_VERSION:-8.3}
+        env_file:
+            -   .env
+        volumes:
+            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/files:/var/www/html/files"
+            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/theme:/var/www/html/public/theme"
+            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/media:/var/www/html/public/media"
+            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/thumbnail:/var/www/html/public/thumbnail"
+            -   "${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/sitemap:/var/www/html/public/sitemap"
         profiles: ["scheduler"]
         depends_on:
             mysql:
@@ -157,10 +212,5 @@ services:
         entrypoint: ["php", "bin/console", "scheduled-task:run"]
 
 volumes:
-    files:
-    theme:
-    media:
-    thumbnail:
-    sitemap:
     mysql_data:
     redis_data:

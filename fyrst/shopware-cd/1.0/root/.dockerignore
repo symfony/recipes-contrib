@@ -20,7 +20,7 @@ auth.json
 /vendor
 /node_modules
 
-# Generated / state (runtime volumes on the host, not the image)
+# Generated / state (runtime bind mounts on the host, not the image)
 /var
 /files
 /public/bundles

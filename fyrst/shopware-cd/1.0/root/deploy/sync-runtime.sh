@@ -1,9 +1,14 @@
 #!/usr/bin/env bash
-# VPS runtime data: mysqldump + Docker volume tars over SSH. No S3.
+# VPS runtime data: mysqldump + rsync of bind-mounted host dirs over SSH. No S3.
 #
 # Commands: sync | snapshot | restore
 # Direction for sync: higher env → this host (live → staging / playground / dev).
 # Never auto-pushes into live.
+#
+# Shopware files live on the host under
+# ${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}/{files,media,thumbnail,theme,sitemap}
+# (compose bind mounts). mysql_data / redis_data stay named volumes and are not
+# copied here (DB is mysqldump).
 #
 # Copy deploy/sync.env.example → deploy/sync.env on the consumer and fill SYNC_SSH_*.
 #
@@ -22,15 +27,15 @@ usage() {
 Usage: deploy/sync-runtime.sh <command> [options]
 
 Commands:
-  sync       Pull DB + Docker volumes from a higher env onto this host
-  snapshot   Write a local snapshot (mysqldump + volume tars)
+  sync       Pull DB + bind-mount dirs from a higher env onto this host
+  snapshot   Write a local snapshot (mysqldump + rsync of host dirs)
   restore    Restore a local snapshot onto this host
-  export     Plumbing: write a dump/tar to stdout (SSH source)
+  export     Plumbing: write a dump/tar to stdout (SSH fallback)
 
 Options:
   --from <env>       Source env for sync (e.g. live)
   --data <what>      all | db | volumes   (default: all)
-  --volume <name>    Single compose volume key (export --data volumes)
+  --volume <name>    Single bind-mount dir (files|media|thumbnail|theme|sitemap)
   --snapshot <id>    Snapshot id for restore (directory name under SYNC_SNAPSHOT_DIR)
   --yes              Do not prompt
   -h, --help
@@ -40,8 +45,9 @@ Examples:
   bash deploy/sync-runtime.sh snapshot --data all
   bash deploy/sync-runtime.sh restore --snapshot 20260911T021500Z-live --data all
 
-No S3. Files stay on the VPS (SSH or local snapshot dir). Live is never the
-destination of `sync`. Cron on the lower env (see deploy/README.md).
+No S3. Files stay on the VPS (rsync over SSH, or a local snapshot dir). Live
+is never the destination of `sync`. Cron on the lower env (see
+deploy/README.md and deploy/sync-runtime.md).
 EOF
 }
 
@@ -74,7 +80,7 @@ while [[ $# -gt 0 ]]; do
       ;;
     --volume)
       VOLUME_KEY="${2:-}"
-      [[ -n "$VOLUME_KEY" ]] || die "--volume requires a compose volume key"
+      [[ -n "$VOLUME_KEY" ]] || die "--volume requires a bind-mount dir name (files|media|thumbnail|theme|sitemap)"
       shift 2
       ;;
     --snapshot)
@@ -141,6 +147,8 @@ fi
 
 SYNC_COMPOSE_PROJECT="${SYNC_COMPOSE_PROJECT:-shopware}"
 SYNC_VOLUMES="${SYNC_VOLUMES:-files,media,thumbnail,theme,sitemap}"
+SHOPWARE_DATA_ROOT="${SHOPWARE_DATA_ROOT:-/var/lib/shopware/data}"
+SYNC_REMOTE_DATA_ROOT="${SYNC_REMOTE_DATA_ROOT:-/var/lib/shopware/data}"
 SYNC_SNAPSHOT_DIR="${SYNC_SNAPSHOT_DIR:-$COMPOSE_DIR/.runtime-snapshots}"
 SYNC_KEEP_SNAPSHOTS="${SYNC_KEEP_SNAPSHOTS:-5}"
 SYNC_SSH_PORT="${SYNC_SSH_PORT:-22}"
@@ -186,8 +194,16 @@ volume_list() {
   done
 }
 
+host_data_dir() {
+  printf '%s/%s\n' "$SHOPWARE_DATA_ROOT" "$1"
+}
+
 docker_volume_name() {
   printf '%s_%s\n' "$(project_name)" "$1"
+}
+
+has_named_volume() {
+  docker volume inspect "$(docker_volume_name "$1")" >/dev/null 2>&1
 }
 
 env_rank() {
@@ -366,26 +382,77 @@ rewrite_urls() {
   printf '%s' "$sql" | import_sql
 }
 
+# Primary: tar/rsync the bind-mounted host dir. Fallback: named Docker volume.
 dump_volume_tar() {
-  local key="$1" vol
-  vol="$(docker_volume_name "$key")"
-  if ! docker volume inspect "$vol" >/dev/null 2>&1; then
-    die "Docker volume not found: $vol (compose key: $key)"
+  local key="$1" host vol
+  host="$(host_data_dir "$key")"
+  if [[ -d "$host" ]]; then
+    tar -C "$host" -czf - .
+    return
   fi
-  docker run --rm \
-    -v "$vol":/volume:ro \
-    alpine:3.20 \
-    tar -C /volume -czf - .
+  vol="$(docker_volume_name "$key")"
+  if has_named_volume "$key"; then
+    log "Bind-mount dir $host missing; archiving named volume $vol"
+    docker run --rm \
+      -v "$vol":/volume:ro \
+      alpine:3.20 \
+      tar -C /volume -czf - .
+    return
+  fi
+  die "No bind-mount dir ($host) and no Docker volume $vol for $key"
 }
 
-restore_volume_tar() {
-  local key="$1" vol
-  vol="$(docker_volume_name "$key")"
-  docker volume create "$vol" >/dev/null
-  docker run --rm -i \
-    -v "$vol":/volume \
-    alpine:3.20 \
-    sh -c 'find /volume -mindepth 1 -maxdepth 1 -exec rm -rf {} +; tar -C /volume -xzf -'
+rsync_local_dir() {
+  local src="$1" dest="$2"
+  mkdir -p "$dest"
+  if command -v rsync >/dev/null 2>&1; then
+    rsync -a --delete "$src/" "$dest/"
+    return
+  fi
+  find "$dest" -mindepth 1 -maxdepth 1 -exec rm -rf {} +
+  tar -C "$src" -cf - . | tar -C "$dest" -xf -
+}
+
+restore_host_tar_stdin() {
+  local dest
+  dest="$(host_data_dir "$1")"
+  mkdir -p "$dest"
+  find "$dest" -mindepth 1 -maxdepth 1 -exec rm -rf {} +
+  tar -C "$dest" -xzf -
+}
+
+snapshot_runtime_dir() {
+  local key="$1" dest="$2/$key" host
+  host="$(host_data_dir "$key")"
+  if [[ -d "$host" ]]; then
+    log "Rsync $host → $dest"
+    rsync_local_dir "$host" "$dest"
+    return
+  fi
+  if has_named_volume "$key"; then
+    log "Archiving named volume $key → $2/${key}.tar.gz"
+    dump_volume_tar "$key" >"$2/${key}.tar.gz"
+    return
+  fi
+  log "Skip $key (no host dir $host)"
+}
+
+restore_runtime_dir() {
+  local key="$1" dir="$2" dest
+  dest="$(host_data_dir "$key")"
+  mkdir -p "$dest"
+  if [[ -d "$dir/$key" ]]; then
+    log "Rsync snapshot $key → $dest"
+    rsync_local_dir "$dir/$key" "$dest"
+    return
+  fi
+  if [[ -f "$dir/${key}.tar.gz" ]]; then
+    log "Extracting $key tar → $dest"
+    find "$dest" -mindepth 1 -maxdepth 1 -exec rm -rf {} +
+    tar -C "$dest" -xzf "$dir/${key}.tar.gz"
+    return
+  fi
+  log "Skip $key (not in snapshot)"
 }
 
 stop_app() {
@@ -408,12 +475,16 @@ start_app() {
 }
 
 chown_volumes() {
-  if [[ -z "${IMAGE:-}" || -z "${IMAGE_TAG:-}" ]]; then
-    log "Skip init-perm (IMAGE / IMAGE_TAG unset)"
-    return 0
-  fi
-  log "chown volume mounts (init-perm)"
-  "${COMPOSE[@]}" --profile setup run --rm --no-build init-perm || log "init-perm failed (continuing)"
+  local key dest
+  while IFS= read -r key; do
+    dest="$(host_data_dir "$key")"
+    mkdir -p "$dest"
+    log "chown 82:82 $dest"
+    docker run --rm \
+      -v "$dest":/data \
+      alpine:3.20 \
+      chown -R 82:82 /data
+  done < <(volume_list)
 }
 
 cache_clear() {
@@ -466,6 +537,38 @@ from_ssh_identity() {
 from_ssh_path() {
   local var="SYNC_$(env_upper "$1")_PATH"
   printf '%s\n' "${!var:-${SYNC_SSH_PATH:-}}"
+}
+from_data_root() {
+  local var="SYNC_$(env_upper "$1")_DATA_ROOT"
+  printf '%s\n' "${!var:-${SYNC_REMOTE_DATA_ROOT:-/var/lib/shopware/data}}"
+}
+
+ssh_rsh() {
+  local a out=""
+  ssh_base "$1"
+  for a in "${SSH_CMD[@]}"; do
+    out+="$(printf '%q ' "$a")"
+  done
+  printf '%s' "${out% }"
+}
+
+rsync_from_remote() {
+  local from="$1" key="$2"
+  local host user remote dest
+  host="$(from_ssh_host "$from")"
+  user="$(from_ssh_user "$from")"
+  remote="$(from_data_root "$from")/$key"
+  dest="$(host_data_dir "$key")"
+  mkdir -p "$dest"
+  if command -v rsync >/dev/null 2>&1; then
+    log "Rsync ${user}@${host}:${remote}/ → ${dest}/"
+    rsync -a --delete -e "$(ssh_rsh "$from")" \
+      "${user}@${host}:${remote}/" "${dest}/"
+    return
+  fi
+  log "rsync not installed; streaming tar of $key from $from"
+  remote_export "$from" "--data volumes --volume $(printf '%q' "$key")" \
+    | restore_host_tar_stdin "$key"
 }
 
 ssh_base() {
@@ -530,6 +633,7 @@ cmd_snapshot() {
     printf 'created_at=%s\n' "$ts"
     printf 'data=%s\n' "$DATA"
     printf 'volumes=%s\n' "$SYNC_VOLUMES"
+    printf 'data_root=%s\n' "$SHOPWARE_DATA_ROOT"
   } >"$dir/meta.txt"
   if want_db; then
     log "Dumping database"
@@ -538,8 +642,7 @@ cmd_snapshot() {
   if want_volumes; then
     local key
     while IFS= read -r key; do
-      log "Archiving volume $key"
-      dump_volume_tar "$key" >"$dir/${key}.tar.gz"
+      snapshot_runtime_dir "$key" "$dir"
     done < <(volume_list)
   fi
   prune_snapshots
@@ -574,12 +677,7 @@ cmd_restore() {
   if want_volumes; then
     local key
     while IFS= read -r key; do
-      if [[ -f "$dir/${key}.tar.gz" ]]; then
-        log "Restoring volume $key"
-        restore_volume_tar "$key" <"$dir/${key}.tar.gz"
-      else
-        log "Skip volume $key (not in snapshot)"
-      fi
+      restore_runtime_dir "$key" "$dir"
     done < <(volume_list)
     chown_volumes
   fi
@@ -618,9 +716,8 @@ cmd_sync() {
   if want_volumes; then
     local key
     while IFS= read -r key; do
-      log "Streaming volume $key from $FROM_ENV"
-      remote_export "$FROM_ENV" "--data volumes --volume $(printf '%q' "$key")" \
-        | restore_volume_tar "$key"
+      log "Syncing bind-mount dir $key from $FROM_ENV"
+      rsync_from_remote "$FROM_ENV" "$key"
     done < <(volume_list)
     chown_volumes
   fi

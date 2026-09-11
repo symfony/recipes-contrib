@@ -16,7 +16,10 @@
     <comment>docker compose --project-directory . -f deploy/compose.yaml -f deploy/compose.prod.yaml -f deploy/compose.vps.yaml</comment>
 
     VPS runtime copy (no S3): <comment>deploy/sync-runtime.sh</comment> plus
-    <comment>deploy/sync.env.example</comment>. On staging, copy to
+    <comment>deploy/sync.env.example</comment> (see <comment>deploy/sync-runtime.md</comment>).
+    Bind-mounted host dirs default to
+    <comment>/var/lib/shopware/data/{files,media,thumbnail,theme,sitemap}</comment>
+    (<comment>SHOPWARE_DATA_ROOT</comment> in <comment>.env</comment>). On staging, copy to
     <comment>deploy/sync.env</comment> and pull live → lower.
 
     Copy <comment>.env.example</comment> → <comment>.env</comment> yourself (Flex never writes <comment>.env</comment>).

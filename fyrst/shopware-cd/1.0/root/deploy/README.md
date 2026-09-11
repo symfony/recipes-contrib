@@ -21,6 +21,7 @@
 6. `docker login` to that registry on the VPS (or use a credential helper / `~/.docker/config.json`).
 7. Put a reverse proxy in front of `HTTP_PORT` (TLS). Do not expose MySQL.
 8. Store the previous image tag for rollback (the release script writes `.deployed-tag` / `.previous-tag`).
+9. Runtime media/files bind-mount from `SHOPWARE_DATA_ROOT` (default `/var/lib/shopware/data`). Docker creates `{files,media,thumbnail,theme,sitemap}` on first up; `init-perm` chowns those dirs to uid 82.
 
 ## CD sequence (what CI runs)
 
@@ -59,7 +60,7 @@ Compose files used (from the shop root, with `--project-directory .`):
 - `deploy/compose.yaml`
 - `deploy/compose.prod.yaml`
 - `deploy/compose.vps.yaml`
-- `deploy/sync-runtime.sh` / `deploy/sync.env.example` — live → lower runtime copy (no S3)
+- `deploy/sync-runtime.sh` / `deploy/sync.env.example` / `deploy/sync-runtime.md` — live → lower runtime copy (no S3)
 
 shopware-cli project create owns shop-root `compose.yaml` (local). Do not point CD at that file.
 
@@ -85,14 +86,16 @@ Keep the previous image physically on the host (`docker image prune` with care).
 
 ## Runtime data sync (VPS, no S3)
 
-DB + media/files are **not** in git and **not** in the app image. They live in MySQL and in Docker named volumes on the VPS (`files`, `media`, `thumbnail`, `theme`, `sitemap`).
+DB + media/files are **not** in git and **not** in the app image. They live in MySQL and in **bind-mounted host directories** (default `/var/lib/shopware/data/{files,media,thumbnail,theme,sitemap}`). Set `SHOPWARE_DATA_ROOT` in shop-root `.env` if several shops share a VPS. `mysql_data` / `redis_data` stay named volumes (copy the database with mysqldump, not `mysql_data`).
 
-`deploy/sync-runtime.sh` copies that runtime data **live → lower** (staging / playground / dev) with **SSH + mysqldump + volume tars**. There is no S3/MinIO path in this recipe.
+`deploy/sync-runtime.sh` copies that runtime data **live → lower** (staging / playground / dev) with **SSH + mysqldump + rsync of those host dirs**. Volume tars are only a fallback (no rsync, or a leftover named volume). There is no S3/MinIO path in this recipe.
+
+See **[sync-runtime.md](sync-runtime.md)** for flags, cron, and safety.
 
 | Command | What it does |
 | --- | --- |
-| `sync --from live` | Pull dump + volumes from a higher env onto **this** host |
-| `snapshot` | Write a local snapshot under `SYNC_SNAPSHOT_DIR` |
+| `sync --from live` | Pull dump + bind-mount dirs from a higher env onto **this** host |
+| `snapshot` | Write a local snapshot under `SYNC_SNAPSHOT_DIR` (rsync of host dirs) |
 | `restore --snapshot <id>` | Restore a local snapshot onto this host |
 
 **Direction:** run `sync` on the consumer (cron on staging). Never auto-push into live. `SYNC_ENV=live` refuses `sync`.
@@ -106,7 +109,7 @@ chmod 600 deploy/sync.env
 bash deploy/sync-runtime.sh sync --from live --data all
 ```
 
-`--data all` (default) is DB + volumes; use `db` or `volumes` to limit. Both shops need this script in `deploy/` (Flex-update live as well as staging).
+`--data all` (default) is DB + bind-mount dirs; use `db` or `volumes` to limit. Both shops need this script in `deploy/` (Flex-update live as well as staging).
 
 Cron (staging):
 
