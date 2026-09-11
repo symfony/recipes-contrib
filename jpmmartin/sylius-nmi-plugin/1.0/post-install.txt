@@ -1,0 +1,14 @@
+  * <fg=blue>Four things no recipe can do, in this order:</>
+
+    <comment>yarn add @nmipayments/nmi-pay && yarn build</comment>   the browser component and the shop build
+    <comment>bin/console doctrine:migrations:migrate</comment>        the plugin's four tables
+
+  * <fg=blue>A key of your own, before the first payment method is saved.</> The skeleton's test.key is
+    published; point the store at a new path <comment>first</comment>, then generate — the generator writes
+    wherever the store points at that moment:
+
+    <comment>.env.local:</comment>  SYLIUS_PAYMENT_ENCRYPTION_KEY_PATH=%kernel.project_dir%/config/encryption/payment.key
+    <comment>bin/console sylius:payment:generate-key</comment>
+
+  * <fg=blue>Then</> Configuration → Payment methods → Create → NMI, and read <comment>Testing against the sandbox</comment>
+    before the first payment: https://github.com/jpmmartin/SyliusNmiPlugin#readme
