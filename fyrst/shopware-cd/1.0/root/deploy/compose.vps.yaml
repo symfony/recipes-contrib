@@ -1,0 +1,35 @@
+# VPS-only Compose overlay. CI / deploy/vps-release.sh adds this file so the
+# host never rebuilds the image (assets were compiled in CI).
+#
+#   docker compose --project-directory . \
+#     -f deploy/compose.yaml -f deploy/compose.prod.yaml -f deploy/compose.vps.yaml pull
+#   docker compose --project-directory . \
+#     -f deploy/compose.yaml -f deploy/compose.prod.yaml -f deploy/compose.vps.yaml up -d --no-build
+#
+# pull_policy default is always — correct after CI pushes IMAGE:IMAGE_TAG to a
+# registry. Same-host tag-and-load (local E2E / air-gap) never pushed that tag,
+# so pull fails. Override without a second compose file:
+#   PULL_POLICY=never
+#   SKIP_PULL=1          # also skip `docker compose pull` in vps-release.sh
+# Leave unset on a real VPS that should pull from the registry.
+
+services:
+    web:
+        image: ${IMAGE:?Set IMAGE}:${IMAGE_TAG:?Set IMAGE_TAG to the git SHA}
+        pull_policy: ${PULL_POLICY:-always}
+
+    setup:
+        image: ${IMAGE}:${IMAGE_TAG}
+        pull_policy: ${PULL_POLICY:-always}
+
+    init-perm:
+        image: ${IMAGE}:${IMAGE_TAG}
+        pull_policy: ${PULL_POLICY:-always}
+
+    worker:
+        image: ${IMAGE}:${IMAGE_TAG}
+        pull_policy: ${PULL_POLICY:-always}
+
+    scheduler:
+        image: ${IMAGE}:${IMAGE_TAG}
+        pull_policy: ${PULL_POLICY:-always}

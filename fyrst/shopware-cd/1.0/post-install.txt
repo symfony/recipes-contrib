@@ -1,0 +1,57 @@
+  * <fg=blue>fyrst/shopware-cd</>
+    Flex copied CI, <comment>.env.example</comment>, <comment>.dockerignore</comment>,
+    and <comment>deploy/</comment> (CD Compose + VPS helpers) into the shop root.
+
+    This recipe requires <comment>shopware/docker</comment>, which copies
+    <comment>docker/Dockerfile</comment>. CI and Compose default to that file
+    (<comment>DOCKERFILE=docker/Dockerfile</comment>).
+
+    It does not copy shop-root <comment>compose.yaml</comment>, <comment>.gitignore</comment>,
+    or <comment>.shopware-project.yml</comment> (create’s default;
+    <comment>.shopware-project.yaml</comment> is also accepted — do not rename)
+    — those come from <comment>shopware-cli project create</comment>.
+
+    CD Compose files live under <comment>deploy/</comment>:
+    <comment>deploy/compose.yaml</comment>, <comment>deploy/compose.prod.yaml</comment>,
+    <comment>deploy/compose.vps.yaml</comment>. From the shop root:
+    <comment>docker compose --project-directory . -f deploy/compose.yaml -f deploy/compose.prod.yaml -f deploy/compose.vps.yaml</comment>
+
+    VPS runtime copy (no S3): <comment>deploy/sync-runtime.sh</comment> plus
+    <comment>deploy/sync.env.example</comment> (see <comment>deploy/sync-runtime.md</comment>).
+    Bind-mounted host dirs default to
+    <comment>${SHOPWARE_DATA_BASE:-/var/lib/shopware/data}/${SHOPWARE_SHOP_ID}/${SHOPWARE_DEPLOY_ENV}/{files,media,thumbnail,theme,sitemap}</comment>
+    (<comment>SHOPWARE_SHOP_ID</comment> and <comment>SHOPWARE_DEPLOY_ENV</comment> in <comment>.env</comment>;
+    optional <comment>SHOPWARE_DATA_BASE</comment>). Compose does not require
+    <comment>COMPOSE_PROJECT_NAME</comment> or <comment>SHOPWARE_DATA_ROOT</comment>.
+    WARNING: <comment>shopware-cli project create</comment> writes
+    <comment>COMPOSE_PROJECT_NAME=sw-shop-…</comment> into shop-root
+    <comment>.env</comment> for local <comment>project dev</comment>. That env var
+    overrides Compose <comment>name:</comment>
+    (<comment>${SHOPWARE_SHOP_ID}-${SHOPWARE_DEPLOY_ENV}</comment>).
+    On the VPS, remove or comment out that line. This recipe does not delete it
+    (create owns the local flow).
+    Same-host tag-and-load / air-gap: <comment>PULL_POLICY=never</comment>
+    and <comment>SKIP_PULL=1</comment> (or
+    <comment>bash deploy/vps-release.sh --skip-pull</comment>). Default
+    <comment>pull_policy</comment> is <comment>always</comment> for CI/VPS.
+    On staging, copy to
+    <comment>deploy/sync.env</comment> and pull live → lower.
+
+    Local <comment>project dev</comment> (laptop): rsync those VPS trees into the
+    project with <comment>deploy/sync-runtime-local.sh --from live --data all</comment>
+    — not <comment>deploy/sync-runtime.sh</comment>. Laptop <comment>.env</comment> needs
+    <comment>SHOPWARE_SHOP_ID</comment> (same as live).
+
+    Copy <comment>.env.example</comment> → <comment>.env</comment> yourself (Flex never writes <comment>.env</comment>).
+    Commit the copied files; <comment>vendor/</comment> is gitignored.
+
+    GitHub Actions picks up
+    <comment>.github/workflows/cd.yaml</comment>. GitLab still defaults to
+    <comment>.gitlab-ci.yml</comment>: set Settings → CI/CD → CI/CD configuration file
+    to <comment>.gitlab-ci.yaml</comment> (or copy/symlink that name).
+
+    shopware-cli project create writes <comment>.shopware-project.yml</comment>
+    (that extension is fine). shopware-cli accepts both
+    <comment>.yml</comment> and <comment>.yaml</comment>; do not rename.
+    Refresh later with <comment>composer recipes:update fyrst/shopware-cd</comment>.
+    See https://github.com/fyrst-dev/shopware-cd

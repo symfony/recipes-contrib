@@ -1,0 +1,57 @@
+# Overlay .dockerignore — keep the Shopware project, drop secrets and
+# paths that shopware-cli project ci rebuilds or that must never enter the image.
+
+.git
+.gitattributes
+.github
+.gitlab-ci.yml
+.gitlab-ci.yaml
+.gitignore
+
+# Local / prod env and Composer auth (passed as BuildKit secrets instead)
+.env
+.env.*
+!.env.example
+auth.json
+**/*.pem
+**/*.key
+
+# Rebuilt during `shopware-cli project ci`
+/vendor
+/node_modules
+
+# Generated / state (runtime bind mounts on the host, not the image)
+/var
+/files
+/public/bundles
+/public/theme
+/public/media
+/public/thumbnail
+/public/sitemap
+/config/jwt
+
+# Editor / OS
+.idea
+.vscode
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
+
+# Overlay docs and VPS helpers are not needed inside the image
+# (CD Compose lives under /deploy; shop-root compose.yaml is from project create)
+*.md
+/deploy
+compose.yaml
+compose.prod.yaml
+compose.override.yaml
+compose.override.yml
+docker-compose*.yml
+docker-compose*.yaml
+Makefile
+
+# Tests (also list extra cleanup in CLI-owned .shopware-project.yml / .yaml if needed)
+/tests
+.phpunit.result.cache
+.php-cs-fixer.cache
+.phpstan.cache
