@@ -153,8 +153,10 @@ shopware-cli project console cache:clear
 
 `--from live` is an SSH host (often `Host live` in `~/.ssh/config`). Map: `media` → `public/media/`, `files` → `files/`, plus thumbnail/theme/sitemap. Laptop `.env` needs `SHOPWARE_SHOP_ID` (same as live); remote default is `/var/lib/shopware/data/${SHOPWARE_SHOP_ID}/live`. This is **not** `deploy/sync-runtime.sh`.
 
-## Required CI secrets (Compose path)
+## CI secrets (Compose path)
 
 See comments at the top of `.github/workflows/cd.yaml` and `.gitlab-ci.yaml`.
 
-Typical: `SSH_PRIVATE_KEY`, `VPS_HOST`, `VPS_USER`, `VPS_PATH`, `SSH_KNOWN_HOSTS`.
+Typical for deploy: `SSH_PRIVATE_KEY`, `VPS_HOST`, `VPS_USER`, `VPS_PATH`, `SSH_KNOWN_HOSTS`.
+
+`SHOPWARE_PACKAGES_TOKEN` is optional — set it only if the shop uses packages.shopware.com. Empty is fine.
