@@ -8,10 +8,12 @@
 # never for the fyrst/shopware-cd Packagist library itself.
 #
 # ---------------------------------------------------------------------------
-# Required secrets (Settings → Secrets and variables → Actions)
+# CI secrets (Settings → Secrets and variables → Actions)
 # ---------------------------------------------------------------------------
-#   SHOPWARE_PACKAGES_TOKEN   packages.shopware.com (BuildKit secret packages_token)
-#   COMPOSER_AUTH             optional JSON object for private Composer repos
+# Optional build-time (a shop can create/build/deploy without these):
+#   SHOPWARE_PACKAGES_TOKEN   set only if the shop uses packages.shopware.com
+#                             (BuildKit secret packages_token; empty is fine)
+#   COMPOSER_AUTH             JSON object for private Composer repos
 #
 # Registry — GHCR default (GITHUB_TOKEN). For another registry set:
 #   REGISTRY_USERNAME
@@ -131,6 +133,7 @@ jobs:
                     provenance: false
                     build-args: |
                         PHP_VERSION=${{ env.PHP_VERSION }}
+                    # Empty SHOPWARE_PACKAGES_TOKEN is fine (optional packages.shopware.com).
                     secrets: |
                         packages_token=${{ secrets.SHOPWARE_PACKAGES_TOKEN }}
                     secret-files: |
