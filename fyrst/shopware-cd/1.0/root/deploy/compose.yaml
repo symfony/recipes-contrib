@@ -15,6 +15,9 @@
 # Compose interpolates SHOPWARE_SHOP_ID and SHOPWARE_DEPLOY_ENV (required via :?).
 # SHOPWARE_DATA_BASE defaults to /var/lib/shopware/data.
 # COMPOSE_PROJECT_NAME and SHOPWARE_DATA_ROOT are not required for this file.
+# Do not set COMPOSE_PROJECT_NAME= (empty) in .env — that env var overrides name:.
+# shopware-cli project create writes COMPOSE_PROJECT_NAME=sw-shop-… into .env
+# for local project dev. On the VPS, remove or comment out that line.
 # mysql_data / redis_data stay named volumes, scoped by the project name.
 #
 # Bundled MySQL: service name `mysql` (DATABASE_URL host = mysql).
@@ -63,7 +66,7 @@ services:
             start_period: 30s
 
     # One-shot install/update. Never compiles themes/assets (those are in the image).
-    #   docker compose --profile setup run --rm setup
+    #   docker compose --profile setup run --rm --pull never setup
     setup:
         image: ${IMAGE:?Set IMAGE in .env}:${IMAGE_TAG:-latest}
         build:

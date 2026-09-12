@@ -10,6 +10,7 @@
 - **mysql** — bundled in Compose, or delete the service and point `DATABASE_URL` at DBaaS
 - **redis** / **worker** / **scheduler** — optional Compose profiles
 - **identity** — Compose `name: ${SHOPWARE_SHOP_ID}-${SHOPWARE_DEPLOY_ENV}` and bind mounts under `${SHOPWARE_DATA_BASE:-/var/lib/shopware/data}/${SHOPWARE_SHOP_ID}/${SHOPWARE_DEPLOY_ENV}` (no `COMPOSE_PROJECT_NAME` / `SHOPWARE_DATA_ROOT` required, no hardcoded `name: shopware`)
+- **WARNING:** `shopware-cli project create` writes `COMPOSE_PROJECT_NAME=sw-shop-…` into shop-root `.env` for local `project dev`. That env var **overrides** Compose `name:`. On the VPS, **remove or comment out** that line. This recipe does not delete it (create owns the local flow). `deploy/vps-release.sh` warns when the value does not match shop id + deploy env.
 
 ## One-time VPS bootstrap
 
@@ -27,6 +28,10 @@
    Set `SHOPWARE_SHOP_ID` (same on live + staging) and `SHOPWARE_DEPLOY_ENV` in shop-root `.env`.
    Optional `SHOPWARE_DATA_BASE` (default `/var/lib/shopware/data`). Compose does not require
    `COMPOSE_PROJECT_NAME` or `SHOPWARE_DATA_ROOT`.
+   **Do not copy create’s `COMPOSE_PROJECT_NAME=sw-shop-…` onto the VPS.**
+   That line overrides Compose `name:`. Remove or comment it out in the VPS
+   `.env`. Local `shopware-cli project dev` can keep it; this recipe does not
+   delete it (create owns the local flow).
    Docker creates `{files,media,thumbnail,theme,sitemap}` on first up; `init-perm` chowns those dirs to uid 82.
    Do not hardcode Compose `name: shopware`.
 
@@ -35,7 +40,7 @@
 `deploy/vps-release.sh` (from the checkout at `VPS_PATH`):
 
 1. Record the currently deployed tag as `.previous-tag`
-2. `docker compose … pull` the new `:git-sha`
+2. `docker compose … pull` the new `:git-sha` (skip with `SKIP_PULL=1` / `PULL_POLICY=never` / `--skip-pull`)
 3. Start bundled `mysql` (if present) and optional profiles
 4. Run setup **once**:
 
@@ -45,7 +50,7 @@
      --skip-assets-install
    ```
 
-   (via `docker compose --profile setup run --rm setup`)
+   (via `docker compose --profile setup run --rm --pull never setup`)
 5. Recreate `web` with `--no-build`
 6. Optional `SMOKE_URL` check
 
@@ -66,11 +71,11 @@ Compose files used (from the shop root, with `--project-directory .`):
 
 - `deploy/compose.yaml`
 - `deploy/compose.prod.yaml`
-- `deploy/compose.vps.yaml`
+- `deploy/compose.vps.yaml` — `pull_policy: ${PULL_POLICY:-always}` (CI/VPS default). Same-host tag-and-load / air-gap: `PULL_POLICY=never` and `SKIP_PULL=1` (or `bash deploy/vps-release.sh --skip-pull`) so Compose does not pull a tag that was never pushed.
 - `deploy/sync-runtime.sh` / `deploy/sync.env.example` / `deploy/sync-runtime.md` — live → lower VPS runtime copy (no S3)
 - `deploy/sync-runtime-local.sh` — live `SHOPWARE_DATA_ROOT` → local `project dev` paths (rsync)
 
-shopware-cli project create owns shop-root `compose.yaml` (local). Do not point CD at that file.
+shopware-cli project create owns shop-root `compose.yaml` (local). Do not point CD at that file. Create writes `.shopware-project.yml` (fine as-is; shopware-cli also accepts `.yaml` — do not rename). `compose run` uses `--pull never` (Compose v5 dropped `--no-build` from the run subcommand). `up` uses `--no-build`.
 
 ## Why skip theme/assets on deploy
 
