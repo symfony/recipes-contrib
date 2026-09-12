@@ -53,7 +53,7 @@ The managed jobs in `.github/workflows/cd.yaml` and `.gitlab-ci.yaml` are **stub
 ## Keep identical across hosts
 
 - `docker/Dockerfile` / `PHP_VERSION=8.3`
-- `.shopware-project.yaml` (from `shopware-cli project create`, not this recipe)
+- `.shopware-project.yml` (create’s default; `.yaml` also accepted — owned by `shopware-cli project create` / the CLI, not this recipe)
 - CD Compose under `deploy/` (`compose.yaml`, `compose.prod.yaml`, `compose.vps.yaml`)
 - Image naming and tags
 - Setup command (deployment helper + skip flags)

@@ -50,7 +50,7 @@ docker-compose*.yml
 docker-compose*.yaml
 Makefile
 
-# Tests (also list extra cleanup in shop-root .shopware-project.yaml if needed)
+# Tests (also list extra cleanup in CLI-owned .shopware-project.yml / .yaml if needed)
 /tests
 .phpunit.result.cache
 .php-cs-fixer.cache
