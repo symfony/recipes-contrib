@@ -57,4 +57,4 @@ The managed jobs in `.github/workflows/cd.yaml` and `.gitlab-ci.yaml` are **stub
 - CD Compose under `deploy/` (`compose.yaml`, `compose.prod.yaml`, `compose.vps.yaml`)
 - Image naming and tags
 - Setup command (deployment helper + skip flags)
-- Build-time secrets (`SHOPWARE_PACKAGES_TOKEN`, Composer auth)
+- Optional build-time secrets (`SHOPWARE_PACKAGES_TOKEN` only if the shop uses packages.shopware.com; Composer auth). Empty token is fine.
