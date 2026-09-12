@@ -13,8 +13,10 @@
 # ---------------------------------------------------------------------------
 # CI/CD variables (Settings → CI/CD → Variables). Mask tokens. Never commit them.
 # ---------------------------------------------------------------------------
-#   SHOPWARE_PACKAGES_TOKEN   packages.shopware.com (BuildKit secret packages_token)
-#   COMPOSER_AUTH             optional JSON for private Composer repos
+# Optional build-time (a shop can create/build/deploy without these):
+#   SHOPWARE_PACKAGES_TOKEN   set only if the shop uses packages.shopware.com
+#                             (BuildKit secret packages_token; empty is fine)
+#   COMPOSER_AUTH             JSON for private Composer repos
 #
 # Registry — GitLab Container Registry is the default (CI_REGISTRY_*).
 # For GHCR or another registry, set:
@@ -78,6 +80,7 @@ variables:
             export REGISTRY_USERNAME="${REGISTRY_USERNAME:-${CI_REGISTRY_USER:-}}"
             export REGISTRY_PASSWORD="${REGISTRY_PASSWORD:-${CI_REGISTRY_PASSWORD:-}}"
             export DOCKERFILE="${DOCKERFILE:-docker/Dockerfile}"
+            # Optional; empty if the shop does not use packages.shopware.com.
             export SHOPWARE_PACKAGES_TOKEN="${SHOPWARE_PACKAGES_TOKEN:-}"
             : "${IMAGE:?Set REGISTRY_IMAGE or use GitLab Container Registry}"
 
