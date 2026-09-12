@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "davidjln/llm-carbon-bundle": {
+            "manifest": {
+                "bundles": {
+                    "LlmCarbon\\Bundle\\LlmCarbonBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "The default configuration was written to <fg=green>config/packages/llm_carbon.yaml</>.",
+                    "",
+                    "  * Review and adjust <fg=yellow>default_zone</> to match your deployment region",
+                    "    (must be one of the zones exposed by LlmCarbon\\EmissionFactor::all()).",
+                    "  * Add your model catalog under the <fg=yellow>models</> key if needed."
+                ]
+            },
+            "files": {
+                "config/packages/llm_carbon.yaml": {
+                    "contents": [
+                        "llm_carbon:",
+                        "    default_zone: 'France'",
+                        "    calculator: complete",
+                        "    models: []",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f966c37d0921c62fcfd2318a84c019a2206c9697"
+        }
+    }
+}
