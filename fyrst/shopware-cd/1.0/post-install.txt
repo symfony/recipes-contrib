@@ -7,8 +7,9 @@
     (<comment>DOCKERFILE=docker/Dockerfile</comment>).
 
     It does not copy shop-root <comment>compose.yaml</comment>, <comment>.gitignore</comment>,
-    or <comment>.shopware-project.yaml</comment> — those come from
-    <comment>shopware-cli project create</comment>.
+    or <comment>.shopware-project.yml</comment> (create’s default;
+    <comment>.shopware-project.yaml</comment> is also accepted — do not rename)
+    — those come from <comment>shopware-cli project create</comment>.
 
     CD Compose files live under <comment>deploy/</comment>:
     <comment>deploy/compose.yaml</comment>, <comment>deploy/compose.prod.yaml</comment>,
@@ -22,6 +23,17 @@
     (<comment>SHOPWARE_SHOP_ID</comment> and <comment>SHOPWARE_DEPLOY_ENV</comment> in <comment>.env</comment>;
     optional <comment>SHOPWARE_DATA_BASE</comment>). Compose does not require
     <comment>COMPOSE_PROJECT_NAME</comment> or <comment>SHOPWARE_DATA_ROOT</comment>.
+    WARNING: <comment>shopware-cli project create</comment> writes
+    <comment>COMPOSE_PROJECT_NAME=sw-shop-…</comment> into shop-root
+    <comment>.env</comment> for local <comment>project dev</comment>. That env var
+    overrides Compose <comment>name:</comment>
+    (<comment>${SHOPWARE_SHOP_ID}-${SHOPWARE_DEPLOY_ENV}</comment>).
+    On the VPS, remove or comment out that line. This recipe does not delete it
+    (create owns the local flow).
+    Same-host tag-and-load / air-gap: <comment>PULL_POLICY=never</comment>
+    and <comment>SKIP_PULL=1</comment> (or
+    <comment>bash deploy/vps-release.sh --skip-pull</comment>). Default
+    <comment>pull_policy</comment> is <comment>always</comment> for CI/VPS.
     On staging, copy to
     <comment>deploy/sync.env</comment> and pull live → lower.
 
@@ -38,5 +50,8 @@
     <comment>.gitlab-ci.yml</comment>: set Settings → CI/CD → CI/CD configuration file
     to <comment>.gitlab-ci.yaml</comment> (or copy/symlink that name).
 
+    shopware-cli project create writes <comment>.shopware-project.yml</comment>
+    (that extension is fine). shopware-cli accepts both
+    <comment>.yml</comment> and <comment>.yaml</comment>; do not rename.
     Refresh later with <comment>composer recipes:update fyrst/shopware-cd</comment>.
     See https://github.com/fyrst-dev/shopware-cd
