@@ -164,6 +164,11 @@ if [[ -z "${SYNC_ENV:-}" && -n "${SHOPWARE_DEPLOY_ENV:-}" ]]; then
 fi
 if [[ -z "${COMPOSE_PROJECT_NAME:-}" && -n "${SHOPWARE_SHOP_ID:-}" && -n "${SHOPWARE_DEPLOY_ENV:-}" ]]; then
   COMPOSE_PROJECT_NAME="${SHOPWARE_SHOP_ID}-${SHOPWARE_DEPLOY_ENV}"
+elif [[ -n "${COMPOSE_PROJECT_NAME:-}" && -n "${SHOPWARE_SHOP_ID:-}" && -n "${SHOPWARE_DEPLOY_ENV:-}" ]]; then
+  derived_project="${SHOPWARE_SHOP_ID}-${SHOPWARE_DEPLOY_ENV}"
+  if [[ "$COMPOSE_PROJECT_NAME" != "$derived_project" ]]; then
+    log "WARNING: COMPOSE_PROJECT_NAME=${COMPOSE_PROJECT_NAME} is set and overrides Compose name: (${derived_project}). shopware-cli project create writes COMPOSE_PROJECT_NAME=sw-shop-… into .env for local project dev. On the VPS, remove or comment out that line. This script does not delete it."
+  fi
 fi
 if [[ -z "${SHOPWARE_DATA_ROOT:-}" && -n "${SHOPWARE_SHOP_ID:-}" && -n "${SHOPWARE_DEPLOY_ENV:-}" ]]; then
   SHOPWARE_DATA_ROOT="${SHOPWARE_DATA_BASE}/${SHOPWARE_SHOP_ID}/${SHOPWARE_DEPLOY_ENV}"
