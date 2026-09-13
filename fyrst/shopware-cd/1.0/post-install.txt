@@ -28,7 +28,9 @@
     <comment>.env</comment> for local <comment>project dev</comment>. That env var
     overrides Compose <comment>name:</comment>
     (<comment>${SHOPWARE_SHOP_ID}-${SHOPWARE_DEPLOY_ENV}</comment>).
-    On the VPS, remove or comment out that line. This recipe does not delete it
+    On the VPS, comment out that line
+    (<comment>bash deploy/init-env.sh --vps</comment> or by hand).
+    Flex does not delete it on <comment>composer require</comment>
     (create owns the local flow).
     Same-host tag-and-load / air-gap: <comment>PULL_POLICY=never</comment>
     and <comment>SKIP_PULL=1</comment> (or
@@ -42,7 +44,11 @@
     — not <comment>deploy/sync-runtime.sh</comment>. Laptop <comment>.env</comment> needs
     <comment>SHOPWARE_SHOP_ID</comment> (same as live).
 
-    Copy <comment>.env.example</comment> → <comment>.env</comment> yourself (Flex never writes <comment>.env</comment>).
+    Flex may append a <comment>###> fyrst/shopware-cd ###</comment>
+    SoT block to <comment>.env</comment> (empty shop id; no secrets).
+    It does not overwrite create’s whole <comment>.env</comment>.
+    Then run <comment>bash deploy/init-env.sh --shop-id …</comment>
+    (VPS: add <comment>--vps</comment>; see <comment>deploy/README</comment>).
     Commit the copied files; <comment>vendor/</comment> is gitignored.
 
     GitHub Actions picks up
