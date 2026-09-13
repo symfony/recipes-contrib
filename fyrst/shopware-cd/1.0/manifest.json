@@ -2,6 +2,11 @@
     "copy-from-recipe": {
         "root/": ""
     },
+    "bundles": {
+        "Fyrst\\ShopwareCd\\FyrstShopwareCdBundle": [
+            "all"
+        ]
+    },
     "env": {
         "SHOPWARE_SHOP_ID": "",
         "SHOPWARE_DEPLOY_ENV": "live",
