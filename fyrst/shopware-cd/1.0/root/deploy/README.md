@@ -168,7 +168,7 @@ bash deploy/sync-runtime.sh snapshot --data all
 bash deploy/sync-runtime.sh restore --snapshot <id> --data all
 ```
 
-After a live DB lands on staging, `.env` is left alone. Optional `SYNC_REWRITE_FROM_URL` / `SYNC_REWRITE_TO_URL` rewrites `sales_channel_domain.url`. Then set staging `APP_URL` as usual.
+After a live DB lands on staging, `.env` is left alone. Optional `SYNC_REWRITE_APP_URL` / `SYNC_REWRITE_URL_MAP` runs `bin/console fyrst:sales-channel:rewrite-urls` (shops need `composer update fyrst/shopware-cd`). Rewrite is refused on live. Then set staging `APP_URL` as usual.
 
 ## Local laptop (`shopware-cli project dev`)
 
