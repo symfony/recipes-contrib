@@ -59,5 +59,16 @@
     shopware-cli project create writes <comment>.shopware-project.yml</comment>
     (that extension is fine). shopware-cli accepts both
     <comment>.yml</comment> and <comment>.yaml</comment>; do not rename.
+    Flex registers
+    <comment>Fyrst\ShopwareCd\FyrstShopwareCdBundle</comment>
+    in <comment>config/bundles.php</comment>.
+    Opt-in post-restore sales-channel URL rewrite:
+    set <comment>SYNC_REWRITE_APP_URL</comment> or
+    <comment>SYNC_REWRITE_URL_MAP</comment> in
+    <comment>deploy/sync.env</comment>; sync calls
+    <comment>bin/console fyrst:sales-channel:rewrite-urls</comment>.
+    Shops need <comment>composer update fyrst/shopware-cd</comment>
+    so the command and bundle exist, then
+    <comment>composer recipes:update fyrst/shopware-cd</comment>.
     Refresh later with <comment>composer recipes:update fyrst/shopware-cd</comment>.
     See https://github.com/fyrst-dev/shopware-cd
