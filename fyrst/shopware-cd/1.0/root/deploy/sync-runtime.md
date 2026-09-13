@@ -4,7 +4,7 @@ Pull **database + Shopware runtime files** from another VPS onto this one. Typic
 
 This is **not** part of image CD. `deploy/vps-release.sh` is unchanged (pull image, setup helper, recreate `web`). Runtime files stay out of git and out of the Shopware app image (`/.dockerignore` already excludes `/deploy` and `/var`).
 
-Object storage (S3 and similar) is **out of scope** for this VPS path. Transfer is SSH + `mysqldump` + **rsync of host bind-mount directories**. Named-volume tars are only a fallback (no `rsync` on the consumer, or a leftover Docker volume from an older stack).
+Object storage (S3 and similar) is **out of scope** for this VPS path. Transfer is SSH + **`shopware-cli project dump`** + **rsync of host bind-mount directories**. Named-volume tars are only a fallback (no `rsync` on the consumer, or a leftover Docker volume from an older stack). Restore still uses the MySQL/MariaDB client.
 
 ## What is copied
 
@@ -12,7 +12,7 @@ Default `--data all` (same as omitting `--data`):
 
 | Item | Mechanism |
 | --- | --- |
-| `db` | Logical SQL dump from the bundled compose `mysql` service (or `DATABASE_URL`) |
+| `db` | Logical SQL dump via `shopware-cli project dump` (one-shot `ghcr.io/shopware/shopware-cli:0.18.4` on the Compose network, or `--network host` for `DATABASE_URL`). Restore is still `mysql`/`mariadb` client import. |
 | `media` `files` `thumbnail` `theme` `sitemap` | Bind mounts under `${SHOPWARE_DATA_BASE:-/var/lib/shopware/data}/${SHOPWARE_SHOP_ID}/${SHOPWARE_DEPLOY_ENV}/<name>` |
 
 Default host root (when `SHOPWARE_DATA_ROOT` is unset, derived by this script):
@@ -34,8 +34,11 @@ On **every** VPS that snapshots or restores:
 - OpenSSH client
 - gzip
 - **rsync** (primary copy path for bind-mount dirs)
+- Registry access to pull **`ghcr.io/shopware/shopware-cli:0.18.4`** (dumps). The compose `web` image does **not** ship shopware-cli.
 
 The SSH user must be able to run `docker` (typically the `docker` group) so restore can `chown` uid 82 via a one-shot Alpine container.
+
+Dumps pin `ghcr.io/shopware/shopware-cli:0.18.4` (`SYNC_SHOPWARE_CLI_IMAGE` to override). Defaults: `--skip-lock-tables`, `--quick`, `--clean` (`SYNC_DUMP_CLEAN=0` opts out), `--anonymize` off (`SYNC_DUMP_ANONYMIZE=1` opts in). Snapshot files use `--compression=gzip --output …/db.sql.gz`. Pull failure fails closed (no silent mysqldump). Escape hatch: `SYNC_DUMP_ENGINE=mysqldump`.
 
 ## One-time setup (consumer)
 

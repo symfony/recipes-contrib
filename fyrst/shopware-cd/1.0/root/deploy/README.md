@@ -129,9 +129,9 @@ DB + media/files are **not** in git and **not** in the app image. They live in M
 /var/lib/shopware/data/${SHOPWARE_SHOP_ID}/${SHOPWARE_DEPLOY_ENV}/{files,media,thumbnail,theme,sitemap}
 ```
 
-Set `SHOPWARE_SHOP_ID` + `SHOPWARE_DEPLOY_ENV` in shop-root `.env`. Compose interpolates the project name and bind-mount paths from those two (plus optional `SHOPWARE_DATA_BASE`). Sync scripts still derive `COMPOSE_PROJECT_NAME` / `SHOPWARE_DATA_ROOT` when those helpers are unset. `mysql_data` / `redis_data` stay named volumes (copy the database with mysqldump, not `mysql_data`).
+Set `SHOPWARE_SHOP_ID` + `SHOPWARE_DEPLOY_ENV` in shop-root `.env`. Compose interpolates the project name and bind-mount paths from those two (plus optional `SHOPWARE_DATA_BASE`). Sync scripts still derive `COMPOSE_PROJECT_NAME` / `SHOPWARE_DATA_ROOT` when those helpers are unset. `mysql_data` / `redis_data` stay named volumes (copy the database with `shopware-cli project dump`, not `mysql_data`).
 
-`deploy/sync-runtime.sh` copies that runtime data **live → lower** (staging / playground / dev) with **SSH + mysqldump + rsync of those host dirs**. Volume tars are only a fallback (no rsync, or a leftover named volume). There is no S3/MinIO path in this recipe.
+`deploy/sync-runtime.sh` copies that runtime data **live → lower** (staging / playground / dev) with **SSH + `shopware-cli project dump` + rsync of those host dirs**. Pin: `ghcr.io/shopware/shopware-cli:0.18.4`. Volume tars are only a fallback (no rsync, or a leftover named volume). There is no S3/MinIO path in this recipe.
 
 See **[sync-runtime.md](sync-runtime.md)** for flags, cron, and safety.
 

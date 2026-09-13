@@ -18,6 +18,8 @@
 
     VPS runtime copy (no S3): <comment>deploy/sync-runtime.sh</comment> plus
     <comment>deploy/sync.env.example</comment> (see <comment>deploy/sync-runtime.md</comment>).
+    DB snapshots use <comment>shopware-cli project dump</comment>
+    (<comment>ghcr.io/shopware/shopware-cli:0.18.4</comment> one-shot; restore is still mysql).
     Bind-mounted host dirs default to
     <comment>${SHOPWARE_DATA_BASE:-/var/lib/shopware/data}/${SHOPWARE_SHOP_ID}/${SHOPWARE_DEPLOY_ENV}/{files,media,thumbnail,theme,sitemap}</comment>
     (<comment>SHOPWARE_SHOP_ID</comment> and <comment>SHOPWARE_DEPLOY_ENV</comment> in <comment>.env</comment>;
