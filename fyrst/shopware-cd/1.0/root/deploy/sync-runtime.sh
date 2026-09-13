@@ -14,7 +14,7 @@
 #
 #   bash deploy/sync-runtime.sh sync --from live --data all
 #   bash deploy/sync-runtime.sh snapshot --data all
-#   bash deploy/sync-runtime.sh restore --snapshot \u003cid> --data all
+#   bash deploy/sync-runtime.sh restore --snapshot <id> --data all
 #
 # Plumbing (used over SSH on the source; stdout is the payload):
 #   bash deploy/sync-runtime.sh export --data db
@@ -29,8 +29,8 @@ source "${SCRIPT_DIR}/lib/sync-rewrite.sh"
 source "${SCRIPT_DIR}/lib/sync-dump.sh"
 
 usage() {
-  cat \u003c\u003c'EOF'
-Usage: deploy/sync-runtime.sh \u003ccommand> [options]
+  cat <<'EOF'
+Usage: deploy/sync-runtime.sh <command> [options]
 
 Commands:
   sync       Pull DB + bind-mount dirs from a higher env onto this host
@@ -39,10 +39,10 @@ Commands:
   export     Plumbing: write a dump/tar to stdout (SSH fallback)
 
 Options:
-  --from \u003cenv>       Source env for sync (e.g. live)
-  --data \u003cwhat>      all | db | volumes   (default: all)
-  --volume \u003cname>    Single bind-mount dir (files|media|thumbnail|theme|sitemap)
-  --snapshot \u003cid>    Snapshot id for restore (directory name under SYNC_SNAPSHOT_DIR)
+  --from <env>       Source env for sync (e.g. live)
+  --data <what>      all | db | volumes   (default: all)
+  --volume <name>    Single bind-mount dir (files|media|thumbnail|theme|sitemap)
+  --snapshot <id>    Snapshot id for restore (directory name under SYNC_SNAPSHOT_DIR)
   --yes              Do not prompt
   -h, --help
 
@@ -205,7 +205,7 @@ COMPOSE=(
 )
 
 PROFILE_ARGS=()
-IFS=',' read -ra RAW_PROFILES \u003c\u003c\u003c "${COMPOSE_PROFILES:-}"
+IFS=',' read -ra RAW_PROFILES <<< "${COMPOSE_PROFILES:-}"
 for p in "${RAW_PROFILES[@]}"; do
   p="${p// /}"
   if [[ -z "$p" ]]; then
@@ -232,7 +232,7 @@ project_name() {
 
 volume_list() {
   local raw="$SYNC_VOLUMES" item
-  IFS=',' read -ra items \u003c\u003c\u003c "$raw"
+  IFS=',' read -ra items <<< "$raw"
   for item in "${items[@]}"; do
     item="${item// /}"
     [[ -n "$item" ]] && printf '%s\n' "$item"
@@ -359,34 +359,34 @@ dump_sql_mysqldump() {
     ensure_mysql_up
     : "${MYSQL_DATABASE:?Set MYSQL_DATABASE}"
     : "${MYSQL_ROOT_PASSWORD:?Set MYSQL_ROOT_PASSWORD}"
-    "${COMPOSE[@]}" exec -T \\
-      -e MYSQL_PWD="$MYSQL_ROOT_PASSWORD" \\
-      mysql \\
-      mysqldump \\
-      -uroot \\
-      --single-transaction \\
-      --quick \\
-      --routines \\
-      --triggers \\
-      --no-tablespaces \\
-      --default-character-set=utf8mb4 \\
+    "${COMPOSE[@]}" exec -T \
+      -e MYSQL_PWD="$MYSQL_ROOT_PASSWORD" \
+      mysql \
+      mysqldump \
+      -uroot \
+      --single-transaction \
+      --quick \
+      --routines \
+      --triggers \
+      --no-tablespaces \
+      --default-character-set=utf8mb4 \
       "$MYSQL_DATABASE"
     return
   fi
   parse_database_url
-  docker run --rm --network host \\
-    -e MYSQL_PWD="$DB_PASS" \\
-    mysql:8.4 \\
-    mysqldump \\
-    -h"$DB_HOST" \\
-    -P"$DB_PORT" \\
-    -u"$DB_USER" \\
-    --single-transaction \\
-    --quick \\
-    --routines \\
-    --triggers \\
-    --no-tablespaces \\
-    --default-character-set=utf8mb4 \\
+  docker run --rm --network host \
+    -e MYSQL_PWD="$DB_PASS" \
+    mysql:8.4 \
+    mysqldump \
+    -h"$DB_HOST" \
+    -P"$DB_PORT" \
+    -u"$DB_USER" \
+    --single-transaction \
+    --quick \
+    --routines \
+    --triggers \
+    --no-tablespaces \
+    --default-character-set=utf8mb4 \
     "$DB_NAME"
 }
 
@@ -474,26 +474,26 @@ import_sql() {
     ensure_mysql_up
     : "${MYSQL_DATABASE:?Set MYSQL_DATABASE}"
     : "${MYSQL_ROOT_PASSWORD:?Set MYSQL_ROOT_PASSWORD}"
-    "${COMPOSE[@]}" exec -T \\
-      -e MYSQL_PWD="$MYSQL_ROOT_PASSWORD" \\
-      mysql \\
-      mysql \\
-      -uroot \\
-      --default-character-set=utf8mb4 \\
-      --max-allowed-packet=512M \\
+    "${COMPOSE[@]}" exec -T \
+      -e MYSQL_PWD="$MYSQL_ROOT_PASSWORD" \
+      mysql \
+      mysql \
+      -uroot \
+      --default-character-set=utf8mb4 \
+      --max-allowed-packet=512M \
       "$MYSQL_DATABASE"
     return
   fi
   parse_database_url
-  docker run --rm -i --network host \\
-    -e MYSQL_PWD="$DB_PASS" \\
-    mysql:8.4 \\
-    mysql \\
-    -h"$DB_HOST" \\
-    -P"$DB_PORT" \\
-    -u"$DB_USER" \\
-    --default-character-set=utf8mb4 \\
-    --max-allowed-packet=512M \\
+  docker run --rm -i --network host \
+    -e MYSQL_PWD="$DB_PASS" \
+    mysql:8.4 \
+    mysql \
+    -h"$DB_HOST" \
+    -P"$DB_PORT" \
+    -u"$DB_USER" \
+    --default-character-set=utf8mb4 \
+    --max-allowed-packet=512M \
     "$DB_NAME"
 }
 
@@ -501,10 +501,10 @@ maybe_rewrite_sales_channel_domains() {
   if ! sync_rewrite_requested; then
     return
   fi
-  if ! sync_rewrite_assert_not_live \\
-    "${SYNC_ENV:-}" \\
-    "${SHOPWARE_DEPLOY_ENV:-}" \\
-    "$(basename "$COMPOSE_DIR")" \\
+  if ! sync_rewrite_assert_not_live \
+    "${SYNC_ENV:-}" \
+    "${SHOPWARE_DEPLOY_ENV:-}" \
+    "$(basename "$COMPOSE_DIR")" \
     "$(hostname -s 2>/dev/null || hostname)"
   then
     exit 1
@@ -540,9 +540,9 @@ dump_volume_tar() {
   vol="$(docker_volume_name "$key")"
   if has_named_volume "$key"; then
     log "Bind-mount dir $host missing; archiving named volume $vol"
-    docker run --rm \\
-      -v "$vol":/volume:ro \\
-      alpine:3.20 \\
+    docker run --rm \
+      -v "$vol":/volume:ro \
+      alpine:3.20 \
       tar -C /volume -czf - .
     return
   fi
@@ -627,11 +627,11 @@ chown_volumes() {
     dest="$(host_data_dir "$key")"
     mkdir -p "$dest"
     log "chown 82:82 $dest"
-    docker run --rm \\
-      -v "$dest":/data \\
-      alpine:3.20 \\
+    docker run --rm \
+      -v "$dest":/data \
+      alpine:3.20 \
       chown -R 82:82 /data
-  done \u003c \u003c(volume_list)
+  done < <(volume_list)
 }
 
 cache_clear() {
@@ -655,11 +655,11 @@ prune_snapshots() {
   local keep="$SYNC_KEEP_SNAPSHOTS"
   [[ "$keep" =~ ^[0-9]+$ ]] || return 0
   local -a ids=()
-  mapfile -t ids \u003c \u003c(snapshot_ids)
+  mapfile -t ids < <(snapshot_ids)
   local extra=$(( ${#ids[@]} - keep ))
   (( extra > 0 )) || return 0
   local i
-  for ((i = 0; i \u003c extra; i++)); do
+  for ((i = 0; i < extra; i++)); do
     log "Pruning snapshot ${ids[i]}"
     rm -rf "${SYNC_SNAPSHOT_DIR:?}/${ids[i]}"
   done
@@ -722,12 +722,12 @@ rsync_from_remote() {
   mkdir -p "$dest"
   if command -v rsync >/dev/null 2>&1; then
     log "Rsync ${user}@${host}:${remote}/ → ${dest}/"
-    rsync -a --delete -e "$(ssh_rsh "$from")" \\
+    rsync -a --delete -e "$(ssh_rsh "$from")" \
       "${user}@${host}:${remote}/" "${dest}/"
     return
   fi
   log "rsync not installed; streaming tar of $key from $from"
-  remote_export "$from" "--data volumes --volume $(printf '%q' "$key")" \\
+  remote_export "$from" "--data volumes --volume $(printf '%q' "$key")" \
     | restore_host_tar_stdin "$key"
 }
 
@@ -758,7 +758,7 @@ remote_export() {
   [[ -n "$user" ]] || die "Set SYNC_SSH_USER in deploy/sync.env"
   [[ -n "$path" ]] || die "Set SYNC_SSH_PATH in deploy/sync.env"
   ssh_base "$from"
-  "${SSH_CMD[@]}" "${user}@${host}" \\
+  "${SSH_CMD[@]}" "${user}@${host}" \
     "set -euo pipefail; cd $(printf '%q' "$path"); bash ./deploy/sync-runtime.sh export $args"
 }
 
@@ -769,7 +769,7 @@ cmd_export() {
       dump_sql
       ;;
     volumes)
-      [[ -n "$VOLUME_KEY" ]] || die "export --data volumes requires --volume \u003ckey>"
+      [[ -n "$VOLUME_KEY" ]] || die "export --data volumes requires --volume <key>"
       dump_volume_tar "$VOLUME_KEY"
       ;;
     all)
@@ -810,7 +810,7 @@ cmd_snapshot() {
     local key
     while IFS= read -r key; do
       snapshot_runtime_dir "$key" "$dir"
-    done \u003c \u003c(volume_list)
+    done < <(volume_list)
   fi
   prune_snapshots
   log "Snapshot finished $id"
@@ -823,7 +823,7 @@ cmd_restore() {
   if [[ -z "$SNAPSHOT_ID" ]]; then
     log "Available snapshots in $SYNC_SNAPSHOT_DIR:"
     snapshot_ids || true
-    die "restore requires --snapshot \u003cid>"
+    die "restore requires --snapshot <id>"
   fi
   local dir="$SYNC_SNAPSHOT_DIR/$SNAPSHOT_ID"
   [[ -d "$dir" ]] || die "Snapshot not found: $dir"
@@ -834,16 +834,16 @@ cmd_restore() {
     fi
   fi
   if sync_rewrite_requested; then
-    if ! sync_rewrite_assert_not_live \\
-      "${SYNC_ENV:-}" \\
-      "${SHOPWARE_DEPLOY_ENV:-}" \\
-      "$(basename "$COMPOSE_DIR")" \\
+    if ! sync_rewrite_assert_not_live \
+      "${SYNC_ENV:-}" \
+      "${SHOPWARE_DEPLOY_ENV:-}" \
+      "$(basename "$COMPOSE_DIR")" \
       "$(hostname -s 2>/dev/null || hostname)"
     then
       exit 1
     fi
   fi
-  confirm "Overwrite runtime data on ${this_env:-this host} from snapshot $SNAPSHOT_ID?" \\
+  confirm "Overwrite runtime data on ${this_env:-this host} from snapshot $SNAPSHOT_ID?" \
     || die "Cancelled"
   stop_app
   if want_db; then
@@ -856,7 +856,7 @@ cmd_restore() {
     local key
     while IFS= read -r key; do
       restore_runtime_dir "$key" "$dir"
-    done \u003c \u003c(volume_list)
+    done < <(volume_list)
     chown_volumes
   fi
   start_app
@@ -867,7 +867,7 @@ cmd_restore() {
 cmd_sync() {
   acquire_lock
   ensure_data_root
-  [[ -n "$FROM_ENV" ]] || die "sync requires --from \u003cenv> (e.g. --from live)"
+  [[ -n "$FROM_ENV" ]] || die "sync requires --from <env> (e.g. --from live)"
   [[ -n "${SYNC_ENV:-}" ]] || die "Set SYNC_ENV in deploy/sync.env (this host, e.g. staging)"
   if is_live_env "$SYNC_ENV"; then
     die "Refusing sync onto live/prod (pull on the lower env, never push into live)"
@@ -886,10 +886,10 @@ cmd_sync() {
   [[ -n "$(from_ssh_user "$FROM_ENV")" ]] || die "Set SYNC_SSH_USER in deploy/sync.env"
   [[ -n "$(from_ssh_path "$FROM_ENV")" ]] || die "Set SYNC_SSH_PATH in deploy/sync.env"
   if sync_rewrite_requested; then
-    if ! sync_rewrite_assert_not_live \\
-      "${SYNC_ENV:-}" \\
-      "${SHOPWARE_DEPLOY_ENV:-}" \\
-      "$(basename "$COMPOSE_DIR")" \\
+    if ! sync_rewrite_assert_not_live \
+      "${SYNC_ENV:-}" \
+      "${SHOPWARE_DEPLOY_ENV:-}" \
+      "$(basename "$COMPOSE_DIR")" \
       "$(hostname -s 2>/dev/null || hostname)"
     then
       exit 1
@@ -907,7 +907,7 @@ cmd_sync() {
     while IFS= read -r key; do
       log "Syncing bind-mount dir $key from $FROM_ENV"
       rsync_from_remote "$FROM_ENV" "$key"
-    done \u003c \u003c(volume_list)
+    done < <(volume_list)
     chown_volumes
   fi
   start_app
