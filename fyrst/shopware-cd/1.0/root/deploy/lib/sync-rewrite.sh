@@ -6,7 +6,7 @@
 # bin/console fyrst:sales-channel:rewrite-urls in fyrst/shopware-cd (not SQL here).
 
 # True when the operator opted in (either a single new origin or an old→new map).
- sync_rewrite_requested() {
+sync_rewrite_requested() {
   [[ -n "${SYNC_REWRITE_APP_URL:-}" || -n "${SYNC_REWRITE_URL_MAP:-}" ]]
 }
 
@@ -68,7 +68,7 @@ maybe_rewrite_sales_channel_domains() {
   assert_not_live_rewrite
   if [[ "$WANT_DB" -ne 1 ]]; then
     log "SYNC_REWRITE_APP_URL / SYNC_REWRITE_URL_MAP set but db was skipped — not rewriting sales_channel_domain"
-  return
+    return
   fi
   log "Opt-in sales_channel_domain rewrite via fyrst:sales-channel:rewrite-urls (sales channel domains only; media CDN / plugin configs / payment webhooks are not updated)"
   local -a rewrite_cmd=(
