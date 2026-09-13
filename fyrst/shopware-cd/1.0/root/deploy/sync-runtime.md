@@ -78,7 +78,7 @@ Overlapping runs are blocked with `flock`.
 ## After restore
 
 - The script tries `bin/console cache:clear` via compose `web` and **does not fail** if that errors.
-- Optional `SYNC_REWRITE_FROM_URL` / `SYNC_REWRITE_TO_URL` rewrites `sales_channel_domain.url`.
+- Optional `SYNC_REWRITE_APP_URL` / `SYNC_REWRITE_URL_MAP` runs `bin/console fyrst:sales-channel:rewrite-urls` after a DB restore (hard-refused on live). Shops need `composer update fyrst/shopware-cd` so the command and `FyrstShopwareCdBundle` exist.
 - Bind-mount dirs are `chown -R 82:82` after copy so `www-data` in the Shopware image can write.
 
 ## Safety
