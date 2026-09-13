@@ -6,7 +6,7 @@
 # bin/console fyrst:sales-channel:rewrite-urls in fyrst/shopware-cd (not SQL here).
 
 # True when the operator opted in (either a single new origin or an old→new map).
-sync_rewrite_requested() {
+ sync_rewrite_requested() {
   [[ -n "${SYNC_REWRITE_APP_URL:-}" || -n "${SYNC_REWRITE_URL_MAP:-}" ]]
 }
 
@@ -59,4 +59,29 @@ sync_rewrite_assert_not_live() {
     return 1
   fi
   return 0
+}
+
+maybe_rewrite_sales_channel_domains() {
+  if ! sync_rewrite_requested; then
+    return
+  fi
+  assert_not_live_rewrite
+  if [[ "$WANT_DB" -ne 1 ]]; then
+    log "SYNC_REWRITE_APP_URL / SYNC_REWRITE_URL_MAP set but db was skipped — not rewriting sales_channel_domain"
+  return
+  fi
+  log "Opt-in sales_channel_domain rewrite via fyrst:sales-channel:rewrite-urls (sales channel domains only; media CDN / plugin configs / payment webhooks are not updated)"
+  local -a rewrite_cmd=(
+    "${COMPOSE[@]}"
+    run --rm --pull never --entrypoint php
+    web bin/console fyrst:sales-channel:rewrite-urls
+  )
+  sync_rewrite_append_console_args rewrite_cmd "$(basename "$COMPOSE_DIR")"
+  if [[ "$DRY_RUN" -eq 1 ]]; then
+    log "DRY-RUN ${rewrite_cmd[*]}"
+    return
+  fi
+  if ! "${rewrite_cmd[@]}"; then
+    die "fyrst:sales-channel:rewrite-urls failed. composer update fyrst/shopware-cd so the command and FyrstShopwareCdBundle exist, then composer recipes:update fyrst/shopware-cd."
+  fi
 }
