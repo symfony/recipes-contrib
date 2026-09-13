@@ -22,6 +22,10 @@
 
 set -euo pipefail
 
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+# shellcheck source=lib/sync-rewrite.sh
+source "${SCRIPT_DIR}/lib/sync-rewrite.sh"
+
 usage() {
   cat <<'EOF'
 Usage: deploy/sync-runtime.sh <command> [options]
@@ -411,14 +415,36 @@ import_sql() {
     "$DB_NAME"
 }
 
-rewrite_urls() {
-  local from="${SYNC_REWRITE_FROM_URL:-}" to="${SYNC_REWRITE_TO_URL:-}"
-  [[ -n "$from" && -n "$to" ]] || return 0
-  log "Rewriting sales_channel_domain URLs: $from → $to"
-  local sql
-  sql=$(printf "UPDATE sales_channel_domain SET url = REPLACE(url, '%s', '%s');\n" \
-    "${from//\'/\'\'}" "${to//\'/\'\'}")
-  printf '%s' "$sql" | import_sql
+maybe_rewrite_sales_channel_domains() {
+  if ! sync_rewrite_requested; then
+    return
+  fi
+  if ! sync_rewrite_assert_not_live \
+    "${SYNC_ENV:-}" \
+    "${SHOPWARE_DEPLOY_ENV:-}" \
+    "$(basename "$COMPOSE_DIR")" \
+    "$(hostname -s 2>/dev/null || hostname)"
+  then
+    exit 1
+  fi
+  if ! want_db; then
+    log "SYNC_REWRITE_APP_URL / SYNC_REWRITE_URL_MAP set but db was skipped — not rewriting sales_channel_domain"
+    return
+  fi
+  log "Opt-in sales_channel_domain rewrite via fyrst:sales-channel:rewrite-urls (sales channel domains only; media CDN / plugin configs / payment webhooks are not updated)"
+  local -a rewrite_cmd=(
+    "${COMPOSE[@]}"
+    run --rm --pull never --entrypoint php
+    web bin/console fyrst:sales-channel:rewrite-urls
+  )
+  sync_rewrite_append_console_args rewrite_cmd "$(basename "$COMPOSE_DIR")"
+  if [[ "${DRY_RUN:-0}" -eq 1 ]]; then
+    log "DRY-RUN ${rewrite_cmd[*]}"
+    return
+  fi
+  if ! "${rewrite_cmd[@]}"; then
+    die "fyrst:sales-channel:rewrite-urls failed. composer update fyrst/shopware-cd so the command and FyrstShopwareCdBundle exist, then composer recipes:update fyrst/shopware-cd."
+  fi
 }
 
 # Primary: tar/rsync the bind-mounted host dir. Fallback: named Docker volume.
@@ -720,6 +746,16 @@ cmd_restore() {
       die "Refusing restore onto live/prod (set SYNC_ALLOW_LIVE_RESTORE=1 for disaster recovery)"
     fi
   fi
+  if sync_rewrite_requested; then
+    if ! sync_rewrite_assert_not_live \
+      "${SYNC_ENV:-}" \
+      "${SHOPWARE_DEPLOY_ENV:-}" \
+      "$(basename "$COMPOSE_DIR")" \
+      "$(hostname -s 2>/dev/null || hostname)"
+    then
+      exit 1
+    fi
+  fi
   confirm "Overwrite runtime data on ${this_env:-this host} from snapshot $SNAPSHOT_ID?" \
     || die "Cancelled"
   stop_app
@@ -727,8 +763,8 @@ cmd_restore() {
     [[ -f "$dir/db.sql.gz" ]] || die "Snapshot has no db.sql.gz"
     log "Importing database"
     gzip -dc "$dir/db.sql.gz" | import_sql
-    rewrite_urls
   fi
+  maybe_rewrite_sales_channel_domains
   if want_volumes; then
     local key
     while IFS= read -r key; do
@@ -762,13 +798,23 @@ cmd_sync() {
   [[ -n "$(from_ssh_host "$FROM_ENV")" ]] || die "Set SYNC_SSH_HOST (or SYNC_$(env_upper "$FROM_ENV")_SSH_HOST) in deploy/sync.env"
   [[ -n "$(from_ssh_user "$FROM_ENV")" ]] || die "Set SYNC_SSH_USER in deploy/sync.env"
   [[ -n "$(from_ssh_path "$FROM_ENV")" ]] || die "Set SYNC_SSH_PATH in deploy/sync.env"
+  if sync_rewrite_requested; then
+    if ! sync_rewrite_assert_not_live \
+      "${SYNC_ENV:-}" \
+      "${SHOPWARE_DEPLOY_ENV:-}" \
+      "$(basename "$COMPOSE_DIR")" \
+      "$(hostname -s 2>/dev/null || hostname)"
+    then
+      exit 1
+    fi
+  fi
   confirm "Overwrite ${SYNC_ENV} runtime data with ${FROM_ENV} (${DATA})?" || die "Cancelled"
   stop_app
   if want_db; then
     log "Streaming mysqldump from $FROM_ENV"
     remote_export "$FROM_ENV" "--data db" | import_sql
-    rewrite_urls
   fi
+  maybe_rewrite_sales_channel_domains
   if want_volumes; then
     local key
     while IFS= read -r key; do
