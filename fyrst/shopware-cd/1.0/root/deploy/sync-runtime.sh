@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# VPS runtime data: mysqldump + rsync of bind-mounted host dirs over SSH. No S3.
+# VPS runtime data: shopware-cli project dump + rsync of bind-mounted host dirs over SSH. No S3.
 #
 # Commands: sync | snapshot | restore
 # Direction for sync: higher env → this host (live → staging / playground / dev).
@@ -8,13 +8,13 @@
 # Shopware files live on the host under
 # ${SHOPWARE_DATA_BASE:-/var/lib/shopware/data}/${SHOPWARE_SHOP_ID}/${SHOPWARE_DEPLOY_ENV}/{files,media,thumbnail,theme,sitemap}
 # (compose bind mounts). Optional SHOPWARE_DATA_ROOT is derived when unset.
-# mysql_data / redis_data stay named volumes and are not copied here (DB is mysqldump).
+# mysql_data / redis_data stay named volumes and are not copied here (DB is shopware-cli project dump).
 #
 # Copy deploy/sync.env.example → deploy/sync.env on the consumer and fill SYNC_SSH_*.
 #
 #   bash deploy/sync-runtime.sh sync --from live --data all
 #   bash deploy/sync-runtime.sh snapshot --data all
-#   bash deploy/sync-runtime.sh restore --snapshot <id> --data all
+#   bash deploy/sync-runtime.sh restore --snapshot \u003cid> --data all
 #
 # Plumbing (used over SSH on the source; stdout is the payload):
 #   bash deploy/sync-runtime.sh export --data db
@@ -25,22 +25,24 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 # shellcheck source=lib/sync-rewrite.sh
 source "${SCRIPT_DIR}/lib/sync-rewrite.sh"
+# shellcheck source=lib/sync-dump.sh
+source "${SCRIPT_DIR}/lib/sync-dump.sh"
 
 usage() {
-  cat <<'EOF'
-Usage: deploy/sync-runtime.sh <command> [options]
+  cat \u003c\u003c'EOF'
+Usage: deploy/sync-runtime.sh \u003ccommand> [options]
 
 Commands:
   sync       Pull DB + bind-mount dirs from a higher env onto this host
-  snapshot   Write a local snapshot (mysqldump + rsync of host dirs)
+  snapshot   Write a local snapshot (shopware-cli project dump + rsync of host dirs)
   restore    Restore a local snapshot onto this host
   export     Plumbing: write a dump/tar to stdout (SSH fallback)
 
 Options:
-  --from <env>       Source env for sync (e.g. live)
-  --data <what>      all | db | volumes   (default: all)
-  --volume <name>    Single bind-mount dir (files|media|thumbnail|theme|sitemap)
-  --snapshot <id>    Snapshot id for restore (directory name under SYNC_SNAPSHOT_DIR)
+  --from \u003cenv>       Source env for sync (e.g. live)
+  --data \u003cwhat>      all | db | volumes   (default: all)
+  --volume \u003cname>    Single bind-mount dir (files|media|thumbnail|theme|sitemap)
+  --snapshot \u003cid>    Snapshot id for restore (directory name under SYNC_SNAPSHOT_DIR)
   --yes              Do not prompt
   -h, --help
 
@@ -203,7 +205,7 @@ COMPOSE=(
 )
 
 PROFILE_ARGS=()
-IFS=',' read -ra RAW_PROFILES <<< "${COMPOSE_PROFILES:-}"
+IFS=',' read -ra RAW_PROFILES \u003c\u003c\u003c "${COMPOSE_PROFILES:-}"
 for p in "${RAW_PROFILES[@]}"; do
   p="${p// /}"
   if [[ -z "$p" ]]; then
@@ -230,7 +232,7 @@ project_name() {
 
 volume_list() {
   local raw="$SYNC_VOLUMES" item
-  IFS=',' read -ra items <<< "$raw"
+  IFS=',' read -ra items \u003c\u003c\u003c "$raw"
   for item in "${items[@]}"; do
     item="${item// /}"
     [[ -n "$item" ]] && printf '%s\n' "$item"
@@ -350,41 +352,121 @@ ensure_mysql_up() {
   fi
 }
 
-# Dump SQL to stdout. Logs go to stderr.
-dump_sql() {
+# Dump SQL to stdout (uncompressed; callers gzip or import). Logs go to stderr.
+# Default engine is shopware-cli project dump. SYNC_DUMP_ENGINE=mysqldump is an escape hatch.
+dump_sql_mysqldump() {
   if has_service mysql; then
     ensure_mysql_up
     : "${MYSQL_DATABASE:?Set MYSQL_DATABASE}"
     : "${MYSQL_ROOT_PASSWORD:?Set MYSQL_ROOT_PASSWORD}"
-    "${COMPOSE[@]}" exec -T \
-      -e MYSQL_PWD="$MYSQL_ROOT_PASSWORD" \
-      mysql \
-      mysqldump \
-      -uroot \
-      --single-transaction \
-      --quick \
-      --routines \
-      --triggers \
-      --no-tablespaces \
-      --default-character-set=utf8mb4 \
+    "${COMPOSE[@]}" exec -T \\
+      -e MYSQL_PWD="$MYSQL_ROOT_PASSWORD" \\
+      mysql \\
+      mysqldump \\
+      -uroot \\
+      --single-transaction \\
+      --quick \\
+      --routines \\
+      --triggers \\
+      --no-tablespaces \\
+      --default-character-set=utf8mb4 \\
       "$MYSQL_DATABASE"
     return
   fi
   parse_database_url
-  docker run --rm --network host \
-    -e MYSQL_PWD="$DB_PASS" \
-    mysql:8.4 \
-    mysqldump \
-    -h"$DB_HOST" \
-    -P"$DB_PORT" \
-    -u"$DB_USER" \
-    --single-transaction \
-    --quick \
-    --routines \
-    --triggers \
-    --no-tablespaces \
-    --default-character-set=utf8mb4 \
+  docker run --rm --network host \\
+    -e MYSQL_PWD="$DB_PASS" \\
+    mysql:8.4 \\
+    mysqldump \\
+    -h"$DB_HOST" \\
+    -P"$DB_PORT" \\
+    -u"$DB_USER" \\
+    --single-transaction \\
+    --quick \\
+    --routines \\
+    --triggers \\
+    --no-tablespaces \\
+    --default-character-set=utf8mb4 \\
     "$DB_NAME"
+}
+
+ensure_shopware_cli_image() {
+  local img
+  img="$(sync_dump_image)"
+  if docker image inspect "$img" >/dev/null 2>&1; then
+    return 0
+  fi
+  log "Pulling ${img} (shopware-cli project dump)"
+  docker pull "$img" || die "$(sync_dump_fail_hint)"
+}
+
+# $1 = output path (gzip file) or - (uncompressed SQL on stdout for export/import).
+run_shopware_cli_dump() {
+  local output=$1
+  local img network outdir
+  img="$(sync_dump_image)"
+  ensure_shopware_cli_image
+  local -a flags=()
+  if [[ "$output" == "-" ]]; then
+    flags+=(--no-update-hint project dump --skip-lock-tables --output -)
+    if sync_dump_want_quick; then
+      flags+=(--quick)
+    fi
+    if sync_dump_want_clean; then
+      flags+=(--clean)
+    fi
+    if sync_dump_want_anonymize; then
+      flags+=(--anonymize)
+    fi
+  else
+    sync_dump_append_project_flags flags "$output"
+  fi
+  local -a run=(docker run --rm -e HOME=/tmp -e SHOPWARE_CLI_NO_UPDATE_NOTIFICATION=true)
+  run+=(-v "${COMPOSE_DIR}:${COMPOSE_DIR}:ro" -w "${COMPOSE_DIR}")
+  if [[ "$output" != "-" ]]; then
+    outdir="$(cd "$(dirname "$output")" && pwd)"
+    run+=(-v "${outdir}:${outdir}")
+  fi
+  if has_service mysql; then
+    ensure_mysql_up
+    network="$(project_name)_default"
+    run+=(--network "$network")
+    flags+=(--host mysql --port 3306)
+    if [[ -n "${MYSQL_USER:-}" ]]; then
+      flags+=(--username "$MYSQL_USER" --database "${MYSQL_DATABASE:-shopware}")
+      if [[ -n "${MYSQL_PASSWORD:-}" ]]; then
+        flags+=("--password=${MYSQL_PASSWORD}")
+      fi
+    elif [[ -n "${MYSQL_ROOT_PASSWORD:-}" ]]; then
+      flags+=(--username root "--password=${MYSQL_ROOT_PASSWORD}" --database "${MYSQL_DATABASE:-shopware}")
+    else
+      die "Cannot dump bundled mysql: set MYSQL_USER or MYSQL_ROOT_PASSWORD"
+    fi
+  else
+    parse_database_url
+    if [[ "$DB_HOST" == "mysql" ]]; then
+      die "DATABASE_URL host is mysql but compose mysql is not available"
+    fi
+    run+=(--network host)
+    flags+=(--host "$DB_HOST" --port "$DB_PORT" --username "$DB_USER" --database "$DB_NAME")
+    if [[ -n "$DB_PASS" ]]; then
+      flags+=("--password=${DB_PASS}")
+    fi
+  fi
+  run+=("$img")
+  "${run[@]}" "${flags[@]}" || die "$(sync_dump_fail_hint)"
+}
+
+dump_sql() {
+  if sync_dump_engine_is_mysqldump; then
+    dump_sql_mysqldump
+    return
+  fi
+  if ! sync_dump_engine_is_shopware_cli; then
+    die "Unknown SYNC_DUMP_ENGINE=${SYNC_DUMP_ENGINE:-}. Use shopware-cli (default) or mysqldump."
+  fi
+  log "shopware-cli project dump ($(sync_dump_image)) → stdout"
+  run_shopware_cli_dump -
 }
 
 import_sql() {
@@ -392,26 +474,26 @@ import_sql() {
     ensure_mysql_up
     : "${MYSQL_DATABASE:?Set MYSQL_DATABASE}"
     : "${MYSQL_ROOT_PASSWORD:?Set MYSQL_ROOT_PASSWORD}"
-    "${COMPOSE[@]}" exec -T \
-      -e MYSQL_PWD="$MYSQL_ROOT_PASSWORD" \
-      mysql \
-      mysql \
-      -uroot \
-      --default-character-set=utf8mb4 \
-      --max-allowed-packet=512M \
+    "${COMPOSE[@]}" exec -T \\
+      -e MYSQL_PWD="$MYSQL_ROOT_PASSWORD" \\
+      mysql \\
+      mysql \\
+      -uroot \\
+      --default-character-set=utf8mb4 \\
+      --max-allowed-packet=512M \\
       "$MYSQL_DATABASE"
     return
   fi
   parse_database_url
-  docker run --rm -i --network host \
-    -e MYSQL_PWD="$DB_PASS" \
-    mysql:8.4 \
-    mysql \
-    -h"$DB_HOST" \
-    -P"$DB_PORT" \
-    -u"$DB_USER" \
-    --default-character-set=utf8mb4 \
-    --max-allowed-packet=512M \
+  docker run --rm -i --network host \\
+    -e MYSQL_PWD="$DB_PASS" \\
+    mysql:8.4 \\
+    mysql \\
+    -h"$DB_HOST" \\
+    -P"$DB_PORT" \\
+    -u"$DB_USER" \\
+    --default-character-set=utf8mb4 \\
+    --max-allowed-packet=512M \\
     "$DB_NAME"
 }
 
@@ -419,10 +501,10 @@ maybe_rewrite_sales_channel_domains() {
   if ! sync_rewrite_requested; then
     return
   fi
-  if ! sync_rewrite_assert_not_live \
-    "${SYNC_ENV:-}" \
-    "${SHOPWARE_DEPLOY_ENV:-}" \
-    "$(basename "$COMPOSE_DIR")" \
+  if ! sync_rewrite_assert_not_live \\
+    "${SYNC_ENV:-}" \\
+    "${SHOPWARE_DEPLOY_ENV:-}" \\
+    "$(basename "$COMPOSE_DIR")" \\
     "$(hostname -s 2>/dev/null || hostname)"
   then
     exit 1
@@ -458,9 +540,9 @@ dump_volume_tar() {
   vol="$(docker_volume_name "$key")"
   if has_named_volume "$key"; then
     log "Bind-mount dir $host missing; archiving named volume $vol"
-    docker run --rm \
-      -v "$vol":/volume:ro \
-      alpine:3.20 \
+    docker run --rm \\
+      -v "$vol":/volume:ro \\
+      alpine:3.20 \\
       tar -C /volume -czf - .
     return
   fi
@@ -545,11 +627,11 @@ chown_volumes() {
     dest="$(host_data_dir "$key")"
     mkdir -p "$dest"
     log "chown 82:82 $dest"
-    docker run --rm \
-      -v "$dest":/data \
-      alpine:3.20 \
+    docker run --rm \\
+      -v "$dest":/data \\
+      alpine:3.20 \\
       chown -R 82:82 /data
-  done < <(volume_list)
+  done \u003c \u003c(volume_list)
 }
 
 cache_clear() {
@@ -573,11 +655,11 @@ prune_snapshots() {
   local keep="$SYNC_KEEP_SNAPSHOTS"
   [[ "$keep" =~ ^[0-9]+$ ]] || return 0
   local -a ids=()
-  mapfile -t ids < <(snapshot_ids)
+  mapfile -t ids \u003c \u003c(snapshot_ids)
   local extra=$(( ${#ids[@]} - keep ))
   (( extra > 0 )) || return 0
   local i
-  for ((i = 0; i < extra; i++)); do
+  for ((i = 0; i \u003c extra; i++)); do
     log "Pruning snapshot ${ids[i]}"
     rm -rf "${SYNC_SNAPSHOT_DIR:?}/${ids[i]}"
   done
@@ -640,12 +722,12 @@ rsync_from_remote() {
   mkdir -p "$dest"
   if command -v rsync >/dev/null 2>&1; then
     log "Rsync ${user}@${host}:${remote}/ → ${dest}/"
-    rsync -a --delete -e "$(ssh_rsh "$from")" \
+    rsync -a --delete -e "$(ssh_rsh "$from")" \\
       "${user}@${host}:${remote}/" "${dest}/"
     return
   fi
   log "rsync not installed; streaming tar of $key from $from"
-  remote_export "$from" "--data volumes --volume $(printf '%q' "$key")" \
+  remote_export "$from" "--data volumes --volume $(printf '%q' "$key")" \\
     | restore_host_tar_stdin "$key"
 }
 
@@ -676,7 +758,7 @@ remote_export() {
   [[ -n "$user" ]] || die "Set SYNC_SSH_USER in deploy/sync.env"
   [[ -n "$path" ]] || die "Set SYNC_SSH_PATH in deploy/sync.env"
   ssh_base "$from"
-  "${SSH_CMD[@]}" "${user}@${host}" \
+  "${SSH_CMD[@]}" "${user}@${host}" \\
     "set -euo pipefail; cd $(printf '%q' "$path"); bash ./deploy/sync-runtime.sh export $args"
 }
 
@@ -687,7 +769,7 @@ cmd_export() {
       dump_sql
       ;;
     volumes)
-      [[ -n "$VOLUME_KEY" ]] || die "export --data volumes requires --volume <key>"
+      [[ -n "$VOLUME_KEY" ]] || die "export --data volumes requires --volume \u003ckey>"
       dump_volume_tar "$VOLUME_KEY"
       ;;
     all)
@@ -717,13 +799,18 @@ cmd_snapshot() {
   } >"$dir/meta.txt"
   if want_db; then
     log "Dumping database"
-    dump_sql | gzip -c >"$dir/db.sql.gz"
+    if sync_dump_engine_is_mysqldump; then
+      dump_sql | gzip -c >"$dir/db.sql.gz"
+    else
+      log "shopware-cli project dump ($(sync_dump_image)) → ${dir}/db.sql.gz"
+      run_shopware_cli_dump "$dir/db.sql.gz"
+    fi
   fi
   if want_volumes; then
     local key
     while IFS= read -r key; do
       snapshot_runtime_dir "$key" "$dir"
-    done < <(volume_list)
+    done \u003c \u003c(volume_list)
   fi
   prune_snapshots
   log "Snapshot finished $id"
@@ -736,7 +823,7 @@ cmd_restore() {
   if [[ -z "$SNAPSHOT_ID" ]]; then
     log "Available snapshots in $SYNC_SNAPSHOT_DIR:"
     snapshot_ids || true
-    die "restore requires --snapshot <id>"
+    die "restore requires --snapshot \u003cid>"
   fi
   local dir="$SYNC_SNAPSHOT_DIR/$SNAPSHOT_ID"
   [[ -d "$dir" ]] || die "Snapshot not found: $dir"
@@ -747,16 +834,16 @@ cmd_restore() {
     fi
   fi
   if sync_rewrite_requested; then
-    if ! sync_rewrite_assert_not_live \
-      "${SYNC_ENV:-}" \
-      "${SHOPWARE_DEPLOY_ENV:-}" \
-      "$(basename "$COMPOSE_DIR")" \
+    if ! sync_rewrite_assert_not_live \\
+      "${SYNC_ENV:-}" \\
+      "${SHOPWARE_DEPLOY_ENV:-}" \\
+      "$(basename "$COMPOSE_DIR")" \\
       "$(hostname -s 2>/dev/null || hostname)"
     then
       exit 1
     fi
   fi
-  confirm "Overwrite runtime data on ${this_env:-this host} from snapshot $SNAPSHOT_ID?" \
+  confirm "Overwrite runtime data on ${this_env:-this host} from snapshot $SNAPSHOT_ID?" \\
     || die "Cancelled"
   stop_app
   if want_db; then
@@ -769,7 +856,7 @@ cmd_restore() {
     local key
     while IFS= read -r key; do
       restore_runtime_dir "$key" "$dir"
-    done < <(volume_list)
+    done \u003c \u003c(volume_list)
     chown_volumes
   fi
   start_app
@@ -780,7 +867,7 @@ cmd_restore() {
 cmd_sync() {
   acquire_lock
   ensure_data_root
-  [[ -n "$FROM_ENV" ]] || die "sync requires --from <env> (e.g. --from live)"
+  [[ -n "$FROM_ENV" ]] || die "sync requires --from \u003cenv> (e.g. --from live)"
   [[ -n "${SYNC_ENV:-}" ]] || die "Set SYNC_ENV in deploy/sync.env (this host, e.g. staging)"
   if is_live_env "$SYNC_ENV"; then
     die "Refusing sync onto live/prod (pull on the lower env, never push into live)"
@@ -799,10 +886,10 @@ cmd_sync() {
   [[ -n "$(from_ssh_user "$FROM_ENV")" ]] || die "Set SYNC_SSH_USER in deploy/sync.env"
   [[ -n "$(from_ssh_path "$FROM_ENV")" ]] || die "Set SYNC_SSH_PATH in deploy/sync.env"
   if sync_rewrite_requested; then
-    if ! sync_rewrite_assert_not_live \
-      "${SYNC_ENV:-}" \
-      "${SHOPWARE_DEPLOY_ENV:-}" \
-      "$(basename "$COMPOSE_DIR")" \
+    if ! sync_rewrite_assert_not_live \\
+      "${SYNC_ENV:-}" \\
+      "${SHOPWARE_DEPLOY_ENV:-}" \\
+      "$(basename "$COMPOSE_DIR")" \\
       "$(hostname -s 2>/dev/null || hostname)"
     then
       exit 1
@@ -811,7 +898,7 @@ cmd_sync() {
   confirm "Overwrite ${SYNC_ENV} runtime data with ${FROM_ENV} (${DATA})?" || die "Cancelled"
   stop_app
   if want_db; then
-    log "Streaming mysqldump from $FROM_ENV"
+    log "Streaming shopware-cli project dump from $FROM_ENV"
     remote_export "$FROM_ENV" "--data db" | import_sql
   fi
   maybe_rewrite_sales_channel_domains
@@ -820,7 +907,7 @@ cmd_sync() {
     while IFS= read -r key; do
       log "Syncing bind-mount dir $key from $FROM_ENV"
       rsync_from_remote "$FROM_ENV" "$key"
-    done < <(volume_list)
+    done \u003c \u003c(volume_list)
     chown_volumes
   fi
   start_app
