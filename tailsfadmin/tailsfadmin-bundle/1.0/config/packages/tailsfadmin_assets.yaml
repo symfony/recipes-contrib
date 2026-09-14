@@ -1,0 +1,12 @@
+# AssetMapper path for the bundle's Stimulus controllers (Flex recipe).
+#
+# The bundle's prepend() does not survive the Flex config merge, so the controllers
+# path (and the FullCalendar vendor-src shim) is declared here, on the host side.
+# Kept in a SEPARATE file on purpose: Symfony merges framework.asset_mapper.paths
+# from every config/packages/ file, so this adds to your asset_mapper.yaml
+# without overwriting it.
+framework:
+    asset_mapper:
+        paths:
+            'vendor/tailsfadmin/tailsfadmin-bundle/assets/controllers': 'bundles/tailsfadmin'
+            'vendor/tailsfadmin/tailsfadmin-bundle/assets/vendor-src': 'bundles/tailsfadmin-vendor'

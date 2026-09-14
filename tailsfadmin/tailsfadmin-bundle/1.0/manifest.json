@@ -1,0 +1,25 @@
+{
+    "bundles": {
+        "Tailsfadmin\\TailsfadminBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "post-install-output": [
+        "<bg=blue;fg=white> tailsfadmin </> admin theme installed.",
+        "",
+        "  The bundle ships no CDN dependency — two steps for the assets:",
+        "",
+        "  1. Vendor the components' third-party JS libs (ApexCharts, flatpickr, Dropzone, …):",
+        "     <comment>php bin/console tailsfadmin:assets:install</comment>",
+        "",
+        "  2. Import the theme into your Tailwind entrypoint (assets/styles/app.css):",
+        "     <comment>@import \"tailwindcss\";</comment>",
+        "     <comment>@import \"../../vendor/tailsfadmin/tailsfadmin-bundle/assets/styles/theme.css\";</comment>",
+        "",
+        "  Then compile: <comment>php bin/console tailwind:build && php bin/console asset-map:compile</comment>",
+        "",
+        "  The controllers' AssetMapper path is already set (config/packages/tailsfadmin_assets.yaml).",
+        "  Documentation: <comment>https://github.com/thibmonier/tailsfadmin#readme</comment>"
+    ]
+}
