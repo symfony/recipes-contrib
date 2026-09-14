@@ -1,0 +1,4 @@
+llm_carbon:
+    default_zone: 'France'
+    calculator: complete
+    models: []
