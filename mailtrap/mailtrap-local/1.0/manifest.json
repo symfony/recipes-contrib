@@ -1,0 +1,26 @@
+{
+    "docker-compose": {
+        "docker-compose.override.yml": {
+            "services": [
+                "mailtrap-local:",
+                "  image: mailtrap/mailtrap-local",
+                "  # The Symfony CLI detects a mail catcher by container-internal port, and it",
+                "  # recognizes only 1025 for SMTP together with 1080 or 8025 for the web UI.",
+                "  # Mailtrap Local defaults to 3535 and 3550 and binds loopback only, so the",
+                "  # listeners move here and the non-loopback bind is allowed explicitly.",
+                "  command:",
+                "    - --unsafe-non-loopback",
+                "    - --smtp-listen=0.0.0.0:1025",
+                "    - --http-listen=0.0.0.0:8025",
+                "    - --db=/var/lib/mailtrap-local/db.sqlite3",
+                "  ports:",
+                "    - \"1025\"",
+                "    - \"8025\"",
+                "  labels:",
+                "    # The service is not called \"mailer\", so the prefix is set explicitly to",
+                "    # keep the MAILER_* variables Symfony Mailer expects.",
+                "    com.symfony.server.service-prefix: 'mailer'"
+            ]
+        }
+    }
+}
