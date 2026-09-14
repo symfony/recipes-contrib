@@ -1,0 +1,79 @@
+{
+    "manifests": {
+        "jpmmartin/sylius-nmi-plugin": {
+            "manifest": {
+                "bundles": {
+                    "JpmMartin\\SyliusNmiPlugin\\JpmMartinSyliusNmiPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "add-lines": [
+                    {
+                        "file": "assets/shop/entrypoint.js",
+                        "content": "import '@vendor/jpmmartin/sylius-nmi-plugin/assets/shop/entrypoint';",
+                        "position": "bottom",
+                        "warn_if_missing": true
+                    }
+                ],
+                "gitignore": [
+                    "/config/encryption/*.key",
+                    "!/config/encryption/test.key"
+                ],
+                "post-install-output": [
+                    "  * <fg=blue>Four things no recipe can do, in this order:</>",
+                    "",
+                    "    <comment>yarn add @nmipayments/nmi-pay && yarn build</comment>   the browser component and the shop build",
+                    "    <comment>bin/console doctrine:migrations:migrate</comment>        the plugin's four tables",
+                    "",
+                    "  * <fg=blue>A key of your own, before the first payment method is saved.</> The skeleton's test.key is",
+                    "    published; point the store at a new path <comment>first</comment>, then generate \u2014 the generator writes",
+                    "    wherever the store points at that moment:",
+                    "",
+                    "    <comment>.env.local:</comment>  SYLIUS_PAYMENT_ENCRYPTION_KEY_PATH=%kernel.project_dir%/config/encryption/payment.key",
+                    "    <comment>bin/console sylius:payment:generate-key</comment>",
+                    "",
+                    "  * <fg=blue>Then</> Configuration \u2192 Payment methods \u2192 Create \u2192 NMI, and read <comment>Testing against the sandbox</comment>",
+                    "    before the first payment: https://github.com/jpmmartin/SyliusNmiPlugin#readme"
+                ]
+            },
+            "files": {
+                "config/packages/jpm_martin_sylius_nmi.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@JpmMartinSyliusNmiPlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/jpm_martin_sylius_nmi.yaml": {
+                    "contents": [
+                        "jpm_martin_sylius_nmi_shop:",
+                        "    resource: \"@JpmMartinSyliusNmiPlugin/config/routes/shop.yaml\"",
+                        "",
+                        "jpm_martin_sylius_nmi_admin:",
+                        "    resource: \"@JpmMartinSyliusNmiPlugin/config/routes/admin.yaml\"",
+                        "    prefix: /%sylius_admin.path_name%",
+                        "",
+                        "# Required if you want NMI to tell your store what it did. Without it there is no endpoint and",
+                        "# nothing arrives. No prefix: not the locale, not the admin path. See the README's \"Webhooks\".",
+                        "jpm_martin_sylius_nmi_webhook:",
+                        "    resource: \"@JpmMartinSyliusNmiPlugin/config/routes/webhook.yaml\"",
+                        "",
+                        "# Required if you turn saved cards on, and harmless if you do not. See the README's \"Saved cards\".",
+                        "jpm_martin_sylius_nmi_shop_account:",
+                        "    resource: \"@JpmMartinSyliusNmiPlugin/config/routes/shop_account.yaml\"",
+                        "    prefix: /{_locale}/account",
+                        "    requirements:",
+                        "        _locale: ^[A-Za-z]{2,4}(_([A-Za-z]{4}|[0-9]{3}))?(_([A-Za-z]{2}|[0-9]{3}))?$",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "f081bdaff52d198c7e7a24fab9743dba058e7265"
+        }
+    }
+}

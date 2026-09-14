@@ -1000,6 +1000,9 @@
         "jonathanlight/meta-entity-builder-bundle": [
             "1.0"
         ],
+        "jpmmartin/sylius-nmi-plugin": [
+            "1.0"
+        ],
         "jrmgx/interactive-bundle": [
             "1.0"
         ],
