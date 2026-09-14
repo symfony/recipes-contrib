@@ -2282,6 +2282,9 @@
             "1.10",
             "2.1"
         ],
+        "tailsfadmin/tailsfadmin-bundle": [
+            "1.0"
+        ],
         "tales-from-a-dev/flowbite-bundle": [
             "0.4"
         ],

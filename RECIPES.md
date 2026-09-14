@@ -705,6 +705,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [synolia/sylius-mail-tester-plugin](https://packagist.org/packages/synolia/sylius-mail-tester-plugin) | [3.0](../../../tree/main/synolia/sylius-mail-tester-plugin/3.0) |
 | [synolia/sylius-scheduler-command-plugin](https://packagist.org/packages/synolia/sylius-scheduler-command-plugin) | [4.0](../../../tree/main/synolia/sylius-scheduler-command-plugin/4.0) |
 | [systemsdk/easy-log-bundle](https://packagist.org/packages/systemsdk/easy-log-bundle) | [2.1](../../../tree/main/systemsdk/easy-log-bundle/2.1) |
+| [tailsfadmin/tailsfadmin-bundle](https://packagist.org/packages/tailsfadmin/tailsfadmin-bundle) | [1.0](../../../tree/main/tailsfadmin/tailsfadmin-bundle/1.0) |
 | [tales-from-a-dev/flowbite-bundle](https://packagist.org/packages/tales-from-a-dev/flowbite-bundle) | [0.4](../../../tree/main/tales-from-a-dev/flowbite-bundle/0.4) |
 | [tales-from-a-dev/twig-tailwind-extra](https://packagist.org/packages/tales-from-a-dev/twig-tailwind-extra) | [0.2](../../../tree/main/tales-from-a-dev/twig-tailwind-extra/0.2) |
 | [talleu/php-redis-om](https://packagist.org/packages/talleu/php-redis-om) | [0.3](../../../tree/main/talleu/php-redis-om/0.3) |
