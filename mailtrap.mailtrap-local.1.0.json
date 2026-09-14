@@ -1,0 +1,58 @@
+{
+    "manifests": {
+        "mailtrap/mailtrap-local": {
+            "manifest": {
+                "docker-compose": {
+                    "docker-compose.override.yml": {
+                        "services": [
+                            "mailtrap-local:",
+                            "  image: mailtrap/mailtrap-local",
+                            "  # The Symfony CLI detects a mail catcher by container-internal port, and it",
+                            "  # recognizes only 1025 for SMTP together with 1080 or 8025 for the web UI.",
+                            "  # Mailtrap Local defaults to 3535 and 3550 and binds loopback only, so the",
+                            "  # listeners move here and the non-loopback bind is allowed explicitly.",
+                            "  command:",
+                            "    - --unsafe-non-loopback",
+                            "    - --smtp-listen=0.0.0.0:1025",
+                            "    - --http-listen=0.0.0.0:8025",
+                            "    - --db=/var/lib/mailtrap-local/db.sqlite3",
+                            "  ports:",
+                            "    - \"1025\"",
+                            "    - \"8025\"",
+                            "  labels:",
+                            "    # The service is not called \"mailer\", so the prefix is set explicitly to",
+                            "    # keep the MAILER_* variables Symfony Mailer expects.",
+                            "    com.symfony.server.service-prefix: 'mailer'"
+                        ]
+                    }
+                },
+                "post-install-output": [
+                    "  * A <comment>mailtrap-local</> service was added to your Docker Compose configuration.",
+                    "    Start it with <info>docker compose up -d</>.",
+                    "",
+                    "  * With the Symfony CLI there is nothing else to do. <comment>MAILER_DSN</> is exposed for",
+                    "    you, and <info>symfony open:local:webmail</> opens the web UI.",
+                    "",
+                    "  * Without the Symfony CLI, ask Docker for the published ports. Docker assigns them",
+                    "    at random, in the same way as the <comment>symfony/mailer</> catcher service:",
+                    "",
+                    "      <info>docker compose port mailtrap-local 1025</>   # SMTP, for MAILER_DSN",
+                    "      <info>docker compose port mailtrap-local 8025</>   # web UI",
+                    "",
+                    "    To pin them instead, replace the two entries under <comment>ports:</> with",
+                    "    <comment>\"3535:1025\"</> and <comment>\"3550:8025\"</>. Those are Mailtrap Local's own defaults.",
+                    "",
+                    "  * The <comment>symfony/mailer</> recipe adds its own catcher service, called <comment>mailer</>.",
+                    "    When both services run, both claim the <comment>MAILER_</> prefix: one becomes",
+                    "    <comment>MAILER_DSN</> and the other becomes <comment>MAILER_1_DSN</>. This is decided when the",
+                    "    containers are created. Keep the one catcher you want, so that <comment>MAILER_DSN</>",
+                    "    always points where you expect.",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at <comment>https://github.com/mailtrap/mailtrap-local</>"
+                ]
+            },
+            "files": [],
+            "ref": "955debbc9526d5fe586ad1368ef0786cca61910a"
+        }
+    }
+}
