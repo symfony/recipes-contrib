@@ -1,0 +1,20 @@
+{
+    "bundles": {
+        "JpmMartin\\SyliusNmiPlugin\\JpmMartinSyliusNmiPlugin": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "add-lines": [
+        {
+            "file": "assets/shop/entrypoint.js",
+            "content": "import '@vendor/jpmmartin/sylius-nmi-plugin/assets/shop/entrypoint';",
+            "position": "bottom",
+            "warn_if_missing": true
+        }
+    ],
+    "gitignore": [
+        "/config/encryption/*.key",
+        "!/config/encryption/test.key"
+    ]
+}
