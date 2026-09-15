@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "vbcherepanov/a2a-symfony-bundle": {
+            "manifest": {
+                "bundles": {
+                    "A2A\\Bundle\\A2ABundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/a2a.yaml": {
+                    "contents": [
+                        "# a2a:",
+                        "#     executor: App\\Agent\\MyExecutor",
+                        "#     card_file: '%kernel.project_dir%/config/agent-card.json'",
+                        "#     public_url: '%env(A2A_PUBLIC_URL)%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/a2a.yaml": {
+                    "contents": [
+                        "a2a:",
+                        "    resource: .",
+                        "    type: a2a",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "99f3b2199ae4d9997083f1147e1ead2c3f211949"
+        }
+    }
+}
