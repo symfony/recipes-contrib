@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "A2A\\Bundle\\A2ABundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
