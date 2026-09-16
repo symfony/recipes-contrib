@@ -1,0 +1,44 @@
+{
+    "manifests": {
+        "wlindabla/mailing-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Wlindabla\\MailingBundle\\WlindablaMailingBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "APP_MAIL_FROM_SYSTEM": "no-reply-system@myexample.com",
+                    "APP_MAIL_FROM_SYSTEM_NAME": "System",
+                    "APP_MAIL_FROM_SUPPORT": "support-@myexample.com",
+                    "APP_MAIL_FROM_SUPPORT_NAME": "Support",
+                    "APP_DKIM_DOMAIN": "myexample.com"
+                }
+            },
+            "files": {
+                "config/packages/wlindabla_mailing.yaml": {
+                    "contents": [
+                        "wlindabla_mailing:",
+                        "    from_addresses:",
+                        "        system:",
+                        "            address: '%env(APP_MAIL_FROM_SYSTEM)%'",
+                        "            name: '%env(APP_MAIL_FROM_SYSTEM_NAME)%'",
+                        "        support:",
+                        "            address: '%env(APP_MAIL_FROM_SUPPORT)%'",
+                        "            name: '%env(APP_MAIL_FROM_SUPPORT_NAME)%'",
+                        "    dkim:",
+                        "        private_key: '%env(resolve:default::MAILER_DKIM)%'",
+                        "        domain: '%env(APP_DKIM_DOMAIN)%'",
+                        "        selector: 'default'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "44e58ac0a43ca6239d5a0fdfb56146417c992c35"
+        }
+    }
+}
