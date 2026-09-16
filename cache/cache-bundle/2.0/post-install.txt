@@ -1,0 +1,2 @@
+  * Configure the CacheBundle integrations that your app uses:
+    <href=https://github.com/php-cache/cache-bundle#configuration>https://github.com/php-cache/cache-bundle#configuration</>
