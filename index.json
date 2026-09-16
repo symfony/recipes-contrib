@@ -475,6 +475,9 @@
         "davidannebicque/html-to-spreadsheet-bundle": [
             "0.1"
         ],
+        "davidjln/llm-carbon-bundle": [
+            "1.0"
+        ],
         "deamon/logger-extra-bundle": [
             "4.0"
         ],
