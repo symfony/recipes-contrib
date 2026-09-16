@@ -6,10 +6,10 @@
         "config/": "%CONFIG_DIR%/"
     },
     "env": {
-        "APP_MAIL_FROM_SYSTEM": "no-reply-system@example.com",
+        "APP_MAIL_FROM_SYSTEM": "no-reply-system@myexample.com",
         "APP_MAIL_FROM_SYSTEM_NAME": "System",
-        "APP_MAIL_FROM_SUPPORT": "support@example.com",
+        "APP_MAIL_FROM_SUPPORT": "support-@myexample.com",
         "APP_MAIL_FROM_SUPPORT_NAME": "Support",
-        "APP_DKIM_DOMAIN": "example.com"
+        "APP_DKIM_DOMAIN": "myexample.com"
     }
 }
