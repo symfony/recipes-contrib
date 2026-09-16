@@ -2418,6 +2418,9 @@
         "tsantos/serializer-bundle": [
             "1.0"
         ],
+        "vbcherepanov/a2a-symfony-bundle": [
+            "1.0"
+        ],
         "velhron/dadata-bundle": [
             "1.0"
         ],

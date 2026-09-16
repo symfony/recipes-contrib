@@ -747,6 +747,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [troopers/alertify-bundle](https://packagist.org/packages/troopers/alertify-bundle) | [3.0](../../../tree/main/troopers/alertify-bundle/3.0) |
 | [troopers/mangopay-bundle](https://packagist.org/packages/troopers/mangopay-bundle) | [3.0](../../../tree/main/troopers/mangopay-bundle/3.0) |
 | [tsantos/serializer-bundle](https://packagist.org/packages/tsantos/serializer-bundle) | [1.0](../../../tree/main/tsantos/serializer-bundle/1.0) |
+| [vbcherepanov/a2a-symfony-bundle](https://packagist.org/packages/vbcherepanov/a2a-symfony-bundle) | [1.0](../../../tree/main/vbcherepanov/a2a-symfony-bundle/1.0) |
 | [velhron/dadata-bundle](https://packagist.org/packages/velhron/dadata-bundle) | [1.0](../../../tree/main/velhron/dadata-bundle/1.0) |
 | [velpl/buggregator-profiler-bundle](https://packagist.org/packages/velpl/buggregator-profiler-bundle) | [0.2](../../../tree/main/velpl/buggregator-profiler-bundle/0.2) |
 | [verschoof/transip-api-bundle](https://packagist.org/packages/verschoof/transip-api-bundle) | [1.2](../../../tree/main/verschoof/transip-api-bundle/1.2) |
