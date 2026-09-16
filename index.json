@@ -782,6 +782,9 @@
         "fsi/files": [
             "1.5"
         ],
+        "fyrst/shopware-cd": [
+            "1.0"
+        ],
         "galactic-shrine/gsid": [
             "1.0",
             "2.0"
