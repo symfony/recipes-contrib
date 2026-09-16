@@ -1,0 +1,19 @@
+{
+    "manifests": {
+        "cache/cache-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Cache\\CacheBundle\\CacheBundle": [
+                        "all"
+                    ]
+                },
+                "post-install-output": [
+                    "  * Configure the CacheBundle integrations that your app uses:",
+                    "    <href=https://github.com/php-cache/cache-bundle#configuration>https://github.com/php-cache/cache-bundle#configuration</>"
+                ]
+            },
+            "files": [],
+            "ref": "18f22d26aefb7526f6098e9d16ad0e3771a42960"
+        }
+    }
+}

@@ -91,7 +91,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [byhaskell/novaposhta-bundle](https://packagist.org/packages/byhaskell/novaposhta-bundle) | [1.0](../../../tree/main/byhaskell/novaposhta-bundle/1.0) |
 | [byte-artist/menu-bundle](https://packagist.org/packages/byte-artist/menu-bundle) | [0.1](../../../tree/main/byte-artist/menu-bundle/0.1) |
 | [cache/adapter-bundle](https://packagist.org/packages/cache/adapter-bundle) | [1.1](../../../tree/main/cache/adapter-bundle/1.1) |
-| [cache/cache-bundle](https://packagist.org/packages/cache/cache-bundle) | [1.0](../../../tree/main/cache/cache-bundle/1.0) |
+| [cache/cache-bundle](https://packagist.org/packages/cache/cache-bundle) | [2.0](../../../tree/main/cache/cache-bundle/2.0) |
 | [calliostro/discogs-bundle](https://packagist.org/packages/calliostro/discogs-bundle) | [4.0](../../../tree/main/calliostro/discogs-bundle/4.0) |
 | [calliostro/last-fm-client-bundle](https://packagist.org/packages/calliostro/last-fm-client-bundle) | [2.0](../../../tree/main/calliostro/last-fm-client-bundle/2.0) |
 | [carthage-software/mago](https://packagist.org/packages/carthage-software/mago) | [1.0](../../../tree/main/carthage-software/mago/1.0) |

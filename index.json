@@ -274,7 +274,8 @@
             "1.1"
         ],
         "cache/cache-bundle": [
-            "1.0"
+            "1.0",
+            "2.0"
         ],
         "calliostro/discogs-bundle": [
             "4.0"
