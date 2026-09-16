@@ -1,0 +1,4 @@
+# a2a:
+#     executor: App\Agent\MyExecutor
+#     card_file: '%kernel.project_dir%/config/agent-card.json'
+#     public_url: '%env(A2A_PUBLIC_URL)%'
