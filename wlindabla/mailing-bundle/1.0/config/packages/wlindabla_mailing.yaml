@@ -1,0 +1,12 @@
+wlindabla_mailing:
+    from_addresses:
+        system:
+            address: '%env(APP_MAIL_FROM_SYSTEM)%'
+            name: '%env(APP_MAIL_FROM_SYSTEM_NAME)%'
+        support:
+            address: '%env(APP_MAIL_FROM_SUPPORT)%'
+            name: '%env(APP_MAIL_FROM_SUPPORT_NAME)%'
+    dkim:
+        private_key: '%env(resolve:default::MAILER_DKIM)%'
+        domain: '%env(APP_DKIM_DOMAIN)%'
+        selector: 'default'
