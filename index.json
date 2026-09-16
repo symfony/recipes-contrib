@@ -1270,6 +1270,9 @@
         "mailjet/mailjet-bundle": [
             "1.0"
         ],
+        "mailtrap/mailtrap-local": [
+            "1.0"
+        ],
         "mailxpert/apibundle": [
             "0.1"
         ],

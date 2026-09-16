@@ -400,6 +400,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [magenable/sylius-top-bar-notification-plugin](https://packagist.org/packages/magenable/sylius-top-bar-notification-plugin) | [1.0](../../../tree/main/magenable/sylius-top-bar-notification-plugin/1.0) |
 | [mailgun/mailgun-php](https://packagist.org/packages/mailgun/mailgun-php) | [2.3](../../../tree/main/mailgun/mailgun-php/2.3) |
 | [mailjet/mailjet-bundle](https://packagist.org/packages/mailjet/mailjet-bundle) | [1.0](../../../tree/main/mailjet/mailjet-bundle/1.0) |
+| [mailtrap/mailtrap-local](https://packagist.org/packages/mailtrap/mailtrap-local) | [1.0](../../../tree/main/mailtrap/mailtrap-local/1.0) |
 | [mailxpert/apibundle](https://packagist.org/packages/mailxpert/apibundle) | [0.1](../../../tree/main/mailxpert/apibundle/0.1) |
 | [makasim/yadm-bundle](https://packagist.org/packages/makasim/yadm-bundle) | [0.2](../../../tree/main/makasim/yadm-bundle/0.2) |
 | [maksze/telemetry-bundle](https://packagist.org/packages/maksze/telemetry-bundle) | [0.4](../../../tree/main/maksze/telemetry-bundle/0.4) |
