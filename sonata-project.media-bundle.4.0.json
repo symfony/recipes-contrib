@@ -1,0 +1,67 @@
+{
+    "manifests": {
+        "sonata-project/media-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Sonata\\MediaBundle\\SonataMediaBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "public/": "%PUBLIC_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sonata_media.yaml": {
+                    "contents": [
+                        "sonata_media:",
+                        "    default_context: default",
+                        "    contexts:",
+                        "        default:",
+                        "            providers:",
+                        "                - sonata.media.provider.dailymotion",
+                        "                - sonata.media.provider.youtube",
+                        "                - sonata.media.provider.image",
+                        "                - sonata.media.provider.file",
+                        "                - sonata.media.provider.vimeo",
+                        "",
+                        "            formats:",
+                        "                small: { width: 100 , quality: 70}",
+                        "                big:   { width: 500 , quality: 70}",
+                        "",
+                        "    cdn:",
+                        "        server:",
+                        "            path: /uploads/media",
+                        "",
+                        "    filesystem:",
+                        "        local:",
+                        "            # Directory for uploads should be writable",
+                        "            directory: \"%kernel.project_dir%/public/uploads/media\"",
+                        "            create: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sonata_media.yaml": {
+                    "contents": [
+                        "sonata_media:",
+                        "    resource: '@SonataMediaBundle/Resources/config/routing/media.xml'",
+                        "    prefix: /media",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "public/uploads/media/.gitignore": {
+                    "contents": [
+                        "*",
+                        "!.gitignore",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ec54b1d3b1ec60cd92f482f65bb707c765fd5e8d"
+        }
+    }
+}
