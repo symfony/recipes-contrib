@@ -1,0 +1,12 @@
+# These are only example values taken from the bundle's installation guide
+# (https://docs.sonata-project.org/projects/SonataUserBundle/en/5.x/reference/installation/).
+# Fill in "class.user" with your own User entity and adjust
+# "resetting.email.address" / "resetting.email.sender_name" to your project,
+# both are required and have no default value.
+sonata_user:
+    class:
+        user: App\Entity\SonataUserUser
+    resetting:
+        email:
+            address: sonata@localhost
+            sender_name: Sonata Admin
