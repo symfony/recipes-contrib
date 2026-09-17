@@ -1,0 +1,18 @@
+sonata_user:
+    class:
+        # Configure your user entity. Extend
+        user: App\Entity\User
+    resetting:
+        email:
+            # Configure senders email address on password resetting
+            address: sonata@localhost
+            sender_name: Sonata Admin
+
+# Enable Doctrine to map the provided entities
+doctrine:
+    orm:
+        entity_managers:
+            default:
+                mappings:
+                    SonataUserBundle: ~
+
