@@ -1,0 +1,27 @@
+{
+    "manifests": {
+        "pentiminax/ux-datatables": {
+            "manifest": {
+                "bundles": {
+                    "Pentiminax\\UX\\DataTables\\DataTablesBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/data_tables.yaml": {
+                    "contents": [
+                        "datatables:",
+                        "    resource: '@DataTablesBundle/config/routes.php'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5aab256ed30f8daa80b87aa5fef2ca7f74670f27"
+        }
+    }
+}
