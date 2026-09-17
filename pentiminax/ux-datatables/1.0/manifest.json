@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Pentiminax\\UX\\DataTables\\PentiminaxDataTablesBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
