@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "calliostro/discogs-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Calliostro\\DiscogsBundle\\CalliostroDiscogsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "DISCOGS_PERSONAL_ACCESS_TOKEN": "",
+                    "#DISCOGS_CONSUMER_KEY": "",
+                    "#DISCOGS_CONSUMER_SECRET": ""
+                }
+            },
+            "files": {
+                "config/packages/calliostro_discogs.yaml": {
+                    "contents": [
+                        "calliostro_discogs:",
+                        "    # Recommended: Personal Access Token (get from https://www.discogs.com/settings/developers)",
+                        "    personal_access_token: '%env(DISCOGS_PERSONAL_ACCESS_TOKEN)%'",
+                        "",
+                        "    # Alternative: Consumer credentials for OAuth applications",
+                        "    # Get from https://www.discogs.com/applications",
+                        "    # consumer_key: '%env(DISCOGS_CONSUMER_KEY)%'",
+                        "    # consumer_secret: '%env(DISCOGS_CONSUMER_SECRET)%'",
+                        "",
+                        "    # Optional: HTTP User-Agent header for API requests",
+                        "    # Default: 'DiscogsClient/4.1.0 (+https://github.com/calliostro/php-discogs-api)'",
+                        "    # user_agent: 'MyApp/1.0 +https://myapp.com'",
+                        "",
+                        "    # Optional: Retry resilience settings (enabled by default)",
+                        "    # auto_retry: true     # Automatically wait and retry on 429 and 503 responses (default: true)",
+                        "    # max_retries: 3       # Maximum number of retry attempts (default: 3)",
+                        "",
+                        "    # Optional: Proactive rate limiting (requires symfony/rate-limiter)",
+                        "    # rate_limiter: discogs_api",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "0e678afdee0a23a6dcf984ac6b4d3d98bce2b4f8"
+        }
+    }
+}
