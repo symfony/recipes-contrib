@@ -8,8 +8,12 @@ calliostro_discogs:
     # consumer_secret: '%env(DISCOGS_CONSUMER_SECRET)%'
 
     # Optional: HTTP User-Agent header for API requests
-    # Default: 'DiscogsClient/4.0.0 (+https://github.com/calliostro/php-discogs-api)'
+    # Default: 'DiscogsClient/4.1.0 (+https://github.com/calliostro/php-discogs-api)'
     # user_agent: 'MyApp/1.0 +https://myapp.com'
 
-    # Optional: Professional rate limiting (requires symfony/rate-limiter)
-    # rate_limiter: discogs_api       # Your configured RateLimiterFactory service
+    # Optional: Retry resilience settings (enabled by default)
+    # auto_retry: true     # Automatically wait and retry on 429 and 503 responses (default: true)
+    # max_retries: 3       # Maximum number of retry attempts (default: 3)
+
+    # Optional: Proactive rate limiting (requires symfony/rate-limiter)
+    # rate_limiter: discogs_api
