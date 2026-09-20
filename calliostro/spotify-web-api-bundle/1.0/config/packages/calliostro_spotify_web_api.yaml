@@ -1,0 +1,18 @@
+calliostro_spotify_web_api:
+    # Your Client ID from the Spotify Developer Dashboard (https://developer.spotify.com/dashboard/applications)
+    client_id: '%env(SPOTIFY_CLIENT_ID)%'
+
+    # Your Client Secret
+    client_secret: '%env(SPOTIFY_CLIENT_SECRET)%'
+
+    # Optional: Address to redirect to after authentication success OR failure (required for Authorization Code flow)
+    # redirect_uri: '%env(SPOTIFY_REDIRECT_URI)%'
+
+    # Optional: Client options for jwilsson/spotify-web-api-php
+    # options:
+    #     auto_refresh: false
+    #     auto_retry: false
+    #     return_assoc: false
+
+    # Optional: Custom token provider service (defaults to built-in Client Credentials TokenProvider)
+    # token_provider: calliostro_spotify_web_api.token_provider
