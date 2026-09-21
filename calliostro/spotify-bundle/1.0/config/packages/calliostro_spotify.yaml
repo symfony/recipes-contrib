@@ -1,0 +1,15 @@
+calliostro_spotify:
+    # Required for Client Credentials Flow (get from https://developer.spotify.com/dashboard)
+    client_id: '%env(SPOTIFY_CLIENT_ID)%'
+    client_secret: '%env(SPOTIFY_CLIENT_SECRET)%'
+
+    # Optional: HTTP User-Agent header for API requests
+    # user_agent: 'MyApp/1.0 (+https://myapp.com)'
+
+    # Optional: Retry resilience and token management settings (defaults shown)
+    # auto_retry: true           # Automatically wait and retry on 429 rate limits (default: true)
+    # max_retries: 3             # Maximum number of retry attempts (default: 3)
+    # proactive_refresh: true    # Renew tokens proactively before expiration (default: true)
+
+    # Optional: Proactive rate limiting (requires symfony/rate-limiter)
+    # rate_limiter: spotify_api
