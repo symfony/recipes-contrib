@@ -1,0 +1,58 @@
+{
+    "manifests": {
+        "sonata-project/user-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Sonata\\UserBundle\\SonataUserBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/sonata_user.yaml": {
+                    "contents": [
+                        "sonata_user:",
+                        "    class:",
+                        "        # Configure your user entity. Extend",
+                        "        user: App\\Entity\\User",
+                        "    resetting:",
+                        "        email:",
+                        "            # Configure senders email address on password resetting",
+                        "            address: sonata@localhost",
+                        "            sender_name: Sonata Admin",
+                        "",
+                        "# Enable Doctrine to map the provided entities",
+                        "doctrine:",
+                        "    orm:",
+                        "        entity_managers:",
+                        "            default:",
+                        "                mappings:",
+                        "                    SonataUserBundle: null",
+                        "",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sonata_user.yaml": {
+                    "contents": [
+                        "sonata_user_admin_security:",
+                        "    resource: '@SonataUserBundle/Resources/config/routing/admin_security.php'",
+                        "    type: php",
+                        "    prefix: /admin",
+                        "",
+                        "sonata_user_admin_resetting:",
+                        "    resource: '@SonataUserBundle/Resources/config/routing/admin_resetting.php'",
+                        "    type: php",
+                        "    prefix: /admin",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b43b522a1104d6b9fe106b25de70ead2dfebbd85"
+        }
+    }
+}
