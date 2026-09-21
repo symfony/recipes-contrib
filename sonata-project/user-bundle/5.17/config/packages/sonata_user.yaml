@@ -14,5 +14,5 @@ doctrine:
         entity_managers:
             default:
                 mappings:
-                    SonataUserBundle: ~
+                    SonataUserBundle: null
 
