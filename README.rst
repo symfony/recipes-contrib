@@ -1,5 +1,6 @@
 Symfony Recipes (Contrib)
 =========================
+.
 
 Symfony recipes allow the automation of Composer packages configuration via the
 `Symfony Flex`_ Composer plugin.
