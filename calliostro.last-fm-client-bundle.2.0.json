@@ -1,0 +1,48 @@
+{
+    "manifests": {
+        "calliostro/last-fm-client-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Calliostro\\LastfmBundle\\CalliostroLastfmBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "LASTFM_API_KEY": "",
+                    "LASTFM_SECRET": "",
+                    "#LASTFM_SESSION": ""
+                }
+            },
+            "files": {
+                "config/packages/calliostro_lastfm.yaml": {
+                    "contents": [
+                        "calliostro_lastfm:",
+                        "    # API credentials (get from https://www.last.fm/api/account/create)",
+                        "    api_key: '%env(LASTFM_API_KEY)%'",
+                        "    api_secret: '%env(LASTFM_SECRET)%'",
+                        "",
+                        "    # Optional: Session key for authenticated user operations (scrobbling, loving tracks)",
+                        "    # session_key: '%env(LASTFM_SESSION_KEY)%'",
+                        "",
+                        "    # Optional: HTTP User-Agent header for API requests",
+                        "    # Default: 'LastfmClient/2.1.0 (+https://github.com/calliostro/lastfm-client)'",
+                        "    # user_agent: 'MyApp/1.0 +https://myapp.com'",
+                        "",
+                        "    # Optional: Retry resilience settings (enabled by default)",
+                        "    # auto_retry: true     # Automatically wait and retry on 429 and 503 responses (default: true)",
+                        "    # max_retries: 3       # Maximum number of retry attempts (default: 3)",
+                        "",
+                        "    # Optional: Proactive rate limiting (requires symfony/rate-limiter)",
+                        "    # rate_limiter: lastfm_api",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d82f17718f47f7d3c7fcc6b8b64205ee1740eb24"
+        }
+    }
+}
