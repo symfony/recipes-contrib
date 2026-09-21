@@ -637,7 +637,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sonata-project/entity-audit-bundle](https://packagist.org/packages/sonata-project/entity-audit-bundle) | [1.1](../../../tree/main/sonata-project/entity-audit-bundle/1.1) |
 | [sonata-project/exporter](https://packagist.org/packages/sonata-project/exporter) | [2.4](../../../tree/main/sonata-project/exporter/2.4) |
 | [sonata-project/form-extensions](https://packagist.org/packages/sonata-project/form-extensions) | [1.4](../../../tree/main/sonata-project/form-extensions/1.4) |
-| [sonata-project/media-bundle](https://packagist.org/packages/sonata-project/media-bundle) | [4.0](../../../tree/main/sonata-project/media-bundle/4.0) |
+| [sonata-project/media-bundle](https://packagist.org/packages/sonata-project/media-bundle) | [4.19](../../../tree/main/sonata-project/media-bundle/4.19) |
 | [sonata-project/notification-bundle](https://packagist.org/packages/sonata-project/notification-bundle) | [3.4](../../../tree/main/sonata-project/notification-bundle/3.4) |
 | [sonata-project/page-bundle](https://packagist.org/packages/sonata-project/page-bundle) | [4.9](../../../tree/main/sonata-project/page-bundle/4.9) |
 | [sonata-project/translation-bundle](https://packagist.org/packages/sonata-project/translation-bundle) | [2.3](../../../tree/main/sonata-project/translation-bundle/2.3) |
