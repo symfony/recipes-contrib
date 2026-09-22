@@ -284,6 +284,9 @@
             "1.0",
             "2.0"
         ],
+        "calliostro/spotify-bundle": [
+            "1.0"
+        ],
         "carthage-software/mago": [
             "1.0"
         ],

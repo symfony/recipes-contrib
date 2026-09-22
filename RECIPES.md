@@ -94,6 +94,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [cache/cache-bundle](https://packagist.org/packages/cache/cache-bundle) | [2.0](../../../tree/main/cache/cache-bundle/2.0) |
 | [calliostro/discogs-bundle](https://packagist.org/packages/calliostro/discogs-bundle) | [4.0](../../../tree/main/calliostro/discogs-bundle/4.0) |
 | [calliostro/last-fm-client-bundle](https://packagist.org/packages/calliostro/last-fm-client-bundle) | [2.0](../../../tree/main/calliostro/last-fm-client-bundle/2.0) |
+| [calliostro/spotify-bundle](https://packagist.org/packages/calliostro/spotify-bundle) | [1.0](../../../tree/main/calliostro/spotify-bundle/1.0) |
 | [carthage-software/mago](https://packagist.org/packages/carthage-software/mago) | [1.0](../../../tree/main/carthage-software/mago/1.0) |
 | [ckrack/optimus-bundle](https://packagist.org/packages/ckrack/optimus-bundle) | [0.1](../../../tree/main/ckrack/optimus-bundle/0.1) |
 | [cmsig/seal-symfony-bundle](https://packagist.org/packages/cmsig/seal-symfony-bundle) | [0.8](../../../tree/main/cmsig/seal-symfony-bundle/0.8) |
