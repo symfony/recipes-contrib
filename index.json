@@ -287,6 +287,9 @@
         "calliostro/spotify-bundle": [
             "1.0"
         ],
+        "calliostro/spotify-web-api-bundle": [
+            "1.0"
+        ],
         "carthage-software/mago": [
             "1.0"
         ],

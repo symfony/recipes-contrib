@@ -1,0 +1,48 @@
+{
+    "manifests": {
+        "calliostro/spotify-web-api-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Calliostro\\SpotifyWebApiBundle\\CalliostroSpotifyWebApiBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SPOTIFY_CLIENT_ID": "",
+                    "SPOTIFY_CLIENT_SECRET": "",
+                    "#SPOTIFY_REDIRECT_URI": ""
+                }
+            },
+            "files": {
+                "config/packages/calliostro_spotify_web_api.yaml": {
+                    "contents": [
+                        "calliostro_spotify_web_api:",
+                        "    # Your Client ID from the Spotify Developer Dashboard (https://developer.spotify.com/dashboard/applications)",
+                        "    client_id: '%env(SPOTIFY_CLIENT_ID)%'",
+                        "",
+                        "    # Your Client Secret",
+                        "    client_secret: '%env(SPOTIFY_CLIENT_SECRET)%'",
+                        "",
+                        "    # Optional: Address to redirect to after authentication success OR failure (required for Authorization Code flow)",
+                        "    # redirect_uri: '%env(SPOTIFY_REDIRECT_URI)%'",
+                        "",
+                        "    # Optional: Client options for jwilsson/spotify-web-api-php",
+                        "    # options:",
+                        "    #     auto_refresh: false",
+                        "    #     auto_retry: false",
+                        "    #     return_assoc: false",
+                        "",
+                        "    # Optional: Custom token provider service (defaults to built-in Client Credentials TokenProvider)",
+                        "    # token_provider: calliostro_spotify_web_api.token_provider",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e37028111d87a7ae99ed6785dc5c5e17e888433d"
+        }
+    }
+}
