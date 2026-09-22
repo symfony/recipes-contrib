@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Calliostro\\SpotifyWebApiBundle\\CalliostroSpotifyWebApiBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "SPOTIFY_CLIENT_ID": "",
+        "SPOTIFY_CLIENT_SECRET": "",
+        "#SPOTIFY_REDIRECT_URI": ""
+    }
+}
