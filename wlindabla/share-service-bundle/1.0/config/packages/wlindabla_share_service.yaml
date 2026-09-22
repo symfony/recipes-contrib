@@ -1,0 +1,16 @@
+wlindabla_share_service:
+    id_encryption:
+        encryption_key: '%env(APP_ID_ENCRYPTION_KEY)%'
+        identity_key_collection: ['id', 'code', 'slug']
+
+    token_hasher:
+        algorithm: null
+        options: []
+
+    identity_similarity_threshold: 88.0
+
+    trusted_ips: ['127.0.0.1', '::1']
+
+    async_method_dispatcher:
+        transport: async_app_transport
+        allowed_services: []
