@@ -1,0 +1,9 @@
+jev:
+    api_key: '%env(TYPESAFE_API_KEY)%'
+    base_url: '%env(TYPESAFE_BASE_URL)%'
+    model: '%env(TYPESAFE_DEFAULT_MODEL)%'
+
+when@test:
+    jev:
+        # Every client becomes Jev\Bundle\Testing\JevClientFake; queue decisions in your tests.
+        fake: true

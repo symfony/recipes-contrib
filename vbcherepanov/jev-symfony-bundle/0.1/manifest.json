@@ -1,0 +1,15 @@
+{
+    "bundles": {
+        "Jev\\Bundle\\JevBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "API key from the TypeSafe dashboard; keep real keys in .env.local or a secret vault",
+        "TYPESAFE_API_KEY": "",
+        "TYPESAFE_BASE_URL": "https://api.typesafe.ai",
+        "#2": "jev-latest, jev-preview or a pinned version such as jev-1.13.0",
+        "TYPESAFE_DEFAULT_MODEL": "jev-latest"
+    }
+}

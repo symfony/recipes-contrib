@@ -1,0 +1,4 @@
+  * Set <comment>TYPESAFE_API_KEY</> in <comment>.env.local</> (or with <comment>secrets:set</>)
+  * Check the key with <info>php bin/console jev:models</>
+  * Try a question: <info>php bin/console jev:ask "BUY NOW!!!" "Is this spam?"</>
+  * Read the docs at <comment>https://github.com/vbcherepanov/jev-symfony-bundle</>
