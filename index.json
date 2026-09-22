@@ -2525,6 +2525,9 @@
         "wlindabla/mailing-bundle": [
             "1.0"
         ],
+        "wlindabla/share-service-bundle": [
+            "1.0"
+        ],
         "wouterj/eloquent-bundle": [
             "1.0"
         ],
