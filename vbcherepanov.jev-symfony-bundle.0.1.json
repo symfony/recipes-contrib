@@ -1,0 +1,47 @@
+{
+    "manifests": {
+        "vbcherepanov/jev-symfony-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Jev\\Bundle\\JevBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "API key from the TypeSafe dashboard; keep real keys in .env.local or a secret vault",
+                    "TYPESAFE_API_KEY": "",
+                    "TYPESAFE_BASE_URL": "https://api.typesafe.ai",
+                    "#2": "jev-latest, jev-preview or a pinned version such as jev-1.13.0",
+                    "TYPESAFE_DEFAULT_MODEL": "jev-latest"
+                },
+                "post-install-output": [
+                    "  * Set <comment>TYPESAFE_API_KEY</> in <comment>.env.local</> (or with <comment>secrets:set</>)",
+                    "  * Check the key with <info>php bin/console jev:models</>",
+                    "  * Try a question: <info>php bin/console jev:ask \"BUY NOW!!!\" \"Is this spam?\"</>",
+                    "  * Read the docs at <comment>https://github.com/vbcherepanov/jev-symfony-bundle</>"
+                ]
+            },
+            "files": {
+                "config/packages/jev.yaml": {
+                    "contents": [
+                        "jev:",
+                        "    api_key: '%env(TYPESAFE_API_KEY)%'",
+                        "    base_url: '%env(TYPESAFE_BASE_URL)%'",
+                        "    model: '%env(TYPESAFE_DEFAULT_MODEL)%'",
+                        "",
+                        "when@test:",
+                        "    jev:",
+                        "        # Every client becomes Jev\\Bundle\\Testing\\JevClientFake; queue decisions in your tests.",
+                        "        fake: true",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a2e0db2f02f7a4ec5f24388cc4602c5bc5f39a98"
+        }
+    }
+}
