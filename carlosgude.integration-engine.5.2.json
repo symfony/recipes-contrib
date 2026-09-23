@@ -1,0 +1,72 @@
+{
+    "manifests": {
+        "carlosgude/integration-engine": {
+            "manifest": {
+                "bundles": {
+                    "IntegrationEngine\\Bundle\\IntegrationEngineBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src/": "%SRC_DIR%/"
+                },
+                "post-install-output": [
+                    "IntegrationEngine installed successfully!",
+                    "",
+                    "<fg=green>Next Steps:</fg=green>",
+                    "",
+                    "1. <fg=cyan>Create your first integration:</fg=cyan>",
+                    "   $ php bin/console make:integration MyApi GetUser",
+                    "",
+                    "2. <fg=cyan>Add configuration to config/packages/integration_engine.yaml</fg=cyan>",
+                    "   The file has been created with defaults. Customize as needed.",
+                    "",
+                    "3. <fg=cyan>Setup observability (optional):</fg=cyan>",
+                    "   $ php bin/console make:observability MyApi",
+                    "   This generates observability boilerplate for logging, metrics, and error handling.",
+                    "   See the observability documentation for dispatcher wiring.",
+                    "",
+                    "<fg=blue>Documentation:</fg=blue>",
+                    "",
+                    "\u2022 Getting Started: https://github.com/CarlosGude/integrationEngine",
+                    "\u2022 Complete Developer Guide: https://github.com/CarlosGude/integrationEngine/blob/main/docs/DEVELOPER-GUIDE.md",
+                    "\u2022 Webhooks: https://github.com/CarlosGude/integrationEngine/blob/main/docs/WEBHOOK.md",
+                    "\u2022 Architecture: https://github.com/CarlosGude/integrationEngine/blob/main/docs/ARCHITECTURE.md",
+                    "",
+                    "Happy integrating! \ud83d\ude80"
+                ]
+            },
+            "files": {
+                "config/packages/integration_engine.yaml": {
+                    "contents": [
+                        "integration_engine:",
+                        "    integrations: {}",
+                        "    # cache_service: cache.app  # optional, default shown",
+                        "    # client_service: null      # optional, for fully custom HTTP client",
+                        "    # connection_resolver: null # optional, for multi-tenant integrations",
+                        "",
+                        "services:",
+                        "    # Event dispatcher (required for observability)",
+                        "    IntegrationEngine\\Core\\Lifecycle\\LifecycleEventDispatcher:",
+                        "        class: IntegrationEngine\\Infrastructure\\Lifecycle\\SymfonyEventDispatcherAdapter",
+                        "        arguments:",
+                        "            - '@event_dispatcher'",
+                        "",
+                        "    # Optional: observability setup helper",
+                        "    # Generate with: php bin/console make:observability <integration_name>",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Integration/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b8541e85fed9ea23f48142aa2f414d9e516043fb"
+        }
+    }
+}
