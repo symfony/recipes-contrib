@@ -1,0 +1,9 @@
+  * <fg=blue>Two things no recipe can do, in this order:</>
+
+    <comment>bin/console jpmmartin:carrier:generate-key</comment>   the key that encrypts the carrier credentials.
+      Once, and keep the file: a new key makes every credential already saved unreadable.
+    <comment>bin/console doctrine:migrations:migrate</comment>      the plugin's eleven tables.
+      Now: until they exist, the checkout fails at the address step.
+
+  * <fg=blue>Then</> set the store up — carrier credentials, a shipping origin, package boxes, and a weight
+    and measures on every variant: https://github.com/jpmmartin/SyliusShippingCarriersPlugin#setting-up-the-store
