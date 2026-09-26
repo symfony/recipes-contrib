@@ -1,0 +1,6 @@
+abuse_ip_db:
+    api_key: '%env(ABUSEIPDB_API_KEY)%'
+    # default_max_age_in_days: 30
+    # http_client: null # Service id of a PSR-18 client (auto-discovered when null)
+    # logger: null      # Service id of a PSR-3 logger
+    # base_uri: 'https://api.abuseipdb.com/api/v2/'
