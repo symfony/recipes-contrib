@@ -1,0 +1,3 @@
+  * Configure your AbuseIPDB API key in <fg=green>.env.local</> or using Symfony secrets:
+    <fg=yellow>php bin/console secrets:set ABUSEIPDB_API_KEY</>
+  * Review bundle configuration in <fg=green>config/packages/abuse_ip_db.yaml</>
