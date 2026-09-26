@@ -1,0 +1,24 @@
+{
+    "manifests": {
+        "imper86/dynamodb-client-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Imper86\\DynamoDBClientBundle\\DynamoDBClientBundle": [
+                        "all"
+                    ]
+                },
+                "env": {
+                    "AWS_REGION": "eu-central-1",
+                    "AWS_ACCESS_KEY_ID": "",
+                    "AWS_SECRET_ACCESS_KEY": ""
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Set</> <comment>AWS_REGION</>, <comment>AWS_ACCESS_KEY_ID</> and <comment>AWS_SECRET_ACCESS_KEY</> in your <comment>.env</> file or real environment",
+                    "  * <fg=blue>Inject</> <comment>Imper86\\DynamoDBClient\\DynamoDBClientInterface</> into your services"
+                ]
+            },
+            "files": [],
+            "ref": "86bb299c3fe1139677b29f9241a718dee4697c69"
+        }
+    }
+}
