@@ -1,0 +1,9 @@
+  * Write your rules:
+    1. <fg=blue>bin/console kanopi:firewall:init --platform=other --output=config/firewall.yml</>
+    2. Uncomment <fg=green>config_files</> in <fg=green>config/packages/kanopi_firewall.yaml</>
+    3. <fg=blue>bin/console kanopi:firewall:doctor</> to check the wiring
+
+  * The firewall starts in <fg=green>observe</> mode: read the log, then enforce.
+
+  * Read the quickstart:
+    <comment>https://github.com/kanopi/firewall-symfony/blob/main/QUICKSTART.md</>

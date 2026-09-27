@@ -1,0 +1,27 @@
+{
+    "bundles": {
+        "Kanopi\\FirewallBundle\\KanopiFirewallBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "The firewall's block list. Outside public/, writable by the web user, and",
+        "#2": "the same file for every worker and for bin/console.",
+        "FIREWALL_STORAGE_FILE": "%kernel.project_dir%/var/firewall/blocked.data",
+        "#3": "Signs challenge pass tokens. Required once any rule challenges; set a real",
+        "#4": "one in production, like APP_SECRET.",
+        "FIREWALL_CHALLENGE_SECRET": "",
+        "#5": "Only for challenge.provider turnstile or recaptcha. Site keys are public;",
+        "#6": "the secret keys must never reach the browser.",
+        "#TURNSTILE_SITE_KEY": "",
+        "#TURNSTILE_SECRET_KEY": "",
+        "#RECAPTCHA_SITE_KEY": "",
+        "#RECAPTCHA_SECRET_KEY": ""
+    },
+    "dotenv": {
+        "dev": {
+            "FIREWALL_CHALLENGE_SECRET": "%generate(secret)%"
+        }
+    }
+}
