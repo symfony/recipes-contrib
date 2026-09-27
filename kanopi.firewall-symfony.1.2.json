@@ -1,0 +1,79 @@
+{
+    "manifests": {
+        "kanopi/firewall-symfony": {
+            "manifest": {
+                "bundles": {
+                    "Kanopi\\FirewallBundle\\KanopiFirewallBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "The firewall's block list. Outside public/, writable by the web user, and",
+                    "#2": "the same file for every worker and for bin/console.",
+                    "FIREWALL_STORAGE_FILE": "%kernel.project_dir%/var/firewall/blocked.data",
+                    "#3": "Signs challenge pass tokens. Required once any rule challenges; set a real",
+                    "#4": "one in production, like APP_SECRET.",
+                    "FIREWALL_CHALLENGE_SECRET": "",
+                    "#5": "Only for challenge.provider turnstile or recaptcha. Site keys are public;",
+                    "#6": "the secret keys must never reach the browser.",
+                    "#TURNSTILE_SITE_KEY": "",
+                    "#TURNSTILE_SECRET_KEY": "",
+                    "#RECAPTCHA_SITE_KEY": "",
+                    "#RECAPTCHA_SECRET_KEY": ""
+                },
+                "dotenv": {
+                    "dev": {
+                        "FIREWALL_CHALLENGE_SECRET": "%generate(secret)%"
+                    }
+                },
+                "post-install-output": [
+                    "  * Write your rules:",
+                    "    1. <fg=blue>bin/console kanopi:firewall:init --platform=other --output=config/firewall.yml</>",
+                    "    2. Uncomment <fg=green>config_files</> in <fg=green>config/packages/kanopi_firewall.yaml</>",
+                    "    3. <fg=blue>bin/console kanopi:firewall:doctor</> to check the wiring",
+                    "",
+                    "  * The firewall starts in <fg=green>observe</> mode: read the log, then enforce.",
+                    "",
+                    "  * Read the quickstart:",
+                    "    <comment>https://github.com/kanopi/firewall-symfony/blob/main/QUICKSTART.md</>"
+                ]
+            },
+            "files": {
+                "config/packages/kanopi_firewall.yaml": {
+                    "contents": [
+                        "kanopi_firewall:",
+                        "    # observe evaluates and logs every request and refuses nothing. Switch to",
+                        "    # enforce once the log shows only what you meant to block.",
+                        "    mode: observe",
+                        "",
+                        "    # The rules live in a YAML file of your own. Write a starter with",
+                        "    # `bin/console kanopi:firewall:init`, then uncomment:",
+                        "    # config_files:",
+                        "    #     - '%kernel.project_dir%/config/firewall.yml'",
+                        "",
+                        "    # Where file storage keeps the block list. FIREWALL_STORAGE_FILE is in .env;",
+                        "    # resolve: turns %kernel.project_dir% into an absolute path, so the web",
+                        "    # server and bin/console share one file.",
+                        "    storage_file: '%env(resolve:FIREWALL_STORAGE_FILE)%'",
+                        "",
+                        "    challenge:",
+                        "        # An empty value leaves whatever secret firewall.yml sets.",
+                        "        secret: '%env(FIREWALL_CHALLENGE_SECRET)%'",
+                        "",
+                        "        # For Turnstile or reCAPTCHA, uncomment the pair in .env, then:",
+                        "        # provider: turnstile",
+                        "        # provider_options:",
+                        "        #     site_key: '%env(TURNSTILE_SITE_KEY)%'",
+                        "        #     secret_key: '%env(TURNSTILE_SECRET_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "1e2b0a5d6065cb27b52ded39829c79ce71ba0d04"
+        }
+    }
+}
