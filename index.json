@@ -925,6 +925,9 @@
         "imper86/allegro-api-bundle": [
             "3.0"
         ],
+        "imper86/dynamodb-client-bundle": [
+            "1.2"
+        ],
         "imper86/jobby-cron-bundle": [
             "1.0"
         ],

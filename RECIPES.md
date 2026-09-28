@@ -293,6 +293,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [ijanki/prometheus-bundle](https://packagist.org/packages/ijanki/prometheus-bundle) | [0.9](../../../tree/main/ijanki/prometheus-bundle/0.9) |
 | [ikoene/marvel-api-bundle](https://packagist.org/packages/ikoene/marvel-api-bundle) | [0.5](../../../tree/main/ikoene/marvel-api-bundle/0.5) |
 | [imper86/allegro-api-bundle](https://packagist.org/packages/imper86/allegro-api-bundle) | [3.0](../../../tree/main/imper86/allegro-api-bundle/3.0) |
+| [imper86/dynamodb-client-bundle](https://packagist.org/packages/imper86/dynamodb-client-bundle) | [1.2](../../../tree/main/imper86/dynamodb-client-bundle/1.2) |
 | [imper86/jobby-cron-bundle](https://packagist.org/packages/imper86/jobby-cron-bundle) | [1.0](../../../tree/main/imper86/jobby-cron-bundle/1.0) |
 | [imper86/supervisor-bundle](https://packagist.org/packages/imper86/supervisor-bundle) | [2.2](../../../tree/main/imper86/supervisor-bundle/2.2) |
 | [indexnowkit/symfony-bundle](https://packagist.org/packages/indexnowkit/symfony-bundle) | [0.15](../../../tree/main/indexnowkit/symfony-bundle/0.15) |
