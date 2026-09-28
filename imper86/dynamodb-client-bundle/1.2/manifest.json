@@ -1,0 +1,10 @@
+{
+    "bundles": {
+        "Imper86\\DynamoDBClientBundle\\DynamoDBClientBundle": ["all"]
+    },
+    "env": {
+        "AWS_REGION": "eu-central-1",
+        "AWS_ACCESS_KEY_ID": "",
+        "AWS_SECRET_ACCESS_KEY": ""
+    }
+}
