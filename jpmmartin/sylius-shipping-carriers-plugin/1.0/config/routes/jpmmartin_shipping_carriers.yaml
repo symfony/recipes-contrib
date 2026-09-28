@@ -1,0 +1,3 @@
+jpmmartin_carrier_admin:
+    resource: "@JpmMartinSyliusShippingCarriersPlugin/config/routes/admin.yaml"
+    prefix: '/%sylius_admin.path_name%'

@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "JpmMartin\\SyliusShippingCarriersPlugin\\JpmMartinSyliusShippingCarriersPlugin": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "JPMMARTIN_CARRIER_ENCRYPTION_KEY_PATH": "%kernel.project_dir%/config/encryption/jpmmartin_carrier.key"
+    },
+    "gitignore": [
+        "/config/encryption/jpmmartin_carrier.key"
+    ]
+}
