@@ -1,0 +1,40 @@
+{
+    "manifests": {
+        "reddingwebdev/abuseipdb": {
+            "manifest": {
+                "bundles": {
+                    "AbuseIpDb\\Bridge\\Symfony\\AbuseIpDbBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Set your AbuseIPDB API key (get one at https://www.abuseipdb.com/account/api)",
+                    "ABUSEIPDB_API_KEY": ""
+                },
+                "post-install-output": [
+                    "  * Configure your AbuseIPDB API key in <fg=green>.env.local</> or using Symfony secrets:",
+                    "    <fg=yellow>php bin/console secrets:set ABUSEIPDB_API_KEY</>",
+                    "  * Review bundle configuration in <fg=green>config/packages/abuse_ip_db.yaml</>"
+                ]
+            },
+            "files": {
+                "config/packages/abuse_ip_db.yaml": {
+                    "contents": [
+                        "abuse_ip_db:",
+                        "    api_key: '%env(ABUSEIPDB_API_KEY)%'",
+                        "    # default_max_age_in_days: 30",
+                        "    # http_client: null # Service id of a PSR-18 client (auto-discovered when null)",
+                        "    # logger: null      # Service id of a PSR-3 logger",
+                        "    # base_uri: 'https://api.abuseipdb.com/api/v2/'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "179862fbb425fadc9bf3b73dd4b1a4dddbce4375"
+        }
+    }
+}

@@ -578,6 +578,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [ravenflux/sort-functions](https://packagist.org/packages/ravenflux/sort-functions) | [3.0](../../../tree/main/ravenflux/sort-functions/3.0) |
 | [rcsofttech/audit-trail-bundle](https://packagist.org/packages/rcsofttech/audit-trail-bundle) | [2.1](../../../tree/main/rcsofttech/audit-trail-bundle/2.1) |
 | [reconnect/s3bundle](https://packagist.org/packages/reconnect/s3bundle) | [3.0](../../../tree/main/reconnect/s3bundle/3.0) |
+| [reddingwebdev/abuseipdb](https://packagist.org/packages/reddingwebdev/abuseipdb) | [0.1](../../../tree/main/reddingwebdev/abuseipdb/0.1) |
 | [redirectionio/proxy-symfony](https://packagist.org/packages/redirectionio/proxy-symfony) | [0.2](../../../tree/main/redirectionio/proxy-symfony/0.2) |
 | [redjanym/fcm-bundle](https://packagist.org/packages/redjanym/fcm-bundle) | [1.1](../../../tree/main/redjanym/fcm-bundle/1.1) |
 | [redrat/api-helper-bundle](https://packagist.org/packages/redrat/api-helper-bundle) | [0.1](../../../tree/main/redrat/api-helper-bundle/0.1) |
