@@ -1019,6 +1019,9 @@
         "jpmmartin/sylius-nmi-plugin": [
             "1.0"
         ],
+        "jpmmartin/sylius-shipping-carriers-plugin": [
+            "1.0"
+        ],
         "jrmgx/interactive-bundle": [
             "1.0"
         ],

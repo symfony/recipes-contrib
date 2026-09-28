@@ -321,6 +321,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [jonathankablan/fast-entity-bundle](https://packagist.org/packages/jonathankablan/fast-entity-bundle) | [2.0](../../../tree/main/jonathankablan/fast-entity-bundle/2.0) |
 | [jonathanlight/meta-entity-builder-bundle](https://packagist.org/packages/jonathanlight/meta-entity-builder-bundle) | [1.0](../../../tree/main/jonathanlight/meta-entity-builder-bundle/1.0) |
 | [jpmmartin/sylius-nmi-plugin](https://packagist.org/packages/jpmmartin/sylius-nmi-plugin) | [1.0](../../../tree/main/jpmmartin/sylius-nmi-plugin/1.0) |
+| [jpmmartin/sylius-shipping-carriers-plugin](https://packagist.org/packages/jpmmartin/sylius-shipping-carriers-plugin) | [1.0](../../../tree/main/jpmmartin/sylius-shipping-carriers-plugin/1.0) |
 | [jrmgx/interactive-bundle](https://packagist.org/packages/jrmgx/interactive-bundle) | [1.0](../../../tree/main/jrmgx/interactive-bundle/1.0) |
 | [jsor/doctrine-postgis](https://packagist.org/packages/jsor/doctrine-postgis) | [1.7](../../../tree/main/jsor/doctrine-postgis/1.7) |
 | [jupi/prestashop-webservice-bundle](https://packagist.org/packages/jupi/prestashop-webservice-bundle) | [1.0](../../../tree/main/jupi/prestashop-webservice-bundle/1.0) |

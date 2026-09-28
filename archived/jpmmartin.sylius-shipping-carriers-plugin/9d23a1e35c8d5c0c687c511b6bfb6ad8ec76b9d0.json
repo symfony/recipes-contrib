@@ -1,0 +1,53 @@
+{
+    "manifests": {
+        "jpmmartin/sylius-shipping-carriers-plugin": {
+            "manifest": {
+                "bundles": {
+                    "JpmMartin\\SyliusShippingCarriersPlugin\\JpmMartinSyliusShippingCarriersPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "JPMMARTIN_CARRIER_ENCRYPTION_KEY_PATH": "%kernel.project_dir%/config/encryption/jpmmartin_carrier.key"
+                },
+                "gitignore": [
+                    "/config/encryption/jpmmartin_carrier.key"
+                ],
+                "post-install-output": [
+                    "  * <fg=blue>Two things no recipe can do, in this order:</>",
+                    "",
+                    "    <comment>bin/console jpmmartin:carrier:generate-key</comment>   the key that encrypts the carrier credentials.",
+                    "      Once, and keep the file: a new key makes every credential already saved unreadable.",
+                    "    <comment>bin/console doctrine:migrations:migrate</comment>      the plugin's eleven tables.",
+                    "      Now: until they exist, the checkout fails at the address step.",
+                    "",
+                    "  * <fg=blue>Then</> set the store up \u2014 carrier credentials, a shipping origin, package boxes, and a weight",
+                    "    and measures on every variant: https://github.com/jpmmartin/SyliusShippingCarriersPlugin#setting-up-the-store"
+                ]
+            },
+            "files": {
+                "config/packages/jpmmartin_shipping_carriers.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@JpmMartinSyliusShippingCarriersPlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/jpmmartin_shipping_carriers.yaml": {
+                    "contents": [
+                        "jpmmartin_carrier_admin:",
+                        "    resource: \"@JpmMartinSyliusShippingCarriersPlugin/config/routes/admin.yaml\"",
+                        "    prefix: '/%sylius_admin.path_name%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "9d23a1e35c8d5c0c687c511b6bfb6ad8ec76b9d0"
+        }
+    }
+}
