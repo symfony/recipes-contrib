@@ -324,6 +324,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [jsor/doctrine-postgis](https://packagist.org/packages/jsor/doctrine-postgis) | [1.7](../../../tree/main/jsor/doctrine-postgis/1.7) |
 | [jupi/prestashop-webservice-bundle](https://packagist.org/packages/jupi/prestashop-webservice-bundle) | [1.0](../../../tree/main/jupi/prestashop-webservice-bundle/1.0) |
 | [jurry/amqp-symfony-bundle](https://packagist.org/packages/jurry/amqp-symfony-bundle) | [1.0](../../../tree/main/jurry/amqp-symfony-bundle/1.0) |
+| [kanopi/firewall-symfony](https://packagist.org/packages/kanopi/firewall-symfony) | [1.2](../../../tree/main/kanopi/firewall-symfony/1.2) |
 | [karser/karser-recaptcha3-bundle](https://packagist.org/packages/karser/karser-recaptcha3-bundle) | [0.1](../../../tree/main/karser/karser-recaptcha3-bundle/0.1) |
 | [keron-digital/auth-redis-storage-bundle](https://packagist.org/packages/keron-digital/auth-redis-storage-bundle) | [1.0](../../../tree/main/keron-digital/auth-redis-storage-bundle/1.0) |
 | [kerox/twig-image-placeholder-extension](https://packagist.org/packages/kerox/twig-image-placeholder-extension) | [1.0](../../../tree/main/kerox/twig-image-placeholder-extension/1.0) |

@@ -1028,6 +1028,9 @@
         "jurry/amqp-symfony-bundle": [
             "1.0"
         ],
+        "kanopi/firewall-symfony": [
+            "1.2"
+        ],
         "karser/karser-recaptcha3-bundle": [
             "0.1"
         ],
