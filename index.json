@@ -290,6 +290,9 @@
         "calliostro/spotify-web-api-bundle": [
             "1.0"
         ],
+        "carlosgude/integration-engine": [
+            "5.2"
+        ],
         "carthage-software/mago": [
             "1.0"
         ],
