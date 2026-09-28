@@ -1,0 +1,24 @@
+kanopi_firewall:
+    # observe evaluates and logs every request and refuses nothing. Switch to
+    # enforce once the log shows only what you meant to block.
+    mode: observe
+
+    # The rules live in a YAML file of your own. Write a starter with
+    # `bin/console kanopi:firewall:init`, then uncomment:
+    # config_files:
+    #     - '%kernel.project_dir%/config/firewall.yml'
+
+    # Where file storage keeps the block list. FIREWALL_STORAGE_FILE is in .env;
+    # resolve: turns %kernel.project_dir% into an absolute path, so the web
+    # server and bin/console share one file.
+    storage_file: '%env(resolve:FIREWALL_STORAGE_FILE)%'
+
+    challenge:
+        # An empty value leaves whatever secret firewall.yml sets.
+        secret: '%env(FIREWALL_CHALLENGE_SECRET)%'
+
+        # For Turnstile or reCAPTCHA, uncomment the pair in .env, then:
+        # provider: turnstile
+        # provider_options:
+        #     site_key: '%env(TURNSTILE_SITE_KEY)%'
+        #     secret_key: '%env(TURNSTILE_SECRET_KEY)%'
