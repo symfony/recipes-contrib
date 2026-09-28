@@ -1,0 +1,16 @@
+{
+    "bundles": {
+        "AbuseIpDb\\Bridge\\Symfony\\AbuseIpDbBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "Set your AbuseIPDB API key (get one at https://www.abuseipdb.com/account/api)",
+        "ABUSEIPDB_API_KEY": ""
+    },
+    "post-install-output": [
+        "  * Configure your AbuseIPDB API key in <fg=green>.env.local</> or using Symfony secrets: <fg=green>php bin/console secrets:set ABUSEIPDB_API_KEY</>",
+        "  * Review bundle configuration in <fg=green>config/packages/abuse_ip_db.yaml</>"
+    ]
+}
