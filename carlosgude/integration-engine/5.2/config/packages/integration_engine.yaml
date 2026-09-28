@@ -1,0 +1,15 @@
+integration_engine:
+    integrations: {}
+    # cache_service: cache.app  # optional, default shown
+    # client_service: null      # optional, for fully custom HTTP client
+    # connection_resolver: null # optional, for multi-tenant integrations
+
+services:
+    # Event dispatcher (required for observability)
+    IntegrationEngine\Core\Lifecycle\LifecycleEventDispatcher:
+        class: IntegrationEngine\Infrastructure\Lifecycle\SymfonyEventDispatcherAdapter
+        arguments:
+            - '@event_dispatcher'
+
+    # Optional: observability setup helper
+    # Generate with: php bin/console make:observability <integration_name>

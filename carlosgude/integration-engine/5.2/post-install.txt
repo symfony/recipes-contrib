@@ -1,0 +1,23 @@
+IntegrationEngine installed successfully!
+
+<fg=green>Next Steps:</fg=green>
+
+1. <fg=cyan>Create your first integration:</fg=cyan>
+   $ php bin/console make:integration MyApi GetUser
+
+2. <fg=cyan>Add configuration to config/packages/integration_engine.yaml</fg=cyan>
+   The file has been created with defaults. Customize as needed.
+
+3. <fg=cyan>Setup observability (optional):</fg=cyan>
+   $ php bin/console make:observability MyApi
+   This generates observability boilerplate for logging, metrics, and error handling.
+   See the observability documentation for dispatcher wiring.
+
+<fg=blue>Documentation:</fg=blue>
+
+• Getting Started: https://github.com/CarlosGude/integrationEngine
+• Complete Developer Guide: https://github.com/CarlosGude/integrationEngine/blob/main/docs/DEVELOPER-GUIDE.md
+• Webhooks: https://github.com/CarlosGude/integrationEngine/blob/main/docs/WEBHOOK.md
+• Architecture: https://github.com/CarlosGude/integrationEngine/blob/main/docs/ARCHITECTURE.md
+
+Happy integrating! 🚀
