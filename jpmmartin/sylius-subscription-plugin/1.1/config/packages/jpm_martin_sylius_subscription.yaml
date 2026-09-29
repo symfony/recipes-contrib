@@ -1,0 +1,6 @@
+# config/packages/jpm_martin_sylius_subscription.yaml
+imports:
+    - { resource: "@JpmMartinSyliusSubscriptionPlugin/config/config.yaml" }
+
+jpm_martin_sylius_subscription:
+    payment_methods: [] # the codes of the payment methods that charge renewals; nobody can subscribe until you name one
