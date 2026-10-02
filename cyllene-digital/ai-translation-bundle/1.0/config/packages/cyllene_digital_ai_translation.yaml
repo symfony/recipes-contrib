@@ -1,6 +1,6 @@
 cyllene_digital_ai_translation:
     # Directory scanned for the host's translation files (the default shown).
-    # translations_path: '%kernel.project_dir%/translations'
+    translations_path: '%kernel.project_dir%/translations'
 
     # Default locale of the project: the coverage reference and the default generation source.
     # Falls back to framework.default_locale matched against the available locales.
