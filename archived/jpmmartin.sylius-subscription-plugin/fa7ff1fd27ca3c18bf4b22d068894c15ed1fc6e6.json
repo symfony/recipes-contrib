@@ -1,0 +1,65 @@
+{
+    "manifests": {
+        "jpmmartin/sylius-subscription-plugin": {
+            "manifest": {
+                "bundles": {
+                    "JpmMartin\\SyliusSubscriptionPlugin\\JpmMartinSyliusSubscriptionPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Four steps no recipe can take, in this order:</>",
+                    "",
+                    "    1. Let your order item carry the subscription plan: <comment>src/Entity/Order/OrderItem.php</comment>",
+                    "       implements <comment>JpmMartin\\SyliusSubscriptionPlugin\\Entity\\SubscriptionPlanAwareInterface</comment>",
+                    "       and uses <comment>JpmMartin\\SyliusSubscriptionPlugin\\Entity\\SubscriptionPlanAwareTrait</comment>.",
+                    "       Until it does, no product is offered by subscription, and the admin says so.",
+                    "",
+                    "    2. <comment>bin/console doctrine:migrations:migrate</comment>",
+                    "",
+                    "    3. Name the payment methods that charge renewals in",
+                    "       <comment>config/packages/jpm_martin_sylius_subscription.yaml</comment>: nobody can subscribe until you do.",
+                    "",
+                    "    4. Run <comment>bin/console jpm-martin:subscription:process-cycles</comment> on a schedule, as often as",
+                    "       renewals are to be charged.",
+                    "",
+                    "  * <fg=blue>Read the rest:</> https://github.com/jpmmartin/SyliusSubscriptionPlugin#installation"
+                ]
+            },
+            "files": {
+                "config/packages/jpm_martin_sylius_subscription.yaml": {
+                    "contents": [
+                        "# config/packages/jpm_martin_sylius_subscription.yaml",
+                        "imports:",
+                        "    - { resource: \"@JpmMartinSyliusSubscriptionPlugin/config/config.yaml\" }",
+                        "",
+                        "jpm_martin_sylius_subscription:",
+                        "    payment_methods: [] # the codes of the payment methods that charge renewals; nobody can subscribe until you name one",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/jpm_martin_sylius_subscription.yaml": {
+                    "contents": [
+                        "# config/routes/jpm_martin_sylius_subscription.yaml",
+                        "jpm_martin_sylius_subscription_admin:",
+                        "    resource: \"@JpmMartinSyliusSubscriptionPlugin/config/routes/admin.yaml\"",
+                        "    prefix: /%sylius_admin.path_name%",
+                        "",
+                        "jpm_martin_sylius_subscription_shop:",
+                        "    resource: \"@JpmMartinSyliusSubscriptionPlugin/config/routes/shop.yaml\"",
+                        "    prefix: /{_locale}",
+                        "    requirements:",
+                        "        _locale: ^[A-Za-z]{2,4}(_([A-Za-z]{4}|[0-9]{3}))?(_([A-Za-z]{2}|[0-9]{3}))?$",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "fa7ff1fd27ca3c18bf4b22d068894c15ed1fc6e6"
+        }
+    }
+}

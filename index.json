@@ -1025,6 +1025,9 @@
         "jpmmartin/sylius-shipping-carriers-plugin": [
             "1.0"
         ],
+        "jpmmartin/sylius-subscription-plugin": [
+            "1.1"
+        ],
         "jrmgx/interactive-bundle": [
             "1.0"
         ],
