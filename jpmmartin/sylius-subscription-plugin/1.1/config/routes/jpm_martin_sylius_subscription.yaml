@@ -1,0 +1,10 @@
+# config/routes/jpm_martin_sylius_subscription.yaml
+jpm_martin_sylius_subscription_admin:
+    resource: "@JpmMartinSyliusSubscriptionPlugin/config/routes/admin.yaml"
+    prefix: /%sylius_admin.path_name%
+
+jpm_martin_sylius_subscription_shop:
+    resource: "@JpmMartinSyliusSubscriptionPlugin/config/routes/shop.yaml"
+    prefix: /{_locale}
+    requirements:
+        _locale: ^[A-Za-z]{2,4}(_([A-Za-z]{4}|[0-9]{3}))?(_([A-Za-z]{2}|[0-9]{3}))?$
