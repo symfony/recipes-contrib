@@ -1,0 +1,2 @@
+cyllene_digital_sylius_tarteaucitron:
+    resource: "@CylleneDigitalSyliusTarteaucitronPlugin/config/routes.yaml"
