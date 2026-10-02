@@ -1,0 +1,16 @@
+{
+    "bundles": {
+        "Yatmo\\SymfonyBundle\\YatmoBundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "Yatmo keys: https://documentation.yatmo.com/license (backend key for the server, frontend key for the map)",
+        "YATMO_KEY": "",
+        "YATMO_FRONTEND_KEY": "",
+        "YATMO_COUNTRY": "BE"
+    }
+}
