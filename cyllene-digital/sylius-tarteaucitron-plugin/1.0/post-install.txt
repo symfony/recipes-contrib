@@ -1,0 +1,15 @@
+  <fg=blue;options=bold>Sylius Tarteaucitron Plugin</> is installed.
+
+  <options=bold>Two steps are left:</>
+
+    1. Publish the assets (the vendored tarteaucitron.js) and create the plugin tables:
+
+       <comment>bin/console assets:install</>
+       <comment>bin/console doctrine:migrations:migrate -n</>
+
+    2. The banner stays off until you enable it per channel in the back office:
+       <comment>Configuration > Tarteaucitron</>, then switch on the services the shop uses.
+
+  Bundle configuration (optional): <comment>%CONFIG_DIR%/packages/cyllene_digital_sylius_tarteaucitron.yaml</>
+
+  Documentation: https://github.com/CylleneDigital/SyliusTarteaucitronPlugin#installation

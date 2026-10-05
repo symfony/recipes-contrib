@@ -1,0 +1,31 @@
+# Nothing is required: per-channel settings (activation, texts, services) live in the back office,
+# Configuration > Tarteaucitron. Uncomment the root key and only the keys you change, so later
+# default changes still apply. Reference: https://github.com/CylleneDigital/SyliusTarteaucitronPlugin/blob/main/docs/integration/configuration.md
+#cyllene_digital_sylius_tarteaucitron:
+#    # CSP nonce on the plugin's <script> tags: "nelmio", a ScriptNonceProviderInterface service id,
+#    # or a fixed value in script_nonce. Set one of the two at most.
+#    script_nonce_provider: null
+#    script_nonce: null
+#
+#    # Sylius locale subtag => tarteaucitron.js language.
+#    locale_aliases:
+#        nb: no
+#
+#    # tarteaucitron.init() options owned by the theme, for every channel.
+#    integration:
+#        use_external_css: false
+#        mandatory_cta: false      # disabled allow / deny buttons on the mandatory cookies line (theme CSS only)
+#        use_external_js: false
+#        server_side: false
+#        adblocker: false
+#        hashtag: '#tarteaucitron'
+#        custom_closer_id: null      # id of your "Manage cookies" link, focused when the panel closes
+#
+#    # Vendor services offered in the back office without a PHP class, keyed by tarteaucitron job key.
+#    trackers:
+#        smartsupp:
+#            category: support    # analytic, ads, api, video, social, support, comment, other
+#            label: Smartsupp
+#            parameters:
+#                smartsuppKey:
+#                    placeholder: 'xxxxxxxx'
