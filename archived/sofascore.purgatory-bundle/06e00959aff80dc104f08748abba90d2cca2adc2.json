@@ -50,12 +50,17 @@
                         "        purger: in-memory",
                         "        # Disable collecting purge request data in the test environment.",
                         "        profiler_integration: false",
+                        "",
+                        "        # To speed up the test suite, disable purging on entity changes and enable it only for tests that need it.",
+                        "        # For details, see: https://sofascore.github.io/purgatory-bundle/speeding-up-tests.html",
+                        "        # purge_on_entity_change: false",
+                        "        # test: true",
                         ""
                     ],
                     "executable": false
                 }
             },
-            "ref": "9b6d093759f68e003082a81fd445d20b636fbcb9"
+            "ref": "06e00959aff80dc104f08748abba90d2cca2adc2"
         }
     }
 }
