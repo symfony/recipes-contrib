@@ -1,0 +1,6 @@
+yatmo:
+    key: '%env(YATMO_KEY)%'
+    frontend_key: '%env(YATMO_FRONTEND_KEY)%'
+    country: '%env(YATMO_COUNTRY)%'
+    # language: FR   # null follows the request locale
+    # cache_days: 30
