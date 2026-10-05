@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "BelConsulting\\KiwiCaptchaBundle\\KiwiCaptchaBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "KIWI_SECRET_KEY": "%generate(secret)%",
+        "KIWI_REDIS_DSN": "redis://127.0.0.1:6379/0",
+        "KIWI_PUBLIC_URL": "https://captcha.example.com"
+    }
+}
