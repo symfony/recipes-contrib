@@ -1,0 +1,9 @@
+sonata_user_admin_security:
+    resource: '@SonataUserBundle/Resources/config/routing/admin_security.php'
+    type: php
+    prefix: /admin
+
+sonata_user_admin_resetting:
+    resource: '@SonataUserBundle/Resources/config/routing/admin_resetting.php'
+    type: php
+    prefix: /admin
