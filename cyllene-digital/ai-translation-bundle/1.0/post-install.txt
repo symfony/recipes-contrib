@@ -1,5 +1,5 @@
   <bg=blue;fg=white>                                                </>
-  <bg=blue;fg=white> AI Translation Bundle is almost ready!    </>
+  <bg=blue;fg=white> AI Translation Bundle is almost ready!         </>
   <bg=blue;fg=white>                                                </>
 
   * Create the bundle tables — generate the migration in your application:
