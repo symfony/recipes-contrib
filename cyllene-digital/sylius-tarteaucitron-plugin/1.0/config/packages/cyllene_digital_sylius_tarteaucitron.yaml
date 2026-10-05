@@ -1,7 +1,7 @@
 # Nothing is required: per-channel settings (activation, texts, services) live in the back office,
-# Configuration > Tarteaucitron. Uncomment only the keys you change, so later default changes still
-# apply. Reference: https://github.com/CylleneDigital/SyliusTarteaucitronPlugin/blob/main/docs/integration/configuration.md
-cyllene_digital_sylius_tarteaucitron: ~
+# Configuration > Tarteaucitron. Uncomment the root key and only the keys you change, so later
+# default changes still apply. Reference: https://github.com/CylleneDigital/SyliusTarteaucitronPlugin/blob/main/docs/integration/configuration.md
+#cyllene_digital_sylius_tarteaucitron:
 #    # CSP nonce on the plugin's <script> tags: "nelmio", a ScriptNonceProviderInterface service id,
 #    # or a fixed value in script_nonce. Set one of the two at most.
 #    script_nonce_provider: ~
