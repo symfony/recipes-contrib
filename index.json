@@ -419,6 +419,9 @@
         "cyllene-digital/sylius-axepta-plugin": [
             "1.0"
         ],
+        "cyllene-digital/sylius-tarteaucitron-plugin": [
+            "1.0"
+        ],
         "dahromy/glide-symfony": [
             "1.0"
         ],
