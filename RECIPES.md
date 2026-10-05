@@ -793,6 +793,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [xcore/inline-editing-bundle](https://packagist.org/packages/xcore/inline-editing-bundle) | [1.2](../../../tree/main/xcore/inline-editing-bundle/1.2) |
 | [xiidea/easy-audit](https://packagist.org/packages/xiidea/easy-audit) | [2.0](../../../tree/main/xiidea/easy-audit/2.0) |
 | [yamilovs/sms-bundle](https://packagist.org/packages/yamilovs/sms-bundle) | [1.0](../../../tree/main/yamilovs/sms-bundle/1.0) |
+| [yatmo/symfony-bundle](https://packagist.org/packages/yatmo/symfony-bundle) | [1.0](../../../tree/main/yatmo/symfony-bundle/1.0) |
 | [yiggle/form-wizard-bundle](https://packagist.org/packages/yiggle/form-wizard-bundle) | [0.2](../../../tree/main/yiggle/form-wizard-bundle/0.2) |
 | [youritservices/mock-server-bundle](https://packagist.org/packages/youritservices/mock-server-bundle) | [1.0](../../../tree/main/youritservices/mock-server-bundle/1.0) |
 | [yousign/zdd-message-bundle](https://packagist.org/packages/yousign/zdd-message-bundle) | [2.0](../../../tree/main/yousign/zdd-message-bundle/2.0) |

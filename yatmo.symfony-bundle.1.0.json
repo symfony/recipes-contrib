@@ -1,0 +1,37 @@
+{
+    "manifests": {
+        "yatmo/symfony-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Yatmo\\SymfonyBundle\\YatmoBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Yatmo keys: https://documentation.yatmo.com/license (backend key for the server, frontend key for the map)",
+                    "YATMO_KEY": "",
+                    "YATMO_FRONTEND_KEY": "",
+                    "YATMO_COUNTRY": "BE"
+                }
+            },
+            "files": {
+                "config/packages/yatmo.yaml": {
+                    "contents": [
+                        "yatmo:",
+                        "    key: '%env(YATMO_KEY)%'",
+                        "    frontend_key: '%env(YATMO_FRONTEND_KEY)%'",
+                        "    country: '%env(YATMO_COUNTRY)%'",
+                        "    # language: FR   # null follows the request locale",
+                        "    # cache_days: 30",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5b73fd9d21f0d9021bb4b7aca84fa7d67b0fb835"
+        }
+    }
+}
