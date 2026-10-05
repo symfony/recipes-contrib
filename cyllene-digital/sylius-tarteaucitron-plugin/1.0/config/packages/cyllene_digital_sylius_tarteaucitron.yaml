@@ -4,8 +4,8 @@
 #cyllene_digital_sylius_tarteaucitron:
 #    # CSP nonce on the plugin's <script> tags: "nelmio", a ScriptNonceProviderInterface service id,
 #    # or a fixed value in script_nonce. Set one of the two at most.
-#    script_nonce_provider: ~
-#    script_nonce: ~
+#    script_nonce_provider: null
+#    script_nonce: null
 #
 #    # Sylius locale subtag => tarteaucitron.js language.
 #    locale_aliases:
@@ -19,7 +19,7 @@
 #        server_side: false
 #        adblocker: false
 #        hashtag: '#tarteaucitron'
-#        custom_closer_id: ~      # id of your "Manage cookies" link, focused when the panel closes
+#        custom_closer_id: null      # id of your "Manage cookies" link, focused when the panel closes
 #
 #    # Vendor services offered in the back office without a PHP class, keyed by tarteaucitron job key.
 #    trackers:
