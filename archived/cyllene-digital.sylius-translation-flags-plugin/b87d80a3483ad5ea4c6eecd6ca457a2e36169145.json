@@ -1,0 +1,15 @@
+{
+    "manifests": {
+        "cyllene-digital/sylius-translation-flags-plugin": {
+            "manifest": {
+                "bundles": {
+                    "CylleneDigital\\SyliusTranslationFlagsPlugin\\CylleneDigitalSyliusTranslationFlagsPlugin": [
+                        "all"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "b87d80a3483ad5ea4c6eecd6ca457a2e36169145"
+        }
+    }
+}

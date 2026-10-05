@@ -138,6 +138,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [cyberomulus/sitemap-generator-bundle](https://packagist.org/packages/cyberomulus/sitemap-generator-bundle) | [1.2](../../../tree/main/cyberomulus/sitemap-generator-bundle/1.2) |
 | [cyllene-digital/sylius-axepta-plugin](https://packagist.org/packages/cyllene-digital/sylius-axepta-plugin) | [1.0](../../../tree/main/cyllene-digital/sylius-axepta-plugin/1.0) |
 | [cyllene-digital/sylius-tarteaucitron-plugin](https://packagist.org/packages/cyllene-digital/sylius-tarteaucitron-plugin) | [1.0](../../../tree/main/cyllene-digital/sylius-tarteaucitron-plugin/1.0) |
+| [cyllene-digital/sylius-translation-flags-plugin](https://packagist.org/packages/cyllene-digital/sylius-translation-flags-plugin) | [1.0](../../../tree/main/cyllene-digital/sylius-translation-flags-plugin/1.0) |
 | [dahromy/glide-symfony](https://packagist.org/packages/dahromy/glide-symfony) | [1.0](../../../tree/main/dahromy/glide-symfony/1.0) |
 | [dahromy/mvola-bundle](https://packagist.org/packages/dahromy/mvola-bundle) | [1.0](../../../tree/main/dahromy/mvola-bundle/1.0) |
 | [dama/doctrine-test-bundle](https://packagist.org/packages/dama/doctrine-test-bundle) | [8.3](../../../tree/main/dama/doctrine-test-bundle/8.3) |
