@@ -1,0 +1,16 @@
+# The import registers the plugin Twig hooks. Some of them replace Sylius core hooks, so this file must
+# load after config/packages/_sylius.yaml, which its name guarantees: keep the import and the name.
+imports:
+    - { resource: "@CylleneDigitalSyliusAdvancedTaxonPlugin/config/config.yaml" }
+
+# Nothing else is required: every taxon setting lives in the back office, Catalog > Taxons, and the
+# mega menu in the channel form. Uncomment the root key to add icon libraries to the icon picker,
+# next to the Tabler icons shipped by Sylius. An icon whose prefix is not a local UX Icons set is
+# fetched from Iconify on first render: import the icons you list with bin/console ux:icons:import.
+# Reference: https://github.com/CylleneDigital/SyliusAdvancedTaxonPlugin/blob/main/docs/integration/configuration.md
+#cyllene_digital_sylius_advanced_taxon:
+#    icon_libraries:
+#        phosphor:
+#            label: 'Phosphor'
+#            icon_prefix: 'ph'
+#            icons: ['star', 'heart', 'tree-evergreen']

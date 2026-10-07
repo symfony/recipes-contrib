@@ -1,0 +1,31 @@
+  <fg=blue;options=bold>Sylius Advanced Taxon Plugin</> is installed.
+
+  <options=bold>Four steps are left:</>
+
+    1. Make your Taxon, Channel and TaxonImage entities implement <comment>AdvancedTaxonInterface</>,
+       <comment>MegaMenuChannelInterface</> and <comment>AdvancedTaxonImageInterface</>, with the matching
+       traits of <comment>CylleneDigital\SyliusAdvancedTaxonPlugin\Entity</>, and declare them as the
+       Sylius models in <comment>%CONFIG_DIR%/packages/_sylius.yaml</>.
+
+    2. Create the plugin tables and columns:
+
+       <comment>bin/console doctrine:migrations:migrate -n</>
+
+    3. Import the plugin entrypoints from yours, then rebuild your assets (<comment>yarn build</>):
+
+       <comment>assets/admin/entrypoint.js</>
+       import '../../vendor/cyllene-digital/sylius-advanced-taxon-plugin/assets/admin/entrypoint.js';
+
+       <comment>assets/shop/entrypoint.js</>
+       import '../../vendor/cyllene-digital/sylius-advanced-taxon-plugin/assets/shop/entrypoint.js';
+
+    4. Schedule the synchronization of the conditional taxons, which picks up the products that
+       start matching their conditions later:
+
+       <comment>bin/console cyllene:advanced-taxon:sync-conditional-taxons</>
+
+  Then configure a taxon in the back office: <comment>Catalog > Taxons</>.
+
+  Bundle configuration (optional): <comment>%CONFIG_DIR%/packages/cyllene_digital_sylius_advanced_taxon.yaml</>
+
+  Documentation: https://github.com/CylleneDigital/SyliusAdvancedTaxonPlugin/blob/main/docs/integration/installation.md
