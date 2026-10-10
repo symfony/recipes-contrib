@@ -1,0 +1,14 @@
+vuillaume_agency_turnstile:
+    key: '%env(TURNSTILE_KEY)%'
+    secret: '%env(TURNSTILE_SECRET)%'
+    enable: true
+    disable_submit_until_verified: false
+    # Symfony's form_login handles the login POST itself, outside any form type, so a form
+    # field cannot cover the login page. This verifies the token during authentication instead.
+    # Render the widget in your login template: {{ turnstile_widget({'data-action': 'login'}) }}
+    protect_password_login: true
+
+# Tests never call Cloudflare.
+when@test:
+    vuillaume_agency_turnstile:
+        enable: false
