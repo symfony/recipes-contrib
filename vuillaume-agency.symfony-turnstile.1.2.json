@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "vuillaume-agency/symfony-turnstile": {
+            "manifest": {
+                "bundles": {
+                    "VuillaumeAgency\\TurnstileBundle\\VuillaumeAgencyTurnstileBundle": [
+                        "all"
+                    ]
+                },
+                "env": {
+                    "TURNSTILE_KEY": "your-site-key",
+                    "TURNSTILE_SECRET": "your-secret-key"
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/vuillaume_agency_turnstile.yaml": {
+                    "contents": [
+                        "vuillaume_agency_turnstile:",
+                        "    key: '%env(TURNSTILE_KEY)%'",
+                        "    secret: '%env(TURNSTILE_SECRET)%'",
+                        "    enable: true",
+                        "    disable_submit_until_verified: false",
+                        "    # Symfony's form_login handles the login POST itself, outside any form type, so a form",
+                        "    # field cannot cover the login page. This verifies the token during authentication instead.",
+                        "    # Render the widget in your login template: {{ turnstile_widget({'data-action': 'login'}) }}",
+                        "    protect_password_login: true",
+                        "",
+                        "# Tests never call Cloudflare.",
+                        "when@test:",
+                        "    vuillaume_agency_turnstile:",
+                        "        enable: false",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6cd21092d1825822c16bc0f8f8a1a6716c0c23a8"
+        }
+    }
+}
