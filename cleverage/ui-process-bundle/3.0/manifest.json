@@ -1,0 +1,20 @@
+{
+    "bundles": {
+        "CleverAge\\UiProcessBundle\\CleverAgeUiProcessBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "post-install-output": [
+        "  * Configure your database in <comment>.env.local</> (<comment>DATABASE_URL</>, MySQL / MariaDB or PostgreSQL)",
+        "  * Create the tables with <comment>php bin/console doctrine:migrations:migrate</>",
+        "  * Create a user with <comment>php bin/console cleverage:ui-process:user-create</>",
+        "  * Install the assets with <comment>php bin/console assets:install</>",
+        "  * Keep the workers running:",
+        "    <comment>php bin/console messenger:consume execute_process</>",
+        "    <comment>php bin/console messenger:consume scheduler_cron</>",
+        "  * Browse <comment>/process</>",
+        "",
+        "  * Read the documentation at <comment>https://github.com/cleverage/ui-process-bundle/blob/main/docs/index.md</>"
+    ]
+}
