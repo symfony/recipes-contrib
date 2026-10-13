@@ -1,0 +1,2 @@
+cyllene_digital_sylius_ai_translation:
+    resource: '@CylleneDigitalSyliusAiTranslationPlugin/config/routes.yaml'
