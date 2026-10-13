@@ -1,0 +1,9 @@
+odiseo_sylius_brevo_admin:
+    resource: "@OdiseoSyliusBrevoPlugin/config/routes/admin.yaml"
+    prefix: '/%sylius_admin.path_name%'
+
+odiseo_sylius_brevo_shop:
+    resource: "@OdiseoSyliusBrevoPlugin/config/routes/shop.yaml"
+    prefix: '/{_locale}'
+    requirements:
+        _locale: ^[A-Za-z]{2,4}(_([A-Za-z]{4}|[0-9]{3}))?(_([A-Za-z]{2}|[0-9]{3}))?$
