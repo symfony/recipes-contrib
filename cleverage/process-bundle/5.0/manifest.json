@@ -1,0 +1,15 @@
+{
+    "bundles": {
+        "CleverAge\\ProcessBundle\\CleverAgeProcessBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "post-install-output": [
+        "  * Define your processes in <comment>config/packages/process/</>, one file per process",
+        "  * List them with <comment>php bin/console cleverage:process:list</>",
+        "  * Run one with <comment>php bin/console cleverage:process:execute <process_code></>",
+        "",
+        "  * Read the documentation at <comment>https://github.com/cleverage/process-bundle/blob/main/docs/index.md</>"
+    ]
+}

@@ -1,0 +1,15 @@
+# Each file of config/packages/process/ defines one or more processes
+imports:
+    - { resource: process/ }
+
+clever_age_process:
+    # Behavior of a task that encounters an error without its own "error_strategy": stop or skip
+    default_error_strategy: stop
+
+    # Reusable transformers, referenced by their name in the processes
+    # See https://github.com/cleverage/process-bundle/blob/main/docs/reference/03-generic_transformers_definition.md
+    # generic_transformers:
+    #     uppercase:
+    #         transformers:
+    #             callback:
+    #                 callback: strtoupper
