@@ -1,0 +1,5 @@
+  * Drive the Messenger workers of your application from a terminal UI:
+
+      <fg=yellow>php bin/console messenger:central</>
+
+  * Docs: <comment>https://github.com/welcoMattic/messenger-central</>
