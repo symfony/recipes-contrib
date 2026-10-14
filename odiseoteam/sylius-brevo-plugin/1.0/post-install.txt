@@ -1,0 +1,16 @@
+  <bg=blue;fg=white>              </>
+  <bg=blue;fg=white> What's next? </>
+  <bg=blue;fg=white>              </>
+
+  * <fg=blue>Run</> the migrations:
+    <comment>bin/console doctrine:migrations:migrate</>
+
+  * <fg=blue>Set</> <comment>DEFAULT_URI</> (<comment>framework.router.default_uri</>) to your shop URL,
+    used for the links sent to Brevo from workers and commands.
+
+  * <fg=blue>Add</> a configuration for each channel in <comment>Brevo > Configuration</> with its
+    Brevo API key, then check it:
+    <comment>bin/console odiseo:brevo:debug</>
+
+  * <fg=blue>Read</> the documentation at
+    <comment>https://github.com/odiseoteam/sylius-brevo-plugin#readme</>

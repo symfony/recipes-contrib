@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Odiseo\\SyliusBrevoPlugin\\OdiseoSyliusBrevoPlugin": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "Brevo calls run after each response by default; use an async transport and run \"messenger:consume odiseo_brevo\" in production",
+        "#2": "ODISEO_BREVO_MESSENGER_TRANSPORT_DSN=doctrine://default?queue_name=odiseo_brevo",
+        "ODISEO_BREVO_MESSENGER_TRANSPORT_DSN": "sync://"
+    }
+}
