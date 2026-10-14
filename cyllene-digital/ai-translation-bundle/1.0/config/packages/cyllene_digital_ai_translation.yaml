@@ -1,0 +1,33 @@
+cyllene_digital_ai_translation:
+    # Directory scanned for the host's translation files (the default shown).
+    translations_path: '%kernel.project_dir%/translations'
+
+    # Default locale of the project: the coverage reference and the default generation source.
+    # Falls back to framework.default_locale matched against the available locales.
+    # default_locale: fr_FR
+
+    # Extra translation roots (label => directory), browsed as "@label/…" — e.g. themes.
+    # additional_paths:
+    #     BootstrapTheme: '%kernel.project_dir%/themes/BootstrapTheme/translations'
+
+    # Seconds a generation run may hold its anti-double-billing lock without refreshing it
+    # (the default shown). Where that lock is held is your own "framework.lock" setting:
+    # the default store covers any number of workers on ONE machine; point it at a shared
+    # store (Redis…) if workers run on several machines.
+    # generation_lock_ttl: 1800
+
+    # The overrides work without any provider — uncomment "providers:" and one entry to
+    # enable AI generation.
+    # providers:
+    #     claude:
+    #         type: anthropic
+    #         api_key: '%env(ANTHROPIC_API_KEY)%'
+    #     mistral:
+    #         type: default                      # any /chat/completions API (incl. a local Ollama)
+    #         api_key: '%env(MISTRAL_API_KEY)%'
+    #         model: mistral-large-latest
+    #         base_uri: 'https://api.mistral.ai/v1'
+    #         timeout: 600                       # idle seconds — raise it for a slow local server
+    #     deepl:
+    #         type: deepl
+    #         api_key: '%env(DEEPL_API_KEY)%'    # ":fx" suffix → free endpoint, auto-detected

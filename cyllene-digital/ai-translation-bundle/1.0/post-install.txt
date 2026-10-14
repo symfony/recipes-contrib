@@ -1,0 +1,14 @@
+  <bg=blue;fg=white>                                                </>
+  <bg=blue;fg=white> AI Translation Bundle is almost ready!         </>
+  <bg=blue;fg=white>                                                </>
+
+  * Create the bundle tables — generate the migration in your application:
+    <comment>bin/console doctrine:migrations:diff && bin/console doctrine:migrations:migrate</comment>
+
+  * Overrides work out of the box. To enable AI generation, declare a provider in
+    <comment>config/packages/cyllene_digital_ai_translation.yaml</comment> (examples included).
+
+  * Take the tour — the interactive console guides every task:
+    <comment>bin/console cyllene:ai-translation</comment>
+
+  * Docs: <href=https://github.com/CylleneDigital/AiTranslationBundle/blob/main/docs/index.md>docs/index.md</>
