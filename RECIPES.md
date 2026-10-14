@@ -506,6 +506,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [oat-sa/bundle-health-check](https://packagist.org/packages/oat-sa/bundle-health-check) | [1.0](../../../tree/main/oat-sa/bundle-health-check/1.0) |
 | [oat-sa/bundle-lti1p3](https://packagist.org/packages/oat-sa/bundle-lti1p3) | [3.0](../../../tree/main/oat-sa/bundle-lti1p3/3.0) |
 | [octopouce-mu/admin-bundle](https://packagist.org/packages/octopouce-mu/admin-bundle) | [1.0](../../../tree/main/octopouce-mu/admin-bundle/1.0) |
+| [odiseoteam/sylius-brevo-plugin](https://packagist.org/packages/odiseoteam/sylius-brevo-plugin) | [1.0](../../../tree/main/odiseoteam/sylius-brevo-plugin/1.0) |
 | [odiseoteam/sylius-rbac-plugin](https://packagist.org/packages/odiseoteam/sylius-rbac-plugin) | [3.0](../../../tree/main/odiseoteam/sylius-rbac-plugin/3.0) |
 | [odiseoteam/sylius-vendor-plugin](https://packagist.org/packages/odiseoteam/sylius-vendor-plugin) | [1.6](../../../tree/main/odiseoteam/sylius-vendor-plugin/1.6) |
 | [odolbeau/phone-number-bundle](https://packagist.org/packages/odolbeau/phone-number-bundle) | [3.0](../../../tree/main/odolbeau/phone-number-bundle/3.0) |

@@ -1609,6 +1609,9 @@
         "octopouce-mu/admin-bundle": [
             "1.0"
         ],
+        "odiseoteam/sylius-brevo-plugin": [
+            "1.0"
+        ],
         "odiseoteam/sylius-rbac-plugin": [
             "3.0"
         ],
