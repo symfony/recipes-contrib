@@ -1,0 +1,65 @@
+{
+    "manifests": {
+        "odiseoteam/sylius-brevo-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Odiseo\\SyliusBrevoPlugin\\OdiseoSyliusBrevoPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Brevo calls run after each response by default; use an async transport and run \"messenger:consume odiseo_brevo\" in production",
+                    "#2": "ODISEO_BREVO_MESSENGER_TRANSPORT_DSN=doctrine://default?queue_name=odiseo_brevo",
+                    "ODISEO_BREVO_MESSENGER_TRANSPORT_DSN": "sync://"
+                },
+                "post-install-output": [
+                    "  <bg=blue;fg=white>              </>",
+                    "  <bg=blue;fg=white> What's next? </>",
+                    "  <bg=blue;fg=white>              </>",
+                    "",
+                    "  * <fg=blue>Run</> the migrations:",
+                    "    <comment>bin/console doctrine:migrations:migrate</>",
+                    "",
+                    "  * <fg=blue>Set</> <comment>DEFAULT_URI</> (<comment>framework.router.default_uri</>) to your shop URL,",
+                    "    used for the links sent to Brevo from workers and commands.",
+                    "",
+                    "  * <fg=blue>Add</> a configuration for each channel in <comment>Brevo > Configuration</> with its",
+                    "    Brevo API key, then check it:",
+                    "    <comment>bin/console odiseo:brevo:debug</>",
+                    "",
+                    "  * <fg=blue>Read</> the documentation at",
+                    "    <comment>https://github.com/odiseoteam/sylius-brevo-plugin#readme</>"
+                ]
+            },
+            "files": {
+                "config/packages/odiseo_sylius_brevo.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@OdiseoSyliusBrevoPlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/odiseo_sylius_brevo.yaml": {
+                    "contents": [
+                        "odiseo_sylius_brevo_admin:",
+                        "    resource: \"@OdiseoSyliusBrevoPlugin/config/routes/admin.yaml\"",
+                        "    prefix: '/%sylius_admin.path_name%'",
+                        "",
+                        "odiseo_sylius_brevo_shop:",
+                        "    resource: \"@OdiseoSyliusBrevoPlugin/config/routes/shop.yaml\"",
+                        "    prefix: '/{_locale}'",
+                        "    requirements:",
+                        "        _locale: ^[A-Za-z]{2,4}(_([A-Za-z]{4}|[0-9]{3}))?(_([A-Za-z]{2}|[0-9]{3}))?$",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "76560e243f34020932e0c76fcfd06be165ee92aa"
+        }
+    }
+}
