@@ -416,6 +416,9 @@
         "cyberomulus/sitemap-generator-bundle": [
             "1.2"
         ],
+        "cyllene-digital/sylius-advanced-taxon-plugin": [
+            "1.0"
+        ],
         "cyllene-digital/sylius-axepta-plugin": [
             "1.0"
         ],

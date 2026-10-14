@@ -1,0 +1,82 @@
+{
+    "manifests": {
+        "cyllene-digital/sylius-advanced-taxon-plugin": {
+            "manifest": {
+                "bundles": {
+                    "CylleneDigital\\SyliusAdvancedTaxonPlugin\\CylleneDigitalSyliusAdvancedTaxonPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  <fg=blue;options=bold>Sylius Advanced Taxon Plugin</> is installed.",
+                    "",
+                    "  <options=bold>Four steps are left:</>",
+                    "",
+                    "    1. Make your Taxon, Channel and TaxonImage entities implement <comment>AdvancedTaxonInterface</>,",
+                    "       <comment>MegaMenuChannelInterface</> and <comment>AdvancedTaxonImageInterface</>, with the matching",
+                    "       traits of <comment>CylleneDigital\\SyliusAdvancedTaxonPlugin\\Entity</>, and declare them as the",
+                    "       Sylius models in <comment>%CONFIG_DIR%/packages/_sylius.yaml</>.",
+                    "",
+                    "    2. Create the plugin tables and columns:",
+                    "",
+                    "       <comment>bin/console doctrine:migrations:migrate -n</>",
+                    "",
+                    "    3. Import the plugin entrypoints from yours, then rebuild your assets (<comment>yarn build</>):",
+                    "",
+                    "       <comment>assets/admin/entrypoint.js</>",
+                    "       import '../../vendor/cyllene-digital/sylius-advanced-taxon-plugin/assets/admin/entrypoint.js';",
+                    "",
+                    "       <comment>assets/shop/entrypoint.js</>",
+                    "       import '../../vendor/cyllene-digital/sylius-advanced-taxon-plugin/assets/shop/entrypoint.js';",
+                    "",
+                    "    4. Schedule the synchronization of the conditional taxons, which picks up the products that",
+                    "       start matching their conditions later:",
+                    "",
+                    "       <comment>bin/console cyllene:advanced-taxon:sync-conditional-taxons</>",
+                    "",
+                    "  Then configure a taxon in the back office: <comment>Catalog > Taxons</>.",
+                    "",
+                    "  Bundle configuration (optional): <comment>%CONFIG_DIR%/packages/cyllene_digital_sylius_advanced_taxon.yaml</>",
+                    "",
+                    "  Documentation: https://github.com/CylleneDigital/SyliusAdvancedTaxonPlugin/blob/main/docs/integration/installation.md"
+                ]
+            },
+            "files": {
+                "config/packages/cyllene_digital_sylius_advanced_taxon.yaml": {
+                    "contents": [
+                        "# The import registers the plugin Twig hooks. Some of them replace Sylius core hooks, so this file must",
+                        "# load after config/packages/_sylius.yaml, which its name guarantees: keep the import and the name.",
+                        "imports:",
+                        "    - { resource: \"@CylleneDigitalSyliusAdvancedTaxonPlugin/config/config.yaml\" }",
+                        "",
+                        "# Nothing else is required: every taxon setting lives in the back office, Catalog > Taxons, and the",
+                        "# mega menu in the channel form. Uncomment the root key to add icon libraries to the icon picker,",
+                        "# next to the Tabler icons shipped by Sylius. An icon whose prefix is not a local UX Icons set is",
+                        "# fetched from Iconify on first render: import the icons you list with bin/console ux:icons:import.",
+                        "# Reference: https://github.com/CylleneDigital/SyliusAdvancedTaxonPlugin/blob/main/docs/integration/configuration.md",
+                        "#cyllene_digital_sylius_advanced_taxon:",
+                        "#    icon_libraries:",
+                        "#        phosphor:",
+                        "#            label: 'Phosphor'",
+                        "#            icon_prefix: 'ph'",
+                        "#            icons: ['star', 'heart', 'tree-evergreen']",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/cyllene_digital_sylius_advanced_taxon.yaml": {
+                    "contents": [
+                        "cyllene_digital_sylius_advanced_taxon:",
+                        "    resource: \"@CylleneDigitalSyliusAdvancedTaxonPlugin/config/routes.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e602d4d6538882f279aa82854f48acf86f87ea17"
+        }
+    }
+}
