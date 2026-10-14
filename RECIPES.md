@@ -136,6 +136,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [crayner/authenticate-bundle](https://packagist.org/packages/crayner/authenticate-bundle) | [1.0](../../../tree/main/crayner/authenticate-bundle/1.0) |
 | [csa/guzzle-bundle](https://packagist.org/packages/csa/guzzle-bundle) | [3.0](../../../tree/main/csa/guzzle-bundle/3.0) |
 | [cyberomulus/sitemap-generator-bundle](https://packagist.org/packages/cyberomulus/sitemap-generator-bundle) | [1.2](../../../tree/main/cyberomulus/sitemap-generator-bundle/1.2) |
+| [cyllene-digital/ai-translation-bundle](https://packagist.org/packages/cyllene-digital/ai-translation-bundle) | [1.0](../../../tree/main/cyllene-digital/ai-translation-bundle/1.0) |
 | [cyllene-digital/sylius-advanced-taxon-plugin](https://packagist.org/packages/cyllene-digital/sylius-advanced-taxon-plugin) | [1.0](../../../tree/main/cyllene-digital/sylius-advanced-taxon-plugin/1.0) |
 | [cyllene-digital/sylius-axepta-plugin](https://packagist.org/packages/cyllene-digital/sylius-axepta-plugin) | [1.0](../../../tree/main/cyllene-digital/sylius-axepta-plugin/1.0) |
 | [cyllene-digital/sylius-tarteaucitron-plugin](https://packagist.org/packages/cyllene-digital/sylius-tarteaucitron-plugin) | [1.0](../../../tree/main/cyllene-digital/sylius-tarteaucitron-plugin/1.0) |

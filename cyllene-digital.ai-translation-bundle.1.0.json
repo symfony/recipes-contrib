@@ -1,0 +1,74 @@
+{
+    "manifests": {
+        "cyllene-digital/ai-translation-bundle": {
+            "manifest": {
+                "bundles": {
+                    "CylleneDigital\\AiTranslationBundle\\CylleneDigitalAiTranslationBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  <bg=blue;fg=white>                                                </>",
+                    "  <bg=blue;fg=white> AI Translation Bundle is almost ready!         </>",
+                    "  <bg=blue;fg=white>                                                </>",
+                    "",
+                    "  * Create the bundle tables \u2014 generate the migration in your application:",
+                    "    <comment>bin/console doctrine:migrations:diff && bin/console doctrine:migrations:migrate</comment>",
+                    "",
+                    "  * Overrides work out of the box. To enable AI generation, declare a provider in",
+                    "    <comment>config/packages/cyllene_digital_ai_translation.yaml</comment> (examples included).",
+                    "",
+                    "  * Take the tour \u2014 the interactive console guides every task:",
+                    "    <comment>bin/console cyllene:ai-translation</comment>",
+                    "",
+                    "  * Docs: <href=https://github.com/CylleneDigital/AiTranslationBundle/blob/main/docs/index.md>docs/index.md</>"
+                ]
+            },
+            "files": {
+                "config/packages/cyllene_digital_ai_translation.yaml": {
+                    "contents": [
+                        "cyllene_digital_ai_translation:",
+                        "    # Directory scanned for the host's translation files (the default shown).",
+                        "    translations_path: '%kernel.project_dir%/translations'",
+                        "",
+                        "    # Default locale of the project: the coverage reference and the default generation source.",
+                        "    # Falls back to framework.default_locale matched against the available locales.",
+                        "    # default_locale: fr_FR",
+                        "",
+                        "    # Extra translation roots (label => directory), browsed as \"@label/\u2026\" \u2014 e.g. themes.",
+                        "    # additional_paths:",
+                        "    #     BootstrapTheme: '%kernel.project_dir%/themes/BootstrapTheme/translations'",
+                        "",
+                        "    # Seconds a generation run may hold its anti-double-billing lock without refreshing it",
+                        "    # (the default shown). Where that lock is held is your own \"framework.lock\" setting:",
+                        "    # the default store covers any number of workers on ONE machine; point it at a shared",
+                        "    # store (Redis\u2026) if workers run on several machines.",
+                        "    # generation_lock_ttl: 1800",
+                        "",
+                        "    # The overrides work without any provider \u2014 uncomment \"providers:\" and one entry to",
+                        "    # enable AI generation.",
+                        "    # providers:",
+                        "    #     claude:",
+                        "    #         type: anthropic",
+                        "    #         api_key: '%env(ANTHROPIC_API_KEY)%'",
+                        "    #     mistral:",
+                        "    #         type: default                      # any /chat/completions API (incl. a local Ollama)",
+                        "    #         api_key: '%env(MISTRAL_API_KEY)%'",
+                        "    #         model: mistral-large-latest",
+                        "    #         base_uri: 'https://api.mistral.ai/v1'",
+                        "    #         timeout: 600                       # idle seconds \u2014 raise it for a slow local server",
+                        "    #     deepl:",
+                        "    #         type: deepl",
+                        "    #         api_key: '%env(DEEPL_API_KEY)%'    # \":fx\" suffix \u2192 free endpoint, auto-detected",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "c360b1e759e1e0115115b18ba64923f45c0764f6"
+        }
+    }
+}
