@@ -1,0 +1,3 @@
+# Controllers of the bundle, the EasyAdmin routes being imported by config/routes/easyadmin.yaml
+clever_age_ui_process:
+    resource: '@CleverAgeUiProcessBundle/config/routes/controllers.yaml'

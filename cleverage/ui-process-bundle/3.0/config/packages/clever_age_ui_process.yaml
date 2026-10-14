@@ -1,0 +1,17 @@
+# See https://github.com/cleverage/ui-process-bundle/blob/main/docs/reference/01-bundle_configuration.md
+clever_age_ui_process:
+    security:
+        # Roles that can be granted to a user from the user form
+        roles: ['ROLE_ADMIN']
+    logs:
+        # Store the logs of the process executions in database (log_record table)
+        store_in_database: true
+        # Minimum level of the logs stored in database and in file (Debug in the dev environment, Info otherwise)
+        # database_level: Info
+        # file_level: Info
+        # Minimum level of the logs counted in the report of a process execution
+        report_increment_level: Warning
+    # Notify the end of the process executions (requires symfony/notifier)
+    # notification:
+    #     enabled: true
+    #     statuses: [failed, finish_with_report]
