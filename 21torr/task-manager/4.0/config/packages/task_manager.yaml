@@ -1,0 +1,15 @@
+task_manager:
+    queues:
+        # queues sorted by priority. Highest priority at the top
+        - app_very_urgent
+        - app_urgent
+        - app
+
+framework:
+    messenger:
+        buses:
+            messenger.bus.default:
+                # The middleware config of a bus isn't merged, so if you configure
+                # additional middleware for this bus, add them here as well.
+                middleware:
+                    - Torr\TaskManager\Identification\TaskIdentificationMiddleware
