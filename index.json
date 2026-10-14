@@ -2106,6 +2106,9 @@
         "sonata-project/twig-extensions": [
             "1.2"
         ],
+        "sonata-project/user-bundle": [
+            "5.17"
+        ],
         "soviann/deploy-tasks-bundle": [
             "0.1"
         ],
