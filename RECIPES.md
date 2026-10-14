@@ -6,7 +6,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | --- | --- |
 | [21torr/hosting](https://packagist.org/packages/21torr/hosting) | [3.2](../../../tree/main/21torr/hosting/3.2) |
 | [21torr/storyblok](https://packagist.org/packages/21torr/storyblok) | [3.15](../../../tree/main/21torr/storyblok/3.15) |
-| [21torr/task-manager](https://packagist.org/packages/21torr/task-manager) | [2.0](../../../tree/main/21torr/task-manager/2.0) |
+| [21torr/task-manager](https://packagist.org/packages/21torr/task-manager) | [4.0](../../../tree/main/21torr/task-manager/4.0) |
 | [abel/keycloak-bearer-only-adapter-bundle](https://packagist.org/packages/abel/keycloak-bearer-only-adapter-bundle) | [1.0](../../../tree/main/abel/keycloak-bearer-only-adapter-bundle/1.0) |
 | [ablaise/meteion-bundle](https://packagist.org/packages/ablaise/meteion-bundle) | [1.0](../../../tree/main/ablaise/meteion-bundle/1.0) |
 | [acencyril/sentinelle-bundle](https://packagist.org/packages/acencyril/sentinelle-bundle) | [0.3](../../../tree/main/acencyril/sentinelle-bundle/0.3) |

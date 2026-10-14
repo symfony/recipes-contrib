@@ -10,7 +10,8 @@
             "3.15"
         ],
         "21torr/task-manager": [
-            "2.0"
+            "2.0",
+            "4.0"
         ],
         "abel/keycloak-bearer-only-adapter-bundle": [
             "1.0"
