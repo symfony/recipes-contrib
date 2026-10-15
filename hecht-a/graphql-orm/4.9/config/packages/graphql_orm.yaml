@@ -1,0 +1,27 @@
+graphql_orm:
+    endpoint: '%env(GRAPHQL_ORM_ENDPOINT)%'
+
+    # Dialect of the GraphQL API, e.g. GraphqlOrm\Dialect\DataApiBuilderDialect for Data API Builder
+    # dialect: GraphqlOrm\Dialect\DefaultDialect
+
+    # The default values of graphql-orm 5.0, adopted now
+    identity_map: true
+    max_depth: 1
+    variables:
+        enabled: true
+    schema_validation:
+        mode: disabled
+
+    # Where graphqlorm:make:entity writes entities and repositories
+    mapping:
+        entity:
+            dir: '%kernel.project_dir%/src/GraphQL/Entity'
+            namespace: App\GraphQL\Entity
+        repository:
+            dir: '%kernel.project_dir%/src/GraphQL/Repository'
+            namespace: App\GraphQL\Repository
+
+when@dev:
+    graphql_orm:
+        schema_validation:
+            mode: warning
