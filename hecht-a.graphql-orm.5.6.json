@@ -1,0 +1,82 @@
+{
+    "manifests": {
+        "hecht-a/graphql-orm": {
+            "manifest": {
+                "bundles": {
+                    "GraphqlOrm\\GraphqlOrmBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "URL of the GraphQL API queried by the ORM",
+                    "GRAPHQL_ORM_ENDPOINT": "http://localhost:4000/graphql"
+                },
+                "post-install-output": [
+                    "  * Set <info>GRAPHQL_ORM_ENDPOINT</> to the URL of your GraphQL API (in your local env file)",
+                    "  * Choose the <info>dialect</> of your API in <comment>config/packages/graphql_orm.yaml</>",
+                    "  * Generate a first entity: <comment>php bin/console graphqlorm:make:entity</>",
+                    "  * Read the documentation: <comment>https://hecht-a.github.io/graphql-orm/</>"
+                ]
+            },
+            "files": {
+                "config/packages/graphql_orm.yaml": {
+                    "contents": [
+                        "graphql_orm:",
+                        "    endpoint: '%env(GRAPHQL_ORM_ENDPOINT)%'",
+                        "",
+                        "    # Dialect of the GraphQL API, e.g. GraphqlOrm\\Dialect\\DataApiBuilderDialect for Data API Builder",
+                        "    # dialect: GraphqlOrm\\Dialect\\DefaultDialect",
+                        "",
+                        "    # Where graphqlorm:make:entity writes entities and repositories",
+                        "    mapping:",
+                        "        entity:",
+                        "            dir: '%kernel.project_dir%/src/GraphQL/Entity'",
+                        "            namespace: App\\GraphQL\\Entity",
+                        "        repository:",
+                        "            dir: '%kernel.project_dir%/src/GraphQL/Repository'",
+                        "            namespace: App\\GraphQL\\Repository",
+                        "",
+                        "    # Keep the responses of the queries calling enableResultCache() in a cache pool, e.g. one using Redis",
+                        "    # result_cache:",
+                        "    #     pool: cache.app",
+                        "",
+                        "    # Keep the entities marked #[Cache] between requests",
+                        "    # second_level_cache:",
+                        "    #     enabled: true",
+                        "    #     pool: cache.app",
+                        "",
+                        "    # Several GraphQL APIs: a manager each, the options above being those of every manager",
+                        "    # managers:",
+                        "    #     main:",
+                        "    #         endpoint: '%env(GRAPHQL_ORM_ENDPOINT)%'",
+                        "    #     crm:",
+                        "    #         endpoint: '%env(CRM_GRAPHQL_ENDPOINT)%'",
+                        "    #         mapping:",
+                        "    #             entity:",
+                        "    #                 dir: '%kernel.project_dir%/src/GraphQL/Crm/Entity'",
+                        "    #                 namespace: App\\GraphQL\\Crm\\Entity",
+                        "    #             repository:",
+                        "    #                 dir: '%kernel.project_dir%/src/GraphQL/Crm/Repository'",
+                        "    #                 namespace: App\\GraphQL\\Crm\\Repository",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/graphql_orm.yaml": {
+                    "contents": [
+                        "# The search of the autocomplete GraphqlEntityType fields (/_graphql_orm/autocomplete), routed when symfony/form is",
+                        "# installed",
+                        "graphql_orm:",
+                        "    resource: '@GraphqlOrmBundle/Resources/config/routes.php'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "cd004e6d0bb016da405c532c2b8a5d6b5620a2f7"
+        }
+    }
+}
