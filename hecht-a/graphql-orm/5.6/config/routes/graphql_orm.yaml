@@ -1,0 +1,4 @@
+# The search of the autocomplete GraphqlEntityType fields (/_graphql_orm/autocomplete), routed when symfony/form is
+# installed
+graphql_orm:
+    resource: '@GraphqlOrmBundle/Resources/config/routes.php'
