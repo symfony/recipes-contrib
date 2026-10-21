@@ -303,6 +303,9 @@
         "cleverage/process-bundle": [
             "5.0"
         ],
+        "cleverage/ui-process-bundle": [
+            "3.0"
+        ],
         "cmsig/seal-symfony-bundle": [
             "0.8"
         ],

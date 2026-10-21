@@ -1,0 +1,63 @@
+{
+    "manifests": {
+        "cleverage/ui-process-bundle": {
+            "manifest": {
+                "bundles": {
+                    "CleverAge\\UiProcessBundle\\CleverAgeUiProcessBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * Configure your database in <comment>.env.local</> (<comment>DATABASE_URL</>, MySQL / MariaDB or PostgreSQL)",
+                    "  * Create the tables with <comment>php bin/console doctrine:migrations:migrate</>",
+                    "  * Create a user with <comment>php bin/console cleverage:ui-process:user-create</>",
+                    "  * Install the assets with <comment>php bin/console assets:install</>",
+                    "  * Keep the workers running:",
+                    "    <comment>php bin/console messenger:consume execute_process</>",
+                    "    <comment>php bin/console messenger:consume scheduler_cron</>",
+                    "  * Browse <comment>/process</>",
+                    "",
+                    "  * Read the documentation at <comment>https://github.com/cleverage/ui-process-bundle/blob/main/docs/index.md</>"
+                ]
+            },
+            "files": {
+                "config/packages/clever_age_ui_process.yaml": {
+                    "contents": [
+                        "# See https://github.com/cleverage/ui-process-bundle/blob/main/docs/reference/01-bundle_configuration.md",
+                        "clever_age_ui_process:",
+                        "    security:",
+                        "        # Roles that can be granted to a user from the user form",
+                        "        roles: ['ROLE_ADMIN']",
+                        "    logs:",
+                        "        # Store the logs of the process executions in database (log_record table)",
+                        "        store_in_database: true",
+                        "        # Minimum level of the logs stored in database and in file (Debug in the dev environment, Info otherwise)",
+                        "        # database_level: Info",
+                        "        # file_level: Info",
+                        "        # Minimum level of the logs counted in the report of a process execution",
+                        "        report_increment_level: Warning",
+                        "    # Notify the end of the process executions (requires symfony/notifier)",
+                        "    # notification:",
+                        "    #     enabled: true",
+                        "    #     statuses: [failed, finish_with_report]",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/clever_age_ui_process.yaml": {
+                    "contents": [
+                        "# Controllers of the bundle, the EasyAdmin routes being imported by config/routes/easyadmin.yaml",
+                        "clever_age_ui_process:",
+                        "    resource: '@CleverAgeUiProcessBundle/config/routes/controllers.yaml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6be558867b4a70c4c575642f0b03c14d53bf4d4d"
+        }
+    }
+}
