@@ -1,0 +1,10 @@
+  <fg=blue;options=bold>UX SDC</> <fg=blue>is installed. Two steps are left to you:</>
+
+  <fg=blue>1.</> Map the component namespace in <comment>composer.json</> and run <comment>composer dump-autoload</>:
+         <comment>"autoload": { "psr-4": { "App\\Component\\": "src_component/" } }</>
+  <fg=blue>2.</> Only for Live Components, Turbo Frames or Turbo Streams, attach the loader to the body
+     of <comment>templates/base.html.twig</>: <comment>\<body {{ stimulus_controller(sdc_loader_controller) }}></>
+     https://github.com/tito10047/ux-sdc/blob/main/docs/live-and-turbo.md#the-loader-controller
+
+  <fg=blue>Then create a component with</> <comment>php bin/console make:sdc-component Alert</> <fg=blue>(symfony/maker-bundle)</>
+  <fg=blue>and check it with</> <comment>php bin/console debug:sdc</>

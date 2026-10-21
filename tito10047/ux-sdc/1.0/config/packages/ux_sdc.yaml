@@ -1,0 +1,6 @@
+ux_sdc:
+    # Directory of the components: each class next to its template, CSS and JS.
+    # Both values must describe the same PSR-4 mapping as "autoload" in composer.json:
+    #     "App\\Component\\": "src_component/"
+    ux_components_dir: '%kernel.project_dir%/src_component'
+    component_namespace: 'App\Component'
