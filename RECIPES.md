@@ -774,7 +774,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [vincentchalamon/nav-bundle](https://packagist.org/packages/vincentchalamon/nav-bundle) | [1.0](../../../tree/main/vincentchalamon/nav-bundle/1.0) |
 | [vincentlanglet/twig-cs-fixer](https://packagist.org/packages/vincentlanglet/twig-cs-fixer) | [3.0](../../../tree/main/vincentlanglet/twig-cs-fixer/3.0) |
 | [void/og-image](https://packagist.org/packages/void/og-image) | [1.0](../../../tree/main/void/og-image/1.0) |
-| [vuillaume-agency/symfony-turnstile](https://packagist.org/packages/vuillaume-agency/symfony-turnstile) | [1.0](../../../tree/main/vuillaume-agency/symfony-turnstile/1.0) |
+| [vuillaume-agency/symfony-turnstile](https://packagist.org/packages/vuillaume-agency/symfony-turnstile) | [1.2](../../../tree/main/vuillaume-agency/symfony-turnstile/1.2) |
 | [wandi/easyadmin-plus-bundle](https://packagist.org/packages/wandi/easyadmin-plus-bundle) | [0.3](../../../tree/main/wandi/easyadmin-plus-bundle/0.3) |
 | [wandi/mailer-bundle](https://packagist.org/packages/wandi/mailer-bundle) | [1.0](../../../tree/main/wandi/mailer-bundle/1.0) |
 | [web-auth/webauthn-symfony-bundle](https://packagist.org/packages/web-auth/webauthn-symfony-bundle) | [3.0](../../../tree/main/web-auth/webauthn-symfony-bundle/3.0) |
