@@ -300,6 +300,9 @@
         "ckrack/optimus-bundle": [
             "0.1"
         ],
+        "cleverage/process-bundle": [
+            "5.0"
+        ],
         "cmsig/seal-symfony-bundle": [
             "0.8"
         ],

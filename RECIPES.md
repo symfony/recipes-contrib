@@ -99,6 +99,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [carlosgude/integration-engine](https://packagist.org/packages/carlosgude/integration-engine) | [5.2](../../../tree/main/carlosgude/integration-engine/5.2) |
 | [carthage-software/mago](https://packagist.org/packages/carthage-software/mago) | [1.0](../../../tree/main/carthage-software/mago/1.0) |
 | [ckrack/optimus-bundle](https://packagist.org/packages/ckrack/optimus-bundle) | [0.1](../../../tree/main/ckrack/optimus-bundle/0.1) |
+| [cleverage/process-bundle](https://packagist.org/packages/cleverage/process-bundle) | [5.0](../../../tree/main/cleverage/process-bundle/5.0) |
 | [cmsig/seal-symfony-bundle](https://packagist.org/packages/cmsig/seal-symfony-bundle) | [0.8](../../../tree/main/cmsig/seal-symfony-bundle/0.8) |
 | [codebuds/mattermost-publication-bundle](https://packagist.org/packages/codebuds/mattermost-publication-bundle) | [0.3](../../../tree/main/codebuds/mattermost-publication-bundle/0.3) |
 | [codeception/codeception](https://packagist.org/packages/codeception/codeception) | [5.0](../../../tree/main/codeception/codeception/5.0) |
