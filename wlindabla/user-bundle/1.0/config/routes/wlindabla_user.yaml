@@ -1,0 +1,3 @@
+wlindabla_user:
+    resource: '@WlindablaUserBundle/config/routes.php'
+    # prefix: /account

@@ -1,0 +1,16 @@
+  <bg=blue;fg=white>                                                          </>
+  <bg=blue;fg=white> wlindabla/user-bundle installed                         </>
+  <bg=blue;fg=white>                                                          </>
+
+  * <info>Next steps</info> (the bundle cannot guess your entities and firewall):
+
+    1. Create your <comment>App\Entity\User</comment> (implements Wlindabla\UserBundle\Infrastructure\Model\UserInterface)
+       and its repository, or change <comment>wlindabla_user.classes.user</comment> in
+       <comment>config/packages/wlindabla_user.yaml</comment>.
+    2. Configure your <comment>security.yaml</comment> (provider, firewall, login and logout paths).
+    3. Configure <comment>wlindabla/share-service-bundle</comment> (id_encryption key, async transport)
+       and <comment>wlindabla/mailing-bundle</comment> (system and support mailers).
+    4. Run <comment>php bin/console doctrine:migrations:diff</comment> then <comment>doctrine:migrations:migrate</comment>.
+    5. Start a worker: <comment>php bin/console messenger:consume async_app_transport -vv</comment>
+
+  * <info>Docs</info>: https://github.com/Agbokoudjo/user-bundle/tree/main/docs
