@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "agentcat/sdk": {
+            "manifest": {
+                "bundles": {
+                    "AgentCat\\Symfony\\AgentCatBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "AGENTCAT_PROJECT_ID": ""
+                },
+                "post-install-output": [
+                    "  * Set <info>AGENTCAT_PROJECT_ID</> in <comment>.env.local</> to your AgentCat project ID (proj_\u2026).",
+                    "  * AgentCat is off while your tests run; call <comment>AgentCat::fake()</> in a test to record its events."
+                ]
+            },
+            "files": {
+                "config/packages/agentcat.yaml": {
+                    "contents": [
+                        "# AgentCat tracks every symfony/mcp-bundle server of this application.",
+                        "# Set AGENTCAT_PROJECT_ID (proj_\u2026) in .env.local. Reference: bin/console config:dump-reference agentcat",
+                        "agentcat:",
+                        "    project_id: '%env(default::AGENTCAT_PROJECT_ID)%'",
+                        "    # exclude_servers: [internal]",
+                        "    # projects:",
+                        "    #     billing: '%env(default::AGENTCAT_BILLING_PROJECT_ID)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "182a97c8e521f0aa5cf8816c4d8436610dc87fea"
+        }
+    }
+}
