@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Wlindabla\\UserBundle\\WlindablaUserBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "container": {
+        "app.site_name": "My Application",
+        "app.env": "%kernel.environment%"
+    }
+}
