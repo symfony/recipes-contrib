@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "stejac/guarded-chat-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Stejac\\GuardedChatBundle\\GuardedChatBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Set to 0 to switch the public chat off with a deploy",
+                    "GUARDED_CHAT_ENABLED": "1"
+                }
+            },
+            "files": {
+                "config/packages/guarded_chat.yaml": {
+                    "contents": [
+                        "guarded_chat:",
+                        "    enabled: '%env(bool:GUARDED_CHAT_ENABLED)%'",
+                        "",
+                        "    # Service id of the Symfony AI platform that answers (see symfony/ai-bundle),",
+                        "    # for example \"ai.platform.generic.litellm\" for an OpenAI-compatible gateway",
+                        "    platform: ai.platform.generic.default",
+                        "    model: your-model",
+                        "",
+                        "    prompt:",
+                        "        # Used until a prompt version is stored in the database; describe your assistant here",
+                        "        default: 'You are the assistant of this website. Answer only questions about its topic.'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/guarded_chat.yaml": {
+                    "contents": [
+                        "guarded_chat:",
+                        "    resource: '@GuardedChatBundle/config/routes.php'",
+                        "    prefix: /chat",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "90a8826870109d91c9f0819416444ff61a3d02dc"
+        }
+    }
+}
