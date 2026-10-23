@@ -1,0 +1,3 @@
+guarded_chat:
+    resource: '@GuardedChatBundle/config/routes.php'
+    prefix: /chat
