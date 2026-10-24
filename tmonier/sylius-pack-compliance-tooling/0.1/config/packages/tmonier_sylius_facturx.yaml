@@ -1,0 +1,2 @@
+imports:
+    - { resource: "@TmonierSyliusFacturXPlugin/config/config.yaml" }

@@ -1,0 +1,19 @@
+{
+    "bundles": {
+        "Tmonier\\SyliusAgenticFeedsPlugin\\TmonierSyliusAgenticFeedsPlugin": [
+            "all"
+        ],
+        "Tmonier\\SyliusAiCatalogCopilotPlugin\\TmonierSyliusAiCatalogCopilotPlugin": [
+            "all"
+        ],
+        "Tmonier\\SyliusB2bMcpPlugin\\TmonierSyliusB2bMcpPlugin": [
+            "all"
+        ],
+        "Tmonier\\SyliusWebhookOutboxPlugin\\TmonierSyliusWebhookOutboxPlugin": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
