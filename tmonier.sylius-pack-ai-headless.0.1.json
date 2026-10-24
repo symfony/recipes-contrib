@@ -1,0 +1,92 @@
+{
+    "manifests": {
+        "tmonier/sylius-pack-ai-headless": {
+            "manifest": {
+                "bundles": {
+                    "Tmonier\\SyliusAgenticFeedsPlugin\\TmonierSyliusAgenticFeedsPlugin": [
+                        "all"
+                    ],
+                    "Tmonier\\SyliusAiCatalogCopilotPlugin\\TmonierSyliusAiCatalogCopilotPlugin": [
+                        "all"
+                    ],
+                    "Tmonier\\SyliusB2bMcpPlugin\\TmonierSyliusB2bMcpPlugin": [
+                        "all"
+                    ],
+                    "Tmonier\\SyliusWebhookOutboxPlugin\\TmonierSyliusWebhookOutboxPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/tmonier_sylius_agentic_feeds.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@TmonierSyliusAgenticFeedsPlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/tmonier_sylius_ai_catalog_copilot.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@TmonierSyliusAiCatalogCopilotPlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/tmonier_sylius_b2b_mcp.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@TmonierSyliusB2bMcpPlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/tmonier_sylius_webhook_outbox.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@TmonierSyliusWebhookOutboxPlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/tmonier_sylius_agentic_feeds.yaml": {
+                    "contents": [
+                        "tmonier_sylius_agentic_feeds:",
+                        "    resource: \"@TmonierSyliusAgenticFeedsPlugin/config/routes.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/tmonier_sylius_ai_catalog_copilot.yaml": {
+                    "contents": [
+                        "tmonier_sylius_ai_catalog_copilot:",
+                        "    resource: \"@TmonierSyliusAiCatalogCopilotPlugin/config/routes.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/tmonier_sylius_b2b_mcp.yaml": {
+                    "contents": [
+                        "tmonier_sylius_b2b_mcp:",
+                        "    resource: \"@TmonierSyliusB2bMcpPlugin/config/routes.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/tmonier_sylius_webhook_outbox.yaml": {
+                    "contents": [
+                        "tmonier_sylius_webhook_outbox:",
+                        "    resource: \"@TmonierSyliusWebhookOutboxPlugin/config/routes.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "137602f80ce510b325a94bf2eef2f700c9e0374f"
+        }
+    }
+}

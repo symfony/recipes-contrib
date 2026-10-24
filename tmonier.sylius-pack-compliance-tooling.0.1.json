@@ -1,0 +1,130 @@
+{
+    "manifests": {
+        "tmonier/sylius-pack-compliance-tooling": {
+            "manifest": {
+                "bundles": {
+                    "Tmonier\\SyliusFacturXPlugin\\TmonierSyliusFacturXPlugin": [
+                        "all"
+                    ],
+                    "Tmonier\\SyliusGpsrPlugin\\TmonierSyliusGpsrPlugin": [
+                        "all"
+                    ],
+                    "Tmonier\\SyliusAuditLogPlugin\\TmonierSyliusAuditLogPlugin": [
+                        "all"
+                    ],
+                    "Tmonier\\SyliusTimelinePlugin\\TmonierSyliusTimelinePlugin": [
+                        "all"
+                    ],
+                    "Tmonier\\SyliusCommandPalettePlugin\\TmonierSyliusCommandPalettePlugin": [
+                        "all"
+                    ],
+                    "Tmonier\\SyliusBulkActionsPlugin\\TmonierSyliusBulkActionsPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/tmonier_sylius_audit_log.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@TmonierSyliusAuditLogPlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/tmonier_sylius_bulk_actions.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@TmonierSyliusBulkActionsPlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/tmonier_sylius_command_palette.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@TmonierSyliusCommandPalettePlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/tmonier_sylius_facturx.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@TmonierSyliusFacturXPlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/tmonier_sylius_gpsr.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@TmonierSyliusGpsrPlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/tmonier_sylius_timeline.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@TmonierSyliusTimelinePlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/tmonier_sylius_audit_log.yaml": {
+                    "contents": [
+                        "tmonier_sylius_audit_log:",
+                        "    resource: \"@TmonierSyliusAuditLogPlugin/config/routes.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/tmonier_sylius_bulk_actions.yaml": {
+                    "contents": [
+                        "tmonier_sylius_bulk_actions:",
+                        "    resource: \"@TmonierSyliusBulkActionsPlugin/config/routes.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/tmonier_sylius_command_palette.yaml": {
+                    "contents": [
+                        "tmonier_sylius_command_palette:",
+                        "    resource: \"@TmonierSyliusCommandPalettePlugin/config/routes.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/tmonier_sylius_facturx.yaml": {
+                    "contents": [
+                        "tmonier_sylius_facturx:",
+                        "    resource: \"@TmonierSyliusFacturXPlugin/config/routes.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/tmonier_sylius_gpsr.yaml": {
+                    "contents": [
+                        "tmonier_sylius_gpsr:",
+                        "    resource: \"@TmonierSyliusGpsrPlugin/config/routes.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/tmonier_sylius_timeline.yaml": {
+                    "contents": [
+                        "tmonier_sylius_timeline:",
+                        "    resource: \"@TmonierSyliusTimelinePlugin/config/routes.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "685e526fbd01caf8b0b31d86db9a2bbd7c8124fd"
+        }
+    }
+}
