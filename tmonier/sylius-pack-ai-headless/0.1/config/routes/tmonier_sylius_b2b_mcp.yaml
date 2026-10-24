@@ -1,0 +1,2 @@
+tmonier_sylius_b2b_mcp:
+    resource: "@TmonierSyliusB2bMcpPlugin/config/routes.yaml"

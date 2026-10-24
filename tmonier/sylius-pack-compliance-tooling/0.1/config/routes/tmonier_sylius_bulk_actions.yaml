@@ -1,0 +1,2 @@
+tmonier_sylius_bulk_actions:
+    resource: "@TmonierSyliusBulkActionsPlugin/config/routes.yaml"

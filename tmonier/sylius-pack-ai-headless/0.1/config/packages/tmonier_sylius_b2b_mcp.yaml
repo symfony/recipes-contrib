@@ -1,0 +1,2 @@
+imports:
+    - { resource: "@TmonierSyliusB2bMcpPlugin/config/config.yaml" }
