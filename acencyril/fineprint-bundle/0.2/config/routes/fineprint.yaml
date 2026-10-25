@@ -1,0 +1,5 @@
+# Legal pages under /{locale}/, built from config/packages/fineprint.yaml.
+# A disabled page has no route.
+fineprint:
+    resource: .
+    type: fineprint
