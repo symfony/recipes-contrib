@@ -55,15 +55,17 @@ fineprint:
         # processors:
         #     mail: { name: 'CHANGE ME', role: email, country: 'France' }
         processing:
-            - purpose: { fr: 'Sécurité du site (journaux du serveur)', en: 'Site security (server logs)' }
-              data: { fr: 'adresse IP, pages demandées, date', en: 'IP address, pages requested, date' }
-              legal_basis: legitimate_interests
-              legitimate_interest: { fr: 'protéger le site contre les attaques', en: 'protecting the site from attacks' }
-              retention: { fr: 'CHANGE ME', en: 'CHANGE ME' }
-              processors: [host]
+            -
+                purpose: { fr: 'Sécurité du site (journaux du serveur)', en: 'Site security (server logs)' }
+                data: { fr: 'adresse IP, pages demandées, date', en: 'IP address, pages requested, date' }
+                legal_basis: legitimate_interests
+                legitimate_interest: { fr: 'protéger le site contre les attaques', en: 'protecting the site from attacks' }
+                retention: { fr: 'CHANGE ME', en: 'CHANGE ME' }
+                processors: [host]
 
     cookies:
         list:
-            - name: 'PHPSESSID'
-              purpose: { fr: 'Session, nécessaire aux formulaires', en: 'Session, needed by forms' }
-              duration: { fr: 'Fin de la session', en: 'End of session' }
+            -
+                name: 'PHPSESSID'
+                purpose: { fr: 'Session, nécessaire aux formulaires', en: 'Session, needed by forms' }
+                duration: { fr: 'Fin de la session', en: 'End of session' }
