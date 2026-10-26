@@ -1,0 +1,31 @@
+{
+    "bundles": {
+        "Acencyril\\UpliftBundle\\UpliftBundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "What Uplift may move on its own: off, patch, minor or major. Anything larger is proposed in the report.",
+        "#2": "UPLIFT_PHP_MAX: a PHP branch never to go above (e.g. 8.1 on a server held to it). Empty: no ceiling.",
+        "UPLIFT_ENABLED": "0",
+        "UPLIFT_PHP": "patch",
+        "UPLIFT_SYMFONY": "patch",
+        "UPLIFT_PACKAGES": "patch",
+        "UPLIFT_PHP_MAX": "",
+        "UPLIFT_OWN_VENDOR": "acencyril",
+        "UPLIFT_TEST_COMMAND": "vendor/bin/phpunit",
+        "#3": "New features of the installed versions (uplift:adopt): off, propose or apply. UPLIFT_ADOPT_SKIP: adoption ids to leave out.",
+        "UPLIFT_ADOPT": "propose",
+        "UPLIFT_ADOPT_SKIP": ""
+    },
+    "post-install-output": [
+        "  * <fg=blue>Uplift</>: see what can move with <comment>php bin/console uplift:plan</>,",
+        "    and the new features your versions bring with <comment>php bin/console uplift:adopt</>",
+        "  * Set <comment>UPLIFT_ENABLED=1</> where <comment>uplift:apply</> may change composer.json and composer.lock.",
+        "    It never pushes or deploys: it leaves a branch and a report (var/uplift/report.md).",
+        ""
+    ]
+}
