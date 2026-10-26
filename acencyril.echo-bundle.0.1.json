@@ -1,0 +1,70 @@
+{
+    "manifests": {
+        "acencyril/echo-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Acencyril\\EchoBundle\\EchoBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Who receives Echo's emails, and the address they come from",
+                    "ECHO_OWNER": "owner@example.com",
+                    "ECHO_SENDER": "noreply@example.com"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Echo</>: set <comment>ECHO_OWNER</> and <comment>ECHO_SENDER</> in your .env.local,",
+                    "    and your site name in <comment>config/packages/echo.yaml</>.",
+                    "  * Create the two tables: <comment>php bin/console doctrine:migrations:diff</> then <comment>doctrine:migrations:migrate</>.",
+                    "  * Call it: <comment>$echo->event('signup', ['email' => $email])</> (service Acencyril\\EchoBundle\\OwnerEcho).",
+                    "  * The morning digest, once a day: <comment>0 8 * * * php bin/console echo:digest</>",
+                    ""
+                ]
+            },
+            "files": {
+                "config/packages/echo.yaml": {
+                    "contents": [
+                        "# Echo \u2014 emails you at each important step of your funnel, plus a morning digest.",
+                        "# Reference: vendor/acencyril/echo-bundle/README.md",
+                        "echo:",
+                        "    owner: '%env(ECHO_OWNER)%'              # who receives the emails",
+                        "    sender: '%env(ECHO_SENDER)%'            # the From address",
+                        "    site_name: 'My site'                    # in every subject",
+                        "    locale: en                              # en or fr",
+                        "    # timezone: 'Europe/Paris'              # days and hours; default: the PHP timezone",
+                        "    # admin_url: 'https://example.com/admin'",
+                        "    # currency: EUR                         # for an \"amount\" given without a \"currency\"",
+                        "",
+                        "    default_mode: count                     # for events not listed below",
+                        "    throttle: 10                            # immediate emails per hour and per event, at most",
+                        "",
+                        "    # No immediate email in this window: the events wait for the morning digest.",
+                        "    # quiet_hours:",
+                        "    #     from: '20:00'",
+                        "    #     to: '08:00'",
+                        "    #     weekends: true",
+                        "",
+                        "    # immediate: emailed at once and listed in the digest",
+                        "    # digest:    listed in the digest",
+                        "    # count:     a number in the digest",
+                        "    # ignore:    nothing",
+                        "    events:",
+                        "        page_view:",
+                        "            mode: count",
+                        "            skip_bots: true                 # crawlers, monitors and link previews are not counted",
+                        "        signup: immediate",
+                        "        payment:",
+                        "            mode: immediate",
+                        "            min_amount: 1000                # in cents: smaller payments (your own tests) are only counted",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "4c671e26ceda4c2544657e831045fe55fbea3d20"
+        }
+    }
+}
