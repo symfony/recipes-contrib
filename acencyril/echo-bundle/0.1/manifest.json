@@ -1,0 +1,23 @@
+{
+    "bundles": {
+        "Acencyril\\EchoBundle\\EchoBundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "Who receives Echo's emails, and the address they come from",
+        "ECHO_OWNER": "owner@example.com",
+        "ECHO_SENDER": "noreply@example.com"
+    },
+    "post-install-output": [
+        "  * <fg=blue>Echo</>: set <comment>ECHO_OWNER</> and <comment>ECHO_SENDER</> in your .env.local,",
+        "    and your site name in <comment>config/packages/echo.yaml</>.",
+        "  * Create the two tables: <comment>php bin/console doctrine:migrations:diff</> then <comment>doctrine:migrations:migrate</>.",
+        "  * Call it: <comment>$echo->event('signup', ['email' => $email])</> (service Acencyril\\EchoBundle\\OwnerEcho).",
+        "  * The morning digest, once a day: <comment>0 8 * * * php bin/console echo:digest</>",
+        ""
+    ]
+}
