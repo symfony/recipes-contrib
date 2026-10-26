@@ -1,0 +1,13 @@
+# Rehearsal: try a change in the admin before production.
+# Reference: vendor/acencyril/rehearsal-bundle/README.md
+rehearsal:
+    changes_file: '%kernel.project_dir%/.rehearsal/changes.json'
+    decisions_file: '%kernel.project_dir%/var/rehearsal/decisions.json'
+    validation: manual                          # manual: wait for the click; auto: validate when the tests pass
+    role: ROLE_ADMIN
+    # parent_template: 'admin/layout.html.twig' # your admin layout, with "title" and "body" blocks
+    mailer:
+        enabled: false                          # a recap on new changes and on each decision
+        # from: 'no-reply@example.com'
+        # to: ['you@example.com']
+        # locale: en

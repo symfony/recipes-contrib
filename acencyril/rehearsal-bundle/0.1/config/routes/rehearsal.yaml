@@ -1,0 +1,8 @@
+# The Rehearsal section of the admin. It checks rehearsal.role itself; keep it behind
+# your firewall so that visitors are asked to sign in.
+rehearsal:
+    resource: '@RehearsalBundle/config/routes.php'
+    prefix: '/{_locale}/admin/rehearsal'
+    trailing_slash_on_root: false
+    requirements:
+        _locale: 'en|fr'
