@@ -10,6 +10,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [abel/keycloak-bearer-only-adapter-bundle](https://packagist.org/packages/abel/keycloak-bearer-only-adapter-bundle) | [1.0](../../../tree/main/abel/keycloak-bearer-only-adapter-bundle/1.0) |
 | [ablaise/meteion-bundle](https://packagist.org/packages/ablaise/meteion-bundle) | [1.0](../../../tree/main/ablaise/meteion-bundle/1.0) |
 | [acencyril/echo-bundle](https://packagist.org/packages/acencyril/echo-bundle) | [0.1](../../../tree/main/acencyril/echo-bundle/0.1) |
+| [acencyril/fineprint-bundle](https://packagist.org/packages/acencyril/fineprint-bundle) | [0.2](../../../tree/main/acencyril/fineprint-bundle/0.2) |
 | [acencyril/rehearsal-bundle](https://packagist.org/packages/acencyril/rehearsal-bundle) | [0.1](../../../tree/main/acencyril/rehearsal-bundle/0.1) |
 | [acencyril/sentinelle-bundle](https://packagist.org/packages/acencyril/sentinelle-bundle) | [0.3](../../../tree/main/acencyril/sentinelle-bundle/0.3) |
 | [acseo/typesense-bundle](https://packagist.org/packages/acseo/typesense-bundle) | [0.7](../../../tree/main/acseo/typesense-bundle/0.7) |

@@ -22,6 +22,9 @@
         "acencyril/echo-bundle": [
             "0.1"
         ],
+        "acencyril/fineprint-bundle": [
+            "0.2"
+        ],
         "acencyril/rehearsal-bundle": [
             "0.1"
         ],
