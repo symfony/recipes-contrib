@@ -31,6 +31,9 @@
         "acencyril/sentinelle-bundle": [
             "0.3"
         ],
+        "acencyril/uplift-bundle": [
+            "0.1"
+        ],
         "acseo/typesense-bundle": [
             "0.7"
         ],

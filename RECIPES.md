@@ -13,6 +13,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [acencyril/fineprint-bundle](https://packagist.org/packages/acencyril/fineprint-bundle) | [0.2](../../../tree/main/acencyril/fineprint-bundle/0.2) |
 | [acencyril/rehearsal-bundle](https://packagist.org/packages/acencyril/rehearsal-bundle) | [0.1](../../../tree/main/acencyril/rehearsal-bundle/0.1) |
 | [acencyril/sentinelle-bundle](https://packagist.org/packages/acencyril/sentinelle-bundle) | [0.3](../../../tree/main/acencyril/sentinelle-bundle/0.3) |
+| [acencyril/uplift-bundle](https://packagist.org/packages/acencyril/uplift-bundle) | [0.1](../../../tree/main/acencyril/uplift-bundle/0.1) |
 | [acseo/typesense-bundle](https://packagist.org/packages/acseo/typesense-bundle) | [0.7](../../../tree/main/acseo/typesense-bundle/0.7) |
 | [ad3n/ratchet-bundle](https://packagist.org/packages/ad3n/ratchet-bundle) | [0.4](../../../tree/main/ad3n/ratchet-bundle/0.4) |
 | [adback/adback-sdk-php-symfony](https://packagist.org/packages/adback/adback-sdk-php-symfony) | [2.4](../../../tree/main/adback/adback-sdk-php-symfony/2.4) |
