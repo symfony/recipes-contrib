@@ -1,0 +1,114 @@
+{
+    "manifests": {
+        "acencyril/fineprint-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Acencyril\\FineprintBundle\\FineprintBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Fineprint</>: replace every <comment>CHANGE ME</> value in <comment>config/packages/fineprint.yaml</>",
+                    "    before going live: these are your legal pages, published as written.",
+                    "  * Pages: /fr/mentions-legales, /fr/cgv, /fr/confidentialite, /fr/cookies (and /en/...).",
+                    "  * Footer links: <comment>{{ include('@Fineprint/footer_links.html.twig') }}</>",
+                    ""
+                ]
+            },
+            "files": {
+                "config/packages/fineprint.yaml": {
+                    "contents": [
+                        "# Fineprint \u2014 the legal pages of this site. Every fact below is published as written:",
+                        "# replace each \"CHANGE ME\" before going live. Reference: vendor/acencyril/fineprint-bundle/README.md",
+                        "# Not legal advice: have your pages reviewed.",
+                        "fineprint:",
+                        "    jurisdiction: fr                            # fr (French law) or eu (any EU country, EU law only)",
+                        "    governing_law: 'France'                     # the \"fr\" pack requires France",
+                        "    activities: [b2b]                           # b2b, b2c, digital, subscription, physical_goods, marketplace, services",
+                        "",
+                        "    site:",
+                        "        name: 'CHANGE ME'",
+                        "        url: 'https://example.com'",
+                        "",
+                        "    publisher:",
+                        "        legal_name: 'CHANGE ME'                 # company name, or first and last name",
+                        "        legal_form: 'CHANGE ME'                 # e.g. entrepreneur individuel (micro-entreprise), SAS",
+                        "        company_id: '00000000000000'            # the SIRET in the \"fr\" pack",
+                        "        # registration: 'RCS Paris 000 000 000'",
+                        "        # share_capital: '1 000 \u20ac'",
+                        "        # vat_number: 'FR00000000000'",
+                        "        address: 'CHANGE ME'",
+                        "        country: 'France'",
+                        "        email: 'contact@example.com'",
+                        "        # phone: '+33 0 00 00 00 00'            # the LCEN asks professional publishers for one",
+                        "        publication_director: 'CHANGE ME'       # required by the \"fr\" pack",
+                        "",
+                        "    host:                                       # name, address and phone required by the \"fr\" pack",
+                        "        name: 'CHANGE ME'",
+                        "        address: 'CHANGE ME'",
+                        "        phone: 'CHANGE ME'",
+                        "",
+                        "    # Required by the \"fr\" pack as soon as activities include b2c.",
+                        "    # mediator:",
+                        "    #     name: 'CHANGE ME'",
+                        "    #     url: 'https://example.com'",
+                        "",
+                        "    # parent_template: 'base.html.twig'         # must define the \"title\" and \"body\" blocks",
+                        "",
+                        "    # pages:",
+                        "    #     cookies: false                        # switch a page off",
+                        "    #     terms:",
+                        "    #         last_updated: '2026-01-01'",
+                        "    #         sections:",
+                        "    #             remove: [liability]",
+                        "    #             override: { law: 'legal.law' }   # a translation key, or a template.html.twig",
+                        "    #             add:",
+                        "    #                 - { id: quotes, title: 'Quotes', body: 'CHANGE ME', position: 'after:order' }",
+                        "",
+                        "    terms:",
+                        "        # vat_exempt: true                      # \"fr\": TVA non applicable, art. 293 B du CGI",
+                        "        # payment_provider: 'Stripe'",
+                        "        # liability_limits: true",
+                        "        # court: 'Paris'",
+                        "",
+                        "    privacy:",
+                        "        # processors:",
+                        "        #     mail: { name: 'CHANGE ME', role: email, country: 'France' }",
+                        "        processing:",
+                        "            -",
+                        "                purpose: { fr: 'S\u00e9curit\u00e9 du site (journaux du serveur)', en: 'Site security (server logs)' }",
+                        "                data: { fr: 'adresse IP, pages demand\u00e9es, date', en: 'IP address, pages requested, date' }",
+                        "                legal_basis: legitimate_interests",
+                        "                legitimate_interest: { fr: 'prot\u00e9ger le site contre les attaques', en: 'protecting the site from attacks' }",
+                        "                retention: { fr: 'CHANGE ME', en: 'CHANGE ME' }",
+                        "                processors: [host]",
+                        "",
+                        "    cookies:",
+                        "        list:",
+                        "            -",
+                        "                name: 'PHPSESSID'",
+                        "                purpose: { fr: 'Session, n\u00e9cessaire aux formulaires', en: 'Session, needed by forms' }",
+                        "                duration: { fr: 'Fin de la session', en: 'End of session' }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/fineprint.yaml": {
+                    "contents": [
+                        "# Legal pages under /{locale}/, built from config/packages/fineprint.yaml.",
+                        "# A disabled page has no route.",
+                        "fineprint:",
+                        "    resource: .",
+                        "    type: fineprint",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "638c8274da2dff53085b0d476a2182af3b868e6a"
+        }
+    }
+}
