@@ -1,0 +1,17 @@
+{
+    "bundles": {
+        "Acencyril\\FineprintBundle\\FineprintBundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "post-install-output": [
+        "  * <fg=blue>Fineprint</>: replace every <comment>CHANGE ME</> value in <comment>config/packages/fineprint.yaml</>",
+        "    before going live: these are your legal pages, published as written.",
+        "  * Pages: /fr/mentions-legales, /fr/cgv, /fr/confidentialite, /fr/cookies (and /en/...).",
+        "  * Footer links: <comment>{{ include('@Fineprint/footer_links.html.twig') }}</>",
+        ""
+    ]
+}
