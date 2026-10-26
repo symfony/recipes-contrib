@@ -1,0 +1,17 @@
+{
+    "bundles": {
+        "Acencyril\\RehearsalBundle\\RehearsalBundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "post-install-output": [
+        "  * <fg=blue>Rehearsal</>: the section is at <comment>/{_locale}/admin/rehearsal</> (ROLE_ADMIN),",
+        "    behind your firewall. Change the prefix in <comment>config/routes/rehearsal.yaml</>.",
+        "  * Proposed changes are read from <comment>.rehearsal/changes.json</> (see the README for the format).",
+        "  * Hook <comment>Acencyril\\RehearsalBundle\\Event\\ChangeValidated</> to merge and deploy.",
+        ""
+    ]
+}
