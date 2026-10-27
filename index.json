@@ -49,6 +49,9 @@
         "adrienlbt/hexagonal-maker-bundle": [
             "1.2"
         ],
+        "agentcat/sdk": [
+            "1.0"
+        ],
         "agilelab-fr/captcha-bundle": [
             "1.0"
         ],

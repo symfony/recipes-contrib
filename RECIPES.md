@@ -19,6 +19,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [adback/adback-sdk-php-symfony](https://packagist.org/packages/adback/adback-sdk-php-symfony) | [2.4](../../../tree/main/adback/adback-sdk-php-symfony/2.4) |
 | [adlarge/fixtures-documentation-bundle](https://packagist.org/packages/adlarge/fixtures-documentation-bundle) | [1.1](../../../tree/main/adlarge/fixtures-documentation-bundle/1.1) |
 | [adrienlbt/hexagonal-maker-bundle](https://packagist.org/packages/adrienlbt/hexagonal-maker-bundle) | [1.2](../../../tree/main/adrienlbt/hexagonal-maker-bundle/1.2) |
+| [agentcat/sdk](https://packagist.org/packages/agentcat/sdk) | [1.0](../../../tree/main/agentcat/sdk/1.0) |
 | [agilelab-fr/captcha-bundle](https://packagist.org/packages/agilelab-fr/captcha-bundle) | [1.0](../../../tree/main/agilelab-fr/captcha-bundle/1.0) |
 | [ahmed-bhs/doctrine-doctor](https://packagist.org/packages/ahmed-bhs/doctrine-doctor) | [0.1](../../../tree/main/ahmed-bhs/doctrine-doctor/0.1) |
 | [ajardin/blizzard-sdk-bundle](https://packagist.org/packages/ajardin/blizzard-sdk-bundle) | [1.0](../../../tree/main/ajardin/blizzard-sdk-bundle/1.0) |
