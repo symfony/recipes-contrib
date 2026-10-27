@@ -1,0 +1,7 @@
+# AgentCat tracks every symfony/mcp-bundle server of this application.
+# Set AGENTCAT_PROJECT_ID (proj_…) in .env.local. Reference: bin/console config:dump-reference agentcat
+agentcat:
+    project_id: '%env(default::AGENTCAT_PROJECT_ID)%'
+    # exclude_servers: [internal]
+    # projects:
+    #     billing: '%env(default::AGENTCAT_BILLING_PROJECT_ID)%'

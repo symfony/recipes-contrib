@@ -1,0 +1,2 @@
+  * Set <info>AGENTCAT_PROJECT_ID</> in <comment>.env.local</> to your AgentCat project ID (proj_…).
+  * AgentCat is off while your tests run; call <comment>AgentCat::fake()</> in a test to record its events.

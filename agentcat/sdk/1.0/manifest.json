@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "AgentCat\\Symfony\\AgentCatBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "AGENTCAT_PROJECT_ID": ""
+    }
+}
