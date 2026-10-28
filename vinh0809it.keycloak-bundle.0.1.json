@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "vinh0809it/keycloak-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Vinh0809it\\KeycloakBundle\\KeycloakBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "The realm URL this app reaches Keycloak at, e.g. https://sso.example.com/realms/my-realm",
+                    "KEYCLOAK_URL": ""
+                }
+            },
+            "files": {
+                "config/packages/keycloak.yaml": {
+                    "contents": [
+                        "keycloak:",
+                        "    realm: '%env(KEYCLOAK_URL)%'",
+                        "    # The audience your API's access tokens carry (an audience mapper on the Keycloak client adds it).",
+                        "    audience: my-api",
+                        "",
+                        "# Then put the authenticator on a stateless firewall in security.yaml:",
+                        "#",
+                        "#   security:",
+                        "#       firewalls:",
+                        "#           api:",
+                        "#               pattern: ^/api",
+                        "#               stateless: true",
+                        "#               keycloak:",
+                        "#                   resolver: App\\Security\\UserResolver",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "8228fb80e2d9b340779a4383f7272d8a0d2b131d"
+        }
+    }
+}
