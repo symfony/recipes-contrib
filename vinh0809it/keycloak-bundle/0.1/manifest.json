@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Vinh0809it\\KeycloakBundle\\KeycloakBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "The realm URL this app reaches Keycloak at, e.g. https://sso.example.com/realms/my-realm",
+        "KEYCLOAK_URL": ""
+    }
+}

@@ -1,0 +1,14 @@
+keycloak:
+    realm: '%env(KEYCLOAK_URL)%'
+    # The audience your API's access tokens carry (an audience mapper on the Keycloak client adds it).
+    audience: my-api
+
+# Then put the authenticator on a stateless firewall in security.yaml:
+#
+#   security:
+#       firewalls:
+#           api:
+#               pattern: ^/api
+#               stateless: true
+#               keycloak:
+#                   resolver: App\Security\UserResolver
