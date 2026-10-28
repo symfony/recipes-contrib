@@ -1,0 +1,14 @@
+graphql_orm:
+    endpoint: '%env(GRAPHQL_ORM_ENDPOINT)%'
+
+    # Dialect of the GraphQL API, e.g. GraphqlOrm\Dialect\DataApiBuilderDialect for Data API Builder
+    # dialect: GraphqlOrm\Dialect\DefaultDialect
+
+    # Where graphqlorm:make:entity writes entities and repositories
+    mapping:
+        entity:
+            dir: '%kernel.project_dir%/src/GraphQL/Entity'
+            namespace: App\GraphQL\Entity
+        repository:
+            dir: '%kernel.project_dir%/src/GraphQL/Repository'
+            namespace: App\GraphQL\Repository

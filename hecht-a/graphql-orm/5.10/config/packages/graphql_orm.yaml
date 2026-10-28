@@ -1,0 +1,55 @@
+graphql_orm:
+    endpoint: '%env(GRAPHQL_ORM_ENDPOINT)%'
+
+    # Dialect of the GraphQL API, e.g. GraphqlOrm\Dialect\DataApiBuilderDialect for Data API Builder
+    # dialect: GraphqlOrm\Dialect\DefaultDialect
+
+    # Where graphqlorm:make:entity writes entities and repositories
+    mapping:
+        entity:
+            dir: '%kernel.project_dir%/src/GraphQL/Entity'
+            namespace: App\GraphQL\Entity
+        repository:
+            dir: '%kernel.project_dir%/src/GraphQL/Repository'
+            namespace: App\GraphQL\Repository
+
+    # Keep the responses of the queries calling enableResultCache() in a cache pool, e.g. one using Redis
+    # result_cache:
+    #     pool: cache.app
+
+    # Keep the entities marked #[Cache] between requests
+    # second_level_cache:
+    #     enabled: true
+    #     pool: cache.app
+
+    # Only read the API: persist(), remove() and flush() throw
+    # read_only: true
+
+    # Send the queries as the hash of their text, as the automatic persisted queries of Apollo
+    # persisted_queries: true
+
+    # Several GraphQL APIs: a manager each, the options above being those of every manager
+    # managers:
+    #     main:
+    #         endpoint: '%env(GRAPHQL_ORM_ENDPOINT)%'
+    #     crm:
+    #         endpoint: '%env(CRM_GRAPHQL_ENDPOINT)%'
+    #         mapping:
+    #             entity:
+    #                 dir: '%kernel.project_dir%/src/GraphQL/Crm/Entity'
+    #                 namespace: App\GraphQL\Crm\Entity
+    #             repository:
+    #                 dir: '%kernel.project_dir%/src/GraphQL/Crm/Repository'
+    #                 namespace: App\GraphQL\Crm\Repository
+
+    # The alerts of the profiler, at the root only: they cover a whole request, whatever its managers
+    # profiler:
+    #     max_queries: 50         # queries of a request turning the toolbar yellow
+    #     max_query_time: 500     # milliseconds waiting for GraphQL; no alert by default
+    #     repeated_queries: 3     # repetitions reported as N+1
+
+# Unmask the values of the queries in the profiler while developing, so that its Replay button can send them again.
+# Never in production: the values may hold personal data.
+# when@dev:
+#     graphql_orm:
+#         redact_query_values: false
