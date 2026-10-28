@@ -1,0 +1,2 @@
+tmonier_sylius_audit_log:
+    resource: "@TmonierSyliusAuditLogPlugin/config/routes.yaml"

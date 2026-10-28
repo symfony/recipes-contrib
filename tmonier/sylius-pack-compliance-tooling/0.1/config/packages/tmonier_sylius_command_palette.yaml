@@ -1,0 +1,2 @@
+imports:
+    - { resource: "@TmonierSyliusCommandPalettePlugin/config/config.yaml" }

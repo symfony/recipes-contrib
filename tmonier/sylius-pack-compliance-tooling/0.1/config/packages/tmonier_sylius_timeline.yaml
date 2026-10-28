@@ -1,0 +1,2 @@
+imports:
+    - { resource: "@TmonierSyliusTimelinePlugin/config/config.yaml" }

@@ -1,0 +1,2 @@
+tmonier_sylius_gpsr:
+    resource: "@TmonierSyliusGpsrPlugin/config/routes.yaml"
