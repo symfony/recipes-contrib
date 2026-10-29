@@ -1,0 +1,6 @@
+softavis_turnstile:
+    site_key: '%env(TURNSTILE_SITE_KEY)%'
+    secret: '%env(TURNSTILE_SECRET)%'
+    # Configure the actual server-controlled hostname allowlist:
+    # expected_hostnames:
+    #     - your-real-hostname.example
