@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "silarhi/turbo-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Silarhi\\TurboBundle\\SilarhiTurboBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "templates/": "templates/"
+                },
+                "post-install-output": [
+                    "  * Install the JavaScript side: <comment>pnpm add @silarhi/turbo</> (or <comment>php bin/console importmap:require @silarhi/turbo</>)",
+                    "  * Render a page inside its Turbo Frame with <comment>{% extends 'base.html.twig'|turbo_frame %}</>:",
+                    "    frame requests then use <comment>templates/base-frame.html.twig</>.",
+                    "  * Read the documentation at <comment>https://turbo-bundle.silarhi.dev/</>"
+                ]
+            },
+            "files": {
+                "templates/base-frame.html.twig": {
+                    "contents": [
+                        "<turbo-frame id=\"{{ turbo_frame_id() }}\">",
+                        "    {% block body %}{% endblock %}",
+                        "</turbo-frame>",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d9716558f285f73ba8832ba06503640e38bd0d0a"
+        }
+    }
+}
