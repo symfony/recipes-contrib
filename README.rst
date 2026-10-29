@@ -48,8 +48,10 @@ client bundle.
 
 If environment variables are used, they must be provided to the bundle's config.
 
-A bundle without config or routes do not need a recipe. Flex is smart enough to
-install that bundle anyways.
+A bundle without config or routes doesn't need a recipe. Flex registers it in
+``config/bundles.php`` when the package has the ``symfony-bundle`` type. The
+bundle class must follow the `naming conventions`_, for example
+``Acme\BlogBundle\AcmeBlogBundle`` in ``src/AcmeBlogBundle.php``.
 
 Modify Other Bundle's config
 ############################
@@ -75,3 +77,4 @@ front-end assets etc. Recipes are for quick installation of packages.
 .. _`Symfony recipes`: https://github.com/symfony/recipes
 .. _`documentation`: https://github.com/symfony/recipes
 .. _`RECIPES.md`: https://github.com/symfony/recipes-contrib/blob/flex/main/RECIPES.md
+.. _`naming conventions`: https://symfony.com/doc/current/bundles/best_practices.html#bundles-naming-conventions
