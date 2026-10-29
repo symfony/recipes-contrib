@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Silarhi\\CapBundle\\SilarhiCapBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "The URL of your Cap site key, and its secret key (set it in .env.local or as a secret)",
+        "CAP_ENDPOINT": "https://cap.example.com/site-key/",
+        "CAP_SECRET_KEY": ""
+    }
+}

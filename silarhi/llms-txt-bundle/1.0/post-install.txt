@@ -1,0 +1,3 @@
+  * Set the <comment>title</> of your website in <comment>%CONFIG_DIR%/packages/llms_txt.yaml</>.
+  * List a route in <comment>/llms.txt</> with its <comment>llms_txt</> route option.
+  * Read the documentation at <comment>https://llms-txt-bundle.silarhi.dev/</>
