@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "websign-dev/sillbeam-core": {
+            "manifest": {
+                "bundles": {
+                    "Sillbeam\\Core\\SillbeamCoreBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  1. In bin/console use Sillbeam\\Core\\Console\\Application; instead of Symfony's Console Application.",
+                    "     Keep the existing bootstrap and Kernel, including import aliases; this enables Doctor before boot.",
+                    "     Never overwrite application files or force a recipe reinstall to apply these instructions.",
+                    "  2. Run php bin/console sillbeam:doctor and review action required and not verified checks.",
+                    "     Confirm the bundle in config/bundles.php and exactly one type: sillbeam route import",
+                    "     in config/routes/sillbeam.yaml (or your existing route configuration).",
+                    "  3. In services.yaml append Module and Project discovery roots to existing resource exclusions.",
+                    "     Preserve existing exclusions and explicit services; custom roots need their actual paths.",
+                    "     Make the reviewed changes yourself, then rerun php bin/console sillbeam:doctor.",
+                    "  4. Create a descriptor: php bin/console sillbeam:make:module Hello",
+                    "     Add the Greeting service and /hello controller from:",
+                    "     https://github.com/WebSign-Dev/sillbeam-core/blob/v0.3.0/docs/guides/getting-started.md",
+                    "     Run php bin/console sillbeam:architecture, then php bin/console debug:router hello."
+                ]
+            },
+            "files": {
+                "config/routes/sillbeam.yaml": {
+                    "contents": [
+                        "sillbeam:",
+                        "    resource: .",
+                        "    type: sillbeam",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6aadbdd3e4ea987aa64d96ab3eaa018cf017efa3"
+        }
+    }
+}
