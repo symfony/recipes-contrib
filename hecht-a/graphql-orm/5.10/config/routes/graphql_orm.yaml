@@ -1,0 +1,4 @@
+# The Replay button of the profiler (/_graphql_orm/replay), answering in debug mode only, and the search of the
+# autocomplete GraphqlEntityType fields (/_graphql_orm/autocomplete), routed when symfony/form is installed
+graphql_orm:
+    resource: '@GraphqlOrmBundle/Resources/config/routes.php'

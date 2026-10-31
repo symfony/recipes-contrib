@@ -1,0 +1,4 @@
+  * Set <info>GRAPHQL_ORM_ENDPOINT</> to the URL of your GraphQL API (in your local env file)
+  * Choose the <info>dialect</> of your API in <comment>config/packages/graphql_orm.yaml</>
+  * Generate a first entity: <comment>php bin/console graphqlorm:make:entity</>
+  * Read the documentation: <comment>https://hecht-a.github.io/graphql-orm/</>
