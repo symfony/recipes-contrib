@@ -145,6 +145,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [cyberomulus/sitemap-generator-bundle](https://packagist.org/packages/cyberomulus/sitemap-generator-bundle) | [1.2](../../../tree/main/cyberomulus/sitemap-generator-bundle/1.2) |
 | [cyllene-digital/ai-translation-bundle](https://packagist.org/packages/cyllene-digital/ai-translation-bundle) | [1.0](../../../tree/main/cyllene-digital/ai-translation-bundle/1.0) |
 | [cyllene-digital/sylius-advanced-taxon-plugin](https://packagist.org/packages/cyllene-digital/sylius-advanced-taxon-plugin) | [1.0](../../../tree/main/cyllene-digital/sylius-advanced-taxon-plugin/1.0) |
+| [cyllene-digital/sylius-ai-translation-plugin](https://packagist.org/packages/cyllene-digital/sylius-ai-translation-plugin) | [1.0](../../../tree/main/cyllene-digital/sylius-ai-translation-plugin/1.0) |
 | [cyllene-digital/sylius-axepta-plugin](https://packagist.org/packages/cyllene-digital/sylius-axepta-plugin) | [1.0](../../../tree/main/cyllene-digital/sylius-axepta-plugin/1.0) |
 | [cyllene-digital/sylius-tarteaucitron-plugin](https://packagist.org/packages/cyllene-digital/sylius-tarteaucitron-plugin) | [1.0](../../../tree/main/cyllene-digital/sylius-tarteaucitron-plugin/1.0) |
 | [cyllene-digital/sylius-translation-flags-plugin](https://packagist.org/packages/cyllene-digital/sylius-translation-flags-plugin) | [1.0](../../../tree/main/cyllene-digital/sylius-translation-flags-plugin/1.0) |

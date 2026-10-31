@@ -444,6 +444,9 @@
         "cyllene-digital/sylius-advanced-taxon-plugin": [
             "1.0"
         ],
+        "cyllene-digital/sylius-ai-translation-plugin": [
+            "1.0"
+        ],
         "cyllene-digital/sylius-axepta-plugin": [
             "1.0"
         ],

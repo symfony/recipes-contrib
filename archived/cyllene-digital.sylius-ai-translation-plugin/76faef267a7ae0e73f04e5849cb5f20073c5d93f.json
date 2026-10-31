@@ -1,0 +1,57 @@
+{
+    "manifests": {
+        "cyllene-digital/sylius-ai-translation-plugin": {
+            "manifest": {
+                "bundles": {
+                    "CylleneDigital\\SyliusAiTranslationPlugin\\CylleneDigitalSyliusAiTranslationPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  <fg=blue;options=bold>Sylius AI Translation Plugin</> is installed.",
+                    "",
+                    "  <options=bold>Four steps are left:</>",
+                    "",
+                    "    1. Create the engine tables (the engine ships its mapping, not migrations):",
+                    "",
+                    "       <comment>bin/console doctrine:migrations:diff && bin/console doctrine:migrations:migrate</>",
+                    "",
+                    "    2. Import the plugin's admin entrypoint from <comment>assets/admin/entrypoint.js</>, then build",
+                    "       your assets (<comment>yarn build</>) - without it both screens stay unstyled and inert:",
+                    "",
+                    "       <comment>import '../../vendor/cyllene-digital/sylius-ai-translation-plugin/assets/admin/entrypoint.js';</>",
+                    "",
+                    "    3. Both screens answer 403 until an admin holds <comment>ROLE_AI_TRANSLATION_MANAGE</>. Grant it,",
+                    "       for instance to every admin, in <comment>%CONFIG_DIR%/packages/security.yaml</>:",
+                    "",
+                    "       <comment>security:</>",
+                    "       <comment>    role_hierarchy:</>",
+                    "       <comment>        ROLE_ADMINISTRATION_ACCESS: [ROLE_AI_TRANSLATION_MANAGE]</>",
+                    "",
+                    "    4. AI generation runs asynchronously: keep a worker on the engine transport.",
+                    "",
+                    "       <comment>bin/console messenger:consume cyllene_ai_translation</>",
+                    "",
+                    "  Providers and engine settings: <comment>%CONFIG_DIR%/packages/cyllene_digital_ai_translation.yaml</>",
+                    "  The screens are under <comment>Translations</> in the admin menu.",
+                    "",
+                    "  Documentation: https://github.com/CylleneDigital/SyliusAiTranslationPlugin#installation"
+                ]
+            },
+            "files": {
+                "config/routes/cyllene_digital_sylius_ai_translation.yaml": {
+                    "contents": [
+                        "cyllene_digital_sylius_ai_translation:",
+                        "    resource: '@CylleneDigitalSyliusAiTranslationPlugin/config/routes.yaml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "76faef267a7ae0e73f04e5849cb5f20073c5d93f"
+        }
+    }
+}
