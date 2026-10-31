@@ -55,6 +55,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [artprima/prometheus-metrics-bundle](https://packagist.org/packages/artprima/prometheus-metrics-bundle) | [1.21](../../../tree/main/artprima/prometheus-metrics-bundle/1.21) |
 | [artyuum/request-dto-mapper-bundle](https://packagist.org/packages/artyuum/request-dto-mapper-bundle) | [1.0](../../../tree/main/artyuum/request-dto-mapper-bundle/1.0) |
 | [assoconnect/mjml-bundle](https://packagist.org/packages/assoconnect/mjml-bundle) | [1.0](../../../tree/main/assoconnect/mjml-bundle/1.0) |
+| [astro-masters/dadata-bundle](https://packagist.org/packages/astro-masters/dadata-bundle) | [1.0](../../../tree/main/astro-masters/dadata-bundle/1.0) |
 | [async-aws/async-aws-bundle](https://packagist.org/packages/async-aws/async-aws-bundle) | [1.0](../../../tree/main/async-aws/async-aws-bundle/1.0) |
 | [atlas/symfony](https://packagist.org/packages/atlas/symfony) | [1.0](../../../tree/main/atlas/symfony/1.0) |
 | [aws/aws-sdk-php-symfony](https://packagist.org/packages/aws/aws-sdk-php-symfony) | [1.3](../../../tree/main/aws/aws-sdk-php-symfony/1.3) |

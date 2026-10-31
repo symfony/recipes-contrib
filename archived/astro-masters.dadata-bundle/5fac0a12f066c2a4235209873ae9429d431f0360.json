@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "astro-masters/dadata-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Velhron\\DadataBundle\\VelhronDadataBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "DADATA_TOKEN": "",
+                    "DADATA_SECRET": ""
+                }
+            },
+            "files": {
+                "config/packages/velhron_dadata.yaml": {
+                    "contents": [
+                        "velhron_dadata:",
+                        "    token: '%env(DADATA_TOKEN)%'",
+                        "    secret: '%env(DADATA_SECRET)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5fac0a12f066c2a4235209873ae9429d431f0360"
+        }
+    }
+}

@@ -160,6 +160,9 @@
         "assoconnect/mjml-bundle": [
             "1.0"
         ],
+        "astro-masters/dadata-bundle": [
+            "1.0"
+        ],
         "async-aws/async-aws-bundle": [
             "0.1",
             "1.0"
