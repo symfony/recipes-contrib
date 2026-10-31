@@ -923,6 +923,11 @@
         "hboie/jasper-report-bundle": [
             "1.1"
         ],
+        "hecht-a/graphql-orm": [
+            "5.0",
+            "5.6",
+            "5.10"
+        ],
         "helios-ag/fm-elfinder-bundle": [
             "7.0",
             "10.0"

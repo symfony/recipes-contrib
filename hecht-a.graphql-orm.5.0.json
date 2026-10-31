@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "hecht-a/graphql-orm": {
+            "manifest": {
+                "bundles": {
+                    "GraphqlOrm\\GraphqlOrmBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "URL of the GraphQL API queried by the ORM",
+                    "GRAPHQL_ORM_ENDPOINT": "http://localhost:4000/graphql"
+                },
+                "post-install-output": [
+                    "  * Set <info>GRAPHQL_ORM_ENDPOINT</> to the URL of your GraphQL API (in your local env file)",
+                    "  * Choose the <info>dialect</> of your API in <comment>config/packages/graphql_orm.yaml</>",
+                    "  * Generate a first entity: <comment>php bin/console graphqlorm:make:entity</>",
+                    "  * Read the documentation: <comment>https://hecht-a.github.io/graphql-orm/</>"
+                ]
+            },
+            "files": {
+                "config/packages/graphql_orm.yaml": {
+                    "contents": [
+                        "graphql_orm:",
+                        "    endpoint: '%env(GRAPHQL_ORM_ENDPOINT)%'",
+                        "",
+                        "    # Dialect of the GraphQL API, e.g. GraphqlOrm\\Dialect\\DataApiBuilderDialect for Data API Builder",
+                        "    # dialect: GraphqlOrm\\Dialect\\DefaultDialect",
+                        "",
+                        "    # Where graphqlorm:make:entity writes entities and repositories",
+                        "    mapping:",
+                        "        entity:",
+                        "            dir: '%kernel.project_dir%/src/GraphQL/Entity'",
+                        "            namespace: App\\GraphQL\\Entity",
+                        "        repository:",
+                        "            dir: '%kernel.project_dir%/src/GraphQL/Repository'",
+                        "            namespace: App\\GraphQL\\Repository",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "75d232c4e637a11d5712583df82430e49926b7a3"
+        }
+    }
+}

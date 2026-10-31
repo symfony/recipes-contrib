@@ -293,6 +293,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [happyr/json-api-response-factory](https://packagist.org/packages/happyr/json-api-response-factory) | [0.1](../../../tree/main/happyr/json-api-response-factory/0.1) |
 | [happyr/linkedin-api-client](https://packagist.org/packages/happyr/linkedin-api-client) | [1.0](../../../tree/main/happyr/linkedin-api-client/1.0) |
 | [hboie/jasper-report-bundle](https://packagist.org/packages/hboie/jasper-report-bundle) | [1.1](../../../tree/main/hboie/jasper-report-bundle/1.1) |
+| [hecht-a/graphql-orm](https://packagist.org/packages/hecht-a/graphql-orm) | [5.10](../../../tree/main/hecht-a/graphql-orm/5.10) |
 | [helios-ag/fm-elfinder-bundle](https://packagist.org/packages/helios-ag/fm-elfinder-bundle) | [10.0](../../../tree/main/helios-ag/fm-elfinder-bundle/10.0) |
 | [helppc/supervisor-bundle](https://packagist.org/packages/helppc/supervisor-bundle) | [1.0](../../../tree/main/helppc/supervisor-bundle/1.0) |
 | [helppc/supervisor-rest-bundle](https://packagist.org/packages/helppc/supervisor-rest-bundle) | [1.0](../../../tree/main/helppc/supervisor-rest-bundle/1.0) |
