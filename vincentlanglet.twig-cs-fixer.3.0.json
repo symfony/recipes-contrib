@@ -3,6 +3,7 @@
         "vincentlanglet/twig-cs-fixer": {
             "manifest": {
                 "gitignore": [
+                    "/.twig-cs-fixer.php",
                     "/.twig-cs-fixer.cache"
                 ],
                 "post-install-output": [
@@ -13,7 +14,7 @@
                 ]
             },
             "files": [],
-            "ref": "d42582ae1bce86fd43491d6264c738b0867f8ffe"
+            "ref": "0a2d420aa6554f632804a3f21624e16314fe8588"
         }
     }
 }
