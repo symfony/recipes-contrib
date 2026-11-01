@@ -1,0 +1,54 @@
+{
+    "manifests": {
+        "mtubis/html-translator-bundle": {
+            "manifest": {
+                "bundles": {
+                    "HtmlTranslator\\Bundle\\HtmlTranslatorBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Get a key at https://platform.openai.com/api-keys; or switch the provider in config/packages/html_translator.yaml",
+                    "OPENAI_API_KEY": "",
+                    "HTML_TRANSLATOR_OPENAI_MODEL": "gpt-4o-mini"
+                },
+                "post-install-output": [
+                    "  * Set <info>OPENAI_API_KEY</> and <info>HTML_TRANSLATOR_OPENAI_MODEL</> in <comment>.env.local</> (or use <comment>bin/console secrets:set</>)",
+                    "  * Check the configuration: <comment>bin/console html-translator:check</>",
+                    "  * Inject <info>HtmlTranslator\\HtmlTranslator</> and translate: https://github.com/mtubis/html-translator-bundle#translating"
+                ]
+            },
+            "files": {
+                "config/packages/html_translator.yaml": {
+                    "contents": [
+                        "# See https://github.com/mtubis/html-translator-bundle#readme and `bin/console config:dump-reference html_translator`.",
+                        "html_translator:",
+                        "    default_provider: openai",
+                        "    providers:",
+                        "        openai:",
+                        "            driver: openai",
+                        "            api_key: '%env(OPENAI_API_KEY)%'",
+                        "            model: '%env(HTML_TRANSLATOR_OPENAI_MODEL)%'",
+                        "        # anthropic:",
+                        "        #     driver: anthropic",
+                        "        #     api_key: '%env(ANTHROPIC_API_KEY)%'",
+                        "        #     model: '%env(HTML_TRANSLATOR_ANTHROPIC_MODEL)%'",
+                        "",
+                        "when@test:",
+                        "    html_translator:",
+                        "        # Offline in tests: accented \"translations\", no network, no key.",
+                        "        providers:",
+                        "            openai:",
+                        "                driver: pseudo",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "88aa3bb7291ecf1fe75fa075ff38ead4239ebc48"
+        }
+    }
+}
