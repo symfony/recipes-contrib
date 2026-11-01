@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "HtmlTranslator\\Bundle\\HtmlTranslatorBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "Get a key at https://platform.openai.com/api-keys; or switch the provider in config/packages/html_translator.yaml",
+        "OPENAI_API_KEY": "",
+        "HTML_TRANSLATOR_OPENAI_MODEL": "gpt-4o-mini"
+    }
+}
