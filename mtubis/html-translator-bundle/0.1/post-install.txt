@@ -1,0 +1,3 @@
+  * Set <info>OPENAI_API_KEY</> and <info>HTML_TRANSLATOR_OPENAI_MODEL</> in <comment>.env.local</> (or use <comment>bin/console secrets:set</>)
+  * Check the configuration: <comment>bin/console html-translator:check</>
+  * Inject <info>HtmlTranslator\HtmlTranslator</> and translate: https://github.com/mtubis/html-translator-bundle#translating
