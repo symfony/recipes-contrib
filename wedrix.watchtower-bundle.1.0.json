@@ -1,0 +1,93 @@
+{
+    "manifests": {
+        "wedrix/watchtower-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Wedrix\\WatchtowerBundle\\WedrixWatchtowerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/wedrix_watchtower_bundle.yaml": {
+                    "contents": [
+                        "wedrix_watchtower:",
+                        "    endpoint: '/graphql.json'",
+                        "    schema_file: '%kernel.project_dir%/config/watchtower/schema.graphql'",
+                        "    plugins_directory: '%kernel.project_dir%/config/watchtower/plugins'",
+                        "    scalar_type_definitions_directory: '%kernel.project_dir%/config/watchtower/scalar_type_definitions'",
+                        "    schema_cache_directory: '%kernel.project_dir%/var/cache/watchtower/schema'",
+                        "    cache_schema: false",
+                        "    debug: true",
+                        "    context:",
+                        "        # Register services here to access them in the context param.",
+                        "        # The service key can be any name of your choosing but the value should be the service id.",
+                        "        # For example: entity_manager: 'doctrine.orm.entity_manager'",
+                        "        entity_manager: 'doctrine.orm.entity_manager'",
+                        "",
+                        "when@prod:",
+                        "    wedrix_watchtower:",
+                        "        cache_schema: true",
+                        "        debug: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/wedrix_watchtower_bundle_routes.yaml": {
+                    "contents": [
+                        "wedrix_watchtower_bundle_routes:",
+                        "    resource: '@WedrixWatchtowerBundle/config/routes.yaml'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/watchtower/plugins/authorizors/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/watchtower/plugins/filters/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/watchtower/plugins/mutations/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/watchtower/plugins/orderings/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/watchtower/plugins/resolvers/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/watchtower/plugins/selectors/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/watchtower/scalar_type_definitions/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "a64a4128b4aa625fc0ccb2ab8390c3679183a1ce"
+        }
+    }
+}
