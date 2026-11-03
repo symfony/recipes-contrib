@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "Welcomattic\\MessengerCentral\\MessengerCentralBundle": ["dev"]
+    }
+}
