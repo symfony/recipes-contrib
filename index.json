@@ -2570,6 +2570,9 @@
         "weglot/translate-bundle": [
             "0.6"
         ],
+        "welcomattic/messenger-central": [
+            "0.1"
+        ],
         "wemakecustom/doctrine-naming-strategy-bundle": [
             "1.0"
         ],

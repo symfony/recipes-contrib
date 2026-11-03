@@ -793,6 +793,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [webylum/puppeteer-server-client-bundle](https://packagist.org/packages/webylum/puppeteer-server-client-bundle) | [1.2](../../../tree/main/webylum/puppeteer-server-client-bundle/1.2) |
 | [wedrix/watchtower-bundle](https://packagist.org/packages/wedrix/watchtower-bundle) | [2.0](../../../tree/main/wedrix/watchtower-bundle/2.0) |
 | [weglot/translate-bundle](https://packagist.org/packages/weglot/translate-bundle) | [0.6](../../../tree/main/weglot/translate-bundle/0.6) |
+| [welcomattic/messenger-central](https://packagist.org/packages/welcomattic/messenger-central) | [0.1](../../../tree/main/welcomattic/messenger-central/0.1) |
 | [wemakecustom/doctrine-naming-strategy-bundle](https://packagist.org/packages/wemakecustom/doctrine-naming-strategy-bundle) | [1.0](../../../tree/main/wemakecustom/doctrine-naming-strategy-bundle/1.0) |
 | [wemxo/dynamic-form-bundle](https://packagist.org/packages/wemxo/dynamic-form-bundle) | [1.0](../../../tree/main/wemxo/dynamic-form-bundle/1.0) |
 | [wickedone/phrase-tag-bundle](https://packagist.org/packages/wickedone/phrase-tag-bundle) | [2.0](../../../tree/main/wickedone/phrase-tag-bundle/2.0) |

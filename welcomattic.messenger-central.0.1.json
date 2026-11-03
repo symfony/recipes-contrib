@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "welcomattic/messenger-central": {
+            "manifest": {
+                "bundles": {
+                    "Welcomattic\\MessengerCentral\\MessengerCentralBundle": [
+                        "dev"
+                    ]
+                },
+                "post-install-output": [
+                    "  * Drive the Messenger workers of your application from a terminal UI:",
+                    "",
+                    "      <fg=yellow>php bin/console messenger:central</>",
+                    "",
+                    "  * Docs: <comment>https://github.com/welcoMattic/messenger-central</>"
+                ]
+            },
+            "files": [],
+            "ref": "5fe42b2fb543dd0eb760c59817e91ffc7a8d1f31"
+        }
+    }
+}
