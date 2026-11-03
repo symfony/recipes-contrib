@@ -1,0 +1,12 @@
+# Rate limiters used by the 2FA resend and password-reset controllers.
+# The values are examples: adjust them to your needs.
+framework:
+    rate_limiter:
+        two_factor_resend:
+            policy: sliding_window
+            limit: 3
+            interval: '15 minutes'
+        password_reset:
+            policy: sliding_window
+            limit: 5
+            interval: '15 minutes'
