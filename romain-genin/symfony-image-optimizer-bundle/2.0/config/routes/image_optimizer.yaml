@@ -1,0 +1,4 @@
+# Responsive image variants generated on demand (/_image/...), used by responsive_image()
+image_optimizer:
+    resource: .
+    type: image_optimizer
