@@ -1,0 +1,61 @@
+{
+    "manifests": {
+        "romain-genin/symfony-ecom": {
+            "manifest": {
+                "bundles": {
+                    "RomainGenin\\AstraCheckoutBundle\\AstraCheckoutBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "SHOP_MAILER_FROM": "no-reply@example.com"
+                },
+                "post-install-output": [
+                    "  * Create the tables: <comment>php bin/console make:migration && php bin/console doctrine:migrations:migrate</comment>",
+                    "  * Demo products (optional): <comment>php bin/console astra:demo:load</comment>",
+                    "  * Shop: <comment>/products</comment>, configuration: <fg=green>config/packages/astra_checkout.yaml</>",
+                    "  * Docs: <comment>https://packagist.org/packages/romain-genin/symfony-ecom</comment>"
+                ]
+            },
+            "files": {
+                "config/packages/astra_checkout.yaml": {
+                    "contents": [
+                        "# All keys are optional, see https://packagist.org/packages/romain-genin/symfony-ecom",
+                        "astra_checkout:",
+                        "    shop_name: 'My shop'",
+                        "    mailer:",
+                        "        from: '%env(SHOP_MAILER_FROM)%'",
+                        "",
+                        "    # Reuse your own user accounts (otherwise: built-in customer accounts, see the \"Security\" section of the README)",
+                        "    # customer:",
+                        "    #     class: App\\Entity\\User",
+                        "    # account:",
+                        "    #     login_route: app_login",
+                        "    #     logout_route: app_logout",
+                        "    #     register_route: app_register",
+                        "",
+                        "    # Render the shop pages in your own layout",
+                        "    # layout: base.html.twig",
+                        "    # routing:",
+                        "    #     home: false",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/astra_checkout.yaml": {
+                    "contents": [
+                        "# Shop pages and actions (paths: astra_checkout.routing.paths)",
+                        "astra_checkout:",
+                        "    resource: '@AstraCheckoutBundle/config/routes.yaml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "82538430be36bdaf86bcb43707175521f166124b"
+        }
+    }
+}

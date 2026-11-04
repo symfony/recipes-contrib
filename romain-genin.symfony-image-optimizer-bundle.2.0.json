@@ -1,0 +1,35 @@
+{
+    "manifests": {
+        "romain-genin/symfony-image-optimizer-bundle": {
+            "manifest": {
+                "bundles": {
+                    "RomainGenin\\ImageOptimizerBundle\\ImageOptimizerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * Every uploaded image is now optimized losslessly.",
+                    "  * Responsive variants: <comment>{{ responsive_image('uploads/photo.jpg', {alt: 'Alt text'}) }}</comment>",
+                    "  * Better results with the optional tools: <comment>apt-get install libjpeg-turbo-progs optipng webp gifsicle libavif-bin</comment>",
+                    "  * Docs: <comment>https://packagist.org/packages/romain-genin/symfony-image-optimizer-bundle</comment>"
+                ]
+            },
+            "files": {
+                "config/routes/image_optimizer.yaml": {
+                    "contents": [
+                        "# Responsive image variants generated on demand (/_image/...), used by responsive_image()",
+                        "image_optimizer:",
+                        "    resource: .",
+                        "    type: image_optimizer",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b4cdeb414b1ff76ff284c83765da01dedc9013fd"
+        }
+    }
+}
