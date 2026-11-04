@@ -1,0 +1,5 @@
+# The approvals page for held calls. It checks tool_guard.approver_role itself; keep it behind
+# your firewall so that visitors are asked to sign in.
+tool_guard:
+    resource: '@ToolGuardBundle/config/routes.php'
+    prefix: /admin/ai

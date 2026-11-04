@@ -1,0 +1,17 @@
+{
+    "bundles": {
+        "Acencyril\\ToolGuardBundle\\ToolGuardBundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "post-install-output": [
+        "  * <fg=blue>Tool Guard</>: put <comment>#[Granted]</>, <comment>#[Limit]</>, <comment>#[RateLimit]</> or <comment>#[RequiresApproval]</> on your AI tools.",
+        "  * <comment>php bin/console debug:tool-guard</> lists every tool an AI can call and its rules.",
+        "  * Held calls wait at <comment>/admin/ai/approvals</> (ROLE_ADMIN): keep it behind your firewall,",
+        "    or change the prefix in <comment>config/routes/tool_guard.yaml</>.",
+        ""
+    ]
+}
