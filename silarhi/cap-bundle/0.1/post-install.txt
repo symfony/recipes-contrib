@@ -1,0 +1,4 @@
+  * Set <comment>CAP_ENDPOINT</> and <comment>CAP_SECRET_KEY</> to a site key of your Cap Standalone server.
+  * The bundle needs a PSR-17 implementation: <comment>composer require nyholm/psr7</>
+  * Add a <comment>Silarhi\CapBundle\Form\CapType</> field to a form to protect it.
+  * Read the documentation at <comment>https://cap-bundle.silarhi.dev/</>

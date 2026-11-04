@@ -1,0 +1,2 @@
+picasso:
+    resource: '@PicassoBundle/config/routes.php'

@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Silarhi\\TurboBundle\\SilarhiTurboBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "templates/": "templates/"
+    }
+}
