@@ -1,0 +1,12 @@
+  * Prefix your controllers with the locale, in <fg=green>config/routes.yaml</>:
+        prefix: /{_locale}
+        requirements: { _locale: '%multilang.locales_requirement%' }
+    (or run <comment>php bin/console multilang:install</comment> to do it for you)
+
+  * Tailwind v4, in <fg=green>assets/styles/app.css</>:
+        @source "../../vendor/romain-genin/symfony-multilang-bundle/templates";
+        @import "../../vendor/romain-genin/symfony-multilang-bundle/assets/multilang.css";
+
+  * Alpine.js: <comment>php bin/console importmap:require alpinejs</comment>
+
+  * Read the docs: <comment>https://packagist.org/packages/romain-genin/symfony-multilang-bundle</comment>

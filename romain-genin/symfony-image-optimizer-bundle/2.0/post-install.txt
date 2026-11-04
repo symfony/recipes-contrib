@@ -1,0 +1,4 @@
+  * Every uploaded image is now optimized losslessly.
+  * Responsive variants: <comment>{{ responsive_image('uploads/photo.jpg', {alt: 'Alt text'}) }}</comment>
+  * Better results with the optional tools: <comment>apt-get install libjpeg-turbo-progs optipng webp gifsicle libavif-bin</comment>
+  * Docs: <comment>https://packagist.org/packages/romain-genin/symfony-image-optimizer-bundle</comment>

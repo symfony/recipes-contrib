@@ -1,0 +1,3 @@
+# Shop pages and actions (paths: astra_checkout.routing.paths)
+astra_checkout:
+    resource: '@AstraCheckoutBundle/config/routes.yaml'
