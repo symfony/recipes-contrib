@@ -1,0 +1,5 @@
+{
+    "bundles": {
+        "JulienBohy\\GitProfilerBundle\\GitProfilerBundle": ["dev", "test"]
+    }
+}
