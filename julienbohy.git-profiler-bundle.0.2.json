@@ -1,0 +1,16 @@
+{
+    "manifests": {
+        "julienbohy/git-profiler-bundle": {
+            "manifest": {
+                "bundles": {
+                    "JulienBohy\\GitProfilerBundle\\GitProfilerBundle": [
+                        "dev",
+                        "test"
+                    ]
+                }
+            },
+            "files": [],
+            "ref": "0f75df19210a6aa418de12262e3eb1bd83acb94b"
+        }
+    }
+}
