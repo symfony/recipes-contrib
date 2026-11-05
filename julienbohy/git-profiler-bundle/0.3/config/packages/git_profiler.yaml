@@ -1,0 +1,8 @@
+when@dev:
+    git_profiler:
+        # git_binary: ~           # path to git; null = looked up in the PATH
+        # timeout: 5              # seconds per git command
+        # graph_commit_limit: 30  # commits in the graph
+
+when@test:
+    git_profiler: ~
