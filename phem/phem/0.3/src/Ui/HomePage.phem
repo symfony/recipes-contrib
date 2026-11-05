@@ -1,0 +1,19 @@
+<?phem
+
+namespace App\Ui;
+
+use Phem\Attribute\Page;
+use Phem\Node;
+
+use function App\Ui\Common\Document;
+
+#[Page('/')]
+function HomePage(): Node
+{
+    return (
+        <Document>
+            <Document:title>My app</Document:title>
+            <h1>Hello, Phem!</h1>
+        </Document>
+    );
+}

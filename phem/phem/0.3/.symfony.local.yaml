@@ -1,0 +1,4 @@
+workers:
+    # Compiles the .phem files, and compiles them again when you save them.
+    phemc:
+        cmd: ['vendor/bin/phemc', 'watch', 'src']

@@ -1,0 +1,26 @@
+<?phem
+
+namespace App\Ui\Common;
+
+use Phem\Attribute\Component;
+use Phem\{Html, Node, Root};
+
+// The HTML document of the pages. A page gives its title with <Document:title>.
+#[Component]
+function Document(Html $title, Html $children): Node
+{
+    return (
+        <html lang="en">
+            <head>
+                <meta charset="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <title>{{ title }}</title>
+                <link rel="icon" href="data:," />
+                {{ importmap('app') }}
+            </head>
+            <body>
+                <Root>{{ children }}</Root>
+            </body>
+        </html>
+    );
+}

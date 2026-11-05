@@ -1,0 +1,15 @@
+{
+    "bundles": {
+        "Phem\\PhemBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        ".symfony.local.yaml": ".symfony.local.yaml",
+        "src/": "%SRC_DIR%/"
+    },
+    "post-install-output": [
+        "  * Start the web server: <comment>symfony serve</>",
+        "    It also runs <comment>vendor/bin/phemc watch src</>, which compiles the <comment>.phem</> files when you save them",
+        "  * Open the URL that it shows: the page of <comment>src/Ui/HomePage.phem</> is at <comment>/</>",
+        "  * Read the guide: <comment>https://phem.dev/getting-started/</>"
+    ]
+}
