@@ -803,6 +803,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [wisembly/amqp-bundle](https://packagist.org/packages/wisembly/amqp-bundle) | [1.4](../../../tree/main/wisembly/amqp-bundle/1.4) |
 | [wlindabla/mailing-bundle](https://packagist.org/packages/wlindabla/mailing-bundle) | [1.0](../../../tree/main/wlindabla/mailing-bundle/1.0) |
 | [wlindabla/share-service-bundle](https://packagist.org/packages/wlindabla/share-service-bundle) | [1.0](../../../tree/main/wlindabla/share-service-bundle/1.0) |
+| [wlindabla/user-bundle](https://packagist.org/packages/wlindabla/user-bundle) | [1.0](../../../tree/main/wlindabla/user-bundle/1.0) |
 | [wouterj/eloquent-bundle](https://packagist.org/packages/wouterj/eloquent-bundle) | [1.0](../../../tree/main/wouterj/eloquent-bundle/1.0) |
 | [wow-apps/symfony-slack-bot](https://packagist.org/packages/wow-apps/symfony-slack-bot) | [4.0](../../../tree/main/wow-apps/symfony-slack-bot/4.0) |
 | [xcore/inline-editing-bundle](https://packagist.org/packages/xcore/inline-editing-bundle) | [1.2](../../../tree/main/xcore/inline-editing-bundle/1.2) |

@@ -1,0 +1,118 @@
+{
+    "manifests": {
+        "wlindabla/user-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Wlindabla\\UserBundle\\WlindablaUserBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "container": {
+                    "app.site_name": "My Application",
+                    "app.env": "%kernel.environment%"
+                },
+                "post-install-output": [
+                    "  <bg=blue;fg=white>                                                          </>",
+                    "  <bg=blue;fg=white> wlindabla/user-bundle installed                         </>",
+                    "  <bg=blue;fg=white>                                                          </>",
+                    "",
+                    "  * <info>Next steps</info> (the bundle cannot guess your entities and firewall):",
+                    "",
+                    "    1. Create your <comment>App\\Entity\\User</comment> (implements Wlindabla\\UserBundle\\Infrastructure\\Model\\UserInterface)",
+                    "       and its repository, or change <comment>wlindabla_user.classes.user</comment> in",
+                    "       <comment>config/packages/wlindabla_user.yaml</comment>.",
+                    "    2. Configure your <comment>security.yaml</comment> (provider, firewall, login and logout paths).",
+                    "    3. Configure <comment>wlindabla/share-service-bundle</comment> (id_encryption key, async transport)",
+                    "       and <comment>wlindabla/mailing-bundle</comment> (system and support mailers).",
+                    "    4. Run <comment>php bin/console doctrine:migrations:diff</comment> then <comment>doctrine:migrations:migrate</comment>.",
+                    "    5. Start a worker: <comment>php bin/console messenger:consume async_app_transport -vv</comment>",
+                    "",
+                    "  * <info>Docs</info>: https://github.com/Agbokoudjo/user-bundle/tree/main/docs"
+                ]
+            },
+            "files": {
+                "config/packages/wlindabla_user.yaml": {
+                    "contents": [
+                        "# Configuration reference: https://github.com/Agbokoudjo/user-bundle/blob/main/docs/configuration.md",
+                        "wlindabla_user:",
+                        "    classes:",
+                        "        # REQUIRED. Your user entity. It must implement",
+                        "        # Wlindabla\\UserBundle\\Infrastructure\\Model\\UserInterface.",
+                        "        # Create it first (see docs/entities-and-migrations.md), or change this class name.",
+                        "        user: App\\Entity\\User",
+                        "",
+                        "        # Optional modules: uncomment a class to switch its module on.",
+                        "        # user_session: App\\Entity\\UserSession              # needs session_control.firewall_name",
+                        "        # logger_login_user: App\\Entity\\LoggerLoginUser",
+                        "        # two_factor_code: App\\Entity\\TwoFactorCode         # needs two_factor.firewall_name",
+                        "",
+                        "        # Permission module: set ALL FOUR or NONE.",
+                        "        # permission_role: App\\Entity\\PermissionRole",
+                        "        # permission_group: App\\Entity\\PermissionGroup",
+                        "        # user_permission_role: App\\Entity\\UserPermissionRole",
+                        "        # user_permission_group: App\\Entity\\UserPermissionGroup",
+                        "",
+                        "        # Email change module: set BOTH or NONE.",
+                        "        # email_change_request: App\\Entity\\EmailChangeRequest",
+                        "        # email_change_validation: App\\Entity\\EmailChangeValidation",
+                        "",
+                        "    # routes:",
+                        "    #     home: app_home",
+                        "    #     dashboard: admin_dashboard",
+                        "",
+                        "    # session_control:",
+                        "    #     firewall_name: main",
+                        "    # two_factor:",
+                        "    #     firewall_name: main",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/wlindabla_user_cache.yaml": {
+                    "contents": [
+                        "# Tag-aware cache pool read by UserProvider ($userCacheProvider).",
+                        "framework:",
+                        "    cache:",
+                        "        pools:",
+                        "            user_cache_provider:",
+                        "                adapter: cache.app",
+                        "                tags: true",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/wlindabla_user_rate_limiter.yaml": {
+                    "contents": [
+                        "# Rate limiters used by the 2FA resend and password-reset controllers.",
+                        "# The values are examples: adjust them to your needs.",
+                        "framework:",
+                        "    rate_limiter:",
+                        "        two_factor_resend:",
+                        "            policy: sliding_window",
+                        "            limit: 3",
+                        "            interval: '15 minutes'",
+                        "        password_reset:",
+                        "            policy: sliding_window",
+                        "            limit: 5",
+                        "            interval: '15 minutes'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/wlindabla_user.yaml": {
+                    "contents": [
+                        "wlindabla_user:",
+                        "    resource: '@WlindablaUserBundle/config/routes.php'",
+                        "    # prefix: /account",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "1096bd0c53aa14c48743b1c4e7df0ef590a8501c"
+        }
+    }
+}

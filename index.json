@@ -2603,6 +2603,9 @@
         "wlindabla/share-service-bundle": [
             "1.0"
         ],
+        "wlindabla/user-bundle": [
+            "1.0"
+        ],
         "wouterj/eloquent-bundle": [
             "1.0"
         ],
