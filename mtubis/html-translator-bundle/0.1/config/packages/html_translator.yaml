@@ -1,0 +1,19 @@
+# See https://github.com/mtubis/html-translator-bundle#readme and `bin/console config:dump-reference html_translator`.
+html_translator:
+    default_provider: openai
+    providers:
+        openai:
+            driver: openai
+            api_key: '%env(OPENAI_API_KEY)%'
+            model: '%env(HTML_TRANSLATOR_OPENAI_MODEL)%'
+        # anthropic:
+        #     driver: anthropic
+        #     api_key: '%env(ANTHROPIC_API_KEY)%'
+        #     model: '%env(HTML_TRANSLATOR_ANTHROPIC_MODEL)%'
+
+when@test:
+    html_translator:
+        # Offline in tests: accented "translations", no network, no key.
+        providers:
+            openai:
+                driver: pseudo
