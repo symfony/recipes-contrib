@@ -1,0 +1,4 @@
+  * Install a transformer: <comment>composer require league/glide</> to render the images locally,
+    or replace the <comment>glide</> transformer with <comment>imgix</> in <comment>%CONFIG_DIR%/packages/picasso.yaml</>.
+  * Render an image with <comment><twig:Picasso:Image src="photo.jpg" width="800" height="600" alt="…" /></>.
+  * Read the documentation at <comment>https://picasso-bundle.silarhi.dev/</>
