@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Stejac\\GuardedChatBundle\\GuardedChatBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "Set to 0 to switch the public chat off with a deploy",
+        "GUARDED_CHAT_ENABLED": "1"
+    }
+}

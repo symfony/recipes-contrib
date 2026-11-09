@@ -1,0 +1,11 @@
+guarded_chat:
+    enabled: '%env(bool:GUARDED_CHAT_ENABLED)%'
+
+    # Service id of the Symfony AI platform that answers (see symfony/ai-bundle),
+    # for example "ai.platform.generic.litellm" for an OpenAI-compatible gateway
+    platform: ai.platform.generic.default
+    model: your-model
+
+    prompt:
+        # Used until a prompt version is stored in the database; describe your assistant here
+        default: 'You are the assistant of this website. Answer only questions about its topic.'
