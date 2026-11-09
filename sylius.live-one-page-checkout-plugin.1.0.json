@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "sylius/live-one-page-checkout-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Sylius\\LiveOnePageCheckoutPlugin\\SyliusLiveOnePageCheckoutPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "add-lines": [
+                    {
+                        "file": "assets/shop/entrypoint.js",
+                        "content": "import '@vendor/sylius/live-one-page-checkout-plugin/assets/shop/entrypoint';",
+                        "position": "bottom",
+                        "warn_if_missing": true
+                    }
+                ]
+            },
+            "files": {
+                "config/packages/sylius_live_one_page_checkout_plugin.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SyliusLiveOnePageCheckoutPlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sylius_live_one_page_checkout_plugin.yaml": {
+                    "contents": [
+                        "sylius_live_one_page_checkout:",
+                        "    resource: \"@SyliusLiveOnePageCheckoutPlugin/config/routes.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "67012494c32b0fd4b610b30cf6ebb24cde816f88"
+        }
+    }
+}

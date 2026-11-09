@@ -2303,6 +2303,9 @@
             "0.5",
             "1.0"
         ],
+        "sylius/live-one-page-checkout-plugin": [
+            "1.0"
+        ],
         "sylius/mcp-server-plugin": [
             "0.1",
             "0.2"
