@@ -1,0 +1,31 @@
+# Configuration reference: https://github.com/Agbokoudjo/user-bundle/blob/main/docs/configuration.md
+wlindabla_user:
+    classes:
+        # REQUIRED. Your user entity. It must implement
+        # Wlindabla\UserBundle\Infrastructure\Model\UserInterface.
+        # Create it first (see docs/entities-and-migrations.md), or change this class name.
+        user: App\Entity\User
+
+        # Optional modules: uncomment a class to switch its module on.
+        # user_session: App\Entity\UserSession              # needs session_control.firewall_name
+        # logger_login_user: App\Entity\LoggerLoginUser
+        # two_factor_code: App\Entity\TwoFactorCode         # needs two_factor.firewall_name
+
+        # Permission module: set ALL FOUR or NONE.
+        # permission_role: App\Entity\PermissionRole
+        # permission_group: App\Entity\PermissionGroup
+        # user_permission_role: App\Entity\UserPermissionRole
+        # user_permission_group: App\Entity\UserPermissionGroup
+
+        # Email change module: set BOTH or NONE.
+        # email_change_request: App\Entity\EmailChangeRequest
+        # email_change_validation: App\Entity\EmailChangeValidation
+
+    # routes:
+    #     home: app_home
+    #     dashboard: admin_dashboard
+
+    # session_control:
+    #     firewall_name: main
+    # two_factor:
+    #     firewall_name: main

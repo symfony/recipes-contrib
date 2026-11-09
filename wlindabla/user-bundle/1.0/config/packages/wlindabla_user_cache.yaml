@@ -1,0 +1,7 @@
+# Tag-aware cache pool read by UserProvider ($userCacheProvider).
+framework:
+    cache:
+        pools:
+            user_cache_provider:
+                adapter: cache.app
+                tags: true
