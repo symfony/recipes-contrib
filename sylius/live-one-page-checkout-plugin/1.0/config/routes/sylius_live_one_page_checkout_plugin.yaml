@@ -1,0 +1,2 @@
+sylius_live_one_page_checkout:
+    resource: "@SyliusLiveOnePageCheckoutPlugin/config/routes.yaml"

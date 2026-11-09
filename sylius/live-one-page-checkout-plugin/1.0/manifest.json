@@ -1,0 +1,18 @@
+{
+    "bundles": {
+        "Sylius\\LiveOnePageCheckoutPlugin\\SyliusLiveOnePageCheckoutPlugin": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "add-lines": [
+        {
+            "file": "assets/shop/entrypoint.js",
+            "content": "import '@vendor/sylius/live-one-page-checkout-plugin/assets/shop/entrypoint';",
+            "position": "bottom",
+            "warn_if_missing": true
+        }
+    ]
+}
