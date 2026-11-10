@@ -1,0 +1,45 @@
+{
+    "manifests": {
+        "tracewick/symfony-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Tracewick\\Bridge\\Symfony\\TracewickBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Tracewick: application name (series label) and local spool directory",
+                    "TRACEWICK_APPLICATION": "app",
+                    "TRACEWICK_SPOOL_DIR": "var/spool/tracewick"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Tracewick</> writes profiles to <comment>TRACEWICK_SPOOL_DIR</> (default <comment>var/spool/tracewick</>).",
+                    "  * Install <comment>ext-excimer</> when you want samples: <comment>pie install wikimedia/excimer</>.",
+                    "  * Deliver spool files with <comment>tracewick-drain</> or the Go agent; do not push Pyroscope from PHP-FPM.",
+                    "  * Docs: <comment>https://github.com/tracewick/symfony-bundle</> \u00b7 <comment>https://github.com/tracewick/tracewick/blob/main/docs/runtime.md</>"
+                ]
+            },
+            "files": {
+                "config/packages/tracewick.yaml": {
+                    "contents": [
+                        "# Minimal Tracewick config (suggested values only).",
+                        "# Defaults: enabled true, sample_rate 0.1, sink spool.",
+                        "# Full options: https://github.com/tracewick/symfony-bundle/blob/main/config/packages/tracewick.yaml",
+                        "# Production spool path: prefer a local volume or tmpfs, then deliver with",
+                        "# tracewick-drain or the Go agent \u2014 https://github.com/tracewick/tracewick/blob/main/docs/drain.md",
+                        "",
+                        "tracewick:",
+                        "    application_name: '%env(TRACEWICK_APPLICATION)%'",
+                        "    spool_directory: '%env(TRACEWICK_SPOOL_DIR)%'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "856e2f5abba782d03681e10d9962fa4c38b2b671"
+        }
+    }
+}
