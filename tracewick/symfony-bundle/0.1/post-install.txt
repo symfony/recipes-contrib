@@ -1,0 +1,5 @@
+  * <fg=blue>Tracewick</> writes profiles to <comment>TRACEWICK_SPOOL_DIR</> (default <comment>var/spool/tracewick</>).
+  * Install <comment>ext-excimer</> when you want samples: <comment>pie install wikimedia/excimer</>.
+  * Deliver spool files with <comment>tracewick-drain</> or the Go agent; do not push Pyroscope from PHP-FPM.
+  * Docs: <comment>https://github.com/tracewick/symfony-bundle</> · <comment>https://github.com/tracewick/tracewick/blob/main/docs/runtime.md</>
+
