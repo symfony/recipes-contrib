@@ -1,0 +1,2 @@
+imports:
+    - { resource: "@TmonierSyliusBulkActionsPlugin/config/config.yaml" }

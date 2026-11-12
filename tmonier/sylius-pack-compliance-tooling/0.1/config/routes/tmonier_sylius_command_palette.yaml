@@ -1,0 +1,2 @@
+tmonier_sylius_command_palette:
+    resource: "@TmonierSyliusCommandPalettePlugin/config/routes.yaml"

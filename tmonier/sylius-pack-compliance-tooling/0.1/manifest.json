@@ -1,0 +1,25 @@
+{
+    "bundles": {
+        "Tmonier\\SyliusFacturXPlugin\\TmonierSyliusFacturXPlugin": [
+            "all"
+        ],
+        "Tmonier\\SyliusGpsrPlugin\\TmonierSyliusGpsrPlugin": [
+            "all"
+        ],
+        "Tmonier\\SyliusAuditLogPlugin\\TmonierSyliusAuditLogPlugin": [
+            "all"
+        ],
+        "Tmonier\\SyliusTimelinePlugin\\TmonierSyliusTimelinePlugin": [
+            "all"
+        ],
+        "Tmonier\\SyliusCommandPalettePlugin\\TmonierSyliusCommandPalettePlugin": [
+            "all"
+        ],
+        "Tmonier\\SyliusBulkActionsPlugin\\TmonierSyliusBulkActionsPlugin": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

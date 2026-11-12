@@ -1,0 +1,2 @@
+tmonier_sylius_ai_catalog_copilot:
+    resource: "@TmonierSyliusAiCatalogCopilotPlugin/config/routes.yaml"
