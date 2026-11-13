@@ -1,0 +1,11 @@
+  * <fg=blue;options=bold>GoAopBundle</> was registered as the <comment>first</> bundle in <comment>config/bundles.php</>:
+    weaving only applies to classes loaded after the aspect kernel booted, keep it there.
+
+  * Write an aspect: a service implementing <comment>Go\Aop\Aspect</> with <comment>#[Before]</>, <comment>#[After]</>,
+    <comment>#[Around]</> or <comment>#[AfterThrowing]</> advices. Autoconfiguration registers it, autowiring injects its dependencies.
+    Check what a pointcut matches with <comment>php bin/console debug:advisor</>.
+
+  * With opcache preloading, boot the kernel in <comment>config/preload.php</> before the container preload file,
+    so that the woven classes are preloaded (see the README).
+
+  * Read the documentation at <comment>https://github.com/goaop/goaop-symfony-bundle</>
