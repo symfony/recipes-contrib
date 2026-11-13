@@ -1,0 +1,90 @@
+{
+    "manifests": {
+        "phem/phem": {
+            "manifest": {
+                "bundles": {
+                    "Phem\\PhemBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    ".symfony.local.yaml": ".symfony.local.yaml",
+                    "src/": "%SRC_DIR%/"
+                },
+                "post-install-output": [
+                    "  * Start the web server: <comment>symfony serve</>",
+                    "    It also runs <comment>vendor/bin/phemc watch src</>, which compiles the <comment>.phem</> files when you save them",
+                    "  * Open the URL that it shows: the page of <comment>src/Ui/HomePage.phem</> is at <comment>/</>",
+                    "  * Read the guide: <comment>https://phem.dev/quickstart/</>"
+                ]
+            },
+            "files": {
+                ".symfony.local.yaml": {
+                    "contents": [
+                        "workers:",
+                        "    # Compiles the .phem files, and compiles them again when you save them.",
+                        "    phemc:",
+                        "        cmd: ['vendor/bin/phemc', 'watch', 'src']",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Ui/HomePage.phem": {
+                    "contents": [
+                        "<?phem",
+                        "",
+                        "namespace App\\Ui;",
+                        "",
+                        "use Phem\\Attribute\\Page;",
+                        "use Phem\\Node;",
+                        "",
+                        "use function App\\Ui\\Layout\\Document;",
+                        "",
+                        "#[Page('/')]",
+                        "function HomePage(): Node",
+                        "{",
+                        "    return (",
+                        "        <Document title=\"Phem\">",
+                        "            <h1>Hello, Phem!</h1>",
+                        "        </Document>",
+                        "    );",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src/Ui/Layout/Document.phem": {
+                    "contents": [
+                        "<?phem",
+                        "",
+                        "namespace App\\Ui\\Layout;",
+                        "",
+                        "use Phem\\Attribute\\Component;",
+                        "use Phem\\{Html, Node, Root};",
+                        "",
+                        "#[Component]",
+                        "function Document(string $title, Html $children): Node",
+                        "{",
+                        "    return (",
+                        "        <html>",
+                        "            <head>",
+                        "                <meta charset=\"utf-8\" />",
+                        "                <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />",
+                        "                <title>{{ title }}</title>",
+                        "                {{ importmap('app') }}",
+                        "            </head>",
+                        "            <body>",
+                        "                <Root>{{ children }}</Root>",
+                        "            </body>",
+                        "        </html>",
+                        "    );",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "405f5cb2be34b38daccbfb3ec7aa37a1cfa006fb"
+        }
+    }
+}
