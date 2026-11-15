@@ -1,0 +1,60 @@
+{
+    "manifests": {
+        "thebeardedbear/urssaf-tiers-prestations": {
+            "manifest": {
+                "bundles": {
+                    "TheBeardedBear\\UrssafTiersPrestations\\Bridge\\Symfony\\UrssafTiersPrestationsBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "URSSAF API Tiers de prestations: sandbox or production, and the OAuth2 credentials of the account",
+                    "URSSAF_ENV": "sandbox",
+                    "URSSAF_CLIENT_ID": "",
+                    "URSSAF_CLIENT_SECRET": ""
+                }
+            },
+            "files": {
+                "config/packages/urssaf_tiers_prestations.yaml": {
+                    "contents": [
+                        "# URSSAF \"API Tiers de prestations\": every option is described in the docs/symfony.md file of the package.",
+                        "urssaf_tiers_prestations:",
+                        "    environment: '%env(URSSAF_ENV)%'          # sandbox | production",
+                        "    application_id: ~                         # value of the \"recouv.application.id\" header, if URSSAF gave you one",
+                        "",
+                        "    # One entry per account (tenant); or \"credentials_provider: <service id>\" to read them from your database.",
+                        "    credentials:",
+                        "        default:",
+                        "            client_id: '%env(URSSAF_CLIENT_ID)%'",
+                        "            client_secret: '%env(URSSAF_CLIENT_SECRET)%'",
+                        "",
+                        "    # The access tokens must be shared by every process (web, workers, crons): declare a dedicated pool, e.g.",
+                        "    #   framework.cache.pools.urssaf.token_cache: { adapter: cache.adapter.redis, provider: '%env(REDIS_DSN)%' }",
+                        "    # token_store: { cache_pool: urssaf.token_cache }",
+                        "",
+                        "    # Persistence: Doctrine by default (when doctrine/orm is installed). Use a DEDICATED entity manager (docs/doctrine.md),",
+                        "    # then generate the tables with doctrine:migrations:diff.",
+                        "    # persistence: { driver: doctrine, entity_manager: urssaf }",
+                        "",
+                        "    # Integration events for your application (docs/integration-events.md).",
+                        "    # outbox: { enabled: true, sink: messenger }",
+                        "",
+                        "    # Crons of the package as a Symfony Scheduler schedule (\"messenger:consume scheduler_urssaf\"), instead of a crontab.",
+                        "    # scheduler: { enabled: true }",
+                        "",
+                        "when@test:",
+                        "    urssaf_tiers_prestations:",
+                        "        # The in-memory URSSAF platform of the package: nothing is sent to URSSAF (docs/testing.md).",
+                        "        gateway: { simulated: true }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "23908d4a0b2c8ec6d8972751bb6a6ccd76c815b0"
+        }
+    }
+}
