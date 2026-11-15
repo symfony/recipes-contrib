@@ -1,7 +1,7 @@
 # URSSAF "API Tiers de prestations": every option is described in the docs/symfony.md file of the package.
 urssaf_tiers_prestations:
     environment: '%env(URSSAF_ENV)%'          # sandbox | production
-    application_id: ~                         # value of the "recouv.application.id" header, if URSSAF gave you one
+    application_id: null                      # value of the "recouv.application.id" header, if URSSAF gave you one
 
     # One entry per account (tenant); or "credentials_provider: <service id>" to read them from your database.
     credentials:
