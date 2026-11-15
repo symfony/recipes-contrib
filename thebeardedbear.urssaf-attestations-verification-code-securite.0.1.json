@@ -1,0 +1,52 @@
+{
+    "manifests": {
+        "thebeardedbear/urssaf-attestations-verification-code-securite": {
+            "manifest": {
+                "bundles": {
+                    "TheBeardedBear\\UrssafAttestationsVerificationCodeSecurite\\Bridge\\Symfony\\UrssafAttestationsVerificationCodeSecuriteBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "URSSAF API Attestations - V\u00e9rification code s\u00e9curit\u00e9: sandbox or production, and the OAuth2 credentials of the account",
+                    "URSSAF_ENV": "sandbox",
+                    "URSSAF_CLIENT_ID": "",
+                    "URSSAF_CLIENT_SECRET": ""
+                }
+            },
+            "files": {
+                "config/packages/urssaf_attestations_verification_code_securite.yaml": {
+                    "contents": [
+                        "# URSSAF \"API Attestations - V\u00e9rification code s\u00e9curit\u00e9\": every option is described in the docs/symfony.md file of the package.",
+                        "urssaf_attestations_verification_code_securite:",
+                        "    environment: '%env(URSSAF_ENV)%'          # sandbox | production",
+                        "",
+                        "    # One entry per account (tenant); or \"credentials_provider: <service id>\" to read them from your database.",
+                        "    credentials:",
+                        "        default:",
+                        "            client_id: '%env(URSSAF_CLIENT_ID)%'",
+                        "            client_secret: '%env(URSSAF_CLIENT_SECRET)%'",
+                        "",
+                        "    # The access tokens should be shared by every process (web, workers, crons): declare a dedicated pool, e.g.",
+                        "    #   framework.cache.pools.urssaf.token_cache: { adapter: cache.adapter.redis, provider: '%env(REDIS_DSN)%' }",
+                        "    # token_store: { cache_pool: urssaf.token_cache }",
+                        "",
+                        "    # Value of the \"domaine\" query parameter: URSSAF (default), ISU, or null to omit it (docs/adr/0005).",
+                        "    # domain: URSSAF",
+                        "",
+                        "when@test:",
+                        "    urssaf_attestations_verification_code_securite:",
+                        "        # The in-memory URSSAF platform of the package: nothing is sent to URSSAF (docs/testing.md).",
+                        "        gateway: { simulated: true }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5335a894cffa092fa3fc66ea436dc44142b5a646"
+        }
+    }
+}
