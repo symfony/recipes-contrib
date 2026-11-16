@@ -1,0 +1,47 @@
+{
+    "manifests": {
+        "vinceamstoutz/symfony-security-auditor": {
+            "manifest": {
+                "bundles": {
+                    "VinceAmstoutz\\SymfonySecurityAuditor\\SymfonySecurityAuditorBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/symfony_security_auditor.yaml": {
+                    "contents": [
+                        "# $schema: https://raw.githubusercontent.com/vinceamstoutz/symfony-security-auditor/main/resources/schema.json",
+                        "",
+                        "# Full configuration reference (models, scan, audit loop, rate limits, caching):",
+                        "# https://github.com/vinceamstoutz/symfony-security-auditor/blob/main/docs/configuration.md",
+                        "#",
+                        "when@dev: &symfony_security_auditor",
+                        "    symfony_security_auditor:",
+                        "        model: 'claude-opus-5-5' # Model for both the Attacker and Reviewer roles. Bundle default: claude-opus-5-5.",
+                        "        # reviewer_model: 'claude-haiku-5-5' # Lighter model for the Reviewer role. Falls back to `model` when unset.",
+                        "        # profile: 'balanced' # One-knob preset: fast | balanced | thorough. Explicit keys always win.",
+                        "",
+                        "        # audit:",
+                        "        #     budget:",
+                        "        #         max_cost_usd: 5.0 # Abort cleanly (exit 2) once the estimated cost reaches this cap.",
+                        "        #     # Proactive rate limiting \u2014 any single dimension enables it: https://github.com/vinceamstoutz/symfony-security-auditor/blob/main/docs/configuration.md#auditrate_limit--proactive-throttling",
+                        "        #     rate_limit: # Example: Anthropic Start tier quotas for Claude Opus 5.5 (https://platform.claude.com/docs/en/api/rate-limits)",
+                        "        #         requests_per_minute: 4000",
+                        "        #         input_tokens_per_minute: 2000000 # Cached input tokens don't count toward Anthropic's limit.",
+                        "        #         output_tokens_per_minute: 400000",
+                        "",
+                        "when@test: *symfony_security_auditor",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "1c65c055825b7ca11762cb0cd8ff74e494e268e2"
+        }
+    }
+}
