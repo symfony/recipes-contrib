@@ -1,0 +1,51 @@
+{
+    "manifests": {
+        "silarhi/picasso-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Silarhi\\PicassoBundle\\PicassoBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "PICASSO_SIGN_KEY": "%generate(secret)%"
+                },
+                "post-install-output": [
+                    "  * Install a transformer: <comment>composer require league/glide</> to render the images locally,",
+                    "    or replace the <comment>glide</> transformer with <comment>imgix</> in <comment>%CONFIG_DIR%/packages/picasso.yaml</>.",
+                    "  * Render an image with <comment><twig:Picasso:Image src=\"photo.jpg\" width=\"800\" height=\"600\" alt=\"\u2026\" /></>.",
+                    "  * Read the documentation at <comment>https://picasso-bundle.silarhi.dev/</>"
+                ]
+            },
+            "files": {
+                "config/packages/picasso.yaml": {
+                    "contents": [
+                        "# See https://picasso-bundle.silarhi.dev/ for all the options",
+                        "picasso:",
+                        "    loaders:",
+                        "        filesystem:",
+                        "            path: '%kernel.project_dir%/public/uploads'",
+                        "    transformers:",
+                        "        # Glide renders the images locally: run \"composer require league/glide\"",
+                        "        glide:",
+                        "            sign_key: '%env(PICASSO_SIGN_KEY)%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/picasso.yaml": {
+                    "contents": [
+                        "picasso:",
+                        "    resource: '@PicassoBundle/config/routes.php'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "aacfaa6b6817d24e1cdae6f0951b4ba5a71079fc"
+        }
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "manifests": {
+        "silarhi/llms-txt-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Silarhi\\LlmsTxtBundle\\LlmsTxtBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * Set the <comment>title</> of your website in <comment>%CONFIG_DIR%/packages/llms_txt.yaml</>.",
+                    "  * List a route in <comment>/llms.txt</> with its <comment>llms_txt</> route option.",
+                    "  * Read the documentation at <comment>https://llms-txt-bundle.silarhi.dev/</>"
+                ]
+            },
+            "files": {
+                "config/packages/llms_txt.yaml": {
+                    "contents": [
+                        "llms_txt:",
+                        "    title: 'My Website'",
+                        "    # summary: 'A one-sentence description of the website.'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/llms_txt.yaml": {
+                    "contents": [
+                        "llms_txt:",
+                        "    resource: '@LlmsTxtBundle/config/routes.php'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "703476f880d6bbdf8f378ecabc096b607d29e775"
+        }
+    }
+}

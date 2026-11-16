@@ -635,6 +635,10 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [shopware/app-bundle](https://packagist.org/packages/shopware/app-bundle) | [5.0](../../../tree/main/shopware/app-bundle/5.0) |
 | [siburuxue/doctrine-helper](https://packagist.org/packages/siburuxue/doctrine-helper) | [1.0](../../../tree/main/siburuxue/doctrine-helper/1.0) |
 | [siganushka/region-bundle](https://packagist.org/packages/siganushka/region-bundle) | [1.3](../../../tree/main/siganushka/region-bundle/1.3) |
+| [silarhi/cap-bundle](https://packagist.org/packages/silarhi/cap-bundle) | [0.1](../../../tree/main/silarhi/cap-bundle/0.1) |
+| [silarhi/llms-txt-bundle](https://packagist.org/packages/silarhi/llms-txt-bundle) | [1.0](../../../tree/main/silarhi/llms-txt-bundle/1.0) |
+| [silarhi/picasso-bundle](https://packagist.org/packages/silarhi/picasso-bundle) | [2.0](../../../tree/main/silarhi/picasso-bundle/2.0) |
+| [silarhi/turbo-bundle](https://packagist.org/packages/silarhi/turbo-bundle) | [0.6](../../../tree/main/silarhi/turbo-bundle/0.6) |
 | [silasjoisten/sonata-multiupload-bundle](https://packagist.org/packages/silasjoisten/sonata-multiupload-bundle) | [3.4](../../../tree/main/silasjoisten/sonata-multiupload-bundle/3.4) |
 | [simply-stream/twitch-api-bundle](https://packagist.org/packages/simply-stream/twitch-api-bundle) | [0.1](../../../tree/main/simply-stream/twitch-api-bundle/0.1) |
 | [skipthedragon/inertia-bundle](https://packagist.org/packages/skipthedragon/inertia-bundle) | [1.0](../../../tree/main/skipthedragon/inertia-bundle/1.0) |
