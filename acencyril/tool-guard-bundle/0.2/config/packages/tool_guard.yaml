@@ -1,0 +1,12 @@
+# Tool Guard: rules in code for the tools an AI agent can call (Symfony AI agent tools and MCP tools).
+# Reference: vendor/acencyril/tool-guard-bundle/README.md
+tool_guard:
+    approver_role: ROLE_ADMIN       # who may approve or reject a held call
+    mode: enforce                   # observe: nothing is blocked, the journal records what would have been
+    expire_after: 86400             # seconds a held call may wait before it can no longer be approved
+    four_eyes: false                # true: nobody approves a call made for themselves
+    max_pending_per_user: 3
+    # notifier:                     # tell the approvers through your framework.notifier channels
+    #     enabled: true
+    #     channels: ['chat/slack', 'email']
+    #     approvals_url: 'https://example.com/admin/ai/approvals'
