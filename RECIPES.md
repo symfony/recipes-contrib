@@ -786,6 +786,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [vinceamstoutz/symfony-security-auditor](https://packagist.org/packages/vinceamstoutz/symfony-security-auditor) | [1.0](../../../tree/main/vinceamstoutz/symfony-security-auditor/1.0) |
 | [vincentchalamon/nav-bundle](https://packagist.org/packages/vincentchalamon/nav-bundle) | [1.0](../../../tree/main/vincentchalamon/nav-bundle/1.0) |
 | [vincentlanglet/twig-cs-fixer](https://packagist.org/packages/vincentlanglet/twig-cs-fixer) | [3.0](../../../tree/main/vincentlanglet/twig-cs-fixer/3.0) |
+| [vinh0809it/keycloak-bundle](https://packagist.org/packages/vinh0809it/keycloak-bundle) | [0.1](../../../tree/main/vinh0809it/keycloak-bundle/0.1) |
 | [void/og-image](https://packagist.org/packages/void/og-image) | [1.0](../../../tree/main/void/og-image/1.0) |
 | [vuillaume-agency/symfony-turnstile](https://packagist.org/packages/vuillaume-agency/symfony-turnstile) | [1.2](../../../tree/main/vuillaume-agency/symfony-turnstile/1.2) |
 | [wandi/easyadmin-plus-bundle](https://packagist.org/packages/wandi/easyadmin-plus-bundle) | [0.3](../../../tree/main/wandi/easyadmin-plus-bundle/0.3) |
