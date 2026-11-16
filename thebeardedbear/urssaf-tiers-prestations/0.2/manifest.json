@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "TheBeardedBear\\UrssafTiersPrestations\\Bridge\\Symfony\\UrssafTiersPrestationsBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "URSSAF API Tiers de prestations: sandbox or production, and the OAuth2 credentials of the account",
+        "URSSAF_ENV": "sandbox",
+        "URSSAF_CLIENT_ID": "",
+        "URSSAF_CLIENT_SECRET": ""
+    }
+}
