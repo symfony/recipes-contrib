@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "TheBeardedBear\\UrssafTierceDeclarationCesu\\Bridge\\Symfony\\UrssafTierceDeclarationCesuBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "URSSAF API Tierce Declaration CESU: sandbox or production, and the OAuth2 credentials of the platform",
+        "URSSAF_CESU_ENV": "sandbox",
+        "URSSAF_CESU_CLIENT_ID": "",
+        "URSSAF_CESU_CLIENT_SECRET": ""
+    }
+}
