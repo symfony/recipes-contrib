@@ -1,0 +1,2 @@
+tmonier_sylius_facturx:
+    resource: "@TmonierSyliusFacturXPlugin/config/routes.yaml"

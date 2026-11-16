@@ -1,0 +1,2 @@
+tmonier_sylius_timeline:
+    resource: "@TmonierSyliusTimelinePlugin/config/routes.yaml"
