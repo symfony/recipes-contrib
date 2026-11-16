@@ -1082,6 +1082,9 @@
         "jsor/doctrine-postgis": [
             "1.7"
         ],
+        "julienbohy/git-profiler-bundle": [
+            "0.3"
+        ],
         "jupi/prestashop-webservice-bundle": [
             "1.0"
         ],

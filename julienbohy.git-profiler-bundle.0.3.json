@@ -1,0 +1,34 @@
+{
+    "manifests": {
+        "julienbohy/git-profiler-bundle": {
+            "manifest": {
+                "bundles": {
+                    "JulienBohy\\GitProfilerBundle\\GitProfilerBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/git_profiler.yaml": {
+                    "contents": [
+                        "when@dev:",
+                        "    git_profiler:",
+                        "        # git_binary: null        # path to git; null = looked up in the PATH",
+                        "        # timeout: 5              # seconds per git command",
+                        "        # graph_commit_limit: 30  # commits in the graph",
+                        "",
+                        "when@test:",
+                        "    git_profiler: null",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "6ec16a3ae249c52c593fc03abd3826aac0d930c7"
+        }
+    }
+}
