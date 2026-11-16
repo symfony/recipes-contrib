@@ -5,16 +5,17 @@
 #
 when@dev: &symfony_security_auditor
     symfony_security_auditor:
-        model: 'claude-opus-4-8' # Model for both the Attacker and Reviewer roles. Bundle default: claude-opus-4-7.
-        # attacker_model: 'claude-opus-4-8' # Dedicated model for the Attacker role. Falls back to `model` when unset.
-        # reviewer_model: 'claude-haiku-4-5-20251001' # Lighter model for the Reviewer role. Falls back to `model` when unset.
+        model: 'claude-opus-5-5' # Model for both the Attacker and Reviewer roles. Bundle default: claude-opus-5-5.
+        # reviewer_model: 'claude-haiku-5-5' # Lighter model for the Reviewer role. Falls back to `model` when unset.
+        # profile: 'balanced' # One-knob preset: fast | balanced | thorough. Explicit keys always win.
 
-        # Proactive rate limiting — adjust the values to your provider plan.
-        # Any single dimension enables it: https://github.com/vinceamstoutz/symfony-security-auditor/blob/main/docs/configuration.md#auditrate_limit--proactive-throttling
         # audit:
-        #     rate_limit: # Example: Anthropic Tier 1 quotas for Claude Opus 4.x (https://platform.claude.com/docs/en/api/rate-limits)
-        #         requests_per_minute: 50
-        #         input_tokens_per_minute: 500000 # Cached input tokens don't count toward Anthropic's limit.
-        #         output_tokens_per_minute: 80000
+        #     budget:
+        #         max_cost_usd: 5.0 # Abort cleanly (exit 2) once the estimated cost reaches this cap.
+        #     # Proactive rate limiting — any single dimension enables it: https://github.com/vinceamstoutz/symfony-security-auditor/blob/main/docs/configuration.md#auditrate_limit--proactive-throttling
+        #     rate_limit: # Example: Anthropic Start tier quotas for Claude Opus 5.5 (https://platform.claude.com/docs/en/api/rate-limits)
+        #         requests_per_minute: 4000
+        #         input_tokens_per_minute: 2000000 # Cached input tokens don't count toward Anthropic's limit.
+        #         output_tokens_per_minute: 400000
 
 when@test: *symfony_security_auditor
