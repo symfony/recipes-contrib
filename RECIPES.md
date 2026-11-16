@@ -481,6 +481,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [msgphp/user-bundle](https://packagist.org/packages/msgphp/user-bundle) | [0.10](../../../tree/main/msgphp/user-bundle/0.10) |
 | [mtarld/api-platform-ms-bundle](https://packagist.org/packages/mtarld/api-platform-ms-bundle) | [0.1](../../../tree/main/mtarld/api-platform-ms-bundle/0.1) |
 | [mtarld/symbok-bundle](https://packagist.org/packages/mtarld/symbok-bundle) | [2.0](../../../tree/main/mtarld/symbok-bundle/2.0) |
+| [mtubis/html-translator-bundle](https://packagist.org/packages/mtubis/html-translator-bundle) | [0.1](../../../tree/main/mtubis/html-translator-bundle/0.1) |
 | [mukadi/wallet-bundle](https://packagist.org/packages/mukadi/wallet-bundle) | [1.0](../../../tree/main/mukadi/wallet-bundle/1.0) |
 | [mukadi/wordpress-bundle](https://packagist.org/packages/mukadi/wordpress-bundle) | [2.0](../../../tree/main/mukadi/wordpress-bundle/2.0) |
 | [nalabdou/algebra-symfony](https://packagist.org/packages/nalabdou/algebra-symfony) | [1.1](../../../tree/main/nalabdou/algebra-symfony/1.1) |

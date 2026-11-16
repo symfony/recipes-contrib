@@ -1526,6 +1526,9 @@
         "mtarld/symbok-bundle": [
             "2.0"
         ],
+        "mtubis/html-translator-bundle": [
+            "0.1"
+        ],
         "mukadi/wallet-bundle": [
             "1.0"
         ],
