@@ -643,6 +643,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [snc/redis-bundle](https://packagist.org/packages/snc/redis-bundle) | [2.0](../../../tree/main/snc/redis-bundle/2.0) |
 | [sofascore/purgatory-bundle](https://packagist.org/packages/sofascore/purgatory-bundle) | [2.0](../../../tree/main/sofascore/purgatory-bundle/2.0) |
 | [softavis/flysystem-cloudflare-bundle](https://packagist.org/packages/softavis/flysystem-cloudflare-bundle) | [0.1](../../../tree/main/softavis/flysystem-cloudflare-bundle/0.1) |
+| [softavis/turnstile-bundle](https://packagist.org/packages/softavis/turnstile-bundle) | [1.0](../../../tree/main/softavis/turnstile-bundle/1.0) |
 | [softspring/cms-bundle](https://packagist.org/packages/softspring/cms-bundle) | [5.2](../../../tree/main/softspring/cms-bundle/5.2) |
 | [softspring/cms-module-collection](https://packagist.org/packages/softspring/cms-module-collection) | [5.2](../../../tree/main/softspring/cms-module-collection/5.2) |
 | [softspring/components](https://packagist.org/packages/softspring/components) | [5.1](../../../tree/main/softspring/components/5.1) |

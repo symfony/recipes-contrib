@@ -1,0 +1,51 @@
+{
+    "manifests": {
+        "softavis/turnstile-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Softavis\\TurnstileBundle\\SoftavisTurnstileBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "TURNSTILE_SITE_KEY": "",
+                    "TURNSTILE_SECRET": ""
+                },
+                "post-install-output": [
+                    "  * Set valid <comment>TURNSTILE_SITE_KEY</> and <comment>TURNSTILE_SECRET</> values in",
+                    "    <comment>.env.local</>, your deployment environment, or Symfony secrets before using",
+                    "    verification. Verification stays enabled by default; the empty placeholders are",
+                    "    not usable credentials. When using Symfony secrets, remove the corresponding empty",
+                    "    assignments from <comment>.env</> so they do not override the stored credentials.",
+                    "  * Configure <comment>expected_hostnames</> in <comment>config/packages/softavis_turnstile.yaml</>",
+                    "    with the actual hostnames controlled by your server.",
+                    "  * Install the public bundle assets with <comment>php bin/console assets:install public</>.",
+                    "  * Add <comment>Softavis\\TurnstileBundle\\Form\\TurnstileType</> to each form that needs protection.",
+                    "  * For password-login protection, first add <comment>{{ turnstile_widget('cf-turnstile-response', {action: 'login'}) }}</>",
+                    "    to the login form, then explicitly enable <comment>login.enabled</> with the matching",
+                    "    <comment>login.action</> in the bundle configuration.",
+                    "  * Read the documentation at",
+                    "    <comment>https://github.com/softavis/turnstile-bundle/blob/master/docs/index.md</>"
+                ]
+            },
+            "files": {
+                "config/packages/softavis_turnstile.yaml": {
+                    "contents": [
+                        "softavis_turnstile:",
+                        "    site_key: '%env(TURNSTILE_SITE_KEY)%'",
+                        "    secret: '%env(TURNSTILE_SECRET)%'",
+                        "    # Configure the actual server-controlled hostname allowlist:",
+                        "    # expected_hostnames:",
+                        "    #     - your-real-hostname.example",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "46315eb19caeb24a836e9aaac3a39304a767c6fd"
+        }
+    }
+}
