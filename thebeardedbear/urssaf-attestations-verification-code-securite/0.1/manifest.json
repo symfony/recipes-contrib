@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "TheBeardedBear\\UrssafAttestationsVerificationCodeSecurite\\Bridge\\Symfony\\UrssafAttestationsVerificationCodeSecuriteBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "URSSAF API Attestations - Vérification code sécurité: sandbox or production, and the OAuth2 credentials of the account",
+        "URSSAF_ENV": "sandbox",
+        "URSSAF_CLIENT_ID": "",
+        "URSSAF_CLIENT_SECRET": ""
+    }
+}
