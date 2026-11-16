@@ -2051,6 +2051,9 @@
         "slot/mandrill-bundle": [
             "1.1"
         ],
+        "smartgroup/build-info-bundle": [
+            "1.0"
+        ],
         "snc/redis-bundle": [
             "2.0"
         ],
