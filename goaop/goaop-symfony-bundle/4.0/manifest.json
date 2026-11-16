@@ -1,0 +1,15 @@
+{
+    "add-lines": [
+        {
+            "file": "config/bundles.php",
+            "position": "after_target",
+            "target": "return [",
+            "content": "    Go\\Symfony\\GoAopBundle\\GoAopBundle::class => ['all' => true],",
+            "warn_if_missing": true
+        }
+    ],
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "aliases": ["aop", "goaop"]
+}

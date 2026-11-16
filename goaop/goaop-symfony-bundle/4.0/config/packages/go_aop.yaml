@@ -1,0 +1,8 @@
+go_aop:
+    # Directories that are woven; keep the list narrow, weaving vendor code is slow and rarely needed
+    include_paths: ['%kernel.project_dir%/src']
+
+when@prod:
+    go_aop:
+        # Trust the cache built at deploy time (cache:clear / cache:warmup), never check or write it at runtime
+        features: [PREBUILT_CACHE]
