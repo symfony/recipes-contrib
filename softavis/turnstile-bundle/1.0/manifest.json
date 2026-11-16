@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Softavis\\TurnstileBundle\\SoftavisTurnstileBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "TURNSTILE_SITE_KEY": "",
+        "TURNSTILE_SECRET": ""
+    }
+}
