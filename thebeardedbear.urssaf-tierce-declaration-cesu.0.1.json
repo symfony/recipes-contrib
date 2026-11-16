@@ -1,0 +1,60 @@
+{
+    "manifests": {
+        "thebeardedbear/urssaf-tierce-declaration-cesu": {
+            "manifest": {
+                "bundles": {
+                    "TheBeardedBear\\UrssafTierceDeclarationCesu\\Bridge\\Symfony\\UrssafTierceDeclarationCesuBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "URSSAF API Tierce Declaration CESU: sandbox or production, and the OAuth2 credentials of the platform",
+                    "URSSAF_CESU_ENV": "sandbox",
+                    "URSSAF_CESU_CLIENT_ID": "",
+                    "URSSAF_CESU_CLIENT_SECRET": ""
+                }
+            },
+            "files": {
+                "config/packages/urssaf_tierce_declaration_cesu.yaml": {
+                    "contents": [
+                        "# URSSAF \"API Tierce D\u00e9claration CESU\": every option is described in the docs/symfony.md file of the package.",
+                        "urssaf_tierce_declaration_cesu:",
+                        "    environment: '%env(URSSAF_CESU_ENV)%'      # sandbox | production",
+                        "",
+                        "    # One entry per platform account (tenant); or \"credentials_provider: <service id>\" to read them from your database.",
+                        "    credentials:",
+                        "        default:",
+                        "            client_id: '%env(URSSAF_CESU_CLIENT_ID)%'",
+                        "            client_secret: '%env(URSSAF_CESU_CLIENT_SECRET)%'",
+                        "",
+                        "    # The access tokens must be shared by every process (web, workers, crons): declare a dedicated pool, e.g.",
+                        "    #   framework.cache.pools.urssaf_cesu.token_cache: { adapter: cache.adapter.redis, provider: '%env(REDIS_DSN)%' }",
+                        "    # token_store: { cache_pool: urssaf_cesu.token_cache }",
+                        "",
+                        "    # Persistence: Doctrine by default (when doctrine/orm is installed). Use a DEDICATED entity manager (docs/doctrine.md),",
+                        "    # then generate the tables with doctrine:migrations:diff. Without Doctrine, \"in_memory\" loses every record at the end of",
+                        "    # the process: give your repositories (\"custom\" driver), see docs/symfony.md.",
+                        "    # persistence: { driver: doctrine, entity_manager: urssaf_cesu }",
+                        "",
+                        "    # Integration events for your application (docs/integration-events.md).",
+                        "    # outbox: { enabled: true, sink: messenger }",
+                        "",
+                        "    # Safety crons of the package as a Symfony Scheduler schedule (\"messenger:consume scheduler_urssaf_cesu\").",
+                        "    # scheduler: { enabled: true }",
+                        "",
+                        "when@test:",
+                        "    urssaf_tierce_declaration_cesu:",
+                        "        # The in-memory URSSAF platform of the package: nothing is sent to URSSAF (docs/testing.md).",
+                        "        gateway: { simulated: true }",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "389f6870658be244ea9e292901e50ac7e7dbc36a"
+        }
+    }
+}
