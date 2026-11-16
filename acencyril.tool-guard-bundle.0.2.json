@@ -1,0 +1,55 @@
+{
+    "manifests": {
+        "acencyril/tool-guard-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Acencyril\\ToolGuardBundle\\ToolGuardBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * <fg=blue>Tool Guard</>: put <comment>#[Granted]</>, <comment>#[Limit]</>, <comment>#[RateLimit]</> or <comment>#[RequiresApproval]</> on your AI tools.",
+                    "  * <comment>php bin/console debug:tool-guard</> lists every tool an AI can call and its rules.",
+                    "  * Held calls wait at <comment>/admin/ai/approvals</> (ROLE_ADMIN): keep it behind your firewall,",
+                    "    or change the prefix in <comment>config/routes/tool_guard.yaml</>.",
+                    ""
+                ]
+            },
+            "files": {
+                "config/packages/tool_guard.yaml": {
+                    "contents": [
+                        "# Tool Guard: rules in code for the tools an AI agent can call (Symfony AI agent tools and MCP tools).",
+                        "# Reference: vendor/acencyril/tool-guard-bundle/README.md",
+                        "tool_guard:",
+                        "    approver_role: ROLE_ADMIN       # who may approve or reject a held call",
+                        "    mode: enforce                   # observe: nothing is blocked, the journal records what would have been",
+                        "    expire_after: 86400             # seconds a held call may wait before it can no longer be approved",
+                        "    four_eyes: false                # true: nobody approves a call made for themselves",
+                        "    max_pending_per_user: 3",
+                        "    # notifier:                     # tell the approvers through your framework.notifier channels",
+                        "    #     enabled: true",
+                        "    #     channels: ['chat/slack', 'email']",
+                        "    #     approvals_url: 'https://example.com/admin/ai/approvals'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/tool_guard.yaml": {
+                    "contents": [
+                        "# The approvals page for held calls. It checks tool_guard.approver_role itself; keep it behind",
+                        "# your firewall so that visitors are asked to sign in.",
+                        "tool_guard:",
+                        "    resource: '@ToolGuardBundle/config/routes.php'",
+                        "    prefix: /admin/ai",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b25d50d209dc8b103204cc048818c789edf2fbdd"
+        }
+    }
+}
