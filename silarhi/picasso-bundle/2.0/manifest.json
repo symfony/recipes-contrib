@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Silarhi\\PicassoBundle\\PicassoBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "PICASSO_SIGN_KEY": "%generate(secret)%"
+    }
+}

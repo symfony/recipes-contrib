@@ -1,0 +1,4 @@
+  * Install the JavaScript side: <comment>pnpm add @silarhi/turbo</> (or <comment>php bin/console importmap:require @silarhi/turbo</>)
+  * Render a page inside its Turbo Frame with <comment>{% extends 'base.html.twig'|turbo_frame %}</>:
+    frame requests then use <comment>templates/base-frame.html.twig</>.
+  * Read the documentation at <comment>https://turbo-bundle.silarhi.dev/</>

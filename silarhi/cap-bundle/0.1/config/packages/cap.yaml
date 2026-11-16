@@ -1,0 +1,7 @@
+cap:
+    endpoint: '%env(CAP_ENDPOINT)%'
+    secret_key: '%env(CAP_SECRET_KEY)%'
+
+when@test:
+    cap:
+        enabled: false

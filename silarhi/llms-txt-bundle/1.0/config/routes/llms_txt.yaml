@@ -1,0 +1,2 @@
+llms_txt:
+    resource: '@LlmsTxtBundle/config/routes.php'

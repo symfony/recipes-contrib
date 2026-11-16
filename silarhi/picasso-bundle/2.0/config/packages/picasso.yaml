@@ -1,0 +1,9 @@
+# See https://picasso-bundle.silarhi.dev/ for all the options
+picasso:
+    loaders:
+        filesystem:
+            path: '%kernel.project_dir%/public/uploads'
+    transformers:
+        # Glide renders the images locally: run "composer require league/glide"
+        glide:
+            sign_key: '%env(PICASSO_SIGN_KEY)%'
