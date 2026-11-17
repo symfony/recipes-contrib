@@ -1,0 +1,4 @@
+wedrix_watchtower_bundle_routes:
+    resource: 'Wedrix\WatchtowerBundle\Service\RoutesLoader'
+    type: service
+    controller: 'Wedrix\WatchtowerBundle\Controller\WatchtowerController'
