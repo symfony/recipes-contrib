@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "RomainGenin\\AstraCheckoutBundle\\AstraCheckoutBundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "SHOP_MAILER_FROM": "no-reply@example.com"
+    }
+}

@@ -1,0 +1,18 @@
+# All keys are optional, see https://packagist.org/packages/romain-genin/symfony-ecom
+astra_checkout:
+    shop_name: 'My shop'
+    mailer:
+        from: '%env(SHOP_MAILER_FROM)%'
+
+    # Reuse your own user accounts (otherwise: built-in customer accounts, see the "Security" section of the README)
+    # customer:
+    #     class: App\Entity\User
+    # account:
+    #     login_route: app_login
+    #     logout_route: app_logout
+    #     register_route: app_register
+
+    # Render the shop pages in your own layout
+    # layout: base.html.twig
+    # routing:
+    #     home: false

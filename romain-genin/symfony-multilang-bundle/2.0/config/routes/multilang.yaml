@@ -1,0 +1,3 @@
+# "/" => redirect to the preferred locale, "/_locale/{code}" => switch for non-prefixed pages
+multilang:
+    resource: '@MultiLangBundle/config/routes.php'

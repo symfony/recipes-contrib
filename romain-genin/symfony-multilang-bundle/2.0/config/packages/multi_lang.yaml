@@ -1,0 +1,12 @@
+# MultiLangBundle - https://packagist.org/packages/romain-genin/symfony-multilang-bundle
+multi_lang:
+    default_locale: fr
+    # Enabled locales, in the order shown by the switcher
+    locales: [fr, en]
+    # Localized route ({_locale} prefix) used by the "/" redirect
+    home_route: app_home
+    detect_browser_language: true
+    load_default_translations: true
+    # cookie: { name: multilang_locale, lifetime: 31536000, samesite: lax }
+    # locale_overrides:
+    #     en: { flag: '🇺🇸' }
