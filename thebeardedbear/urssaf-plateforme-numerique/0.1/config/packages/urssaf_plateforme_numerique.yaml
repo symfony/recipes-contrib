@@ -1,0 +1,29 @@
+# URSSAF "API portail Plateforme numerique": every option is described in the docs/symfony.md file of the package.
+urssaf_plateforme_numerique:
+    environment: '%env(URSSAF_PN_ENV)%'       # sandbox | test_api | production
+
+    # One entry per tenant; or "credentials_provider" and "platform_resolver": <service id> to read them from your database.
+    credentials:
+        default:
+            client_id: '%env(URSSAF_PN_CLIENT_ID)%'
+            client_secret: '%env(URSSAF_PN_CLIENT_SECRET)%'
+            platform_id: '%env(URSSAF_PN_PLATFORM_ID)%'
+
+    # The access tokens must be shared by every process (web, workers, crons): declare a dedicated pool, e.g.
+    #   framework.cache.pools.urssaf_pn.token_cache: { adapter: cache.adapter.redis, provider: '%env(REDIS_DSN)%' }
+    # token_store: { cache_pool: urssaf_pn.token_cache }
+
+    # Persistence: Doctrine by default (when doctrine/orm is installed). Use a DEDICATED entity manager (docs/doctrine.md),
+    # then generate the tables with doctrine:migrations:diff.
+    # persistence: { driver: doctrine, entity_manager: urssaf_pn }
+
+    # Integration events for your application (docs/integration-events.md).
+    # outbox: { enabled: true, sink: messenger }
+
+    # Crons of the package as a Symfony Scheduler schedule ("messenger:consume scheduler_urssaf_pn"), instead of a crontab.
+    # scheduler: { enabled: true }
+
+when@test:
+    urssaf_plateforme_numerique:
+        # The in-memory URSSAF platform of the package: nothing is sent to URSSAF (docs/symfony.md, docs/testing.md).
+        gateway: { simulated: true }
