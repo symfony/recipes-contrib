@@ -611,6 +611,9 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [ro0nl/http-responder](https://packagist.org/packages/ro0nl/http-responder) | [0.1](../../../tree/main/ro0nl/http-responder/0.1) |
 | [rodmarzavala/infile-php-symfony](https://packagist.org/packages/rodmarzavala/infile-php-symfony) | [1.0](../../../tree/main/rodmarzavala/infile-php-symfony/1.0) |
 | [rokka/client-bundle](https://packagist.org/packages/rokka/client-bundle) | [1.0](../../../tree/main/rokka/client-bundle/1.0) |
+| [romain-genin/symfony-ecom](https://packagist.org/packages/romain-genin/symfony-ecom) | [2.0](../../../tree/main/romain-genin/symfony-ecom/2.0) |
+| [romain-genin/symfony-image-optimizer-bundle](https://packagist.org/packages/romain-genin/symfony-image-optimizer-bundle) | [2.0](../../../tree/main/romain-genin/symfony-image-optimizer-bundle/2.0) |
+| [romain-genin/symfony-multilang-bundle](https://packagist.org/packages/romain-genin/symfony-multilang-bundle) | [2.0](../../../tree/main/romain-genin/symfony-multilang-bundle/2.0) |
 | [rossel/mwu-sdk](https://packagist.org/packages/rossel/mwu-sdk) | [0.1](../../../tree/main/rossel/mwu-sdk/0.1) |
 | [rossel/rossel-kafka](https://packagist.org/packages/rossel/rossel-kafka) | [0.0](../../../tree/main/rossel/rossel-kafka/0.0) |
 | [roukmoute/hashids-bundle](https://packagist.org/packages/roukmoute/hashids-bundle) | [1.4](../../../tree/main/roukmoute/hashids-bundle/1.4) |

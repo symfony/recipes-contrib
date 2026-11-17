@@ -1955,6 +1955,15 @@
         "rokka/client-bundle": [
             "1.0"
         ],
+        "romain-genin/symfony-ecom": [
+            "2.0"
+        ],
+        "romain-genin/symfony-image-optimizer-bundle": [
+            "2.0"
+        ],
+        "romain-genin/symfony-multilang-bundle": [
+            "2.0"
+        ],
         "rossel/mwu-sdk": [
             "0.1"
         ],

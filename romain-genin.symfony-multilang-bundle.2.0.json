@@ -1,0 +1,60 @@
+{
+    "manifests": {
+        "romain-genin/symfony-multilang-bundle": {
+            "manifest": {
+                "bundles": {
+                    "RomainGenin\\MultiLangBundle\\MultiLangBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "  * Prefix your controllers with the locale, in <fg=green>config/routes.yaml</>:",
+                    "        prefix: /{_locale}",
+                    "        requirements: { _locale: '%multilang.locales_requirement%' }",
+                    "    (or run <comment>php bin/console multilang:install</comment> to do it for you)",
+                    "",
+                    "  * Tailwind v4, in <fg=green>assets/styles/app.css</>:",
+                    "        @source \"../../vendor/romain-genin/symfony-multilang-bundle/templates\";",
+                    "        @import \"../../vendor/romain-genin/symfony-multilang-bundle/assets/multilang.css\";",
+                    "",
+                    "  * Alpine.js: <comment>php bin/console importmap:require alpinejs</comment>",
+                    "",
+                    "  * Read the docs: <comment>https://packagist.org/packages/romain-genin/symfony-multilang-bundle</comment>"
+                ]
+            },
+            "files": {
+                "config/packages/multi_lang.yaml": {
+                    "contents": [
+                        "# MultiLangBundle - https://packagist.org/packages/romain-genin/symfony-multilang-bundle",
+                        "multi_lang:",
+                        "    default_locale: fr",
+                        "    # Enabled locales, in the order shown by the switcher",
+                        "    locales: [fr, en]",
+                        "    # Localized route ({_locale} prefix) used by the \"/\" redirect",
+                        "    home_route: app_home",
+                        "    detect_browser_language: true",
+                        "    load_default_translations: true",
+                        "    # cookie: { name: multilang_locale, lifetime: 31536000, samesite: lax }",
+                        "    # locale_overrides:",
+                        "    #     en: { flag: '\ud83c\uddfa\ud83c\uddf8' }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/multilang.yaml": {
+                    "contents": [
+                        "# \"/\" => redirect to the preferred locale, \"/_locale/{code}\" => switch for non-prefixed pages",
+                        "multilang:",
+                        "    resource: '@MultiLangBundle/config/routes.php'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "e8fe48d748c2785c6e604eb5674562100f3d0879"
+        }
+    }
+}
