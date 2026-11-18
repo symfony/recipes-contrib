@@ -1,0 +1,6 @@
+when@dev:
+    kocal_oxc:
+        # The Oxlint version to use, see https://github.com/oxc-project/oxc/releases?q=oxlint_v
+        oxlint_version: '1.94.0'
+        # The Oxfmt version to use, see https://github.com/oxc-project/oxc/releases?q=oxfmt_v
+        oxfmt_version: '0.79.0'
