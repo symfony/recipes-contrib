@@ -1,0 +1,15 @@
+{
+    "bundles": {
+        "Tracewick\\Bridge\\Symfony\\TracewickBundle": [
+            "all"
+        ]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "Tracewick: application name (series label) and local spool directory",
+        "TRACEWICK_APPLICATION": "app",
+        "TRACEWICK_SPOOL_DIR": "var/spool/tracewick"
+    }
+}

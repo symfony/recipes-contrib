@@ -1,0 +1,9 @@
+# Minimal Tracewick config (suggested values only).
+# Defaults: enabled true, sample_rate 0.1, sink spool.
+# Full options: https://github.com/tracewick/symfony-bundle/blob/main/config/packages/tracewick.yaml
+# Production spool path: prefer a local volume or tmpfs, then deliver with
+# tracewick-drain or the Go agent — https://github.com/tracewick/tracewick/blob/main/docs/drain.md
+
+tracewick:
+    application_name: '%env(TRACEWICK_APPLICATION)%'
+    spool_directory: '%env(TRACEWICK_SPOOL_DIR)%'
