@@ -1,0 +1,84 @@
+{
+    "manifests": {
+        "kocal/oxc-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Kocal\\OxcBundle\\KocalOxcBundle": [
+                        "dev"
+                    ]
+                },
+                "copy-from-recipe": {
+                    ".oxfmtrc.json": ".oxfmtrc.json",
+                    ".oxlintrc.json": ".oxlintrc.json",
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "gitignore": [
+                    "/%BIN_DIR%/oxfmt*",
+                    "/%BIN_DIR%/oxlint*"
+                ]
+            },
+            "files": {
+                ".oxfmtrc.json": {
+                    "contents": [
+                        "{",
+                        "    \"ignorePatterns\": [",
+                        "        \"assets/vendor/**\",",
+                        "        \"assets/controllers.json\",",
+                        "        \"public/assets/**\",",
+                        "        \"public/bundles/**\",",
+                        "        \"tests/**\",",
+                        "        \"var/**\",",
+                        "        \"vendor/**\",",
+                        "        \"composer.json\",",
+                        "        \"package.json\",",
+                        "        \".oxfmtrc.json\",",
+                        "        \".oxlintrc.json\"",
+                        "    ]",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                ".oxlintrc.json": {
+                    "contents": [
+                        "{",
+                        "    \"plugins\": null,",
+                        "    \"categories\": {},",
+                        "    \"rules\": {},",
+                        "    \"env\": {",
+                        "        \"builtin\": true",
+                        "    },",
+                        "    \"globals\": {},",
+                        "    \"ignorePatterns\": [",
+                        "        \"assets/vendor/**\",",
+                        "        \"assets/controllers.json\",",
+                        "        \"public/assets/**\",",
+                        "        \"public/bundles/**\",",
+                        "        \"tests/**\",",
+                        "        \"var/**\",",
+                        "        \"vendor/**\",",
+                        "        \"composer.json\",",
+                        "        \"package.json\"",
+                        "    ]",
+                        "}",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/kocal_oxc.yaml": {
+                    "contents": [
+                        "when@dev:",
+                        "    kocal_oxc:",
+                        "        # The Oxlint version to use, see https://github.com/oxc-project/oxc/releases?q=oxlint_v",
+                        "        oxlint_version: '1.94.0'",
+                        "        # The Oxfmt version to use, see https://github.com/oxc-project/oxc/releases?q=oxfmt_v",
+                        "        oxfmt_version: '0.79.0'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b63cc1d47a0ecda1f11351610410e815daeb8dfb"
+        }
+    }
+}
