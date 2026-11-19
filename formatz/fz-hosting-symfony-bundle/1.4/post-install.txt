@@ -1,0 +1,1 @@
+    Change <comment>FZ_HOSTING_API_KEY</> then run <comment>fz-hosting:send-current-versions</>.
