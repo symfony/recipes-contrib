@@ -1,2 +1,2 @@
 formatz_fz_hosting:
-  resource: '@FormatzFzHostingBundle/Resources/config/routes.yaml'
+    resource: '@FormatzFzHostingBundle/Resources/config/routes.yaml'
