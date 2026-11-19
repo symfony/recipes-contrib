@@ -1,0 +1,53 @@
+{
+    "manifests": {
+        "sylius/paypal-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Sylius\\PayPalPlugin\\SyliusPayPalPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "add-lines": [
+                    {
+                        "file": "config/routes/sylius_shop.yaml",
+                        "position": "bottom",
+                        "warn_if_missing": true,
+                        "content": "sylius_shop_override_paypal:\n    resource: \"@SyliusPayPalPlugin/Resources/config/sylius_shop_override_routing.yaml\"\n    prefix: /{_locale}\n    requirements:\n        _locale: ^[A-Za-z]{2,4}(_([A-Za-z]{4}|[0-9]{3}))?(_([A-Za-z]{2}|[0-9]{3}))?$\n"
+                    }
+                ]
+            },
+            "files": {
+                "config/packages/sylius_paypal.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SyliusPayPalPlugin/Resources/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sylius_paypal.yaml": {
+                    "contents": [
+                        "sylius_paypal_admin:",
+                        "    resource: \"@SyliusPayPalPlugin/Resources/config/admin_routing.yml\"",
+                        "    prefix: /%sylius_admin.path_name%",
+                        "",
+                        "sylius_paypal_shop:",
+                        "    resource: \"@SyliusPayPalPlugin/Resources/config/shop_routing.yaml\"",
+                        "    prefix: /{_locale}",
+                        "    requirements:",
+                        "        _locale: ^[A-Za-z]{2,4}(_([A-Za-z]{4}|[0-9]{3}))?(_([A-Za-z]{2}|[0-9]{3}))?$",
+                        "",
+                        "sylius_paypal_webhook:",
+                        "    resource: \"@SyliusPayPalPlugin/Resources/config/webhook_routing.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ee6c048cc6f38febd7c3ca9915e7aace7af17b52"
+        }
+    }
+}
