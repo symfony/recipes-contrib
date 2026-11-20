@@ -1,0 +1,16 @@
+{
+    "bundles": {
+        "Locastic\\Loggastic\\LocasticLoggasticBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "post-install-output": [
+        "  * Add the <comment>#[Loggable(groups: ['your_group'])]</> attribute to an entity",
+        "    and the same serialization group to each field you want to log",
+        "  * Create the activity log tables:",
+        "    <comment>php bin/console locastic:activity-logs:create-loggable-indexes</>",
+        "",
+        "  * Read the documentation at <comment>https://github.com/Locastic/Loggastic</>"
+    ]
+}
