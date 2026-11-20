@@ -1,0 +1,6 @@
+locastic_loggastic:
+    # Where activity logs are stored:
+    #   doctrine      - two tables in the database of the default Doctrine DBAL connection
+    #   elasticsearch - Elasticsearch 8 or 9 (also set elastic_host)
+    #   in_memory     - the PHP process only, for test suites
+    storage: doctrine
