@@ -1,0 +1,63 @@
+{
+    "manifests": {
+        "sylius/paypal-plugin": {
+            "manifest": {
+                "bundles": {
+                    "Sylius\\PayPalPlugin\\SyliusPayPalPlugin": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "container": {
+                    "sylius_paypal.webhook_base_url": "%env(SYLIUS_PAYPAL_WEBHOOK_BASE_URL)%"
+                },
+                "env": {
+                    "SYLIUS_PAYPAL_WEBHOOK_BASE_URL": ""
+                },
+                "add-lines": [
+                    {
+                        "file": "assets/admin/entrypoint.js",
+                        "content": "import '@vendor/sylius/paypal-plugin/assets/admin/entrypoint';",
+                        "position": "bottom",
+                        "warn_if_missing": true
+                    },
+                    {
+                        "file": "package.json",
+                        "content": "    \"@sylius/paypal-plugin\": \"file:vendor/sylius/paypal-plugin/assets/shop\",",
+                        "position": "after_target",
+                        "target": "\"dependencies\": {",
+                        "warn_if_missing": true
+                    },
+                    {
+                        "file": "assets/shop/controllers.json",
+                        "content": "    \"@sylius/paypal-plugin\": {\n      \"paypal-web-sdk\": {\n        \"enabled\": true,\n        \"fetch\": \"lazy\"\n      },\n      \"paypal-payment-wallet-button\": {\n        \"enabled\": true,\n        \"fetch\": \"lazy\"\n      },\n      \"paypal-payment-card-fields\": {\n        \"enabled\": true,\n        \"fetch\": \"lazy\"\n      },\n      \"paypal-message\": {\n        \"enabled\": true,\n        \"fetch\": \"lazy\"\n      },\n      \"paypal-payment-google-pay\": {\n        \"enabled\": true,\n        \"fetch\": \"lazy\"\n      },\n      \"paypal-payment-apple-pay\": {\n        \"enabled\": true,\n        \"fetch\": \"lazy\"\n      },\n      \"paypal-payment-redirect-button\": {\n        \"enabled\": true,\n        \"fetch\": \"lazy\"\n      }\n    },",
+                        "position": "after_target",
+                        "target": "\"controllers\": {",
+                        "warn_if_missing": true
+                    }
+                ]
+            },
+            "files": {
+                "config/packages/sylius_paypal.yaml": {
+                    "contents": [
+                        "imports:",
+                        "    - { resource: \"@SyliusPayPalPlugin/config/config.yaml\" }",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/sylius_paypal.yaml": {
+                    "contents": [
+                        "sylius_paypal:",
+                        "    resource: \"@SyliusPayPalPlugin/config/routes.yaml\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "eff85c7809392ad1f414ecf6eb3abe80072629c1"
+        }
+    }
+}

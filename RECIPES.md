@@ -730,7 +730,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [sylius/live-one-page-checkout-plugin](https://packagist.org/packages/sylius/live-one-page-checkout-plugin) | [1.0](../../../tree/main/sylius/live-one-page-checkout-plugin/1.0) |
 | [sylius/mcp-server-plugin](https://packagist.org/packages/sylius/mcp-server-plugin) | [0.2](../../../tree/main/sylius/mcp-server-plugin/0.2) |
 | [sylius/mollie-plugin](https://packagist.org/packages/sylius/mollie-plugin) | [3.0](../../../tree/main/sylius/mollie-plugin/3.0) |
-| [sylius/paypal-plugin](https://packagist.org/packages/sylius/paypal-plugin) | [2.0](../../../tree/main/sylius/paypal-plugin/2.0) |
+| [sylius/paypal-plugin](https://packagist.org/packages/sylius/paypal-plugin) | [2.2](../../../tree/main/sylius/paypal-plugin/2.2) |
 | [sylius/product-bundle-plugin](https://packagist.org/packages/sylius/product-bundle-plugin) | [1.0](../../../tree/main/sylius/product-bundle-plugin/1.0) |
 | [sylius/refund-plugin](https://packagist.org/packages/sylius/refund-plugin) | [2.0](../../../tree/main/sylius/refund-plugin/2.0) |
 | [sylius/resource-bundle](https://packagist.org/packages/sylius/resource-bundle) | [1.13](../../../tree/main/sylius/resource-bundle/1.13) |
