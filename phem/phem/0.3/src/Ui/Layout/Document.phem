@@ -1,0 +1,24 @@
+<?phem
+
+namespace App\Ui\Layout;
+
+use Phem\Attribute\Component;
+use Phem\{Html, Node, Root};
+
+#[Component]
+function Document(string $title, Html $children): Node
+{
+    return (
+        <html>
+            <head>
+                <meta charset="utf-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <title>{{ title }}</title>
+                {{ importmap('app') }}
+            </head>
+            <body>
+                <Root>{{ children }}</Root>
+            </body>
+        </html>
+    );
+}
