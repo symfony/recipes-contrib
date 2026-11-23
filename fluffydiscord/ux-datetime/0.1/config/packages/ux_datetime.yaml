@@ -1,0 +1,10 @@
+ux_datetime:
+    # Turn every single_text date, date-time and time field into the picker
+    # replace_native_widgets: false
+
+    # Timezone of "today" for presets and relative limits; null = PHP's default
+    # timezone: null
+
+    # With Sylius installed, admin date fields and grid date filters use the picker
+    # sylius:
+    #     admin: true
