@@ -554,6 +554,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [pentatrion/upload-bundle](https://packagist.org/packages/pentatrion/upload-bundle) | [0.2](../../../tree/main/pentatrion/upload-bundle/0.2) |
 | [pentatrion/vite-bundle](https://packagist.org/packages/pentatrion/vite-bundle) | [6.5](../../../tree/main/pentatrion/vite-bundle/6.5) |
 | [pentiminax/ux-datatables](https://packagist.org/packages/pentiminax/ux-datatables) | [1.0](../../../tree/main/pentiminax/ux-datatables/1.0) |
+| [phem/phem](https://packagist.org/packages/phem/phem) | [0.3](../../../tree/main/phem/phem/0.3) |
 | [php-amqplib/rabbitmq-bundle](https://packagist.org/packages/php-amqplib/rabbitmq-bundle) | [1.12](../../../tree/main/php-amqplib/rabbitmq-bundle/1.12) |
 | [php-http/httplug-bundle](https://packagist.org/packages/php-http/httplug-bundle) | [1.6](../../../tree/main/php-http/httplug-bundle/1.6) |
 | [php-llm/llm-chain-bundle](https://packagist.org/packages/php-llm/llm-chain-bundle) | [0.19](../../../tree/main/php-llm/llm-chain-bundle/0.19) |
