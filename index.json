@@ -1276,6 +1276,9 @@
         "lljaworski/ceidg-bundle": [
             "1.0"
         ],
+        "locastic/loggastic": [
+            "2.1"
+        ],
         "lolautruche/payline-bundle": [
             "2.0"
         ],

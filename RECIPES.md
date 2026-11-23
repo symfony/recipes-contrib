@@ -401,6 +401,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [lireincore/imgcache-bundle](https://packagist.org/packages/lireincore/imgcache-bundle) | [0.1](../../../tree/main/lireincore/imgcache-bundle/0.1) |
 | [liuggio/statsd-client-bundle](https://packagist.org/packages/liuggio/statsd-client-bundle) | [1.6](../../../tree/main/liuggio/statsd-client-bundle/1.6) |
 | [lljaworski/ceidg-bundle](https://packagist.org/packages/lljaworski/ceidg-bundle) | [1.0](../../../tree/main/lljaworski/ceidg-bundle/1.0) |
+| [locastic/loggastic](https://packagist.org/packages/locastic/loggastic) | [2.1](../../../tree/main/locastic/loggastic/2.1) |
 | [lolautruche/payline-bundle](https://packagist.org/packages/lolautruche/payline-bundle) | [2.0](../../../tree/main/lolautruche/payline-bundle/2.0) |
 | [long-running/long-running](https://packagist.org/packages/long-running/long-running) | [0.1](../../../tree/main/long-running/long-running/0.1) |
 | [longitude-one/meta-bundle](https://packagist.org/packages/longitude-one/meta-bundle) | [1.0](../../../tree/main/longitude-one/meta-bundle/1.0) |
