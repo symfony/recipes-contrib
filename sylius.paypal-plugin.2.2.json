@@ -10,9 +10,6 @@
                 "copy-from-recipe": {
                     "config/": "%CONFIG_DIR%/"
                 },
-                "container": {
-                    "sylius_paypal.webhook_base_url": "%env(SYLIUS_PAYPAL_WEBHOOK_BASE_URL)%"
-                },
                 "env": {
                     "SYLIUS_PAYPAL_WEBHOOK_BASE_URL": ""
                 },
@@ -57,7 +54,7 @@
                     "executable": false
                 }
             },
-            "ref": "eff85c7809392ad1f414ecf6eb3abe80072629c1"
+            "ref": "417c89da7e60dbe1503daa20b4128157450ad73e"
         }
     }
 }
