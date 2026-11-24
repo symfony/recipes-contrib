@@ -251,6 +251,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [flagception/flagception-bundle](https://packagist.org/packages/flagception/flagception-bundle) | [3.0](../../../tree/main/flagception/flagception-bundle/3.0) |
 | [flawe/flare-bundle](https://packagist.org/packages/flawe/flare-bundle) | [3.1](../../../tree/main/flawe/flare-bundle/3.1) |
 | [fluffydiscord/roadrunner-symfony-bundle](https://packagist.org/packages/fluffydiscord/roadrunner-symfony-bundle) | [7.1](../../../tree/main/fluffydiscord/roadrunner-symfony-bundle/7.1) |
+| [fluffydiscord/ux-datetime](https://packagist.org/packages/fluffydiscord/ux-datetime) | [0.1](../../../tree/main/fluffydiscord/ux-datetime/0.1) |
 | [flux-se/sylius-payum-stripe-plugin](https://packagist.org/packages/flux-se/sylius-payum-stripe-plugin) | [2.0](../../../tree/main/flux-se/sylius-payum-stripe-plugin/2.0) |
 | [flux-se/sylius-stripe-plugin](https://packagist.org/packages/flux-se/sylius-stripe-plugin) | [2.0](../../../tree/main/flux-se/sylius-stripe-plugin/2.0) |
 | [fluxter/saas-provider-bundle](https://packagist.org/packages/fluxter/saas-provider-bundle) | [2.0](../../../tree/main/fluxter/saas-provider-bundle/2.0) |

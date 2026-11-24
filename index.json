@@ -788,6 +788,9 @@
             "7.0",
             "7.1"
         ],
+        "fluffydiscord/ux-datetime": [
+            "0.1"
+        ],
         "flux-se/sylius-payum-stripe-plugin": [
             "1.2",
             "2.0"
