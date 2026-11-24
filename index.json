@@ -803,7 +803,8 @@
             "2.0"
         ],
         "formatz/fz-hosting-symfony-bundle": [
-            "1.0"
+            "1.0",
+            "1.4"
         ],
         "fpt/stripe-bundle": [
             "0.5"

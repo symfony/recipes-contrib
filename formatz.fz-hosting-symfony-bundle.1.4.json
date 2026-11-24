@@ -1,0 +1,46 @@
+{
+    "manifests": {
+        "formatz/fz-hosting-symfony-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Formatz\\FzHostingBundle\\FormatzFzHostingBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "FZ_HOSTING_API_ENDPOINT": "https://hostings.format-z.ch",
+                    "FZ_HOSTING_API_KEY": "changeme",
+                    "FZ_MATOMO_URL": "",
+                    "FZ_MATOMO_SITE_ID": "",
+                    "FZ_MATOMO_TOKEN": ""
+                },
+                "post-install-output": [
+                    "    Change <comment>FZ_HOSTING_API_KEY</> then run <comment>fz-hosting:send-current-versions</>."
+                ]
+            },
+            "files": {
+                "config/packages/formatz_fz_hosting.yaml": {
+                    "contents": [
+                        "formatz_fz_hosting:",
+                        "    api_key: '%env(resolve:FZ_HOSTING_API_KEY)%'",
+                        "    api_endpoint: '%env(resolve:FZ_HOSTING_API_ENDPOINT)%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/formatz_fz_hosting.yaml": {
+                    "contents": [
+                        "formatz_fz_hosting:",
+                        "    resource: '@FormatzFzHostingBundle/Resources/config/routes.yaml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "5f6aa1ab7fae08b1ff4d26c55e9f96fcc7456358"
+        }
+    }
+}

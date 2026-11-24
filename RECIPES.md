@@ -255,7 +255,7 @@ Additional recipes can be found on the [Main Recipes Repository](https://github.
 | [flux-se/sylius-payum-stripe-plugin](https://packagist.org/packages/flux-se/sylius-payum-stripe-plugin) | [2.0](../../../tree/main/flux-se/sylius-payum-stripe-plugin/2.0) |
 | [flux-se/sylius-stripe-plugin](https://packagist.org/packages/flux-se/sylius-stripe-plugin) | [2.0](../../../tree/main/flux-se/sylius-stripe-plugin/2.0) |
 | [fluxter/saas-provider-bundle](https://packagist.org/packages/fluxter/saas-provider-bundle) | [2.0](../../../tree/main/fluxter/saas-provider-bundle/2.0) |
-| [formatz/fz-hosting-symfony-bundle](https://packagist.org/packages/formatz/fz-hosting-symfony-bundle) | [1.0](../../../tree/main/formatz/fz-hosting-symfony-bundle/1.0) |
+| [formatz/fz-hosting-symfony-bundle](https://packagist.org/packages/formatz/fz-hosting-symfony-bundle) | [1.4](../../../tree/main/formatz/fz-hosting-symfony-bundle/1.4) |
 | [fpt/stripe-bundle](https://packagist.org/packages/fpt/stripe-bundle) | [0.5](../../../tree/main/fpt/stripe-bundle/0.5) |
 | [fresh/centrifugo-bundle](https://packagist.org/packages/fresh/centrifugo-bundle) | [1.3](../../../tree/main/fresh/centrifugo-bundle/1.3) |
 | [fresh/doctrine-enum-bundle](https://packagist.org/packages/fresh/doctrine-enum-bundle) | [6.0](../../../tree/main/fresh/doctrine-enum-bundle/6.0) |
