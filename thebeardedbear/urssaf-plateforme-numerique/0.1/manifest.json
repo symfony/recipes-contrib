@@ -1,0 +1,15 @@
+{
+    "bundles": {
+        "TheBeardedBear\\UrssafPlateformeNumerique\\Bridge\\Symfony\\UrssafPlateformeNumeriqueBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "URSSAF API portail Plateforme numerique: sandbox, test_api or production, and the OAuth2 credentials and platform id of the account",
+        "URSSAF_PN_ENV": "sandbox",
+        "URSSAF_PN_CLIENT_ID": "",
+        "URSSAF_PN_CLIENT_SECRET": "",
+        "URSSAF_PN_PLATFORM_ID": ""
+    }
+}
