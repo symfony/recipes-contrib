@@ -1,0 +1,18 @@
+<info>Watchtower setup</info>
+
+  * For a new project, configure your Doctrine entities, then generate the schema:
+    <comment>php bin/console watchtower:schema:generate</comment>
+
+  * Optimization is disabled by default. Before enabling it in production, generate
+    the production Watchtower cache and verify your application works with it:
+    <comment>APP_ENV=prod APP_DEBUG=0 php bin/console watchtower:cache:generate</comment>
+    Regenerate it after changing the schema, plugins, or scalar definitions.
+    Core 10/11 may omit the plugin cache when no plugins exist; keep optimization
+    disabled unless the generated cache has been verified.
+
+  * Existing configuration must use <comment>wedrix_watchtower_bundle:</comment> as its
+    root key, including inside <comment>when@prod</comment>.
+
+  * When upgrading the Watchtower core, migrate custom plugins before deploying,
+    including authorization plugin directories and namespaces for core 12.3:
+    <comment>https://github.com/Wedrix/watchtower-symfony-bundle/blob/v4.0.0/docs/watchtower-12-compatibility.md</comment>
