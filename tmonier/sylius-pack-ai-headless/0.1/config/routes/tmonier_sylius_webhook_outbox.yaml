@@ -1,0 +1,2 @@
+tmonier_sylius_webhook_outbox:
+    resource: "@TmonierSyliusWebhookOutboxPlugin/config/routes.yaml"
