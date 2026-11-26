@@ -1,0 +1,7 @@
+<bg=blue;fg=white>                                       </>
+<bg=blue;fg=white> What's next for LiveUX FileManager?   </>
+<bg=blue;fg=white>                                       </>
+
+  * <fg=blue>Review</> your volumes & profiles in <comment>config/packages/liveux_file_manager.yaml</>
+  * <fg=blue>Render</> the browser in Twig: <comment><twig:LiveUX:FileManager:Browser profile="default" /></>
+  * <fg=blue>Read</> the docs: <comment>https://github.com/LiveUX/file-manager-bundle/tree/main/docs/en</>

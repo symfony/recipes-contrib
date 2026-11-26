@@ -1,0 +1,13 @@
+liveux_file_manager:
+    defaults:
+        theme: tailwind
+        locale: en
+    volumes:
+        uploads:
+            label: 'Uploads'
+            driver: LocalFileSystem
+            path: '%kernel.project_dir%/public/uploads'
+            url_prefix: '/uploads'
+    profiles:
+        default:
+            volumes: [uploads]
