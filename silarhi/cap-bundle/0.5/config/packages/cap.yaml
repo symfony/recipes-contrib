@@ -1,0 +1,14 @@
+cap:
+    endpoint: '%env(CAP_ENDPOINT)%'
+    secret_key: '%env(CAP_SECRET_KEY)%'
+
+when@dev:
+    cap:
+        # A Cap panel in the Symfony profiler
+        profiler: true
+
+when@test:
+    cap:
+        # Renders no widget and accepts every submission. To test the protection, set test_tokens instead:
+        # the tokens accepted without calling the Cap server
+        enabled: false
