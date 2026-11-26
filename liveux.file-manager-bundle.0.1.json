@@ -1,0 +1,55 @@
+{
+    "manifests": {
+        "liveux/file-manager-bundle": {
+            "manifest": {
+                "bundles": {
+                    "LiveUX\\FileManagerBundle\\FileManagerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                                       </>",
+                    "<bg=blue;fg=white> What's next for LiveUX FileManager?   </>",
+                    "<bg=blue;fg=white>                                       </>",
+                    "",
+                    "  * <fg=blue>Review</> your volumes & profiles in <comment>config/packages/liveux_file_manager.yaml</>",
+                    "  * <fg=blue>Render</> the browser in Twig: <comment><twig:LiveUX:FileManager:Browser profile=\"default\" /></>",
+                    "  * <fg=blue>Read</> the docs: <comment>https://github.com/LiveUX/file-manager-bundle/tree/main/docs/en</>"
+                ]
+            },
+            "files": {
+                "config/packages/liveux_file_manager.yaml": {
+                    "contents": [
+                        "liveux_file_manager:",
+                        "    defaults:",
+                        "        theme: tailwind",
+                        "        locale: en",
+                        "    volumes:",
+                        "        uploads:",
+                        "            label: 'Uploads'",
+                        "            driver: LocalFileSystem",
+                        "            path: '%kernel.project_dir%/public/uploads'",
+                        "            url_prefix: '/uploads'",
+                        "    profiles:",
+                        "        default:",
+                        "            volumes: [uploads]",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/liveux_file_manager.yaml": {
+                    "contents": [
+                        "liveux_file_manager:",
+                        "    resource: '@FileManagerBundle/config/routes.php'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ac5c7df516599d1e76920ad1fc698ca5c7a6ec54"
+        }
+    }
+}
