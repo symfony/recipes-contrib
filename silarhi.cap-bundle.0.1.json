@@ -1,0 +1,43 @@
+{
+    "manifests": {
+        "silarhi/cap-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Silarhi\\CapBundle\\SilarhiCapBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "The URL of your Cap site key, and its secret key (set it in .env.local or as a secret)",
+                    "CAP_ENDPOINT": "https://cap.example.com/site-key/",
+                    "CAP_SECRET_KEY": ""
+                },
+                "post-install-output": [
+                    "  * Set <comment>CAP_ENDPOINT</> and <comment>CAP_SECRET_KEY</> to a site key of your Cap Standalone server.",
+                    "  * The bundle needs a PSR-17 implementation: <comment>composer require nyholm/psr7</>",
+                    "  * Add a <comment>Silarhi\\CapBundle\\Form\\CapType</> field to a form to protect it.",
+                    "  * Read the documentation at <comment>https://cap-bundle.silarhi.dev/</>"
+                ]
+            },
+            "files": {
+                "config/packages/cap.yaml": {
+                    "contents": [
+                        "cap:",
+                        "    endpoint: '%env(CAP_ENDPOINT)%'",
+                        "    secret_key: '%env(CAP_SECRET_KEY)%'",
+                        "",
+                        "when@test:",
+                        "    cap:",
+                        "        enabled: false",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "003195bc2d363a2ef55e76fd8d9417d0e851710f"
+        }
+    }
+}

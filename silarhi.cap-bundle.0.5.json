@@ -1,0 +1,49 @@
+{
+    "manifests": {
+        "silarhi/cap-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Silarhi\\CapBundle\\SilarhiCapBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "The URL of your Cap site key, and its secret key (set it in .env.local or as a secret)",
+                    "CAP_ENDPOINT": "https://cap.example.com/site-key/",
+                    "CAP_SECRET_KEY": ""
+                },
+                "post-install-output": [
+                    "  * Set <comment>CAP_ENDPOINT</> and <comment>CAP_SECRET_KEY</> to a site key of your Cap Standalone server.",
+                    "  * Add a <comment>Silarhi\\CapBundle\\Form\\CapType</> field to a form to protect it.",
+                    "  * Read the documentation at <comment>https://cap-bundle.silarhi.dev/</>"
+                ]
+            },
+            "files": {
+                "config/packages/cap.yaml": {
+                    "contents": [
+                        "cap:",
+                        "    endpoint: '%env(CAP_ENDPOINT)%'",
+                        "    secret_key: '%env(CAP_SECRET_KEY)%'",
+                        "",
+                        "when@dev:",
+                        "    cap:",
+                        "        # A Cap panel in the Symfony profiler",
+                        "        profiler: true",
+                        "",
+                        "when@test:",
+                        "    cap:",
+                        "        # Renders no widget and accepts every submission. To test the protection, set test_tokens instead:",
+                        "        # the tokens accepted without calling the Cap server",
+                        "        enabled: false",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "851d7b58dd5b8cdd602c5f2386663597909436ef"
+        }
+    }
+}
