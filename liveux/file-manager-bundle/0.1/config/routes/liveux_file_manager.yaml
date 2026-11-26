@@ -1,0 +1,2 @@
+liveux_file_manager:
+    resource: '@FileManagerBundle/config/routes.php'
