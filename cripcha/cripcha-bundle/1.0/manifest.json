@@ -1,0 +1,13 @@
+{
+    "bundles": {
+        "Cripcha\\Bundle\\CripchaBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "Keys of the site, from your Cripcha account (https://cripcha.crispy-medias.fr)",
+        "CRIPCHA_SITE_KEY": "",
+        "CRIPCHA_SECRET": ""
+    }
+}

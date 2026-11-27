@@ -1,0 +1,8 @@
+# Cripcha: the keys come from CRIPCHA_SITE_KEY and CRIPCHA_SECRET (.env.local); empty, every protected form is refused
+cripcha:
+    site_key: '%env(CRIPCHA_SITE_KEY)%'
+    secret: '%env(CRIPCHA_SECRET)%'
+
+when@test:
+    cripcha:
+        enabled: false        # every token accepted in the tests of the application
