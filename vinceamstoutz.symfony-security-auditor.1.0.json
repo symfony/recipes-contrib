@@ -1,0 +1,47 @@
+{
+    "manifests": {
+        "vinceamstoutz/symfony-security-auditor": {
+            "manifest": {
+                "bundles": {
+                    "VinceAmstoutz\\SymfonySecurityAuditor\\SymfonySecurityAuditorBundle": [
+                        "dev",
+                        "test"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/packages/symfony_security_auditor.yaml": {
+                    "contents": [
+                        "# $schema: https://raw.githubusercontent.com/vinceamstoutz/symfony-security-auditor/main/resources/schema.json",
+                        "",
+                        "# Full configuration reference (models, scan, audit loop, rate limits, caching):",
+                        "# https://github.com/vinceamstoutz/symfony-security-auditor/blob/main/docs/configuration.md",
+                        "#",
+                        "when@dev: &symfony_security_auditor",
+                        "    symfony_security_auditor:",
+                        "        model: 'claude-opus-5-5' # Attacker and Reviewer model: any id your platform serves, e.g. 'gpt-6.2-sol' (Codex), 'llama3.3' (Ollama), a `generic` gateway's own.",
+                        "        # reviewer_model: 'claude-haiku-5-5' # Lighter model for the Reviewer role. Falls back to `model` when unset.",
+                        "        # profile: 'balanced' # One-knob preset: fast | balanced | thorough. Explicit keys always win.",
+                        "",
+                        "        # Since 1.23, you can also use your Claude or ChatGPT subscription through the `claude` or `codex` CLI:",
+                        "        # https://github.com/vinceAmstoutz/symfony-security-auditor/blob/1.x/docs/configuration.md#running-on-a-subscription",
+                        "        # cli_agent: { platform: 'claudecode', effort: 'medium' } # claudecode | codex",
+                        "",
+                        "        # audit:",
+                        "        #     report_static_findings: true # Since 1.23: report redacted secrets and pre-scan matches as findings the Reviewer validates.",
+                        "        #     budget:",
+                        "        #         max_cost_usd: 5.0 # API key only: abort cleanly (exit 2) once the estimated cost reaches this cap.",
+                        "",
+                        "when@test: *symfony_security_auditor",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "1422e2b381e9cbb04fe231035ea701df465c5075"
+        }
+    }
+}
