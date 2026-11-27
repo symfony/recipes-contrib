@@ -1,0 +1,38 @@
+{
+    "manifests": {
+        "cripcha/cripcha-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Cripcha\\Bundle\\CripchaBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "Keys of the site, from your Cripcha account (https://cripcha.crispy-medias.fr)",
+                    "CRIPCHA_SITE_KEY": "",
+                    "CRIPCHA_SECRET": ""
+                }
+            },
+            "files": {
+                "config/packages/cripcha.yaml": {
+                    "contents": [
+                        "# Cripcha: the keys come from CRIPCHA_SITE_KEY and CRIPCHA_SECRET (.env.local); empty, every protected form is refused",
+                        "cripcha:",
+                        "    site_key: '%env(CRIPCHA_SITE_KEY)%'",
+                        "    secret: '%env(CRIPCHA_SECRET)%'",
+                        "",
+                        "when@test:",
+                        "    cripcha:",
+                        "        enabled: false        # every token accepted in the tests of the application",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "cbc846074bb7b9140fc68a736e023908dcabf266"
+        }
+    }
+}
