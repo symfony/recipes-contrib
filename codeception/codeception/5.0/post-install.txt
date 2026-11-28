@@ -7,7 +7,8 @@ tests/Acceptance/ created           <- Acceptance tests
 tests/Acceptance.suite.yml written  <- Acceptance test suite configuration
 <info>Codeception is installed for unit, functional, and acceptance testing</>
 <options=bold>Next steps:</>
-1. Edit <options=bold>tests/Functional.suite.yml</> to enable the Doctrine module if needed
-2. Create your first functional test using <comment>vendor/bin/codecept generate:cest Functional First</>
-3. Write your first test in <options=bold>tests/Functional/FirstCest.php</>
-4. Run tests with: <comment>vendor/bin/codecept run</>
+1. Install the modules enabled in the suites: <comment>composer require --dev codeception/module-asserts codeception/module-symfony codeception/module-phpbrowser</>
+2. Edit <options=bold>tests/Functional.suite.yml</> to enable the Doctrine module if needed
+3. Create your first functional test using <comment>vendor/bin/codecept generate:cest Functional First</>
+4. Write your first test in <options=bold>tests/Functional/FirstCest.php</>
+5. Run tests with: <comment>vendor/bin/codecept run</>
