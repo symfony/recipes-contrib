@@ -1,0 +1,15 @@
+{
+    "bundles": {
+        "Yiggle\\FormWizardBundle\\YiggleFormWizardBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "YIGGLE_FORM_WIZARD_DEFAULT_FROM_EMAIL": "",
+        "YIGGLE_FORM_WIZARD_DEFAULT_FROM_NAME": "",
+        "#1": "Mollie is enabled when an API key is set; use a test key locally",
+        "YIGGLE_FORM_WIZARD_MOLLIE_API_KEY": "",
+        "YIGGLE_FORM_WIZARD_MOLLIE_WEBHOOK_URL_BASE": ""
+    }
+}

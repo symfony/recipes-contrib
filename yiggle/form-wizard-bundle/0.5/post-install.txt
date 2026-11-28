@@ -1,0 +1,29 @@
+<bg=blue;fg=white>                                         </>
+<bg=blue;fg=white>   Yiggle Form Wizard Bundle installed   </>
+<bg=blue;fg=white>                                         </>
+
+  * <fg=yellow>Database</>: run the bundle migrations
+
+    <comment>bin/console doctrine:migrations:migrate</comment>
+
+  * <fg=yellow>Sulu admin</>: rebuild the admin assets
+
+    <comment>bin/adminconsole sulu:admin:update-build</comment>
+
+  * <fg=yellow>Messenger</>: route these messages to the queue transport (default "async") and run a consumer;
+    keep every other bundle message synchronous, so do not route a "Yiggle\FormWizardBundle\*" wildcard
+
+    Yiggle\FormWizardBundle\Submission\Application\Message\ProcessSubmission
+    Yiggle\FormWizardBundle\Mail\Application\Message\SendStatusMail
+    Yiggle\FormWizardBundle\Webhook\Application\Message\SendWebhook
+
+    <comment>bin/console messenger:setup-transports</comment> (Doctrine transport with auto_setup=0)
+    <comment>bin/console messenger:consume async</comment>
+
+  * <fg=yellow>Stimulus</>: Flex registers the "@yiggle/form-wizard-bundle" controllers in assets/controllers.json
+
+  * <fg=yellow>Check</>: verify the setup (non-zero exit code on errors, for CI and deploy scripts)
+
+    <comment>bin/console yiggle:form-wizard:check</comment>
+
+  * Read the docs: <comment>https://github.com/Predjee/form-wizard-bundle</comment>
