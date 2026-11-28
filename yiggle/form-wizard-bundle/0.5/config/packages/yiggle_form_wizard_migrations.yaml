@@ -1,0 +1,3 @@
+doctrine_migrations:
+    migrations_paths:
+        'Yiggle\FormWizardBundle\Migrations': '%kernel.project_dir%/vendor/yiggle/form-wizard-bundle/migrations'
