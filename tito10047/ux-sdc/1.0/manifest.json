@@ -1,0 +1,18 @@
+{
+    "bundles": {
+        "Tito10047\\UX\\Sdc\\SdcBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/",
+        "src_component/": "src_component/"
+    },
+    "add-lines": [
+        {
+            "file": "templates/base.html.twig",
+            "content": "            {{ render_component_assets() }}",
+            "position": "after_target",
+            "target": "{{ importmap(",
+            "warn_if_missing": true
+        }
+    ]
+}

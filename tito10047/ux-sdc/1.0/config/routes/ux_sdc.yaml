@@ -1,0 +1,4 @@
+# Routes of the #[Route] controllers kept next to components (make:sdc-component --action)
+ux_sdc:
+    resource: .
+    type: ux_sdc
