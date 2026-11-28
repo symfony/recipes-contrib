@@ -1,0 +1,69 @@
+{
+    "manifests": {
+        "tito10047/ux-sdc": {
+            "manifest": {
+                "bundles": {
+                    "Tito10047\\UX\\Sdc\\SdcBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/",
+                    "src_component/": "src_component/"
+                },
+                "add-lines": [
+                    {
+                        "file": "templates/base.html.twig",
+                        "content": "            {{ render_component_assets() }}",
+                        "position": "after_target",
+                        "target": "{{ importmap(",
+                        "warn_if_missing": true
+                    }
+                ],
+                "post-install-output": [
+                    "  <fg=blue;options=bold>UX SDC</> <fg=blue>is installed. Two steps are left to you:</>",
+                    "",
+                    "  <fg=blue>1.</> Map the component namespace in <comment>composer.json</> and run <comment>composer dump-autoload</>:",
+                    "         <comment>\"autoload\": { \"psr-4\": { \"App\\\\Component\\\\\": \"src_component/\" } }</>",
+                    "  <fg=blue>2.</> Only for Live Components, Turbo Frames or Turbo Streams, attach the loader to the body",
+                    "     of <comment>templates/base.html.twig</>: <comment>\\<body {{ stimulus_controller(sdc_loader_controller) }}></>",
+                    "     https://github.com/tito10047/ux-sdc/blob/main/docs/live-and-turbo.md#the-loader-controller",
+                    "",
+                    "  <fg=blue>Then create a component with</> <comment>php bin/console make:sdc-component Alert</> <fg=blue>(symfony/maker-bundle)</>",
+                    "  <fg=blue>and check it with</> <comment>php bin/console debug:sdc</>"
+                ]
+            },
+            "files": {
+                "config/packages/ux_sdc.yaml": {
+                    "contents": [
+                        "ux_sdc:",
+                        "    # Directory of the components: each class next to its template, CSS and JS.",
+                        "    # Both values must describe the same PSR-4 mapping as \"autoload\" in composer.json:",
+                        "    #     \"App\\\\Component\\\\\": \"src_component/\"",
+                        "    ux_components_dir: '%kernel.project_dir%/src_component'",
+                        "    component_namespace: 'App\\Component'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/ux_sdc.yaml": {
+                    "contents": [
+                        "# Routes of the #[Route] controllers kept next to components (make:sdc-component --action)",
+                        "ux_sdc:",
+                        "    resource: .",
+                        "    type: ux_sdc",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "src_component/.gitignore": {
+                    "contents": [
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "1e04c69befdfca58600c94416e330967d0f94b1b"
+        }
+    }
+}
