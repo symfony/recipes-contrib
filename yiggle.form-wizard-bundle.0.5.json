@@ -1,0 +1,99 @@
+{
+    "manifests": {
+        "yiggle/form-wizard-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Yiggle\\FormWizardBundle\\YiggleFormWizardBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "YIGGLE_FORM_WIZARD_DEFAULT_FROM_EMAIL": "",
+                    "YIGGLE_FORM_WIZARD_DEFAULT_FROM_NAME": "",
+                    "#1": "Mollie is enabled when an API key is set; use a test key locally",
+                    "YIGGLE_FORM_WIZARD_MOLLIE_API_KEY": "",
+                    "YIGGLE_FORM_WIZARD_MOLLIE_WEBHOOK_URL_BASE": ""
+                },
+                "post-install-output": [
+                    "<bg=blue;fg=white>                                         </>",
+                    "<bg=blue;fg=white>   Yiggle Form Wizard Bundle installed   </>",
+                    "<bg=blue;fg=white>                                         </>",
+                    "",
+                    "  * <fg=yellow>Database</>: run the bundle migrations",
+                    "",
+                    "    <comment>bin/console doctrine:migrations:migrate</comment>",
+                    "",
+                    "  * <fg=yellow>Sulu admin</>: rebuild the admin assets",
+                    "",
+                    "    <comment>bin/adminconsole sulu:admin:update-build</comment>",
+                    "",
+                    "  * <fg=yellow>Messenger</>: route these messages to the queue transport (default \"async\") and run a consumer;",
+                    "    keep every other bundle message synchronous, so do not route a \"Yiggle\\FormWizardBundle\\*\" wildcard",
+                    "",
+                    "    Yiggle\\FormWizardBundle\\Submission\\Application\\Message\\ProcessSubmission",
+                    "    Yiggle\\FormWizardBundle\\Mail\\Application\\Message\\SendStatusMail",
+                    "    Yiggle\\FormWizardBundle\\Webhook\\Application\\Message\\SendWebhook",
+                    "",
+                    "    <comment>bin/console messenger:setup-transports</comment> (Doctrine transport with auto_setup=0)",
+                    "    <comment>bin/console messenger:consume async</comment>",
+                    "",
+                    "  * <fg=yellow>Stimulus</>: Flex registers the \"@yiggle/form-wizard-bundle\" controllers in assets/controllers.json",
+                    "",
+                    "  * <fg=yellow>Check</>: verify the setup (non-zero exit code on errors, for CI and deploy scripts)",
+                    "",
+                    "    <comment>bin/console yiggle:form-wizard:check</comment>",
+                    "",
+                    "  * Read the docs: <comment>https://github.com/Predjee/form-wizard-bundle</comment>"
+                ]
+            },
+            "files": {
+                "config/packages/yiggle_form_wizard.yaml": {
+                    "contents": [
+                        "# Full reference: bin/console config:dump-reference yiggle_form_wizard",
+                        "yiggle_form_wizard:",
+                        "    notifiers:",
+                        "        email:",
+                        "            default_from_email: '%env(default::YIGGLE_FORM_WIZARD_DEFAULT_FROM_EMAIL)%'",
+                        "            default_from_name: '%env(default::YIGGLE_FORM_WIZARD_DEFAULT_FROM_NAME)%'",
+                        "    commerce:",
+                        "        payment:",
+                        "            mollie:",
+                        "                api_key: '%env(default::YIGGLE_FORM_WIZARD_MOLLIE_API_KEY)%'",
+                        "                webhook_url_base: '%env(default::YIGGLE_FORM_WIZARD_MOLLIE_WEBHOOK_URL_BASE)%'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/packages/yiggle_form_wizard_migrations.yaml": {
+                    "contents": [
+                        "doctrine_migrations:",
+                        "    migrations_paths:",
+                        "        'Yiggle\\FormWizardBundle\\Migrations': '%kernel.project_dir%/vendor/yiggle/form-wizard-bundle/migrations'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/yiggle_form_wizard_admin.yaml": {
+                    "contents": [
+                        "yiggle_form_wizard_admin:",
+                        "    resource: '@YiggleFormWizardBundle/config/routes/admin.yaml'",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/yiggle_form_wizard_website.yaml": {
+                    "contents": [
+                        "yiggle_form_wizard:",
+                        "    resource: '@YiggleFormWizardBundle/config/routes/website.yaml'",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "1384904634d19f6ecaa6b484d63953dac171c77e"
+        }
+    }
+}
